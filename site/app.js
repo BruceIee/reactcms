@@ -11,6 +11,7 @@ var cons = require('consolidate');
 var compression = require('compression')
 var _ = require('underscore');
 var tool = require('leaptool');
+var multer = require('multer');
 
 var app = {};
 
@@ -77,6 +78,20 @@ function setup(cbSetup) {
         cookie: { maxAge: 120 * 60 * 1000 }  //session expires in 120 minutes   
     }));
     app.server.use(express.static(path.join(__dirname, app.setting.public_name)));
+    
+    /*Configure the multer.*/
+    app.server.use(multer({ dest: './uploads/',
+        rename: function (fieldname, filename) {
+            return filename+Date.now();
+        },
+    onFileUploadStart: function (file) {
+        console.log(file.originalname + ' is starting to upload...')
+    },
+    onFileUploadComplete: function (file) {
+        console.log(file.fieldname + ' uploaded to  ' + file.path)
+    }
+    }));
+    
     // setup database connection
     if (app.setting.database) {
         var Database = require(app.setting.database.type + '-database');

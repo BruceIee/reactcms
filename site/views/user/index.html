@@ -4,13 +4,15 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <h4 class="col-md-12">{{ page.title }}</h4>
+        <h4 class="col-md-12">User Page</h4>
     </div>
     <div class="row">
         <div class="col-md-12">
-        {% for user in users %}
-        <p>{{ user.name }} {{ user.age }}</p>   
-        {% endfor %}
+            <ul>
+                <li><a href="/user/signup">User Signup</a></li>
+                <li><a href="/user/login">User Login</a></li>
+                <li><a href="/user/logout">User Logout</a></li>
+            </ul>
         </div>
     </div>
 </div>
