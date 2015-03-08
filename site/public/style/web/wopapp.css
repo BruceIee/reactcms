@@ -1,0 +1,131 @@
+.row {
+    font-family: Lato, 'Proxima Nova', 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.wopblock-container.wp-block .wopblock-content-container {
+    /* background-color: #4891dc; */
+    background-color: rgba(72,145,220,0.8);
+}
+
+.wopblock-container.wp-block:hover .wopblock-content-container {
+    /* background-color: #2eb135; */
+    background-color: rgba(46,177,53,0.8);
+}
+
+.wopblock-container.wp-block-reverse .wopblock-content-container {
+    background-color: rgba(46,177,53,0.8);
+}
+
+.wopblock-container.wp-block-reverse:hover .wopblock-content-container {
+    background-color: rgba(72,145,220,0.8);
+}
+
+.tier-row {
+    margin-bottom: 20px;
+}
+
+.tier-row:first-child {
+    margin-top: 10px;    
+}
+
+/* tier 1 */
+.tier1 .info .wopblock-container .wopblock-text-container {
+    height: 480px;
+}
+
+.tier1 .info .wopblock-container .wopblock-content-container {
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 4.5em;
+}
+
+.tier1 .info .wopblock-container .wopblock-text-container {
+    padding: 110px 30px ;
+    text-align: center;
+    line-height: 120px;
+}
+
+.tier1 .link {
+    margin-bottom: 20px;
+}
+
+.tier1 .link .wopblock-container .wopblock-content-container {
+    color: white;
+    padding: 0;
+}
+
+.tier1 .link .wopblock-container .wopblock-icon-container {
+    font-size: 1.5em;
+    padding: 35px 0 0 25px;
+}
+
+.tier1 .link .wopblock-container .wopblock-text-container {
+    height: 160px;
+    font-size: 1.5em;
+    padding: 60px 0 0 15px;
+}
+
+.tier1 .link .wopblock-content-container:hover .wopblock-text-container {
+    transform: translate(.3em, 0);
+}
+
+.tier1 .link .wopblock-content-container:hover .wopblock-icon-container {
+    transform: translate(.3em, 0);
+}
+
+/* tier 2 */
+.tier2 .info .wopblock-container .wopblock-content-container {
+    text-align: center;
+}   
+
+.tier2 .info .wopblock-container .wopblock-text-container{
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.tier2 .link .wopblock-container {
+    background-size: contain;
+    background-position: center center;
+}
+    
+/* tier 3 */
+.tier3 {
+    margin-top: 50px;
+}
+
+.tier3 .info .wopblock-container .wopblock-text-container {
+    height: 385px;
+}
+
+.tier3 .info .wopblock-container .wopblock-content-container {
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 4.5em;
+}
+
+.tier3 .info .wopblock-container .wopblock-text-container {
+    padding: 90px 30px ;
+    text-align: center;
+}
+
+.tier3 .link {
+    margin-bottom: 20px;
+}
+
+.tier3 .link .wopblock-container .wopblock-content-container {
+    color: white;
+    text-align: center;
+}
+
+.tier3 .link .wopblock-container .wopblock-icon-container {
+    font-size: 2.5em;
+    padding: 5px 10px;
+}
+
+.tier3 .link .wopblock-container .wopblock-text-container {
+    height: 100px;
+    font-size: 1em;
+    padding: 10px 20px 20px 20px;
+}
+

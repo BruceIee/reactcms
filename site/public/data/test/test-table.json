@@ -1,0 +1,9 @@
+[
+    { "name":"Alex", "age":21, "status":"active" },
+    { "name":"Blair", "age":27, "status":"inactive" },
+    { "name":"Donna", "age":24, "status":"active" },
+    { "name":"Lydia", "age":20, "status":"active" },
+    { "name":"Mary", "age":22, "status":"inactive" },
+    { "name":"Nancy", "age":29, "status":"inactive" },
+    { "name":"Oscar", "age":29, "status":"active" }
+]

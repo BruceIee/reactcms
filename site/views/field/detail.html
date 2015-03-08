@@ -1,0 +1,33 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block content %}
+<div class="body-container container">
+    <div class="row">
+        <h4 class="col-md-8">
+            Field Detil for {{ page.fieldName }}
+        </h4>
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>SubType</th>
+                        <th>Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for subtype in page.field.subtype %}
+                    <tr>
+                        <td>{{ loop.key }}</td>
+                        <td>{{ subtype|json|safe }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
