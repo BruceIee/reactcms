@@ -2,7 +2,7 @@ ReactCMS
 ========
 Content management system using React and NodeJS
 
-System: Ubuntu
+System: Ubuntu 14.xx
 
 
 Support tools
