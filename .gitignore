@@ -6,3 +6,4 @@ site/npm-debug.log
 /node_modules/
 # keep /site/node_modules folder
 !/site/node_modules/
+.idea
