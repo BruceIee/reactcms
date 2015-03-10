@@ -21,7 +21,7 @@ module.exports = function(app) {
     block.page.uploadPost = function(req, res) {
         var parameter = tool.getReqParameter(req);
         console.log(req.files);
-        res.end("File uploaded.");
+        res.end("File uploaded done.");
     };
     
     
