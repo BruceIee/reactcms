@@ -1,17 +1,23 @@
 {% extends '../layout/layout.html' %}
 {% set users = page.docs %}
-
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/user/style.css">
+{% endblock %}
 {% block content %}
+<head>
+</head>
+    
 <div class="container">
     <div class="row">
         <h4 class="col-md-12">User Page</h4>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <ul>
-                <li><a href="/user/signup">User Signup</a></li>
-                <li><a href="/user/login">User Login</a></li>
-                <li><a href="/user/logout">User Logout</a></li>
+            <ul class="userbuttons">
+                <li><a class="btn btn-primary usersignup"href="/user/signup">User Signup</a></li>
+                <li><a class="btn btn-success userlogin"href="/user/login">User Login</a></li>
+                <li><a class="btn btn-danger userlogout"href="/user/logout">User Logout</a></li>
             </ul>
         </div>
     </div>
