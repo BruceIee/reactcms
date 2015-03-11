@@ -32,15 +32,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="/">CMS</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
+            <li><a href="/user">User</a></li>
         </ul>
+        <button type="button" class="btn btn-default dropdown-toggle user-dropdown pull-right glyphicon glyphicon-user" data-toggle="dropdown" aria-expanded="false">
+     <span class="caret"></span>
+  </button>
+        <a class="btn btn-primary login-button" href="#" role="button">Administrator Login</a>
+  <ul class="dropdown-menu pull-right" role="menu">
+    <li><a href="#" class="glyphicon glyphicon-home"> Profile</a></li>
+    <li><a href="#" class="glyphicon glyphicon-envelope"> Mail</a></li>
+    <li><a href="#" class="glyphicon glyphicon-cloud"> Cloud</a></li>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -54,7 +61,7 @@
 {% block footer %}
 <div class="footer-container container">
     <div class="footer">
-        <a class="login-button btn btn-success pull-right" role="button">Login</a>
+        
     </div>
 </div>
 {% endblock %}
