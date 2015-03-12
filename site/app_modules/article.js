@@ -43,6 +43,42 @@ module.exports = function(app) {
     };
 
     
+    block.page.articleList = function(req, res) {
+        console.log('---------');
+        var condition = {};
+        var filter = {};
+
+        app.db.find(moduleName, condition, filter, function(error, docs, info){
+            console.log('error=',error);
+            console.log('docs=',docs);
+            console.log('info=',info);
+            
+            var page = app.getPage(req);
+            page.title = 'List of articles';
+            page.articles = docs;
+            console.log('page=',page);
+            res.render('article/article_list', { page:page });             
+            
+            //app.cb(error, docs, info, req, res, callback);
+        });
+        
+        
+        /* ???
+        block.data.get(req, res, condition, filter, null, function(error, docs, info) {
+            console.log('error=',error);
+            console.log('docs=',docs);
+            console.log('info=',info);
+            
+            var page = app.getPage(req);
+            page.title = 'List of articles';
+            page.articles = docs;
+            console.log('page=',page);
+            res.render('article/article_list', { page:page });            
+        });
+        */
+    };    
+    
+    
     
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
@@ -79,7 +115,7 @@ module.exports = function(app) {
     //app.server.get('/item', block.page.getIndex);
     
     app.server.get('/' + moduleName + '/add', block.page.addArticle);
-    
+    app.server.get('/' + moduleName + '/list', block.page.articleList);
 
     return block;
 };
