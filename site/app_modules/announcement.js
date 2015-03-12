@@ -20,9 +20,6 @@ module.exports = function(app) {
         title: {
             type: 'string'
         },
-        status: {
-            type: 'string'
-        },
         create_date: {
             type: 'date'
         }
@@ -42,8 +39,9 @@ module.exports = function(app) {
     app.server.post('/data/announcements/add', block.data.addItem);
     // page route
     app.server.get('/announcements', block.page.getIndex);
-    //TODO: ask Yue about using id's in node/mongo and find a way to add gets for individual announcements
-    // app.server.get('/announcements', block.page.getIndex);
+    //TODO: ask Yue about using id's in node/mongo.
+    //TODO: ask about adding more routes.
+    // app.server.get('/announcement/:id? or :url', block.page.getIndex);
 
     return block;
 };

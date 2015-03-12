@@ -2,7 +2,7 @@
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/item/index.css">
+<link rel="stylesheet" href="/style/announcement/index.css">
 {% endblock %}
 
 {% block script %}
@@ -13,22 +13,15 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <h4 class="col-md-12">{{ page.title }}</h4>
+  <div class="post panel panel-default">
+    <div class="panel-heading">
+      <h2 class="post-title">Post Title</h2>
+      <p class="post-date">Post Date</p>
     </div>
-    <div class="row">
-        <div class="col-md-8">
-            <table class="table table-bordered item-list">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Content</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
+    <p class="post-content">
+      Content goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat...
+      <a href="#"> Read more</a>
+    </p>
+  </div>
 </div>
 {% endblock %}
