@@ -55,6 +55,7 @@ module.exports = function(app) {
             
             var page = app.getPage(req);
             page.title = 'List of articles';
+            docs.reverse();
             page.articles = docs;
             console.log('page=',page);
             res.render('article/article_list', { page:page });             
