@@ -1,14 +1,15 @@
 {% extends '../layout/layout.html' %}
 
-{% block script %}
-{% parent %}
-<script>
-</script>
-{% endblock %}
-
 {% block style %}
 {% parent %}
 <link rel="stylesheet" href="/style/article/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/moment/moment.js"></script>
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+<script src="/script/article/index.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -20,7 +21,9 @@
         {{article.title}}
       </h2>
       <p class="post-date">
-        {{announcement.create_date.toString()}}
+        <time class="timeago" datetime={{article.create_date.toISOString()}}>
+          {{article.create_date.toISOString()}}
+        </time>
       </p>
     </div>
     <p class="post-content">
