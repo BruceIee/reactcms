@@ -1,19 +1,14 @@
+.navbar {
+    border: 0;
+}
 .body-container {
     min-height: 420px;
 }
-
-.footer-container {
-    margin-top: 20px;
-}
 .header-container {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.footer {
-    background-color: #e1e1e8;
+    padding-left: 0;
+    padding-right: 0;
 }
 .login-button {
-    float: right;
     margin-top: 8px;
 }
 .user-dropdown {
@@ -22,4 +17,12 @@
 }
 .dropdown-menu {
     padding-top: 4px;
+}
+.footer-container {
+    height: 100%;
+    width: 100%;
+    padding: 20px 150px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #e1e1e8;
 }

@@ -1,0 +1,48 @@
+{% extends '../layout/layout.html' %}
+
+{% block script %}
+{% parent %}
+<script>
+</script>
+{% endblock %}
+
+{% block style %}
+{% parent %}
+<style>
+.container {
+    color: #666;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12" style="margin:40px auto;font-size:2.1em;color:#666;">
+            <div style="text-align:center;">List of articles</div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <table class="table table-striped">
+            <tr>
+                <td>Title</td>
+                <td>Content</td>
+            </tr>
+            
+            {% for article in page.articles %}
+                <tr>
+                    <td>
+                        {{article.title}}
+                    </td>
+                    <td>
+                        {{article.content}}
+                    </td>
+                </tr>
+            {% endfor%}    
+        </table>
+    </div>
+
+</div>
+{% endblock %}
