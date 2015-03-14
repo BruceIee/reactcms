@@ -115,6 +115,7 @@ module.exports = function(app) {
     block.page.getIndex = function(req, res) {
         block.data.getWeb(req, res, null, function(error, docs, info) {
             var page = { title:'User List', docs:docs };
+            page.controller = "users";
             res.render('user/index', { page:page });
         });
     };
@@ -122,6 +123,7 @@ module.exports = function(app) {
     block.page.login = function(req, res) {
         var page = app.getPage(req);
         page.title = 'User Login';
+        page.controller = "users";
         res.render('user/login', { page:page });
     };
     
@@ -150,6 +152,7 @@ module.exports = function(app) {
     block.page.signup = function(req, res) {
         var page = app.getPage(req);
         page.title = 'User Signup';
+        page.controller = "users";
         res.render('user/signup', { page:page });
     };
     
@@ -177,6 +180,7 @@ module.exports = function(app) {
     block.page.getProfile = function(req, res) {
         var page = app.getPage(req);
         page.title = 'User Profile';
+        page.controller = "users";
         res.render('user/profile', { page:page });
     };
     

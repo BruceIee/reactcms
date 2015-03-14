@@ -38,19 +38,45 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          {% if page.controller == 'home' %}
           <li class="active"> <a href="/">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="/announcements">Announcements</a></li>
-          <li><a href="/user">User</a></li>
+          {% else %}
+          <li> <a href="/">Home</a></li>
+          {% endif %}
+          {% if page.controller == 'announcements' %}
+          <li class="active"> <a href="/announcements">Announcements <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/announcements">Announcements</a></li>
+          {% endif %}
+          {% if page.controller == 'articles' %}
+          <li class="active"> <a href="/articles">Articles <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/articles">Articles</a></li>
+          {% endif %}
+          {% if page.controller == 'users' %}
+          <li class="active"> <a href="/user">Users <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/user">Users</a></li>
+          {% endif %}
+          <!--
+          TODO: Revamp file controller to be a separate file.
+          <li><a href="/file">Files</a></li>
+          -->
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <a class="login-button btn btn-success" role="button">Administrator Login</a>
+          {% if page.user == null %}
+          <a class="login-button btn btn-success" href="/user/login" role="button">Administrator Login</a>
+          {% else %}
           <button type="button" class="btn btn-default dropdown-toggle user-dropdown glyphicon glyphicon-user" data-toggle="dropdown" aria-expanded="false">
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu pull-right" role="menu">
+          <ul class="dropdown-menu" role="menu">
             <li><a href="#" class="glyphicon glyphicon-home"> Profile</a></li>
             <li><a href="#" class="glyphicon glyphicon-envelope"> Mail</a></li>
             <li><a href="#" class="glyphicon glyphicon-cloud"> Cloud</a></li>
+            <li><a href="#" class="glyphicon glyphicon-log-out"> Logout</a></li>
+          </ul>
+          {% endif %}
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
