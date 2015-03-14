@@ -50,8 +50,36 @@ module.exports = function(app) {
             page.title = 'Announcements';
             page.announcements = docs;
             console.log('page=',page);
-            res.render('announcements/index', { page:page });
+            res.render('announcement/index', { page:page });
         });
+    };
+    block.page.getAnnouncement = function(req, res) {
+        console.log('---------');
+        var parameter = tool.getReqParameter(req);
+        console.log(parameter);
+        var condition = {};
+        var filter = {};
+
+        /*
+        TODO: Add get for article by ID.
+        app.db.find(moduleName, condition, filter, function(error, docs, info){
+            console.log('error=',error);
+            console.log('docs=',docs);
+            console.log('info=',info);
+
+            var page = app.getPage(req);
+            page.id = parameter.id;
+            page.title = 'Announcements';
+            page.announcements = docs;
+            console.log('page=',page);
+            res.render('announcements/index', { page:page });
+        });*/
+    };
+    block.page.addAnnouncement = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Add an announcement';
+        console.log("Announcements Add")
+        res.render('announcement/add', { page:page });
     };
     
     // data route
@@ -59,7 +87,8 @@ module.exports = function(app) {
     app.server.post('/data/announcements/add', block.data.addItem);
     // page route
     app.server.get('/announcements', block.page.getAnnouncementIndex);
-    app.server.get('/announcement/:_id', block.data.addItem);
+    app.server.get('/announcements/add', block.page.addAnnouncement);
+    //app.server.get('/announcements/:_id', block.data.getAnnouncement);
 
     return block;
 };

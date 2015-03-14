@@ -80,7 +80,7 @@ function setup(cbSetup) {
     app.server.use(express.static(path.join(__dirname, app.setting.public_name)));
     
     /*Configure the multer.*/
-    app.server.use(multer({ dest: './uploads/',
+    app.server.use(multer({ dest: './site/public/file/',
         rename: function (fieldname, filename) {
             return filename+Date.now();
         },
