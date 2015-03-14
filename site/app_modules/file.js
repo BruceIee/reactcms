@@ -50,7 +50,6 @@ module.exports = function(app) {
     app.server.get('/file/upload', block.page.upload);
     app.server.post('/data/file/upload', block.data.uploadPost);
     app.server.get('/files', block.page.uploadedList);
-
     return block;
 };
 
