@@ -1,5 +1,4 @@
 {% extends '../layout/layout.html' %}
-{% set page = "announcements" %}
 
 {% block style %}
 {% parent %}
@@ -12,31 +11,36 @@
 
 {% block content %}
 <div class="body-container container" style="margin-top:10px;">
-    
     <div class="row">
         
         <div class="col-md-4">
             <div class="section">
-                <div>
-                    <a href="/user">User Home</a>
-                </div>
+                <h4>Modules</h4>
                 <div>
                     <a href="/admin">Admin Home</a>
                 </div>
-                <br>
                 <div>
-                    <a href="/upload">Upload Test</a>
+                  <a href="/user">User Home</a>
                 </div>
                 <div>
-                    <a href="/uploaded_list">List of uploaded</a>
+                    <a href="/item">Item Home</a>
                 </div>
-                <br>
+                <div>
+                    <a href="/file">File Home</a>
+                </div>
+                <div>
+                    <a href="/article">Article Home</a>
+                </div>
+                
+                <br/>
+                <p>move the following links inside article home linke</p>
                 <div>
                     <a href="/article/add">Add an article</a>
                 </div>
                 <div>
                     <a href="/article/list">List of articles</a>
                 </div>
+                
             </div>
         </div>
         

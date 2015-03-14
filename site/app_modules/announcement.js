@@ -46,9 +46,10 @@ module.exports = function(app) {
             console.log('info=',info);
 
             var page = app.getPage(req);
-            //page.id = parameter.id;
             page.title = 'Announcements';
+            docs.reverse();
             page.announcements = docs;
+            page.controller = 'announcements';
             console.log('page=',page);
             res.render('announcement/index', { page:page });
         });
@@ -71,6 +72,7 @@ module.exports = function(app) {
             page.id = parameter.id;
             page.title = 'Announcements';
             page.announcements = docs;
+            page.controller = "announcements";
             console.log('page=',page);
             res.render('announcements/index', { page:page });
         });*/
@@ -78,6 +80,7 @@ module.exports = function(app) {
     block.page.addAnnouncement = function(req, res) {
         var page = app.getPage(req);
         page.title = 'Add an announcement';
+        page.controller = "announcements";
         console.log("Announcements Add")
         res.render('announcement/add', { page:page });
     };

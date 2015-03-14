@@ -33,10 +33,16 @@ module.exports = function(app) {
         page.title = 'List of uploaded files';
         page.files = files;
         res.render('web/uploaded_list', { page:page });
-    };    
-
+    };
+    block.page.getHomeIndex = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Home';
+        page.controller = "home";
+        console.log(page);
+        res.render('web/index', { page:page });
+    };
     
-    app.server.get('/', block.page.getIndex);
+    app.server.get('/', block.page.getHomeIndex);
     app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
     
     app.server.get('/upload', block.page.upload);

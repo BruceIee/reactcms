@@ -39,7 +39,8 @@ module.exports = function(app) {
     block.page.addArticle = function(req, res) {
         var page = app.getPage(req);
         page.title = 'Add an article';
-        res.render('article/add_article', { page:page });
+        page.controller = "articles";
+        res.render('article/add', { page:page });
     };
 
     
@@ -55,9 +56,11 @@ module.exports = function(app) {
             
             var page = app.getPage(req);
             page.title = 'List of articles';
+            docs.reverse();
             page.articles = docs;
+            page.controller = "articles";
             console.log('page=',page);
-            res.render('article/article_list', { page:page });             
+            res.render('article/index', { page:page });
             
             //app.cb(error, docs, info, req, res, callback);
         });
@@ -114,8 +117,8 @@ module.exports = function(app) {
     // page route
     //app.server.get('/item', block.page.getIndex);
     
-    app.server.get('/' + moduleName + '/add', block.page.addArticle);
-    app.server.get('/' + moduleName + '/list', block.page.articleList);
+    app.server.get('/articles/add', block.page.addArticle);
+    app.server.get('/articles', block.page.articleList);
 
     return block;
 };
