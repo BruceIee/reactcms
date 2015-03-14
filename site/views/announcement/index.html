@@ -8,7 +8,8 @@
 {% block script %}
 {% parent %}
 <script src="/library/moment/moment.js"></script>
-<script src="/script/item/index.js"></script>
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+<script src="/script/announcement/index.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -20,7 +21,9 @@
           {{announcement.title}}
         </h2>
         <p class="post-date">
-          {{announcement.create_date.toString()}}
+          <time class="timeago" datetime={{announcement.create_date.toISOString()}}>
+            {{announcement.create_date.toISOString()}}
+          </time>
         </p>
       </div>
       <p class="post-content">
