@@ -3,7 +3,7 @@ var tool = require('leaptool');
 
 module.exports = function(app) {
     
-    var moduleName = 'item';
+    var moduleName = 'file';
     var block = {
         app: app,
         model: null
@@ -31,21 +31,43 @@ module.exports = function(app) {
             type: 'date'
         }
     };
-    
-    block.data.addItem = function(req, res) {
-        var callback = arguments[3] || null; 
-        var item = tool.getReqParameter(req);
-        item.create_date = new Date();
-        block.data.add(req, res, item, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
-        });
+
+    block.page.upload = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Upload a file';
+        page.controller = "file";
+        res.render('web/upload', { page:page });
+    };
+
+    block.page.uploadPost = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        console.log(req.files);
+        res.end("File uploaded done.");
+    };
+
+    block.page.uploadedList = function(req, res) {
+        var fs = require('fs');
+        var dir = './site/public/file/';
+        var files = fs.readdirSync(dir);
+        console.log('files=',files);
+        var page = app.getPage(req);
+        page.title = 'List of uploaded files';
+        page.controller = "file";
+        page.files = files;
+        res.render('web/uploaded_list', { page:page });
+    };
+    block.page.getHomeIndex = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Home';
+        page.controller = "file";
+        console.log(page);
+        res.render('web/index', { page:page });
     };
     
     // data route
-    app.server.get('/data/item/add', block.data.addItem);
-    app.server.post('/data/item/add', block.data.addItem);
-    // page route
-    app.server.get('/item', block.page.getIndex);
+    app.server.get('/upload', block.page.upload);
+    app.server.post('/' + moduleName + '/upload_post', block.page.uploadPost);
+    app.server.get('/files', block.page.uploadedList);
 
     return block;
 };
