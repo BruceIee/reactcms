@@ -34,6 +34,7 @@ module.exports = function(app) {
         page.files = files;
         res.render('web/uploaded_list', { page:page });
     };
+    
     block.page.getHomeIndex = function(req, res) {
         var page = app.getPage(req);
         page.title = 'Home';
@@ -45,11 +46,11 @@ module.exports = function(app) {
     app.server.get('/', block.page.getHomeIndex);
     app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
     
+    // upload functions should be moved to file module
     app.server.get('/upload', block.page.upload);
     app.server.post('/' + moduleName + '/upload_post', block.page.uploadPost);
     
     app.server.get('/uploaded_list', block.page.uploadedList);
-    
     
     return block;
 };
