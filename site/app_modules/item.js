@@ -41,6 +41,13 @@ module.exports = function(app) {
         });
     };
     
+    /*
+    block.page.getHome = function(req, res) {
+        var page = app.getPage(req);
+        res.render('item/index', { page:page });
+    };
+    */
+    
     // data route
     app.server.get('/data/item/add', block.data.addItem);
     app.server.post('/data/item/add', block.data.addItem);
