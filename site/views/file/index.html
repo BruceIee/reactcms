@@ -8,15 +8,16 @@
 <div class="body-container container">
     <div class="row">
         <h4 class="col-md-12">
-            Field List
+            File Module
         </h4>
         <div class="col-md-12">
             <ul>
-                {% for field in page.fieldCol %}
                 <li>
-                    <a href="/field/{{ loop.key }}/view">{{ loop.key }}</a>
+                    <a href="/upload">Upload Test</a>
                 </li>
-                {% endfor %}
+                <li>
+                     <a href="/uploaded_list">List of uploaded</a>
+                </li>
             </ul>
         </div>
     </div>
