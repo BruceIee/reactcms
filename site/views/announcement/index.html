@@ -1,0 +1,37 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/announcement/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/moment/moment.js"></script>
+<script src="/script/item/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% for announcement in page.announcements %}
+    <div class="post panel panel-default">
+      <div class="panel-heading">
+        <h2 class="post-title">
+          {{announcement.title}}
+        </h2>
+        <p class="post-date">Post Date</p>
+      </div>
+      <p class="post-content">
+        {{announcement.content}}
+        <a href="#"> Read more</a>
+      </p>
+    </div>
+  {% endfor%}
+  <script type="text/jsx">
+    React.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+    );
+  </script>
+</div>
+{% endblock %}

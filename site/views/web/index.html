@@ -1,4 +1,5 @@
 {% extends '../layout/layout.html' %}
+{% set page = "announcements" %}
 
 {% block style %}
 {% parent %}
@@ -22,8 +23,19 @@
                 <div>
                     <a href="/admin">Admin Home</a>
                 </div>
+                <br>
                 <div>
                     <a href="/upload">Upload Test</a>
+                </div>
+                <div>
+                    <a href="/uploaded_list">List of uploaded</a>
+                </div>
+                <br>
+                <div>
+                    <a href="/article/add">Add an article</a>
+                </div>
+                <div>
+                    <a href="/article/list">List of articles</a>
                 </div>
             </div>
         </div>
