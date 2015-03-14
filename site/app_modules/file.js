@@ -6,40 +6,30 @@ module.exports = function(app) {
     var moduleName = 'file';
     var block = {
         app: app,
-        model: null
+        model:
+        {
+            name: {
+                type: 'string'
+            },
+            path: {
+                type: 'string'
+            },
+            create_date: {
+                type: 'date'
+            }
+        }
     };
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
-    
-    block.model = {
-        type: {
-            type: 'string'
-        },
-        content: {
-            type: 'string'
-        },
-        data: {
-            type: 'object',
-            subtype: {
-                type: 'json'
-            }
-        },
-        status: {
-            type: 'string'
-        },
-        create_date: {
-            type: 'date'
-        }
-    };
 
     block.page.upload = function(req, res) {
         var page = app.getPage(req);
-        page.title = 'Upload a file';
         page.controller = "file";
-        res.render('web/upload', { page:page });
+        console.log(page);
+        res.render('web/index', { page:page });
     };
 
-    block.page.uploadPost = function(req, res) {
+    block.data.uploadPost = function(req, res) {
         var parameter = tool.getReqParameter(req);
         console.log(req.files);
         res.end("File uploaded done.");
@@ -54,19 +44,11 @@ module.exports = function(app) {
         page.title = 'List of uploaded files';
         page.controller = "file";
         page.files = files;
-        res.render('web/uploaded_list', { page:page });
+        res.render('file/index', { page:page });
     };
-    block.page.getHomeIndex = function(req, res) {
-        var page = app.getPage(req);
-        page.title = 'Home';
-        page.controller = "file";
-        console.log(page);
-        res.render('web/index', { page:page });
-    };
-    
-    // data route
-    app.server.get('/upload', block.page.upload);
-    app.server.post('/' + moduleName + '/upload_post', block.page.uploadPost);
+
+    app.server.get('/file/upload', block.page.upload);
+    app.server.post('/data/file/upload', block.data.uploadPost);
     app.server.get('/files', block.page.uploadedList);
 
     return block;

@@ -1,4 +1,4 @@
-{% extends '../layout/layout.html' %}
+<!--{% extends '../layout/layout.html' %}
 
 {% block script %}
 {% parent %}
@@ -37,5 +37,38 @@
         </table>
     </div>
 
+</div>
+{% endblock %}-->
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/file/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/file/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% for file in page.files %}
+  <div class="file panel panel-default">
+    <div class="panel-heading">
+      <h2 class="file-name">
+        {{file.title}}
+      </h2>
+      <p class="file-upload-date">
+        <time class="timeago" datetime={{file.create_date.toISOString()}}>
+          {{file.create_date.toISOString()}}
+        </time>
+      </p>
+    </div>
+    <p class="file-download">
+      <a href="{{file.path}}">{{file.content}}</a>
+    </p>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}

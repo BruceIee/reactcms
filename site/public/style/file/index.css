@@ -1,12 +1,12 @@
-.post-content {
+.file-download {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
 }
-.post-date {
+.file-upload-date {
     bottom: 50%;
     margin: 5px 0 0;
 }
-.post-title {
+.file-name {
     margin: 0;
 }
