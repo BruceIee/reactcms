@@ -46,8 +46,8 @@ module.exports = function(app) {
             console.log('info=',info);
 
             var page = app.getPage(req);
-            //page.id = parameter.id;
             page.title = 'Announcements';
+            docs.reverse();
             page.announcements = docs;
             console.log('page=',page);
             res.render('announcement/index', { page:page });
