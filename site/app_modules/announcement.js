@@ -50,6 +50,13 @@ module.exports = function(app) {
             docs.reverse();
             page.announcements = docs;
             page.controller = 'announcements';
+            page.shorten = function(text) {
+                var ret = text;
+                if (ret.length > 100) {
+                    ret = ret.substr(0,100-3) + "&hellip;";
+                }
+                return ret;
+            };
             console.log('page=',page);
             res.render('announcement/index', { page:page });
         });
