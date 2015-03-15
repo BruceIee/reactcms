@@ -1,0 +1,29 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/item/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/item/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h4 class="col-md-12">
+            Item Home
+        </h4>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <li><a href="/item/list">Item List</a></li>
+                <li><a href="/item/add">Add Item</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
