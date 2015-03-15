@@ -46,12 +46,30 @@ module.exports = function(app) {
         res.render('item/index', { page:page });
     };
     
+    block.page.getItemList = function(req, res) {
+        var page = app.getPage(req);
+        res.render('item/list', { page:page });
+    };
+    
+    block.page.addItem = function(req, res) {
+        var page = app.getPage(req);
+        res.render('item/add', { page:page });
+    };
+    
+    block.page.viewItem = function(req, res) {
+        var page = app.getPage(req);
+        res.render('item/view', { page:page });
+    };
+    
     // data route
     app.server.get('/data/item/add', block.data.addItem);
     //app.server.post('/data/item/add', block.data.addItemPost);
     
     // page route
     app.server.get('/item/home', block.page.getIndex);
+    app.server.get('/item/add', block.page.addItem);
+    app.server.get('/item/list', block.page.getItemList);
+    app.server.get('/item/:id/view', block.page.viewItem);
 
     return block;
 };
