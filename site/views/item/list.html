@@ -25,6 +25,7 @@
             <table class="table table-bordered">
             <thead>
                 <tr>
+                    <th></th>
                     <th>Type</th>
                     <th>Content</th>
                 </tr>
@@ -32,6 +33,7 @@
             <tbody>
                 {% for item in items %}
                 <tr>
+                    <td><a href="/item/{{ item._id + '' }}/detail">detail</a></td>
                     <td>{{ item.type }}</td>
                     <td>{{ item.content }}</td>
                 </tr>
