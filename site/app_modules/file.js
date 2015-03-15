@@ -35,11 +35,6 @@ module.exports = function(app) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
-    
-    /*block.page.getIndex = function(req, res) {
-        var page = app.getPage(req);
-        res.render('file/index', { page:page });
-    };*/
 
     block.page.getIndex = function(req, res) {
         var condition = {};
@@ -48,6 +43,8 @@ module.exports = function(app) {
             var page = app.getPage(req);
             page.error = error;
             page.docs = docs;
+            page.controller = "files";
+            page.docs.reverse();
             page.info = info;
             res.render('file/index', { page:page });
         });
@@ -55,30 +52,14 @@ module.exports = function(app) {
     
     block.page.addFile = function(req, res) {
         var page = app.getPage(req);
+        page.controller = "files";
         res.render('file/add', { page:page });
     };
     
     block.page.addFilePost = function(req, res) {
         block.data.addFile(req, res, null, function(error, docs, info) {
             var page = app.getPage(req);
-            res.redirect('/file/list');
-        });
-    };
-    
-    block.page.getFileDetail = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var id = parameter.id;
-        block.data.getById(req, res, id, function(error, docs, info) {
-            var file = docs && docs[0] || null;
-            
-            console.log('>>> ', error, docs, info);
-            
-            var page = app.getPage(req);
-            page.file = file;
-            
-            console.log('>>> file:', page.file);
-                
-            res.render('file/detail', { page:page });
+            res.redirect('/files');
         });
     };
     
@@ -86,10 +67,9 @@ module.exports = function(app) {
     app.server.post('/data/file/add', block.data.addFile);
     
     // page route
-    app.server.get('/file', block.page.getIndex);
-    app.server.get('/file/upload', block.page.addFile);
-    app.server.post('/file/upload', block.page.addFilePost);
-    app.server.get('/file/:id/detail', block.page.getFileDetail);
+    app.server.get('/files', block.page.getIndex);
+    app.server.get('/files/upload', block.page.addFile);
+    app.server.post('/files/upload', block.page.addFilePost);
 
     return block;
 };

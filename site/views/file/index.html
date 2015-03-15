@@ -16,21 +16,20 @@
 <div class="container">
   <div class="container">
     <div class="container">
-      <a href="/file/upload" class="btn btn-success upload-btn"><span class="fa fa-2x fa-upload"> Upload</span></a>
+      <a href="/files/upload" class="btn btn-success upload-btn"><span class="fa fa-2x fa-upload"> Upload File</span></a>
       {% for file in files %}
       <div class="file panel panel-default">
         <div class="panel-heading">
           <h2 class="file-name">
             {{file.filename}}
           </h2>
+          <a href="{{ file.file.name }}"><span class="fa fa-2x fa-download file-download pull-right"></span></a>
           <p class="file-upload-date">
             <time class="timeago" datetime={{file.create_date.toISOString()}}>
               {{file.create_date.toISOString()}}
             </time>
           </p>
         </div>
-        <a href="{{ file.file.name }}"><span class="fa fa-2x fa-download file-download"></span></a>
-        <a href="/file/{{ file._id + '' }}/detail"><span class="fa fa-2x fa-info-circle"></span></a>
       </div>
       {% endfor %}
     </div>
