@@ -60,7 +60,7 @@ module.exports = function(app) {
     app.server.post('/data/file/upload', block.data.uploadPost);
     app.server.get('/files', block.page.uploadedList);
     return block;
-};*/
+};
 var util = require('util');
 var tool = require('leaptool');
 var fs = require('fs');
@@ -136,4 +136,4 @@ module.exports = function(app) {
     app.server.get('/file/:id/view', block.page.viewFile);
 
     return block;
-};
+};*/

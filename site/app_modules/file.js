@@ -3,7 +3,7 @@ var tool = require('leaptool');
 
 module.exports = function(app) {
     
-    var moduleName = 'item';
+    var moduleName = 'file';
     var block = {
         app: app,
         model: null
@@ -12,19 +12,10 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
-        type: {
+        filename: {
             type: 'string'
         },
-        content: {
-            type: 'string'
-        },
-        data: {
-            type: 'object',
-            subtype: {
-                type: 'json'
-            }
-        },
-        status: {
+        path: {
             type: 'string'
         },
         create_date: {
@@ -32,21 +23,22 @@ module.exports = function(app) {
         }
     };
     
-    block.data.addItem = function(req, res) {
+    block.data.addFile = function(req, res) {
         var callback = arguments[3] || null; 
-        var item = tool.getReqParameter(req);
-        item.create_date = new Date();
-        block.data.add(req, res, item, function(error, docs, info) {
+        var file = tool.getReqParameter(req);
+        file.create_date = new Date();
+        console.log(req.files);
+        block.data.add(req, res, file, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
     
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
-        res.render('item/index', { page:page });
+        res.render('file/index', { page:page });
     };
     
-    block.page.getItemList = function(req, res) {
+    block.page.getFileList = function(req, res) {
         var condition = {};
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
@@ -54,48 +46,48 @@ module.exports = function(app) {
             page.error = error;
             page.docs = docs;
             page.info = info;
-            res.render('item/list', { page:page });
+            res.render('file/list', { page:page });
         });
     };
     
-    block.page.addItem = function(req, res) {
+    block.page.addFile = function(req, res) {
         var page = app.getPage(req);
-        res.render('item/add', { page:page });
+        res.render('file/add', { page:page });
     };
     
-    block.page.addItemPost = function(req, res) {
-        block.data.addItem(req, res, null, function(error, docs, info) {
+    block.page.addFilePost = function(req, res) {
+        block.data.addFile(req, res, null, function(error, docs, info) {
             var page = app.getPage(req);
-            res.redirect('/item/list');
+            res.redirect('/file/list');
         });
     };
     
-    block.page.getItemDetail = function(req, res) {
+    block.page.getFileDetail = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var id = parameter.id;
         block.data.getById(req, res, id, function(error, docs, info) {
-            var item = docs && docs[0] || null;
+            var file = docs && docs[0] || null;
             
             console.log('>>> ', error, docs, info);
             
             var page = app.getPage(req);
-            page.item = item;
+            page.file = file;
             
-            console.log('>>> item:', page.item);
+            console.log('>>> file:', page.file);
                 
-            res.render('item/detail', { page:page });
+            res.render('file/detail', { page:page });
         });
     };
     
     // data route
-    app.server.post('/data/item/add', block.data.addItem);
+    app.server.post('/data/file/add', block.data.addFile);
     
     // page route
-    app.server.get('/item/home', block.page.getIndex);
-    app.server.get('/item/add', block.page.addItem);
-    app.server.post('/item/add', block.page.addItemPost);
-    app.server.get('/item/list', block.page.getItemList);
-    app.server.get('/item/:id/detail', block.page.getItemDetail);
+    app.server.get('/file/home', block.page.getIndex);
+    app.server.get('/file/upload', block.page.addFile);
+    app.server.post('/file/upload', block.page.addFilePost);
+    app.server.get('/file/list', block.page.getFileList);
+    app.server.get('/file/:id/detail', block.page.getFileDetail);
 
     return block;
 };
