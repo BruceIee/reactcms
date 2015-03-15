@@ -91,6 +91,7 @@ module.exports = function(app) {
     app.server.post('/data/item/add', block.data.addItem);
     
     // page route
+    app.server.get('/item', block.page.getIndex);
     app.server.get('/item/home', block.page.getIndex);
     app.server.get('/item/add', block.page.addItem);
     app.server.post('/item/add', block.page.addItemPost);
