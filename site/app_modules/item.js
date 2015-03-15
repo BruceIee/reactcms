@@ -47,8 +47,18 @@ module.exports = function(app) {
     };
     
     block.page.getItemList = function(req, res) {
-        var page = app.getPage(req);
-        res.render('item/list', { page:page });
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            
+            console.log('add item:', error, docs, info);
+            
+            var page = app.getPage(req);
+            page.error = error;
+            page.docs = docs;
+            page.info = info;
+            res.render('item/list', { page:page });
+        });
     };
     
     block.page.addItem = function(req, res) {
@@ -62,7 +72,7 @@ module.exports = function(app) {
             console.log('add item:', error, docs, info);
             
             var page = app.getPage(req);
-            res.render('item/list', { page:page });
+            res.redirect('/item/list');
         });
     };
     
