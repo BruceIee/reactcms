@@ -21,7 +21,7 @@ module.exports = function(app) {
     };
     
     app.server.get('/', block.page.getHomeIndex);
-    //app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
+    app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
     
     return block;
 };
