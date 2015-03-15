@@ -28,3 +28,6 @@ function updateList(items) {
     }
 }
 */
+jQuery(document).ready(function() {
+    jQuery("time.timeago").timeago();
+});
