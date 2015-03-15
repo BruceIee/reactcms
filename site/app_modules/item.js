@@ -56,6 +56,16 @@ module.exports = function(app) {
         res.render('item/add', { page:page });
     };
     
+    block.page.addItemPost = function(req, res) {
+        block.data.addItem(req, res, null, function(error, docs, info) {
+            
+            console.log('add item:', error, docs, info);
+            
+            var page = app.getPage(req);
+            res.render('item/list', { page:page });
+        });
+    };
+    
     block.page.viewItem = function(req, res) {
         var page = app.getPage(req);
         res.render('item/view', { page:page });
@@ -68,6 +78,7 @@ module.exports = function(app) {
     // page route
     app.server.get('/item/home', block.page.getIndex);
     app.server.get('/item/add', block.page.addItem);
+    app.server.post('/item/add', block.page.addItemPost);
     app.server.get('/item/list', block.page.getItemList);
     app.server.get('/item/:id/view', block.page.viewItem);
 
