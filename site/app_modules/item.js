@@ -50,9 +50,6 @@ module.exports = function(app) {
         var condition = {};
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            
-            console.log('add item:', error, docs, info);
-            
             var page = app.getPage(req);
             page.error = error;
             page.docs = docs;
@@ -68,29 +65,37 @@ module.exports = function(app) {
     
     block.page.addItemPost = function(req, res) {
         block.data.addItem(req, res, null, function(error, docs, info) {
-            
-            console.log('add item:', error, docs, info);
-            
             var page = app.getPage(req);
             res.redirect('/item/list');
         });
     };
     
-    block.page.viewItem = function(req, res) {
-        var page = app.getPage(req);
-        res.render('item/view', { page:page });
+    block.page.getItemDetail = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            var item = docs && docs[0] || null;
+            
+            console.log('>>> ', error, docs, info);
+            
+            var page = app.getPage(req);
+            page.item = item;
+            
+            console.log('>>> item:', page.item);
+                
+            res.render('item/detail', { page:page });
+        });
     };
     
     // data route
-    app.server.get('/data/item/add', block.data.addItem);
-    //app.server.post('/data/item/add', block.data.addItemPost);
+    app.server.post('/data/item/add', block.data.addItem);
     
     // page route
     app.server.get('/item/home', block.page.getIndex);
     app.server.get('/item/add', block.page.addItem);
     app.server.post('/item/add', block.page.addItemPost);
     app.server.get('/item/list', block.page.getItemList);
-    app.server.get('/item/:id/view', block.page.viewItem);
+    app.server.get('/item/:id/detail', block.page.getItemDetail);
 
     return block;
 };
