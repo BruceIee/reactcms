@@ -91,7 +91,8 @@ module.exports = function(app) {
         var callback = arguments[3] || null;
         var file = tool.getReqParameter(req);
         file.create_date = new Date();
-
+        var files = req.files;
+        console.log(files);
         block.data.add(req, res, file, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
@@ -99,27 +100,14 @@ module.exports = function(app) {
 
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
+        page.title = 'List of uploaded files';
+        page.controller = "file";
         res.render('file/index', { page:page });
-    };
-
-    block.page.getFileList = function(req, res) {
-        var condition = {};
-        var filter = {};
-        block.data.get(req, res, condition, filter, function(error, docs, info) {
-
-            console.log('add file:', error, docs, info);
-
-            var page = app.getPage(req);
-            page.error = error;
-            page.docs = docs;
-            page.info = info;
-            res.render('file/list', { page:page });
-        });
     };
 
     block.page.addFile = function(req, res) {
         var page = app.getPage(req);
-        res.render('file/add', { page:page });
+        res.render('file/upload', { page:page });
     };
 
     block.page.addFilePost = function(req, res) {
@@ -127,10 +115,6 @@ module.exports = function(app) {
 
             console.log('add file:', error, docs, info);
 
-            var files = req.files;
-            for (var file in files) {
-
-            }
             var page = app.getPage(req);
             res.redirect('/file/list');
         });
@@ -149,7 +133,6 @@ module.exports = function(app) {
     app.server.get('/file/home', block.page.getIndex);
     app.server.get('/file/add', block.page.addFile);
     app.server.post('/file/add', block.page.addFilePost);
-    app.server.get('/file/list', block.page.getFileList);
     app.server.get('/file/:id/view', block.page.viewFile);
 
     return block;
