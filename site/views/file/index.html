@@ -1,25 +1,38 @@
 {% extends '../layout/layout.html' %}
+{% set files = page.docs %}
 
 {% block style %}
 {% parent %}
+<link rel="stylesheet" href="/style/file/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+<script src="/script/file/index.js"></script>
 {% endblock %}
 
 {% block content %}
-<div class="body-container container">
-    <div class="row">
-        <h4 class="col-md-12">
-            File Module
-        </h4>
-        <div class="col-md-12">
-            <ul>
-                <li>
-                    <a href="/upload">Upload Test</a>
-                </li>
-                <li>
-                     <a href="/uploaded_list">List of uploaded</a>
-                </li>
-            </ul>
+<div class="container">
+  <div class="container">
+    <div class="container">
+      <a href="/files/upload" class="btn btn-success upload-btn"><span class="fa fa-2x fa-upload"> Upload File</span></a>
+      {% for file in files %}
+      <div class="file panel panel-default">
+        <div class="panel-heading">
+          <h2 class="file-name">
+            {{file.filename}}
+          </h2>
+          <a href="{{ file.file.name }}"><span class="fa fa-2x fa-download file-download pull-right"></span></a>
+          <p class="file-upload-date">
+            <time class="timeago" datetime={{file.create_date.toISOString()}}>
+              {{file.create_date.toISOString()}}
+            </time>
+          </p>
         </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 </div>
 {% endblock %}
