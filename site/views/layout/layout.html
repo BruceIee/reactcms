@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title|| "ReactCMS" }}</title>
+
+{% block script %}
+<script src="/library/jquery/jquery.min.js"></script>
+<script src="/library/bootstrap/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/library/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/library/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/style/style.css">
+{% endblock %}
+</head>
+
+<body>
+{% block header %}
+<div class="header-container container-fluid header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">ReactCMS</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          {% if page.controller == 'home' %}
+          <li class="active"> <a href="/">Home <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/">Home</a></li>
+          {% endif %}
+          {% if page.controller == 'announcements' %}
+          <li class="active"> <a href="/announcements">Announcements <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/announcements">Announcements</a></li>
+          {% endif %}
+          {% if page.controller == 'articles' %}
+          <li class="active"> <a href="/articles">Articles <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/articles">Articles</a></li>
+          {% endif %}
+          {% if page.controller == 'users' %}
+          <li class="active"> <a href="/user">Users <span class="sr-only">(current)</span></a></li>
+          {% else %}
+          <li> <a href="/user">Users</a></li>
+          {% endif %}
+          <!--
+          TODO: Revamp file controller to be a separate file.
+          <li><a href="/file">Files</a></li>
+          -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {% if page.user == null %}
+          <a class="login-button btn btn-success" href="/user/login" role="button">Administrator Login</a>
+          {% else %}
+          <button type="button" class="btn btn-default dropdown-toggle user-dropdown glyphicon glyphicon-user" data-toggle="dropdown" aria-expanded="false">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" class="glyphicon glyphicon-home"> Profile</a></li>
+            <li><a href="#" class="glyphicon glyphicon-envelope"> Mail</a></li>
+            <li><a href="#" class="glyphicon glyphicon-cloud"> Cloud</a></li>
+            <li><a href="#" class="glyphicon glyphicon-log-out"> Logout</a></li>
+          </ul>
+          {% endif %}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
+{% endblock %}
+
+<div class="body-container">
+{% block content %}{% endblock %}
+</div>
+
+{% block footer %}
+<div class="footer-container container">
+    <div class="footer">
+        <div class="footer-right pull-right" style="margin-right: 60px;">
+            <a href="https://www.facebook.com/pages/Reactcms/1693458924214767?skip_nax_wizard=true&ref_type=bookmark" target="_blank" style="text-decoration: none;" class="fa fa-facebook-square"> Facebook</a>
+            <a href="https://twitter.com/reactcms" target="_blank" style="text-decoration: none;" class="fa fa-twitter"> Twitter</a>
+            <a href="https://www.linkedin.com/pub/react-cms/b5/2b0/ba2?domainCountryName=&csrfToken=ajax%3A4633664115178820682" target="_blank" class="fa fa-linkedin-square" style="text-decoration: none;"> Linkedin</a>
+        </div>
+        <div class="footer-left pull-left">
+            <p class="text-muted" style="font-size: 1.2em; text-decoration: none; margin-left: 100px; margin-right: 50px;">ReactCMS, a flexible content management system</p>
+        </div>    
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

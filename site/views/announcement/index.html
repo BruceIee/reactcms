@@ -1,0 +1,36 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/announcement/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/moment/moment.js"></script>
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+<script src="/script/announcement/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% for announcement in page.announcements %}
+    <div class="post panel panel-default">
+      <div class="panel-heading">
+        <h2 class="post-title">
+          {{announcement.title}}
+        </h2>
+        <p class="post-date">
+          <time class="timeago" datetime={{announcement.create_date.toISOString()}}>
+            {{announcement.create_date.toISOString()}}
+          </time>
+        </p>
+      </div>
+      <p class="post-content">
+        {{announcement.content}}
+        <a href="#"> Read more</a>
+      </p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
