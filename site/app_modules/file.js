@@ -36,12 +36,12 @@ module.exports = function(app) {
         });
     };
     
-    block.page.getIndex = function(req, res) {
+    /*block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('file/index', { page:page });
-    };
-    
-    block.page.getFileList = function(req, res) {
+    };*/
+
+    block.page.getIndex = function(req, res) {
         var condition = {};
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
@@ -49,7 +49,7 @@ module.exports = function(app) {
             page.error = error;
             page.docs = docs;
             page.info = info;
-            res.render('file/list', { page:page });
+            res.render('file/index', { page:page });
         });
     };
     
@@ -86,10 +86,9 @@ module.exports = function(app) {
     app.server.post('/data/file/add', block.data.addFile);
     
     // page route
-    app.server.get('/file/home', block.page.getIndex);
+    app.server.get('/file', block.page.getIndex);
     app.server.get('/file/upload', block.page.addFile);
     app.server.post('/file/upload', block.page.addFilePost);
-    app.server.get('/file/list', block.page.getFileList);
     app.server.get('/file/:id/detail', block.page.getFileDetail);
 
     return block;
