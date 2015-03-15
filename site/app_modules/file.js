@@ -27,7 +27,10 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var file = tool.getReqParameter(req);
         file.create_date = new Date();
-        console.log(req.files);
+        var uploaded_file = req.files.file;
+        file.filename = uploaded_file.originalname;
+        file.path = uploaded_file.path;
+        console.log(file);
         block.data.add(req, res, file, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
