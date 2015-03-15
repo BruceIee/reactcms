@@ -1,9 +1,11 @@
 // item index script
 $().ready(function() {
-    doDataRefresh();
-    setInterval(doDataRefresh, 2000);
+    console.log('in item index page');
+    //doDataRefresh();
+    //setInterval(doDataRefresh, 2000);
 });
 
+/*
 function doDataRefresh() {
     var url = '/data/item/list'
     $.get(url, function(data) {
@@ -25,3 +27,4 @@ function updateList(items) {
         tableContent.append(tableRow);
     }
 }
+*/

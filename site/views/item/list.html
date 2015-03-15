@@ -1,0 +1,47 @@
+{% extends '../layout/layout.html' %}
+{% set items = page.docs %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/item/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/item/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-12">
+            Item List
+        </h4>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Type</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                <tr>
+                    <td><a href="/item/{{ item._id + '' }}/detail">detail</a></td>
+                    <td>{{ item.type }}</td>
+                    <td>{{ item.content }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
