@@ -79,7 +79,17 @@ module.exports = function(app) {
             res.render('article/article_list', { page:page });            
         });
         */
-    };    
+    };
+    
+    
+    block.page.addWysiwyg = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'WYSIWYG';
+        res.render('article/add_wysiwyg', { page:page });
+    };
+    
+    
+    
     
     
     
@@ -119,6 +129,8 @@ module.exports = function(app) {
     
     app.server.get('/articles/add', block.page.addArticle);
     app.server.get('/articles', block.page.articleList);
+    
+    app.server.get('/article/add_wysiwyg', block.page.addWysiwyg);
 
     return block;
 };

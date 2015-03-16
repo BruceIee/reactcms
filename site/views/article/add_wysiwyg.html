@@ -1,0 +1,44 @@
+{% extends '../layout/layout.html' %}
+
+{% block script %}
+{% parent %}
+<script src="/library/summernote/summernote.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#summernote').summernote({
+        height: 300,                 // set editor height
+        minHeight: null,             // set minimum height of editor
+        maxHeight: null,             // set maximum height of editor
+        focus: true,                 // set focus to editable area after initializing summernote
+    });
+});
+</script>
+{% endblock %}
+
+{% block style %}
+{% parent %}
+<link href="/library/summernote/summernote.css" rel="stylesheet">
+<style>
+.container {
+    color: #666;
+}
+.add-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12" style="margin:40px auto;font-size:2.1em;color:#666;">
+            <div style="text-align:center;">WYSIWYG test</div>
+        </div>
+    </div>
+    
+    <div id="summernote">Hello Summernote</div>
+
+</div>
+{% endblock %}
