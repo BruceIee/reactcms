@@ -22,13 +22,9 @@
       {{page.article.title}}  
     </div>
     <br>
-    <br>
     <div>
-      <textarea>
-        {{page.article.content}}
-      </textarea>
-    </div>  
-  
-
+        {{ page.article.content|raw }}
+    </div>
+    
 </div>
 {% endblock %}
