@@ -88,6 +88,23 @@ module.exports = function(app) {
         res.render('article/add_wysiwyg', { page:page });
     };
     
+    block.page.getArticleDetail = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            var article = docs && docs[0] || null;
+            
+            console.log('>>> ', error, docs, info);
+            //console.log('article=', article);
+            
+            var page = app.getPage(req);
+            page.article = article;
+            
+            console.log('>>> article:', page.article);
+                
+            res.render('article/detail', { page:page });
+        });
+    };    
     
     
     
@@ -114,6 +131,27 @@ module.exports = function(app) {
     };
     
     
+    block.data.wysiwygPost = function(req, res) {
+        var callback = arguments[3] || null; 
+        var article = tool.getReqParameter(req);
+        article.create_date = new Date();
+        console.log('article=',article);
+        //process.exit();
+        block.data.add(req, res, article, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.uploadEditorImagePost = function(req, res) {
+        var callback = arguments[3] || null; 
+        var img = tool.getReqParameter(req);
+        console.log('img=',img);
+        var url = img.file.name;
+        console.log('url=',url);
+        res.send(url);
+        //process.exit();
+    };  
+  
     
     
     // data route
@@ -122,7 +160,8 @@ module.exports = function(app) {
     //app.server.post('/data/item/add', block.data.addItem);
     
     app.server.post('/data/article/article_post', block.data.articlePost);
-    
+    app.server.post('/data/article/wysiwyg_post', block.data.wysiwygPost);
+    app.server.post('/data/article/upload_editor_image_post', block.data.uploadEditorImagePost);
     
     // page route
     //app.server.get('/item', block.page.getIndex);
@@ -131,6 +170,7 @@ module.exports = function(app) {
     app.server.get('/articles', block.page.articleList);
     
     app.server.get('/article/add_wysiwyg', block.page.addWysiwyg);
+    app.server.get('/article/:id/detail', block.page.getArticleDetail);
 
     return block;
 };
