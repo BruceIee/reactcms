@@ -67,14 +67,9 @@ module.exports = function(app) {
         var id = parameter.id;
         block.data.getById(req, res, id, function(error, docs, info) {
             var announcement = docs && docs[0] || null;
-
-            console.log('>>> ', error, docs, info);
-
             var page = app.getPage(req);
+            page.controller = "announcements";
             page.announcement = announcement;
-
-            console.log('>>> item:', page.item);
-
             res.render('announcement/show', { page:page });
         });
     };
