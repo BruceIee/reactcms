@@ -62,14 +62,19 @@ module.exports = function(app) {
         });
     };
 
-    block.page.getAnnouncementDetail = function(req, res) {
-        block.data.getById(req, res, req.parameters._id, function(error, docs, info) {
-            console.log(error);
-            console.log(info);
-            var page = app.getPage(req);
-            page.controller = "announcements";
+    block.page.getItemDetail = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
             var announcement = docs && docs[0] || null;
+
+            console.log('>>> ', error, docs, info);
+
+            var page = app.getPage(req);
             page.announcement = announcement;
+
+            console.log('>>> item:', page.item);
+
             res.render('announcement/show', { page:page });
         });
     };
@@ -78,7 +83,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         page.title = 'Add an announcement';
         page.controller = "announcements";
-        console.log("Announcements Add")
+        console.log("Announcements Add");
         res.render('announcement/add', { page:page });
     };
     
@@ -88,7 +93,7 @@ module.exports = function(app) {
     // page route
     app.server.get('/announcements', block.page.getAnnouncementIndex);
     app.server.get('/announcements/add', block.page.addAnnouncement);
-    app.server.get('/announcements/:_id', block.page.getAnnouncementDetail);
+    app.server.get('/announcements/:id', block.page.getItemDetail);
 
     return block;
 };
