@@ -9,7 +9,7 @@ module.exports = function(app) {
     };
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
-    
+
     block.model = {
         type: {
             type: 'string'
@@ -28,7 +28,7 @@ module.exports = function(app) {
     block.data.addArticlePost = function(req, res) {
         var callback = function(error, docs, info) {
             res.redirect("articles");
-        }
+        };
         var article = tool.getReqParameter(req);
         article.create_date = new Date();
         block.data.add(req, res, article, function(error, docs, info) {

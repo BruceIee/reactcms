@@ -11,7 +11,7 @@ var cons = require('consolidate');
 var compression = require('compression')
 var _ = require('underscore');
 var tool = require('leaptool');
-var multer = require('multer');
+var multer = require('multer'); // Multer is a node.js middleware for handling multipart/form-data.
 
 var app = {};
 
@@ -79,16 +79,17 @@ function setup(cbSetup) {
     }));
     app.server.use(express.static(path.join(__dirname, app.setting.public_name)));
     
-    /*Configure the multer.*/
+    /*Configure the multer. Multer is a node.js middleware for handling multipart/form-data.*/
     app.server.use(multer({ dest: './site/public/file/',
         rename: function (fieldname, filename) {
-            return filename+Date.now();
+            //return filename+Date.now();
+            return filename;
         },
     onFileUploadStart: function (file) {
         console.log(file.originalname + ' is starting to upload...')
     },
     onFileUploadComplete: function (file) {
-        console.log(file.fieldname + ' uploaded to  ' + file.path)
+        console.log(file.fieldname + ' is uploaded to ' + file.path)
     }
     }));
     
