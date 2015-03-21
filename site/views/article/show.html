@@ -1,15 +1,15 @@
 {% extends '../layout/layout.html' %}
-{% set announcement = page.announcement %}
+{% set article = page.article %}
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/announcement/index.css">
+<link rel="stylesheet" href="/style/article/index.css">
 {% endblock %}
 
 {% block script %}
 {% parent %}
 <script src="http://timeago.yarp.com/jquery.timeago.js"></script>
-<script src="/script/announcement/index.js"></script>
+<script src="/script/article/index.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -17,16 +17,16 @@
   <div class="post panel panel-default">
     <div class="panel-heading">
       <h2 class="post-title">
-        {{announcement.title}}
+        {{article.title}}
       </h2>
       <p class="post-date">
-        <time class="timeago" datetime={{announcement.create_date.toISOString()}}>
-          {{announcement.create_date.toISOString()}}
+        <time class="timeago" datetime={{article.create_date.toISOString()}}>
+          {{article.create_date.toISOString()}}
         </time>
       </p>
     </div>
     <p class="post-content">
-      {{ announcement.content }}
+      {{ article.content }}
     </p>
   </div>
 </div>

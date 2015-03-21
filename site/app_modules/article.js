@@ -2,7 +2,7 @@ var util = require('util');
 var tool = require('leaptool');
 
 module.exports = function(app) {
-    var moduleName = 'announcement';
+    var moduleName = 'article';
     var block = {
         app: app,
         model: null
@@ -25,17 +25,17 @@ module.exports = function(app) {
         }
     };
 
-    block.data.addAnnouncementPost = function(req, res) {
+    block.data.addArticlePost = function(req, res) {
         var callback = function(error, docs, info) {
-            res.redirect("announcements");
+            res.redirect("articles");
         }
-        var announcement = tool.getReqParameter(req);
-        announcement.create_date = new Date();
-        block.data.add(req, res, announcement, function(error, docs, info) {
+        var article = tool.getReqParameter(req);
+        article.create_date = new Date();
+        block.data.add(req, res, article, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
-    block.page.getAnnouncementIndex = function(req, res) {
+    block.page.getArticleIndex = function(req, res) {
         console.log('---------');
         var parameter = tool.getReqParameter(req);
         console.log(parameter);
@@ -48,10 +48,10 @@ module.exports = function(app) {
             console.log('info=',info);
 
             var page = app.getPage(req);
-            page.title = 'Announcements';
+            page.title = 'Articles';
             docs.reverse();
-            page.announcements = docs;
-            page.controller = 'announcements';
+            page.articles = docs;
+            page.controller = 'articles';
             page.shorten = function(text) {
                 var ret = text;
                 if (ret.length > 300) {
@@ -60,34 +60,34 @@ module.exports = function(app) {
                 return ret;
             };
             console.log('page=',page);
-            res.render('announcement/index', { page:page });
+            res.render('article/index', { page:page });
         });
     };
 
-    block.page.getAnnouncementDetail = function(req, res) {
+    block.page.getArticleDetail = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var id = parameter.id;
         block.data.getById(req, res, id, function(error, docs, info) {
-            var announcement = docs && docs[0] || null;
+            var article = docs && docs[0] || null;
             var page = app.getPage(req);
-            page.controller = "announcements";
-            page.announcement = announcement;
-            res.render('announcement/show', { page:page });
+            page.controller = "articles";
+            page.article = article;
+            res.render('article/show', { page:page });
         });
     };
 
-    block.page.addAnnouncement = function(req, res) {
+    block.page.addArticle = function(req, res) {
         var page = app.getPage(req);
-        page.title = 'Add an announcement';
-        page.controller = "announcements";
-        console.log("Announcements Add");
-        res.render('announcement/add', { page:page });
+        page.title = 'Add an article';
+        page.controller = "articles";
+        console.log("Articles Add");
+        res.render('article/add', { page:page });
     };
 
-    app.server.get('/announcements', block.page.getAnnouncementIndex);
-    app.server.get('/announcements/add', block.page.addAnnouncement);
-    app.server.get('/announcements/:id', block.page.getAnnouncementDetail);
-    app.server.post('/announcements', block.data.addAnnouncementPost);
+    app.server.get('/articles', block.page.getArticleIndex);
+    app.server.get('/articles/add', block.page.addArticle);
+    app.server.get('/articles/:id', block.page.getArticleDetail);
+    app.server.post('/articles', block.data.addArticlePost);
 
     return block;
 };

@@ -24,9 +24,11 @@ module.exports = function(app) {
             type: 'date'
         }
     };
-    
-    block.data.addItem = function(req, res) {
-        var callback = arguments[3] || null; 
+
+    block.data.addAnnouncementPost = function(req, res) {
+        var callback = function(error, docs, info) {
+            res.redirect("announcements");
+        }
         var announcement = tool.getReqParameter(req);
         announcement.create_date = new Date();
         block.data.add(req, res, announcement, function(error, docs, info) {
@@ -62,7 +64,7 @@ module.exports = function(app) {
         });
     };
 
-    block.page.getItemDetail = function(req, res) {
+    block.page.getAnnouncementDetail = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var id = parameter.id;
         block.data.getById(req, res, id, function(error, docs, info) {
@@ -81,14 +83,11 @@ module.exports = function(app) {
         console.log("Announcements Add");
         res.render('announcement/add', { page:page });
     };
-    
-    // data route
-    //app.server.get('/data/announcement/add', block.data.addItem);
-    //app.server.post('/data/announcements/add', block.data.addItem);
-    // page route
+
     app.server.get('/announcements', block.page.getAnnouncementIndex);
     app.server.get('/announcements/add', block.page.addAnnouncement);
-    app.server.get('/announcements/:id', block.page.getItemDetail);
+    app.server.get('/announcements/:id', block.page.getAnnouncementDetail);
+    app.server.post('/announcements', block.data.addAnnouncementPost);
 
     return block;
 };

@@ -2,35 +2,35 @@
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/announcement/index.css">
+<link rel="stylesheet" href="/style/article/index.css">
 {% endblock %}
 
 {% block script %}
 {% parent %}
 <script src="/library/moment/moment.js"></script>
 <script src="http://timeago.yarp.com/jquery.timeago.js"></script>
-<script src="/script/announcement/index.js"></script>
+<script src="/script/article/index.js"></script>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-  <a href="/announcements/add" class="btn btn-success new-btn"><span class="fa fa-2x fa-upload"> New Announcement</span></a>
-  {% for announcement in page.announcements %}
+  <a href="/articles/add" class="btn btn-success new-btn"><span class="fa fa-2x fa-upload"> New Article</span></a>
+  {% for article in page.articles %}
     <div class="post panel panel-default">
       <div class="panel-heading">
         <h2 class="post-title">
-          {{announcement.title}}
+          {{article.title}}
         </h2>
         <p class="post-date">
-          <time class="timeago" datetime={{announcement.create_date.toISOString()}}>
-            {{announcement.create_date.toISOString()}}
+          <time class="timeago" datetime={{article.create_date.toISOString()}}>
+            {{article.create_date.toISOString()}}
           </time>
         </p>
       </div>
       <p class="post-content">
-        {{ page.shorten(announcement.content) }}
-        {% if page.shorten(announcement.content) != announcement.content %}
-        <a href="/announcements/{{announcement._id.toString()}}" class="read-more-btn">Read more</a>
+        {{ page.shorten(article.content) }}
+        {% if page.shorten(article.content) != article.content %}
+        <a href="/articles/{{article._id.toString()}}" class="read-more-btn">Read more</a>
         {% endif %}
       </p>
     </div>
