@@ -37,9 +37,8 @@ module.exports = function(app) {
         salt: {
             type: 'string',
             subtype: {
-                type:'random'
-            },
-            auto: true
+                type:'string'
+            }
         },
         password: {
             type: 'string',
@@ -77,7 +76,12 @@ module.exports = function(app) {
     block.data.addUserNext = function(req, res, next, callback) {
         var user = tool.getReqParameter(req);
         user.username = user.username || user.email;
+        user.salt = Math.round(100000000 * Math.random());
+        user.password = tool.hash(tool.password + user.salt);
         block.data.add(req, res, user, function(error, docs, info) {
+            
+            console.log('user added:', docs);
+            
             var user = docs && docs[0];
             if (req.session) {
                 req.session.user = user;
