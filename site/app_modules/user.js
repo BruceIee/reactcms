@@ -66,8 +66,7 @@ module.exports = function(app) {
                 error = new Error('user exists for email ' + parameter.email);
                 info = { message:'Error in adding a new user' };
                 app.cb(error, docs, info, req, res, callback);
-            }
-            else {
+            } else {
                 block.data.addUserNext(req, res, null, callback);         
             }
         });
@@ -77,11 +76,8 @@ module.exports = function(app) {
         var user = tool.getReqParameter(req);
         user.username = user.username || user.email;
         user.salt = Math.round(100000000 * Math.random());
-        user.password = tool.hash(tool.password + user.salt);
+        user.password = tool.hash(user.password + user.salt);
         block.data.add(req, res, user, function(error, docs, info) {
-            
-            console.log('user added:', docs);
-            
             var user = docs && docs[0];
             if (req.session) {
                 req.session.user = user;
@@ -138,7 +134,6 @@ module.exports = function(app) {
                 if (req.session) {
                     delete user.salt;
                     delete user.password;
-                    console.log('save user in session:', user);
                     req.session.user = user;
                 }
                 var nextUrl = parameter.redirect || '/';
