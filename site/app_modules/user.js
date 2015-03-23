@@ -116,7 +116,7 @@ module.exports = function(app) {
         block.data.getWeb(req, res, null, function(error, docs, info) {
             var page = { title:'User List', docs:docs };
             page.controller = "users";
-            res.render('users/index', { page:page });
+            res.render('user/index', { page:page });
         });
     };
     
