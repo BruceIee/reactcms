@@ -184,13 +184,13 @@ module.exports = function(app) {
     };
     
     // page route
-    app.server.get('/' + moduleName, block.page.getIndex);
-    app.server.get('/' + moduleName + '/login', block.page.login);
-    app.server.post('/' + moduleName + '/login', block.page.loginPost);
-    app.server.get('/' + moduleName + '/signup', block.page.signup);
-    app.server.post('/' + moduleName + '/signup', block.page.signupPost);
-    app.server.get('/' + moduleName + '/logout', block.page.logout);
-    app.server.get('/' + moduleName + '/:username/profile', block.page.getProfile);
+    app.server.get('/users', block.page.getIndex);
+    app.server.get('/users/login', block.page.login);
+    app.server.post('/users/login', block.page.loginPost);
+    app.server.get('/users/signup', block.page.signup);
+    app.server.post('/users/signup', block.page.signupPost);
+    app.server.get('/users/logout', block.page.logout);
+    app.server.get('/users/:username/profile', block.page.getProfile);
     
     return block;
 };

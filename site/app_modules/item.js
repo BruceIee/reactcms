@@ -66,7 +66,7 @@ module.exports = function(app) {
     block.page.addItemPost = function(req, res) {
         block.data.addItem(req, res, null, function(error, docs, info) {
             var page = app.getPage(req);
-            res.redirect('/item/list');
+            res.redirect('/items/list');
         });
     };
     
@@ -88,15 +88,15 @@ module.exports = function(app) {
     };
     
     // data route
-    app.server.post('/data/item/add', block.data.addItem);
+    app.server.post('/data/items/add', block.data.addItem);
     
     // page route
-    app.server.get('/item', block.page.getIndex);
-    app.server.get('/item/home', block.page.getIndex);
-    app.server.get('/item/add', block.page.addItem);
-    app.server.post('/item/add', block.page.addItemPost);
-    app.server.get('/item/list', block.page.getItemList);
-    app.server.get('/item/:id/detail', block.page.getItemDetail);
+    app.server.get('/items', block.page.getIndex);
+    app.server.get('/items/home', block.page.getIndex);
+    app.server.get('/items/add', block.page.addItem);
+    app.server.post('/items/add', block.page.addItemPost);
+    app.server.get('/items/list', block.page.getItemList);
+    app.server.get('/items/:id/detail', block.page.getItemDetail);
 
     return block;
 };
