@@ -40,13 +40,11 @@
                 <a class="login-button btn btn-success" href="/users/login" role="button">Login</a>
                 {% else %}
                 <button type="button" class="btn btn-default dropdown-toggle user-dropdown glyphicon glyphicon-user" data-toggle="dropdown" aria-expanded="false">
-                    <span class="caret"></span>
+                    {{ page.user.username }} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#" class="glyphicon glyphicon-home"> Profile</a></li>
-                    <li><a href="#" class="glyphicon glyphicon-envelope"> Mail</a></li>
-                    <li><a href="#" class="glyphicon glyphicon-cloud"> Cloud</a></li>
-                    <li><a href="#" class="glyphicon glyphicon-log-out"> Logout</a></li>
+                    <li><a href="/users/{{ page.user._id }}/profile}}" class="glyphicon glyphicon-home"> Profile</a></li>
+                    <li><a href="/users/logout" class="glyphicon glyphicon-log-out"> Logout</a></li>
                 </ul>
                 {% endif %}
             </ul>

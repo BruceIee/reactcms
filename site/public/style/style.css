@@ -1,27 +1,33 @@
 .navbar {
     border: 0;
 }
+
 .body-container {
-    min-height: 420px;
+    min-height: 540px;
 }
+
 .header-container {
     padding-left: 0;
     padding-right: 0;
 }
+
 .login-button {
     margin-top: 8px;
 }
+
 .user-dropdown {
     margin-top: 8px;
     margin-left: 10px;
 }
+
 .dropdown-menu {
     padding-top: 4px;
 }
+
 .footer-container {
     height: 100%;
     width: 100%;
-    padding: 20px 10px;
+    padding: 10px 10px 0px;
     margin-left: 0;
     margin-right: 0;
     background-color: #f2f2f2;
