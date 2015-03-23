@@ -1,14 +1,33 @@
 {% extends '../layout/layout.html' %}
-{% set users = page.docs %}
 
 {% block content %}
 <div class="container">
+    <!--
     <div class="row">
         <h4 class="col-md-12">Admin Page</h4>
     </div>
+    -->
     <div class="row">
         <div class="col-md-12">
-            Content
+            <div class="section">
+                <h4>Modules</h4>
+                <div>
+                    <a href="/users">User</a>
+                </div>
+                <div>
+                    <a href="/items">Item</a>
+                </div>
+                <div>
+                    <a href="/files">File</a>
+                </div>
+                <br/>
+                <div>
+                    <a href="/announcements">Announcement</a>
+                </div>
+                <div>
+                    <a href="/articles">Article</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

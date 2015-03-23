@@ -7,27 +7,22 @@
 
 {% block script %}
 {% parent %}
-<script src="/library/moment/moment.js"></script>
 <script src="/script/item/index.js"></script>
 {% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="row">
-        <h4 class="col-md-12">{{ page.title }}</h4>
+        <h4 class="col-md-12">
+            Item Home
+        </h4>
     </div>
     <div class="row">
-        <div class="col-md-8">
-            <table class="table table-bordered item-list">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Content</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div class="col-md-12">
+            <ul>
+                <li><a href="/items/list">Item List</a></li>
+                <li><a href="/items/add">Add Item</a></li>
+            </ul>
         </div>
     </div>
 </div>

@@ -37,9 +37,8 @@ module.exports = function(app) {
         salt: {
             type: 'string',
             subtype: {
-                type:'random'
-            },
-            auto: true
+                type:'string'
+            }
         },
         password: {
             type: 'string',
@@ -67,8 +66,7 @@ module.exports = function(app) {
                 error = new Error('user exists for email ' + parameter.email);
                 info = { message:'Error in adding a new user' };
                 app.cb(error, docs, info, req, res, callback);
-            }
-            else {
+            } else {
                 block.data.addUserNext(req, res, null, callback);         
             }
         });
@@ -77,6 +75,8 @@ module.exports = function(app) {
     block.data.addUserNext = function(req, res, next, callback) {
         var user = tool.getReqParameter(req);
         user.username = user.username || user.email;
+        user.salt = Math.round(100000000 * Math.random());
+        user.password = tool.hash(user.password + user.salt);
         block.data.add(req, res, user, function(error, docs, info) {
             var user = docs && docs[0];
             if (req.session) {
@@ -115,6 +115,7 @@ module.exports = function(app) {
     block.page.getIndex = function(req, res) {
         block.data.getWeb(req, res, null, function(error, docs, info) {
             var page = { title:'User List', docs:docs };
+            page.controller = "users";
             res.render('user/index', { page:page });
         });
     };
@@ -122,6 +123,7 @@ module.exports = function(app) {
     block.page.login = function(req, res) {
         var page = app.getPage(req);
         page.title = 'User Login';
+        page.controller = "users";
         res.render('user/login', { page:page });
     };
     
@@ -132,7 +134,6 @@ module.exports = function(app) {
                 if (req.session) {
                     delete user.salt;
                     delete user.password;
-                    console.log('save user in session:', user);
                     req.session.user = user;
                 }
                 var nextUrl = parameter.redirect || '/';
@@ -150,6 +151,7 @@ module.exports = function(app) {
     block.page.signup = function(req, res) {
         var page = app.getPage(req);
         page.title = 'User Signup';
+        page.controller = "users";
         res.render('user/signup', { page:page });
     };
     
@@ -177,17 +179,18 @@ module.exports = function(app) {
     block.page.getProfile = function(req, res) {
         var page = app.getPage(req);
         page.title = 'User Profile';
+        page.controller = "users";
         res.render('user/profile', { page:page });
     };
     
     // page route
-    app.server.get('/' + moduleName, block.page.getIndex);
-    app.server.get('/' + moduleName + '/login', block.page.login);
-    app.server.post('/' + moduleName + '/login', block.page.loginPost);
-    app.server.get('/' + moduleName + '/signup', block.page.signup);
-    app.server.post('/' + moduleName + '/signup', block.page.signupPost);
-    app.server.get('/' + moduleName + '/logout', block.page.logout);
-    app.server.get('/' + moduleName + '/:username/profile', block.page.getProfile);
+    app.server.get('/users', block.page.getIndex);
+    app.server.get('/users/login', block.page.login);
+    app.server.post('/users/login', block.page.loginPost);
+    app.server.get('/users/signup', block.page.signup);
+    app.server.post('/users/signup', block.page.signupPost);
+    app.server.get('/users/logout', block.page.logout);
+    app.server.get('/users/:username/profile', block.page.getProfile);
     
     return block;
 };

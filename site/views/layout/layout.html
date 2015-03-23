@@ -22,27 +22,34 @@
 <body>
 {% block header %}
 <div class="header-container container-fluid header">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">ReactCMS</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                {% if page.user == null %}
+                <a class="login-button btn btn-success" href="/users/login" role="button">Login</a>
+                {% else %}
+                <button type="button" class="btn btn-default dropdown-toggle user-dropdown glyphicon glyphicon-user" data-toggle="dropdown" aria-expanded="false">
+                    {{ page.user.username }} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="/users/{{ page.user._id }}/profile}}" class="glyphicon glyphicon-home"> Profile</a></li>
+                    <li><a href="/users/logout" class="glyphicon glyphicon-log-out"> Logout</a></li>
+                </ul>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
   </nav>
 </div>
 {% endblock %}
@@ -54,7 +61,19 @@
 {% block footer %}
 <div class="footer-container container">
     <div class="footer">
-        <a class="login-button btn btn-success pull-right" role="button">Login</a>
+        <div class="col-md-6">
+            <p class="text-muted" style="text-decoration:none;">
+                ReactCMS - A Flexible Content Management System
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div class="pull-right">
+                <a href="/web/page/about" targer="_blank" style="text-decoration: none; margin-right: 15px;" class="fa fa-question-circle"> About Us</a>
+                <a href="https://www.facebook.com/pages/Reactcms/1693458924214767?skip_nax_wizard=true&ref_type=bookmark" target="_blank" style="text-decoration: none; margin-right: 15px;" class="fa fa-facebook-square"> Facebook</a>
+                <a href="https://twitter.com/reactcms" target="_blank" style="text-decoration: none; margin-right: 15px;" class="fa fa-twitter"> Twitter</a>
+                <a href="https://www.linkedin.com/pub/react-cms/b5/2b0/ba2?domainCountryName=&csrfToken=ajax%3A4633664115178820682" target="_blank" class="fa fa-linkedin-square" style="text-decoration: none;"> Linkedin</a>
+            </div>
+        </div>  
     </div>
 </div>
 {% endblock %}

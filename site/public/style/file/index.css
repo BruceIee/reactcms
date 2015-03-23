@@ -1,0 +1,23 @@
+.file-download {
+    margin-left: 5px;
+    padding-top: 5px;
+    bottom: 100px;
+}
+.file-info {
+    margin-left: 5px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.file-upload-date {
+    bottom: 50%;
+    margin: 5px 0 0;
+}
+.file-name {
+    margin: 0;
+}
+.file {
+    width: 300px;
+}
+.upload-btn {
+    margin-bottom: 5px;
+}
