@@ -1,0 +1,51 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script>
+function add_new_group() {
+    $("#mydiv").append("<fieldset>" +
+        "<legend>new</legend>" +
+        '<p>Text: <input type="text" name="text" /></p>' +
+        '<p>Hyperlink: <input type="text" name="hyperlink" /></p>' +
+        "</fieldset>" +
+        "<hr>");
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-12">
+            Add Links
+        </h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form role="form" action="/links/add_links_post" method="POST">
+                <button type="button" class="btn btn-success" onclick="add_new_group()">+</button>
+                <div id="mydiv" class="form-group">
+                    
+                    <fieldset>
+                        <legend>new</legend>
+                        <p>Text: <input type="text" name="text" /></p>
+                        <p>Hyperlink: <input type="text" name="hyperlink" /></p>
+                    </fieldset>
+                    <hr>
+                  
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
