@@ -2,12 +2,12 @@
 
 {% block script %}
 {% parent %}
-<script src="/script/user/login.js"></script>
+<!-- <script src="/script/user/login.js"></script> -->
 {% endblock %}
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/user/login.css">
+<!-- <link rel="stylesheet" href="/style/user/login.css"> -->
 <style>
 .container {
     color: #666;
@@ -19,7 +19,7 @@
 <div class="container">
     
     <div class="row">
-        <div class="col-md-12" style="margin:40px auto;font-size:2.1em;">
+        <div class="col-md-12" style="margin:20px auto;font-size:2.1em;">
             <div style="text-align:center;">User Login</div>
         </div>
     </div>
@@ -35,7 +35,10 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="">
                 </div>
-                <button type="submit" class="btn btn-info" style="width:100%;">Login</button>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">LOGIN</button>
+                <div style="margin-top:40px;text-align:center;">
+                    Need account? <a href="/users/signup">Signup here</a>
+                </div>
             </form>
         </div>
     </div>
