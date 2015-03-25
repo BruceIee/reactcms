@@ -169,8 +169,8 @@ module.exports = function(app) {
     app.server.get('/articles/add', block.page.addArticle);
     app.server.get('/articles', block.page.articleList);
     
-    app.server.get('/article/add_wysiwyg', block.page.addWysiwyg);
-    app.server.get('/article/:id/detail', block.page.getArticleDetail);
+    app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);
+    app.server.get('/articles/:id/detail', block.page.getArticleDetail);
 
     return block;
 };
