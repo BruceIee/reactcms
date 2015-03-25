@@ -44,30 +44,13 @@ module.exports = function(app) {
     };
 
     
-    block.page.articleList = function(req, res) {
-        console.log('---------');
-        var condition = {};
-        var filter = {};
-
-        app.db.find(moduleName, condition, filter, function(error, docs, info){
-            console.log('error=',error);
-            console.log('docs=',docs);
-            console.log('info=',info);
-            
-            var page = app.getPage(req);
-            page.title = 'List of articles';
-            docs.reverse();
-            page.articles = docs;
-            page.controller = "articles";
-            console.log('page=',page);
-            res.render('article/index', { page:page });
-            
-            //app.cb(error, docs, info, req, res, callback);
-        });
+    block.page.articleHome = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Article Home';
+        res.render('article/index', { page:page });
     };
     
-    
-    block.page.articleListLJ = function(req, res) {
+    block.page.articleList = function(req, res) {
         console.log('---------');
         var condition = {};
         var filter = {};
@@ -173,11 +156,11 @@ module.exports = function(app) {
     //app.server.get('/item', block.page.getIndex);
     
     app.server.get('/articles/add', block.page.addArticle);
-    app.server.get('/articles', block.page.articleList);
+    app.server.get('/articles', block.page.articleHome);
     
     app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);
     app.server.get('/articles/:id/detail', block.page.getArticleDetail);
-    app.server.get('/articles/list', block.page.articleListLJ);
+    app.server.get('/articles/list', block.page.articleList);
     
     return block;
 };
