@@ -8,13 +8,19 @@
 {% parent %}
 <script>
 function add_new_group() {
-    $("#mydiv").append("<fieldset>" +
+    $("#mydiv").append( "<div>" +
+        "<fieldset>" +
         "<legend>new</legend>" +
         '<p>Text: <input type="text" name="text" /></p>' +
         '<p>Hyperlink: <input type="text" name="hyperlink" /></p>' +
         "</fieldset>" +
-        "<hr>");
-}
+        '<button type="button" class="btn btn-warning" onclick="remove_group(this)">-</button>' +
+        "<hr>" +
+        "</div>");
+};
+function remove_group(who) {
+    $(who).parent().remove(); //remove associate div
+};
 </script>
 {% endblock %}
 
@@ -32,14 +38,14 @@ function add_new_group() {
             <form role="form" action="/links/add_links_post" method="POST">
                 <button type="button" class="btn btn-success" onclick="add_new_group()">+</button>
                 <div id="mydiv" class="form-group">
-                    
-                    <fieldset>
-                        <legend>new</legend>
-                        <p>Text: <input type="text" name="text" /></p>
-                        <p>Hyperlink: <input type="text" name="hyperlink" /></p>
-                    </fieldset>
-                    <hr>
-                  
+                    <div>
+                        <fieldset>
+                            <legend>new</legend>
+                            <p>Text: <input type="text" name="text" /></p>
+                            <p>Hyperlink: <input type="text" name="hyperlink" /></p>
+                        </fieldset>
+                        <hr>
+                    </div>
                 </div>
                 
                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
