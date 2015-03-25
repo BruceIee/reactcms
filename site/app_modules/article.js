@@ -64,22 +64,28 @@ module.exports = function(app) {
             
             //app.cb(error, docs, info, req, res, callback);
         });
-        
-        
-        /* ???
-        block.data.get(req, res, condition, filter, null, function(error, docs, info) {
-            console.log('error=',error);
-            console.log('docs=',docs);
-            console.log('info=',info);
+    };
+    
+    
+    block.page.articleListLJ = function(req, res) {
+        console.log('---------');
+        var condition = {};
+        var filter = {};
+
+        app.db.find(moduleName, condition, filter, function(error, docs, info){
+            //console.log('error=',error);
+            //console.log('docs=',docs);
+            //console.log('info=',info);
             
             var page = app.getPage(req);
             page.title = 'List of articles';
             page.articles = docs;
-            console.log('page=',page);
-            res.render('article/article_list', { page:page });            
+            //console.log('page=',page);
+            res.render('article/list', { page:page });
+            
+            //app.cb(error, docs, info, req, res, callback);
         });
-        */
-    };
+    };    
     
     
     block.page.addWysiwyg = function(req, res) {
@@ -171,7 +177,8 @@ module.exports = function(app) {
     
     app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);
     app.server.get('/articles/:id/detail', block.page.getArticleDetail);
-
+    app.server.get('/articles/list', block.page.articleListLJ);
+    
     return block;
 };
 
