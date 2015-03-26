@@ -17,6 +17,9 @@ module.exports = function(app) {
         content: {
             type: 'string'
         },
+        content_markdown: {
+            type: 'string'
+        },
         title: {
             type: 'string'
         },
@@ -28,7 +31,7 @@ module.exports = function(app) {
     block.data.addAnnouncementPost = function(req, res) {
         var callback = function(error, docs, info) {
             res.redirect("announcements");
-        }
+        };
         var announcement = tool.getReqParameter(req);
         announcement.create_date = new Date();
         block.data.add(req, res, announcement, function(error, docs, info) {
