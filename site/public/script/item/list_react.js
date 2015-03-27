@@ -1,7 +1,12 @@
 // item list_react script
+var app = app || {};
+
 $().ready(function() {
     console.log('in item list_react page');
-    
+    setup();
+});
+
+function setup() {
     app.list1Data = {
         items: [
             { text:'Apple', iconClass:'fa fa-fw fa-bicycle', id:'apple' },
@@ -13,10 +18,9 @@ $().ready(function() {
     };
     app.list1 = React.renderComponent(
         <List data={ app.list1Data } />,
-        document.getElementById('box1')
+        document.getElementById('itemList')
     );
     app.list1.on('select', function(id) {
         console.log('list item selected:', id);
     });
-
-});
+}
