@@ -2,11 +2,16 @@
 
 {% block style %}
 {% parent %}
-<!-- <link rel="stylesheet" href="/style/item/index.css"> -->
+<link rel="stylesheet" href="/component/common/common-style.css"/>
+<link rel="stylesheet" href="/component/list/list.css"/>
 {% endblock %}
 
 {% block script %}
 {% parent %}
+<script src="/library/react/react.js"></script>
+<script src="/library/react/JSXTransformer.js"></script>
+<script type="text/jsx" src="/component/common/common-mixin.js"></script>
+<script type="text/jsx" src="/component/list/list.js"></script>
 <script src="/script/item/list_react.js"></script>
 {% endblock %}
 
@@ -17,11 +22,7 @@
         <h4 class="col-md-12">
             Item List (React)
         </h4>
-    </div>
-    
-    <div class="row" style="margin-top:20px;">
-        <div class="col-md-12">
-        </div>
+        <div id="itemList" style="margin-top:20px;"></div>
     </div>
     
 </div>
