@@ -3,7 +3,7 @@ var app = app || {};
 
 $().ready(function() {
     console.log('in item list_react page');
-    setup();
+    
 });
 
 function setup() {
@@ -24,3 +24,5 @@ function setup() {
         console.log('list item selected:', id);
     });
 }
+
+setup();

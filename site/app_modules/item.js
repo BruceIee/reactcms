@@ -82,7 +82,6 @@ module.exports = function(app) {
     };
     
     block.page.getItemListReact = function(req, res) {
-        console.log('> getItemListReact');
         var page = app.getPage(req);
         res.render('item/list_react', { page:page });
     };
