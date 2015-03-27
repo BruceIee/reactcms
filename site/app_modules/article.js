@@ -25,7 +25,6 @@ module.exports = function(app) {
         }
     };
 
-<<<<<<< HEAD
     block.data.addArticlePost = function(req, res) {
         var callback = function(error, docs, info) {
             res.redirect("articles");
@@ -36,8 +35,6 @@ module.exports = function(app) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
-    block.page.getArticleIndex = function(req, res) {
-=======
     
     block.page.articleHome = function(req, res) {
         var page = app.getPage(req);

@@ -45,7 +45,12 @@ module.exports = function(app) {
             page.docs = docs;
             page.docs.reverse();
             page.info = info;
-            res.render('file/index', { page:page });
+            if (req.accepts('json')) {
+                res.set({'Content-Type': 'application/json'});
+                res.end(JSON.stringify(docs));
+            } else {
+                res.render('file/index', {page: page});
+            }
         });
     };
     
@@ -60,11 +65,7 @@ module.exports = function(app) {
             res.redirect('/files');
         });
     };
-    
-    // data route
-    app.server.post('/data/file/add', block.data.addFile);
-    
-    // page route
+
     app.server.get('/files', block.page.getIndex);
     app.server.get('/files/upload', block.page.addFile);
     app.server.post('/files/upload', block.page.addFilePost);
