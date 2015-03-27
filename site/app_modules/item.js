@@ -54,6 +54,15 @@ module.exports = function(app) {
         });
     };
     
+    block.data.getItems = function(req, res) {
+        var callback = arguments[3] || null;
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
     // block.page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
@@ -108,6 +117,7 @@ module.exports = function(app) {
     };
     
     // data route
+    app.server.get('/data/items', block.data.getItems);
     app.server.post('/data/items/add', block.data.addItem);
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
     
