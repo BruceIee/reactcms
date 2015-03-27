@@ -72,6 +72,12 @@ module.exports = function(app) {
         });
     };
     
+    block.page.getItemListReact = function(req, res) {
+        console.log('> getItemListReact');
+        var page = app.getPage(req);
+        res.render('item/list_react', { page:page });
+    };
+    
     block.page.addItem = function(req, res) {
         var page = app.getPage(req);
         res.render('item/add', { page:page });
@@ -94,6 +100,13 @@ module.exports = function(app) {
         });
     };
     
+    block.page.getItemDetailReact = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.itemId = parameter.id;
+        res.render('item/react/detail', { page:page });
+    };
+    
     // data route
     app.server.post('/data/items/add', block.data.addItem);
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
@@ -105,6 +118,10 @@ module.exports = function(app) {
     app.server.post('/items/add', block.page.addItemPost);
     app.server.get('/items/list', block.page.getItemList);
     app.server.get('/items/:id/detail', block.page.getItemDetail);
+    
+    // page react test route
+    app.server.get('/items/list/react', block.page.getItemListReact);
+    app.server.get('/items/:id/detail/react', block.page.getItemDetailReact);
 
     return block;
 };
