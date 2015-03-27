@@ -33,7 +33,7 @@
         "pg": "*",
         "async": "~0.9.0",
         "swig": "~1.4.1",
-        "react": "~0.11.2",
+        "react": "~0.13.*",
         "socket.io": "~1.3.2",
         "compression": "~1.0.8",
         "multer": "*"
