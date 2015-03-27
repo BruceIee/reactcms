@@ -97,4 +97,7 @@ $(document).ready(function () {
         markdown_editor.insert("[" + link_label + "](" + link_url + ")");
         markdown_editor.focus();
     });
+    $('#img_modal').on('hidden.bs.modal', function (e) {
+
+    });
 });

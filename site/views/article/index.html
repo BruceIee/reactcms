@@ -1,39 +1,23 @@
 {% extends '../layout/layout.html' %}
 
-{% block style %}
-{% parent %}
-<link rel="stylesheet" href="/style/article/index.css">
-{% endblock %}
-
-{% block script %}
-{% parent %}
-<script src="/library/moment/moment.js"></script>
-<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
-<script src="/script/article/index.js"></script>
-{% endblock %}
-
 {% block content %}
 <div class="container">
-  <a href="/articles/add" class="btn btn-success new-btn"><span class="fa fa-2x fa-upload"> New Article</span></a>
-  {% for article in page.articles %}
-    <div class="post panel panel-default">
-      <div class="panel-heading">
-        <h2 class="post-title">
-          {{article.title}}
-        </h2>
-        <p class="post-date">
-          <time class="timeago" datetime={{article.create_date.toISOString()}}>
-            {{article.create_date.toISOString()}}
-          </time>
-        </p>
-      </div>
-      <p class="post-content">
-        {{ page.shorten(article.content) }}
-        {% if page.shorten(article.content) != article.content %}
-        <a href="/articles/{{article._id.toString()}}" class="read-more-btn">Read more</a>
-        {% endif %}
-      </p>
+    <!--
+    <div class="row">
+        <h4 class="col-md-12">Admin Page</h4>
     </div>
-  {% endfor %}
+    -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section">
+                <div>
+                    <a href="/articles/add_wysiwyg">Add Article(WYSIWYG)</a>
+                </div>
+                <div>
+                    <a href="/articles/list">Article List(WYSIWYG)</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

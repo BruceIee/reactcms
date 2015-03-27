@@ -43,7 +43,6 @@ module.exports = function(app) {
             var page = app.getPage(req);
             page.error = error;
             page.docs = docs;
-            page.controller = "files";
             page.docs.reverse();
             page.info = info;
             res.render('file/index', { page:page });
@@ -52,13 +51,12 @@ module.exports = function(app) {
     
     block.page.addFile = function(req, res) {
         var page = app.getPage(req);
-        page.controller = "files";
         res.render('file/add', { page:page });
     };
     
     block.page.addFilePost = function(req, res) {
         block.data.addFile(req, res, null, function(error, docs, info) {
-            var page = app.getPage(req);
+            console.log('addFile result:', error, docs, info);
             res.redirect('/files');
         });
     };

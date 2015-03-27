@@ -25,6 +25,7 @@ module.exports = function(app) {
         }
     };
 
+<<<<<<< HEAD
     block.data.addArticlePost = function(req, res) {
         var callback = function(error, docs, info) {
             res.redirect("articles");
@@ -36,6 +37,15 @@ module.exports = function(app) {
         });
     };
     block.page.getArticleIndex = function(req, res) {
+=======
+    
+    block.page.articleHome = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Article Home';
+        res.render('article/index', { page:page });
+    };
+    
+    block.page.articleList = function(req, res) {
         console.log('---------');
         var parameter = tool.getReqParameter(req);
         console.log(parameter);
@@ -43,25 +53,25 @@ module.exports = function(app) {
         var filter = {};
 
         app.db.find(moduleName, condition, filter, function(error, docs, info){
-            console.log('error=',error);
-            console.log('docs=',docs);
-            console.log('info=',info);
-
+            //console.log('error=',error);
+            //console.log('docs=',docs);
+            //console.log('info=',info);
+            
             var page = app.getPage(req);
-            page.title = 'Articles';
-            docs.reverse();
+            page.title = 'List of articles';
             page.articles = docs;
-            page.controller = 'articles';
-            page.shorten = function(text) {
-                var ret = text;
-                if (ret.length > 300) {
-                    ret = ret.substr(0,300-3) + "&hellip;";
-                }
-                return ret;
-            };
-            console.log('page=',page);
-            res.render('article/index', { page:page });
+            //console.log('page=',page);
+            res.render('article/list', { page:page });
+            
+            //app.cb(error, docs, info, req, res, callback);
         });
+    };    
+    
+    
+    block.page.addWysiwyg = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'WYSIWYG';
+        res.render('article/add_wysiwyg', { page:page });
     };
 
     block.page.getArticleDetail = function(req, res) {
@@ -84,11 +94,10 @@ module.exports = function(app) {
         res.render('article/add', { page:page });
     };
 
-    app.server.get('/articles', block.page.getArticleIndex);
-    app.server.get('/articles/add', block.page.addArticle);
-    app.server.get('/articles/:id', block.page.getArticleDetail);
-    app.server.post('/articles', block.data.addArticlePost);
-
+    app.server.get('/articles', block.page.articleHome);
+    app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);
+    app.server.get('/articles/:id/detail', block.page.getArticleDetail);
+    app.server.get('/articles/list', block.page.articleList);
     return block;
 };
 
