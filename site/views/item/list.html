@@ -25,7 +25,8 @@
             <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th></th>
+                    <th style="width:100px;"></th>
+                    <th>Name</th>
                     <th>Type</th>
                     <th>Content</th>
                 </tr>
@@ -33,7 +34,8 @@
             <tbody>
                 {% for item in items %}
                 <tr>
-                    <td><a href="/item/{{ item._id + '' }}/detail" class="fa fa-info-circle"> Detail</a></td>
+                    <td><a href="/items/{{ item._id + '' }}/detail" class="fa fa-info-circle"> Detail</a></td>
+                    <td>{{ item.name }}</td>
                     <td>{{ item.type }}</td>
                     <td>{{ item.content }}</td>
                 </tr>

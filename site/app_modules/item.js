@@ -15,8 +15,11 @@ module.exports = function(app) {
         type: {
             type: 'string'
         },
-        content: {
+        name: {
             type: 'string'
+        },
+        content: {
+            type: 'text'
         },
         data: {
             type: 'object',
@@ -32,6 +35,7 @@ module.exports = function(app) {
         }
     };
     
+    // block.data
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
         var item = tool.getReqParameter(req);
@@ -41,6 +45,25 @@ module.exports = function(app) {
         });
     };
     
+    block.data.getItemDetail = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.getItems = function(req, res) {
+        var callback = arguments[3] || null;
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    // block.page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('item/index', { page:page });
@@ -58,6 +81,11 @@ module.exports = function(app) {
         });
     };
     
+    block.page.getItemListReact = function(req, res) {
+        var page = app.getPage(req);
+        res.render('item/list_react', { page:page });
+    };
+    
     block.page.addItem = function(req, res) {
         var page = app.getPage(req);
         res.render('item/add', { page:page });
@@ -72,23 +100,25 @@ module.exports = function(app) {
     
     block.page.getItemDetail = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        var id = parameter.id;
-        block.data.getById(req, res, id, function(error, docs, info) {
+        block.data.getItemDetail(req, res, null, function(error, docs, info) {
             var item = docs && docs[0] || null;
-            
-            console.log('>>> ', error, docs, info);
-            
             var page = app.getPage(req);
             page.item = item;
-            
-            console.log('>>> item:', page.item);
-                
             res.render('item/detail', { page:page });
         });
     };
     
+    block.page.getItemDetailReact = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.itemId = parameter.id;
+        res.render('item/react/detail', { page:page });
+    };
+    
     // data route
+    app.server.get('/data/items', block.data.getItems);
     app.server.post('/data/items/add', block.data.addItem);
+    app.server.get('/data/items/:id/detail', block.data.getItemDetail);
     
     // page route
     app.server.get('/items', block.page.getIndex);
@@ -97,6 +127,10 @@ module.exports = function(app) {
     app.server.post('/items/add', block.page.addItemPost);
     app.server.get('/items/list', block.page.getItemList);
     app.server.get('/items/:id/detail', block.page.getItemDetail);
+    
+    // page react test route
+    app.server.get('/items/list/react', block.page.getItemListReact);
+    app.server.get('/items/:id/detail/react', block.page.getItemDetailReact);
 
     return block;
 };

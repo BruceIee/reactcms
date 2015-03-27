@@ -6,6 +6,7 @@
 <script src="/library/pagedown/Markdown.Converter.js"></script>
 <script src="/library/pagedown/Markdown.Sanitizer.js"></script>
 <script src="/library/pagedown/Markdown.Extra.js"></script>
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
 <script src="/script/announcement/add.js"></script>
 {% endblock %}
 
@@ -21,7 +22,7 @@
     padding: 0 0 0 5px;
     margin: 0;
   }
-  .panel {
+  #editor_panel {
     min-height: 400px;
   }
   .editor-heading {
@@ -45,6 +46,39 @@
   .tab-pane {
     padding-top: 15px;
     padding-bottom: 5px;
+  }
+  .file-download {
+    margin-left: 5px;
+    padding-top: 5px;
+    bottom: 100px;
+  }
+  .file-info {
+    margin-left: 5px;
+    padding-right: 15px;
+    padding-top: 5px;
+  }
+  .file-upload-date {
+    bottom: 50%;
+    margin: 5px 0 0;
+  }
+  .file-name {
+    margin: 0;
+  }
+  .file {
+    width: 300px;
+  }
+  .file img {
+    max-width: 298px;
+  }
+  .upload-btn {
+    margin-bottom: 5px;
+  }
+  #img_preview img {
+    max-width: 568px;
+    margin: 0;
+  }
+  #text_preview img {
+    max-width: 100%;
   }
 </style>
 {% endblock %}
@@ -153,27 +187,22 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane fade in active" id="photo_url_tab_area">
                 <div class="form-group">
-                  <label for="img_url">Link URL</label>
+                  <label for="img_url">Image URL</label>
                   <input class="form-control" id="img_url" placeholder="URL">
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="upload_file_tab_area">
                 <!--<form role="form" action="/files/upload" enctype="multipart/form-data" method="POST">-->
                   <div class="form-group">
-                    <label for="file" class="form-title">Select a file</label>
-                    <input type="file" class="form-control" name="file" id="file">
+                    <label for="img_upload" class="form-title">Select a file</label>
+                    <input type="file" class="form-control" name="file" id="img_upload">
                   </div>
                 <!--</form>-->
               </div>
-              <div role="tabpanel" class="tab-pane fade" id="select_existing_file_tab_area">
-
-              </div>
+              <div role="tabpanel" class="tab-pane fade" id="select_existing_file_tab_area"></div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="img_label">Link Label</label>
-            <input class="form-control" id="img_label" placeholder="Label">
-          </div>
+          <div class="form-group" id="img_preview"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

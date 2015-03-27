@@ -1,0 +1,34 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/component/common/common-style.css"/>
+<link rel="stylesheet" href="/component/item/list.css"/>
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/react/react.js"></script>
+<script src="/library/react/JSXTransformer.js"></script>
+<script type="text/jsx" src="/component/common/common-mixin.js"></script>
+<script type="text/jsx" src="/component/item/list.js"></script>
+<script type="text/jsx" src="/script/item/list_react.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-4">
+            Item List (React)
+        </h4>
+    </div>
+    
+    <div class="row" style="margin-top:10px;">
+        <div class="col-md-4">
+            <div id="itemList"></div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

@@ -70,6 +70,25 @@ $(document).ready(function () {
             markdown_editor.focus();
         }
     };
+    var image = "";
+    var escape_id = function (id) {
+        return id.replace( /(:|\.|\[|\]|,)/g, "\\$1" );
+    };
+    var update_img_preview = function(source) {
+        $("#img_preview").html("<img src=\"" + image + "\">");
+        switch(source) {
+            case "url":
+                $("#img_upload").val("");
+                break;
+            case "upload":
+                $("#img_url").val("");
+                break;
+            case "existing":
+                $("#img_url").val("");
+                $("#img_upload").val("");
+                break;
+        }
+    };
     $( "#bold_button" ).click(function() {
         parse_syntax_buttons("bold");
     });
@@ -97,7 +116,81 @@ $(document).ready(function () {
         markdown_editor.insert("[" + link_label + "](" + link_url + ")");
         markdown_editor.focus();
     });
-    $('#img_modal').on('hidden.bs.modal', function (e) {
-
+    $('#img_modal').on('shown.bs.modal', function (e) {
+        $.ajax('http://localhost:8700/files', {
+            method: "GET",
+            dataType: "json",
+            success : function(data) {
+                var html = "";
+                var ids = [];
+                var files = [];
+                for (var file in data) {
+                    file = data[file];
+                    if (file.file != undefined) {
+                        if (file.file.mimetype.match(/^image\/*/)) {
+                            console.log(file.file);
+                            var id = "file_panel_" + file.file.name;
+                            html += "<div class=\"file panel panel-default\" id=\"" + id + "\">" +
+                                "<div class=\"panel-heading\">" +
+                                "<h2 class=\"file-name\">" + file.file.originalname + "</h2>" +
+                                "<p class=\"file-upload-date\">" +
+                                "<time class=\"timeago\" datetime=" + file.create_date + "> " +
+                                "</time>" +
+                                "</p>" +
+                                "</div>" +
+                                "<img src=\"http://localhost:8700/file/" + file.file.name + "\">" +
+                                "</div>";
+                            ids[ids.length] = id;
+                            files[files.length] = file;
+                        }
+                    }
+                }
+                $("#select_existing_file_tab_area").html(html);
+                $("time.timeago").timeago();
+                //$('#img_modal').modal('handleUpdate');
+                for (id in ids) {
+                    id = ids[id];
+                    $("#" + escape_id(id)).click(function () {
+                        //TODO: Fix all images displaying the last image. Need to do this by getting the index of the id then getting the file.
+                        file = data[ids.indexOf(this.attr(id))];
+                        console.log(file);
+                        image = "http://localhost:8700/file/" + file.file.name;
+                        update_img_preview("existing");
+                    });
+                }
+            }
+        });
+        $('#img_url').on('input', function() {
+            image =  $("#img_url").val();
+            update_img_preview("url");
+        });
+        $('#img_upload').change(function() {
+            var data = new FormData();
+            $.each($('#img_upload')[0].files, function(i, file) {
+                data.append('file-'+i, file);
+            });
+            console.log(data);
+            $.ajax('http://localhost:8700/files', {
+                method: "POST",
+                //contentType: "multipart/form-data",
+                contentType: false,
+                dataType: "json",
+                processData: false,
+                data: data,
+                success: function (data) {
+                    image = "http://localhost:8700/file/" + data[0]['file-0'].name;
+                    update_img_preview("upload");
+                },
+                error: function (xhr, error, errordetails) {
+                    console.log(error);
+                    console.log(errordetails);
+                }
+            });
+        });
+        $('#add_img_button').click(function() {
+            markdown_editor.focus();
+            markdown_editor.insert("![](" + image + ")");
+            markdown_editor.focus();
+        });
     });
 });
