@@ -10,6 +10,7 @@ function getItems() {
     var itemsUrl = '/data/items';
     $.get(itemsUrl, function(data) {
         console.log('items:', data);
+        
         updateItemList(data.docs);
     });
     /*
