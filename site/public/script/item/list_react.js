@@ -7,6 +7,12 @@ $().ready(function() {
 });
 
 function getItems() {
+    var itemsUrl = '/data/items';
+    $.get(itemsUrl, function(data) {
+        console.log('items:', data);
+        updateItemList(data.docs);
+    });
+    /*
     var items = [
         { text:'Apple', iconClass:'fa fa-fw fa-bicycle', id:'apple' },
         { text:'Pear', iconClass:'fa fa-fw fa-bus', id:'pear' },
@@ -14,7 +20,7 @@ function getItems() {
         { text:'Melon', iconClass:'fa fa-fw fa-bank', id:'melon' },
         { text:'Grape', iconClass:'fa fa-fw fa-book', id:'grape' }
     ];
-    updateItemList(items);
+    */
 }
 
 function updateItemList(items) {
