@@ -1,5 +1,5 @@
-// list component
-var List = React.createClass({
+// item list component
+var ItemList = React.createClass({
     name: 'list',
     mixins: [getCommonMixin],
     
@@ -33,7 +33,7 @@ var List = React.createClass({
             var listElement = this.state.items[i];
             var listElementKey = 'list-item-' + listElement.id;
             itemElements.push(
-                <ListElement data={ listElement } key={ listElementKey } />
+                <ItemListElement data={ listElement } key={ listElementKey } />
             );
         }
         return (
@@ -49,7 +49,7 @@ var List = React.createClass({
 });
 
 // List Element Component
-var ListElement = React.createClass({
+var ItemListElement = React.createClass({
     name: 'listelement',
     mixins: [getCommonMixin],
     

@@ -19,20 +19,21 @@ var ItemDetail = React.createClass({
     render: function() {
         // set content display
         var content =
-            <div className="itemdetaillement-content-container" >
-                <div className="itemdetaillement-name-container">
+            <div className="panel panel-default">
+                <div className="panel-heading">
                     { this.state.name }
+                    <div className="pull-right">
+                        <span className="label label-info label-as-badge">
+                            { this.state.type }
+                        </span>
+                    </div>
                 </div>
-                <div className="itemdetaillement-type-container">
-                    { this.state.type }
-                </div>
-                <div className="itemdetaillement-text-container">
+                <div className="panel-body">
                     { this.state.content }
                 </div>
             </div>;
         return (
-            <div className={ this.state.containerClassNames.join(' ') }
-                data-id={ this.state.id } >
+            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 { content }
             </div>
         );
