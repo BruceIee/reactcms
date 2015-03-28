@@ -3,12 +3,17 @@
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/item/index.css">
+<link rel="stylesheet" href="/component/common/common-style.css"/>
+<link rel="stylesheet" href="/component/item/detail.css"/>
 {% endblock %}
 
 {% block script %}
 {% parent %}
-<script src="/script/item/index.js"></script>
+<script src="/library/react/react.js"></script>
+<script src="/library/react/JSXTransformer.js"></script>
+<script type="text/jsx" src="/component/common/common-mixin.js"></script>
+<script type="text/jsx" src="/component/item/detail.js"></script>
+<script type="text/jsx" src="/script/item/detail_react.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -20,25 +25,9 @@
         </h4>
     </div>
     
-    <div class="row" style="margin-top:20px;">
-        <div class="col-md-10">
-            
-            <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Property</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for value in item %}
-                <tr>
-                    <td>{{ loop.key }}</td>
-                    <td>{{ value + '' }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-            </table>
+    <div class="row" style="margin-top:10px;">
+        <div class="col-md-4">
+            <div id="itemDetail"></div>
         </div>
     </div>
     
