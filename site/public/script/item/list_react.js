@@ -26,7 +26,7 @@ function updateItemList(items) {
         document.getElementById('itemList')
     );
     app.list1.on('select', function(id) {
-        var itemUrl = '/items/' + id + '/detail';
+        var itemUrl = '/items/' + id + '/detail/react';
         window.location = itemUrl;
     });
 }
