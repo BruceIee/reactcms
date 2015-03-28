@@ -22,7 +22,7 @@ function getItems() {
 function updateItemList(items) {
     app.listData = { items: items };
     app.list1 = React.render(
-        <List data={ app.listData } />,
+        <ItemList data={ app.listData } />,
         document.getElementById('itemList')
     );
     app.list1.on('select', function(id) {
