@@ -2,10 +2,20 @@
 var app = app || {};
 
 $().ready(function() {
-    getItems();
+    if (app.itemId) {
+        getItemDetail(app.itemId, showItemDetail);
+    }
 });
 
-function getItems() {
+function getItemDetail(itemId, callback) {
+    
+    var itemDetailUrl = '/data/items/' + itemId + '/detail';
+    $.get(itemDetailUrl, function(data) {
+        //console.log('item detail:', itemId, data);
+        var item =  data.docs && data.docs[0] || null;
+        callback && callback(item);
+    });
+    
     var itemsUrl = '/data/items';
     $.get(itemsUrl, function(data) {
         var items = data.docs;
@@ -19,13 +29,17 @@ function getItems() {
     });
 }
 
+function showItemDetail(item) {
+    console.log('>>> showItemDetail:', item);
+}
+
 function updateItemList(items) {
     app.listData = { items: items };
-    app.list1 = React.render(
-        <List data={ app.listData } />,
+    app.itemDetail = React.render(
+        <ItemDetail data={ app.listData } />,
         document.getElementById('itemDetail')
     );
-    app.list1.on('select', function(id) {
+    app.itemDetail.on('select', function(id) {
         var itemUrl = '/items/' + id + '/detail/react';
         window.location = itemUrl;
     });

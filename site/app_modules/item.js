@@ -118,6 +118,7 @@ module.exports = function(app) {
     // data route
     app.server.get('/data/items', block.data.getItems);
     app.server.post('/data/items/add', block.data.addItem);
+    app.server.get('/data/items/:id', block.data.getItemDetail);
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
     
     // page route

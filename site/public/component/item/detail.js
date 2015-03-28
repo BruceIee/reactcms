@@ -1,5 +1,5 @@
-// list component
-var List = React.createClass({
+// item detail component
+var ItemDetail = React.createClass({
     name: 'list',
     mixins: [getCommonMixin],
     
