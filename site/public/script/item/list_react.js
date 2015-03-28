@@ -2,26 +2,21 @@
 var app = app || {};
 
 $().ready(function() {
-    console.log('in item list_react page');
     getItems();
 });
 
 function getItems() {
     var itemsUrl = '/data/items';
     $.get(itemsUrl, function(data) {
-        console.log('items:', data);
-        
-        updateItemList(data.docs);
+        var items = data.docs;
+        _.map(items, function(item) {
+            item['id'] = item._id;
+            item['text'] = item.name;
+            item['iconClass'] = 'fa fa-fw fa-book';
+            return item;
+        });
+        updateItemList(items);
     });
-    /*
-    var items = [
-        { text:'Apple', iconClass:'fa fa-fw fa-bicycle', id:'apple' },
-        { text:'Pear', iconClass:'fa fa-fw fa-bus', id:'pear' },
-        { text:'Mango', iconClass:'fa fa-fw fa-tree', id:'mango' },
-        { text:'Melon', iconClass:'fa fa-fw fa-bank', id:'melon' },
-        { text:'Grape', iconClass:'fa fa-fw fa-book', id:'grape' }
-    ];
-    */
 }
 
 function updateItemList(items) {
@@ -31,6 +26,7 @@ function updateItemList(items) {
         document.getElementById('itemList')
     );
     app.list1.on('select', function(id) {
-        console.log('list item selected:', id);
+        var itemUrl = '/items/' + id + '/detail';
+        window.location = itemUrl;
     });
 }
