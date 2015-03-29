@@ -80,6 +80,9 @@
   #text_preview img {
     max-width: 100%;
   }
+  a.active {
+    background-color: rgba(200, 200, 200, 0.54);
+  }
 </style>
 {% endblock %}
 
@@ -89,7 +92,7 @@
     <form role="form" action="/announcements" enctype="multipart/form-data" method="POST">
       <div class="form-group">
         <label for="title">Title</label>
-        <input class="form-control" id="title" placeholder="Announcement Title">
+        <input class="form-control" name="title" id="title" placeholder="Announcement Title">
       </div>
       <div class="form-group">
         <div class="panel panel-default" id="editor_panel">
@@ -102,9 +105,14 @@
                 </button>
               </div>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#" id="quote_button"><blockquote>Quote</blockquote></a></li>
+                <li><a href="#" id="code_button"><code>Code</code></a></li>
+                <li><a href="#" id="h1_button" class="header-button"><h1>Header 1</h1></a></li>
+                <li><a href="#" id="h2_button" class="header-button"><h2>Header 2</h2></a></li>
+                <li><a href="#" id="h3_button" class="header-button"><h3>Header 3</h3></a></li>
+                <li><a href="#" id="h4_button" class="header-button"><h4>Header 4</h4></a></li>
+                <li><a href="#" id="h5_button" class="header-button"><h5>Header 5</h5></a></li>
+                <li><a href="#" id="h6_button" class="header-button"><h6>Header 6</h6></a></li>
               </ul>
             </div>
             <div class="btn-group">
@@ -136,13 +144,16 @@
               <button type="button" class="btn btn-default nested-data-btn" data-toggle="modal" data-target="#img_modal" id="img_button">
                 <span class="fa fa-photo nested-data-element" data-toggle="tooltip" data-placement="bottom" title="Add a Picture"></span>
               </button>
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Insert Horizontal Rule" id="horizontal_rule_button">
+                <span class="fa fa-minus"></span>
+              </button>
             </div>
           </div>
           <div id="markdown_editor" class="editor col-sm-6"></div>
           <div id="text_preview" class="editor col-sm-6"></div>
         </div>
       </div>
-      <textarea class="form-control" id="content_markdown"></textarea>
+      <textarea class="form-control" name="content_markdown" id="content_markdown"></textarea>
       <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
     </form>
   </div>
@@ -185,6 +196,7 @@
               <li role="presentation"><a href="#select_existing_file_tab_area" aria-controls="messages" role="tab" data-toggle="tab">Select Existing Photo</a></li>
             </ul>
             <div class="tab-content">
+              <div class="form-group" id="img_preview"></div>
               <div role="tabpanel" class="tab-pane fade in active" id="photo_url_tab_area">
                 <div class="form-group">
                   <label for="img_url">Image URL</label>
@@ -192,17 +204,14 @@
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="upload_file_tab_area">
-                <!--<form role="form" action="/files/upload" enctype="multipart/form-data" method="POST">-->
-                  <div class="form-group">
-                    <label for="img_upload" class="form-title">Select a file</label>
-                    <input type="file" class="form-control" name="file" id="img_upload">
-                  </div>
-                <!--</form>-->
+                <div class="form-group">
+                  <label for="img_upload" class="form-title">Select a file</label>
+                  <input type="file" class="form-control" name="file" id="img_upload">
+                </div>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="select_existing_file_tab_area"></div>
             </div>
           </div>
-          <div class="form-group" id="img_preview"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

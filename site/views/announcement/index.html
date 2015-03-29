@@ -27,12 +27,12 @@
           </time>
         </p>
       </div>
-      <p class="post-content">
+      <div class="post-content">
         {{ page.shorten(announcement.content) }}
         {% if page.shorten(announcement.content) != announcement.content %}
         <a href="/announcements/{{announcement._id.toString()}}" class="read-more-btn">Read more</a>
         {% endif %}
-      </p>
+      </div>
     </div>
   {% endfor %}
 </div>

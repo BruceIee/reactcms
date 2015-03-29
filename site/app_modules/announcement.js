@@ -1,5 +1,9 @@
 var util = require('util');
 var tool = require('leaptool');
+var pagedown = require("pagedown");
+var converter = pagedown.getSanitizingConverter();
+var pagedownExtra = require("pagedown-extra").Extra;
+pagedownExtra.init(converter);
 
 module.exports = function(app) {
     var moduleName = 'announcement';
@@ -34,22 +38,19 @@ module.exports = function(app) {
         };
         var announcement = tool.getReqParameter(req);
         announcement.create_date = new Date();
+        console.log(announcement.content_markdown);
+        announcement.content = converter.makeHtml(announcement.content_markdown);
         block.data.add(req, res, announcement, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
     block.page.getAnnouncementIndex = function(req, res) {
-        console.log('---------');
         var parameter = tool.getReqParameter(req);
         console.log(parameter);
         var condition = {};
         var filter = {};
 
         app.db.find(moduleName, condition, filter, function(error, docs, info){
-            console.log('error=',error);
-            console.log('docs=',docs);
-            console.log('info=',info);
-
             var page = app.getPage(req);
             page.title = 'Announcements';
             docs.reverse();

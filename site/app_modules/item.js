@@ -112,12 +112,13 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
         page.itemId = parameter.id;
-        res.render('item/react/detail', { page:page });
+        res.render('item/detail_react', { page:page });
     };
     
     // data route
     app.server.get('/data/items', block.data.getItems);
     app.server.post('/data/items/add', block.data.addItem);
+    app.server.get('/data/items/:id', block.data.getItemDetail);
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
     
     // page route
