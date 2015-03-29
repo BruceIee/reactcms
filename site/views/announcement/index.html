@@ -14,7 +14,6 @@
 
 {% block content %}
 <div class="container">
-  <a href="/announcements/add" class="btn btn-success new-btn"><span class="fa fa-2x fa-upload"> New Announcement</span></a>
   {% for announcement in page.announcements %}
     <div class="post panel panel-default">
       <div class="panel-heading">
@@ -27,12 +26,10 @@
           </time>
         </p>
       </div>
-      <div class="post-content">
-        {{ page.shorten(announcement.content) }}
-        {% if page.shorten(announcement.content) != announcement.content %}
-        <a href="/announcements/{{announcement._id.toString()}}" class="read-more-btn">Read more</a>
-        {% endif %}
-      </div>
+      <p class="post-content">
+        {{announcement.content}}
+        <a href="#"> Read more</a>
+      </p>
     </div>
   {% endfor %}
 </div>
