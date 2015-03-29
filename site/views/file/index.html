@@ -14,25 +14,28 @@
 
 {% block content %}
 <div class="container">
-  <div class="container">
-    <div class="container">
-      <a href="/files/upload" class="btn btn-success upload-btn"><span class="fa fa-2x fa-upload"> Upload File</span></a>
-      {% for file in files %}
-      <div class="file panel panel-default">
-        <div class="panel-heading">
-          <h2 class="file-name">
-            {{file.filename}}
-          </h2>
-          <a href="{{ file.file.name }}"><span class="fa fa-2x fa-download file-download pull-right"></span></a>
-          <p class="file-upload-date">
-            <time class="timeago" datetime={{file.create_date.toISOString()}}>
-              {{file.create_date.toISOString()}}
-            </time>
-          </p>
-        </div>
-      </div>
-      {% endfor %}
+    <div style="margin-top:20px;margin-bottom:20px;">
+        <a href="/files/upload" class="btn btn-success upload-btn">
+            <span class="fa fa-2x fa-upload"> Upload File</span>
+        </a>
     </div>
-  </div>
+    <h2 style="margin-bottom:20px;">File List</h2>
+    {% for file in files %}
+    <div class="file panel panel-default">
+        <div class="panel-heading">
+            <h2 class="file-name">
+                {{file.file.originalname}}
+            </h2>
+            <a href="/file/{{ file.file.name }}" target="_blank">
+                <span class="fa fa-2x fa-download file-download pull-right"></span>
+            </a>
+            <p class="file-upload-date">
+                <time class="timeago" datetime={{file.create_date.toISOString()}}>
+                    {{file.create_date.toISOString()}}
+                </time>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

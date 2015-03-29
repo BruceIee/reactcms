@@ -40,3 +40,8 @@ npm install
 npm start
 
 // visit website at http://localhost:8700
+
+
+debugging
+---------
+node --debug ./site/bin/www
