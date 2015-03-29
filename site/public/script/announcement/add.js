@@ -42,57 +42,72 @@ $(document).ready(function () {
     var closing_tag;
     var parse_syntax_buttons = function (type) {
         var beginning_of_line = false;
-        if (type == "h1") {
-            tag = h1_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "h2") {
-            tag = h2_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "h3") {
-            tag = h3_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "h4") {
-            tag = h4_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "h5") {
-            tag = h5_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "h6") {
-            tag = h6_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "code") {
-            tag = code_tag;
-            closing_tag = code_tag_closing;
-        } else if (type == "quote") {
-            tag = quote_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "bold") {
-            tag = bold_tag;
-            closing_tag = bold_tag_closing;
-        } else if (type == "italics") {
-            tag = italics_tag;
-            closing_tag = italics_tag_closing;
-        } else if (type == "underline") {
-            tag = underline_tag;
-            closing_tag = underline_tag_closing;
-        } else if (type == "strikethrough") {
-            tag = strikethrough_tag;
-            closing_tag = strikethrough_tag_closing;
-        } else if (type == "unordered_list") {
-            tag = unordered_list_tag;
-            closing_tag = "";
-            beginning_of_line = true;
-        } else if (type == "ordered_list") {
-            tag = ordered_list_tag;
-            closing_tag = "";
-            beginning_of_line = true;
+        switch (type) {
+            case "h1":
+                tag = h1_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "h2":
+                tag = h2_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "h3":
+                tag = h3_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "h4":
+                tag = h4_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "h5":
+                tag = h5_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "h6":
+                tag = h6_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "code":
+                tag = code_tag;
+                closing_tag = code_tag_closing;
+                break;
+            case "quote":
+                tag = quote_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "bold":
+                tag = bold_tag;
+                closing_tag = bold_tag_closing;
+                break;
+            case "italics":
+                tag = italics_tag;
+                closing_tag = italics_tag_closing;
+                break;
+            case "underline":
+                tag = underline_tag;
+                closing_tag = underline_tag_closing;
+                break;
+            case "strikethrough":
+                tag = strikethrough_tag;
+                closing_tag = strikethrough_tag_closing;
+                break;
+            case "unordered_list":
+                tag = unordered_list_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
+            case "ordered_list":
+                tag = ordered_list_tag;
+                closing_tag = "";
+                beginning_of_line = true;
+                break;
         }
         if (beginning_of_line == false) {
             if (markdown_editor.getCopyText().indexOf(tag) == -1 && markdown_editor.getCopyText().indexOf(closing_tag) == -1) {
@@ -128,19 +143,75 @@ $(document).ready(function () {
             markdown_editor.getSession().remove(range);
         }
     };
+    /* TODO: Finish button updates.
     var formatting_is_active = function(type) {
         var tag;
-        var beginning_of_line
-        var str = markdown_editor.getValue();
-        var startIndex = 0, searchStrLen = searchStr.length;
-        var index, indices = [];
-        str = str.toLowerCase();
-        searchStr = searchStr.toLowerCase();
-        while ((index = str.indexOf(searchStr, startIndex)) > -1) {
-            indices.push(index);
-            startIndex = index + searchStrLen;
+        var beginning_of_line;
+        var special;
+        switch(type) {
+            case "quote":
+                tag = quote_tag;
+                beginning_of_line = true;
+                special = true;
+                break;
+            case "h1":
+                tag = h1_tag;
+                beginning_of_line = true;
+                special = false;
+                break;
+            case "h2":
+                tag = h2_tag;
+                beginning_of_line = true;
+                special = false;
+                break;
+            case "h3":
+                tag = h3_tag;
+                beginning_of_line = true;
+                special = false;
+                break;
+            case "h4":
+                tag = h4_tag;
+                beginning_of_line = true;
+                special = false;
+                break;
+            case "h5":
+                tag = h5_tag;
+                beginning_of_line = true;
+                special = false;
+                break;
+            case "h6":
+                tag = h6_tag;
+                beginning_of_line = true;
+                special = false;
+                break;
+            case "code":
+                tag = code_tag;
+                beginning_of_line = false;
+                special = false;
+                break;
         }
-        return indices;
+        var position = markdown_editor.getCursorPosition();
+        if (beginning_of_line && !special) {
+            return markdown_editor.getValue().split("\n")[position.row].substring(0, tag.length) == tag;
+        } else if (!special) {
+            var str;
+            var searchStr = tag.toLowerCase();
+            var index = [];
+            var indices = [[]];
+            var startIndex, searchStrLen;
+            for(var line = 0; line != position.row; line += 1) {
+                str = markdown_editor.getLine(line);
+                startIndex = 0;
+                searchStrLen = searchStr.length;
+                while ((index = str.indexOf(searchStr, startIndex)) > -1) {
+                    indices[line].push(index);
+                    startIndex = index + searchStrLen;
+                }
+            }
+            return indices;
+        } else {
+
+        }
     };
     var update_button = function(type) {
         var id;
@@ -173,7 +244,7 @@ $(document).ready(function () {
                 active_formatting[id] = false;
             }
         }
-    };
+    };*/
     var image = "";
     var escape_id = function (id) {
         return id.replace( /(:|\.|\[|\]|,)/g, "\\$1" );
@@ -250,9 +321,10 @@ $(document).ready(function () {
         markdown_editor.insert("[" + link_label + "](" + link_url + ")");
         markdown_editor.focus();
     });
-    editor.session.selection.on("changeCursor", function() {
-
-    });
+    /*TODO: Finish button updates.
+    markdown_editor.session.selection.on("changeCursor", function() {
+        console.log(formatting_is_active("code"));
+    });*/
     $('#img_modal').on('shown.bs.modal', function (e) {
         $.ajax('http://localhost:8700/files', {
             method: "GET",
