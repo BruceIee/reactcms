@@ -7,25 +7,42 @@
 {% block style %}
 {% parent %}
 <style>
-  .add-form {
+.container {
+    color: #666;
+}
+.add-form {
     padding-top: 30px;
     padding-bottom: 30px;
-  }
+}
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-  <div class="row add-form">
-    <div class="col-md-6 col-md-offset-3">
-      <form role="form" action="/articles" enctype="multipart/form-data" method="POST">
-        <div class="form-group">
-          <p>Title: <input type="text" name="title"></p>
-          <p>Content: <input type="text" name="content"></p>
+    
+    <div class="row">
+        <div class="col-md-12" style="margin:40px auto;font-size:2.1em;color:#666;">
+            <div style="text-align:center;">Add an article</div>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
-      </form>
     </div>
-  </div>
+    
+    <div class="row add-form">
+        <div class="col-md-6 col-md-offset-3">
+            <form role="form" action="/data/article/article_post" enctype="multipart/form-data" method="POST">
+                <div class="form-group">
+                    
+                    <p>Title: <input type="text" name="title"></p>
+                    <p>Content: <input type="text" name="content"></p>
+                    
+                    <!--
+                    <label for="title" class="form-title">Select a file</label>
+                    <input type="file" class="form-control" name="filename" id="filename">
+                    -->    
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
 </div>
 {% endblock %}
