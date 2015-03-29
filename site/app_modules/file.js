@@ -12,12 +12,12 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
-        filename: {
+        /*filename: {
             type: 'string'
         },
         path: {
             type: 'string'
-        },
+        },*/
         create_date: {
             type: 'date'
         }
@@ -28,9 +28,11 @@ module.exports = function(app) {
         var file = tool.getReqParameter(req);
         file.create_date = new Date();
         var uploaded_file = req.files.file;
-        file.filename = uploaded_file.originalname;
-        file.path = uploaded_file.path;
-        console.log(file);
+        if (uploaded_file == undefined) {
+            uploaded_file = req.files['file-0'];
+            file.file = uploaded_file;
+        }
+        console.log(uploaded_file);
         block.data.add(req, res, file, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
@@ -45,7 +47,14 @@ module.exports = function(app) {
             page.docs = docs;
             page.docs.reverse();
             page.info = info;
-            res.render('file/index', { page:page });
+            console.log(req.headers);
+            console.log(req.accepts('html', 'json'));
+            if (req.accepts('html', 'json') == 'html') {
+                res.render('file/index', {page: page});
+            } else {
+                res.set({'Content-Type': 'application/json'});
+                res.end(JSON.stringify(docs));
+            }
         });
     };
     
@@ -56,18 +65,19 @@ module.exports = function(app) {
     
     block.page.addFilePost = function(req, res) {
         block.data.addFile(req, res, null, function(error, docs, info) {
-            console.log('addFile result:', error, docs, info);
-            res.redirect('/files');
+            console.log(req.accepts('html', 'json'));
+            if (req.accepts('html', 'json') == 'html') {
+                res.redirect('/files');
+            } else {
+                res.set({'Content-Type': 'application/json'});
+                res.end(JSON.stringify(docs));
+            }
         });
     };
-    
-    // data route
-    app.server.post('/data/file/add', block.data.addFile);
-    
-    // page route
+
     app.server.get('/files', block.page.getIndex);
     app.server.get('/files/upload', block.page.addFile);
-    app.server.post('/files/upload', block.page.addFilePost);
+    app.server.post('/files', block.page.addFilePost);
 
     return block;
 };
