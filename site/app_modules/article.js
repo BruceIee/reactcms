@@ -127,7 +127,8 @@ module.exports = function(app) {
         console.log('article=',article);
         //process.exit();
         block.data.add(req, res, article, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
+            //app.cb(error, docs, info, req, res, callback);
+            res.redirect('/articles/list');
         });
     };
     
