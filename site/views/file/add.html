@@ -2,17 +2,26 @@
 
 {% block style %}
 {% parent %}
+<!-- <link rel="stylesheet" href="/style/item/index.css"> -->
 {% endblock %}
 
 {% block script %}
 {% parent %}
+<!-- <script src="/script/item/index.js"></script> -->
 {% endblock %}
 
 {% block content %}
 <div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-12">
+            File Upload
+        </h4>
+    </div>
+
   <div class="row upload-form" style="margin-top:30px;">
         <div class="col-md-6">
-            <form role="form" action="/files" enctype="multipart/form-data" method="POST">
+            <form role="form" action="/files/upload" enctype="multipart/form-data" method="POST">
                 <div class="form-group">
                     <label for="file" class="form-title">Select a file</label>
                     <input type="file" class="form-control" name="file" id="file">
@@ -23,6 +32,6 @@
             </form>
         </div>
   </div>
-
+    
 </div>
 {% endblock %}
