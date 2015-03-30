@@ -95,7 +95,10 @@ module.exports = function(app) {
         });
     };    
     
-    
+    block.page.getArticleListReact = function(req, res) {
+        var page = app.getPage(req);
+        res.render('article/list_react', { page:page });
+    };    
     
     
     
@@ -141,11 +144,19 @@ module.exports = function(app) {
         res.send(url);
         //process.exit();
     };  
-  
+
+    block.data.getArticles = function(req, res) {
+        var callback = arguments[3] || null;
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    }; 
     
     
     // data route
-    
+    app.server.get('/data/articles', block.data.getArticles);
     //app.server.get('/data/item/add', block.data.addItem);
     //app.server.post('/data/item/add', block.data.addItem);
     
@@ -162,6 +173,9 @@ module.exports = function(app) {
     app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);
     app.server.get('/articles/:id/detail', block.page.getArticleDetail);
     app.server.get('/articles/list', block.page.articleList);
+    
+    // page react test route
+    app.server.get('/articles/list/react', block.page.getArticleListReact);
     
     return block;
 };
