@@ -35,8 +35,14 @@ module.exports = function(app) {
         }
     };
     
+    // page
+    block.page.getIndex = function(req, res) {
+        var page = app.getPage(req);
+        res.render('page/index', { page:page });
+    };
+    
     // page route
-    app.server.get('/layout', block.page.getIndex);
+    app.server.get('/pages', block.page.getIndex);
 
     return block;
 };
