@@ -100,6 +100,12 @@ module.exports = function(app) {
         res.render('article/list_react', { page:page });
     };    
     
+    block.page.getArticleDetailReact = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.articleId = parameter.id;
+        res.render('article/detail_react', { page:page });
+    };
     
     
     block.data.addItem = function(req, res) {
@@ -152,11 +158,21 @@ module.exports = function(app) {
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
-    }; 
+    };
+    
+    block.data.getArticleDetail = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
     
     
     // data route
     app.server.get('/data/articles', block.data.getArticles);
+    app.server.get('/data/articles/:id/detail', block.data.getArticleDetail);
     //app.server.get('/data/item/add', block.data.addItem);
     //app.server.post('/data/item/add', block.data.addItem);
     
@@ -176,6 +192,7 @@ module.exports = function(app) {
     
     // page react test route
     app.server.get('/articles/list/react', block.page.getArticleListReact);
+    app.server.get('/articles/:id/detail/react', block.page.getArticleDetailReact);
     
     return block;
 };

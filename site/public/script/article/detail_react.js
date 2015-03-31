@@ -1,24 +1,25 @@
-// item list_react script
+// article detail_react script
 var app = app || {};
 
 $().ready(function() {
-    if (app.itemId) {
-        getItemDetail(app.itemId, showItemDetail);
+    if (app.articleId) {
+        getArticleDetail(app.articleId, showArticleDetail);
     }
 });
 
-function getItemDetail(itemId, callback) {
-    var itemDetailUrl = '/data/items/' + itemId + '/detail';
-    $.get(itemDetailUrl, function(data) {
-        var item =  data.docs && data.docs[0] || null;
-        item.id = item._id + '';
-        callback && callback(item);
+function getArticleDetail(articleId, callback) {
+    var articleDetailUrl = '/data/articles/' + articleId + '/detail';
+    $.get(articleDetailUrl, function(data) {
+        var article =  data.docs && data.docs[0] || null;
+        article.id = article._id + '';
+        console.log('article=',article);
+        callback && callback(article);
     });
 }
 
-function showItemDetail(item) {
+function showArticleDetail(article) {
     app.itemDetail = React.render(
-        <ItemDetail data={ item } />,
-        document.getElementById('itemDetail')
+        <ItemDetail data={ article } />,
+        document.getElementById('articleDetail')
     );
 }

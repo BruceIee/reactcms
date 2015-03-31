@@ -11,6 +11,7 @@ var ItemDetail = React.createClass({
             { name:'id', type:'string', required:false, defaultValue:'', note:'list element id' },
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
+            { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'content', type:'string', required:false, defaultValue:'', note:'item content' }
         ];
         return attributes;
@@ -21,7 +22,7 @@ var ItemDetail = React.createClass({
         var content =
             <div className="panel panel-default">
                 <div className="panel-heading">
-                    { this.state.name }
+                    { this.state.title }
                     <div className="pull-right">
                         <span className="label label-info label-as-badge">
                             { this.state.type }
