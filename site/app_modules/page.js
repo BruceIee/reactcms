@@ -18,13 +18,13 @@ module.exports = function(app) {
         description: {
             type: 'string'
         },
-        filename: {
+        layout: {
             type: 'string'
         },
-        data: {
-            type: 'object',
+        widgets: {
+            type: 'array',
             subtype: {
-                type: 'json'
+                type: 'object'
             }
         },
         status: {
