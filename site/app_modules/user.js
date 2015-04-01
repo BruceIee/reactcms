@@ -110,7 +110,6 @@ module.exports = function(app) {
         })
     };
     
-    
     // page
     block.page.getIndex = function(req, res) {
         block.data.getWeb(req, res, null, function(error, docs, info) {
