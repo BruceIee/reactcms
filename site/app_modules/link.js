@@ -90,36 +90,18 @@ module.exports = function(app) {
             newObj.hyperlink = parameter.hyperlink;
             linksArray.push(newObj);
         }
-        
-        
-        
 
-        
         console.log("linksArray=",linksArray);
-        
-        
-        
+
         var link = {};
         link.content = linksArray;
         link.create_date = new Date();
         console.log('link=',link);
         //process.exit();
         block.data.add(req, res, link, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
+            //app.cb(error, docs, info, req, res, callback);
+            res.redirect('/links/show_all');
         });        
-        
-        
-        
-        
-        
-        
-        //res.end('links added');
-        /*
-        block.data.addItem(req, res, null, function(error, docs, info) {
-            var page = app.getPage(req);
-            //res.redirect('/items/list');
-        });
-        */
     };    
     
     block.page.getItemDetail = function(req, res) {

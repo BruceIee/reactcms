@@ -33,11 +33,34 @@ var ItemDetail = React.createClass({
                     { this.state.content }
                 </div>
             </div>;
+        
+        /*    
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 { content }
             </div>
         );
+        */
+        
+        return (
+            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
+                <div className="panel panel-default">
+                    <div className="panel-heading">
+                        { this.state.title }
+                        <div className="pull-right">
+                            <span className="label label-info label-as-badge">
+                                { this.state.type }
+                            </span>
+                        </div>
+                    </div>
+                    <div className="panel-body"
+                        dangerouslySetInnerHTML={{__html: this.state.content}}
+                    />
+                </div>
+            </div>    
+        );
+    
+    
     }
 });
 
