@@ -18,6 +18,7 @@ var ItemDetail = React.createClass({
     },
     
     render: function() {
+        /* 
         // set content display
         var content =
             <div className="panel panel-default">
@@ -33,8 +34,6 @@ var ItemDetail = React.createClass({
                     { this.state.content }
                 </div>
             </div>;
-        
-        /*    
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 { content }
@@ -59,8 +58,6 @@ var ItemDetail = React.createClass({
                 </div>
             </div>    
         );
-    
-    
     }
 });
 
