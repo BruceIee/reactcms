@@ -1,0 +1,38 @@
+{% extends '../layout/layout.html' %}
+
+{% block script %}
+{% parent %}
+<script src="/library/react/react.js"></script>
+<script src="/library/react/JSXTransformer.js"></script>
+<script src="/library/ace/ace.js"></script>
+<script src="/library/pagedown/Markdown.Converter.js"></script>
+<script src="/library/pagedown/Markdown.Sanitizer.js"></script>
+<script src="/library/pagedown/Markdown.Extra.js"></script>
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+<script type="text/jsx" src="/component/editor/editor.js"></script>
+{% endblock %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/component/editor/editor.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="add-form">
+    <form role="form" action="/announcements" enctype="multipart/form-data" method="POST">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" name="title" id="title" placeholder="Announcement Title">
+      </div>
+      <div class="form-group">
+        <div id="editor"></div>
+      </div>
+      <textarea class="form-control" name="content_markdown" id="content_markdown"></textarea>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
+    </form>
+  </div>
+  <div id="modals"></div>
+  <Modals></Modals>
+</div>
+{% endblock %}

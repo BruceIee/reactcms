@@ -1,0 +1,15 @@
+.post-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.post-date {
+    bottom: 50%;
+    margin: 5px 0 0;
+}
+.post-title {
+    margin: 0;
+}
+.new-btn {
+    margin-bottom: 5px;
+}

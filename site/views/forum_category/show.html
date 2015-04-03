@@ -1,0 +1,33 @@
+{% extends '../layout/layout.html' %}
+{% set announcement = page.announcement %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/announcement/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
+<script src="/script/announcement/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="post panel panel-default">
+    <div class="panel-heading">
+      <h2 class="post-title">
+        {{announcement.title}}
+      </h2>
+      <p class="post-date">
+        <time class="timeago" datetime={{announcement.create_date.toISOString()}}>
+          {{announcement.create_date.toISOString()}}
+        </time>
+      </p>
+    </div>
+    <div class="post-content">
+      {{ announcement.content|raw }}
+    </div>
+  </div>
+</div>
+{% endblock %}
