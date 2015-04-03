@@ -35,6 +35,30 @@ module.exports = function(app) {
         }
     };
     
+    // data
+    block.data.getPage = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var pageName = parameter.pagename;
+        var condition = { name:pageName };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            
+            // TEST START - use hard-coded value for page name == "test"
+            if (pageName === 'test') {
+                docs = [{
+                    name: 'test',
+                    descript: 'test page',
+                    layout: 'sidenav',
+                    widgets: []
+                }];
+            }
+            // TEST END
+            
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
     // page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
@@ -44,10 +68,17 @@ module.exports = function(app) {
     block.page.getPage = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var pageName = parameter.pagename;
-        var page = app.getPage(req);
-        page.name = pageName;
-        res.render('page/template', { page:page });
+        // get page
+        block.data.getPage(req, res, null, function(error, docs, info) {
+            console.log('Got page:', error, docs, info);
+            var page = app.getPage(req);
+            page.name = pageName;
+            res.render('page/template', { page:page });
+        });
     };
+    
+    // data route
+    app.server.get('/data/pages/:pagename', block.data.getPage);
     
     // page route
     app.server.get('/pages', block.page.getIndex);
