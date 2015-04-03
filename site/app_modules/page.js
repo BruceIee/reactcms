@@ -41,9 +41,19 @@ module.exports = function(app) {
         res.render('page/index', { page:page });
     };
     
+    block.page.getPage = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var pageName = parameter.pagename;
+        var page = app.getPage(req);
+        page.name = pageName;
+        res.render('page/template', { page:page });
+    };
+    
     // page route
     app.server.get('/pages', block.page.getIndex);
-
+    app.server.get('/pages/:pagename', block.page.getPage);
+    
+    
     return block;
 };
 
