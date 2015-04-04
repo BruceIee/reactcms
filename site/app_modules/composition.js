@@ -36,7 +36,7 @@ module.exports = function(app) {
     };
     
     // page route
-    app.server.get('/composition', block.page.getIndex);
+    app.server.get('/compositions', block.page.getIndex);
 
     return block;
 };
