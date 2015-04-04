@@ -20,8 +20,20 @@ module.exports = function(app) {
         title: {
             type: 'string'
         },
+        status: {
+            type: 'string'
+        },
         create_date: {
             type: 'date'
+        },
+        create_by: {
+            type: 'string'
+        },
+        edit_date: {
+            type: 'date'
+        },
+        edit_by: {
+            type: 'string'
         }
     };
 
@@ -57,27 +69,47 @@ module.exports = function(app) {
         var filter = {};
 
         app.db.find(moduleName, condition, filter, function(error, docs, info){
-            //console.log('error=',error);
-            //console.log('docs=',docs);
-            //console.log('info=',info);
-            
             var page = app.getPage(req);
             page.title = 'List of articles';
             page.articles = docs;
             //console.log('page=',page);
             res.render('article/list', { page:page });
-            
             //app.cb(error, docs, info, req, res, callback);
         });
     };    
-    
-    
+
     block.page.addWysiwyg = function(req, res) {
         var page = app.getPage(req);
-        page.title = 'WYSIWYG';
-        res.render('article/add_wysiwyg', { page:page });
+        page.title = 'Add article(WYSIWYG)';
+        page.operation = "Add";
+        page.formAction = "/data/article/add_wysiwyg_post";
+        //res.render('article/add_wysiwyg', { page:page });
+        res.render('article/add_edit_wysiwyg', { page:page });
     };
 
+    block.page.editWysiwyg = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;        
+        block.data.getById(req, res, id, function(error, docs, info) {
+            var article = docs && docs[0] || null;
+            var page = app.getPage(req);
+            page.operation = "Edit";
+            page.formAction = "/data/article/edit_wysiwyg_post";
+            page.article = article;
+            console.log('>>> article:', page.article);
+            page.title = 'Edit article(WYSIWYG)';
+            res.render('article/add_edit_wysiwyg', { page:page });
+        });        
+    };
+
+    block.page.delArticle = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;        
+        app.db.deleteById(moduleName, id, function(error, docs, info) {
+            res.redirect('/articles/list');
+        });        
+    };
+    
     block.page.getArticleDetail = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var id = parameter.id;
@@ -86,9 +118,7 @@ module.exports = function(app) {
             var page = app.getPage(req);
             page.controller = "articles";
             page.article = article;
-            
             console.log('>>> article:', page.article);
-                
             res.render('article/detail', { page:page });
         });
     };    
@@ -127,7 +157,7 @@ module.exports = function(app) {
     };
     
     
-    block.data.wysiwygPost = function(req, res) {
+    block.data.addWysiwygPost = function(req, res) {
         var callback = arguments[3] || null; 
         var article = tool.getReqParameter(req);
         article.create_date = new Date();
@@ -138,7 +168,24 @@ module.exports = function(app) {
             res.redirect('/articles/list');
         });
     };
-    
+
+    block.data.editWysiwygPost = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        console.log('parameter=',parameter);
+        var id = parameter.id_hidden;
+        
+        block.data.getById(req, res, id, function(error, docs, info) {
+            var article = docs && docs[0] || null;
+            article.title = parameter.title;
+            article.content = parameter.content;
+            article.edit_date = new Date();
+            block.data.edit(req, res, article, function(error, docs, info) {
+                res.redirect('/articles/list');
+            });    
+        });
+    };    
+
     block.data.uploadEditorImagePost = function(req, res) {
         var callback = arguments[3] || null; 
         var img = tool.getReqParameter(req);
@@ -174,7 +221,8 @@ module.exports = function(app) {
     //app.server.post('/data/item/add', block.data.addItem);
     
     app.server.post('/data/article/article_post', block.data.articlePost);
-    app.server.post('/data/article/wysiwyg_post', block.data.wysiwygPost);
+    app.server.post('/data/article/add_wysiwyg_post', block.data.addWysiwygPost);
+    app.server.post('/data/article/edit_wysiwyg_post', block.data.editWysiwygPost);
     app.server.post('/data/article/upload_editor_image_post', block.data.uploadEditorImagePost);
 
     // page route
@@ -185,6 +233,8 @@ module.exports = function(app) {
     app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);
     app.server.get('/articles/:id/detail', block.page.getArticleDetail);
     app.server.get('/articles/list', block.page.articleList);
+    app.server.get('/articles/:id/edit', block.page.editWysiwyg);
+    app.server.get('/articles/:id/del', block.page.delArticle);
     
     // page react test route
     app.server.get('/articles/list/react', block.page.getArticleListReact);
