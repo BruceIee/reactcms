@@ -35,20 +35,25 @@ module.exports = function(app) {
         }
     };
     
-    block.data.getData = function(req, res) {
-        var callback = arguments[3] || null; 
+    block.data.getDataByNameWeb = function(req, res) {
+        var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
-        var id = parameter.id;
-        
-        console.log('get by id:', id);
-        console.log('block.data.getById:', block.data.getById);
+        var name = parameter.name;
+        block.data.getDataByName(req, res, name, function(error, docs, info) {
+            
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.getDataByName = function(req, res, name) {
+        var callback = arguments[3] || null;
         
         var error = null;
         var docs = [];
         var info = { message:'composition getData' };
         
         // DEBUG
-        if (id == 'sidenav') {
+        if (name == 'sidenav') {
             docs = [{
                 name: 'sidenav',
                 description: 'sidenav composition',
@@ -72,7 +77,7 @@ module.exports = function(app) {
     };
     
     // data route
-    app.server.get('/data/compositions/:id', block.data.getData);
+    app.server.get('/data/compositions/:name', block.data.getDataByNameWeb);
     
     // page route
     app.server.get('/compositions', block.page.getIndex);
