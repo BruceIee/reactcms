@@ -67,7 +67,6 @@ module.exports = function(app) {
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
                     info = { page:page, composition:composition };
-                    console.log('>>> page info:', info);
                     app.cb(error, docs, info, req, res, callback);
                 });
             }
@@ -87,10 +86,10 @@ module.exports = function(app) {
         var pageName = parameter.pagename;
         // get page
         block.data.getPage(req, res, null, function(error, docs, info) {
-            //console.log('Got page:', error, docs, info);
+            console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            page.name = pageName;
-            res.render('page/template', { page:page });
+            var layoutFilename = 'composition/' + info.composition.filename;
+            res.render(layoutFilename, { page:page });
         });
     };
     
