@@ -52,7 +52,19 @@ module.exports = function(app) {
                     name: 'test',
                     descript: 'test page',
                     composition: 'sidenav',
-                    widgets: []
+                    widgets: [{
+                        target: 'r1c1',
+                        widget: 'article',
+                        widget_id: 'title1'
+                    }, {
+                        target: 'r2c1',
+                        widget: 'links',
+                        widget_id: 'links1'
+                    }, {
+                        target: 'r2c2',
+                        widget: 'article',
+                        widget_id: 'article1'
+                    }]
                 };
                 docs = [page];
             }
@@ -88,6 +100,10 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
+            page.name = info.page.name;
+            page.description = info.page.description;
+            page.composition = info.page.composition;
+            page.widgets = info.page.widgets;
             var layoutFilename = 'composition/' + info.composition.filename;
             res.render(layoutFilename, { page:page });
         });
