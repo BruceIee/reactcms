@@ -50,7 +50,7 @@ module.exports = function(app) {
             if (pageName === 'test') {
                 page = {
                     name: 'test',
-                    descript: 'test page',
+                    description: 'test page',
                     composition: 'sidenav',
                     widgets: [{
                         target: 'r1c1',
