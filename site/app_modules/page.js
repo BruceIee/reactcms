@@ -21,11 +21,8 @@ module.exports = function(app) {
         composition: {
             type: 'string'
         },
-        widgets: {
-            type: 'array',
-            subtype: {
-                type: 'object'
-            }
+        content: {
+            type: 'object'
         },
         status: {
             type: 'string'
@@ -52,19 +49,17 @@ module.exports = function(app) {
                     name: 'test',
                     description: 'test page',
                     composition: 'sidenav',
-                    widgets: [{
-                        target: 'r1c1',
-                        widget: 'article',
-                        widget_id: 'title1'
-                    }, {
-                        target: 'r2c1',
-                        widget: 'links',
-                        widget_id: 'links1'
-                    }, {
-                        target: 'r2c2',
-                        widget: 'article',
-                        widget_id: 'article1'
-                    }]
+                    content: {
+                        r1c1: [
+                            { widget: 'announcement' }
+                        ],
+                        r2c1: [
+                            { widget: 'links' }
+                        ],
+                        r2c2: [
+                            { widget: 'article' }
+                        ]
+                    }
                 };
                 docs = [page];
             }
