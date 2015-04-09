@@ -18,7 +18,7 @@ module.exports = function(app) {
         description: {
             type: 'string'
         },
-        layout: {
+        composition: {
             type: 'string'
         },
         widgets: {
@@ -44,20 +44,48 @@ module.exports = function(app) {
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             
+            var page = docs && docs[0];
+            
             // TEST START - use hard-coded value for page name == "test"
             if (pageName === 'test') {
-                docs = [{
+                page = {
                     name: 'test',
-                    descript: 'test page',
-                    layout: 'sidenav',
-                    widgets: []
-                }];
+                    description: 'test page',
+                    composition: 'sidenav',
+                    widgets: [{
+                        target: 'r1c1',
+                        widget: 'article',
+                        widget_id: 'title1'
+                    }, {
+                        target: 'r2c1',
+                        widget: 'links',
+                        widget_id: 'links1'
+                    }, {
+                        target: 'r2c2',
+                        widget: 'article',
+                        widget_id: 'article1'
+                    }]
+                };
+                docs = [page];
             }
             // TEST END
             
-            app.cb(error, docs, info, req, res, callback);
+            // get composition
+            if (docs.length > 0) {
+                var page = docs[0];
+                var compositionName = page.composition;
+                var compositionDataUrl = '/data/compositions/' + compositionName;
+                var compositionData = app.module['composition'].data;
+                compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
+                    var composition = docs && docs[0];
+                    info = { page:page, composition:composition };
+                    app.cb(error, docs, info, req, res, callback);
+                });
+            }
+            
         });
     };
+    
     
     // page
     block.page.getIndex = function(req, res) {
@@ -72,8 +100,12 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            page.name = pageName;
-            res.render('page/template', { page:page });
+            page.name = info.page.name;
+            page.description = info.page.description;
+            page.composition = info.page.composition;
+            page.widgets = info.page.widgets;
+            var layoutFilename = 'composition/' + info.composition.filename;
+            res.render(layoutFilename, { page:page });
         });
     };
     

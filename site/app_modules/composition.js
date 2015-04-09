@@ -35,8 +35,52 @@ module.exports = function(app) {
         }
     };
     
+    block.data.getDataByNameWeb = function(req, res) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        var name = parameter.name;
+        block.data.getDataByName(req, res, name, function(error, docs, info) {
+            
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.getDataByName = function(req, res, name) {
+        var callback = arguments[3] || null;
+        
+        var error = null;
+        var docs = [];
+        var info = { message:'composition getData' };
+        
+        // DEBUG
+        if (name == 'sidenav') {
+            docs = [{
+                name: 'sidenav',
+                description: 'sidenav composition',
+                filename: 'sidenav.html',
+                data: [
+                    { name:'r1c1', description:'top', width:'12' },
+                    { name:'r2c1', description:'side', width:'4' },
+                    { name:'r2c2', description:'main', width:'8' }
+                ]
+            }];
+        }
+        // END OF DEBUG
+        
+        app.cb(error, docs, info, req, res, callback);
+        
+        /*
+        block.data.getById(req, res, id, function(error, docs, info) {
+            console.log('getById result:', error, docs, info);
+        });
+        */
+    };
+    
+    // data route
+    app.server.get('/data/compositions/:name', block.data.getDataByNameWeb);
+    
     // page route
-    app.server.get('/composition', block.page.getIndex);
+    app.server.get('/compositions', block.page.getIndex);
 
     return block;
 };
