@@ -50,16 +50,15 @@ module.exports = function(app) {
                     description: 'test page',
                     composition: 'sidenav',
                     content: {
-                        /*
                         r1c1: [
-                            { widget: 'announcement' }
+                            { component: 'announcement', id:'121' }
                         ],
                         r2c1: [
-                            { widget: 'links' }
+                            { component: 'links', id:'180' }
                         ],
-                        */
                         r2c2: [
-                            { widget: 'article' }
+                            { component: 'article', id:'101' },
+                            { component: 'article', id:'102' }
                         ]
                     }
                 };
