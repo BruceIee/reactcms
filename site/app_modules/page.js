@@ -50,12 +50,14 @@ module.exports = function(app) {
                     description: 'test page',
                     composition: 'sidenav',
                     content: {
+                        /*
                         r1c1: [
                             { widget: 'announcement' }
                         ],
                         r2c1: [
                             { widget: 'links' }
                         ],
+                        */
                         r2c2: [
                             { widget: 'article' }
                         ]
@@ -95,10 +97,9 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            page.name = info.page.name;
-            page.description = info.page.description;
-            page.composition = info.page.composition;
-            page.widgets = info.page.widgets;
+            for (var property in info.page) {
+                page[property] = info.page[property];
+            }
             var layoutFilename = 'composition/' + info.composition.filename;
             res.render(layoutFilename, { page:page });
         });
