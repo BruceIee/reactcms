@@ -21,11 +21,8 @@ module.exports = function(app) {
         composition: {
             type: 'string'
         },
-        widgets: {
-            type: 'array',
-            subtype: {
-                type: 'object'
-            }
+        content: {
+            type: 'object'
         },
         status: {
             type: 'string'
@@ -52,19 +49,18 @@ module.exports = function(app) {
                     name: 'test',
                     description: 'test page',
                     composition: 'sidenav',
-                    widgets: [{
-                        target: 'r1c1',
-                        widget: 'article',
-                        widget_id: 'title1'
-                    }, {
-                        target: 'r2c1',
-                        widget: 'links',
-                        widget_id: 'links1'
-                    }, {
-                        target: 'r2c2',
-                        widget: 'article',
-                        widget_id: 'article1'
-                    }]
+                    content: {
+                        r1c1: [
+                            { component: 'announcement', id:'121' }
+                        ],
+                        r2c1: [
+                            { component: 'links', id:'180' }
+                        ],
+                        r2c2: [
+                            { component: 'article', id:'101' },
+                            { component: 'article', id:'102' }
+                        ]
+                    }
                 };
                 docs = [page];
             }
@@ -100,10 +96,9 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            page.name = info.page.name;
-            page.description = info.page.description;
-            page.composition = info.page.composition;
-            page.widgets = info.page.widgets;
+            for (var property in info.page) {
+                page[property] = info.page[property];
+            }
             var layoutFilename = 'composition/' + info.composition.filename;
             res.render(layoutFilename, { page:page });
         });

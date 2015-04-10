@@ -39,6 +39,7 @@
     "pagedown": "git+https://github.com/yayestechlab/pagedown.git",
     "multer": "*",
     "pagedown-extra": "git+https://github.com/jmcmanus/pagedown-extra.git",
-    "readline": "*"
+    "readline": "*",
+    "rimraf": "*"
   }
 }

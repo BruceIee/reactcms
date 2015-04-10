@@ -19,7 +19,28 @@
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
 <script type="text/jsx" src="/component/item/detail.js"></script>
 <script type="text/jsx" src="/component/item/list.js"></script>
+<script type="text/jsx" src="/script/page/support.js"></script>
 <script type="text/jsx" src="/script/composition/sidenav.js"></script>
+<script>
+var content = {{ page.content|json|safe}};
+
+$().ready(function() {
+    for (var targetClass in content) {
+        var widgets = content[targetClass];
+        //console.log('>>>', targetClass, widgets);
+        for (var i = 0; i < widgets.length; i++) {
+            var widget = widgets[i];
+            populateTarget(targetClass, widget);
+        }
+    }
+});
+
+function populateTarget(targetClass, widget) {
+    console.log('populateTarget', targetClass, widget);
+    
+    $('.' + targetClass).append(widget.component + widget.id + ' ');
+}
+</script>
 {% endblock %}
 
 {% block content %}
