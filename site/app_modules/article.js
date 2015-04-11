@@ -37,105 +37,7 @@ module.exports = function(app) {
         }
     };
 
-    block.page.addArticle = function(req, res) {
-        var page = app.getPage(req);
-        page.title = 'Add an article';
-        page.controller = "articles";
-        res.render('article/add', { page:page });
-    };
-
-    block.data.addArticlePost = function(req, res) {
-        var callback = function(error, docs, info) {
-            res.redirect("articles");
-        };
-        var article = tool.getReqParameter(req);
-        article.create_date = new Date();
-        block.data.add(req, res, article, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
-        });
-    };
-    
-    block.page.articleHome = function(req, res) {
-        var page = app.getPage(req);
-        page.title = 'Article Home';
-        res.render('article/index', { page:page });
-    };
-    
-    block.page.articleList = function(req, res) {
-        console.log('---------');
-        var parameter = tool.getReqParameter(req);
-        console.log(parameter);
-        var condition = {};
-        var filter = {};
-
-        app.db.find(moduleName, condition, filter, function(error, docs, info){
-            var page = app.getPage(req);
-            page.title = 'List of articles';
-            page.articles = docs;
-            //console.log('page=',page);
-            res.render('article/list', { page:page });
-            //app.cb(error, docs, info, req, res, callback);
-        });
-    };    
-
-    block.page.addWysiwyg = function(req, res) {
-        var page = app.getPage(req);
-        page.title = 'Add article(WYSIWYG)';
-        page.operation = "Add";
-        page.formAction = "/data/article/add_wysiwyg_post";
-        //res.render('article/add_wysiwyg', { page:page });
-        res.render('article/add_edit_wysiwyg', { page:page });
-    };
-
-    block.page.editWysiwyg = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var id = parameter.id;        
-        block.data.getById(req, res, id, function(error, docs, info) {
-            var article = docs && docs[0] || null;
-            var page = app.getPage(req);
-            page.operation = "Edit";
-            page.formAction = "/data/article/edit_wysiwyg_post";
-            page.article = article;
-            console.log('>>> article:', page.article);
-            page.title = 'Edit article(WYSIWYG)';
-            res.render('article/add_edit_wysiwyg', { page:page });
-        });        
-    };
-
-    block.page.delArticle = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var id = parameter.id;        
-        app.db.deleteById(moduleName, id, function(error, docs, info) {
-            res.redirect('/articles/list');
-        });        
-    };
-    
-    block.page.getArticleDetail = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var id = parameter.id;
-        block.data.getById(req, res, id, function(error, docs, info) {
-            var article = docs && docs[0] || null;
-            var page = app.getPage(req);
-            page.controller = "articles";
-            page.article = article;
-            console.log('>>> article:', page.article);
-            res.render('article/detail', { page:page });
-        });
-    };    
-    
-    block.page.getArticleListReact = function(req, res) {
-        var page = app.getPage(req);
-        res.render('article/list_react', { page:page });
-    };    
-    
-    block.page.getArticleDetailReact = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var page = app.getPage(req);
-        page.articleId = parameter.id;
-        res.render('article/detail_react', { page:page });
-    };
-    
-    
+    // data
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
         var item = tool.getReqParameter(req);
@@ -144,7 +46,6 @@ module.exports = function(app) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
-    
     
     block.data.articlePost = function(req, res) {
         var callback = arguments[3] || null; 
@@ -155,7 +56,6 @@ module.exports = function(app) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
-    
     
     block.data.addWysiwygPost = function(req, res) {
         var callback = arguments[3] || null; 
@@ -214,9 +114,117 @@ module.exports = function(app) {
         });
     };
     
+    block.data.addArticlePost = function(req, res) {
+        var callback = function(error, docs, info) {
+            res.redirect("articles");
+        };
+        var article = tool.getReqParameter(req);
+        article.create_date = new Date();
+        block.data.add(req, res, article, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.getArticleByTitle = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var title = parameter.title || '';
+        var condition = { title:title };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    // page
+    block.page.addArticle = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Add an article';
+        page.controller = "articles";
+        res.render('article/add', { page:page });
+    };
+    
+    block.page.articleHome = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Article Home';
+        res.render('article/index', { page:page });
+    };
+    
+    block.page.articleList = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        console.log(parameter);
+        var condition = {};
+        var filter = {};
+        
+        app.db.find(moduleName, condition, filter, function(error, docs, info){
+            var page = app.getPage(req);
+            page.title = 'List of articles';
+            page.articles = docs;
+            res.render('article/list', { page:page });
+        });
+    };    
+
+    block.page.addWysiwyg = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Add article(WYSIWYG)';
+        page.operation = "Add";
+        page.formAction = "/data/article/add_wysiwyg_post";
+        //res.render('article/add_wysiwyg', { page:page });
+        res.render('article/add_edit_wysiwyg', { page:page });
+    };
+
+    block.page.editWysiwyg = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;        
+        block.data.getById(req, res, id, function(error, docs, info) {
+            var article = docs && docs[0] || null;
+            var page = app.getPage(req);
+            page.operation = "Edit";
+            page.formAction = "/data/article/edit_wysiwyg_post";
+            page.article = article;
+            console.log('>>> article:', page.article);
+            page.title = 'Edit article(WYSIWYG)';
+            res.render('article/add_edit_wysiwyg', { page:page });
+        });        
+    };
+
+    block.page.delArticle = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;        
+        app.db.deleteById(moduleName, id, function(error, docs, info) {
+            res.redirect('/articles/list');
+        });        
+    };
+    
+    block.page.getArticleDetail = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            var article = docs && docs[0] || null;
+            var page = app.getPage(req);
+            page.controller = "articles";
+            page.article = article;
+            res.render('article/detail', { page:page });
+        });
+    };    
+    
+    block.page.getArticleListReact = function(req, res) {
+        var page = app.getPage(req);
+        res.render('article/list_react', { page:page });
+    };    
+    
+    block.page.getArticleDetailReact = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.articleId = parameter.id;
+        res.render('article/detail_react', { page:page });
+    };
+    
+    
     // data route
     app.server.get('/data/articles', block.data.getArticles);
     app.server.get('/data/articles/:id/detail', block.data.getArticleDetail);
+    app.server.get('/data/articles/title/:title', block.data.getArticleByTitle);
     //app.server.get('/data/item/add', block.data.addItem);
     //app.server.post('/data/item/add', block.data.addItem);
     
