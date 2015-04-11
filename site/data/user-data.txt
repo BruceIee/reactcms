@@ -1,0 +1,45 @@
+{
+    "name":"user",
+    "module":    {
+        "username": {
+            "type": "string",
+            "optional": true
+        },
+        "firstname": {
+            "type": "string",
+            "optional": true
+        },
+        "lastname": {
+            "type": "string",
+            "optional": true
+        },
+        "email": {
+            "type": "string",
+            "subtype": {
+                "type": "email"
+            },
+            "optional": false,
+            "option": {
+                "unique": true
+            }
+        },
+        "salt": {
+            "type": "string",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "password": {
+            "type": "string",
+            "subtype": {
+                "type": "password"
+            }
+        },
+        "status": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}

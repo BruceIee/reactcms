@@ -42,9 +42,6 @@ process.argv.forEach(function (value, index, array) {
     var result = argumentPattern.exec(value);
     if (result && result.length >= 3) {
         setting[result[1]] = result[2]; //example: setting['cmd'] = backup
-    } else {
-        console.log('usage:\nnode cmd.js initdb|import|backup\n');
-        process.exit();
     }
 });
 
@@ -60,6 +57,9 @@ switch (cmd) {
     case 'backup':
         setting['cmd'] = 'backup';
         break;
+    default:
+        console.log('usage:\nnode cmd.js initdb|import|backup\n');
+        process.exit();
 }
 
 var sysModulePath = rootPath + '/node_modules';
