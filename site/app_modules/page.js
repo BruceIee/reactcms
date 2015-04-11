@@ -52,23 +52,32 @@ module.exports = function(app) {
                     content: {
                         r1c1: [
                             {
-                                module: 'announcement',
-                                condition: {},
-                                filter: {}
+                                widgetName: 'ItemDetail',
+                                widgetData: {
+                                    module: 'item',
+                                    condition: {},
+                                    filter: {}
+                                }
                             }
                         ],
                         r2c1: [
                             {
-                                module: 'announcement',
-                                condition: {},
-                                filter: {}
+                                widgetName: 'ItemDetail',
+                                widgetData: {
+                                    module: 'item',
+                                    condition: {},
+                                    filter: {}
+                                }
                             }
                         ],
                         r2c2: [
                             {
-                                module: 'article',
-                                condition: { title:'Mission of PTA' },
-                                filter: {}
+                                widgetName: 'ArticleDetail',
+                                widgetData: {
+                                    module: 'article',
+                                    condition: { title:'Mission of PTA' },
+                                    filter: {}
+                                }
                             }
                         ]
                     }

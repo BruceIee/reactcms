@@ -92,7 +92,7 @@ module.exports = function(app) {
         var email = parameter.email || '';
         var condition = { email:email };
         var filter = {};
-        block.data.get(req, res, condition, filter, function(error, docs, info){
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
             authenticated = false;
             var user = docs && docs[0] || null;
             if (user) {
