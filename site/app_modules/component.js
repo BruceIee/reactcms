@@ -26,7 +26,11 @@ module.exports = function(app) {
         });
     };
     
+    // data route
     app.server.get('/data/components/get/data', block.data.getComponentData);
+    
+    // page route
+    app.server.get('/components', block.page.getIndex);
     
     return block;
 };
