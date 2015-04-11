@@ -1,6 +1,6 @@
 // article list component
-var ItemList = React.createClass({
-    name: 'list',
+var ArticleList = React.createClass({
+    name: 'articlelist',
     mixins: [getCommonMixin],
     
     // attribute definitions

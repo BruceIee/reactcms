@@ -51,14 +51,25 @@ module.exports = function(app) {
                     composition: 'sidenav',
                     content: {
                         r1c1: [
-                            { component: 'announcement', id:'121' }
+                            {
+                                module: 'announcement',
+                                condition: {},
+                                filter: {}
+                            }
                         ],
                         r2c1: [
-                            { component: 'links', id:'180' }
+                            {
+                                module: 'announcement',
+                                condition: {},
+                                filter: {}
+                            }
                         ],
                         r2c2: [
-                            { component: 'article', id:'101' },
-                            { component: 'article', id:'102' }
+                            {
+                                module: 'article',
+                                condition: { title:'Mission of PTA' },
+                                filter: {}
+                            }
                         ]
                     }
                 };

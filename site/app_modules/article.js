@@ -182,7 +182,7 @@ module.exports = function(app) {
             page.operation = "Edit";
             page.formAction = "/data/article/edit_wysiwyg_post";
             page.article = article;
-            console.log('>>> article:', page.article);
+            //console.log('>>> article:', page.article);
             page.title = 'Edit article(WYSIWYG)';
             res.render('article/add_edit_wysiwyg', { page:page });
         });        

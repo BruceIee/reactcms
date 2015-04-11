@@ -1,6 +1,6 @@
-// item detail component
-var ItemDetail = React.createClass({
-    name: 'itemdetail',
+// article detail component
+var ArticleDetail = React.createClass({
+    name: 'articledetail',
     mixins: [getCommonMixin],
     
     // attribute definitions
