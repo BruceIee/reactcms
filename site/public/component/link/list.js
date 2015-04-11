@@ -1,4 +1,4 @@
-// article list component
+// link list component
 var ItemList = React.createClass({
     name: 'list',
     mixins: [getCommonMixin],
@@ -59,7 +59,8 @@ var ItemListElement = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'id', type:'string', required:false, defaultValue:'', note:'list element id' },
-            { name:'text', type:'string', required:false, defaultValue:'', note:'list element text' }
+            { name:'description', type:'string', required:false, defaultValue:'', note:'list element description' },
+            { name:'content', type:'string', required:false, defaultValue:'', note:'list element content' }
         ];
         return attributes;
     },
@@ -81,7 +82,7 @@ var ItemListElement = React.createClass({
             <div className="listelement-content-container" >
                 { iconContent }
                 <span className="listelement-text-container">
-                    { this.state.text }
+                    { this.state.description }
                 </span>
             </div>;
         return (

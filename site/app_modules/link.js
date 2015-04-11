@@ -15,6 +15,9 @@ module.exports = function(app) {
         type: {
             type: 'string'
         },
+        description: {
+            type: 'string'
+        },
         content: {
             type: 'array'
         },
@@ -34,6 +37,68 @@ module.exports = function(app) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
+    
+    block.data.getLinks = function(req, res) {
+        var callback = arguments[3] || null;
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.addLinkPost = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        //console.log("parameter=",parameter);
+        /* example:
+        parameter= { description: '11111',
+          text: [ 'google', 'popyard' ],
+          hyperlink: [ 'http://www.google.com', 'http://www.popyard.org' ],
+          submit: '' }
+        */
+        //process.exit();
+        
+        var linksArray = [];
+        
+        if (Array.isArray(parameter.text)) {
+            for (var i in parameter.text) {
+                var newObj = {};
+                newObj.text = parameter.text[i];
+                newObj.hyperlink = parameter.hyperlink[i];
+                linksArray.push(newObj);
+            }
+        }
+        else {
+            var newObj = {};
+            newObj.text = parameter.text;
+            newObj.hyperlink = parameter.hyperlink;
+            linksArray.push(newObj);
+        }
+
+        var link = {};
+        link.description = parameter.description;
+        link.content = linksArray;
+        link.create_date = new Date();
+        console.log('link=',link);
+        //process.exit();
+        block.data.add(req, res, link, function(error, docs, info) {
+            //app.cb(error, docs, info, req, res, callback);
+            res.redirect('/links/show_all');
+        });        
+    }; 
+    
+    block.data.getLinkDetail = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };    
+    
+    
+    
     
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
@@ -63,47 +128,7 @@ module.exports = function(app) {
             res.redirect('/items/list');
         });
     };
-    
-    block.page.addLinkPost = function(req, res) {
-        var callback = arguments[3] || null; 
-        var parameter = tool.getReqParameter(req);
-        console.log("parameter=",parameter);
-        /* example:
-        parameter= { text: [ 'google', 'popyard' ],
-          hyperlink: [ 'http://www.google.com', 'http://www.popyard.org' ],
-          submit: '' }
-        */
-        
-        var linksArray = [];
-        
-        if (Array.isArray(parameter.text)) {
-            for (var i in parameter.text) {
-                var newObj = {};
-                newObj.text = parameter.text[i];
-                newObj.hyperlink = parameter.hyperlink[i];
-                linksArray.push(newObj);
-            }
-        }
-        else {
-            var newObj = {};
-            newObj.text = parameter.text;
-            newObj.hyperlink = parameter.hyperlink;
-            linksArray.push(newObj);
-        }
 
-        console.log("linksArray=",linksArray);
-
-        var link = {};
-        link.content = linksArray;
-        link.create_date = new Date();
-        console.log('link=',link);
-        //process.exit();
-        block.data.add(req, res, link, function(error, docs, info) {
-            //app.cb(error, docs, info, req, res, callback);
-            res.redirect('/links/show_all');
-        });        
-    };    
-    
     block.page.getItemDetail = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var id = parameter.id;
@@ -149,16 +174,28 @@ module.exports = function(app) {
             
             //app.cb(error, docs, info, req, res, callback);
         });        
-        
-        
-        
     };    
+    
+    block.page.getLinkListReact = function(req, res) {
+        var page = app.getPage(req);
+        res.render('link/list_react', { page:page });
+    };    
+    
+    block.page.getLinkDetailReact = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.linkId = parameter.id;
+        res.render('link/detail_react', { page:page });
+    };    
+    
     
     
     
     // data route
     app.server.post('/data/items/add', block.data.addItem);
-    
+    app.server.get('/data/links', block.data.getLinks);
+    app.server.post('/data/links/add_links_post', block.data.addLinkPost);
+    app.server.get('/data/links/:id/detail', block.data.getLinkDetail);
     
     // page route
     app.server.get('/items', block.page.getIndex);
@@ -170,8 +207,12 @@ module.exports = function(app) {
     
     app.server.get('/links', block.page.linkHome);
     app.server.get('/links/add_links', block.page.addLink);
-    app.server.post('/links/add_links_post', block.page.addLinkPost);
+    //app.server.post('/links/add_links_post', block.page.addLinkPost);
     app.server.get('/links/show_all', block.page.showAll);
+    
+    // page react test route
+    app.server.get('/links/list/react', block.page.getLinkListReact);
+    app.server.get('/links/:id/detail/react', block.page.getLinkDetailReact);
 
     return block;
 };

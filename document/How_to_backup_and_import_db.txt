@@ -2,11 +2,11 @@ At first, if there is no 'data' folder under site, build it.
 All backuped files are in this folder.
 
 1. ---backup---
-   under site folder, run: node aid.js -cmd=backup
+   under site folder, run: node cmd.js -cmd=backup
    
 2. ---import---
    at first you need to initdb,
-   under site folder, run: node aid.js -cmd=initdb
+   under site folder, run: node cmd.js -cmd=initdb
    then import,
-   under site folder, run: node aid.js -cmd=import
+   under site folder, run: node cmd.js -cmd=import
    

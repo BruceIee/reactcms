@@ -23,6 +23,9 @@
             <thead>
                 <tr>
                     <td>
+                        Description
+                    </td>
+                    <td>
                         Content
                     </td>
                     <td>
@@ -33,6 +36,9 @@
             <tbody>
                 {% for group in page.links %}
                     <tr>
+                        <td>
+                            {{ group.description }}
+                        </td> 
                         <td>
                             {{ group.content|json_encode }}
                         </td>                  
