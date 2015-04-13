@@ -55,7 +55,7 @@ module.exports = function(app) {
                                 widgetName: 'ItemDetail',
                                 widgetData: {
                                     module: 'item',
-                                    condition: {},
+                                    condition: { name:'top' },
                                     filter: {}
                                 }
                             }
@@ -65,7 +65,7 @@ module.exports = function(app) {
                                 widgetName: 'ItemDetail',
                                 widgetData: {
                                     module: 'item',
-                                    condition: {},
+                                    condition: { name:'side' },
                                     filter: {}
                                 }
                             }
@@ -94,7 +94,6 @@ module.exports = function(app) {
                 
                 var compositionDataUrl = '/data/compositions/' + compositionName;
                 var compositionData = app.module['composition'].data;
-                var componentData = app.module['component'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
                     
@@ -114,7 +113,13 @@ module.exports = function(app) {
                         for (var i = 0; i < widgets.length; i++) {
                             var widget = widgets[i];
                             
-                            console.log('>>> widget:', widget);
+                            //console.log('>>> widget:', widget);
+                            var componentData = app.module['component'].data;
+                            
+                            tool.setReqParameter(req, widget);
+                            componentData.getComponentData(req, res, null, function(error, docs, info) {
+                                console.log('>>> getComponentData:', error, docs, info);
+                            });
                         }
                     }
                     

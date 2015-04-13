@@ -17,12 +17,17 @@ module.exports = function(app) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         
-        console.log('>>> component getComponentData:', parameter);
+        //console.log('>>> component getComponentData:', parameter);
         
-        var moduleName = parameter.module || '';
+        var widgetName = parameter.widgetName;
+        var widgetData = parameter.widgetData;
+        
+        //console.log('>>> widget:', widgetName, widgetData);
+        
+        var moduleName = widgetData.module || '';
         // assemble query for data
-        var condition = parameter.condition || {};
-        var filter = parameter.filter || {};
+        var condition = widgetData.condition || {};
+        var filter = widgetData.filter || {};
         var dataModule = app.module[moduleName].data;
         
         dataModule.get(req, res, condition, filter, function(error, docs, info){
