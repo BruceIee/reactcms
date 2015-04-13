@@ -39,7 +39,15 @@
             "type": "string"
         }
     },
-    "count":0,
+    "count":1,
     "items": [
+        {
+            "username": "admin",
+            "email": "admin@leapon.com",
+            "password": "d003d6f21b822f38cd5d2ece439a92e95aebea57b872a32d87a6c826534aa1b7081785db4b398c6dd2ffb029c67c4f0f72b8783a7d630b1eda7b5e0c72c44888",
+            "salt": 9513022,
+            "_class": "user",
+            "_id": "552b1060dcec2fe009d51f83"
+        }
     ]
 }
