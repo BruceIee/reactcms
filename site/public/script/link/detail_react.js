@@ -1,4 +1,4 @@
-// article detail_react script
+// linkset detail_react script
 var app = app || {};
 
 $().ready(function() {
@@ -18,7 +18,7 @@ function getLinkDetail(linkId, callback) {
 
 function showLinkDetail(link) {
     app.itemDetail = React.render(
-        <ItemDetail data={ link } />,
-        document.getElementById('linkDetail')
+        <LinksetDetail data={ link } />,
+        document.getElementById('linksetDetail')
     );
 }

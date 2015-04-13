@@ -1,6 +1,6 @@
-// link list component
-var ItemList = React.createClass({
-    name: 'list',
+// linkset list component
+var LinksetList = React.createClass({
+    name: 'linksetlist',
     mixins: [getCommonMixin],
     
     // attribute definitions

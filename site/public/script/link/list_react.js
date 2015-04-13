@@ -9,7 +9,7 @@ function getItems() {
     var itemsUrl = '/data/links';
     $.get(itemsUrl, function(data) {
         var items = data.docs;
-        console.log('items=',items);
+        //console.log('items=',items);
         _.map(items, function(item) {
             item['id'] = item._id;
             item['description'] = item.description;
@@ -24,8 +24,8 @@ function getItems() {
 function updateItemList(items) {
     app.listData = { items: items };
     app.list1 = React.render(
-        <ItemList data={ app.listData } />,
-        document.getElementById('itemList')
+        <LinksetList data={ app.listData } />,
+        document.getElementById('linksetList')
     );
     app.list1.on('select', function(id) {
         var itemUrl = '/links/' + id + '/detail/react';
