@@ -12,15 +12,24 @@ module.exports = function(app) {
 
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
-
+    
     block.data.getComponentData = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
-        var moduleName = parameter.module || '';
+        
+        //console.log('>>> component getComponentData:', parameter);
+        
+        var widgetName = parameter.widgetName;
+        var widgetData = parameter.widgetData;
+        
+        //console.log('>>> widget:', widgetName, widgetData);
+        
+        var moduleName = widgetData.module || '';
         // assemble query for data
-        var condition = parameter.condition || {};
-        var filter = parameter.filter || {};
+        var condition = widgetData.condition || {};
+        var filter = widgetData.filter || {};
         var dataModule = app.module[moduleName].data;
+        
         dataModule.get(req, res, condition, filter, function(error, docs, info){
             app.cb(error, docs, info, req, res, callback);
         });

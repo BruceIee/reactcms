@@ -55,7 +55,7 @@ module.exports = function(app) {
                                 widgetName: 'ItemDetail',
                                 widgetData: {
                                     module: 'item',
-                                    condition: {},
+                                    condition: { name:'top' },
                                     filter: {}
                                 }
                             }
@@ -65,7 +65,7 @@ module.exports = function(app) {
                                 widgetName: 'ItemDetail',
                                 widgetData: {
                                     module: 'item',
-                                    condition: {},
+                                    condition: { name:'side' },
                                     filter: {}
                                 }
                             }
@@ -89,13 +89,52 @@ module.exports = function(app) {
             // get composition
             if (docs.length > 0) {
                 var page = docs[0];
+                var pageContent = page.content;
                 var compositionName = page.composition;
+                
                 var compositionDataUrl = '/data/compositions/' + compositionName;
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
+                    
+                    /*
+                    pageSectionContent example:
+                    [{
+                        widgetName: 'ArticleDetail',
+                        widgetData: {
+                            module: 'article',
+                            condition: { title:'Mission of PTA' },
+                            filter: {}
+                        }
+                    }]
+                    */
+                    for (var pageSectionName in pageContent) {
+                        var widgets = pageContent[pageSectionName];
+                        for (var i = 0; i < widgets.length; i++) {
+                            var widget = widgets[i];
+                            
+                            //console.log('>>> widget:', widget);
+                            var componentData = app.module['component'].data;
+                            
+                            tool.setReqParameter(req, widget);
+                            componentData.getComponentData(req, res, null, function(error, docs, info) {
+                                console.log('>>> getComponentData:', error, docs, info);
+                            });
+                        }
+                    }
+                    
+                    /*
+                    tool.setReqParameter(req, composition);
+                    componentData.getComponentData(req, res, null, function(error, docs, info) {
+                        
+                        info = { page:page, composition:composition };
+                        app.cb(error, docs, info, req, res, callback);
+                    });
+                    */
+                    
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
+                    
                 });
             }
             

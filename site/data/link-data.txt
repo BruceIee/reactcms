@@ -4,6 +4,9 @@
         "type": {
             "type": "string"
         },
+        "description": {
+            "type": "string"
+        },
         "content": {
             "type": "array"
         },
@@ -53,7 +56,10 @@
                 }
             ],
             "create_date": "2015-04-11T15:30:28.911Z",
-            "_class": "link"
+            "_class": "link",
+            "type": "",
+            "description": "",
+            "status": ""
         }
     ]
 }
