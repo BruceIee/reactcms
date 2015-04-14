@@ -33,7 +33,7 @@ var LinksetDetail = React.createClass({
                         { this.state.description }
                         <div className="pull-right">
                             <span className="label label-info label-as-badge">
-                                { this.state.id }
+                                { }
                             </span>
                         </div>
                     </div>
