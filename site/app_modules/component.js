@@ -17,7 +17,7 @@ module.exports = function(app) {
     widget parameter example
     {
         widgetName: 'ArticleDetail',
-        widgetData: {
+        widgetInfo: {
             module: 'article',
             condition: { title:'Mission of PTA' },
             filter: {}
@@ -31,12 +31,12 @@ module.exports = function(app) {
         console.log('getWidgetData parameter:', parameter);
         
         var widgetName = parameter.widgetName;
-        var widgetData = parameter.widgetData;
-        var moduleName = widgetData.module || '';
+        var widgetInfo = parameter.widgetInfo;
+        var moduleName = widgetInfo.module || '';
         
         // assemble query for data
-        var condition = widgetData.condition || {};
-        var filter = widgetData.filter || {};
+        var condition = widgetInfo.condition || {};
+        var filter = widgetInfo.filter || {};
         var dataModule = app.module[moduleName].data;
         
         dataModule.get(req, res, condition, filter, function(error, docs, info){

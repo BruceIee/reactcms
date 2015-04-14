@@ -53,7 +53,7 @@ module.exports = function(app) {
                         r1c1: [
                             {
                                 widgetName: 'ItemDetail',
-                                widgetData: {
+                                widgetInfo: {
                                     module: 'item',
                                     condition: { name:'top' },
                                     filter: {}
@@ -63,7 +63,7 @@ module.exports = function(app) {
                         r2c1: [
                             {
                                 widgetName: 'ItemDetail',
-                                widgetData: {
+                                widgetInfo: {
                                     module: 'item',
                                     condition: { name:'side' },
                                     filter: {}
@@ -73,7 +73,7 @@ module.exports = function(app) {
                         r2c2: [
                             {
                                 widgetName: 'ArticleDetail',
-                                widgetData: {
+                                widgetInfo: {
                                     module: 'article',
                                     condition: { title:'Mission of PTA' },
                                     filter: {}
@@ -102,7 +102,7 @@ module.exports = function(app) {
                     pageSectionContent example:
                     [{
                         widgetName: 'ArticleDetail',
-                        widgetData: {
+                        widgetInfo: {
                             module: 'article',
                             condition: { title:'Mission of PTA' },
                             filter: {}

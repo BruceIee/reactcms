@@ -42,7 +42,7 @@ $().ready(function() {
 function showWidget(targetClass, widget) {
     console.log('showWidget on targetClass:', targetClass);
     console.log('widget name:', widget.widgetName);
-    console.log('widget info:', widget.widgetData);
+    console.log('widget info:', widget.widgetInfo);
     $('.' + targetClass).append(widget.widgetName);
     
     var widgetDetailUrl = '/data/components/get/detail';
