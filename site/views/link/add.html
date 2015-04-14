@@ -14,7 +14,6 @@ function add_new_group() {
         '<p>Text: <input type="text" name="text" /></p>' +
         '<p>Hyperlink: <input type="text" name="hyperlink" /></p>' +
         "</fieldset>" +
-        //'<button type="button" class="btn btn-danger" onclick="remove_group(this)">-</button>' +
         "<hr>" +
         "</div>");
 };
@@ -37,7 +36,7 @@ function remove_group(who) {
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <form role="form" action="/data/links/add_links_post" method="POST">
-                <p>Description: <input type="text" name="description" /></p>
+                <p>Name: <input type="text" name="name" /></p>
                 <hr>
                 
                 <div id="mydiv" class="form-group">

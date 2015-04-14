@@ -11,7 +11,6 @@ var LinksetDetail = React.createClass({
             { name:'id', type:'string', required:false, defaultValue:'', note:'list element id' },
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
-            { name:'description', type:'string', required:false, defaultValue:'', note:'item description' },
             { name:'content', type:'array', required:false, defaultValue:[], note:'item content' }
         ];
         return attributes;
@@ -30,7 +29,7 @@ var LinksetDetail = React.createClass({
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="panel panel-default">
                     <div className="panel-heading">
-                        { this.state.description }
+                        { this.state.name }
                         <div className="pull-right">
                             <span className="label label-info label-as-badge">
                                 { }

@@ -15,7 +15,7 @@ module.exports = function(app) {
         type: {
             type: 'string'
         },
-        description: {
+        name: {
             type: 'string'
         },
         content: {
@@ -52,7 +52,7 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         //console.log("parameter=",parameter);
         /* example:
-        parameter= { description: '11111',
+        parameter= { name: '11111',
           text: [ 'google', 'popyard' ],
           hyperlink: [ 'http://www.google.com', 'http://www.popyard.org' ],
           submit: '' }
@@ -77,7 +77,7 @@ module.exports = function(app) {
         }
 
         var link = {};
-        link.description = parameter.description;
+        link.name = parameter.name;
         link.content = linksArray;
         link.create_date = new Date();
         console.log('link=',link);
@@ -167,7 +167,7 @@ module.exports = function(app) {
             //console.log('info=',info);
             
             var page = app.getPage(req);
-            page.title = 'List of Links';
+            page.title = 'List of Linkset';
             page.links = docs;
             //console.log('page=',page);
             res.render('link/list', { page:page });

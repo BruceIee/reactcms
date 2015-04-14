@@ -59,7 +59,7 @@ var ItemListElement = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'id', type:'string', required:false, defaultValue:'', note:'list element id' },
-            { name:'description', type:'string', required:false, defaultValue:'', note:'list element description' },
+            { name:'name', type:'string', required:false, defaultValue:'', note:'list element name' },
             { name:'content', type:'string', required:false, defaultValue:'', note:'list element content' }
         ];
         return attributes;
@@ -82,7 +82,7 @@ var ItemListElement = React.createClass({
             <div className="listelement-content-container" >
                 { iconContent }
                 <span className="listelement-text-container">
-                    { this.state.description }
+                    { this.state.name }
                 </span>
             </div>;
         return (
