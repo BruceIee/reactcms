@@ -96,6 +96,7 @@ module.exports = function(app) {
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
+                    console.log('composition:', composition);
                     
                     /*
                     pageSectionContent example:
@@ -122,7 +123,6 @@ module.exports = function(app) {
                     
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
-                    
                 });
             }
             
@@ -143,9 +143,8 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            for (var property in info.page) {
-                page[property] = info.page[property];
-            }
+            page.pageData = info.page;
+            page.compositionData = info.composition;
             var layoutFilename = 'composition/' + info.composition.filename;
             res.render(layoutFilename, { page:page });
         });

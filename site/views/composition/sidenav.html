@@ -22,23 +22,27 @@
 <script type="text/jsx" src="/script/page/support.js"></script>
 <script type="text/jsx" src="/script/composition/sidenav.js"></script>
 <script>
-var content = {{ page.content|json|safe}};
+var pageContent = {{ page.pageData.content|json|safe}};
+var pageComposition = {{ page.compositionData|json|safe}};
 
 $().ready(function() {
-    for (var targetClass in content) {
-        var widgets = content[targetClass];
-        //console.log('>>>', targetClass, widgets);
+    
+    console.log('page content:', pageContent);
+    console.log('page composition:', pageComposition);
+    
+    for (var targetClass in pageContent) {
+        var widgets = pageContent[targetClass];
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
-            populateTarget(targetClass, widget);
+            showWidget(targetClass, widget);
         }
     }
 });
 
-function populateTarget(targetClass, widget) {
-    console.log('populateTarget', targetClass, widget);
-    
-    $('.' + targetClass).append(widget.component + widget.id + ' ');
+function showWidget(targetClass, widget) {
+    console.log('showWidget on targetClass:', targetClass);
+    console.log('widget:', widget);
+    $('.' + targetClass).append(widget.widgetName);
 }
 </script>
 {% endblock %}
