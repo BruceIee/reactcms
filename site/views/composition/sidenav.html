@@ -41,8 +41,10 @@ $().ready(function() {
 
 function showWidget(targetClass, widget) {
     console.log('showWidget on targetClass:', targetClass);
-    console.log('widget:', widget);
+    console.log('widget name:', widget.widgetName);
+    console.log('widget data:', widget.widgetData);
     $('.' + targetClass).append(widget.widgetName);
+    
 }
 </script>
 {% endblock %}
@@ -50,6 +52,7 @@ function showWidget(targetClass, widget) {
 {% block content %}
 <div class="container">
     
+    <!--
     <div class="row">
         <h4 class="col-md-12">
             <div>name: {{ page.name }}</div>
@@ -57,11 +60,12 @@ function showWidget(targetClass, widget) {
             <div>composition: {{ page.composition }}</div>
         </h4>
     </div>
+    -->
     
     <div class="row">
-        <h4 class="col-md-12">
+        <div class="col-md-12">
             <div class="r1c1 widget-container"></div>
-        </h4>
+        </div>
     </div>
     
     <div class="row" style="margin-top:10px;">
