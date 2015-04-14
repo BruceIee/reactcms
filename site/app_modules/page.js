@@ -112,25 +112,13 @@ module.exports = function(app) {
                         var widgets = pageContent[pageSectionName];
                         for (var i = 0; i < widgets.length; i++) {
                             var widget = widgets[i];
-                            
-                            //console.log('>>> widget:', widget);
                             var componentData = app.module['component'].data;
-                            
                             tool.setReqParameter(req, widget);
-                            componentData.getComponentData(req, res, null, function(error, docs, info) {
-                                console.log('>>> getComponentData:', error, docs, info);
+                            componentData.getWidgetData(req, res, null, function(error, docs, info) {
+                                console.log('widget data:', error, docs, info);
                             });
                         }
                     }
-                    
-                    /*
-                    tool.setReqParameter(req, composition);
-                    componentData.getComponentData(req, res, null, function(error, docs, info) {
-                        
-                        info = { page:page, composition:composition };
-                        app.cb(error, docs, info, req, res, callback);
-                    });
-                    */
                     
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
