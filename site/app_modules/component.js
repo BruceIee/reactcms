@@ -28,6 +28,8 @@ module.exports = function(app) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         
+        console.log('getWidgetData parameter:', parameter);
+        
         var widgetName = parameter.widgetName;
         var widgetData = parameter.widgetData;
         var moduleName = widgetData.module || '';
@@ -43,7 +45,7 @@ module.exports = function(app) {
     };
     
     // data route
-    app.server.get('/data/components/get/data', block.data.getWidgetData);
+    app.server.get('/data/components/get/detail', block.data.getWidgetData);
     
     // page route
     app.server.get('/components', block.page.getIndex);

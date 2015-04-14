@@ -42,9 +42,15 @@ $().ready(function() {
 function showWidget(targetClass, widget) {
     console.log('showWidget on targetClass:', targetClass);
     console.log('widget name:', widget.widgetName);
-    console.log('widget data:', widget.widgetData);
+    console.log('widget info:', widget.widgetData);
     $('.' + targetClass).append(widget.widgetName);
     
+    var widgetDetailUrl = '/data/components/get/detail';
+    $.get(widgetDetailUrl, widget, function(data) {
+        var widgetData = data.docs && data.docs[0] || null;
+        
+        console.log('widget data:', widgetData);
+    });
 }
 </script>
 {% endblock %}
