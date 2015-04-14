@@ -22,23 +22,35 @@
 <script type="text/jsx" src="/script/page/support.js"></script>
 <script type="text/jsx" src="/script/composition/sidenav.js"></script>
 <script>
-var content = {{ page.content|json|safe}};
+var pageContent = {{ page.pageData.content|json|safe}};
+var pageComposition = {{ page.compositionData|json|safe}};
 
 $().ready(function() {
-    for (var targetClass in content) {
-        var widgets = content[targetClass];
-        //console.log('>>>', targetClass, widgets);
+    
+    console.log('page content:', pageContent);
+    console.log('page composition:', pageComposition);
+    
+    for (var targetClass in pageContent) {
+        var widgets = pageContent[targetClass];
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
-            populateTarget(targetClass, widget);
+            showWidget(targetClass, widget);
         }
     }
 });
 
-function populateTarget(targetClass, widget) {
-    console.log('populateTarget', targetClass, widget);
+function showWidget(targetClass, widget) {
+    console.log('showWidget on targetClass:', targetClass);
+    console.log('widget name:', widget.widgetName);
+    console.log('widget info:', widget.widgetInfo);
+    $('.' + targetClass).append(widget.widgetName);
     
-    $('.' + targetClass).append(widget.component + widget.id + ' ');
+    var widgetDetailUrl = '/data/components/get/detail';
+    $.get(widgetDetailUrl, widget, function(data) {
+        var widgetData = data.docs && data.docs[0] || null;
+        
+        console.log('widget data:', widgetData);
+    });
 }
 </script>
 {% endblock %}
@@ -46,6 +58,7 @@ function populateTarget(targetClass, widget) {
 {% block content %}
 <div class="container">
     
+    <!--
     <div class="row">
         <h4 class="col-md-12">
             <div>name: {{ page.name }}</div>
@@ -53,11 +66,12 @@ function populateTarget(targetClass, widget) {
             <div>composition: {{ page.composition }}</div>
         </h4>
     </div>
+    -->
     
     <div class="row">
-        <h4 class="col-md-12">
+        <div class="col-md-12">
             <div class="r1c1 widget-container"></div>
-        </h4>
+        </div>
     </div>
     
     <div class="row" style="margin-top:10px;">

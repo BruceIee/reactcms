@@ -53,7 +53,7 @@ module.exports = function(app) {
                         r1c1: [
                             {
                                 widgetName: 'ItemDetail',
-                                widgetData: {
+                                widgetInfo: {
                                     module: 'item',
                                     condition: { name:'top' },
                                     filter: {}
@@ -63,7 +63,7 @@ module.exports = function(app) {
                         r2c1: [
                             {
                                 widgetName: 'ItemDetail',
-                                widgetData: {
+                                widgetInfo: {
                                     module: 'item',
                                     condition: { name:'side' },
                                     filter: {}
@@ -73,7 +73,7 @@ module.exports = function(app) {
                         r2c2: [
                             {
                                 widgetName: 'ArticleDetail',
-                                widgetData: {
+                                widgetInfo: {
                                     module: 'article',
                                     condition: { title:'Mission of PTA' },
                                     filter: {}
@@ -96,12 +96,13 @@ module.exports = function(app) {
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
+                    console.log('composition:', composition);
                     
                     /*
                     pageSectionContent example:
                     [{
                         widgetName: 'ArticleDetail',
-                        widgetData: {
+                        widgetInfo: {
                             module: 'article',
                             condition: { title:'Mission of PTA' },
                             filter: {}
@@ -112,29 +113,16 @@ module.exports = function(app) {
                         var widgets = pageContent[pageSectionName];
                         for (var i = 0; i < widgets.length; i++) {
                             var widget = widgets[i];
-                            
-                            //console.log('>>> widget:', widget);
                             var componentData = app.module['component'].data;
-                            
                             tool.setReqParameter(req, widget);
-                            componentData.getComponentData(req, res, null, function(error, docs, info) {
-                                console.log('>>> getComponentData:', error, docs, info);
+                            componentData.getWidgetData(req, res, null, function(error, docs, info) {
+                                console.log('widget data:', error, docs, info);
                             });
                         }
                     }
                     
-                    /*
-                    tool.setReqParameter(req, composition);
-                    componentData.getComponentData(req, res, null, function(error, docs, info) {
-                        
-                        info = { page:page, composition:composition };
-                        app.cb(error, docs, info, req, res, callback);
-                    });
-                    */
-                    
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
-                    
                 });
             }
             
@@ -155,9 +143,8 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            for (var property in info.page) {
-                page[property] = info.page[property];
-            }
+            page.pageData = info.page;
+            page.compositionData = info.composition;
             var layoutFilename = 'composition/' + info.composition.filename;
             res.render(layoutFilename, { page:page });
         });

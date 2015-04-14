@@ -13,21 +13,30 @@ module.exports = function(app) {
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
-    block.data.getComponentData = function(req, res) {
+    /*
+    widget parameter example
+    {
+        widgetName: 'ArticleDetail',
+        widgetInfo: {
+            module: 'article',
+            condition: { title:'Mission of PTA' },
+            filter: {}
+        }
+    }
+    */
+    block.data.getWidgetData = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         
-        //console.log('>>> component getComponentData:', parameter);
+        console.log('getWidgetData parameter:', parameter);
         
         var widgetName = parameter.widgetName;
-        var widgetData = parameter.widgetData;
+        var widgetInfo = parameter.widgetInfo;
+        var moduleName = widgetInfo.module || '';
         
-        //console.log('>>> widget:', widgetName, widgetData);
-        
-        var moduleName = widgetData.module || '';
         // assemble query for data
-        var condition = widgetData.condition || {};
-        var filter = widgetData.filter || {};
+        var condition = widgetInfo.condition || {};
+        var filter = widgetInfo.filter || {};
         var dataModule = app.module[moduleName].data;
         
         dataModule.get(req, res, condition, filter, function(error, docs, info){
@@ -36,7 +45,7 @@ module.exports = function(app) {
     };
     
     // data route
-    app.server.get('/data/components/get/data', block.data.getComponentData);
+    app.server.get('/data/components/get/detail', block.data.getWidgetData);
     
     // page route
     app.server.get('/components', block.page.getIndex);
