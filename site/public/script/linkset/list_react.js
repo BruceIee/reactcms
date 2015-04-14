@@ -1,4 +1,4 @@
-// link list_react script
+// linkset list_react script
 var app = app || {};
 
 $().ready(function() {
@@ -6,7 +6,7 @@ $().ready(function() {
 });
 
 function getItems() {
-    var itemsUrl = '/data/links';
+    var itemsUrl = '/data/linksets';
     $.get(itemsUrl, function(data) {
         var items = data.docs;
         //console.log('items=',items);
@@ -28,7 +28,7 @@ function updateItemList(items) {
         document.getElementById('linksetList')
     );
     app.list1.on('select', function(id) {
-        var itemUrl = '/links/' + id + '/detail/react';
+        var itemUrl = '/linksets/' + id + '/detail/react';
         window.location = itemUrl;
     });
 }

@@ -3,7 +3,7 @@ var tool = require('leaptool');
 
 module.exports = function(app) {
     
-    var moduleName = 'link';
+    var moduleName = 'linkset';
     var block = {
         app: app,
         model: null
@@ -38,7 +38,7 @@ module.exports = function(app) {
         });
     };
     
-    block.data.getLinks = function(req, res) {
+    block.data.getLinkset = function(req, res) {
         var callback = arguments[3] || null;
         var condition = {};
         var filter = {};
@@ -47,48 +47,45 @@ module.exports = function(app) {
         });
     };
     
-    block.data.addLinkPost = function(req, res) {
+    block.data.addLinksetPost = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
-        //console.log("parameter=",parameter);
+
         /* example:
         parameter= { name: '11111',
           text: [ 'google', 'popyard' ],
           hyperlink: [ 'http://www.google.com', 'http://www.popyard.org' ],
           submit: '' }
         */
-        //process.exit();
         
-        var linksArray = [];
+        var content = [];
         
         if (Array.isArray(parameter.text)) {
             for (var i in parameter.text) {
                 var newObj = {};
                 newObj.text = parameter.text[i];
                 newObj.hyperlink = parameter.hyperlink[i];
-                linksArray.push(newObj);
+                content.push(newObj);
             }
         }
         else {
             var newObj = {};
             newObj.text = parameter.text;
             newObj.hyperlink = parameter.hyperlink;
-            linksArray.push(newObj);
+            content.push(newObj);
         }
 
-        var link = {};
-        link.name = parameter.name;
-        link.content = linksArray;
-        link.create_date = new Date();
-        console.log('link=',link);
-        //process.exit();
-        block.data.add(req, res, link, function(error, docs, info) {
-            //app.cb(error, docs, info, req, res, callback);
-            res.redirect('/links/show_all');
+        var linkset = {};
+        linkset.name = parameter.name;
+        linkset.content = content;
+        linkset.create_date = new Date();
+
+        block.data.add(req, res, linkset, function(error, docs, info) {
+            res.redirect('/linksets/show_all');
         });        
     }; 
     
-    block.data.getLinkDetail = function(req, res) {
+    block.data.getLinksetDetail = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
         var id = parameter.id;
@@ -146,46 +143,38 @@ module.exports = function(app) {
         });
     };
     
-    block.page.linkHome = function(req, res) {
+    block.page.linksetHome = function(req, res) {
         var page = app.getPage(req);
-        res.render('link/index', { page:page });
+        res.render('linkset/index', { page:page });
     };
     
-     block.page.addLink = function(req, res) {
+     block.page.addLinkset = function(req, res) {
         var page = app.getPage(req);
-        res.render('link/add', { page:page });
+        res.render('linkset/add', { page:page });
     };
     
     block.page.showAll = function(req, res) {
-        console.log('---------');
         var condition = {};
         var filter = {};
 
         app.db.find(moduleName, condition, filter, function(error, docs, info){
-            //console.log('error=',error);
-            //console.log('docs=',docs);
-            //console.log('info=',info);
-            
             var page = app.getPage(req);
             page.title = 'List of Linkset';
-            page.links = docs;
-            //console.log('page=',page);
-            res.render('link/list', { page:page });
-            
-            //app.cb(error, docs, info, req, res, callback);
+            page.linksets = docs;
+            res.render('linkset/list', { page:page });
         });        
     };    
     
-    block.page.getLinkListReact = function(req, res) {
+    block.page.getLinksetListReact = function(req, res) {
         var page = app.getPage(req);
-        res.render('link/list_react', { page:page });
+        res.render('linkset/list_react', { page:page });
     };    
     
-    block.page.getLinkDetailReact = function(req, res) {
+    block.page.getLinksetDetailReact = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
-        page.linkId = parameter.id;
-        res.render('link/detail_react', { page:page });
+        page.linksetId = parameter.id;
+        res.render('linkset/detail_react', { page:page });
     };    
     
     
@@ -193,9 +182,9 @@ module.exports = function(app) {
     
     // data route
     app.server.post('/data/items/add', block.data.addItem);
-    app.server.get('/data/links', block.data.getLinks);
-    app.server.post('/data/links/add_links_post', block.data.addLinkPost);
-    app.server.get('/data/links/:id/detail', block.data.getLinkDetail);
+    app.server.get('/data/linksets', block.data.getLinkset);
+    app.server.post('/data/linksets/add_linkset_post', block.data.addLinksetPost);
+    app.server.get('/data/linksets/:id/detail', block.data.getLinksetDetail);
     
     // page route
     app.server.get('/items', block.page.getIndex);
@@ -205,14 +194,13 @@ module.exports = function(app) {
     app.server.get('/items/list', block.page.getItemList);
     app.server.get('/items/:id/detail', block.page.getItemDetail);
     
-    app.server.get('/links', block.page.linkHome);
-    app.server.get('/links/add_links', block.page.addLink);
-    //app.server.post('/links/add_links_post', block.page.addLinkPost);
-    app.server.get('/links/show_all', block.page.showAll);
+    app.server.get('/linksets', block.page.linksetHome);
+    app.server.get('/linksets/add_links', block.page.addLinkset);
+    app.server.get('/linksets/show_all', block.page.showAll);
     
     // page react test route
-    app.server.get('/links/list/react', block.page.getLinkListReact);
-    app.server.get('/links/:id/detail/react', block.page.getLinkDetailReact);
+    app.server.get('/linksets/list/react', block.page.getLinksetListReact);
+    app.server.get('/linksets/:id/detail/react', block.page.getLinksetDetailReact);
 
     return block;
 };

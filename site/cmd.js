@@ -71,7 +71,7 @@ setting.modules_to_load = null;
 var appModulePath = rootPath + '/app_modules';
 getMatchedFilenames(appModulePath, filePattern, function(names) {
     setting.modules_to_load = names;
-    //setting.modules_to_load = ['article','link'];
+    //setting.modules_to_load = ['article','linkset'];
     start(setting);
 });
 
