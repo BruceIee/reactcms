@@ -3,7 +3,9 @@
 {% block style %}
 {% parent %}
 <link rel="stylesheet" href="/component/common/common-style.css"/>
-<link rel="stylesheet" href="/component/item/list.css"/>
+<link rel="stylesheet" href="/component/item/detail.css"/>
+<link rel="stylesheet" href="/component/article/detail.css"/>
+<link rel="stylesheet" href="/component/linkset/detail.css"/>
 <style>
 .widget-container {
     border: solid 1px #f2f2f2;
@@ -18,10 +20,12 @@
 <script src="/library/react/JSXTransformer.js"></script>
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
 <script type="text/jsx" src="/component/item/detail.js"></script>
-<script type="text/jsx" src="/component/item/list.js"></script>
+<script type="text/jsx" src="/component/article/detail.js"></script>
+<script type="text/jsx" src="/component/linkset/detail.js"></script>
 <script type="text/jsx" src="/script/page/support.js"></script>
 <script type="text/jsx" src="/script/composition/sidenav.js"></script>
-<script>
+<script type="text/jsx">
+
 var pageContent = {{ page.pageData.content|json|safe}};
 var pageComposition = {{ page.compositionData|json|safe}};
 
