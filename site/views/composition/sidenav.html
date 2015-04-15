@@ -25,17 +25,24 @@
 <script type="text/jsx" src="/script/page/support.js"></script>
 <script type="text/jsx" src="/script/composition/sidenav.js"></script>
 <script type="text/jsx">
+var app = app || {};
 
-var pageContent = {{ page.pageData.content|json|safe}};
-var pageComposition = {{ page.compositionData|json|safe}};
+app.pageContent = {{ page.pageData.content|json|safe}};
+app.pageComposition = {{ page.compositionData|json|safe}};
+
+app.widgets = {
+    ItemDetail: ItemDetail,
+    ArticleDetail: ArticleDetail,
+    LinksetDetail: LinksetDetail
+};
 
 $().ready(function() {
     
-    console.log('page content:', pageContent);
-    console.log('page composition:', pageComposition);
+    console.log('page content:', app.pageContent);
+    console.log('page composition:', app.pageComposition);
     
-    for (var targetClass in pageContent) {
-        var widgets = pageContent[targetClass];
+    for (var targetClass in app.pageContent) {
+        var widgets = app.pageContent[targetClass];
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
             showWidget(targetClass, widget);
@@ -52,19 +59,16 @@ function showWidget(targetClass, widget) {
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
         var widgetData = data.docs && data.docs[0] || null;
+        if (!widgetData) { return; }
         
         console.log('widget data:', widgetData);
-        
         // render widget with data obtained
+        this.widgets['ArticleDetail']({
+            data: widgetData
+        });
         
         // add field component to fields array
         /*
-        this.widgets = {
-            ItemList: ItemList,
-            ItemDetail: ItemDetail,
-            ArticleDetail: ArticleDetail,
-            LinksetDetail: LinksetDetail
-        },
         var fields = [];
         fields.push( this.widgets[field.type]({
             key: field.key,
