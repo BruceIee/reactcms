@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":1,
+    "count":2,
     "items": [
         {
             "_id": "552b1060dcec2fe009d51f83",
@@ -51,6 +51,14 @@
             "firstname": "",
             "lastname": "",
             "status": ""
+        },
+        {
+            "_id": "552f575f586ececb1419861a",
+            "username": "ljnet",
+            "email": "ljnet.mail@gmail.com",
+            "password": "4c3e218fb612d1dc8d6cd6bd018431b3d767fd5aea06ef360339015bb2c696defc34c4561855df0d5042850c9070d651945de1277080bd83c8ce4efff690ade5",
+            "salt": 84553294,
+            "_class": "user"
         }
     ]
 }
