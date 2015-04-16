@@ -2,7 +2,12 @@
 var Cabinet = React.createClass({
     name: 'cabinet',
     mixins: [getCommonMixin],
-    
+    components: {
+        ItemDetail: ItemDetail,
+        ArticleDetail: ArticleDetail,
+        LinksetDetail: LinksetDetail
+    },
+
     // attribute definitions
     getAttributes: function() {
         var attributes = [
@@ -16,13 +21,13 @@ var Cabinet = React.createClass({
         var widgets = [];
         for (var i = 0; i < this.state.items.length; i++) {
             var item = this.state.items[i];
-            
-            var widgetKey = 'widget-item-' + item.id;
-            widgets.push( this.widgets[item.type]({
-                key: item.key,
-                ref: item.name,
-                data: item.data
-            }) );
+            widgets.push(
+                this.components[item.type]({
+                    key: item.key,
+                    ref: item.name,
+                    data: item.data
+                })
+            );
         }
         return (
             <div className={ this.state.containerClassNames.join(' ') }  onClick={ this.onClick } >

@@ -20,10 +20,10 @@
 <script src="/library/react/react.js"></script>
 <script src="/library/react/JSXTransformer.js"></script>
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
-<script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
 <script type="text/jsx" src="/component/item/detail.js"></script>
 <script type="text/jsx" src="/component/article/detail.js"></script>
 <script type="text/jsx" src="/component/linkset/detail.js"></script>
+<script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
 <script type="text/jsx" src="/script/page/support.js"></script>
 <script type="text/jsx" src="/script/composition/sidenav.js"></script>
 <script type="text/jsx">
@@ -65,7 +65,11 @@ function showWidget(widget) {
         if (!widgetData) { return; }
         
         console.log('widget data:', widgetData);
-        var cabinetData = {};
+        var cabinetData = {
+            items: [
+                { type:'ArticleDetail', data:widgetData }
+            ]
+        };
         React.render(
             <Cabinet data={ cabinetData } />,
             $('.' + this.targetClass)[0]
@@ -95,16 +99,6 @@ function showWidget(widget) {
 
 {% block content %}
 <div class="container">
-    
-    <!--
-    <div class="row">
-        <h4 class="col-md-12">
-            <div>name: {{ page.name }}</div>
-            <div>description: {{ page.description }}</div>
-            <div>composition: {{ page.composition }}</div>
-        </h4>
-    </div>
-    -->
     
     <div class="row">
         <div class="col-md-12">
