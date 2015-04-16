@@ -47,16 +47,17 @@ $().ready(function() {
         var widgets = app.pageContent[targetClass];
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
-            showWidget(targetClass, widget);
+            widget.targetClass = targetClass;
+            showWidget(widget);
         }
     }
 });
 
-function showWidget(targetClass, widget) {
-    console.log('showWidget on targetClass:', targetClass);
+function showWidget(widget) {
+    console.log('showWidget on targetClass:', widget.targetClass);
     console.log('widget name:', widget.widgetName);
     console.log('widget info:', widget.widgetInfo);
-    $('.' + targetClass).append(widget.widgetName);
+    $('.' + widget.targetClass).append(widget.widgetName);
     
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
@@ -64,10 +65,18 @@ function showWidget(targetClass, widget) {
         if (!widgetData) { return; }
         
         console.log('widget data:', widgetData);
+        var cabinetData = {};
+        React.render(
+            <Cabinet data={ cabinetData } />,
+            $('.' + this.targetClass)[0]
+        );
+
+        /*
         // render widget with data obtained
         app.widgets['ArticleDetail']({
             data: widgetData
         });
+        */
         
         // add field component to fields array
         /*
@@ -79,7 +88,7 @@ function showWidget(targetClass, widget) {
         }) );
         */
         
-    });
+    }.bind(widget));
 }
 </script>
 {% endblock %}
