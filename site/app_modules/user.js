@@ -1,5 +1,6 @@
 var util = require('util');
 var tool = require('leaptool');
+var moment = require('moment');
 
 module.exports = function(app) {
     
@@ -182,6 +183,92 @@ module.exports = function(app) {
         res.render('user/profile', { page:page });
     };
     
+    block.page.resetPassword = function(req, res){
+        var parameter = tool.getReqParameter(req);
+        var key = parameter.key || '';
+        if (key) {
+            // Password reset key: userId + 10 digit spacer + timestamp
+            // decode: new Buffer(key, 'base64').toString('ascii')
+            var keyOutput = new Buffer(key, 'base64').toString('ascii');
+            var userId = keyOutput.substr(0,24);
+            var initDate = new Date(parseInt(keyOutput.substr(34)));
+            block.data.getById(req, res, userId, function(error, docs, info) {
+                var user = docs && docs[0] || null;
+                var page = app.getPage(req);
+                page.redirect = req.query.url || '';
+                page.title = 'Password Change';
+                page.user = user;
+                page.key = key;
+                res.render('user/password_change', { page:page });
+            });
+        } else {
+            var page = app.getPage(req);
+            page.redirect = req.query.url || '';
+            page.title = 'Password Reset';
+            res.render('user/password_reset', { page:page });
+        }
+    };    
+    
+    block.page.resetPasswordPost = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var email = parameter.email || '';
+        var condition = { email:email };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var user = docs && docs[0] || null;
+            if (user) {
+                // send notification email to user
+                console.log('app.website=',app.website);
+                var passwordResetKey = getPasswordResetKey(user);
+                
+                function getPasswordResetKey(user) {
+                    var userId = user._id + '';
+                    var currentTime =  (new Date()).valueOf();
+                    var spacer = Math.floor(Math.random()* 10000000000); // 10 digit random number as spacer
+                    var key = userId + spacer + currentTime;
+                    key = new Buffer(key).toString('base64');
+                    return key;
+                };                 
+
+                //resetUrl = app.website + '/user/password/reset?key=' + passwordResetKey;
+                var resetUrl = 'http://localhost:8700' + '/users/password/reset?key=' + passwordResetKey; //!need website url later
+                //console.log('resetUrl=',resetUrl);
+                var emailSubject = 'Reset your account password'
+                var emailContent = 'The hyperlink to reset your password:<br>\r\n<br>\r\n' + resetUrl;
+                app.mailer && app.mailer.send({
+                    to: user.email,
+                    subject: emailSubject,
+                    content: emailContent,
+                    isHtml: true,
+                    callback: function(error, info) {
+                        console.log('mail sent:', error, info);
+                    }
+                });                
+                info = { message: 'Please check your email: ' + user.email + ' for password reset information.' };
+            } else {
+                info = { message:'User is not found for given email.' };
+            }
+            app.renderInfoPage(error, null, info, req, res);
+        });
+    };    
+
+    block.page.changePasswordPost = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var password = parameter.password;
+        var key = parameter.key || '';
+        // Password reset key: userId + 10 digit spacer + timestamp
+        // decode: new Buffer(key, 'base64').toString('ascii')
+        var keyOutput = new Buffer(key, 'base64').toString('ascii');
+        var userId = keyOutput.substr(0,24);
+        var parameter2 = {};
+        parameter2._id = userId;
+        parameter2.password = password;
+        block.data.edit(req, res, parameter2, function(error, docs, info) {
+            info = { message:'Your password is changed successfully.' };
+            app.renderInfoPage(error, null, info, req, res);
+        });
+    };    
+
     // page route
     app.server.get('/users', block.page.getIndex);
     app.server.get('/users/login', block.page.login);
@@ -190,6 +277,9 @@ module.exports = function(app) {
     app.server.post('/users/signup', block.page.signupPost);
     app.server.get('/users/logout', block.page.logout);
     app.server.get('/users/:username/profile', block.page.getProfile);
+    app.server.get('/users/password/reset', block.page.resetPassword);
+    app.server.post('/users/password/reset_post', block.page.resetPasswordPost);
+    app.server.post('/users/password/change_post', block.page.changePasswordPost);  
     
     return block;
 };
