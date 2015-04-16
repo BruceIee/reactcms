@@ -40,6 +40,7 @@
     "multer": "*",
     "pagedown-extra": "git+https://github.com/jmcmanus/pagedown-extra.git",
     "readline": "*",
-    "rimraf": "*"
+    "rimraf": "*",
+    "nodemailer": "0.6.x"
   }
 }

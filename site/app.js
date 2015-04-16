@@ -12,6 +12,7 @@ var compression = require('compression')
 var _ = require('underscore');
 var tool = require('leaptool');
 var multer = require('multer'); // Multer is a node.js middleware for handling multipart/form-data.
+var emailEngine = require('emailEngine');
 
 var app = {};
 
@@ -51,6 +52,8 @@ app.renderInfoPage = function(error, docs, info, req, res) {
     var page = { error:error, info:info };
     res.render('common/info.html', { app: app, req: req, page: page });
 };
+
+
 
 function setup(cbSetup) {
     // create express server
@@ -92,6 +95,11 @@ function setup(cbSetup) {
         console.log(file.fieldname + ' is uploaded to ' + file.path)
     }
     }));
+    
+    app.mailer = null;
+    if (app.setting.email) {
+        app.mailer = new emailEngine.Engine(app.setting.email);
+    } 
     
     // setup database connection
     if (app.setting.database) {
