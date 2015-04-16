@@ -75,10 +75,20 @@ module.exports = function(app) {
                                 widgetName: 'ArticleDetail',
                                 widgetInfo: {
                                     module: 'article',
-                                    condition: { title:'Mission of PTA' },
+                                    condition: {},
                                     filter: {}
                                 }
                             }
+                            /*
+                            {
+                                widgetName: 'ArticleDetail',
+                                widgetInfo: {
+                                    module: 'article',
+                                    condition: { title:'MCCPTA Membership' },
+                                    filter: {}
+                                }
+                            }
+                            */
                         ]
                     }
                 };

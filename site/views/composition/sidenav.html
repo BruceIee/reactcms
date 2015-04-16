@@ -61,15 +61,15 @@ function showWidget(widget) {
     
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
-        var widgetData = data.docs && data.docs[0] || null;
-        if (!widgetData) { return; }
+        console.log('data.docs.length:', data.docs.length);
+        if (data.docs.length <= 0) return;
         
-        console.log('widget data:', widgetData);
-        var cabinetData = {
-            items: [
-                { type:this.widgetName, data:widgetData }
-            ]
-        };
+        var cabinetData = { items: [] };
+        for (var i = 0; i < data.docs.length; i++) {
+            var widgetData = data.docs && data.docs[i];
+            cabinetData.items.push({ type:this.widgetName, data:widgetData });
+        }
+        
         React.render(
             <Cabinet data={ cabinetData } />,
             $('.' + this.targetClass)[0]
