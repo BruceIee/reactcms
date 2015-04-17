@@ -62,10 +62,10 @@ module.exports = function(app) {
                         ],
                         r2c1: [
                             {
-                                widgetName: 'ItemDetail',
+                                widgetName: 'LinksetDetail',
                                 widgetInfo: {
-                                    module: 'item',
-                                    condition: { name:'side' },
+                                    module: 'linkset',
+                                    condition: { name:'home-links' },
                                     filter: {}
                                 }
                             }
@@ -76,19 +76,9 @@ module.exports = function(app) {
                                 widgetInfo: {
                                     module: 'article',
                                     condition: {},
-                                    filter: {}
+                                    filter: { limit:3 }
                                 }
                             }
-                            /*
-                            {
-                                widgetName: 'ArticleDetail',
-                                widgetInfo: {
-                                    module: 'article',
-                                    condition: { title:'MCCPTA Membership' },
-                                    filter: {}
-                                }
-                            }
-                            */
                         ]
                     }
                 };

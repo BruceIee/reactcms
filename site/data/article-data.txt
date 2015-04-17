@@ -29,22 +29,10 @@
     "count":6,
     "items": [
         {
-            "_id": "55293c2afc21942009c15d87",
-            "title": "MCCPTA Awards Nominations",
-            "content": "<div><span style=\"line-height: 1.42857143;\">We all know those volunteers who go above and beyond on behalf of our children and schools, and those businesses that make community service to our youth a priority. &nbsp;It’s time to honor them and let them know how much their efforts are appreciated.</span><br></div><div><br></div><div>Nominate a well-deserving individual, business, or community group for an MCCPTA Achievement Award. Nominations are due by March 27, 2015. &nbsp;Awards will be presented at the Annual Presidents &amp; Principals Dinner, May 18, 2015.</div>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:22:18.343Z",
-            "_class": "article",
-            "type": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "55293c5efc21942009c15d88",
-            "title": "What does MCCPTA do?",
-            "content": "<ul><li><span style=\"line-height: 1.42857143;\">Trains roughly 500 local PTA officers and members annually at Spring and Fall MCCPTA training events.</span><br></li><li>Communicates throughout the year through websites, internet tools, and email.</li><li>Hosts monthly MCCPTA Presents! programs that feature experts &nbsp;and leaders on topics of parent interest. &nbsp;</li><li>Coordinates the county-level Reflections Program, a National PTA program supporting the student creativity via the arts.</li><li>Advocates for budget priorities before the Board of Education and County Council on behalf of all members, and has a place at the table during MCPS budget discussions. MCCPTA positions are established by the consensus of all Montgomery County PTAs and PTSAs through monthly Delegates Assemblies.</li><li>Champions well-maintained safe, secure, school facilities, equitable technology access for all schools, burden of proof legislation, judicious curriculum roll-out, professional development, after-school programs, and the reinstatement of School Resource Officers (SROs) in every cluster.</li><li>Supports edible gardens on every school's grounds.&nbsp;</li><li>Holds fora and workshops on budgets, curriculum, membership, and more.</li><li>Coordinates Cultural Arts showcases featuring vetted artists with outstanding programs for students every Fall.</li><li>Provides Student Service Learning (SSL) assistance and information on opportunities for all schools.</li><li>Participates in interview processes for MCPS central office leadership positions.</li><li>Hosts a high school model United Nations.</li><li>And much, much more.</li></ul>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:23:10.861Z",
+            "_id": "55293cf3fc21942009c15d8c",
+            "title": "What should I do if I want to be more involved at the county level?",
+            "content": "<div><span style=\"line-height: 1.42857143;\">MCCPTA welcomes all PTA members to any meetings. Board of Directors meetings are usually held the first Thursday of the month at 7:30 PM at Carver Educational Services Center; Delegates Assembly meetings are usually the 4th Tuesday of the month at 7:30 PM at Carver; committee meetings are announced and published via various MCCPTA communications tools. If you are interested in being involved in a committee, please contact the committee chair directly.</span><br></div><div><br></div>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:25:39.128Z",
             "_class": "article",
             "type": "",
             "status": "",
@@ -89,10 +77,22 @@
             "edit_by": ""
         },
         {
-            "_id": "55293cf3fc21942009c15d8c",
-            "title": "What should I do if I want to be more involved at the county level?",
-            "content": "<div><span style=\"line-height: 1.42857143;\">MCCPTA welcomes all PTA members to any meetings. Board of Directors meetings are usually held the first Thursday of the month at 7:30 PM at Carver Educational Services Center; Delegates Assembly meetings are usually the 4th Tuesday of the month at 7:30 PM at Carver; committee meetings are announced and published via various MCCPTA communications tools. If you are interested in being involved in a committee, please contact the committee chair directly.</span><br></div><div><br></div>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:25:39.128Z",
+            "_id": "55293c5efc21942009c15d88",
+            "title": "What does MCCPTA do?",
+            "content": "<ul><li><span style=\"line-height: 1.42857143;\">Trains roughly 500 local PTA officers and members annually at Spring and Fall MCCPTA training events.</span><br></li><li>Communicates throughout the year through websites, internet tools, and email.</li><li>Hosts monthly MCCPTA Presents! programs that feature experts &nbsp;and leaders on topics of parent interest. &nbsp;</li><li>Coordinates the county-level Reflections Program, a National PTA program supporting the student creativity via the arts.</li><li>Advocates for budget priorities before the Board of Education and County Council on behalf of all members, and has a place at the table during MCPS budget discussions. MCCPTA positions are established by the consensus of all Montgomery County PTAs and PTSAs through monthly Delegates Assemblies.</li><li>Champions well-maintained safe, secure, school facilities, equitable technology access for all schools, burden of proof legislation, judicious curriculum roll-out, professional development, after-school programs, and the reinstatement of School Resource Officers (SROs) in every cluster.</li><li>Supports edible gardens on every school's grounds.&nbsp;</li><li>Holds fora and workshops on budgets, curriculum, membership, and more.</li><li>Coordinates Cultural Arts showcases featuring vetted artists with outstanding programs for students every Fall.</li><li>Provides Student Service Learning (SSL) assistance and information on opportunities for all schools.</li><li>Participates in interview processes for MCPS central office leadership positions.</li><li>Hosts a high school model United Nations.</li><li>And much, much more.</li></ul>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:23:10.861Z",
+            "_class": "article",
+            "type": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "55293c2afc21942009c15d87",
+            "title": "MCCPTA Awards Nominations",
+            "content": "<div><span style=\"line-height: 1.42857143;\">We all know those volunteers who go above and beyond on behalf of our children and schools, and those businesses that make community service to our youth a priority. &nbsp;It’s time to honor them and let them know how much their efforts are appreciated.</span><br></div><div><br></div><div>Nominate a well-deserving individual, business, or community group for an MCCPTA Achievement Award. Nominations are due by March 27, 2015. &nbsp;Awards will be presented at the Annual Presidents &amp; Principals Dinner, May 18, 2015.</div>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:22:18.343Z",
             "_class": "article",
             "type": "",
             "status": "",
