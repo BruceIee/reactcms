@@ -20,10 +20,10 @@
             "type": "date"
         }
     },
-    "count":1,
+    "count":6,
     "items": [
         {
-            "name": "test",
+            "name": "main",
             "description": "test page",
             "composition": "sidenav",
             "content": {
@@ -54,6 +54,191 @@
                             "module": "article",
                             "condition": {},
                             "filter": { "limit":2 }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "news",
+            "description": "test page",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": { "title":"mccpta-title" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": { "name":"home-links" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {},
+                            "filter": { "limit":1 }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "advocacy",
+            "description": "test page",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": { "title":"mccpta-title" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": { "name":"home-links" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {},
+                            "filter": { "limit":1 }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "events",
+            "description": "test page",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": { "title":"mccpta-title" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": { "name":"home-links" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {},
+                            "filter": { "limit":1 }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "soca",
+            "description": "test page",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": { "title":"mccpta-title" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": { "name":"home-links" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {},
+                            "filter": { "limit":1 }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "engage",
+            "description": "test page",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": { "title":"mccpta-title" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": { "name":"home-links" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {},
+                            "filter": { "limit":1 }
                         }
                     }
                 ]

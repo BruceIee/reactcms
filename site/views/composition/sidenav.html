@@ -39,10 +39,8 @@ app.widgets = {
 };
 
 $().ready(function() {
-    
-    console.log('page content:', app.pageContent);
-    console.log('page composition:', app.pageComposition);
-    
+    //console.log('page content:', app.pageContent);
+    //console.log('page composition:', app.pageComposition);
     for (var targetClass in app.pageContent) {
         var widgets = app.pageContent[targetClass];
         for (var i = 0; i < widgets.length; i++) {
@@ -54,11 +52,10 @@ $().ready(function() {
 });
 
 function showWidget(widget) {
-    console.log('showWidget on targetClass:', widget.targetClass);
-    console.log('widget name:', widget.widgetName);
-    console.log('widget info:', widget.widgetInfo);
-    $('.' + widget.targetClass).append(widget.widgetName);
-    
+    //console.log('showWidget on targetClass:', widget.targetClass);
+    //console.log('widget name:', widget.widgetName);
+    //console.log('widget info:', widget.widgetInfo);
+    //$('.' + widget.targetClass).append(widget.widgetName);
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
         console.log('data.docs.length:', data.docs.length);

@@ -66,23 +66,23 @@
             "content": [
                 {
                     "text": "In the News",
-                    "hyperlink": "/page/news"
+                    "hyperlink": "/pages/news"
                 },
                 {
                     "text": "Advocacy",
-                    "hyperlink": "/page/advocacy"
+                    "hyperlink": "/pages/advocacy"
                 },
                 {
                     "text": "Events",
-                    "hyperlink": "/page/events"
+                    "hyperlink": "/pages/events"
                 },
                 {
                     "text": "SoCA",
-                    "hyperlink": "/page/soca"
+                    "hyperlink": "/pages/soca"
                 },
                 {
                     "text": "Engage",
-                    "hyperlink": "/page/enage"
+                    "hyperlink": "/pages/engage"
                 }
             ],
             "create_date": "2015-04-17T01:08:59.263Z",
