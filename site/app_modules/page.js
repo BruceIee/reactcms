@@ -3,7 +3,7 @@ var tool = require('leaptool');
 
 module.exports = function(app) {
     
-    var moduleName = 'layout';
+    var moduleName = 'page';
     var block = {
         app: app,
         model: null
@@ -39,11 +39,15 @@ module.exports = function(app) {
         var pageName = parameter.pagename;
         var condition = { name:pageName };
         var filter = {};
+        
+        console.log('getPage query:', condition, filter);
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             
+            console.log('getPage:', error, docs, info);
             var page = docs && docs[0];
             
             // TEST START - use hard-coded value for page name == "test"
+            /*
             if (pageName === 'test') {
                 page = {
                     name: 'test',
@@ -84,6 +88,7 @@ module.exports = function(app) {
                 };
                 docs = [page];
             }
+            */
             // TEST END
             
             // get composition

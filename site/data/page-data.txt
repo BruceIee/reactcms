@@ -20,7 +20,44 @@
             "type": "date"
         }
     },
-    "count":0,
+    "count":1,
     "items": [
+        {
+            "name": "test",
+            "description": "test page",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": { "title":"mccpta-title" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": { "name":"home-links" },
+                            "filter": {}
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {},
+                            "filter": { "limit":2 }
+                        }
+                    }
+                ]
+            }
+        }
     ]
 }
