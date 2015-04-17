@@ -76,7 +76,7 @@ module.exports = function(app) {
                                 widgetInfo: {
                                     module: 'article',
                                     condition: {},
-                                    filter: { limit:3 }
+                                    filter: { limit:2 }
                                 }
                             }
                         ]

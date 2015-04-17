@@ -25,16 +25,12 @@ exports.setting = {
         name: 'reactcms'
     },
     
-    // socketio and rtc
-    use_socketio: false,
-    use_easyrtc: false,
-
     // email setting
     email: {
         service: 'gmail',
-        username: 'leapon.post@gmail.com',
-        password: 'Postmail99',
-        sender: 'info@leapon.com'
+        username: 'test@example.com',
+        password: 'test',
+        sender: 'test@example.com'
     }
 
 };
