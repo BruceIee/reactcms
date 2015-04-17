@@ -52,10 +52,10 @@ module.exports = function(app) {
                     content: {
                         r1c1: [
                             {
-                                widgetName: 'ItemDetail',
+                                widgetName: 'ArticleDetail',
                                 widgetInfo: {
-                                    module: 'item',
-                                    condition: { name:'top' },
+                                    module: 'article',
+                                    condition: { title:'mccpta-title' },
                                     filter: {}
                                 }
                             }
