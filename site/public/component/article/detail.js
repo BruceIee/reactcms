@@ -18,45 +18,12 @@ var ArticleDetail = React.createClass({
     },
     
     render: function() {
-        /* 
-        // set content display
-        var content =
-            <div className="panel panel-default">
-                <div className="panel-heading">
-                    { this.state.title }
-                    <div className="pull-right">
-                        <span className="label label-info label-as-badge">
-                            { this.state.type }
-                        </span>
-                    </div>
-                </div>
-                <div className="panel-body">
-                    { this.state.content }
-                </div>
-            </div>;
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
-                { content }
+                <div className="articledetail-content"
+                    dangerouslySetInnerHTML={{__html: this.state.content}}
+                />
             </div>
-        );
-        */
-        
-        return (
-            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
-                <div className="panel panel-default">
-                    <div className="panel-heading">
-                        { this.state.title }
-                        <div className="pull-right">
-                            <span className="label label-info label-as-badge">
-                                { this.state.type }
-                            </span>
-                        </div>
-                    </div>
-                    <div className="panel-body"
-                        dangerouslySetInnerHTML={{__html: this.state.content}}
-                    />
-                </div>
-            </div>    
         );
     }
 });
