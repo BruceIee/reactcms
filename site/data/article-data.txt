@@ -29,18 +29,6 @@
     "count":8,
     "items": [
         {
-            "_id": "55293c82fc21942009c15d89",
-            "title": "Mission of PTA",
-            "content": "<div>To make every child's potential a reality by engaging and empowering families and communities to advocate for all children.</div><div><br></div><div>Hacer una realidad el potencial de cada niño al comprometer y apoderar las familias y comunidades para que intercedan por todos los niños.</div><div><br></div><div>Montgomery County Council of PTAs (MCCPTA) is an association of local PT(S)As in Montgomery County, charted by Maryland PTA. &nbsp;MCCPTA assists local PTAs by exchanging and pooling information and experience, and by interfacing with Montgomery County Public Schools (MCPS). We serve to help PTA leadership county­wide on issues affecting children.</div><div><br></div><div>MCCPTA represents over 50,000 members who belong to 192 local PT(S)As in Montgomery County public schools.</div>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:23:46.530Z",
-            "_class": "article",
-            "type": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
             "_id": "55293c9bfc21942009c15d8a",
             "title": "MCCPTA Membership",
             "content": "<div>Each local PT(S)A pays $1 membership dues to MCCPTA on behalf of their members. &nbsp;(Additionally, the locals also pay State and National dues for each member, too.) In return, MCCPTA volunteers devote thousands of hours to support students, families, and schools throughout the county. MCCPTA has an Executive Committee, Area Vice Presidents and Cluster Coordinators who represent each of the local high school and feeder schools, as well as Committee Chairs who focus on issues such as health and safety concerns, special education issues, school curriculum, school budget issues, training for local PTA leaders, and more. Each local PTA has representatives who participate in monthly \"Delegates Assembly\" meetings, giving every local PTA a voice in MCCPTA.</div><div><br></div><div>Local PT(S)A membership gives members a voice at many levels!</div>                        \r\n                          \r\n                    ",
@@ -77,11 +65,35 @@
             "edit_by": ""
         },
         {
+            "_id": "55293c2afc21942009c15d87",
+            "title": "MCCPTA Awards Nominations",
+            "content": "<div><span style=\"line-height: 1.42857143;\">We all know those volunteers who go above and beyond on behalf of our children and schools, and those businesses that make community service to our youth a priority. &nbsp;It’s time to honor them and let them know how much their efforts are appreciated.</span><br></div><div><br></div><div>Nominate a well-deserving individual, business, or community group for an MCCPTA Achievement Award. Nominations are due by March 27, 2015. &nbsp;Awards will be presented at the Annual Presidents &amp; Principals Dinner, May 18, 2015.</div>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:22:18.343Z",
+            "_class": "article",
+            "type": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "55293c82fc21942009c15d89",
+            "title": "Mission of PTA",
+            "content": "<div>To make every child's potential a reality by engaging and empowering families and communities to advocate for all children.</div><div><br></div><div>Hacer una realidad el potencial de cada niño al comprometer y apoderar las familias y comunidades para que intercedan por todos los niños.</div><div><br></div><div>Montgomery County Council of PTAs (MCCPTA) is an association of local PT(S)As in Montgomery County, charted by Maryland PTA. &nbsp;MCCPTA assists local PTAs by exchanging and pooling information and experience, and by interfacing with Montgomery County Public Schools (MCPS). We serve to help PTA leadership county­wide on issues affecting children.</div><div><br></div><div>MCCPTA represents over 50,000 members who belong to 192 local PT(S)As in Montgomery County public schools.</div>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:23:46.530Z",
+            "_class": "article",
+            "type": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "5530788667bcb5bd0a4582ea",
             "title": "mccpta-title",
             "content": "<h3 style=\"text-align: center;\">Montgomery County Council of Parent-Teacher Associations</h3><h1 style=\"text-align: center; \"><span style=\"font-weight: bold;\">MCCPTA</span></h1><h3 style=\"text-align: center; \">everychild. onevoice</h3>",
             "create_date": "2015-04-17T03:05:42.528Z",
             "_class": "article",
-            "_id": "5530788667bcb5bd0a4582ea",
             "type": "",
             "status": "",
             "create_by": "",
@@ -101,17 +113,10 @@
             "edit_by": ""
         },
         {
+            "_id": "5531cd0eaeed18221148f19b",
             "title": "mccpta-footer",
             "content": "<div style=\"text-align: center;\"><span style=\"line-height: 1.42857143;\">Content copyright 2015. MCCPTA.ORG. All rights reserved.</span></div>",
             "create_date": "2015-04-18T03:18:38.939Z",
-            "_class": "article",
-            "_id": "5531cd0eaeed18221148f19b"
-        },
-        {
-            "_id": "55293c2afc21942009c15d87",
-            "title": "MCCPTA Awards Nominations",
-            "content": "<div><span style=\"line-height: 1.42857143;\">We all know those volunteers who go above and beyond on behalf of our children and schools, and those businesses that make community service to our youth a priority. &nbsp;It’s time to honor them and let them know how much their efforts are appreciated.</span><br></div><div><br></div><div>Nominate a well-deserving individual, business, or community group for an MCCPTA Achievement Award. Nominations are due by March 27, 2015. &nbsp;Awards will be presented at the Annual Presidents &amp; Principals Dinner, May 18, 2015.</div>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:22:18.343Z",
             "_class": "article",
             "type": "",
             "status": "",
