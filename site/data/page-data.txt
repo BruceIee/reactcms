@@ -32,7 +32,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": { "title":"mccpta-title" },
+                            "condition": {
+                                "title": "mccpta-title"
+                            },
                             "filter": {}
                         }
                     }
@@ -42,7 +44,9 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": { "name":"home-links" },
+                            "condition": {
+                                "name": "home-links"
+                            },
                             "filter": {}
                         }
                     }
@@ -53,11 +57,29 @@
                         "widgetInfo": {
                             "module": "article",
                             "condition": {},
-                            "filter": { "limit":2 }
+                            "filter": {
+                                "limit": 2
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta-footer"
+                            },
+                            "filter": {}
                         }
                     }
                 ]
-            }
+            },
+            "status": "",
+            "create_date": null,
+            "_class": "page",
+            "_id": "5531cc53c0f08c1011a4b4f6"
         },
         {
             "name": "news",
@@ -69,7 +91,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": { "title":"mccpta-title" },
+                            "condition": {
+                                "title": "mccpta-title"
+                            },
                             "filter": {}
                         }
                     }
@@ -79,7 +103,9 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": { "name":"home-links" },
+                            "condition": {
+                                "name": "home-links"
+                            },
                             "filter": {}
                         }
                     }
@@ -90,11 +116,17 @@
                         "widgetInfo": {
                             "module": "article",
                             "condition": {},
-                            "filter": { "limit":1 }
+                            "filter": {
+                                "limit": 1
+                            }
                         }
                     }
                 ]
-            }
+            },
+            "status": "",
+            "create_date": null,
+            "_class": "page",
+            "_id": "5531cc53c0f08c1011a4b4f7"
         },
         {
             "name": "advocacy",
@@ -106,7 +138,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": { "title":"mccpta-title" },
+                            "condition": {
+                                "title": "mccpta-title"
+                            },
                             "filter": {}
                         }
                     }
@@ -116,7 +150,9 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": { "name":"home-links" },
+                            "condition": {
+                                "name": "home-links"
+                            },
                             "filter": {}
                         }
                     }
@@ -127,11 +163,17 @@
                         "widgetInfo": {
                             "module": "article",
                             "condition": {},
-                            "filter": { "limit":1 }
+                            "filter": {
+                                "limit": 1
+                            }
                         }
                     }
                 ]
-            }
+            },
+            "status": "",
+            "create_date": null,
+            "_class": "page",
+            "_id": "5531cc53c0f08c1011a4b4f8"
         },
         {
             "name": "events",
@@ -143,7 +185,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": { "title":"mccpta-title" },
+                            "condition": {
+                                "title": "mccpta-title"
+                            },
                             "filter": {}
                         }
                     }
@@ -153,7 +197,9 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": { "name":"home-links" },
+                            "condition": {
+                                "name": "home-links"
+                            },
                             "filter": {}
                         }
                     }
@@ -164,11 +210,17 @@
                         "widgetInfo": {
                             "module": "article",
                             "condition": {},
-                            "filter": { "limit":1 }
+                            "filter": {
+                                "limit": 1
+                            }
                         }
                     }
                 ]
-            }
+            },
+            "status": "",
+            "create_date": null,
+            "_class": "page",
+            "_id": "5531cc53c0f08c1011a4b4f9"
         },
         {
             "name": "soca",
@@ -180,7 +232,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": { "title":"mccpta-title" },
+                            "condition": {
+                                "title": "mccpta-title"
+                            },
                             "filter": {}
                         }
                     }
@@ -190,7 +244,9 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": { "name":"home-links" },
+                            "condition": {
+                                "name": "home-links"
+                            },
                             "filter": {}
                         }
                     }
@@ -201,11 +257,17 @@
                         "widgetInfo": {
                             "module": "article",
                             "condition": {},
-                            "filter": { "limit":1 }
+                            "filter": {
+                                "limit": 1
+                            }
                         }
                     }
                 ]
-            }
+            },
+            "status": "",
+            "create_date": null,
+            "_class": "page",
+            "_id": "5531cc53c0f08c1011a4b4fa"
         },
         {
             "name": "engage",
@@ -217,7 +279,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": { "title":"mccpta-title" },
+                            "condition": {
+                                "title": "mccpta-title"
+                            },
                             "filter": {}
                         }
                     }
@@ -227,7 +291,9 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": { "name":"home-links" },
+                            "condition": {
+                                "name": "home-links"
+                            },
                             "filter": {}
                         }
                     }
@@ -238,11 +304,17 @@
                         "widgetInfo": {
                             "module": "article",
                             "condition": {},
-                            "filter": { "limit":1 }
+                            "filter": {
+                                "limit": 1
+                            }
                         }
                     }
                 ]
-            }
+            },
+            "status": "",
+            "create_date": null,
+            "_class": "page",
+            "_id": "5531cc53c0f08c1011a4b4fb"
         }
     ]
 }

@@ -26,7 +26,7 @@
             "type": "string"
         }
     },
-    "count":7,
+    "count":8,
     "items": [
         {
             "_id": "55293c82fc21942009c15d89",
@@ -77,10 +77,22 @@
             "edit_by": ""
         },
         {
-            "_id": "55293c2afc21942009c15d87",
-            "title": "MCCPTA Awards Nominations",
-            "content": "<div><span style=\"line-height: 1.42857143;\">We all know those volunteers who go above and beyond on behalf of our children and schools, and those businesses that make community service to our youth a priority. &nbsp;It’s time to honor them and let them know how much their efforts are appreciated.</span><br></div><div><br></div><div>Nominate a well-deserving individual, business, or community group for an MCCPTA Achievement Award. Nominations are due by March 27, 2015. &nbsp;Awards will be presented at the Annual Presidents &amp; Principals Dinner, May 18, 2015.</div>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:22:18.343Z",
+            "title": "mccpta-title",
+            "content": "<h3 style=\"text-align: center;\">Montgomery County Council of Parent-Teacher Associations</h3><h1 style=\"text-align: center; \"><span style=\"font-weight: bold;\">MCCPTA</span></h1><h3 style=\"text-align: center; \">everychild. onevoice</h3>",
+            "create_date": "2015-04-17T03:05:42.528Z",
+            "_class": "article",
+            "_id": "5530788667bcb5bd0a4582ea",
+            "type": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "55293cf3fc21942009c15d8c",
+            "title": "What should I do if I want to be more involved at the county level?",
+            "content": "<div><span style=\"line-height: 1.42857143;\">MCCPTA welcomes all PTA members to any meetings. Board of Directors meetings are usually held the first Thursday of the month at 7:30 PM at Carver Educational Services Center; Delegates Assembly meetings are usually the 4th Tuesday of the month at 7:30 PM at Carver; committee meetings are announced and published via various MCCPTA communications tools. If you are interested in being involved in a committee, please contact the committee chair directly.</span><br></div><div><br></div>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:25:39.128Z",
             "_class": "article",
             "type": "",
             "status": "",
@@ -89,17 +101,17 @@
             "edit_by": ""
         },
         {
-            "title": "mccpta-title",
-            "content": "<h3 style=\"text-align: center;\">Montgomery County Council of Parent-Teacher Associations</h3><h1 style=\"text-align: center; \"><span style=\"font-weight: bold;\">MCCPTA</span></h1><h3 style=\"text-align: center; \">everychild. onevoice</h3>",
-            "create_date": "2015-04-17T03:05:42.528Z",
+            "title": "mccpta-footer",
+            "content": "<div style=\"text-align: center;\"><span style=\"line-height: 1.42857143;\">Content copyright 2015. MCCPTA.ORG. All rights reserved.</span></div>",
+            "create_date": "2015-04-18T03:18:38.939Z",
             "_class": "article",
-            "_id": "5530788667bcb5bd0a4582ea"
+            "_id": "5531cd0eaeed18221148f19b"
         },
         {
-            "_id": "55293cf3fc21942009c15d8c",
-            "title": "What should I do if I want to be more involved at the county level?",
-            "content": "<div><span style=\"line-height: 1.42857143;\">MCCPTA welcomes all PTA members to any meetings. Board of Directors meetings are usually held the first Thursday of the month at 7:30 PM at Carver Educational Services Center; Delegates Assembly meetings are usually the 4th Tuesday of the month at 7:30 PM at Carver; committee meetings are announced and published via various MCCPTA communications tools. If you are interested in being involved in a committee, please contact the committee chair directly.</span><br></div><div><br></div>                        \r\n                          \r\n                    ",
-            "create_date": "2015-04-11T15:25:39.128Z",
+            "_id": "55293c2afc21942009c15d87",
+            "title": "MCCPTA Awards Nominations",
+            "content": "<div><span style=\"line-height: 1.42857143;\">We all know those volunteers who go above and beyond on behalf of our children and schools, and those businesses that make community service to our youth a priority. &nbsp;It’s time to honor them and let them know how much their efforts are appreciated.</span><br></div><div><br></div><div>Nominate a well-deserving individual, business, or community group for an MCCPTA Achievement Award. Nominations are due by March 27, 2015. &nbsp;Awards will be presented at the Annual Presidents &amp; Principals Dinner, May 18, 2015.</div>                        \r\n                          \r\n                    ",
+            "create_date": "2015-04-11T15:22:18.343Z",
             "_class": "article",
             "type": "",
             "status": "",

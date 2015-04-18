@@ -1,4 +1,4 @@
-{% extends '../layout/layout.html' %}
+{% extends '../layout/layout-bare.html' %}
 
 {% block style %}
 {% parent %}
@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
 <style>
 .widget-container {
-    border: solid 1px #f2f2f2;
-    min-height: 60px;
+    /* border: solid 1px #f2f2f2; */
+    /* min-height: 60px; */
 }
 </style>
 {% endblock %}
@@ -91,6 +91,12 @@ function showWidget(widget) {
         </div>
         <div class="col-md-9">
             <div class="r2c2 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r3c1 widget-container"></div>
         </div>
     </div>
     

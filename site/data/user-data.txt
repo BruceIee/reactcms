@@ -69,7 +69,10 @@
             "password": "aa834ebefa9d62d1be1db5881e26e0a5a919da45b7c805fdedb0c32c3d915ccf12544ec59f3c2a6a7828932eec129837f92cb3b094b9e11b5528d0a97ff7fdfa",
             "salt": 23753079,
             "_class": "user",
-            "_id": "55306a0993934f6d0a2f6ed0"
+            "_id": "55306a0993934f6d0a2f6ed0",
+            "firstname": "",
+            "lastname": "",
+            "status": ""
         }
     ]
 }
