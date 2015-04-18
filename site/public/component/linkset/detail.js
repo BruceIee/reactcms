@@ -10,6 +10,7 @@ var LinksetDetail = React.createClass({
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'id', type:'string', required:false, defaultValue:'', note:'list element id' },
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
+            { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
             { name:'content', type:'array', required:false, defaultValue:[], note:'item content' }
         ];
@@ -29,12 +30,7 @@ var LinksetDetail = React.createClass({
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="panel panel-default">
                     <div className="panel-heading">
-                        { this.state.name }
-                        <div className="pull-right">
-                            <span className="label label-info label-as-badge">
-                                { }
-                            </span>
-                        </div>
+                        { this.state.title }
                     </div>
                     <div className="panel-body">
                         { groups }

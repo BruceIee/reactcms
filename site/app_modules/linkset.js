@@ -18,6 +18,9 @@ module.exports = function(app) {
         name: {
             type: 'string'
         },
+        title: {
+            type: 'string'
+        },
         content: {
             type: 'array'
         },

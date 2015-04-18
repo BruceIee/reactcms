@@ -7,6 +7,9 @@
         "name": {
             "type": "string"
         },
+        "title": {
+            "type": "string"
+        },
         "content": {
             "type": "array"
         },
@@ -17,53 +20,12 @@
             "type": "date"
         }
     },
-    "count":2,
+    "count":1,
     "items": [
-        {
-            "_id": "552d0322838a75fe110570e1",
-            "name": "mccpta_events",
-            "content": [
-                {
-                    "text": "Calendar",
-                    "hyperlink": "http://www.mccpta.org/Calendar.html"
-                },
-                {
-                    "text": "President and Principals Dinner",
-                    "hyperlink": "http://www.mccpta.org/Presidents_Principals.html"
-                },
-                {
-                    "text": "MCCPTA Presents!",
-                    "hyperlink": "http://www.mccpta.org/MCCPTA_Presents.html"
-                },
-                {
-                    "text": "Reflections ",
-                    "hyperlink": "http://www.mccpta.org/Reflections.php"
-                },
-                {
-                    "text": "Special Education Awards Ceremony",
-                    "hyperlink": "http://www.mccpta.org/Special_Ed_Awards.html"
-                },
-                {
-                    "text": "PTA Training",
-                    "hyperlink": "http://www.mccpta.org/Workshops___Training.html"
-                },
-                {
-                    "text": "MCCPTA Outreach Events",
-                    "hyperlink": "http://www.mccpta.org/Outreach_Events.html"
-                },
-                {
-                    "text": "Legislative Events and Forums",
-                    "hyperlink": "http://www.mccpta.org/Legislative_Events.html"
-                }
-            ],
-            "create_date": "2015-04-14T12:08:02.913Z",
-            "_class": "linkset",
-            "type": "",
-            "status": ""
-        },
         {
             "_id": "55305d2b3b09a96209f4266a",
             "name": "home-links",
+            "title": "Links",
             "content": [
                 {
                     "text": "In the News",
