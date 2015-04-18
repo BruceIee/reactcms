@@ -6,7 +6,7 @@ System Setup
 ------------
 On command line, go to site folder
 
-run the following to populate database:
+run the following commands to populate database:
 
 ```
 node cmd.js initdb
