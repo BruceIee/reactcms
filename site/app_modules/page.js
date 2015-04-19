@@ -151,6 +151,11 @@ module.exports = function(app) {
         res.render('page/add', { page:page });
     };
     
+    block.page.getPageList = function(req, res) {
+        var page = app.getPage(req);
+        res.render('page/list', { page:page });
+    };
+    
     block.page.getPage = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var pageName = parameter.pagename;
@@ -172,6 +177,7 @@ module.exports = function(app) {
     app.server.get('/pages', block.page.getIndex);
     app.server.get('/pages/add', block.page.addPage);
     app.server.post('/pages/add', block.page.addPagePost);
+    app.server.get('/pages/list', block.page.getPageList);
     app.server.get('/pages/:pagename', block.page.getPage);
     
     
