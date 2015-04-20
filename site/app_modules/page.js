@@ -151,6 +151,16 @@ module.exports = function(app) {
         res.render('page/add', { page:page });
     };
     
+    block.page.editPage = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var pageId = parameter.id;
+        console.log('edit page id:', pageId);
+        
+        var page = app.getPage(req);
+        res.render('page/edit', { page:page });
+    };
+    
     block.page.getPageList = function(req, res) {
         var page = app.getPage(req);
         res.render('page/list', { page:page });
@@ -172,11 +182,12 @@ module.exports = function(app) {
     
     // data route
     app.server.get('/data/pages/:pagename', block.data.getPage);
-    
+ 
     // page route
     app.server.get('/pages', block.page.getIndex);
     app.server.get('/pages/add', block.page.addPage);
     app.server.post('/pages/add', block.page.addPagePost);
+    app.server.get('/pages/:id/edit', block.page.editPage);
     app.server.get('/pages/list', block.page.getPageList);
     app.server.get('/pages/:pagename', block.page.getPage);
     
