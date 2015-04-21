@@ -48,6 +48,8 @@ module.exports = function(app) {
     app.server.get('/data/components/get/detail', block.data.getWidgetData);
     
     // page route
+    app.server.all('/components', block.page.checkLogin);
+    app.server.all('/components/*', block.page.checkLogin);
     app.server.get('/components', block.page.getIndex);
     
     return block;

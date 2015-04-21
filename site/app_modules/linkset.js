@@ -184,19 +184,21 @@ module.exports = function(app) {
     
     
     // data route
-    app.server.post('/data/items/add', block.data.addItem);
+    //app.server.post('/data/items/add', block.data.addItem);
     app.server.get('/data/linksets', block.data.getLinkset);
     app.server.post('/data/linksets/add_linkset_post', block.data.addLinksetPost);
     app.server.get('/data/linksets/:id/detail', block.data.getLinksetDetail);
     
     // page route
-    app.server.get('/items', block.page.getIndex);
-    app.server.get('/items/home', block.page.getIndex);
-    app.server.get('/items/add', block.page.addItem);
-    app.server.post('/items/add', block.page.addItemPost);
-    app.server.get('/items/list', block.page.getItemList);
-    app.server.get('/items/:id/detail', block.page.getItemDetail);
+    //app.server.get('/items', block.page.getIndex);
+    //app.server.get('/items/home', block.page.getIndex);
+    //app.server.get('/items/add', block.page.addItem);
+    //app.server.post('/items/add', block.page.addItemPost);
+    //app.server.get('/items/list', block.page.getItemList);
+    //app.server.get('/items/:id/detail', block.page.getItemDetail);
     
+    app.server.all('/linksets', block.page.checkLogin);
+    app.server.all('/linksets/*', block.page.checkLogin);
     app.server.get('/linksets', block.page.linksetHome);
     app.server.get('/linksets/add_links', block.page.addLinkset);
     app.server.get('/linksets/show_all', block.page.showAll);

@@ -21,7 +21,7 @@ module.exports = function(app) {
         res.render('web/index', { page:page });
         */
     };
-    
+
     app.server.get('/', block.page.getHomeIndex);
     app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
     

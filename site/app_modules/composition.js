@@ -80,6 +80,8 @@ module.exports = function(app) {
     app.server.get('/data/compositions/:name', block.data.getDataByNameWeb);
     
     // page route
+    app.server.all('/compositions', block.page.checkLogin);
+    app.server.all('/compositions/*', block.page.checkLogin);
     app.server.get('/compositions', block.page.getIndex);
 
     return block;

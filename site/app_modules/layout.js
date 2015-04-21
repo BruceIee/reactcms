@@ -36,6 +36,8 @@ module.exports = function(app) {
     };
     
     // page route
+    app.server.all('/layout', block.page.checkLogin);
+    app.server.all('/layout/*', block.page.checkLogin);
     app.server.get('/layout', block.page.getIndex);
 
     return block;

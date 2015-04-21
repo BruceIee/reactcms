@@ -16,6 +16,8 @@ module.exports = function(app) {
         res.render('admin/index', { page:page });
     };
     
+    app.server.all('/admin', block.page.checkLogin);
+    app.server.all('/admin/*', block.page.checkLogin);
     app.server.get('/admin', block.page.getIndex);
     app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
     

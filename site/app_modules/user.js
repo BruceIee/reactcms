@@ -122,6 +122,7 @@ module.exports = function(app) {
     
     block.page.login = function(req, res) {
         var page = app.getPage(req);
+        page.redirect = req.query.url || '';
         page.title = 'User Login';
         page.controller = "users";
         res.render('user/login', { page:page });

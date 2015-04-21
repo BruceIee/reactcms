@@ -234,8 +234,8 @@ module.exports = function(app) {
     app.server.post('/data/article/upload_editor_image_post', block.data.uploadEditorImagePost);
 
     // page route
-    //app.server.get('/item', block.page.getIndex);
-
+    app.server.all('/articles', block.page.checkLogin);
+    app.server.all('/articles/*', block.page.checkLogin);
     app.server.get('/articles/add', block.page.addArticle);
     app.server.get('/articles', block.page.articleHome);
     app.server.get('/articles/add_wysiwyg', block.page.addWysiwyg);

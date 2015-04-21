@@ -131,6 +131,8 @@ module.exports = function(app) {
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
     
     // page route
+    app.server.all('/items', block.page.checkLogin);
+    app.server.all('/items/*', block.page.checkLogin);
     app.server.get('/items', block.page.getIndex);
     app.server.get('/items/home', block.page.getIndex);
     app.server.get('/items/add', block.page.addItem);
