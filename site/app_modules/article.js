@@ -152,7 +152,6 @@ module.exports = function(app) {
     
     block.page.articleList = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        console.log(parameter);
         var condition = {};
         var filter = {};
         

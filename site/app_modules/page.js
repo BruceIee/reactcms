@@ -162,8 +162,14 @@ module.exports = function(app) {
     };
     
     block.page.getPageList = function(req, res) {
-        var page = app.getPage(req);
-        res.render('page/list', { page:page });
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.title = 'List of pages';
+            page.pages = docs;
+            res.render('page/list', { page:page });            
+        });
     };
     
     block.page.getPage = function(req, res) {
