@@ -12,7 +12,8 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.page.getIndex = function(req, res) {
-        var page = {};
+        //var page = {};
+        var page = app.getPage(req); //user info include
         res.render('admin/index', { page:page });
     };
     
