@@ -168,7 +168,6 @@ module.exports = function(app) {
         page.title = 'Add article(WYSIWYG)';
         page.operation = "Add";
         page.formAction = "/data/article/add_wysiwyg_post";
-        //res.render('article/add_wysiwyg', { page:page });
         res.render('article/add_edit_wysiwyg', { page:page });
     };
 
@@ -181,7 +180,6 @@ module.exports = function(app) {
             page.operation = "Edit";
             page.formAction = "/data/article/edit_wysiwyg_post";
             page.article = article;
-            //console.log('>>> article:', page.article);
             page.title = 'Edit article(WYSIWYG)';
             res.render('article/add_edit_wysiwyg', { page:page });
         });        
@@ -224,8 +222,6 @@ module.exports = function(app) {
     app.server.get('/data/articles', block.data.getArticles);
     app.server.get('/data/articles/:id/detail', block.data.getArticleDetail);
     app.server.get('/data/articles/title/:title', block.data.getArticleByTitle);
-    //app.server.get('/data/item/add', block.data.addItem);
-    //app.server.post('/data/item/add', block.data.addItem);
     
     app.server.post('/data/article/article_post', block.data.articlePost);
     app.server.post('/data/article/add_wysiwyg_post', block.data.addWysiwygPost);

@@ -114,8 +114,7 @@ module.exports = function(app) {
     // page
     block.page.getIndex = function(req, res) {
         block.data.getWeb(req, res, null, function(error, docs, info) {
-            var page = { title:'User List', docs:docs };
-            page.controller = "users";
+            var page = app.getPage(req);
             res.render('user/index', { page:page });
         });
     };
@@ -268,7 +267,26 @@ module.exports = function(app) {
             info = { message:'Your password is changed successfully.' };
             app.renderInfoPage(error, null, info, req, res);
         });
-    };    
+    };
+    
+    block.page.userList = function(req, res) {
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.title = 'List of users';
+            page.users = docs;
+            res.render('user/list', { page:page });            
+        });
+    };
+    
+    block.page.delUser = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;        
+        app.db.deleteById(moduleName, id, function(error, docs, info) {
+            res.redirect('/users/list');
+        });        
+    };
 
     // page route
     app.server.get('/users', block.page.getIndex);
@@ -280,7 +298,11 @@ module.exports = function(app) {
     app.server.get('/users/:username/profile', block.page.getProfile);
     app.server.get('/users/password/reset', block.page.resetPassword);
     app.server.post('/users/password/reset_post', block.page.resetPasswordPost);
-    app.server.post('/users/password/change_post', block.page.changePasswordPost);  
+    app.server.post('/users/password/change_post', block.page.changePasswordPost);
+    
+    app.server.all('/users/list', block.page.checkLogin);
+    app.server.get('/users/list', block.page.userList);
+    app.server.get('/users/:id/del', block.page.delUser);
     
     return block;
 };
