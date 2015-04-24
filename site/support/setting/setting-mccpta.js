@@ -13,7 +13,7 @@ exports.setting = {
         type: 'mongo',
         host: 'localhost',
         port: 27017,
-        name: 'reactcms'
+        name: 'reactcms_mccpta'
     },
     
     // email setting

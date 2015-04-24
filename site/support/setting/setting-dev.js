@@ -1,7 +1,7 @@
 exports.setting = {
 
     // web app
-    app_name: 'reactcms',
+    app_name: 'ReactCMS',
     website: 'http://localhost',
     access_check: false,
     access_code: 'password',
