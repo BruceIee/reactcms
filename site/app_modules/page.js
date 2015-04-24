@@ -46,51 +46,6 @@ module.exports = function(app) {
             console.log('getPage:', error, docs, info);
             var page = docs && docs[0];
             
-            // TEST START - use hard-coded value for page name == "test"
-            /*
-            if (pageName === 'test') {
-                page = {
-                    name: 'test',
-                    description: 'test page',
-                    composition: 'sidenav',
-                    content: {
-                        r1c1: [
-                            {
-                                widgetName: 'ArticleDetail',
-                                widgetInfo: {
-                                    module: 'article',
-                                    condition: { title:'mccpta-title' },
-                                    filter: {}
-                                }
-                            }
-                        ],
-                        r2c1: [
-                            {
-                                widgetName: 'LinksetDetail',
-                                widgetInfo: {
-                                    module: 'linkset',
-                                    condition: { name:'home-links' },
-                                    filter: {}
-                                }
-                            }
-                        ],
-                        r2c2: [
-                            {
-                                widgetName: 'ArticleDetail',
-                                widgetInfo: {
-                                    module: 'article',
-                                    condition: {},
-                                    filter: { limit:2 }
-                                }
-                            }
-                        ]
-                    }
-                };
-                docs = [page];
-            }
-            */
-            // TEST END
-            
             // get composition
             if (docs.length > 0) {
                 var page = docs[0];

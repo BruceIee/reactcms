@@ -66,8 +66,15 @@ module.exports = function(app) {
         });
     };
     
-    block.data.getDataByName = function(req, res, name) {
+    block.data.getDataByName = function(req, res, compositionName) {
         var callback = arguments[3] || null;
+        var condition = { name:compositionName };
+        var filter = {};
+        
+        console.log('composition getDataByName query:', condition, filter);
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            console.log('>>>', error, docs, info);
+        });
         
         var error = null;
         var docs = [];
