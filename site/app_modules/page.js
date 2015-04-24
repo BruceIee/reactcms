@@ -177,8 +177,9 @@ module.exports = function(app) {
         var pageName = parameter.pagename;
         // get page
         block.data.getPage(req, res, null, function(error, docs, info) {
-            console.log('Got page:', error, docs, info);
+            //console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
+            page.title = info.page.title || app.setting['app_name'] || '';
             page.pageData = info.page;
             page.compositionData = info.composition;
             var layoutFilename = 'composition/' + info.composition.filename;
