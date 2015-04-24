@@ -28,8 +28,6 @@ module.exports = function(app) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         
-        console.log('getWidgetData parameter:', parameter);
-        
         var widgetName = parameter.widgetName;
         var widgetInfo = parameter.widgetInfo;
         var moduleName = widgetInfo.module || '';

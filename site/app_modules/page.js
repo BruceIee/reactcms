@@ -76,7 +76,7 @@ module.exports = function(app) {
                             var componentData = app.module['component'].data;
                             tool.setReqParameter(req, widget);
                             componentData.getWidgetData(req, res, null, function(error, docs, info) {
-                                console.log('widget data:', error, docs, info);
+                                //console.log('widget data:', error, docs, info);
                             });
                         }
                     }
