@@ -35,6 +35,27 @@ module.exports = function(app) {
         }
     };
     
+    block.page.addComposition = function(req, res) {
+        var page = app.getPage(req);
+        res.render('composition/add', { page:page });
+    };
+    
+    block.page.addCompositionPost = function(req, res) {
+        var page = app.getPage(req);
+        res.render('composition/add', { page:page });
+    };
+    
+    block.page.getCompositionList = function(req, res) {
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.title = 'List of compositions';
+            page.pages = docs;
+            res.render('composition/list', { page:page });            
+        });
+    };
+    
     block.data.getDataByNameWeb = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
@@ -83,6 +104,8 @@ module.exports = function(app) {
     app.server.all('/compositions', block.page.checkLogin);
     app.server.all('/compositions/*', block.page.checkLogin);
     app.server.get('/compositions', block.page.getIndex);
+    app.server.get('/compositions/add', block.page.addComposition);
+    app.server.get('/compositions/list', block.page.getCompositionList);
 
     return block;
 };
