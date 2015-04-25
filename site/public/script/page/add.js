@@ -18,6 +18,8 @@ function setup() {
         setupCompositionSelect();
     });
     app.compositionSelect.on('change', onCompositionSelect);
+    // setup section event
+    $('.section-container').click(onSectionClick);
 }
 
 function setupCompositionSelect() {
@@ -43,6 +45,18 @@ function setupCompositionSections(composition) {
     for (var i = 0; i < sections.length; i++) {
         var section = sections[i];
         console.log('>>> section:', section);
-        $('.section-container').append('<div class="section-item">' + section.name + '</div>');
+        $('.section-container').append(
+            '<div class="section-item" data-name="' + section.name + '">' +
+            section.name + ' (' + section.description + ')' +
+            '</div>'
+        );
+    }
+}
+
+function onSectionClick(event) {
+    if ($(event.target).hasClass('section-item')) {
+        var sectionName = $(event.target).attr('data-name');
+        
+        console.log('>>> onSectionClick section name:', sectionName);
     }
 }
