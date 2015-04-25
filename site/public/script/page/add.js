@@ -7,23 +7,35 @@ $().ready(function() {
 
 function setup() {
     // setup composition dropdown combobox
+    app.compositionSelect = $('.composition-select');
     var compositionListUrl = '/data/compositions';
     $.get(compositionListUrl, function(data) {
         var compositions = data.docs;
         for (var i = 0; i < compositions.length; i++) {
             var composition = compositions[i];
-            //console.log('>>> composition:', composition);
             app.compositionCol[composition.name] = composition;
         }
         setupCompositionSelect();
     });
+    app.compositionSelect.on('change', onCompositionSelect);
 }
 
 function setupCompositionSelect() {
-    var compositionSelect = $('.composition-select');
-    //compositionSelect.clear();
-    compositionSelect.append('<option></option>');
+    app.compositionSelect.append('<option>Select composition below</option>');
     for (var name in app.compositionCol) {
-        compositionSelect.append('<option>' + name + '</option>');
+        app.compositionSelect.append('<option value="' + name + '">' + name + '</option>');
     }
+}
+
+function onCompositionSelect(event) {
+    var composition = null;
+    var compositionName =  $(event.target).val();
+    if (compositionName) {
+        composition = app.compositionCol[compositionName];
+        setupCompositionSections(composition);
+    }
+}
+
+function setupCompositionSections(composition) {
+    console.log('setupCompositionSections:', composition);
 }
