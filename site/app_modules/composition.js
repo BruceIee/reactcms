@@ -35,24 +35,13 @@ module.exports = function(app) {
         }
     };
     
-    block.page.addComposition = function(req, res) {
-        var page = app.getPage(req);
-        res.render('composition/add', { page:page });
-    };
-    
-    block.page.addCompositionPost = function(req, res) {
-        var page = app.getPage(req);
-        res.render('composition/add', { page:page });
-    };
-    
-    block.page.getCompositionList = function(req, res) {
+    // data
+    block.data.getCompositions = function(req, res) {
+        var callback = arguments[3] || null;
         var condition = {};
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            var page = app.getPage(req);
-            page.title = 'List of compositions';
-            page.pages = docs;
-            res.render('composition/list', { page:page });            
+            app.cb(error, docs, info, req, res, callback);
         });
     };
     
@@ -76,7 +65,28 @@ module.exports = function(app) {
         });
     };
     
+    // page 
+    block.page.addComposition = function(req, res) {
+        var page = app.getPage(req);
+        res.render('composition/add', { page:page });
+    };
+    
+    block.page.addCompositionPost = function(req, res) {
+        var page = app.getPage(req);
+        res.render('composition/add', { page:page });
+    };
+    
+    block.page.getCompositionList = function(req, res) {
+        block.data.getCompositions(req, res, null, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.title = 'List of compositions';
+            page.pages = docs;
+            res.render('composition/list', { page:page });            
+        });
+    };
+    
     // data route
+    app.server.get('/data/compositions', block.data.getCompositions);
     app.server.get('/data/compositions/:name', block.data.getDataByNameWeb);
     
     // page route
