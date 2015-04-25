@@ -38,4 +38,11 @@ function onCompositionSelect(event) {
 
 function setupCompositionSections(composition) {
     console.log('setupCompositionSections:', composition);
+    $('.section-container').empty();
+    var sections = composition.data;
+    for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        console.log('>>> section:', section);
+        $('.section-container').append('<div class="section-item">' + section.name + '</div>');
+    }
 }
