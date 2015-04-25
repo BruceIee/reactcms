@@ -58,5 +58,15 @@ function onSectionClick(event) {
         var sectionName = $(event.target).attr('data-name');
         
         console.log('>>> onSectionClick section name:', sectionName);
+        
+        var source   = $("#component-entry-template").html();
+        var template = Handlebars.compile(source);
+        var context = { title: "My New Post", body: "This is my first post!" };
+        var html = template(context);
+        
+        console.log('html:', html);
+        $('.block-container').empty();
+        $('.block-container').append(html);
+        
     }
 }

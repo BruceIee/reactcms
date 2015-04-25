@@ -14,7 +14,16 @@
 
 {% block script %}
 {% parent %}
+<script src="/library/handlebars/handlebars.min.js"></script>
 <script src="/script/page/add.js"></script>
+<script id="component-entry-template" type="text/x-handlebars-template">
+  <div class="component-entry">
+    <h1>Title: {{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
 {% endblock %}
 
 {% block content %}
@@ -48,15 +57,11 @@
     <div class="row" style="margin-top:20px;">
         <div class="col-md-3">
             <h4>Sections</h4>
-            <div class="section-container">
-                
-                
-            </div>
+            <div class="section-container"></div>
         </div>
         <div class="col-md-9">
-            <div class="block-container">
-                block
-            </div>
+            <h4>Content</h4>
+            <div class="block-container"></div>
         </div>
     </div>
     
