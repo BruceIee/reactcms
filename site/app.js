@@ -3,7 +3,7 @@ var express = require('express');
 var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
-var favicon = require('static-favicon');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -52,8 +52,6 @@ app.renderInfoPage = function(error, docs, info, req, res) {
     var page = { error:error, info:info };
     res.render('common/info.html', { app: app, req: req, page: page });
 };
-
-
 
 function setup(cbSetup) {
     // create express server

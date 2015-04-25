@@ -2,12 +2,12 @@
 
 {% block style %}
 {% parent %}
-<!-- <link rel="stylesheet" href="/style/item/index.css"> -->
+<link rel="stylesheet" href="/style/page/add.css">
 {% endblock %}
 
 {% block script %}
 {% parent %}
-<!-- <script src="/script/item/index.js"></script> -->
+<script src="/script/page/add.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -30,7 +30,7 @@
             <div class="form-group row">
                 <label for="pageComposition" class="col-sm-3 control-label">Composition</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="pageComposition" placeholder="">
+                    <select class="form-control select-composition"></select>
                 </div>
             </div>
         </div>
