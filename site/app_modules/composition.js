@@ -70,29 +70,10 @@ module.exports = function(app) {
         var callback = arguments[3] || null;
         var condition = { name:compositionName };
         var filter = {};
-        
         console.log('composition getDataByName query:', condition, filter);
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            console.log('>>>', error, docs, info);
-            
-            // DEBUG
-            if (compositionName == 'sidenav') {
-                docs = [{
-                    name: 'sidenav',
-                    description: 'sidenav composition',
-                    filename: 'sidenav.html',
-                    data: [
-                        { name:'r1c1', description:'top', width:'12' },
-                        { name:'r2c1', description:'side', width:'4' },
-                        { name:'r2c2', description:'main', width:'8' }
-                    ]
-                }];
-            }
-            // END OF DEBUG
-            
             app.cb(error, docs, info, req, res, callback);
         });
-        
     };
     
     // data route

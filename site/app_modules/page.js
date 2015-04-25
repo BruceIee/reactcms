@@ -40,12 +40,11 @@ module.exports = function(app) {
         var condition = { name:pageName };
         var filter = {};
         
-        console.log('getPage query:', condition, filter);
+        //console.log('getPage query:', condition, filter);
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             
-            console.log('getPage:', error, docs, info);
+            //console.log('getPage:', error, docs, info);
             var page = docs && docs[0];
-            
             // get composition
             if (docs.length > 0) {
                 var page = docs[0];
@@ -56,7 +55,7 @@ module.exports = function(app) {
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
-                    console.log('composition:', composition);
+                    //console.log('composition:', composition);
                     
                     /*
                     pageSectionContent example:
