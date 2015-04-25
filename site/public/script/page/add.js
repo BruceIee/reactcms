@@ -53,15 +53,22 @@ function setupCompositionSections(composition) {
     }
 }
 
+/*
+"widgetName": "LinksetDetail",
+"widgetInfo": {
+    "module": "linkset",
+    "condition": {
+        "name": "home-links"
+    },
+    "filter": {}
+}
+*/
 function onSectionClick(event) {
     if ($(event.target).hasClass('section-item')) {
         var sectionName = $(event.target).attr('data-name');
-        
-        console.log('>>> onSectionClick section name:', sectionName);
-        
         var source   = $("#component-entry-template").html();
         var template = Handlebars.compile(source);
-        var context = { title: "My New Post", body: "This is my first post!" };
+        var context = { sectionName: sectionName };
         var html = template(context);
         
         console.log('html:', html);

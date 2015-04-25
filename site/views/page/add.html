@@ -16,13 +16,40 @@
 {% parent %}
 <script src="/library/handlebars/handlebars.min.js"></script>
 <script src="/script/page/add.js"></script>
+
+<!--
+"widgetName": "LinksetDetail",
+"widgetInfo": {
+    "module": "linkset",
+    "condition": {
+        "name": "home-links"
+    },
+    "filter": {}
+}
+-->
+
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}
 <div class="component-entry">
-    <h1>Title: {{title}}</h1>
-    <div class="body">
-        {{body}}
-    </div>
+    <h4>Section: {{ sectionName }}</h4>
+    <form>
+        <div class="form-group">
+            <label>Module</label>
+            <input type="text" class="form-control" name="module">
+        </div>
+        <div class="form-group">
+            <label>UI Component</label>
+            <input type="text" class="form-control" name="component">
+        </div>
+        <div class="form-group">
+            <label>Condition</label>
+            <textarea class="form-control" name="condition"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Filter</label>
+            <textarea class="form-control" name="filter"></textarea>
+        </div>
+    </form>
 </div>
 {% endraw %}
 </script>
@@ -62,7 +89,6 @@
             <div class="section-container"></div>
         </div>
         <div class="col-md-9">
-            <h4>Content</h4>
             <div class="block-container"></div>
         </div>
     </div>
