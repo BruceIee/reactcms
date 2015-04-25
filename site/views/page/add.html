@@ -17,12 +17,14 @@
 <script src="/library/handlebars/handlebars.min.js"></script>
 <script src="/script/page/add.js"></script>
 <script id="component-entry-template" type="text/x-handlebars-template">
-  <div class="component-entry">
-    <h1>Title: {{title}}</h1>
-    <div class="body">
-      {{body}}
-    </div>
-  </div>
+<div class="component-entry">
+{% raw %}
+<h1>Title: {{title}}</h1>
+<div class="body">
+    {{body}}
+</div>
+{% endraw %}
+</div>
 </script>
 {% endblock %}
 
