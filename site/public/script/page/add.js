@@ -21,6 +21,8 @@ function setup() {
 
 function setupCompositionSelect() {
     var compositionSelect = $('.composition-select');
+    //compositionSelect.clear();
+    compositionSelect.append('<option></option>');
     for (var name in app.compositionCol) {
         compositionSelect.append('<option>' + name + '</option>');
     }
