@@ -81,10 +81,7 @@ function start(setting) {
     app.server = express();
     app.setting = setting;
     app.setting.database = {};
-    app.setting.database.host = 'localhost';
-    app.setting.database.port = '27017';
-    app.setting.database.name = 'reactcms';
-    app.setting.database.type = 'mongo';
+    app.setting.database = require('./setting').setting.database;
     app.module = {};
 
     for (var i in app.setting.modules_to_load) {
@@ -211,13 +208,15 @@ function importData(app, callback) {
     var items = fs.readdirSync(app.import_folder);
     var filenames_array = []; 
     for (var i in items) {
-        var datafilename = items[i];
-        var stat = fs.statSync([app.import_folder, datafilename].join('/'));
-        if (stat.isFile()) {
-            filenames_array.push([app.import_folder, datafilename].join('/'));
+        if ( items[i].substr(-4) == '.txt' ) {
+            var datafilename = items[i];
+            var stat = fs.statSync([app.import_folder, datafilename].join('/'));
+            if (stat.isFile()) {
+                filenames_array.push([app.import_folder, datafilename].join('/'));
+            }            
         }
     }
-
+    
     var app_filenames_array = []; // array contains 'app' and 'filename'
     
     for (var i in filenames_array) {
