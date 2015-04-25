@@ -22,9 +22,9 @@ module.exports = function(app) {
             type: 'string'
         },
         data: {
-            type: 'object',
+            type: 'array',
             subtype: {
-                type: 'json'
+                type: 'object'
             }
         },
         status: {

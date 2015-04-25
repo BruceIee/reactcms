@@ -11,9 +11,9 @@
             "type": "string"
         },
         "data": {
-            "type": "object",
+            "type": "array",
             "subtype": {
-                "type": "json"
+                "type": "object"
             }
         },
         "status": {
@@ -24,15 +24,37 @@
         }
     },
     "count":1,
-    "items": [{
-        "name": "sidenav",
-        "description": "sidenav composition",
-        "filename": "sidenav.html",
-        "data": [
-            { "name":"r1c1", "description":"top", "width":12 },
-            { "name":"r2c1", "description":"side", "width":4 },
-            { "name":"r2c2", "description":"main", "width":8 },
-            { "name":"r3c1", "description":"footer", "width":12 }
-        ]
-    }]
+    "items": [
+        {
+            "name": "sidenav",
+            "description": "sidenav composition",
+            "filename": "sidenav.html",
+            "data": [
+                {
+                    "name": "r1c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
+                    "name": "r2c1",
+                    "description": "side",
+                    "width": 4
+                },
+                {
+                    "name": "r2c2",
+                    "description": "main",
+                    "width": 8
+                },
+                {
+                    "name": "r3c1",
+                    "description": "footer",
+                    "width": 12
+                }
+            ],
+            "status": "",
+            "create_date": null,
+            "_class": "composition",
+            "_id": "553ae8f98b15b09519219da2"
+        }
+    ]
 }

@@ -69,7 +69,10 @@
             "email": "ljnet.mail@gmail.com",
             "password": "5e41cd0264bc4aefd3d52388aab7d8fd9ea775302fad3f383796d669a3a76f7642ead19cfccf5e78ce99e78b4529a3ed0dd74c1507960f6a4cd3c66eaf967713",
             "salt": 97614796,
-            "_class": "user"
+            "_class": "user",
+            "firstname": "",
+            "lastname": "",
+            "status": ""
         }
     ]
 }
