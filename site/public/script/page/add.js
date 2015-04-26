@@ -25,6 +25,13 @@ function setup() {
             showSectionContent(sectionName);
         }
     });
+    // section save button
+    $('.block-container').click(function(event) {
+        if ($(event.target).hasClass('section-save')) {
+            console.log('>>> section save');
+        }
+        return false;
+    });
 }
 
 function setupCompositionSelect() {
@@ -49,7 +56,6 @@ function setupCompositionSections(composition) {
     var sections = composition.data;
     for (var i = 0; i < sections.length; i++) {
         var section = sections[i];
-        console.log('>>> section:', section);
         $('.section-container').append(
             '<div class="section-item" data-name="' + section.name + '">' +
             section.name + ' (' + section.description + ')' +
@@ -73,8 +79,6 @@ function showSectionContent(sectionName) {
     var template = Handlebars.compile(source);
     var context = { sectionName: sectionName };
     var html = template(context);
-    
-    console.log('html:', html);
     $('.block-container').empty();
     $('.block-container').append(html);
 }
