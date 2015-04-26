@@ -1,5 +1,9 @@
 var app = app || {};
 app.compositionCol = {}; // composition collection keyed by composition name
+app.pageData = {
+    composition: null,
+    content: {}
+};
 
 $().ready(function() {
     setup();
@@ -29,6 +33,9 @@ function setup() {
     $('.block-container').click(function(event) {
         if ($(event.target).hasClass('section-save')) {
             console.log('>>> section save');
+            var componentEntry = $(event.target).parents('.component-entry');
+            var sectionData = getSectionData(componentEntry);
+            console.log('>>> sectionData:', sectionData);
         }
         return false;
     });
@@ -46,6 +53,7 @@ function onCompositionSelect(event) {
     var compositionName =  $(event.target).val();
     if (compositionName) {
         composition = app.compositionCol[compositionName];
+        app.pageData.composition = composition;
         setupCompositionSections(composition);
     }
 }
@@ -81,4 +89,26 @@ function showSectionContent(sectionName) {
     var html = template(context);
     $('.block-container').empty();
     $('.block-container').append(html);
+}
+
+// use parent element passed in, get form data for section
+/*
+{
+    "widgetName": "ArticleDetail",
+    "widgetInfo": {
+        "module": "article",
+        "condition": {
+            "title": "mccpta-title"
+        },
+        "filter": {}
+    }
+}
+*/
+function getSectionData(parent) {
+    var result = {};
+    result['moduleName'] = $(parent).find('input[name=module]').val();
+    result['moduleName'] = $(parent).find('input[name=module]').val();
+    result['moduleName'] = $(parent).find('input[name=module]').val();
+    result['moduleName'] = $(parent).find('input[name=module]').val();
+    return result;
 }
