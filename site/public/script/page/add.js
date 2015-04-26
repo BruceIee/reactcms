@@ -19,7 +19,12 @@ function setup() {
     });
     app.compositionSelect.on('change', onCompositionSelect);
     // setup section event
-    $('.section-container').click(onSectionClick);
+    $('.section-container').click(function(event) {
+        if ($(event.target).hasClass('section-item')) {
+            var sectionName = $(event.target).attr('data-name');
+            showSectionContent(sectionName);
+        }
+    });
 }
 
 function setupCompositionSelect() {
@@ -63,17 +68,13 @@ function setupCompositionSections(composition) {
     "filter": {}
 }
 */
-function onSectionClick(event) {
-    if ($(event.target).hasClass('section-item')) {
-        var sectionName = $(event.target).attr('data-name');
-        var source   = $("#component-entry-template").html();
-        var template = Handlebars.compile(source);
-        var context = { sectionName: sectionName };
-        var html = template(context);
-        
-        console.log('html:', html);
-        $('.block-container').empty();
-        $('.block-container').append(html);
-        
-    }
+function showSectionContent(sectionName) {
+    var source   = $("#component-entry-template").html();
+    var template = Handlebars.compile(source);
+    var context = { sectionName: sectionName };
+    var html = template(context);
+    
+    console.log('html:', html);
+    $('.block-container').empty();
+    $('.block-container').append(html);
 }
