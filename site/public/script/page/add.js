@@ -37,8 +37,8 @@ function setup() {
             var sectionData = getSectionData(componentEntry);
             app.pageData.content[sectionName] = sectionData;
             
-            console.log('>>> sectionData:', sectionData);
             console.log('>>>  app.pageData:',  app.pageData);
+            
         }
         return false;
     });
@@ -75,16 +75,6 @@ function setupCompositionSections(composition) {
     }
 }
 
-/*
-"widgetName": "LinksetDetail",
-"widgetInfo": {
-    "module": "linkset",
-    "condition": {
-        "name": "home-links"
-    },
-    "filter": {}
-}
-*/
 function showSectionContent(sectionName) {
     var source   = $("#component-entry-template").html();
     var template = Handlebars.compile(source);
@@ -108,13 +98,19 @@ function showSectionContent(sectionName) {
 }
 */
 function getSectionData(parent) {
-    var sectionData = {};
-    var result = {};
-    result['module'] = $(parent).find('input[name=module]').val();
-    result['component'] = $(parent).find('input[name=component]').val();
-    result['condition'] = $(parent).find('textarea[name=condition]').val();
-    result['filter'] = $(parent).find('textarea[name=filter]').val();
+    var moduleName = $(parent).find('input[name=module]').val();
+    var componentName = $(parent).find('input[name=component]').val();
+    var conditionText = $(parent).find('textarea[name=condition]').val();
+    var filterText = $(parent).find('textarea[name=filter]').val();
     
-    sectionData = result;
+    var sectionData = {
+        widgetName: componentName,
+        widgetInfo: {
+            module: moduleName,
+            condition: getJsonFromText(conditionText) || {},
+            filter: getJsonFromText(filterText) || {}
+        }
+    };
+    
     return sectionData;
 }
