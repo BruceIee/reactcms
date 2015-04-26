@@ -34,7 +34,8 @@ function setup() {
         if ($(event.target).hasClass('section-save')) {
             var componentForm = $(event.target).parents('.component-form');
             var sectionName = componentForm.attr('data-section');
-            var sectionData = getSectionData(componentForm);
+            var sectionDataItem = getSectionData(componentForm);
+            var sectionData = [sectionDataItem];
             app.pageData.content[sectionName] = sectionData;
             
             console.log('app.pageData:',  app.pageData);
@@ -58,7 +59,7 @@ function onCompositionSelect(event) {
     var compositionName =  $(event.target).val();
     if (compositionName) {
         composition = app.compositionCol[compositionName];
-        app.pageData.composition = composition;
+        app.pageData.composition = compositionName;
         setupCompositionSections(composition);
     }
 }
@@ -118,8 +119,12 @@ function getSectionData(parent) {
 }
 
 function savePage() {
-    
+    var pageAddUrl = '/data/pages/add';
+    var pageName = $('#pageName').val();
+    app.pageData.name = pageName;
     console.log('save page:', app.pageData);
-    
-    
+    $.post(pageAddUrl, app.pageData, function(data) {
+        
+        console.log('page saved:', data);
+    });
 }

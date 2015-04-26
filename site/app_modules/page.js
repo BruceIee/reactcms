@@ -42,9 +42,10 @@ module.exports = function(app) {
         
         //console.log('getPage query:', condition, filter);
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            
-            //console.log('getPage:', error, docs, info);
+            // get page
             var page = docs && docs[0];
+            console.log('getPage:', page);
+            
             // get composition
             if (docs.length > 0) {
                 var page = docs[0];
@@ -55,7 +56,7 @@ module.exports = function(app) {
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
-                    //console.log('composition:', composition);
+                    console.log('composition:', composition);
                     
                     /*
                     pageSectionContent example:
@@ -68,6 +69,7 @@ module.exports = function(app) {
                         }
                     }]
                     */
+                    /*
                     for (var pageSectionName in pageContent) {
                         var widgets = pageContent[pageSectionName];
                         for (var i = 0; i < widgets.length; i++) {
@@ -79,6 +81,7 @@ module.exports = function(app) {
                             });
                         }
                     }
+                    */
                     
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
@@ -88,6 +91,14 @@ module.exports = function(app) {
         });
     };
     
+    block.data.addPage = function(req, res) {
+        var callback = arguments[3] || null; 
+        var page = tool.getReqParameter(req);
+        page.create_date = new Date();
+        block.data.add(req, res, page, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
     
     // page
     block.page.getIndex = function(req, res) {
@@ -143,6 +154,7 @@ module.exports = function(app) {
     
     // data route
     app.server.get('/data/pages/:pagename', block.data.getPage);
+    app.server.post('/data/pages/add', block.data.addPage);
  
     // page route
     app.server.get('/pages', block.page.getIndex);
