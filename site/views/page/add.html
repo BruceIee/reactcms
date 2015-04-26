@@ -27,27 +27,26 @@
     "filter": {}
 }
 -->
-
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}
 <div class="component-entry">
     <h4>Section: {{ sectionName }}</h4>
-    <div data-section="{{ sectionName }}" class="form-section">
+    <div data-section="{{ sectionName }}" class="component-form">
         <div class="form-group">
             <label>Module</label>
-            <input type="text" class="form-control" name="module">
+            <input type="text" class="form-control" name="module" placeholder="example: article">
         </div>
         <div class="form-group">
             <label>UI Component</label>
-            <input type="text" class="form-control" name="component">
+            <input type="text" class="form-control" name="component" placeholder="example: ArticleDetail">
         </div>
         <div class="form-group">
             <label>Condition</label>
-            <textarea class="form-control" name="condition"></textarea>
+            <textarea class="form-control" name="condition" placeholder="example: { &quot;name&quot;:&quot;main&quot; }"></textarea>
         </div>
         <div class="form-group">
             <label>Filter</label>
-            <textarea class="form-control" name="filter"></textarea>
+            <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }"></textarea>
         </div>
         <div class="form-group">
             <button class="btn btn-default section-save">Save</button>
@@ -86,7 +85,7 @@
         </div>
         <div class="col-md-4">
             <div class="form-group row">
-                <button class="btn btn-success pull-right">Save Page</button>
+                <button class="btn btn-success btn-save-page pull-right">Save Page</button>
             </div>
         </div>
     </div>

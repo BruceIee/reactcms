@@ -32,16 +32,18 @@ function setup() {
     // section save button
     $('.block-container').click(function(event) {
         if ($(event.target).hasClass('section-save')) {
-            var componentEntry = $(event.target).parents('.component-entry');
-            var sectionName = 'abc';
-            var sectionData = getSectionData(componentEntry);
+            var componentForm = $(event.target).parents('.component-form');
+            var sectionName = componentForm.attr('data-section');
+            var sectionData = getSectionData(componentForm);
             app.pageData.content[sectionName] = sectionData;
             
-            console.log('>>>  app.pageData:',  app.pageData);
+            console.log('app.pageData:',  app.pageData);
             
         }
         return false;
     });
+    // save page button
+    $('.btn-save-page').click(savePage);
 }
 
 function setupCompositionSelect() {
@@ -113,4 +115,11 @@ function getSectionData(parent) {
     };
     
     return sectionData;
+}
+
+function savePage() {
+    
+    console.log('save page:', app.pageData);
+    
+    
 }
