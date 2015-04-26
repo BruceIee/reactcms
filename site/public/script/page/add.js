@@ -32,10 +32,13 @@ function setup() {
     // section save button
     $('.block-container').click(function(event) {
         if ($(event.target).hasClass('section-save')) {
-            console.log('>>> section save');
             var componentEntry = $(event.target).parents('.component-entry');
+            var sectionName = 'abc';
             var sectionData = getSectionData(componentEntry);
+            app.pageData.content[sectionName] = sectionData;
+            
             console.log('>>> sectionData:', sectionData);
+            console.log('>>>  app.pageData:',  app.pageData);
         }
         return false;
     });
@@ -105,10 +108,13 @@ function showSectionContent(sectionName) {
 }
 */
 function getSectionData(parent) {
+    var sectionData = {};
     var result = {};
-    result['moduleName'] = $(parent).find('input[name=module]').val();
-    result['moduleName'] = $(parent).find('input[name=module]').val();
-    result['moduleName'] = $(parent).find('input[name=module]').val();
-    result['moduleName'] = $(parent).find('input[name=module]').val();
-    return result;
+    result['module'] = $(parent).find('input[name=module]').val();
+    result['component'] = $(parent).find('input[name=component]').val();
+    result['condition'] = $(parent).find('textarea[name=condition]').val();
+    result['filter'] = $(parent).find('textarea[name=filter]').val();
+    
+    sectionData = result;
+    return sectionData;
 }
