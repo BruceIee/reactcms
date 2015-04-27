@@ -1,3 +1,9 @@
+/** command
+ * node cmd.js initdb
+ * node cmd.js import (option_projectname)
+ * node cmd.js backup (option_projectname)
+ */
+
 var fs = require('fs');
 var util = require('util');
 var path = require('path');
@@ -13,6 +19,7 @@ var moment = require('moment');
 var ObjectID = require('mongodb').ObjectID;
 var rm_rf = require('rimraf'); // rm -rf for node
 var mongoDb = require('mongodb');
+var mkdirp = require('mkdirp');
 
 var quantity_array = []; // use this for comparing if items quantity in file equals items added to DB.
 var finish_flag = false;
@@ -22,40 +29,25 @@ var finish_flag = false;
 var rootPath = process.env['NODE_WEB_SITE'] || process.cwd();
 var setting = tool.getDefaultSetting(rootPath);
 
-/**
- * update setting from commandline arguments
- *
- * commandline arguments:
- * 
- * -log_level=debug|info|warn|error|critical
- * -app_name=abc
- * 
- * -cmd=backup
- * -backup_folder=./public, default to ./data
- * 
- * -cmd=import
- * -import_file=data/testdata1.txt;data/testdata2.txt
- * -import_folder=./public
+/** process.argv
+ * node cmd.js backup (option_project)
+ * 0    1      2      3
  */
-var argumentPattern = /^-([^\s]+)=([^\s]+)/;
-process.argv.forEach(function (value, index, array) {
-    var result = argumentPattern.exec(value);
-    if (result && result.length >= 3) {
-        setting[result[1]] = result[2]; //example: setting['cmd'] = backup
-    }
-});
+
 
 // support command shortcuts
-var cmd = process.argv[2] || 'start';
-switch (cmd) {
+var operation = process.argv[2] || 'start';
+var project = process.argv[3];
+
+switch (operation) {
     case 'initdb':
-        setting['cmd'] = 'initdb';
+        setting['operation'] = 'initdb';
         break;
     case 'import':
-        setting['cmd'] = 'import';
+        setting['operation'] = 'import';
         break;
     case 'backup':
-        setting['cmd'] = 'backup';
+        setting['operation'] = 'backup';
         break;
     default:
         console.log('usage:\nnode cmd.js initdb|import|backup\n');
@@ -92,7 +84,7 @@ function start(setting) {
 
     var Database = require(app.setting.database.type + '-database'); // 'mongo-database.js'
     app.db = new Database(app, function() {
-        switch(setting['cmd']) {
+        switch(setting['operation']) {
         case 'initdb':
             app.db.createTables(function() {
                 console.log('----- initdb is done. -----');
@@ -117,10 +109,17 @@ function start(setting) {
 /**
  * Backup data
  * 
- * -cmd=backup
  * default to ./data
  */
 function backupData(app, callback) {
+    if (project) {
+        var backup_folder = './data/' + project;
+    }
+    else {
+        var backup_folder = './data';
+    }
+    console.log('backup to folder:',backup_folder);
+    
     var app_modulenames_array = [];
     var moduleArray = app.setting.modules_to_load;
     
@@ -160,7 +159,15 @@ function backupModule(app_moduleName, callback) { //stream
             items: docs
         };
         
-        var filepath = './data';
+        if (project) {
+            var filepath = './data/' + project;
+        }
+        else {
+            var filepath = './data';
+        }
+
+        mkdirp.sync(filepath); // create folder that we need
+        
         var filename = util.format('%s/%s-data.txt', filepath, moduleName);
         var dataFileStream = fs.createWriteStream(filename, {
             flags: 'w',
@@ -197,12 +204,23 @@ function backupModule(app_moduleName, callback) { //stream
 
 /**
  * Import data
- *   -cmd=import
  * import all data files, default from ./data
  */
 function importData(app, callback) {
-    // default is to import all data files from ./data folder
-    app.import_folder = './data';
+    if (project) {
+        app.import_folder = './data/' + project;
+    }
+    else {
+        // default is to import all data files from ./data folder
+        app.import_folder = './data';
+    }
+    console.log('import from folder:',app.import_folder);
+    
+    if ( fs.existsSync(app.import_folder) == false ) {
+        console.log('no such folder:',app.import_folder);
+        console.log('exit');
+        process.exit();
+    }
 
     // get list of data files to be imported
     var items = fs.readdirSync(app.import_folder);
