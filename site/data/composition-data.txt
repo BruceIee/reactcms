@@ -26,6 +26,7 @@
     "count":1,
     "items": [
         {
+            "_id": "553ae8f98b15b09519219da2",
             "name": "sidenav",
             "description": "sidenav composition",
             "filename": "sidenav.html",
@@ -53,8 +54,7 @@
             ],
             "status": "",
             "create_date": null,
-            "_class": "composition",
-            "_id": "553ae8f98b15b09519219da2"
+            "_class": "composition"
         }
     ]
 }
