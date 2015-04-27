@@ -31,6 +31,11 @@ exports.setting = {
         username: 'test@example.com',
         password: 'test',
         sender: 'test@example.com'
+    },
+    
+    // invite code
+    invite: {
+        code: 'react_cms'
     }
 
 };
