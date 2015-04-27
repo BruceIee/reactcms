@@ -88,6 +88,8 @@ module.exports = function(app) {
         res.render('announcement/add', { page:page });
     };
 
+    app.server.all('/announcements', block.page.checkLogin);
+    app.server.all('/announcements/*', block.page.checkLogin);
     app.server.get('/announcements', block.page.getAnnouncementIndex);
     app.server.get('/announcements/add', block.page.addAnnouncement);
     app.server.get('/announcements/:id', block.page.getAnnouncementDetail);

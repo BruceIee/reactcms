@@ -1,7 +1,7 @@
 exports.setting = {
 
     // web app
-    app_name: 'reactcms',
+    app_name: 'ReactCMS',
     website: 'http://localhost',
     access_check: false,
     access_code: 'password',
@@ -25,16 +25,17 @@ exports.setting = {
         name: 'reactcms'
     },
     
-    // socketio and rtc
-    use_socketio: false,
-    use_easyrtc: false,
-
     // email setting
     email: {
         service: 'gmail',
-        username: 'leapon.post@gmail.com',
-        password: 'Postmail99',
-        sender: 'info@leapon.com'
+        username: 'test@example.com',
+        password: 'test',
+        sender: 'test@example.com'
+    },
+    
+    // invite code
+    invite: {
+        code: 'react_cms'
     }
 
 };

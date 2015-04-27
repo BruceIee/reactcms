@@ -1,0 +1,104 @@
+{% extends '../layout/layout-bare.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/component/common/common-style.css"/>
+<link rel="stylesheet" href="/component/item/detail.css"/>
+<link rel="stylesheet" href="/component/article/detail.css"/>
+<link rel="stylesheet" href="/component/linkset/detail.css"/>
+<link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
+<style>
+.widget-container {
+    /* border: solid 1px #f2f2f2; */
+    /* min-height: 60px; */
+}
+</style>
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/react/react.js"></script>
+<script src="/library/react/JSXTransformer.js"></script>
+<script type="text/jsx" src="/component/common/common-mixin.js"></script>
+<script type="text/jsx" src="/component/item/detail.js"></script>
+<script type="text/jsx" src="/component/article/detail.js"></script>
+<script type="text/jsx" src="/component/linkset/detail.js"></script>
+<script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
+<script type="text/jsx" src="/script/page/support.js"></script>
+<script type="text/jsx" src="/script/composition/sidenav.js"></script>
+<script type="text/jsx">
+var app = app || {};
+
+app.pageContent = {{ page.pageData.content|json|safe}};
+app.pageComposition = {{ page.compositionData|json|safe}};
+
+app.widgets = {
+    ItemDetail: ItemDetail,
+    ArticleDetail: ArticleDetail,
+    LinksetDetail: LinksetDetail
+};
+
+$().ready(function() {
+    //console.log('page content:', app.pageContent);
+    //console.log('page composition:', app.pageComposition);
+    for (var targetClass in app.pageContent) {
+        var widgets = app.pageContent[targetClass];
+        for (var i = 0; i < widgets.length; i++) {
+            var widget = widgets[i];
+            widget.targetClass = targetClass;
+            showWidget(widget);
+        }
+    }
+});
+
+function showWidget(widget) {
+    //console.log('showWidget on targetClass:', widget.targetClass);
+    //console.log('widget name:', widget.widgetName);
+    //console.log('widget info:', widget.widgetInfo);
+    //$('.' + widget.targetClass).append(widget.widgetName);
+    var widgetDetailUrl = '/data/components/get/detail';
+    $.get(widgetDetailUrl, widget, function(data) {
+        console.log('data.docs.length:', data.docs.length);
+        if (data.docs.length <= 0) return;
+        
+        var cabinetData = { items: [] };
+        for (var i = 0; i < data.docs.length; i++) {
+            var widgetData = data.docs && data.docs[i];
+            cabinetData.items.push({ type:this.widgetName, data:widgetData });
+        }
+        
+        React.render(
+            <Cabinet data={ cabinetData } />,
+            $('.' + this.targetClass)[0]
+        );
+    }.bind(widget));
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r1c1 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-top:10px;">
+        <div class="col-md-3">
+            <div class="r2c1 widget-container"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="r2c2 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r3c1 widget-container"></div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

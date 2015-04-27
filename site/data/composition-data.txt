@@ -1,0 +1,60 @@
+{
+    "name":"composition",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "filename": {
+            "type": "string"
+        },
+        "data": {
+            "type": "array",
+            "subtype": {
+                "type": "object"
+            }
+        },
+        "status": {
+            "type": "string"
+        },
+        "create_date": {
+            "type": "date"
+        }
+    },
+    "count":1,
+    "items": [
+        {
+            "_id": "553ae8f98b15b09519219da2",
+            "name": "sidenav",
+            "description": "sidenav composition",
+            "filename": "sidenav.html",
+            "data": [
+                {
+                    "name": "r1c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
+                    "name": "r2c1",
+                    "description": "side",
+                    "width": 4
+                },
+                {
+                    "name": "r2c2",
+                    "description": "main",
+                    "width": 8
+                },
+                {
+                    "name": "r3c1",
+                    "description": "footer",
+                    "width": 12
+                }
+            ],
+            "status": "",
+            "create_date": null,
+            "_class": "composition"
+        }
+    ]
+}

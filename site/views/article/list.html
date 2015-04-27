@@ -33,23 +33,29 @@
                       </td>
                       <td>
                           Create Date
-                      </td>                  
+                      </td>
+                      <td>
+                      </td>
                   </tr>
               </thead>
               <tbody>
                   {% for article in page.articles %}
                       <tr>
                           <td>
-                              <a href="/articles/{{article._id.toString()}}/detail">{{article.title}}</a>
+                              <a href="/articles/{{article._id.toString()}}/detail" title="see detail">{{article.title}}</a>
                           </td>
                           <td>
                               {{ article.content | replace("^(.{25,25})(.*)", "$1") }}......
                           </td>                  
                           <td>
                               {{article.create_date.toISOString()}}
-                          </td>                  
+                          </td>
+                          <td>
+                              <a class="glyphicon glyphicon-edit" href="/articles/{{article._id.toString()}}/edit" title="edit"></a>
+                              &nbsp;
+                              <a class="glyphicon glyphicon-remove" href="/articles/{{article._id.toString()}}/del" title="del"></a>
+                          </td>
                       </tr>
-    
                   {% endfor %}
               </tbody>
         </table>

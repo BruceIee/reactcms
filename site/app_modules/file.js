@@ -75,6 +75,8 @@ module.exports = function(app) {
         });
     };
 
+    app.server.all('/files', block.page.checkLogin);
+    app.server.all('/files/*', block.page.checkLogin);
     app.server.get('/files', block.page.getIndex);
     app.server.get('/files/upload', block.page.addFile);
     app.server.post('/files', block.page.addFilePost);

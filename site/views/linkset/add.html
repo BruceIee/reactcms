@@ -10,16 +10,16 @@
 function add_new_group() {
     $("#mydiv").append( "<div>" +
         "<fieldset>" +
-        "<legend>new</legend>" +
+        '<legend>Item <button type="button" class="btn btn-danger" onclick="remove_group(this)">-</button></legend>' +
         '<p>Text: <input type="text" name="text" /></p>' +
         '<p>Hyperlink: <input type="text" name="hyperlink" /></p>' +
         "</fieldset>" +
-        '<button type="button" class="btn btn-danger" onclick="remove_group(this)">-</button>' +
         "<hr>" +
         "</div>");
 };
 function remove_group(who) {
-    $(who).parent().remove(); //remove associate div
+    //$(who).parent().remove(); //remove associate div
+    $(who).closest('div').remove(); //remove associate div
 };
 </script>
 {% endblock %}
@@ -29,18 +29,20 @@ function remove_group(who) {
     
     <div class="row">
         <h4 class="col-md-12">
-            Add Links
+            Add Linkset
         </h4>
     </div>
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form role="form" action="/links/add_links_post" method="POST">
-                <button type="button" class="btn btn-success" onclick="add_new_group()">+</button>
+            <form role="form" action="/data/linksets/add_linkset_post" method="POST">
+                <p>Name: <input type="text" name="name" /></p>
+                <hr>
+                
                 <div id="mydiv" class="form-group">
                     <div>
                         <fieldset>
-                            <legend>new</legend>
+                            <legend>Item</legend>
                             <p>Text: <input type="text" name="text" /></p>
                             <p>Hyperlink: <input type="text" name="hyperlink" /></p>
                         </fieldset>
@@ -48,6 +50,8 @@ function remove_group(who) {
                     </div>
                 </div>
                 
+                <button type="button" class="btn btn-success" onclick="add_new_group()">+</button>
+                <p></p>
                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
             </form>
         </div>

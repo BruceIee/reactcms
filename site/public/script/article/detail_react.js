@@ -19,7 +19,7 @@ function getArticleDetail(articleId, callback) {
 
 function showArticleDetail(article) {
     app.itemDetail = React.render(
-        <ItemDetail data={ article } />,
+        <ArticleDetail data={ article } />,
         document.getElementById('articleDetail')
     );
 }

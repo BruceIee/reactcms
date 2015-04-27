@@ -13,7 +13,7 @@ function getItems() {
         _.map(items, function(item) {
             item['id'] = item._id;
             item['text'] = item.title;
-            item['iconClass'] = 'fa fa-fw fa-book';
+            item['iconClass'] = 'fa fa-fw fa-file-text-o';
             return item;
         });
         updateItemList(items);
@@ -23,11 +23,11 @@ function getItems() {
 function updateItemList(items) {
     app.listData = { items: items };
     app.list1 = React.render(
-        <ItemList data={ app.listData } />,
-        document.getElementById('itemList')
+        <ArticleList data={ app.listData } />,
+        document.getElementById('articleList')
     );
     app.list1.on('select', function(id) {
-        var itemUrl = '/articles/' + id + '/detail/react';
-        window.location = itemUrl;
+        var articleUrl = '/articles/' + id + '/detail/react';
+        window.location = articleUrl;
     });
 }

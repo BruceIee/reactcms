@@ -3,7 +3,7 @@ var express = require('express');
 var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
-var favicon = require('static-favicon');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -12,6 +12,7 @@ var compression = require('compression')
 var _ = require('underscore');
 var tool = require('leaptool');
 var multer = require('multer'); // Multer is a node.js middleware for handling multipart/form-data.
+var emailEngine = require('emailEngine');
 
 var app = {};
 
@@ -92,6 +93,11 @@ function setup(cbSetup) {
         console.log(file.fieldname + ' is uploaded to ' + file.path)
     }
     }));
+    
+    app.mailer = null;
+    if (app.setting.email) {
+        app.mailer = new emailEngine.Engine(app.setting.email);
+    } 
     
     // setup database connection
     if (app.setting.database) {

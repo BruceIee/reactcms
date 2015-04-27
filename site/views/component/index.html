@@ -1,0 +1,25 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<style>
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="body-container container" style="margin-top:10px;">
+    
+    <div class="row">
+        <h2>Component Home</h2>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <h4>Data Section</h4>
+        <div>
+            <a href="/data/components/get/data?module=article">
+                /data/components/get/data?module=article
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

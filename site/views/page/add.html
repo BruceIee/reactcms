@@ -1,0 +1,104 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/page/add.css">
+<style>
+.section-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: solid 1px #f2f2f2;
+}
+</style>
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/handlebars/handlebars.min.js"></script>
+<script src="/script/page/add.js"></script>
+
+<!--
+"widgetName": "LinksetDetail",
+"widgetInfo": {
+    "module": "linkset",
+    "condition": {
+        "name": "home-links"
+    },
+    "filter": {}
+}
+-->
+<script id="component-entry-template" type="text/x-handlebars-template">
+{% raw %}
+<div class="component-entry">
+    <h4>Section: {{ sectionName }}</h4>
+    <div data-section="{{ sectionName }}" class="component-form">
+        <div class="form-group">
+            <label>Module</label>
+            <input type="text" class="form-control" name="module" placeholder="example: article">
+        </div>
+        <div class="form-group">
+            <label>UI Component</label>
+            <input type="text" class="form-control" name="component" placeholder="example: ArticleDetail">
+        </div>
+        <div class="form-group">
+            <label>Condition</label>
+            <textarea class="form-control" name="condition" placeholder="example: { &quot;name&quot;:&quot;main&quot; }"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Filter</label>
+            <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default section-save">Save</button>
+        </div>
+    </div>
+</div>
+{% endraw %}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="min-height:420px;">
+    
+    <div class="row">
+        <h4 class="col-md-12">
+            Add Page
+        </h4>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-4">
+            <div class="form-group row">
+                <label for="pageName" class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="pageName" placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group row">
+                <label for="pageComposition" class="col-sm-3 control-label">Composition</label>
+                <div class="col-sm-9">
+                    <select class="form-control composition-select"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group row">
+                <button class="btn btn-success btn-save-page pull-right">Save Page</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-3">
+            <h4>Sections</h4>
+            <div class="section-container"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="block-container"></div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

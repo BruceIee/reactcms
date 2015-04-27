@@ -12,10 +12,13 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.page.getIndex = function(req, res) {
-        var page = {};
+        //var page = {};
+        var page = app.getPage(req); //user info include
         res.render('admin/index', { page:page });
     };
     
+    app.server.all('/admin', block.page.checkLogin);
+    app.server.all('/admin/*', block.page.checkLogin);
     app.server.get('/admin', block.page.getIndex);
     app.server.get('/' + moduleName + '/page/:pagename', block.page.showPage);
     

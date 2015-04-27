@@ -1,0 +1,11 @@
+{
+    "name":"file",
+    "module":    {
+        "create_date": {
+            "type": "date"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
