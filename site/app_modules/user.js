@@ -157,15 +157,25 @@ module.exports = function(app) {
     
     block.page.signupPost = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        block.data.addUser(req, res, null, function(error, docs, info) {
-            if (error) {
-                app.renderInfoPage(error, docs, info, req, res);
-            } else {
-                var user = docs && docs[0];
-                var nextUrl = parameter.redirect || '/';
-                res.redirect(nextUrl);
-            }
-        });
+        var invite_code = parameter.invite_code;
+        if ( invite_code != app.setting.invite.code ) {
+            var text = 'Signup failed';
+            info = {
+                message: 'Invite code is wrong'
+            };
+            app.renderInfoPage(new Error(text), null, info, req, res);
+        }
+        else {
+            block.data.addUser(req, res, null, function(error, docs, info) {
+                if (error) {
+                    app.renderInfoPage(error, docs, info, req, res);
+                } else {
+                    var user = docs && docs[0];
+                    var nextUrl = parameter.redirect || '/';
+                    res.redirect(nextUrl);
+                }
+            });            
+        }
     };
     
     block.page.logout = function(req, res) {
