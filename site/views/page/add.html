@@ -34,19 +34,19 @@
     <div data-section="{{ sectionName }}" class="component-form">
         <div class="form-group">
             <label>Module</label>
-            <input type="text" class="form-control" name="module" placeholder="example: article">
+            <input type="text" class="form-control" name="module" value="{{ widgetInfo.module }}" placeholder="example: article">
         </div>
         <div class="form-group">
             <label>UI Component</label>
-            <input type="text" class="form-control" name="component" placeholder="example: ArticleDetail">
+            <input type="text" class="form-control" name="component" value="{{ widgetName }}" placeholder="example: ArticleDetail">
         </div>
         <div class="form-group">
             <label>Condition</label>
-            <textarea class="form-control" name="condition" placeholder="example: { &quot;name&quot;:&quot;main&quot; }"></textarea>
+            <textarea class="form-control" name="condition" value="{{ widgetInfo.condition }}" placeholder="example: { &quot;name&quot;:&quot;main&quot; }"></textarea>
         </div>
         <div class="form-group">
             <label>Filter</label>
-            <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }"></textarea>
+            <textarea class="form-control" name="filter" value="{{ widgetInfo.filter }}" placeholder="example: { &quot;limit&quot;: 2 }"></textarea>
         </div>
         <div class="form-group">
             <button class="btn btn-default section-save">Save</button>

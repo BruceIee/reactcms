@@ -81,7 +81,15 @@ function setupCompositionSections(composition) {
 function showSectionContent(sectionName) {
     var source   = $("#component-entry-template").html();
     var template = Handlebars.compile(source);
-    var context = { sectionName: sectionName };
+    var context = app.pageData.content[sectionName] || [];
+    context = context && context[0] || {};
+    context['sectionName'] = sectionName;
+    if (context.widgetInfo && context.widgetInfo.condition) {
+        context.widgetInfo.condition = JSON.stringify(context.widgetInfo.condition);
+    }
+    if (context.widgetInfo && context.widgetInfo.filter) {
+        context.widgetInfo.filter = JSON.stringify(context.widgetInfo.filter);
+    }
     var html = template(context);
     $('.block-container').empty();
     $('.block-container').append(html);
