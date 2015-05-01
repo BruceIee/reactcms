@@ -84,11 +84,11 @@ function showSectionContent(sectionName) {
     var context = app.pageData.content[sectionName] || [];
     context = context && context[0] || {};
     context['sectionName'] = sectionName;
-    if (context.widgetInfo && context.widgetInfo.condition) {
-        context.widgetInfo.condition = JSON.stringify(context.widgetInfo.condition);
+    if (context.widgetInfo && context.widgetInfo.conditionText) {
+        context.widgetInfo.condition = context.widgetInfo.conditionText;
     }
-    if (context.widgetInfo && context.widgetInfo.filter) {
-        context.widgetInfo.filter = JSON.stringify(context.widgetInfo.filter);
+    if (context.widgetInfo && context.widgetInfo.filterText) {
+        context.widgetInfo.filter = context.widgetInfo.filterText;
     }
     var html = template(context);
     $('.block-container').empty();
@@ -118,7 +118,9 @@ function getSectionData(parent) {
         widgetName: componentName,
         widgetInfo: {
             module: moduleName,
+            conditionText: conditionText,
             condition: getJsonFromText(conditionText) || {},
+            filterText: filterText,
             filter: getJsonFromText(filterText) || {}
         }
     };
