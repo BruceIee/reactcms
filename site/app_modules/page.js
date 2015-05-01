@@ -86,6 +86,12 @@ module.exports = function(app) {
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
                 });
+            } else {
+                var text = 'no page';
+                info = {
+                    message: 'no page'
+                };
+                app.renderInfoPage(new Error(text), null, info, req, res);
             }
             
         });
