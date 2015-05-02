@@ -1,0 +1,3 @@
+node cmd.js initdb
+node cmd.js import
+
