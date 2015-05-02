@@ -35,11 +35,10 @@ function setup() {
             var componentForm = $(event.target).parents('.component-form');
             var sectionName = componentForm.attr('data-section');
             var sectionDataItem = getSectionData(componentForm);
-            var sectionData = [sectionDataItem];
-            app.pageData.content[sectionName] = sectionData;
-            
-            console.log('app.pageData:',  app.pageData);
-            
+            app.pageData.content[sectionName] = null;
+            if (sectionDataItem) {
+                app.pageData.content[sectionName] = [sectionDataItem];
+            }
         }
         return false;
     });
@@ -48,7 +47,7 @@ function setup() {
 }
 
 function setupCompositionSelect() {
-    app.compositionSelect.append('<option>Select composition below</option>');
+    app.compositionSelect.append('<option>Select composition</option>');
     for (var name in app.compositionCol) {
         app.compositionSelect.append('<option value="' + name + '">' + name + '</option>');
     }
@@ -65,7 +64,7 @@ function onCompositionSelect(event) {
 }
 
 function setupCompositionSections(composition) {
-    console.log('setupCompositionSections:', composition);
+    //console.log('setupCompositionSections:', composition);
     $('.section-container').empty();
     var sections = composition.data;
     for (var i = 0; i < sections.length; i++) {
@@ -113,28 +112,38 @@ function getSectionData(parent) {
     var componentName = $(parent).find('input[name=component]').val();
     var conditionText = $(parent).find('textarea[name=condition]').val();
     var filterText = $(parent).find('textarea[name=filter]').val();
-    
-    var sectionData = {
-        widgetName: componentName,
-        widgetInfo: {
-            module: moduleName,
-            conditionText: conditionText,
-            condition: getJsonFromText(conditionText) || {},
-            filterText: filterText,
-            filter: getJsonFromText(filterText) || {}
-        }
-    };
-    
+    // moduleName and componentName is required for section
+    var sectionData = null;
+    if (moduleName && componentName) {
+        sectionData = {
+            widgetName: componentName,
+            widgetInfo: {
+                module: moduleName,
+                conditionText: conditionText,
+                condition: getJsonFromText(conditionText) || {},
+                filterText: filterText,
+                filter: getJsonFromText(filterText) || {}
+            }
+        };
+    }
     return sectionData;
+}
+
+function cleanPageData(pageData) {
+    for (var sectionName in pageData.content) {
+        var sectionData = pageData.content[sectionName];
+        console.log('>section:', sectionName, sectionData);
+    }
+    return pageData;
 }
 
 function savePage() {
     var pageAddUrl = '/data/pages/add';
     var pageName = $('#pageName').val();
     app.pageData.name = pageName;
-    console.log('save page:', app.pageData);
-    $.post(pageAddUrl, app.pageData, function(data) {
-        
+    var pageData = cleanPageData(app.pageData);
+    console.log('save page:', pageData);
+    $.post(pageAddUrl, pageData, function(data) {
         console.log('page saved:', data);
     });
 }
