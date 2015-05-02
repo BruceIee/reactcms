@@ -1,0 +1,70 @@
+.add-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.editor {
+    height: 348px;
+    padding: 0 0 0 5px;
+    margin: 0;
+}
+#editor_panel {
+    min-height: 400px;
+}
+.editor-heading {
+    height: 50px;
+}
+#markdown_editor {
+    border-right: 1px inset;
+}
+#text_preview {
+    border-left: 1px inset;
+    overflow: auto;
+}
+.nested-data-element {
+    padding: 6px 12px;
+}
+.nested-data-btn {
+    padding: 0;
+    width: 41px;
+    height: 34px;
+}
+.tab-pane {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.file-download {
+    margin-left: 5px;
+    padding-top: 5px;
+    bottom: 100px;
+}
+.file-info {
+    margin-left: 5px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.file-upload-date {
+    bottom: 50%;
+    margin: 5px 0 0;
+}
+.file-name {
+    margin: 0;
+}
+.file {
+    width: 300px;
+}
+.file img {
+    max-width: 298px;
+}
+.upload-btn {
+    margin-bottom: 5px;
+}
+#img_preview img {
+    max-width: 568px;
+    margin: 0;
+}
+#text_preview img {
+    max-width: 100%;
+}
+a.active {
+    background-color: rgba(200, 200, 200, 0.54);
+}

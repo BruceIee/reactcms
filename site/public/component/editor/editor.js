@@ -1,8 +1,7 @@
-$().ready(function () {
+jQuery(function () {
     var Editor = React.createClass({
-        name: "editor",
-        render: function () {
-            return <div className="form-group">
+        name: "Editor",
+        render: function () { return <div className="form-group">
             <div className="panel panel-default" id="editor_panel">
                 <div className="editor-heading panel-heading">
                     <div className="btn-group">
@@ -92,12 +91,11 @@ $().ready(function () {
                 <div id="markdown_editor" className="editor col-sm-6"></div>
                 <div id="text_preview" className="editor col-sm-6"></div>
             </div>
-        </div>
+        </div>;
     }});
     var Modals = React.createClass({
-        name: "modals",
-        render: function() {
-            return <div>
+        name: "Modals",
+        render: function () { return <div>
             <div className="modal fade" id="link_modal" tabIndex="-1" role="dialog" aria-labelledby="link_modal_label" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
@@ -163,14 +161,25 @@ $().ready(function () {
             </div>
         </div>
     }});
-    React.render(
+    if (document.getElementById("editor") && document.getElementById("modals")) {
+      React.render(
         <Editor></Editor>,
         document.getElementById("editor")
-    );
-    React.render(
+      );
+      React.render(
         <Modals></Modals>,
         document.getElementById("modals")
-    );
+      );
+    } else if (document.getElementById("forum_editor")) {
+      React.render(
+        <div class="forum-editor">
+          <div class="handle"></div>
+          <Editor></Editor>
+          <Modals></Modals>
+        </div>,
+        document.getElementById("forum_editor")
+      );
+    }
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({container: 'body'});
     });
@@ -190,7 +199,7 @@ $().ready(function () {
         document.getElementById("text_preview").innerHTML=converter.makeHtml(markdown_editor.getValue());
         document.getElementById("content_markdown").innerHTML=markdown_editor.getValue();
     });
-    var active_formatting = {}
+    var active_formatting = {};
     var bold_tag = "**";
     var bold_tag_closing = "**";
     var italics_tag = "*";
@@ -201,7 +210,7 @@ $().ready(function () {
     var strikethrough_tag_closing = "~~";
     var unordered_list_tag = "* ";
     var ordered_list_tag = "1. ";
-    var quote_tag = ">"
+    var quote_tag = ">";
     var h1_tag = "#";
     var h2_tag = "##";
     var h3_tag = "###";
