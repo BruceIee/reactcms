@@ -34,7 +34,7 @@ module.exports = function(app) {
     
     // data
     block.data.getPage = function(req, res) {
-        var callback = arguments[3] || null; 
+        var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         var pageName = parameter.pagename;
         var condition = { name:pageName };
@@ -86,8 +86,27 @@ module.exports = function(app) {
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
                 });
+            } else {
+                var text = 'no page';
+                info = {
+                    message: 'no page'
+                };
+                app.renderInfoPage(new Error(text), null, info, req, res);
             }
             
+        });
+    };
+    
+    block.data.isPageNameExist = function(req, res) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        var pageName = parameter.pagename;
+        var condition = { name:pageName };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            info['pagename'] = pageName;
+            info['exist'] = docs.length > 0;
+            app.cb(error, docs, info, req, res, callback);
         });
     };
     
@@ -95,6 +114,7 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var page = tool.getReqParameter(req);
         page.create_date = new Date();
+        
         block.data.add(req, res, page, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
@@ -120,10 +140,12 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
         var pageId = parameter.id;
-        console.log('edit page id:', pageId);
-        
-        var page = app.getPage(req);
-        res.render('page/edit', { page:page });
+        //console.log('edit page id:', pageId);
+        block.data.getById(req, res, pageId, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.pageObject = docs && docs[0] || null;
+            res.render('page/edit', { page:page });
+        });
     };
     
     block.page.getPageList = function(req, res) {
@@ -155,6 +177,7 @@ module.exports = function(app) {
     // data route
     app.server.get('/data/pages/:pagename', block.data.getPage);
     app.server.post('/data/pages/add', block.data.addPage);
+    app.server.get('/data/pages/:pagename/exist', block.data.isPageNameExist);
  
     // page route
     app.server.get('/pages', block.page.getIndex);

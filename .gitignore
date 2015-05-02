@@ -8,3 +8,4 @@ site/npm-debug.log
 !/site/node_modules/
 .idea
 site/public/file/*
+site/data/*/*

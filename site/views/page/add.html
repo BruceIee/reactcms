@@ -34,19 +34,19 @@
     <div data-section="{{ sectionName }}" class="component-form">
         <div class="form-group">
             <label>Module</label>
-            <input type="text" class="form-control" name="module" placeholder="example: article">
+            <input type="text" class="form-control" name="module" value="{{ widgetInfo.module }}" placeholder="example: article">
         </div>
         <div class="form-group">
             <label>UI Component</label>
-            <input type="text" class="form-control" name="component" placeholder="example: ArticleDetail">
+            <input type="text" class="form-control" name="component" value="{{ widgetName }}" placeholder="example: ArticleDetail">
         </div>
         <div class="form-group">
             <label>Condition</label>
-            <textarea class="form-control" name="condition" placeholder="example: { &quot;name&quot;:&quot;main&quot; }"></textarea>
+            <textarea class="form-control" name="condition" placeholder="example: { &quot;name&quot;:&quot;main&quot; }">{{ widgetInfo.condition }}</textarea>
         </div>
         <div class="form-group">
             <label>Filter</label>
-            <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }"></textarea>
+            <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }">{{ widgetInfo.filter }}</textarea>
         </div>
         <div class="form-group">
             <button class="btn btn-default section-save">Save</button>
@@ -69,16 +69,16 @@
     <div class="row" style="margin-top:20px;">
         <div class="col-md-4">
             <div class="form-group row">
-                <label for="pageName" class="col-sm-3 control-label">Name</label>
-                <div class="col-sm-9">
+                <label for="pageName" class="col-sm-4 control-label">Name</label>
+                <div class="col-sm-8">
                     <input type="text" class="form-control" id="pageName" placeholder="">
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group row">
-                <label for="pageComposition" class="col-sm-3 control-label">Composition</label>
-                <div class="col-sm-9">
+                <label for="pageComposition" class="col-sm-4 control-label">Composition</label>
+                <div class="col-sm-8">
                     <select class="form-control composition-select"></select>
                 </div>
             </div>
