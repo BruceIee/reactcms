@@ -34,7 +34,7 @@ module.exports = function(app) {
     
     // data
     block.data.getPage = function(req, res) {
-        var callback = arguments[3] || null; 
+        var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         var pageName = parameter.pagename;
         var condition = { name:pageName };
@@ -97,10 +97,24 @@ module.exports = function(app) {
         });
     };
     
+    block.data.isPageNameExist = function(req, res) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        var pageName = parameter.pagename;
+        var condition = { name:pageName };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            info['pagename'] = pageName;
+            info['exist'] = docs.length > 0;
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
     block.data.addPage = function(req, res) {
         var callback = arguments[3] || null; 
         var page = tool.getReqParameter(req);
         page.create_date = new Date();
+        
         block.data.add(req, res, page, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
@@ -161,6 +175,7 @@ module.exports = function(app) {
     // data route
     app.server.get('/data/pages/:pagename', block.data.getPage);
     app.server.post('/data/pages/add', block.data.addPage);
+    app.server.get('/data/pages/:pagename/exist', block.data.isPageNameExist);
  
     // page route
     app.server.get('/pages', block.page.getIndex);
