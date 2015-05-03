@@ -124,12 +124,22 @@ function cleanPageData(pageData) {
 }
 
 function savePage() {
-    var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
     var pageName = $('#pageName').val();
-    app.pageData.name = pageName;
-    var pageData = cleanPageData(app.pageData);
-    console.log('save page:', pageData);
-    $.post(pageAddUrl, pageData, function(data) {
-        console.log('page saved:', data);
+    var pageExistUrl = '/data/pages/' + pageName + '/exist';
+    $.get(pageExistUrl, function(data) {
+        if (!data.info.exist) {
+            alert('Error: page ' + pageName + ' doesnot exist');
+            return;
+        } else {
+            var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
+            var pageName = $('#pageName').val();
+            app.pageData.name = pageName;
+            var pageData = cleanPageData(app.pageData);
+            console.log('save page:', pageData);
+            $.post(pageAddUrl, pageData, function(data) {
+                console.log('page saved:', data);
+                alert('page ' + pageName + ' is saved');
+            });
+        }
     });
 }

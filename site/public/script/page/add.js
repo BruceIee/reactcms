@@ -147,18 +147,27 @@ function getSectionData(parent) {
 function cleanPageData(pageData) {
     for (var sectionName in pageData.content) {
         var sectionData = pageData.content[sectionName];
-        console.log('>section:', sectionName, sectionData);
+        //console.log('>section:', sectionName, sectionData);
     }
     return pageData;
 }
 
 function savePage() {
-    var pageAddUrl = '/data/pages/add';
     var pageName = $('#pageName').val();
-    app.pageData.name = pageName;
-    var pageData = cleanPageData(app.pageData);
-    console.log('save page:', pageData);
-    $.post(pageAddUrl, pageData, function(data) {
-        console.log('page saved:', data);
+    var pageExistUrl = '/data/pages/' + pageName + '/exist';
+    $.get(pageExistUrl, function(data) {
+        if (data.info.exist) {
+            alert('Error: page ' + pageName + ' exists');
+            return;
+        } else {
+            var pageAddUrl = '/data/pages/add';
+            app.pageData.name = pageName;
+            var pageData = cleanPageData(app.pageData);
+            console.log('save page:', pageData);
+            $.post(pageAddUrl, pageData, function(data) {
+                console.log('page saved:', data);
+                alert('page ' + pageName + ' is saved');
+            });
+        }
     });
 }
