@@ -12,6 +12,10 @@
 .section-item-active {
     background-color: #f2f2f2;
 }
+.section-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
 </style>
 {% endblock %}
 
@@ -33,7 +37,7 @@
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}
 <div class="component-entry">
-    <h4>Section: {{ sectionName }}</h4>
+    <h4 class="section-header">Section {{ sectionName }}</h4>
     <div data-section="{{ sectionName }}" class="component-form">
         <div class="form-group">
             <label>Module</label>
