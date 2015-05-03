@@ -1,12 +1,7 @@
 var app = app || {};
-app.compositionCol = {}; // composition collection keyed by composition name
-app.pageData = {
-    composition: null,
-    content: {}
-};
 
 $().ready(function() {
-    setupPage(app.pageObject);
+    setupPage(app.pageData);
     setup();
 });
 
