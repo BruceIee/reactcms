@@ -1,31 +1,22 @@
 var app = app || {};
-app.compositionCol = {}; // composition collection keyed by composition name
-app.pageData = {
-    composition: null,
-    content: {}
-};
 
 $().ready(function() {
-    
+    setupPage(app.pageData);
     setup();
 });
 
-
-function setupComposition() {
-    /*
-    var widgetDetailUrl = '/data/components/get/detail';
-    $.get(widgetDetailUrl, widget, function(data) {
-        console.log('data.docs.length:', data.docs.length);
-        if (data.docs.length <= 0) return;
-        
-        var cabinetData = { items: [] };
+function setupPage(page) {
+    $('#pageComposition').val(page.composition);
+    var compositionDataUrl = '/data/compositions/' + page.composition;
+    $.get(compositionDataUrl, function(data) {
+        var composition = data.docs && data.docs[0] || null;
+        if (composition) {
+            setupCompositionSections(composition);
+        }
     });
-    */
 }
 
 function setup() {
-    // setup composition
-    
     // setup section event
     $('.section-container').click(function(event) {
         if ($(event.target).hasClass('section-item')) {
@@ -48,23 +39,6 @@ function setup() {
     });
     // save page button
     $('.btn-save-page').click(savePage);
-}
-
-function setupCompositionSelect() {
-    app.compositionSelect.append('<option>Select composition</option>');
-    for (var name in app.compositionCol) {
-        app.compositionSelect.append('<option value="' + name + '">' + name + '</option>');
-    }
-}
-
-function onCompositionSelect(event) {
-    var composition = null;
-    var compositionName =  $(event.target).val();
-    if (compositionName) {
-        composition = app.compositionCol[compositionName];
-        app.pageData.composition = compositionName;
-        setupCompositionSections(composition);
-    }
 }
 
 function setupCompositionSections(composition) {
@@ -142,7 +116,7 @@ function cleanPageData(pageData) {
 }
 
 function savePage() {
-    var pageAddUrl = '/data/pages/add';
+    var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
     var pageName = $('#pageName').val();
     app.pageData.name = pageName;
     var pageData = cleanPageData(app.pageData);
