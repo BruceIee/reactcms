@@ -15,7 +15,14 @@
 {% block script %}
 {% parent %}
 <script src="/library/handlebars/handlebars.min.js"></script>
+<script>
+var app = {
+    pageName:"{{ page.pageObject.name }}"
+};
+var pageObject = {{ page.pageObject|json|raw }};
+</script>
 <script src="/script/page/edit.js"></script>
+
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}
 <div class="component-entry">
@@ -51,7 +58,7 @@
     
     <div class="row">
         <h4 class="col-md-12">
-            Edit Page: {{ page.pageObject.name }}
+            Edit Page
         </h4>
     </div>
     
@@ -60,7 +67,7 @@
             <div class="form-group row">
                 <label for="pageName" class="col-sm-4 control-label">Name</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="pageName" placeholder="">
+                    <input type="text" class="form-control" id="pageName" value="{{ page.pageObject.name }}" />
                 </div>
             </div>
         </div>
@@ -68,7 +75,7 @@
             <div class="form-group row">
                 <label for="pageComposition" class="col-sm-4 control-label">Composition</label>
                 <div class="col-sm-8">
-                    <select class="form-control composition-select"></select>
+                    <input type="text" class="form-control" id="pageComposition" />
                 </div>
             </div>
         </div>

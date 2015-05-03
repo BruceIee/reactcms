@@ -6,22 +6,26 @@ app.pageData = {
 };
 
 $().ready(function() {
+    
     setup();
 });
 
-function setup() {
-    // setup composition dropdown combobox
-    app.compositionSelect = $('.composition-select');
-    var compositionListUrl = '/data/compositions';
-    $.get(compositionListUrl, function(data) {
-        var compositions = data.docs;
-        for (var i = 0; i < compositions.length; i++) {
-            var composition = compositions[i];
-            app.compositionCol[composition.name] = composition;
-        }
-        setupCompositionSelect();
+
+function setupComposition() {
+    /*
+    var widgetDetailUrl = '/data/components/get/detail';
+    $.get(widgetDetailUrl, widget, function(data) {
+        console.log('data.docs.length:', data.docs.length);
+        if (data.docs.length <= 0) return;
+        
+        var cabinetData = { items: [] };
     });
-    app.compositionSelect.on('change', onCompositionSelect);
+    */
+}
+
+function setup() {
+    // setup composition
+    
     // setup section event
     $('.section-container').click(function(event) {
         if ($(event.target).hasClass('section-item')) {

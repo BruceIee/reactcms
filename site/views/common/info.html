@@ -28,7 +28,7 @@
         {% if page && page.info %}
             <i class="glyphicon glyphicon-info-sign"></i>
             <span>
-                {{ page.info.message|raw }}
+                {{ page.info.message|json|raw }}
             </span>
         {% endif %}
     </div>
