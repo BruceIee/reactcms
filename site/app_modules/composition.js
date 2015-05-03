@@ -50,7 +50,6 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var name = parameter.name;
         block.data.getDataByName(req, res, name, function(error, docs, info) {
-            
             app.cb(error, docs, info, req, res, callback);
         });
     };
