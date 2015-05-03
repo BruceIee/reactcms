@@ -120,6 +120,14 @@ module.exports = function(app) {
         });
     };
     
+    block.data.editPage = function(req, res) {
+        var callback = arguments[3] || null; 
+        var page = tool.getReqParameter(req);
+        block.data.edit(req, res, page, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
     // page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
@@ -178,6 +186,7 @@ module.exports = function(app) {
     app.server.get('/data/pages/:pagename', block.data.getPage);
     app.server.post('/data/pages/add', block.data.addPage);
     app.server.get('/data/pages/:pagename/exist', block.data.isPageNameExist);
+    app.server.post('/data/pages/:id/edit', block.data.editPage);
  
     // page route
     app.server.get('/pages', block.page.getIndex);

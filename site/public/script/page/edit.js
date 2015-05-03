@@ -116,7 +116,7 @@ function cleanPageData(pageData) {
 }
 
 function savePage() {
-    var pageAddUrl = '/data/pages/add';
+    var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
     var pageName = $('#pageName').val();
     app.pageData.name = pageName;
     var pageData = cleanPageData(app.pageData);
