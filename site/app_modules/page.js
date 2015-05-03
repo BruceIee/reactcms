@@ -140,10 +140,10 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
         var pageId = parameter.id;
-        //console.log('edit page id:', pageId);
         block.data.getById(req, res, pageId, function(error, docs, info) {
             var page = app.getPage(req);
             page.pageObject = docs && docs[0] || null;
+            //console.log('edit page id:', pageId, page.pageObject);
             res.render('page/edit', { page:page });
         });
     };
