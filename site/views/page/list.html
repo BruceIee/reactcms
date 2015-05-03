@@ -41,25 +41,29 @@
             </thead>
             <tbody>
                 {% for eachPage in page.pages %}
-                    <tr>
-                        <td>
-                            <a href="/pages/{{eachPage._id.toString()}}/detail" title="see detail">{{eachPage.name}}</a>
-                        </td>
-                        <td>
-                            {{ eachPage.description }}
-                        </td>                  
-                        <td>
-                            {{ eachPage.composition }}
-                        </td>
-                        <td>
-                            {{ eachPage.content|json_encode }}
-                        </td>
-                        <td>
-                            <a class="glyphicon glyphicon-edit" href="/pages/{{eachPage._id.toString()}}/edit" title="edit"></a>
-                            &nbsp;
-                            <a class="glyphicon glyphicon-remove" href="/pages/{{eachPage._id.toString()}}/del" title="del"></a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        <a href="/pages/{{ eachPage.name }}" title="see page">
+                            {{ eachPage.name }}
+                        </a>
+                    </td>
+                    <td>
+                        {{ eachPage.description }}
+                    </td>                  
+                    <td>
+                        {{ eachPage.composition }}
+                    </td>
+                    <td>
+                        {{ eachPage.content|json_encode }}
+                    </td>
+                    <td>
+                        <a class="glyphicon glyphicon-edit" href="/pages/{{eachPage._id.toString()}}/edit" title="edit"></a>
+                        <!--
+                        &nbsp;
+                        <a class="glyphicon glyphicon-remove" href="/pages/{{eachPage._id.toString()}}/del" title="del"></a>
+                        -->
+                    </td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
