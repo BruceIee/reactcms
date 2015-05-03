@@ -1,13 +1,18 @@
 var app = app || {};
 app.compositionCol = {}; // composition collection keyed by composition name
-app.pageData = {
-    composition: null,
-    content: {}
-};
+app.pageData = null;
 
 $().ready(function() {
+    resetPageData();
     setup();
 });
+
+function resetPageData() {
+    app.pageData = {
+        composition: null,
+        content: {}
+    };
+}
 
 function setup() {
     // setup composition dropdown combobox
@@ -57,6 +62,9 @@ function onCompositionSelect(event) {
     var composition = null;
     var compositionName =  $(event.target).val();
     if (compositionName) {
+        // clear app.pageData
+        resetPageData();
+        // use selected composition
         composition = app.compositionCol[compositionName];
         app.pageData.composition = compositionName;
         setupCompositionSections(composition);
@@ -64,7 +72,6 @@ function onCompositionSelect(event) {
 }
 
 function setupCompositionSections(composition) {
-    //console.log('setupCompositionSections:', composition);
     $('.section-container').empty();
     var sections = composition.data;
     for (var i = 0; i < sections.length; i++) {
@@ -75,9 +82,17 @@ function setupCompositionSections(composition) {
             '</div>'
         );
     }
+    // select first section for content display on right
+    if (sections.length > 0) {
+        showSectionContent(sections[0].name);
+    }
 }
 
 function showSectionContent(sectionName) {
+    // set selected section to active state
+    $('.section-item').removeClass('section-item-active');
+    $('.section-item[data-name=' + sectionName + ']').addClass('section-item-active');
+    // show section content
     var source   = $("#component-entry-template").html();
     var template = Handlebars.compile(source);
     var context = app.pageData.content[sectionName] || [];
