@@ -53,9 +53,17 @@ function setupCompositionSections(composition) {
             '</div>'
         );
     }
+    // select first section for content display on right
+    if (sections.length > 0) {
+        showSectionContent(sections[0].name);
+    }
 }
 
 function showSectionContent(sectionName) {
+    // set selected section to active state
+    $('.section-item').removeClass('section-item-active');
+    $('.section-item[data-name=' + sectionName + ']').addClass('section-item-active');
+    // show section content
     var source   = $("#component-entry-template").html();
     var template = Handlebars.compile(source);
     var context = app.pageData.content[sectionName] || [];

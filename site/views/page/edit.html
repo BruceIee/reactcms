@@ -9,6 +9,13 @@
     margin-top: 10px;
     border: solid 1px #f2f2f2;
 }
+.section-item-active {
+    background-color: #f2f2f2;
+}
+.section-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
 </style>
 {% endblock %}
 
@@ -26,7 +33,7 @@ var app = {
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}
 <div class="component-entry">
-    <h4>Section: {{ sectionName }}</h4>
+    <h4 class="section-header">Section {{ sectionName }}</h4>
     <div data-section="{{ sectionName }}" class="component-form">
         <div class="form-group">
             <label>Module</label>
@@ -38,7 +45,7 @@ var app = {
         </div>
         <div class="form-group">
             <label>Condition</label>
-            <textarea class="form-control" name="condition" placeholder="example: { &quot;name&quot;:&quot;main&quot; }">{{ widgetInfo.condition }}</textarea>
+            <textarea class="form-control" name="condition" placeholder="example: { &quot;title&quot;:&quot;my title&quot; }">{{ widgetInfo.condition }}</textarea>
         </div>
         <div class="form-group">
             <label>Filter</label>
