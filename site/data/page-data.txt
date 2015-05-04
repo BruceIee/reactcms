@@ -20,12 +20,9 @@
             "type": "date"
         }
     },
-    "count":7,
+    "count":2,
     "items": [
         {
-            "_id": "5531cc53c0f08c1011a4b4f6",
-            "name": "main",
-            "description": "test page",
             "composition": "sidenav",
             "content": {
                 "r1c1": [
@@ -33,34 +30,11 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
+                            "conditionText": "{ \"title\":\"header\" }",
                             "condition": {
-                                "title": "mccpta-title"
+                                "title": "header"
                             },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home-links"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {},
-                            "filter": {
-                                "limit": 2
-                            }
+                            "filterText": ""
                         }
                     }
                 ],
@@ -69,45 +43,11 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
+                            "conditionText": "{ \"title\":\"footer\" }",
                             "condition": {
-                                "title": "mccpta-footer"
+                                "title": "footer"
                             },
-                            "filter": {}
-                        }
-                    }
-                ]
-            },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
-        },
-        {
-            "_id": "5531cc53c0f08c1011a4b4f8",
-            "name": "advocacy",
-            "description": "test page",
-            "composition": "sidenav",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "title": "mccpta-title"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home-links"
-                            },
-                            "filter": {}
+                            "filterText": ""
                         }
                     }
                 ],
@@ -116,33 +56,11 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": {},
-                            "filter": {
-                                "limit": 1
-                            }
-                        }
-                    }
-                ]
-            },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
-        },
-        {
-            "_id": "5531cc53c0f08c1011a4b4f9",
-            "name": "events",
-            "description": "test page",
-            "composition": "sidenav",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
+                            "conditionText": "{ \"type\":\"news\" }",
                             "condition": {
-                                "title": "mccpta-title"
+                                "type": "news"
                             },
-                            "filter": {}
+                            "filterText": ""
                         }
                     }
                 ],
@@ -151,81 +69,21 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
+                            "conditionText": "{ \"name\":\"main\" }",
                             "condition": {
-                                "name": "home-links"
+                                "name": "main"
                             },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {},
-                            "filter": {
-                                "limit": 1
-                            }
+                            "filterText": ""
                         }
                     }
                 ]
             },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
-        },
-        {
-            "_id": "5531cc53c0f08c1011a4b4fb",
-            "name": "engage",
-            "description": "test page",
-            "composition": "sidenav",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "title": "mccpta-title"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home-links"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {},
-                            "filter": {
-                                "limit": 1
-                            }
-                        }
-                    }
-                ]
-            },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
-        },
-        {
-            "_id": "55328541dca21c6f0a969cca",
             "name": "home",
-            "description": "home page",
+            "create_date": "2015-05-04T00:57:39.624Z",
+            "_class": "page",
+            "_id": "5546c4031a43a24c188b8ed9"
+        },
+        {
             "composition": "sidenav",
             "content": {
                 "r1c1": [
@@ -233,10 +91,11 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
+                            "conditionText": "{ \"title\":\"header\" }",
                             "condition": {
-                                "title": "mccpta-title"
+                                "title": "header"
                             },
-                            "filter": {}
+                            "filterText": ""
                         }
                     }
                 ],
@@ -245,10 +104,11 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
+                            "conditionText": "{ \"name\":\"main\" }",
                             "condition": {
-                                "name": "home-links"
+                                "name": "main"
                             },
-                            "filter": {}
+                            "filterText": ""
                         }
                     }
                 ],
@@ -257,9 +117,13 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "condition": {},
+                            "conditionText": "{\"type\":\"news\"}",
+                            "condition": {
+                                "type": "news"
+                            },
+                            "filterText": "{\"limit\":1}",
                             "filter": {
-                                "limit": 2
+                                "limit": "1"
                             }
                         }
                     }
@@ -269,111 +133,19 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
+                            "conditionText": "{ \"title\":\"footer\" }",
                             "condition": {
-                                "title": "mccpta-footer"
+                                "title": "footer"
                             },
-                            "filter": {}
+                            "filterText": ""
                         }
                     }
                 ]
             },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
-        },
-        {
-            "_id": "5531cc53c0f08c1011a4b4fa",
-            "name": "soca",
-            "description": "test page",
-            "composition": "sidenav",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "title": "mccpta-title"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home-links"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {},
-                            "filter": {
-                                "limit": 1
-                            }
-                        }
-                    }
-                ]
-            },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
-        },
-        {
-            "_id": "5531cc53c0f08c1011a4b4f7",
-            "name": "news",
-            "description": "test page",
-            "composition": "sidenav",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "title": "mccpta-title"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home-links"
-                            },
-                            "filter": {}
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {},
-                            "filter": {
-                                "limit": 1
-                            }
-                        }
-                    }
-                ]
-            },
-            "status": "",
-            "create_date": null,
-            "_class": "page"
+            "name": "about",
+            "create_date": "2015-05-04T01:06:44.730Z",
+            "_class": "page",
+            "_id": "5546c6241a43a24c188b8edb"
         }
     ]
 }

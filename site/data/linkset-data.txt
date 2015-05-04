@@ -23,35 +23,20 @@
     "count":1,
     "items": [
         {
-            "_id": "55305d2b3b09a96209f4266a",
-            "name": "home-links",
-            "title": "Links",
+            "name": "main",
             "content": [
                 {
-                    "text": "In the News",
-                    "hyperlink": "/pages/news"
+                    "text": "Home",
+                    "hyperlink": "/pages/home"
                 },
                 {
-                    "text": "Advocacy",
-                    "hyperlink": "/pages/advocacy"
-                },
-                {
-                    "text": "Events",
-                    "hyperlink": "/pages/events"
-                },
-                {
-                    "text": "SoCA",
-                    "hyperlink": "/pages/soca"
-                },
-                {
-                    "text": "Engage",
-                    "hyperlink": "/pages/engage"
+                    "text": "About",
+                    "hyperlink": "/pages/about"
                 }
             ],
-            "create_date": "2015-04-17T01:08:59.263Z",
+            "create_date": "2015-05-04T00:59:22.837Z",
             "_class": "linkset",
-            "type": "",
-            "status": ""
+            "_id": "5546c46a1a43a24c188b8eda"
         }
     ]
 }
