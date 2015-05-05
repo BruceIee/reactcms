@@ -189,10 +189,14 @@ module.exports = function(app) {
     app.server.post('/data/pages/:id/edit', block.data.editPage);
  
     // page route
+    app.server.all('/pages', block.page.checkLogin);
     app.server.get('/pages', block.page.getIndex);
+    app.server.all('/pages/add', block.page.checkLogin);
     app.server.get('/pages/add', block.page.addPage);
     app.server.post('/pages/add', block.page.addPagePost);
+    app.server.all('/pages/:id/edit', block.page.checkLogin);
     app.server.get('/pages/:id/edit', block.page.editPage);
+    app.server.all('/pages/list', block.page.checkLogin);
     app.server.get('/pages/list', block.page.getPageList);
     app.server.get('/pages/:pagename', block.page.getPage);
     

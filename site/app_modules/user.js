@@ -164,8 +164,7 @@ module.exports = function(app) {
                 message: 'Invite code is wrong'
             };
             app.renderInfoPage(new Error(text), null, info, req, res);
-        }
-        else {
+        } else {
             block.data.addUser(req, res, null, function(error, docs, info) {
                 if (error) {
                     app.renderInfoPage(error, docs, info, req, res);
@@ -174,7 +173,7 @@ module.exports = function(app) {
                     var nextUrl = parameter.redirect || '/';
                     res.redirect(nextUrl);
                 }
-            });            
+            });         
         }
     };
     
