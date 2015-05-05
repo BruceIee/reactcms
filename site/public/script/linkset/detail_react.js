@@ -21,4 +21,23 @@ function showLinksetDetail(linkset) {
         <LinksetDetail data={ linkset } />,
         document.getElementById('linksetDetail')
     );
+    app.itemDetail2 = React.render(
+        <LinksetDetail2 data={ linkset } />,
+        document.getElementById('linksetDetail2')
+    );
+    changeDirection($('#my_select').val());
+}
+
+function changeDirection(value) {
+    //alert(sel.value);
+    var direction = value;
+    if ( direction == 'vertical' ) {
+        $('#linksetDetail').show();
+        $('#linksetDetail2').hide();
+    }
+    else if (direction == 'horizontal' ) {
+        $('#linksetDetail').hide();
+        $('#linksetDetail2').show();
+    }
+    
 }

@@ -26,11 +26,16 @@ app.linksetId = '{{ page.linksetId }}';
         <h4 class="col-md-6">
             Linkset Detail (React)
         </h4>
+        <select id="my_select" onchange="changeDirection(this.value)">
+            <option value="vertical" selected="selected">Vertical</option>
+            <option value="horizontal">Horizontal</option>
+        </select>
     </div>
-    
+
     <div class="row" style="margin-top:10px;">
         <div class="col-md-6">
             <div id="linksetDetail"></div>
+            <div id="linksetDetail2"></div>
         </div>
     </div>
     
