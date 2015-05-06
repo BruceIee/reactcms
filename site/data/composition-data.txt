@@ -23,10 +23,9 @@
             "type": "date"
         }
     },
-    "count":1,
+    "count":2,
     "items": [
         {
-            "_id": "553ae8f98b15b09519219da2",
             "name": "sidenav",
             "description": "sidenav composition",
             "filename": "sidenav.html",
@@ -48,6 +47,41 @@
                 },
                 {
                     "name": "r3c1",
+                    "description": "footer",
+                    "width": 12
+                }
+            ],
+            "status": "",
+            "create_date": null,
+            "_class": "composition"
+        },
+        {
+            "name": "vertflow",
+            "description": "vertical flow composition",
+            "filename": "vertflow.html",
+            "data": [
+                {
+                    "name": "r1c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
+                    "name": "r2c1",
+                    "description": "content1",
+                    "width": 12
+                },
+                {
+                    "name": "r3c1",
+                    "description": "content2",
+                    "width": 12
+                },
+                {
+                    "name": "r4c1",
+                    "description": "content3",
+                    "width": 12
+                },
+                {
+                    "name": "r5c1",
                     "description": "footer",
                     "width": 12
                 }

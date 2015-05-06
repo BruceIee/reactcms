@@ -1,0 +1,67 @@
+{% extends '../layout/layout-bare.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/component/common/common-style.css"/>
+<link rel="stylesheet" href="/component/item/detail.css"/>
+<link rel="stylesheet" href="/component/article/detail.css"/>
+<link rel="stylesheet" href="/component/linkset/detail.css"/>
+<link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
+<style></style>
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/react/react.js"></script>
+<script src="/library/react/JSXTransformer.js"></script>
+<script type="text/jsx" src="/component/common/common-mixin.js"></script>
+<script type="text/jsx" src="/component/item/detail.js"></script>
+<script type="text/jsx" src="/component/article/detail.js"></script>
+<script type="text/jsx" src="/component/linkset/detail.js"></script>
+<script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
+<script type="text/jsx" src="/script/page/support.js"></script>
+
+<script type="text/jsx">
+var app = app || {};
+app.pageContent = {{ page.pageData.content|json|safe}};
+app.pageComposition = {{ page.compositionData|json|safe}};
+</script>
+<script type="text/jsx" src="/script/composition/render.js"></script>
+<script type="text/jsx" src="/script/composition/vertflow.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r1c1 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r2c1 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r3c1 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r4c1 widget-container"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r5c1 widget-container"></div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
