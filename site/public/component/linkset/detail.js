@@ -63,29 +63,20 @@ var LinksetDetail2 = React.createClass({
     render: function() {
         var groups = this.state.content.map(function (group) {
             return (
-                <td>
-                    &bull;
-                    <a href={ group.hyperlink }> { group.text } </a>
-                    &nbsp;&nbsp;&nbsp;
+                <td className="linksetdetail2-item">
+                    <a href={ group.hyperlink }>{ group.text }</a>
                 </td>
             );
         });
 
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
-                <div className="panel panel-default">
-                    <div className="panel-heading">
-                        { this.state.title }
-                    </div>
-                    <div className="panel-body">
-                        <table>
-                            <tr>
-                                { groups }
-                            </tr>    
-                        </table>
-                    </div>
-                </div>
-            </div>    
+                <table>
+                    <tr>
+                        { groups }
+                    </tr>    
+                </table>
+            </div>
         );
     }
 });

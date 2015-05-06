@@ -1,3 +1,15 @@
 .label-as-badge {
     border-radius: 1em;
 }
+
+.linksetdetail2-item {
+    padding: 5px 10px;
+}
+
+.linksetdetail2-item a {
+    text-decoration: none;
+}
+
+.linksetdetail2-item a:hover {
+    font-weight: bold;
+}

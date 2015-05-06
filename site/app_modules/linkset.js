@@ -98,8 +98,6 @@ module.exports = function(app) {
     };    
     
     
-    
-    
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('item/index', { page:page });
@@ -134,14 +132,8 @@ module.exports = function(app) {
         var id = parameter.id;
         block.data.getById(req, res, id, function(error, docs, info) {
             var item = docs && docs[0] || null;
-            
-            console.log('>>> ', error, docs, info);
-            
             var page = app.getPage(req);
             page.item = item;
-            
-            console.log('>>> item:', page.item);
-                
             res.render('item/detail', { page:page });
         });
     };
@@ -180,9 +172,6 @@ module.exports = function(app) {
         res.render('linkset/detail_react', { page:page });
     };    
     
-    
-    
-    
     // data route
     //app.server.post('/data/items/add', block.data.addItem);
     app.server.get('/data/linksets', block.data.getLinkset);
@@ -190,13 +179,6 @@ module.exports = function(app) {
     app.server.get('/data/linksets/:id/detail', block.data.getLinksetDetail);
     
     // page route
-    //app.server.get('/items', block.page.getIndex);
-    //app.server.get('/items/home', block.page.getIndex);
-    //app.server.get('/items/add', block.page.addItem);
-    //app.server.post('/items/add', block.page.addItemPost);
-    //app.server.get('/items/list', block.page.getItemList);
-    //app.server.get('/items/:id/detail', block.page.getItemDetail);
-    
     app.server.all('/linksets', block.page.checkLogin);
     app.server.all('/linksets/*', block.page.checkLogin);
     app.server.get('/linksets', block.page.linksetHome);

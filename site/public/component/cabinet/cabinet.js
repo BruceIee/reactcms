@@ -5,7 +5,8 @@ var Cabinet = React.createClass({
     components: {
         ItemDetail: ItemDetail,
         ArticleDetail: ArticleDetail,
-        LinksetDetail: LinksetDetail
+        LinksetDetail: LinksetDetail,
+        LinksetDetail2: LinksetDetail2
     },
 
     // attribute definitions
