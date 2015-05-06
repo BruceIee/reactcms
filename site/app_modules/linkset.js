@@ -182,7 +182,7 @@ module.exports = function(app) {
     app.server.all('/linksets', block.page.checkLogin);
     app.server.all('/linksets/*', block.page.checkLogin);
     app.server.get('/linksets', block.page.linksetHome);
-    app.server.get('/linksets/add_links', block.page.addLinkset);
+    app.server.get('/linksets/add_linkset', block.page.addLinkset);
     app.server.get('/linksets/show_all', block.page.showAll);
     
     // page react test route

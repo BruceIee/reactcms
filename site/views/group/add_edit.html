@@ -1,0 +1,82 @@
+{% extends '../layout/layout.html' %}
+
+{% block script %}
+{% parent %}
+{% endblock %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block content %}
+{% set group = page.group %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-8" style="margin:40px auto;font-size:2.1em;color:#666;">
+            <div style="text-align:center;">{{page.title}}</div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+
+        <form role="form" action="{{page.formAction}}" method="POST" enctype="mulitpart/form-data">
+            <fieldset>
+                
+                {% if page.operation == 'Edit' %}
+                    <input type="hidden" name="id_hidden" value="{{group._id + ''}}" />
+                {% endif %} 
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    {% if page.operation == 'Add' %}
+                        <input class="form-control" type="text" id="name" name="name" value="" placeholder="Name" required>
+                    {% elseif page.operation == 'Edit' %}
+                        <input class="form-control" type="text" id="name" name="name" value="{{group.name}}" placeholder="Name" required>
+                    {% endif %}     
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    {% if page.operation == 'Add' %}
+                        <input class="form-control" type="text" id="type" name="type" value="" placeholder="Type">
+                    {% elseif page.operation == 'Edit' %}
+                        <input class="form-control" type="text" id="type" name="type" value="{{group.type}}" placeholder="Type">
+                    {% endif %}     
+                </div>
+            
+                <div class="form-group">
+                    <label for="type">Description</label>
+                    {% if page.operation == 'Add' %}
+                        <input class="form-control" type="text" id="description" name="description" value="" placeholder="Description">
+                    {% elseif page.operation == 'Edit' %}
+                        <input class="form-control" type="text" id="description" name="description" value="{{group.description}}" placeholder="Description">
+                    {% endif %}     
+                </div>
+            
+                <div class="form-group">
+                    <label for="type">Status</label>
+                    {% if page.operation == 'Add' %}
+                        <input class="form-control" type="text" id="status" name="status" value="" placeholder="Status">
+                    {% elseif page.operation == 'Edit' %}
+                        <input class="form-control" type="text" id="status" name="status" value="{{group.status}}" placeholder="Status">
+                    {% endif %}     
+                </div>
+            
+                <div class="form-group">
+                    <label for="type">Users</label>
+                    {% if page.operation == 'Add' %}
+                        <input class="form-control" type="text" id="users" name="users" value="" placeholder="Users">
+                    {% elseif page.operation == 'Edit' %}
+                        <input class="form-control" type="text" id="users" name="users" value="{{group.users}}" placeholder="Users">
+                    {% endif %}     
+                </div>
+            </fieldset>
+            
+            <button type="submit" class="btn btn-primary">{{page.operation}}</button>
+        </form>
+    
+    </div>
+
+</div>
+{% endblock %}

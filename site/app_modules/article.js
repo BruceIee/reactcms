@@ -51,7 +51,6 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var article = tool.getReqParameter(req);
         article.create_date = new Date();
-        console.log('article=',article);
         block.data.add(req, res, article, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
@@ -61,8 +60,6 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var article = tool.getReqParameter(req);
         article.create_date = new Date();
-        console.log('article=',article);
-        //process.exit();
         block.data.add(req, res, article, function(error, docs, info) {
             //app.cb(error, docs, info, req, res, callback);
             res.redirect('/articles/list');
@@ -72,13 +69,12 @@ module.exports = function(app) {
     block.data.editWysiwygPost = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
-        console.log('parameter=',parameter);
         var id = parameter.id_hidden;
-        
         block.data.getById(req, res, id, function(error, docs, info) {
             var article = docs && docs[0] || null;
             article.title = parameter.title;
             article.content = parameter.content;
+            article.type = parameter.type;
             article.edit_date = new Date();
             block.data.edit(req, res, article, function(error, docs, info) {
                 res.redirect('/articles/list');
@@ -91,9 +87,8 @@ module.exports = function(app) {
         var img = tool.getReqParameter(req);
         console.log('img=',img);
         var url = img.file.name;
-        console.log('url=',url);
+        //console.log('url=',url);
         res.send(url);
-        //process.exit();
     };  
 
     block.data.getArticles = function(req, res) {
@@ -154,7 +149,6 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var condition = {};
         var filter = {};
-        
         app.db.find(moduleName, condition, filter, function(error, docs, info){
             var page = app.getPage(req);
             page.title = 'List of articles';
