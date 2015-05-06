@@ -12,3 +12,8 @@ run the following commands to populate database:
 node cmd.js initdb
 node cmd.js import
 ```
+
+or
+```
+bin/refreshdb
+```
