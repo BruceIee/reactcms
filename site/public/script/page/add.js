@@ -163,10 +163,13 @@ function savePage() {
             var pageAddUrl = '/data/pages/add';
             app.pageData.name = pageName;
             var pageData = cleanPageData(app.pageData);
-            console.log('save page:', pageData);
             $.post(pageAddUrl, pageData, function(data) {
-                console.log('page saved:', data);
-                alert('page ' + pageName + ' is saved');
+                //alert('page ' + pageName + ' is saved');
+                var page = data.docs && data.docs[0] || null;
+                if (page) {
+                    var pageEditUrl = '/pages/' + page._id + '/edit';
+                    window.location = pageEditUrl;
+                }
             });
         }
     });
