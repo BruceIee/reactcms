@@ -69,6 +69,11 @@ function onCompositionSelect(event) {
         app.pageData.composition = compositionName;
         setupCompositionSections(composition);
         setupCompositionSectionContents(composition);
+        // select first section for content display on right
+        var sections = composition.data;
+        if (sections.length > 0) {
+            showSectionContent(sections[0].name);
+        }
     }
 }
 
@@ -84,12 +89,6 @@ function setupCompositionSections(composition) {
             '</div>'
         );
     }
-    /*
-    // select first section for content display on right
-    if (sections.length > 0) {
-        showSectionContent(sections[0].name);
-    }
-    */
 }
 
 // setup compoisiton section content panels on right side
@@ -100,16 +99,23 @@ function setupCompositionSectionContents(composition) {
     for (var i = 0; i < sections.length; i++) {
         var section = sections[i];
         $('.block-container').append(
-            '<div class="section-item-content" data-name="' + section.name + '">' +
+            '<div class="section-content hidden" data-name="' + section.name + '">' +
             section.name + '</div>'
         );
     }
 }
 
 function showSectionContent(sectionName) {
+    
     // set selected section to active state
     $('.section-item').removeClass('section-item-active');
     $('.section-item[data-name=' + sectionName + ']').addClass('section-item-active');
+    
+    // show section content
+    $('.section-content').addClass('hidden');    
+    $('.section-content[data-name=' + sectionName + ']').removeClass('hidden');
+    
+    /*
     // show section content
     var source   = $("#component-entry-template").html();
     var template = Handlebars.compile(source);
@@ -127,6 +133,7 @@ function showSectionContent(sectionName) {
     // todo - change for card layout
     $('.block-container').empty();
     $('.block-container').append(html);
+    */
     
 }
 
