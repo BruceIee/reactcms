@@ -169,14 +169,19 @@ function getSectionData(parent) {
     return sectionData;
 }
 
+/*
 function cleanPageData(pageData) {
     for (var sectionName in pageData.content) {
         var sectionData = pageData.content[sectionName];
     }
     return pageData;
 }
+*/
 
 function savePage() {
+    // retrievre section data from sections content panels
+    retrievePageSectionData();
+    // check page name is unique or not
     var pageName = $('#pageName').val();
     var pageExistUrl = '/data/pages/' + pageName + '/exist';
     $.get(pageExistUrl, function(data) {
@@ -186,8 +191,8 @@ function savePage() {
         } else {
             var pageAddUrl = '/data/pages/add';
             app.pageData.name = pageName;
-            var pageData = cleanPageData(app.pageData);
-            $.post(pageAddUrl, pageData, function(data) {
+            //var pageData = cleanPageData(app.pageData);
+            $.post(pageAddUrl, app.pageData, function(data) {
                 //alert('page ' + pageName + ' is saved');
                 var page = data.docs && data.docs[0] || null;
                 if (page) {
@@ -197,4 +202,20 @@ function savePage() {
             });
         }
     });
+}
+
+function retrievePageSectionData() {
+    var composition = app.compositionCol[app.pageData.composition];
+    var sections = composition.data;
+    for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        var sectionName = section.name;
+        var componentForm = $('.section-content[data-name=' + sectionName + ']');
+        var sectionDataItem = getSectionData(componentForm);
+        if (sectionDataItem) {
+            app.pageData.content[sectionName] = [sectionDataItem];
+        } else {
+            app.pageData.content[sectionName] = '';
+        }
+    }
 }
