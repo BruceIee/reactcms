@@ -115,11 +115,14 @@ function populateSectionContent(sectionName, template) {
     var context = app.pageData.content[sectionName] || [];
     context = context && context[0] || {};
     context['sectionName'] = sectionName;
-    if (context.widgetInfo && context.widgetInfo.conditionText) {
-        context.widgetInfo.condition = context.widgetInfo.conditionText;
+    context.widgetInfo = context.widgetInfo || {};
+    context.widgetInfo.condition = null;
+    context.widgetInfo.filter = null;
+    if (context.widgetInfo && context.widgetInfo.condition) {
+        context.widgetInfo.condition = JSON.stringify(context.widgetInfo.condition);
     }
-    if (context.widgetInfo && context.widgetInfo.filterText) {
-        context.widgetInfo.filter = context.widgetInfo.filterText;
+    if (context.widgetInfo && context.widgetInfo.filter) {
+        context.widgetInfo.filter = JSON.stringify(context.widgetInfo.filter);
     }
     var html = template(context);
     $('.section-content[data-name=' + sectionName + ']').append(html);
@@ -159,24 +162,13 @@ function getSectionData(parent) {
             widgetName: componentName,
             widgetInfo: {
                 module: moduleName,
-                conditionText: conditionText,
-                condition: getJsonFromText(conditionText) || {},
-                filterText: filterText,
-                filter: getJsonFromText(filterText) || {}
+                condition: getJsonFromText(conditionText) || null,
+                filter: getJsonFromText(filterText) || null
             }
         };
     }
     return sectionData;
 }
-
-/*
-function cleanPageData(pageData) {
-    for (var sectionName in pageData.content) {
-        var sectionData = pageData.content[sectionName];
-    }
-    return pageData;
-}
-*/
 
 function savePage() {
     // retrievre section data from sections content panels
@@ -215,7 +207,7 @@ function retrievePageSectionData() {
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
         } else {
-            app.pageData.content[sectionName] = '';
+            app.pageData.content[sectionName] = null;
         }
     }
 }
