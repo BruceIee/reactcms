@@ -36,7 +36,10 @@
             ],
             "create_date": "2015-05-04T00:59:22.837Z",
             "_class": "linkset",
-            "_id": "5546c46a1a43a24c188b8eda"
+            "_id": "5546c46a1a43a24c188b8eda",
+            "type": "",
+            "title": "",
+            "status": ""
         }
     ]
 }

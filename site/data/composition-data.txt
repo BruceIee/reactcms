@@ -53,7 +53,8 @@
             ],
             "status": "",
             "create_date": null,
-            "_class": "composition"
+            "_class": "composition",
+            "_id": "554c261457e90a66273cb733"
         },
         {
             "name": "vertflow",
@@ -88,7 +89,8 @@
             ],
             "status": "",
             "create_date": null,
-            "_class": "composition"
+            "_class": "composition",
+            "_id": "554c261457e90a66273cb734"
         }
     ]
 }

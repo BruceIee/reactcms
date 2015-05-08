@@ -14,7 +14,7 @@
             "type": "string"
         },
         "users": {
-            "type": "array"
+            "type": "string"
         },
         "create_date": {
             "type": "date"
