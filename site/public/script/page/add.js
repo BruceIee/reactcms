@@ -68,9 +68,11 @@ function onCompositionSelect(event) {
         composition = app.compositionCol[compositionName];
         app.pageData.composition = compositionName;
         setupCompositionSections(composition);
+        setupCompositionSectionContents(composition);
     }
 }
 
+// show composition section buttons on left side
 function setupCompositionSections(composition) {
     $('.section-container').empty();
     var sections = composition.data;
@@ -82,9 +84,25 @@ function setupCompositionSections(composition) {
             '</div>'
         );
     }
+    /*
     // select first section for content display on right
     if (sections.length > 0) {
         showSectionContent(sections[0].name);
+    }
+    */
+}
+
+// setup compoisiton section content panels on right side
+function setupCompositionSectionContents(composition) {
+    // setup composition pages in a card layout
+    $('.block-container').empty();
+    var sections = composition.data;
+    for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        $('.block-container').append(
+            '<div class="section-item-content" data-name="' + section.name + '">' +
+            section.name + '</div>'
+        );
     }
 }
 
@@ -105,8 +123,11 @@ function showSectionContent(sectionName) {
         context.widgetInfo.filter = context.widgetInfo.filterText;
     }
     var html = template(context);
+    
+    // todo - change for card layout
     $('.block-container').empty();
     $('.block-container').append(html);
+    
 }
 
 // use parent element passed in, get form data for section
@@ -147,7 +168,6 @@ function getSectionData(parent) {
 function cleanPageData(pageData) {
     for (var sectionName in pageData.content) {
         var sectionData = pageData.content[sectionName];
-        //console.log('>section:', sectionName, sectionData);
     }
     return pageData;
 }
