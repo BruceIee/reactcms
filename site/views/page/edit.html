@@ -24,11 +24,12 @@
 <script src="/library/handlebars/handlebars.min.js"></script>
 <script>
 var app = {
+    mode: "edit",
     pageName:"{{ page.pageObject.name }}",
     pageData: {{ page.pageObject|json|raw }}
 };
 </script>
-<script src="/script/page/edit.js"></script>
+<script src="/script/page/add.js"></script>
 
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}

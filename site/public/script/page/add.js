@@ -1,6 +1,5 @@
 var app = app || {};
 app.compositionCol = {}; // composition collection keyed by composition name
-app.pageData = null;
 
 $().ready(function() {
     resetPageData();
@@ -8,10 +7,12 @@ $().ready(function() {
 });
 
 function resetPageData() {
-    app.pageData = {
-        composition: null,
-        content: {}
-    };
+    if (app.mode == 'add') {
+        app.pageData = {
+            composition: null,
+            content: {}
+        };
+    }
 }
 
 function setup() {
@@ -27,7 +28,11 @@ function setup() {
             var composition = compositions[i];
             app.compositionCol[composition.name] = composition;
         }
-        setupCompositionSelect();
+        if (app.mode == 'add') {
+            setupCompositionSelect();
+        } else if (app.mode == 'edit') {
+            $('#pageComposition').val(app.pageData.composition);
+        }
     });
     app.compositionSelect.on('change', onCompositionSelect);
     // setup section event
