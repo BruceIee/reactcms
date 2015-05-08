@@ -15,6 +15,9 @@ function resetPageData() {
 }
 
 function setup() {
+    // compile section content template
+    var source   = $("#component-entry-template").html();
+    app.sectionTemplate = Handlebars.compile(source);
     // setup composition dropdown combobox
     app.compositionSelect = $('.composition-select');
     var compositionListUrl = '/data/compositions';
@@ -34,6 +37,7 @@ function setup() {
             showSectionContent(sectionName);
         }
     });
+    /*
     // section save button
     $('.block-container').click(function(event) {
         if ($(event.target).hasClass('section-save')) {
@@ -47,6 +51,7 @@ function setup() {
         }
         return false;
     });
+    */
     // save page button
     $('.btn-save-page').click(savePage);
 }
@@ -85,7 +90,7 @@ function setupCompositionSections(composition) {
         var section = sections[i];
         $('.section-container').append(
             '<div class="section-item" data-name="' + section.name + '">' +
-            section.name + ' (' + section.description + ')' +
+                section.name + ' (' + section.description + ')' +
             '</div>'
         );
     }
@@ -99,26 +104,14 @@ function setupCompositionSectionContents(composition) {
     for (var i = 0; i < sections.length; i++) {
         var section = sections[i];
         $('.block-container').append(
-            '<div class="section-content hidden" data-name="' + section.name + '">' +
-            section.name + '</div>'
+            '<div class="section-content hidden" data-name="' + section.name + '"></div>'
         );
+        populateSectionContent(section.name, app.sectionTemplate);
     }
 }
 
-function showSectionContent(sectionName) {
-    
-    // set selected section to active state
-    $('.section-item').removeClass('section-item-active');
-    $('.section-item[data-name=' + sectionName + ']').addClass('section-item-active');
-    
+function populateSectionContent(sectionName, template) {
     // show section content
-    $('.section-content').addClass('hidden');    
-    $('.section-content[data-name=' + sectionName + ']').removeClass('hidden');
-    
-    /*
-    // show section content
-    var source   = $("#component-entry-template").html();
-    var template = Handlebars.compile(source);
     var context = app.pageData.content[sectionName] || [];
     context = context && context[0] || {};
     context['sectionName'] = sectionName;
@@ -129,12 +122,16 @@ function showSectionContent(sectionName) {
         context.widgetInfo.filter = context.widgetInfo.filterText;
     }
     var html = template(context);
-    
-    // todo - change for card layout
-    $('.block-container').empty();
-    $('.block-container').append(html);
-    */
-    
+    $('.section-content[data-name=' + sectionName + ']').append(html);
+}
+
+function showSectionContent(sectionName) {
+    // set selected section to active state
+    $('.section-item').removeClass('section-item-active');
+    $('.section-item[data-name=' + sectionName + ']').addClass('section-item-active');
+    // show section content
+    $('.section-content').addClass('hidden');    
+    $('.section-content[data-name=' + sectionName + ']').removeClass('hidden');
 }
 
 // use parent element passed in, get form data for section
