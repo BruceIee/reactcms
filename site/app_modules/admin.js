@@ -18,6 +18,13 @@ module.exports = function(app) {
         var error = null;
         var docs = [];
         var info = { message:'getUserModule' };
+        
+        for ( var moduleName in app.module) {
+            var module = app.module[moduleName];
+            if (module.group === 'user') {
+                docs.push({ name:moduleName });
+            }
+        }
         app.cb(error, docs, info, req, res, callback);
     };
     
