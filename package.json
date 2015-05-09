@@ -43,6 +43,7 @@
     "readline": "*",
     "rimraf": "*",
     "nodemailer": "0.6.x",
-    "mkdirp": "*"
+    "mkdirp": "*",
+    "typeahead.js": "*"
   }
 }
