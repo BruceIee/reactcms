@@ -32,19 +32,25 @@ var app = {
     <div data-section="{{ sectionName }}" class="component-form">
         <div class="form-group">
             <label>Module</label>
-            <input type="text" class="form-control" name="module" value="{{ widgetInfo.module }}" placeholder="example: article">
+            <input type="text" data-provide="typeahead" data-type="module" 
+                class="form-control" name="module"
+                value="{{ widgetInfo.module }}" placeholder="example: article">
         </div>
         <div class="form-group">
             <label>UI Component</label>
-            <input type="text" class="form-control" name="component" value="{{ widgetName }}" placeholder="example: ArticleDetail">
+            <input type="text" data-provide="typeahead" data-type="component" 
+                class="form-control" name="component"
+                value="{{ widgetName }}" placeholder="example: ArticleDetail">
         </div>
         <div class="form-group">
             <label>Condition</label>
-            <textarea class="form-control" name="condition" placeholder="example: { &quot;title&quot;:&quot;my title&quot; }">{{ widgetInfo.condition }}</textarea>
+            <textarea class="form-control" name="condition"
+                placeholder="example: { &quot;title&quot;:&quot;my title&quot; }">{{ widgetInfo.condition }}</textarea>
         </div>
         <div class="form-group">
             <label>Filter</label>
-            <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }">{{ widgetInfo.filter }}</textarea>
+            <textarea class="form-control" name="filter"
+                placeholder="example: { &quot;limit&quot;: 2 }">{{ widgetInfo.filter }}</textarea>
         </div>
     </div>
 </div>
