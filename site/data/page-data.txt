@@ -30,11 +30,10 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "conditionText": "{ \"title\":\"header\" }",
                             "condition": {
                                 "title": "header"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ],
@@ -43,11 +42,10 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "conditionText": "{ \"title\":\"footer\" }",
                             "condition": {
                                 "title": "footer"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ],
@@ -56,11 +54,10 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "conditionText": "{ \"type\":\"news\" }",
                             "condition": {
                                 "type": "news"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ],
@@ -69,11 +66,10 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "conditionText": "{ \"name\":\"main\" }",
                             "condition": {
                                 "name": "main"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ]
@@ -81,7 +77,9 @@
             "name": "home",
             "create_date": "2015-05-04T00:57:39.624Z",
             "_class": "page",
-            "_id": "5546c4031a43a24c188b8ed9"
+            "_id": "5546c4031a43a24c188b8ed9",
+            "description": "",
+            "status": ""
         },
         {
             "composition": "sidenav",
@@ -91,11 +89,10 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "conditionText": "{ \"title\":\"header\" }",
                             "condition": {
                                 "title": "header"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ],
@@ -104,11 +101,10 @@
                         "widgetName": "LinksetDetail",
                         "widgetInfo": {
                             "module": "linkset",
-                            "conditionText": "{ \"name\":\"main\" }",
                             "condition": {
                                 "name": "main"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ],
@@ -117,11 +113,9 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "conditionText": "{\"type\":\"news\"}",
                             "condition": {
                                 "type": "news"
                             },
-                            "filterText": "{\"limit\":1}",
                             "filter": {
                                 "limit": "1"
                             }
@@ -133,11 +127,10 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "article",
-                            "conditionText": "{ \"title\":\"footer\" }",
                             "condition": {
                                 "title": "footer"
                             },
-                            "filterText": ""
+                            "filter": ""
                         }
                     }
                 ]
@@ -145,7 +138,9 @@
             "name": "about",
             "create_date": "2015-05-04T01:06:44.730Z",
             "_class": "page",
-            "_id": "5546c6241a43a24c188b8edb"
+            "_id": "5546c6241a43a24c188b8edb",
+            "description": "",
+            "status": ""
         }
     ]
 }

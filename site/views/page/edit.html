@@ -24,11 +24,12 @@
 <script src="/library/handlebars/handlebars.min.js"></script>
 <script>
 var app = {
+    mode: "edit",
     pageName:"{{ page.pageObject.name }}",
     pageData: {{ page.pageObject|json|raw }}
 };
 </script>
-<script src="/script/page/edit.js"></script>
+<script src="/script/page/add.js"></script>
 
 <script id="component-entry-template" type="text/x-handlebars-template">
 {% raw %}
@@ -50,9 +51,6 @@ var app = {
         <div class="form-group">
             <label>Filter</label>
             <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }">{{ widgetInfo.filter }}</textarea>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-default section-save">Save</button>
         </div>
     </div>
 </div>

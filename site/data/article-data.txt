@@ -34,7 +34,11 @@
             "type": "header",
             "create_date": "2015-05-04T00:47:48.000Z",
             "_class": "article",
-            "_id": "5546c1b41a43a24c188b8ed4"
+            "_id": "5546c1b41a43a24c188b8ed4",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "title": "footer",
@@ -42,7 +46,11 @@
             "type": "footer",
             "create_date": "2015-05-04T00:50:32.148Z",
             "_class": "article",
-            "_id": "5546c2581a43a24c188b8ed5"
+            "_id": "5546c2581a43a24c188b8ed5",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "title": "news3",
@@ -50,7 +58,11 @@
             "type": "news",
             "create_date": "2015-05-04T00:53:08.611Z",
             "_class": "article",
-            "_id": "5546c2f41a43a24c188b8ed8"
+            "_id": "5546c2f41a43a24c188b8ed8",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "title": "news1",
@@ -58,7 +70,11 @@
             "type": "news",
             "create_date": "2015-05-04T00:52:28.762Z",
             "_class": "article",
-            "_id": "5546c2cc1a43a24c188b8ed6"
+            "_id": "5546c2cc1a43a24c188b8ed6",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "title": "news2",
@@ -66,7 +82,11 @@
             "type": "news",
             "create_date": "2015-05-04T00:52:45.880Z",
             "_class": "article",
-            "_id": "5546c2dd1a43a24c188b8ed7"
+            "_id": "5546c2dd1a43a24c188b8ed7",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         }
     ]
 }
