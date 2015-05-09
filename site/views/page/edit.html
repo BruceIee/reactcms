@@ -52,9 +52,6 @@ var app = {
             <label>Filter</label>
             <textarea class="form-control" name="filter" placeholder="example: { &quot;limit&quot;: 2 }">{{ widgetInfo.filter }}</textarea>
         </div>
-        <div class="form-group">
-            <button class="btn btn-default section-save">Save</button>
-        </div>
     </div>
 </div>
 {% endraw %}
@@ -85,6 +82,11 @@ var app = {
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="pageComposition" READONLY />
                 </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group row">
+                <button class="btn btn-success btn-save-page pull-right">Save Page</button>
             </div>
         </div>
     </div>

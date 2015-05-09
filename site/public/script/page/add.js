@@ -52,6 +52,8 @@ function setup() {
     });
     // save page button
     $('.btn-save-page').click(function() {
+        // retrievre section data from sections content panels
+        retrievePageSectionData();
         if (app.mode == 'add') {
             createPage();
         } else if (app.mode == 'edit') {
@@ -171,9 +173,7 @@ function getSectionData(parent) {
 }
 
 function createPage() {
-    // retrievre section data from sections content panels
-    retrievePageSectionData();
-    // check page name is unique or not
+    // check page name is unique
     var pageName = $('#pageName').val();
     var pageExistUrl = '/data/pages/' + pageName + '/exist';
     $.get(pageExistUrl, function(data) {
@@ -183,9 +183,7 @@ function createPage() {
         } else {
             var pageAddUrl = '/data/pages/add';
             app.pageData.name = pageName;
-            //var pageData = cleanPageData(app.pageData);
             $.post(pageAddUrl, app.pageData, function(data) {
-                //alert('page ' + pageName + ' is saved');
                 var page = data.docs && data.docs[0] || null;
                 if (page) {
                     var pageEditUrl = '/pages/' + page._id + '/edit';
@@ -199,6 +197,7 @@ function createPage() {
 function savePage() {
     var pageName = $('#pageName').val();
     var pageExistUrl = '/data/pages/' + pageName + '/exist';
+    // check page name exists
     $.get(pageExistUrl, function(data) {
         if (!data.info.exist) {
             alert('Error: page ' + pageName + ' doesnot exist');
@@ -207,9 +206,7 @@ function savePage() {
             var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
             var pageName = $('#pageName').val();
             app.pageData.name = pageName;
-            var pageData = cleanPageData(app.pageData);
-            console.log('save page:', pageData);
-            $.post(pageAddUrl, pageData, function(data) {
+            $.post(pageAddUrl, app.pageData, function(data) {
                 console.log('page saved:', data);
                 alert('page ' + pageName + ' is saved');
             });
