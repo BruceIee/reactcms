@@ -31,10 +31,18 @@ function setup() {
         if (app.mode == 'add') {
             setupCompositionSelect();
         } else if (app.mode == 'edit') {
-            $('#pageComposition').val(app.pageData.composition);
+            var compositionName = app.pageData.composition;
+            $('#pageComposition').val(compositionName);
+            onCompositionSelect(compositionName);
         }
     });
-    app.compositionSelect.on('change', onCompositionSelect);
+    app.compositionSelect.on('change', function(event) {
+        var composition = null;
+        var compositionName =  $(event.target).val();
+        if (compositionName) {
+            onCompositionSelect(compositionName);
+        }
+    });
     // setup section event
     $('.section-container').click(function(event) {
         if ($(event.target).hasClass('section-item')) {
@@ -42,23 +50,14 @@ function setup() {
             showSectionContent(sectionName);
         }
     });
-    /*
-    // section save button
-    $('.block-container').click(function(event) {
-        if ($(event.target).hasClass('section-save')) {
-            var componentForm = $(event.target).parents('.component-form');
-            var sectionName = componentForm.attr('data-section');
-            var sectionDataItem = getSectionData(componentForm);
-            app.pageData.content[sectionName] = null;
-            if (sectionDataItem) {
-                app.pageData.content[sectionName] = [sectionDataItem];
-            }
-        }
-        return false;
-    });
-    */
     // save page button
-    $('.btn-save-page').click(savePage);
+    $('.btn-save-page').click(function() {
+        if (app.mode == 'add') {
+            createPage();
+        } else if (app.mode == 'edit') {
+            savePage();
+        }
+    });
 }
 
 function setupCompositionSelect() {
@@ -68,22 +67,18 @@ function setupCompositionSelect() {
     }
 }
 
-function onCompositionSelect(event) {
-    var composition = null;
-    var compositionName =  $(event.target).val();
-    if (compositionName) {
-        // clear app.pageData
-        resetPageData();
-        // use selected composition
-        composition = app.compositionCol[compositionName];
-        app.pageData.composition = compositionName;
-        setupCompositionSections(composition);
-        setupCompositionSectionContents(composition);
-        // select first section for content display on right
-        var sections = composition.data;
-        if (sections.length > 0) {
-            showSectionContent(sections[0].name);
-        }
+function onCompositionSelect(compositionName) {
+    // clear app.pageData
+    resetPageData();
+    // use selected composition
+    composition = app.compositionCol[compositionName];
+    app.pageData.composition = compositionName;
+    setupCompositionSections(composition);
+    setupCompositionSectionContents(composition);
+    // select first section for content display on right
+    var sections = composition.data;
+    if (sections.length > 0) {
+        showSectionContent(sections[0].name);
     }
 }
 
@@ -121,8 +116,8 @@ function populateSectionContent(sectionName, template) {
     context = context && context[0] || {};
     context['sectionName'] = sectionName;
     context.widgetInfo = context.widgetInfo || {};
-    context.widgetInfo.condition = null;
-    context.widgetInfo.filter = null;
+    context.widgetInfo.condition = context.widgetInfo.condition || null;
+    context.widgetInfo.filter = context.widgetInfo.filter || null;
     if (context.widgetInfo && context.widgetInfo.condition) {
         context.widgetInfo.condition = JSON.stringify(context.widgetInfo.condition);
     }
@@ -175,7 +170,7 @@ function getSectionData(parent) {
     return sectionData;
 }
 
-function savePage() {
+function createPage() {
     // retrievre section data from sections content panels
     retrievePageSectionData();
     // check page name is unique or not
@@ -196,6 +191,27 @@ function savePage() {
                     var pageEditUrl = '/pages/' + page._id + '/edit';
                     window.location = pageEditUrl;
                 }
+            });
+        }
+    });
+}
+
+function savePage() {
+    var pageName = $('#pageName').val();
+    var pageExistUrl = '/data/pages/' + pageName + '/exist';
+    $.get(pageExistUrl, function(data) {
+        if (!data.info.exist) {
+            alert('Error: page ' + pageName + ' doesnot exist');
+            return;
+        } else {
+            var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
+            var pageName = $('#pageName').val();
+            app.pageData.name = pageName;
+            var pageData = cleanPageData(app.pageData);
+            console.log('save page:', pageData);
+            $.post(pageAddUrl, pageData, function(data) {
+                console.log('page saved:', data);
+                alert('page ' + pageName + ' is saved');
             });
         }
     });
