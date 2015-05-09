@@ -6,6 +6,7 @@ module.exports = function(app) {
     var moduleName = 'item';
     var block = {
         app: app,
+        group: 'test',
         model: null
     };
     block.data = tool.object(require('basedata')(app, moduleName));

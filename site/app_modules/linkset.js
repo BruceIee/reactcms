@@ -6,6 +6,7 @@ module.exports = function(app) {
     var moduleName = 'linkset';
     var block = {
         app: app,
+        group: 'user',
         model: null
     };
     block.data = tool.object(require('basedata')(app, moduleName));
@@ -32,6 +33,7 @@ module.exports = function(app) {
         }
     };
     
+    // data
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
         var item = tool.getReqParameter(req);
@@ -70,8 +72,7 @@ module.exports = function(app) {
                 newObj.hyperlink = parameter.hyperlink[i];
                 content.push(newObj);
             }
-        }
-        else {
+        } else {
             var newObj = {};
             newObj.text = parameter.text;
             newObj.hyperlink = parameter.hyperlink;
@@ -97,7 +98,7 @@ module.exports = function(app) {
         });
     };    
     
-    
+    // page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('item/index', { page:page });
