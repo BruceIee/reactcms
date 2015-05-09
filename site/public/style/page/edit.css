@@ -1,0 +1,12 @@
+.section-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: solid 1px #f2f2f2;
+}
+.section-item-active {
+    background-color: #f2f2f2;
+}
+.section-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}

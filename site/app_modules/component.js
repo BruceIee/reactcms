@@ -13,6 +13,16 @@ module.exports = function(app) {
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
+    block.data.getComponents = function(req, res) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        
+        var error = null;
+        var docs = [];
+        var info = { message:'getComponents' };
+        app.cb(error, docs, info, req, res, callback);
+    };
+    
     /*
     widget parameter example
     {
@@ -43,6 +53,7 @@ module.exports = function(app) {
     };
     
     // data route
+    app.server.get('/data/components', block.data.getComponents);
     app.server.get('/data/components/get/detail', block.data.getWidgetData);
     
     // page route

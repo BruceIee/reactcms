@@ -1,22 +1,48 @@
 var app = app || {};
+app.compositionCol = {}; // composition collection keyed by composition name
 
 $().ready(function() {
-    setupPage(app.pageData);
+    resetPageData();
     setup();
 });
 
-function setupPage(page) {
-    $('#pageComposition').val(page.composition);
-    var compositionDataUrl = '/data/compositions/' + page.composition;
-    $.get(compositionDataUrl, function(data) {
-        var composition = data.docs && data.docs[0] || null;
-        if (composition) {
-            setupCompositionSections(composition);
-        }
-    });
+function resetPageData() {
+    if (app.mode == 'add') {
+        app.pageData = {
+            composition: null,
+            content: {}
+        };
+    }
 }
 
 function setup() {
+    // compile section content template
+    var source   = $("#component-entry-template").html();
+    app.sectionTemplate = Handlebars.compile(source);
+    // setup composition dropdown combobox
+    app.compositionSelect = $('.composition-select');
+    var compositionListUrl = '/data/compositions';
+    $.get(compositionListUrl, function(data) {
+        var compositions = data.docs;
+        for (var i = 0; i < compositions.length; i++) {
+            var composition = compositions[i];
+            app.compositionCol[composition.name] = composition;
+        }
+        if (app.mode == 'add') {
+            setupCompositionSelect();
+        } else if (app.mode == 'edit') {
+            var compositionName = app.pageData.composition;
+            $('#pageComposition').val(compositionName);
+            onCompositionSelect(compositionName);
+        }
+    });
+    app.compositionSelect.on('change', function(event) {
+        var composition = null;
+        var compositionName =  $(event.target).val();
+        if (compositionName) {
+            onCompositionSelect(compositionName);
+        }
+    });
     // setup section event
     $('.section-container').click(function(event) {
         if ($(event.target).hasClass('section-item')) {
@@ -24,39 +50,84 @@ function setup() {
             showSectionContent(sectionName);
         }
     });
-    // section save button
-    $('.block-container').click(function(event) {
-        if ($(event.target).hasClass('section-save')) {
-            var componentForm = $(event.target).parents('.component-form');
-            var sectionName = componentForm.attr('data-section');
-            var sectionDataItem = getSectionData(componentForm);
-            app.pageData.content[sectionName] = null;
-            if (sectionDataItem) {
-                app.pageData.content[sectionName] = [sectionDataItem];
-            }
-        }
-        return false;
-    });
     // save page button
-    $('.btn-save-page').click(savePage);
+    $('.btn-save-page').click(function() {
+        // retrievre section data from sections content panels
+        retrievePageSectionData();
+        if (app.mode == 'add') {
+            createPage();
+        } else if (app.mode == 'edit') {
+            savePage();
+        }
+    });
 }
 
+function setupCompositionSelect() {
+    app.compositionSelect.append('<option>Select composition</option>');
+    for (var name in app.compositionCol) {
+        app.compositionSelect.append('<option value="' + name + '">' + name + '</option>');
+    }
+}
+
+function onCompositionSelect(compositionName) {
+    // clear app.pageData
+    resetPageData();
+    // use selected composition
+    composition = app.compositionCol[compositionName];
+    app.pageData.composition = compositionName;
+    setupCompositionSections(composition);
+    setupCompositionSectionContents(composition);
+    // select first section for content display on right
+    var sections = composition.data;
+    if (sections.length > 0) {
+        showSectionContent(sections[0].name);
+    }
+}
+
+// show composition section buttons on left side
 function setupCompositionSections(composition) {
-    //console.log('setupCompositionSections:', composition);
     $('.section-container').empty();
     var sections = composition.data;
     for (var i = 0; i < sections.length; i++) {
         var section = sections[i];
         $('.section-container').append(
             '<div class="section-item" data-name="' + section.name + '">' +
-            section.name + ' (' + section.description + ')' +
+                section.name + ' (' + section.description + ')' +
             '</div>'
         );
     }
-    // select first section for content display on right
-    if (sections.length > 0) {
-        showSectionContent(sections[0].name);
+}
+
+// setup compoisiton section content panels on right side
+function setupCompositionSectionContents(composition) {
+    // setup composition pages in a card layout
+    $('.block-container').empty();
+    var sections = composition.data;
+    for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        $('.block-container').append(
+            '<div class="section-content hidden" data-name="' + section.name + '"></div>'
+        );
+        populateSectionContent(section.name, app.sectionTemplate);
     }
+}
+
+function populateSectionContent(sectionName, template) {
+    // show section content
+    var context = app.pageData.content[sectionName] || [];
+    context = context && context[0] || {};
+    context['sectionName'] = sectionName;
+    context.widgetInfo = context.widgetInfo || {};
+    context.widgetInfo.condition = context.widgetInfo.condition || null;
+    context.widgetInfo.filter = context.widgetInfo.filter || null;
+    if (context.widgetInfo && context.widgetInfo.condition) {
+        context.widgetInfo.condition = JSON.stringify(context.widgetInfo.condition);
+    }
+    if (context.widgetInfo && context.widgetInfo.filter) {
+        context.widgetInfo.filter = JSON.stringify(context.widgetInfo.filter);
+    }
+    var html = template(context);
+    $('.section-content[data-name=' + sectionName + ']').append(html);
 }
 
 function showSectionContent(sectionName) {
@@ -64,20 +135,8 @@ function showSectionContent(sectionName) {
     $('.section-item').removeClass('section-item-active');
     $('.section-item[data-name=' + sectionName + ']').addClass('section-item-active');
     // show section content
-    var source   = $("#component-entry-template").html();
-    var template = Handlebars.compile(source);
-    var context = app.pageData.content[sectionName] || [];
-    context = context && context[0] || {};
-    context['sectionName'] = sectionName;
-    if (context.widgetInfo && context.widgetInfo.conditionText) {
-        context.widgetInfo.condition = context.widgetInfo.conditionText;
-    }
-    if (context.widgetInfo && context.widgetInfo.filterText) {
-        context.widgetInfo.filter = context.widgetInfo.filterText;
-    }
-    var html = template(context);
-    $('.block-container').empty();
-    $('.block-container').append(html);
+    $('.section-content').addClass('hidden');    
+    $('.section-content[data-name=' + sectionName + ']').removeClass('hidden');
 }
 
 // use parent element passed in, get form data for section
@@ -105,27 +164,40 @@ function getSectionData(parent) {
             widgetName: componentName,
             widgetInfo: {
                 module: moduleName,
-                conditionText: conditionText,
-                condition: getJsonFromText(conditionText) || {},
-                filterText: filterText,
-                filter: getJsonFromText(filterText) || {}
+                condition: getJsonFromText(conditionText) || null,
+                filter: getJsonFromText(filterText) || null
             }
         };
     }
     return sectionData;
 }
 
-function cleanPageData(pageData) {
-    for (var sectionName in pageData.content) {
-        var sectionData = pageData.content[sectionName];
-        console.log('>section:', sectionName, sectionData);
-    }
-    return pageData;
+function createPage() {
+    // check page name is unique
+    var pageName = $('#pageName').val();
+    var pageExistUrl = '/data/pages/' + pageName + '/exist';
+    $.get(pageExistUrl, function(data) {
+        if (data.info.exist) {
+            alert('Error: page ' + pageName + ' exists');
+            return;
+        } else {
+            var pageAddUrl = '/data/pages/add';
+            app.pageData.name = pageName;
+            $.post(pageAddUrl, app.pageData, function(data) {
+                var page = data.docs && data.docs[0] || null;
+                if (page) {
+                    var pageEditUrl = '/pages/' + page._id + '/edit';
+                    window.location = pageEditUrl;
+                }
+            });
+        }
+    });
 }
 
 function savePage() {
     var pageName = $('#pageName').val();
     var pageExistUrl = '/data/pages/' + pageName + '/exist';
+    // check page name exists
     $.get(pageExistUrl, function(data) {
         if (!data.info.exist) {
             alert('Error: page ' + pageName + ' doesnot exist');
@@ -134,12 +206,26 @@ function savePage() {
             var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
             var pageName = $('#pageName').val();
             app.pageData.name = pageName;
-            var pageData = cleanPageData(app.pageData);
-            console.log('save page:', pageData);
-            $.post(pageAddUrl, pageData, function(data) {
+            $.post(pageAddUrl, app.pageData, function(data) {
                 console.log('page saved:', data);
                 alert('page ' + pageName + ' is saved');
             });
         }
     });
+}
+
+function retrievePageSectionData() {
+    var composition = app.compositionCol[app.pageData.composition];
+    var sections = composition.data;
+    for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        var sectionName = section.name;
+        var componentForm = $('.section-content[data-name=' + sectionName + ']');
+        var sectionDataItem = getSectionData(componentForm);
+        if (sectionDataItem) {
+            app.pageData.content[sectionName] = [sectionDataItem];
+        } else {
+            app.pageData.content[sectionName] = null;
+        }
+    }
 }

@@ -9,7 +9,7 @@ module.exports = function(app) {
     };
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
-
+    
     block.model = {
         type: {
             type: 'string'
