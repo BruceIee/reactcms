@@ -83,8 +83,8 @@ function setup(cbSetup) {
     /*Configure the multer. Multer is a node.js middleware for handling multipart/form-data.*/
     app.server.use(multer({ dest: './site/public/file/',
         rename: function (fieldname, filename) {
-            //return filename+Date.now();
-            return filename;
+            return filename + Date.now();
+            //return filename;
         },
     onFileUploadStart: function (file) {
         console.log(file.originalname + ' is starting to upload...')
