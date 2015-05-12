@@ -12,12 +12,15 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
-        /*filename: {
+        filename: {
+            type: 'string'
+        },
+        description: {
             type: 'string'
         },
         path: {
             type: 'string'
-        },*/
+        },
         create_date: {
             type: 'date'
         }
