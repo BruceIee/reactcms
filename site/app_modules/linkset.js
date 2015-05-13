@@ -144,7 +144,7 @@ module.exports = function(app) {
         res.render('linkset/index', { page:page });
     };
     
-     block.page.addLinkset = function(req, res) {
+    block.page.addLinkset = function(req, res) {
         var page = app.getPage(req);
         res.render('linkset/add', { page:page });
     };
@@ -158,6 +158,14 @@ module.exports = function(app) {
             page.title = 'List of Linkset';
             page.linksets = docs;
             res.render('linkset/list', { page:page });
+        });        
+    };
+    
+    block.page.delLinkset = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;        
+        app.db.deleteById(moduleName, id, function(error, docs, info) {
+            res.redirect('/linksets/show_all');
         });        
     };    
     
@@ -185,6 +193,7 @@ module.exports = function(app) {
     app.server.get('/linksets', block.page.linksetHome);
     app.server.get('/linksets/add_linkset', block.page.addLinkset);
     app.server.get('/linksets/show_all', block.page.showAll);
+    app.server.get('/linksets/:id/del', block.page.delLinkset);
     
     // page react test route
     app.server.get('/linksets/list/react', block.page.getLinksetListReact);

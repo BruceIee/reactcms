@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12" style="margin:40px auto;font-size:2.1em;color:#666;">
-            <div style="text-align:center;">Linkset List</div>
+            <div style="text-align:center;">Imageset List</div>
         </div>
     </div>
     
@@ -36,19 +36,19 @@
                 </tr>
             </thead>
             <tbody>
-                {% for group in page.linksets %}
+                {% for imageset in page.linksets %}
                     <tr>
                         <td>
-                            {{ group.name }}
+                            {{ imageset.name }}
                         </td> 
                         <td>
-                            {{ group.content|json_encode }}
+                            {{ imageset.content|json_encode }}
                         </td>                  
                         <td>
-                            {{ group.create_date.toISOString() }}
+                            {{ imageset.create_date.toISOString() }}
                         </td>
                         <td>
-                            <a class="glyphicon glyphicon-remove" href="/linksets/{{group._id.toString()}}/del" title="del"></a>
+                            <a class="glyphicon glyphicon-remove" href="/imagesets/{{imageset._id.toString()}}/del" title="del"></a>
                         </td>
                     </tr>
   

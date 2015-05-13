@@ -1,0 +1,63 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script>
+var cnt = 1;    
+    
+function add_new_group() {
+    $("#mydiv").append( "<div>" +
+        "<fieldset>" +
+        '<legend>Item <button type="button" class="btn btn-danger" onclick="remove_group(this)">-</button></legend>' +
+        '<p>Text: <input type="text" name="text_' + cnt + '" required /></p>' +
+        '<p>Image: <input type="file" name="img_' + cnt + '" required /></p>' +
+        "</fieldset>" +
+        "<hr>" +
+        "</div>");
+    cnt = cnt + 1;
+};
+function remove_group(who) {
+    $(who).closest('div').remove(); //remove associate div
+};
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-6">
+            Add Imageset
+        </h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form role="form" action="/data/imagesets/add_imageset_post" method="POST" enctype="multipart/form-data">
+                <p>Name: <input type="text" name="name" required /></p>
+                <hr>
+                
+                <div id="mydiv" class="form-group">
+                    <div>
+                        <fieldset>
+                            <legend>Item</legend>
+                            <p>Text: <input type="text" name="text_0" required /></p>
+                            <p>Image: <input type="file" name="img_0" required /></p>
+                        </fieldset>
+                        <hr>
+                    </div>
+                </div>
+                    
+                <button type="button" class="btn btn-success" onclick="add_new_group()">+</button>
+                <p></p>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

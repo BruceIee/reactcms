@@ -19,7 +19,7 @@
     </div>
 
     <div class="col-md-8">
-        <form role="form" action="{{page.formAction}}" method="POST" enctype="mulitpart/form-data">
+        <form role="form" action="{{page.formAction}}" method="POST" enctype="multipart/form-data">
             <fieldset>
                 {% if page.operation == 'Edit' %}
                     <input type="hidden" name="id_hidden" value="{{group._id + ''}}" />
