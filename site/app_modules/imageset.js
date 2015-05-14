@@ -93,8 +93,25 @@ module.exports = function(app) {
         block.data.add(req, res, imageset, function(error, docs, info) {
             res.redirect('/imagesets/show_all');
         });         
-      
-    }; 
+    };
+    
+    block.data.getImageset = function(req, res) {
+        var callback = arguments[3] || null;
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
+    block.data.getImagesetDetail = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };      
     
     // page
     block.page.imagesetHome = function(req, res) {
@@ -126,8 +143,23 @@ module.exports = function(app) {
         });        
     };
     
+    block.page.getImagesetListReact = function(req, res) {
+        var page = app.getPage(req);
+        res.render('imageset/list_react', { page:page });
+    };     
+    
+    block.page.getImagesetDetailReact = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.imagesetId = parameter.id;
+        res.render('imageset/detail_react', { page:page });
+    };
+    
+    
     // data route
     app.server.post('/data/imagesets/add_imageset_post', block.data.addImagesetPost);
+    app.server.get('/data/imagesets', block.data.getImageset);
+    app.server.get('/data/imagesets/:id/detail', block.data.getImagesetDetail);
     
     // page route
     app.server.all('/imagesets', block.page.checkLogin);
@@ -138,7 +170,8 @@ module.exports = function(app) {
     app.server.get('/imagesets/:id/del', block.page.delImageset);
     
     // page react
-
+    app.server.get('/imagesets/list/react', block.page.getImagesetListReact);
+    app.server.get('/imagesets/:id/detail/react', block.page.getImagesetDetailReact);
 
     return block;
 };
