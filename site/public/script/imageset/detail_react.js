@@ -18,7 +18,6 @@ function getImagesetDetail(imagesetId, callback) {
 
 function showImagesetDetail(imageset) {
     $('#detailName').html(imageset.name);
-    
     var new_array = [];
     for (var i in imageset.content) {
         var new_obj = {}; // props: text, image(path)
@@ -34,8 +33,4 @@ function showImagesetDetail(imageset) {
         <Carousel data={ app.component1Data } />,
         document.getElementById('component1')
     );    
-    
-    
 }
-
-
