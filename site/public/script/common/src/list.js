@@ -5,16 +5,13 @@ var app = app || {};
 
 $().ready(function() {
     setup();
-    //test();
+    test();
 });
 
 function setup() {
     console.log('in common list page - module:', app.moduleName);
-    
-    
 }
 
-/*
 function test() {
     
     // table2Data has 'id' column as key column
@@ -59,6 +56,7 @@ function test() {
     };
     
     // table2 with paging
+    /*
     app.table2 = React.render(
         <Table data={ app.table2Data } />,
         document.getElementById('table2')
@@ -67,5 +65,5 @@ function test() {
         var id = event.id;
         console.log('row click - id:', id, 'table active item id:', app.table2.state.activeItemId);
     });
+    */
 }
-*/
