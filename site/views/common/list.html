@@ -1,0 +1,17 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/common/list.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/common/list.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top:20px;">
+common list page - module: {{ page.moduleName }}
+</div>
+{% endblock %}

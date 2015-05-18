@@ -44,6 +44,9 @@
     "rimraf": "*",
     "nodemailer": "0.6.x",
     "mkdirp": "*",
-    "typeahead.js": "*"
+    "typeahead.js": "*",
+    "reactlet-common": "*",
+    "reactlet-table": "*",
+    "reactlet-treeview": "*"
   }
 }
