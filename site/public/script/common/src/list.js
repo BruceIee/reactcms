@@ -1,7 +1,5 @@
-/*
 var React = require('react');
 var Table = require('reactlet-table');
-*/
 
 var app = app || {};
 
