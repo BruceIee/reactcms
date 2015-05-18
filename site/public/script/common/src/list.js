@@ -1,3 +1,5 @@
+/** @jsx React.DOM */
+
 var React = require('react');
 var Table = require('reactlet-table');
 
@@ -56,7 +58,6 @@ function test() {
     };
     
     // table2 with paging
-    /*
     app.table2 = React.render(
         <Table data={ app.table2Data } />,
         document.getElementById('table2')
@@ -65,5 +66,4 @@ function test() {
         var id = event.id;
         console.log('row click - id:', id, 'table active item id:', app.table2.state.activeItemId);
     });
-    */
 }
