@@ -59,7 +59,7 @@ function test() {
     
     // table2 with paging
     app.table2 = React.render(
-        <Table data={ app.table2Data } />,
+        React.createElement(Table, { data:app.table2Data }),
         document.getElementById('table2')
     );
     app.table2.on('table-row-click', function(event) {
