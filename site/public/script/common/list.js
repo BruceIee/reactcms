@@ -5,5 +5,6 @@ $().ready(function() {
 });
 
 function setup() {
-    console.log('in common list page');
+    console.log('in common list page - module:', app.moduleName);
 }
+

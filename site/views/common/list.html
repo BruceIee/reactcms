@@ -7,6 +7,9 @@
 
 {% block script %}
 {% parent %}
+<script>
+var app = { moduleName:"{{ page.moduleName }}" };
+</script>
 <script src="/script/common/list.js"></script>
 {% endblock %}
 
