@@ -11,6 +11,7 @@
     "browserify": "*",
     "mocha": "*",
     "mochify": "*",
+    "react-tools": "*",
     "reactify": "^0.13.1"
   },
   "browserify": {
