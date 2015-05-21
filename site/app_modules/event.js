@@ -16,7 +16,10 @@ module.exports = function(app) {
             type: 'date'
         },
         content: {
-            type: 'string'
+            type: 'object',
+            subtype: {
+                type: 'json'
+            }
         }
     };
     
@@ -24,17 +27,26 @@ module.exports = function(app) {
     
     
     // page
+    block.page.eventHome = function(req, res) {
+        var page = app.getPage(req);
+        res.render('event/index', { page:page });
+    };
 
-    
+    block.page.eventCalendarReact = function(req, res) {
+        var page = app.getPage(req);
+        res.render('event/calendar_react', { page:page });
+    };   
     
     // data route
 
     
     // page route
-
+    app.server.all('/events', block.page.checkLogin);
+    app.server.all('/events/*', block.page.checkLogin);
+    app.server.get('/events', block.page.eventHome);
     
     // page react
-
+    app.server.get('/events/calendar_react', block.page.eventCalendarReact);
 
     return block;
 };
