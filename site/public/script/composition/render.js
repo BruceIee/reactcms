@@ -27,15 +27,14 @@ function showWidget(widget) {
     //$('.' + widget.targetClass).append(widget.widgetName);
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
-        console.log('data.docs.length:', data.docs.length);
+        //console.log('data.docs.length:', data.docs.length, data.docs);
         if (data.docs.length <= 0) return;
-        
         var cabinetData = { items: [] };
         for (var i = 0; i < data.docs.length; i++) {
             var widgetData = data.docs && data.docs[i];
             cabinetData.items.push({ type:this.widgetName, data:widgetData });
         }
-        
+        //console.log('cabinetData:', cabinetData);
         React.render(
             <Cabinet data={ cabinetData } />,
             $('.' + this.targetClass)[0]
