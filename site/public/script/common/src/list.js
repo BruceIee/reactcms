@@ -3,7 +3,7 @@
 var React = require('react');
 var Table = require('reactlet-table');
 
-var app = app || {};
+var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();

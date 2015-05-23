@@ -10,7 +10,7 @@
 {% block script %}
 {% parent %}
 <script>
-var app = { moduleName:"{{ page.moduleName }}" };
+window.app = { moduleName:"{{ page.moduleName }}" };
 </script>
 <script src="/component/reactlet-common/reactlet-mixin.js"></script>
 <script src="/script/common/dist/list.js"></script>
