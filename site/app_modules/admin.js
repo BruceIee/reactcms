@@ -17,7 +17,7 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var moduleName = parameter.module;
         var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
-        var info = { message:'model for module ' + moduleName };
+        var info = { message:'model for module ' + moduleName, module:moduleName };
         app.cb(null, moduleModel, info, req, res, callback);
     };
     

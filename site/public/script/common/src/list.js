@@ -12,6 +12,12 @@ $().ready(function() {
 
 function setup() {
     console.log('in common list page - module:', app.moduleName);
+    
+    var moduleModelUrl = '/data/module/' + app.moduleName + '/model';
+    $.get(moduleModelUrl, function(data) {
+        var moduleModel = data.docs;
+        console.log('>>> module model:', moduleModel, data);
+    });
 }
 
 function test() {
