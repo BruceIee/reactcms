@@ -23,7 +23,6 @@ function getModuleModel(moduleName, callback) {
     var moduleModelUrl = '/data/modules/' + moduleName + '/model';
     $.get(moduleModelUrl, function(data) {
         var moduleModel = data.docs;
-        //console.log('>>> module model:', moduleModel);
         callback && callback(moduleModel);
     });
 }
@@ -31,7 +30,6 @@ function getModuleModel(moduleName, callback) {
 function getModuleData(moduleName, callback) {
     var moduleDataUrl = '/data/modules/' + moduleName + '/all';
     $.get(moduleDataUrl, function(data) {
-        //console.log('>>> module data:', data.docs);
         callback && callback(data.docs);
     });
 }
@@ -45,33 +43,16 @@ function getColModel(moduleModel) {
             colModel[property] = {
                 name: property,
                 text: property,
-                width: '20%'
+                width: '15%'
             };
         }
     }
-    /*
-    colModel = {
-        '_id': { name:'_id', text:'ID', key:true, width:'20%' },
-        title: { name:'title', text:'Title' },
-        content: { name:'content', text:'Content' }
-    };
-    */
     return colModel;
 }
 
 function updateTableDisplay(moduleModel, moduleItems) {
     var colModel = getColModel(moduleModel);
-    var items = [
-        { _id:'P01', title:'egg', price:5.98, content:'fresh egg' },
-        { _id:'P02', title:'bread', price:1.29, content:'white bread' },
-        { _id:'P03', title:'chip', price:2.13, content:'potato chip' },
-        { _id:'P04', title:'sauce', price:1.89, content:'dipping sauce' },
-        { _id:'P05', title:'corn', price:4.59, content:'fresh pear' },
-        { _id:'P06', title:'vegi', price:2.12, content:'potato' },
-        { _id:'P07', title:'vegi', price:1.81, content:'eggplant' },
-        { _id:'P08', title:'corn', price:4.99, content:'fresh aple' }
-    ];
-    doTableDisplay(colModel, items);
+    doTableDisplay(colModel, moduleItems);
 }
 
 function doTableDisplay(colModel, items) {
