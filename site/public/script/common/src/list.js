@@ -38,29 +38,38 @@ function getModuleData(moduleName, callback) {
 
 function getColModel(moduleModel) {
     var colModel = {};
-    
+    var ignoreProperties = ['create_by', 'create_date', 'edit_by', 'edit_date'];
+    colModel['_id'] = { name:'_id', text:'ID', key:true, width:'10%' };
+    for (var property in moduleModel) {
+        if (ignoreProperties.indexOf(property) == -1) {
+            colModel[property] = {
+                name: property,
+                text: property,
+                width: '20%'
+            };
+        }
+    }
+    /*
     colModel = {
-        id: { name:'id', text:'ID', width:'15%', key:true, format:app.getIdText },
-        name: { name:'name', text:'Name', width:'20%', sort:'up' },
-        price: { name:'price', text:'Price', width:'15%', type:'money' },
-        description: { name:'description', text:'Description', width:'30%' },
-        extra: { name:'extra', text:'Extra', show:false, width:'10%' }
+        '_id': { name:'_id', text:'ID', key:true, width:'20%' },
+        title: { name:'title', text:'Title' },
+        content: { name:'content', text:'Content' }
     };
-    
+    */
     return colModel;
 }
 
 function updateTableDisplay(moduleModel, moduleItems) {
     var colModel = getColModel(moduleModel);
     var items = [
-        { id:'P01', name:'egg', price:5.98, description:'fresh egg', extra:'n/a' },
-        { id:'P02', name:'bread', price:1.29, description:'white bread', extra:'n/a' },
-        { id:'P03', name:'chip', price:2.13, description:'potato chip', extra:'n/a' },
-        { id:'P04', name:'sauce', price:1.89, description:'dipping sauce', extra:'n/a' },
-        { id:'P05', name:'corn', price:4.59, description:'fresh pear', extra:'n/a' },
-        { id:'P06', name:'vegi', price:2.12, description:'potato', extra:'n/a' },
-        { id:'P07', name:'vegi', price:1.81, description:'eggplant', extra:'n/a' },
-        { id:'P08', name:'corn', price:4.99, description:'fresh aple', extra:'n/a' }
+        { _id:'P01', title:'egg', price:5.98, content:'fresh egg' },
+        { _id:'P02', title:'bread', price:1.29, content:'white bread' },
+        { _id:'P03', title:'chip', price:2.13, content:'potato chip' },
+        { _id:'P04', title:'sauce', price:1.89, content:'dipping sauce' },
+        { _id:'P05', title:'corn', price:4.59, content:'fresh pear' },
+        { _id:'P06', title:'vegi', price:2.12, content:'potato' },
+        { _id:'P07', title:'vegi', price:1.81, content:'eggplant' },
+        { _id:'P08', title:'corn', price:4.99, content:'fresh aple' }
     ];
     doTableDisplay(colModel, items);
 }
