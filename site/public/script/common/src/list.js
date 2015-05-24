@@ -37,13 +37,12 @@ function getModuleData(moduleName, callback) {
 function getColModel(moduleModel) {
     var colModel = {};
     var ignoreProperties = ['create_by', 'create_date', 'edit_by', 'edit_date'];
-    colModel['_id'] = { name:'_id', text:'ID', key:true, width:'10%' };
+    colModel['_id'] = { name:'_id', text:'ID', key:true };
     for (var property in moduleModel) {
         if (ignoreProperties.indexOf(property) == -1) {
             colModel[property] = {
                 name: property,
-                text: property,
-                width: '15%'
+                text: property
             };
         }
     }
@@ -56,7 +55,6 @@ function updateTableDisplay(moduleModel, moduleItems) {
 }
 
 function doTableDisplay(colModel, items) {
-    
     // table2Data has 'id' column as key column
     app.table1Data = {
         boxClass: 'table-container-bordered',
@@ -64,7 +62,6 @@ function doTableDisplay(colModel, items) {
         dataItems: items,
         paging: { size: 5, page: 1 }
     };
-    
     // table2 with paging
     app.table1 = React.render(
         React.createElement(Table, { data:app.table1Data }),
