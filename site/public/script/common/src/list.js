@@ -37,12 +37,13 @@ function getModuleData(moduleName, callback) {
 function getColModel(moduleModel) {
     var colModel = {};
     var ignoreProperties = ['create_by', 'create_date', 'edit_by', 'edit_date'];
-    colModel['_id'] = { name:'_id', text:'ID', key:true };
+    colModel['_id'] = { name:'_id', text:'ID', flex:3, key:true };
     for (var property in moduleModel) {
         if (ignoreProperties.indexOf(property) == -1) {
             colModel[property] = {
                 name: property,
-                text: property
+                text: property,
+                flex: 2
             };
         }
     }
