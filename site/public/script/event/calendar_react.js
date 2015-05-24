@@ -1,7 +1,7 @@
 var app = app || {};
     
 $().ready(function() {
-
+    /*
     app.componentData = {
         year: 2015,
         month: 5,
@@ -18,11 +18,20 @@ $().ready(function() {
             ]
         }
     };
+    */
     
-    app.component = React.render(
-        <Calendar data={ app.componentData } />,
-        document.getElementById('component1')
-    );
+    var url = '/data/events/group_by_date';
+    $.get(url, function(data) {
+        app.componentData = {
+            year: moment().format('YYYY'), // 2015
+            month: moment().format('M'),   // 4
+            eventsCollection: data
+        };    
 
+        app.component = React.render(
+            <Calendar data={ app.componentData } />,
+            document.getElementById('component1')
+        );    
+    });
 });
     

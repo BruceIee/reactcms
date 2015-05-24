@@ -1,0 +1,75 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block script %}
+{% parent %}
+{% endblock %}
+
+{% block content %}
+{% set event = page.event %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-6 col-md-offset-3">
+            {{ page.title }}
+        </h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form role="form" action="{{page.formAction}}" method="POST">
+                
+                {% if page.operation == 'Edit' %}
+                    <input type="hidden" name="id_hidden" value="{{event._id + ''}}" />
+                {% endif %}                 
+                
+                <div id="mydiv" class="form-group">
+                    <div>
+                        <hr>
+                        {% if page.operation == 'Add' %}
+                            <p>Date: <input type="text" name="date" required />(YYYY-MM-DD)</p>
+                        {% elseif page.operation == 'Edit' %}
+                            <p>Date: <input type="text" name="date" required value="{{event.date}}" />(YYYY-MM-DD)</p>
+                        {% endif %}                             
+
+                        {% if page.operation == 'Add' %}
+                            <p>Category: 
+                                <select name="category">
+                                    <option value ="home" selected="selected">home</option>
+                                    <option value ="work">work</option>
+                                </select>                                
+                            </p>
+                        {% elseif page.operation == 'Edit' %}
+                            <p>Category: 
+                                <select name="category">
+                                    {% if event.category == 'home' %}
+                                        <option value ="home" selected="selected">home</option>
+                                        <option value ="work">work</option>
+                                    {% elseif event.category == 'work' %}
+                                        <option value ="home">home</option>
+                                        <option value ="work" selected="selected">work</option>                                    
+                                    {% endif %}
+                                </select>                                
+                            </p>
+                        {% endif %}
+
+                        {% if page.operation == 'Add' %}
+                            <p>Title: <input type="text" name="title" required /></p>
+                        {% elseif page.operation == 'Edit' %}
+                            <p>Title: <input type="text" name="title" required  value="{{event.title}}" /></p>
+                        {% endif %} 
+
+                        <hr>
+                    </div>
+                </div>
+                <p></p>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">{{page.operation}}</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/library/moment/moment.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="margin:40px auto;font-size:2.1em;color:#666;">
+            <div style="text-align:center;">Event List</div>
+        </div>
+    </div>
+    
+    <div>
+        <table class="table table-striped table-bordered">
+              <thead>
+                  <tr>
+                      <td>
+                          Date
+                      </td>
+                      <td>
+                          Category
+                      </td>
+                      <td>
+                          Title
+                      </td>
+                      <td>
+                      </td>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for event in page.events %}
+                      <tr>
+                          <td>
+                              {{ event.date }}
+                          </td>
+                          <td>
+                              {{ event.category }}
+                          </td>                  
+                          <td>
+                              {{ event.title }}
+                          </td>
+                          <td>
+                              <a class="glyphicon glyphicon-edit" href="/events/{{event._id.toString()}}/edit" title="edit"></a>
+                              &nbsp;
+                              <a class="glyphicon glyphicon-remove" href="/events/{{event._id.toString()}}/del" title="del"></a>
+                          </td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+        </table>
+    </div>
+    
+</div>
+{% endblock %}
