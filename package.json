@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "browserify": "*",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
     "mocha": "*",
     "mochify": "*",
     "react-tools": "*",
