@@ -61,7 +61,7 @@ function doTableDisplay(colModel, items) {
         boxClass: 'table-container-bordered',
         colModel: colModel,
         dataItems: items,
-        paging: { size: 5, page: 1 }
+        paging: { size: 10, page: 1 }
     };
     // table2 with paging
     app.table1 = React.render(
