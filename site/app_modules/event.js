@@ -177,6 +177,7 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var condition = {};
         var filter = {};
+        filter.sort = { date:1 };
         app.db.find(moduleName, condition, filter, function(error, docs, info){
             var page = app.getPage(req);
             page.title = 'Event List';
