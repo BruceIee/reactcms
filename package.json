@@ -11,6 +11,7 @@
     "browserify": "*",
     "gulp": "^3.8.11",
     "gulp-util": "^3.0.4",
+    "gulp-react": "*",
     "mocha": "*",
     "mochify": "*",
     "react-tools": "*",
