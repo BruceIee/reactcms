@@ -9,3 +9,4 @@ site/npm-debug.log
 .idea
 site/public/file/*
 site/data/*/*
+site/public/script/**/dist/*.js
