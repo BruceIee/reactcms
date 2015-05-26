@@ -4,6 +4,7 @@ var React = require('react');
 var Table = require('reactlet-table');
 
 var app = app ||  window.app || {};
+app.activeRowId = '';
 
 $().ready(function() {
     setup();
@@ -13,9 +14,13 @@ function setup() {
     console.log('in common list page - module:', app.moduleName);
     getModuleModel(app.moduleName, function(moduleModel) {
         getModuleData(app.moduleName, function(moduleItems) {
-            console.log('>>> module:', moduleModel, moduleItems);
             updateTableDisplay(moduleModel, moduleItems);
         });
+    });
+    $('.btn-group .btn').click(function(event) {
+        if ($(event.currentTarget).hasClass('btn-view')) {
+            viewItem(app.activeRowId);
+        }
     });
 }
 
@@ -70,6 +75,13 @@ function doTableDisplay(colModel, items) {
     );
     app.table1.on('table-row-click', function(event) {
         var id = event.id;
-        console.log('row click - id:', id, 'table active item id:', app.table1.state.activeItemId);
+        app.activeRowId = app.table1.state.activeItemId;
     });
+}
+
+function viewItem(itemId) {
+    if (!itemId) {
+        return;
+    }
+    console.log('view item:', itemId);
 }
