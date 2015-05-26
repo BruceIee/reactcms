@@ -52,12 +52,19 @@ module.exports = function(app) {
     };
     
     // page
-    block.page.getCommonListPage = function(req, res) {
+    block.page.getListPage = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        var moduleName = parameter.module;        
         var page = app.getPage(req);
-        page.moduleName = moduleName;
+        page.moduleName = parameter.module;
         res.render('common/list', { page:page });
+    };
+    
+    block.page.viewItem = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.moduleName = parameter.module;
+        page.itemId = parameter.id;
+        res.render('common/view', { page:page });
     };
     
     // routes
@@ -67,7 +74,8 @@ module.exports = function(app) {
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
     
     app.server.all('/modules/*', block.page.checkLogin);
-    app.server.get('/modules/:module/list', block.page.getCommonListPage);
+    app.server.get('/modules/:module/list', block.page.getListPage);
+    app.server.get('/modules/:module/:id/view', block.page.viewItem);
     
     return block;
 };

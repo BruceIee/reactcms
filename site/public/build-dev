@@ -1,14 +1,7 @@
-# convert components
-
-#echo "build components ..."
-#cd node_modules
-#./build-components
-#cd ..
-
 # build bundle files for distribution
 
 echo "build bundle files ..."
-#browserify -o script/web/dist/index.js -d script/web/src/index.js
+browserify -o script/common/dist/view.js -d script/common/src/view.js
 browserify -o script/common/dist/list.js -d script/common/src/list.js
 
 # end of build
