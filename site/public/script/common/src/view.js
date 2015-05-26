@@ -12,18 +12,11 @@ $().ready(function() {
 function setup() {
     console.log('in common view page - module:', app.moduleName, ' id:', app.itemId);
     
-    /*
     getModuleModel(app.moduleName, function(moduleModel) {
-        getModuleData(app.moduleName, function(moduleItems) {
+        getModuleItemData(app.moduleName, app.itemId, function(moduleItems) {
             updateTableDisplay(moduleModel, moduleItems);
         });
     });
-    $('.btn-group .btn').click(function(event) {
-        if ($(event.currentTarget).hasClass('btn-view')) {
-            viewItem(app.activeRowId);
-        }
-    });
-    */
 }
 
 function getModuleModel(moduleName, callback) {
@@ -34,9 +27,9 @@ function getModuleModel(moduleName, callback) {
     });
 }
 
-function getModuleData(moduleName, callback) {
-    var moduleDataUrl = '/data/modules/' + moduleName + '/all';
-    $.get(moduleDataUrl, function(data) {
+function getModuleItemData(moduleName, itemId, callback) {
+    var moduleItemDataUrl = '/data/modules/' + moduleName + '/' + itemId;
+    $.get(moduleItemDataUrl, function(data) {
         callback && callback(data.docs);
     });
 }
@@ -58,8 +51,13 @@ function getColModel(moduleModel) {
 }
 
 function updateTableDisplay(moduleModel, moduleItems) {
+    
+    console.log('show:', moduleModel, moduleItems);
+    
+    /*
     var colModel = getColModel(moduleModel);
     doTableDisplay(colModel, moduleItems);
+    */
 }
 
 function doTableDisplay(colModel, items) {

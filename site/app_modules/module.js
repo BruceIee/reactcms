@@ -34,6 +34,19 @@ module.exports = function(app) {
         });
     };
     
+    block.data.getModuleDataById = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var moduleName = parameter.module;
+        var module = app.module[moduleName];
+        // get item data by id
+        var condition = { _id:parameter.id };
+        var filter = {};
+        module.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
     block.data.getUserModules = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
@@ -72,6 +85,7 @@ module.exports = function(app) {
     app.server.get('/data/modules/user', block.data.getUserModules);
     app.server.get('/data/modules/:module/model', block.data.getModuleModel);
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
+    app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
     
     app.server.all('/modules/*', block.page.checkLogin);
     app.server.get('/modules/:module/list', block.page.getListPage);
