@@ -8,23 +8,30 @@ System Setup
 Install support modules
 ```
 sudo npm install -g gulp
+sudo npm install -g browserify
 ```
 
-On command line, go to site folder
+Go to application root and build js scripts with browserify
 
-run the following commands to populate database:
+```
+build
+```
+
+
+Go to site folder and populate database
 
 ```
 node cmd.js initdb
 node cmd.js import
 ```
-
 or
 ```
 bin/refreshdb
 ```
 
+
 MacOSX
+------
 
 run the following command to overcome file size limit
 ```
