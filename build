@@ -1,3 +1,5 @@
+cd site/public
+
 # build bundle files for distribution
 
 echo "build bundle files ..."
