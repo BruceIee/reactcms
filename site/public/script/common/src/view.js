@@ -35,29 +35,46 @@ function getModuleItemData(moduleName, itemId, callback) {
 }
 
 function getColModel(moduleModel) {
-    var colModel = {};
-    var ignoreProperties = ['create_by', 'create_date', 'edit_by', 'edit_date'];
-    colModel['_id'] = { name:'_id', text:'ID', flex:3, key:true };
-    for (var property in moduleModel) {
-        if (ignoreProperties.indexOf(property) == -1) {
-            colModel[property] = {
-                name: property,
-                text: property,
-                flex: 2
-            };
-        }
-    }
+    var colModel = {
+        name: { name:'name', text:'Name', width:'40%' },
+        value: { name:'value', text:'Value', width:'60%' }
+    };
     return colModel;
+
 }
 
 function updateTableDisplay(moduleModel, moduleItems) {
-    
-    console.log('show:', moduleModel, moduleItems);
-    
-    /*
-    var colModel = getColModel(moduleModel);
-    doTableDisplay(colModel, moduleItems);
+    /* moduleItems example:
+    [
+        {
+            id: xxx,
+            title: yyy,
+            content: zzz
+        }
+    ]
     */
+
+    var newItems = [];
+    
+    for ( var prop in moduleItems[0] ) {
+        if ( prop != '_class' && prop != 'create_by'  && prop != 'create_date'  && prop != 'edit_by'   && prop != 'edit_date' ) {
+            var newObj = {};
+            newObj.name = prop;
+            newObj.value = moduleItems[0][prop];
+            newItems.push(newObj);
+        }
+    }
+
+    /* newItems example:
+    [
+        { name:'_id', value:'123456' },
+        { name:'title', value:'tttttt' },
+        { name:'content', value:'xxxxxxxxx' },
+    ]
+    */    
+
+    var colModel = getColModel(moduleModel);
+    doTableDisplay(colModel, newItems);
 }
 
 function doTableDisplay(colModel, items) {
@@ -66,7 +83,7 @@ function doTableDisplay(colModel, items) {
         boxClass: 'table-container-bordered',
         colModel: colModel,
         dataItems: items,
-        paging: { size: 10, page: 1 }
+        //paging: { size: 10, page: 1 }
     };
     // table2 with paging
     app.table1 = React.render(
