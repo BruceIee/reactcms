@@ -212,7 +212,6 @@ module.exports = function(app) {
         res.render('article/detail_react', { page:page });
     };
     
-    
     // data route
     app.server.get('/data/articles', block.data.getArticles);
     app.server.get('/data/articles/:id/detail', block.data.getArticleDetail);
@@ -237,6 +236,7 @@ module.exports = function(app) {
     // page react test route
     app.server.get('/articles/list/react', block.page.getArticleListReact);
     app.server.get('/articles/:id/detail/react', block.page.getArticleDetailReact);
+    
     return block;
 };
 
