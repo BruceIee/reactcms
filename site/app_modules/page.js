@@ -29,6 +29,9 @@ module.exports = function(app) {
         },
         create_date: {
             type: 'date'
+        },
+        group: {
+            type: 'string'
         }
     };
     

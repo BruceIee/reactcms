@@ -49,6 +49,9 @@ module.exports = function(app) {
         },
         status: {
             type: 'string'
+        },
+        group: {
+            type: 'string'
         }
     };
     
