@@ -12,7 +12,7 @@ $().ready(function() {
 
 function setup() {
     //console.log('in common list page - module:', app.moduleName);
-    getModuleModel(app.moduleName, function(moduleInfo) {
+    getModuleInfo(app.moduleName, function(moduleInfo) {
         getModuleData(app.moduleName, function(moduleItems) {
             updateTableDisplay(moduleInfo, moduleItems);
         });
@@ -24,7 +24,7 @@ function setup() {
     });
 }
 
-function getModuleModel(moduleName, callback) {
+function getModuleInfo(moduleName, callback) {
     var moduleModelUrl = '/data/modules/' + moduleName + '/info';
     $.get(moduleModelUrl, function(data) {
         callback && callback( data.info);

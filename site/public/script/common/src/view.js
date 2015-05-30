@@ -11,18 +11,17 @@ $().ready(function() {
 
 function setup() {
     console.log('in common view page - module:', app.moduleName, ' id:', app.itemId);
-    getModuleModel(app.moduleName, function(moduleModel) {
+    getModuleInfo(app.moduleName, function(moduleInfo) {
         getModuleItemData(app.moduleName, app.itemId, function(moduleItems) {
-            updateTableDisplay(moduleModel, moduleItems);
+            updateTableDisplay(moduleInfo, moduleItems);
         });
     });
 }
 
-function getModuleModel(moduleName, callback) {
-    var moduleModelUrl = '/data/modules/' + moduleName + '/info';
-    $.get(moduleModelUrl, function(data) {
-        var moduleModel = data.info.model;
-        callback && callback(moduleModel);
+function getModuleInfo(moduleName, callback) {
+    var moduleInfoUrl = '/data/modules/' + moduleName + '/info';
+    $.get(moduleInfoUrl, function(data) {
+        callback && callback( data.info);
     });
 }
 
@@ -42,7 +41,7 @@ function getColModel(moduleModel) {
 
 }
 
-function updateTableDisplay(moduleModel, moduleItems) {
+function updateTableDisplay(moduleInfo, moduleItems) {
     /* moduleItems example:
     [
         {
@@ -71,7 +70,7 @@ function updateTableDisplay(moduleModel, moduleItems) {
         { name:'content', value:'xxxxxxxxx' },
     ]
     */
-    var colModel = getColModel(moduleModel);
+    var colModel = getColModel(moduleInfo);
     doTableDisplay(colModel, newItems);
 }
 
