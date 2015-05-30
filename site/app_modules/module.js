@@ -21,6 +21,22 @@ module.exports = function(app) {
         app.cb(null, moduleModel, info, req, res, callback);
     };
     
+    
+    block.data.getModuleInfo = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var moduleName = parameter.module;
+        var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
+        var listFields = app.module[moduleName] && app.module[moduleName].listFields || null;
+        var info = {
+            message: 'model for module ' + moduleName,
+            module: moduleName,
+            model: moduleModel,
+            listFields: listFields
+        };
+        app.cb(null, [], info, req, res, callback);
+    };
+    
     block.data.getModuleDataAll = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
@@ -84,6 +100,7 @@ module.exports = function(app) {
     app.server.all('/data/modules/*', block.page.checkLogin);
     app.server.get('/data/modules/user', block.data.getUserModules);
     app.server.get('/data/modules/:module/model', block.data.getModuleModel);
+    app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
     app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
     
