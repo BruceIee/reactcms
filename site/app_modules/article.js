@@ -37,7 +37,11 @@ module.exports = function(app) {
             type: 'string'
         }
     };
-
+    block.listFields = [
+        { name:'title', sort:'asc' },
+        { name:'content' }
+    ];
+    
     // data
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 

@@ -11,7 +11,7 @@ $().ready(function() {
 });
 
 function setup() {
-    console.log('in common list page - module:', app.moduleName);
+    //console.log('in common list page - module:', app.moduleName);
     getModuleModel(app.moduleName, function(moduleModel) {
         getModuleData(app.moduleName, function(moduleItems) {
             updateTableDisplay(moduleModel, moduleItems);
@@ -25,9 +25,9 @@ function setup() {
 }
 
 function getModuleModel(moduleName, callback) {
-    var moduleModelUrl = '/data/modules/' + moduleName + '/model';
+    var moduleModelUrl = '/data/modules/' + moduleName + '/info';
     $.get(moduleModelUrl, function(data) {
-        var moduleModel = data.docs;
+        var moduleModel = data.info.model;
         callback && callback(moduleModel);
     });
 }

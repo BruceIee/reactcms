@@ -11,7 +11,6 @@ $().ready(function() {
 
 function setup() {
     console.log('in common view page - module:', app.moduleName, ' id:', app.itemId);
-    
     getModuleModel(app.moduleName, function(moduleModel) {
         getModuleItemData(app.moduleName, app.itemId, function(moduleItems) {
             updateTableDisplay(moduleModel, moduleItems);
@@ -20,9 +19,9 @@ function setup() {
 }
 
 function getModuleModel(moduleName, callback) {
-    var moduleModelUrl = '/data/modules/' + moduleName + '/model';
+    var moduleModelUrl = '/data/modules/' + moduleName + '/info';
     $.get(moduleModelUrl, function(data) {
-        var moduleModel = data.docs;
+        var moduleModel = data.info.model;
         callback && callback(moduleModel);
     });
 }
@@ -53,11 +52,11 @@ function updateTableDisplay(moduleModel, moduleItems) {
         }
     ]
     */
-
     var newItems = [];
-    
     for ( var prop in moduleItems[0] ) {
-        if ( prop != '_class' && prop != 'create_by'  && prop != 'create_date'  && prop != 'edit_by'   && prop != 'edit_date' ) {
+        if ( prop != '_class' &&
+             prop != 'create_by'  && prop != 'create_date' &&
+             prop != 'edit_by'   && prop != 'edit_date' ) {
             var newObj = {};
             newObj.name = prop;
             newObj.value = moduleItems[0][prop];
@@ -71,8 +70,7 @@ function updateTableDisplay(moduleModel, moduleItems) {
         { name:'title', value:'tttttt' },
         { name:'content', value:'xxxxxxxxx' },
     ]
-    */    
-
+    */
     var colModel = getColModel(moduleModel);
     doTableDisplay(colModel, newItems);
 }
