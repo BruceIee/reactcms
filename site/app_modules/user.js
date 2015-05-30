@@ -54,6 +54,12 @@ module.exports = function(app) {
             type: 'string'
         }
     };
+    block.listFields = [
+        { name:'username', display:'Username', flex:2, sort:'asc' },
+        { name:'email', display:'Email', flex:3 },
+        { name:'group', display:'Group', flex:1 },
+        { name:'status', display:'Status', flex:1 }
+    ];
     
     // data
     block.data.addUser = function(req, res) {
