@@ -38,8 +38,8 @@ module.exports = function(app) {
         }
     };
     block.listFields = [
-        { name:'title', sort:'asc' },
-        { name:'content' }
+        { name:'title', display:'Title', flex:2, sort:'asc' },
+        { name:'content', display:'Content', flex:3, }
     ];
     
     // data

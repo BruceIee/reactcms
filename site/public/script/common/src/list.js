@@ -12,9 +12,9 @@ $().ready(function() {
 
 function setup() {
     //console.log('in common list page - module:', app.moduleName);
-    getModuleModel(app.moduleName, function(moduleModel) {
+    getModuleModel(app.moduleName, function(moduleInfo) {
         getModuleData(app.moduleName, function(moduleItems) {
-            updateTableDisplay(moduleModel, moduleItems);
+            updateTableDisplay(moduleInfo, moduleItems);
         });
     });
     $('.btn-group .btn').click(function(event) {
@@ -27,8 +27,7 @@ function setup() {
 function getModuleModel(moduleName, callback) {
     var moduleModelUrl = '/data/modules/' + moduleName + '/info';
     $.get(moduleModelUrl, function(data) {
-        var moduleModel = data.info.model;
-        callback && callback(moduleModel);
+        callback && callback( data.info);
     });
 }
 
@@ -39,24 +38,37 @@ function getModuleData(moduleName, callback) {
     });
 }
 
-function getColModel(moduleModel) {
+function getColModel(moduleInfo) {
+    var moduleModel = moduleInfo.model;
+    var listFields = moduleInfo.listFields;
     var colModel = {};
-    var ignoreProperties = ['create_by', 'create_date', 'edit_by', 'edit_date'];
-    colModel['_id'] = { name:'_id', text:'ID', flex:3, key:true };
-    for (var property in moduleModel) {
-        if (ignoreProperties.indexOf(property) == -1) {
-            colModel[property] = {
-                name: property,
-                text: property,
-                flex: 2
+    colModel['_id'] = { name:'_id', text:'ID', flex:2, key:true };
+    if (listFields) {
+        for (var i = 0; i < listFields.length; i++) {
+            var listField = listFields[i];
+            colModel[listField.name] = {
+                name: listField.name,
+                text: listField.display || listField.name,
+                flex: listField.flex || 2
             };
+        }
+    } else {
+        var ignoreProperties = ['create_by', 'create_date', 'edit_by', 'edit_date'];
+        for (var property in moduleModel) {
+            if (ignoreProperties.indexOf(property) == -1) {
+                colModel[property] = {
+                    name: property,
+                    text: property,
+                    flex: 2
+                };
+            }
         }
     }
     return colModel;
 }
 
-function updateTableDisplay(moduleModel, moduleItems) {
-    var colModel = getColModel(moduleModel);
+function updateTableDisplay(moduleInfo, moduleItems) {
+    var colModel = getColModel(moduleInfo);
     doTableDisplay(colModel, moduleItems);
 }
 
