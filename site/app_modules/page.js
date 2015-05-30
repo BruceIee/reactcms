@@ -161,6 +161,10 @@ module.exports = function(app) {
     
     block.page.getPageList = function(req, res) {
         var condition = {};
+        var loginUser = req.session && req.session.user;
+        if (loginUser.group) {
+            condition.group = loginUser.group;
+        }
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             var page = app.getPage(req);
