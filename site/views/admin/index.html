@@ -1,4 +1,4 @@
-{% extends '../layout/layout.html' %}
+{% extends '../layout/layout-admin.html' %}
 
 {% block style %}
 {% parent %}
@@ -16,7 +16,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="section">
                 <h4>System Module</h4>
                 <div>
@@ -25,6 +25,10 @@
                 <div>
                     <a href="/users">User</a>
                 </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="section">
                 <h4>Test Module</h4>
                 <div>
                     <a href="/items">Item</a>
@@ -41,6 +45,10 @@
                 <div>
                     <a href="/modules/page/list">Page List</a>
                 </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="section">
                 <h4>User Module</h4>
                 <div>
                     <a href="/announcements">Announcement</a>
@@ -60,9 +68,6 @@
                 <div>
                     <a href="/events">Event</a>
                 </div>
-                
-                <br/>
-                
                 <div>
                     <a href="/compositions">Composition</a>
                 </div>

@@ -12,6 +12,7 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     // data
+    /*
     block.data.getModuleModel = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
@@ -20,7 +21,7 @@ module.exports = function(app) {
         var info = { message:'model for module ' + moduleName, module:moduleName };
         app.cb(null, moduleModel, info, req, res, callback);
     };
-    
+    */
     
     block.data.getModuleInfo = function(req, res) {
         var callback = arguments[3] || null; 
@@ -99,7 +100,7 @@ module.exports = function(app) {
     // routes
     app.server.all('/data/modules/*', block.page.checkLogin);
     app.server.get('/data/modules/user', block.data.getUserModules);
-    app.server.get('/data/modules/:module/model', block.data.getModuleModel);
+    //app.server.get('/data/modules/:module/model', block.data.getModuleModel);
     app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
     app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);

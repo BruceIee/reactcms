@@ -32,13 +32,12 @@ function getModuleItemData(moduleName, itemId, callback) {
     });
 }
 
-function getColModel(moduleModel) {
+function getColModel(moduleInfo) {
     var colModel = {
         name: { name:'name', text:'Name', width:'40%' },
         value: { name:'value', text:'Value', width:'60%' }
     };
     return colModel;
-
 }
 
 function updateTableDisplay(moduleInfo, moduleItems) {
