@@ -24,9 +24,6 @@ module.exports = function(app) {
         status: {
             type: 'string'
         },
-        users: {
-            type: 'string' // should be array??
-        },
         create_date: {
             type: 'date'
         },
@@ -66,7 +63,6 @@ module.exports = function(app) {
             group.type = parameter.type;
             group.description = parameter.description;
             group.status = parameter.status;
-            group.users = parameter.users;
             group.edit_date = new Date();
             group.edit_by = loginUser.username;
             block.data.edit(req, res, group, function(error, docs, info) {
