@@ -20,6 +20,12 @@ function setup() {
     $('.btn-group .btn').click(function(event) {
         if ($(event.currentTarget).hasClass('btn-view')) {
             viewItem(app.activeRowId);
+        } else if ($(event.currentTarget).hasClass('btn-new')) {
+            console.log('clicked on new button');
+        } else if ($(event.currentTarget).hasClass('btn-edit')) {
+            console.log('clicked on edit button');
+        } else if ($(event.currentTarget).hasClass('btn-delete')) {
+            console.log('clicked on delete button');
         }
     });
 }

@@ -9,6 +9,9 @@ browserify -o script/common/dist/list.js -d script/common/src/list.js
 # end of build
 echo "build is done"
 
+# show network
+ifconfig
+
 # start web server
 cd ../../
 npm start
