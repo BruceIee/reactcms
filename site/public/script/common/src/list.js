@@ -1,17 +1,19 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var Dispatcher = require('flux').Dispatcher;
 var Table = require('reactlet-table');
 
 var app = app ||  window.app || {};
+app.dispatcher = new Dispatcher();
 app.activeRowId = '';
 
 $().ready(function() {
     setup();
+    setupDispatcher();
 });
 
 function setup() {
-    //console.log('in common list page - module:', app.moduleName);
     getModuleInfo(app.moduleName, function(moduleInfo) {
         getModuleData(app.moduleName, function(moduleItems) {
             updateTableDisplay(moduleInfo, moduleItems);
@@ -27,6 +29,15 @@ function setup() {
         } else if ($(event.currentTarget).hasClass('btn-delete')) {
             console.log('clicked on delete button');
         }
+    });
+}
+
+function setupDispatcher() {
+    // add store
+    app.form1Store = { item:'' };
+    // add event register
+    app.form1Store.dispatchToken = app.dispatcher.register(function(payload) {
+        console.log('dispatch payload received:', payload);
     });
 }
 
@@ -94,6 +105,11 @@ function doTableDisplay(colModel, items) {
     app.table1.on('table-row-click', function(event) {
         var id = event.id;
         app.activeRowId = app.table1.state.activeItemId;
+    });
+    app.table1.on('table-row-double-click', function(event) {
+        var itemId = event.id;
+        console.log('table double click:', itemId);
+        viewItem(itemId);
     });
 }
 

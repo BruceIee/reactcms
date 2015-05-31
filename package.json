@@ -40,6 +40,7 @@
     "swig": "~1.4.1",
     "handlebars": "~3.0.1",
     "react": "~0.13.0",
+    "flux": "*",
     "socket.io": "~1.3.2",
     "compression": "~1.0.8",
     "pagedown": "git+https://github.com/yayestechlab/pagedown.git",
