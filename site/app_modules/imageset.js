@@ -30,35 +30,37 @@ module.exports = function(app) {
     block.data.addImagesetPost = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
-       
-        /*** parameter example:
-        parameter= { name: 'abcd',
+        console.log('@@@ parameter=',parameter);
+        
+        /*** parameter example: (hyperlink is not must required)
+        parameter= { name: 'abcdef',
           text_0: 'aaa',
+          hyperlink_0: 'http://www.aaa.com',
           text_1: 'bbb',
-          img_0: 
-           { fieldname: 'img_0',
-             originalname: '9IFTQLBJ2EI00008.jpg',
-             name: '9IFTQLBJ2EI000081431538780254.jpg',
-             encoding: '7bit',
-             mimetype: 'image/jpeg',
-             path: 'site/public/file/9IFTQLBJ2EI000081431538780254.jpg',
-             extension: 'jpg',
-             size: 340666,
-             truncated: false,
-             buffer: null },
           img_1: 
            { fieldname: 'img_1',
-             originalname: '201502041024010b241.jpg',
-             name: '201502041024010b2411431538780259.jpg',
+             originalname: '02.png',
+             name: '021433167059871.png',
+             encoding: '7bit',
+             mimetype: 'image/png',
+             path: 'site/public/file/021433167059871.png',
+             extension: 'png',
+             size: 56278,
+             truncated: false,
+             buffer: null },
+          img_0: 
+           { fieldname: 'img_0',
+             originalname: '01.jpg',
+             name: '011433167059869.jpg',
              encoding: '7bit',
              mimetype: 'image/jpeg',
-             path: 'site/public/file/201502041024010b2411431538780259.jpg',
+             path: 'site/public/file/011433167059869.jpg',
              extension: 'jpg',
-             size: 12551,
+             size: 31988,
              truncated: false,
-             buffer: null } }        
+             buffer: null } }
         */
-        
+
         var content = [];
         var max_num = 0; // text_(max)
         var reg1 = /text_([0-9]+)/;
@@ -75,12 +77,16 @@ module.exports = function(app) {
         for ( var i=0; i<=max_num; i++ ) {
             var prop_text = "text_" + i;
             var prop_img = "img_" +i;
+            var prop_hyperlink = "hyperlink_" +i;
             if (parameter[prop_text]) {
                 var obj_tmp = {};
                 obj_tmp.text = parameter[prop_text];
+                if (parameter[prop_hyperlink]) {
+                    obj_tmp.hyperlink = parameter[prop_hyperlink];
+                }
                 if (parameter[prop_img]) {
                     obj_tmp.image = parameter[prop_img];
-                }                
+                }
                 content.push(obj_tmp);
             }
         }

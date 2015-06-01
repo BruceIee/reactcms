@@ -14,6 +14,7 @@ function add_new_group() {
         "<fieldset>" +
         '<legend>Item <button type="button" class="btn btn-danger" onclick="remove_group(this)">-</button></legend>' +
         '<p>Text: <input type="text" name="text_' + cnt + '" required /></p>' +
+        '<p>Hyperlink: <input type="text" name="hyperlink_' + cnt + '"/></p>' +
         '<p>Image: <input type="file" name="img_' + cnt + '" required /></p>' +
         "</fieldset>" +
         "<hr>" +
@@ -46,6 +47,7 @@ function remove_group(who) {
                         <fieldset>
                             <legend>Item</legend>
                             <p>Text: <input type="text" name="text_0" required /></p>
+                            <p>Hyperlink: <input type="text" name="hyperlink_0" /></p>
                             <p>Image: <input type="file" name="img_0" required /></p>
                         </fieldset>
                         <hr>

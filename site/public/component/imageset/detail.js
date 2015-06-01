@@ -71,3 +71,41 @@ var Carousel = React.createClass({
         );
     }
 });
+
+
+var Newshow = React.createClass({
+    name: 'newshow',
+    mixins: [getCommonMixin],
+    
+    // attribute definitions
+    getAttributes: function() {
+        var attributes = [
+            { name:'items', type:'array', required:false, defaultValue:[], note:'' }
+        ];
+        return attributes;
+    },
+
+    render: function() {
+        var content = [];
+        for (var i = 0;  i < this.state.items.length; i++) {
+            var item = this.state.items[i];
+            content.push(
+                <div className="column">
+                    <a className="home-column-link" href={ item.hyperlink } >
+                        <div className="column-image">
+                            <img src={ item.image } data-holder-rendered="true" />
+                        </div>    
+                        <div className="column-title">
+                            { item.text }
+                        </div>
+                    </a>
+                </div>
+            );
+        }        
+        return (
+            <div className="home-columns">
+                { content }
+            </div>
+        );
+    }
+});
