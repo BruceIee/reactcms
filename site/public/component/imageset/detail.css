@@ -6,6 +6,7 @@
     padding: 20px;
     background-color: #f2f2f2;
 }
+
 .home-columns {
     width: 970px;
     padding: 40px 0px;
@@ -32,3 +33,37 @@
 .column-image {
     opacity: 0.6;
 }
+
+.clearfix {
+    clear: both;
+}
+.home-news-main {
+    width: 70%;
+    float: left;
+    padding: 20px 0px;
+}
+
+.news-image {
+    display: block;
+    float: left;
+    clear: left;
+    width: 160px;
+    margin: 0px 15px 0px 0px;
+}
+
+.news-content {
+    margin: 0px 0px 3em;
+    padding: 0px 0px 20px 175px;
+}
+
+.news-summary {
+    word-break: normal;
+    word-wrap: normal;
+}
+
+
+
+
+
+
+

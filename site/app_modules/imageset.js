@@ -30,20 +30,25 @@ module.exports = function(app) {
     block.data.addImagesetPost = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
-        console.log('@@@ parameter=',parameter);
+        //console.log('@@@ parameter=',parameter);
         
-        /*** parameter example: (hyperlink is not must required)
-        parameter= { name: 'abcdef',
+        /*** parameter example: (hyperlink and substance are not must required)
+        parameter= { name: 'new1',
           text_0: 'aaa',
           hyperlink_0: 'http://www.aaa.com',
+          substance_0: 'fgjfghj\r\njhkfhjfj\r\ndghdghhj',
           text_1: 'bbb',
+          hyperlink_1: 'http://www.bbb.com',
+          substance_1: 'fgadgasdfsdf\r\ndfgdg\r\nfgggghfdfgdfgsdf',
+          text_2: 'ccc',
+          hyperlink_2: 'http://www.ccc.com',
           img_1: 
            { fieldname: 'img_1',
              originalname: '02.png',
-             name: '021433167059871.png',
+             name: '021433214156155.png',
              encoding: '7bit',
              mimetype: 'image/png',
-             path: 'site/public/file/021433167059871.png',
+             path: 'site/public/file/021433214156155.png',
              extension: 'png',
              size: 56278,
              truncated: false,
@@ -51,12 +56,23 @@ module.exports = function(app) {
           img_0: 
            { fieldname: 'img_0',
              originalname: '01.jpg',
-             name: '011433167059869.jpg',
+             name: '011433214156152.jpg',
              encoding: '7bit',
              mimetype: 'image/jpeg',
-             path: 'site/public/file/011433167059869.jpg',
+             path: 'site/public/file/011433214156152.jpg',
              extension: 'jpg',
              size: 31988,
+             truncated: false,
+             buffer: null },
+          img_2: 
+           { fieldname: 'img_2',
+             originalname: '03.png',
+             name: '031433214156156.png',
+             encoding: '7bit',
+             mimetype: 'image/png',
+             path: 'site/public/file/031433214156156.png',
+             extension: 'png',
+             size: 70703,
              truncated: false,
              buffer: null } }
         */
@@ -76,8 +92,9 @@ module.exports = function(app) {
 
         for ( var i=0; i<=max_num; i++ ) {
             var prop_text = "text_" + i;
-            var prop_img = "img_" +i;
-            var prop_hyperlink = "hyperlink_" +i;
+            var prop_img = "img_" + i;
+            var prop_hyperlink = "hyperlink_" + i;
+            var prop_substance = "substance_" + i;
             if (parameter[prop_text]) {
                 var obj_tmp = {};
                 obj_tmp.text = parameter[prop_text];
@@ -86,6 +103,9 @@ module.exports = function(app) {
                 }
                 if (parameter[prop_img]) {
                     obj_tmp.image = parameter[prop_img];
+                }
+                if (parameter[prop_substance]) {
+                    obj_tmp.substance = parameter[prop_substance];
                 }
                 content.push(obj_tmp);
             }

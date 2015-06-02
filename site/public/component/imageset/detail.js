@@ -73,8 +73,8 @@ var Carousel = React.createClass({
 });
 
 
-var Newshow = React.createClass({
-    name: 'newshow',
+var Inlineshow = React.createClass({
+    name: 'inlineshow',
     mixins: [getCommonMixin],
     
     // attribute definitions
@@ -104,6 +104,46 @@ var Newshow = React.createClass({
         }        
         return (
             <div className="home-columns">
+                { content }
+            </div>
+        );
+    }
+});
+
+
+
+var Substanceshow = React.createClass({
+    name: 'substanceshow',
+    mixins: [getCommonMixin],
+    
+    // attribute definitions
+    getAttributes: function() {
+        var attributes = [
+            { name:'items', type:'array', required:false, defaultValue:[], note:'' }
+        ];
+        return attributes;
+    },
+
+    render: function() {
+        var content = [];
+        for (var i = 0;  i < this.state.items.length; i++) {
+            var item = this.state.items[i];
+            content.push(
+                <div>
+                    <img className="news-image" src={ item.image } />
+                    <div className="news-content">
+                        <a href={ item.hyperlink } >
+                            { item.text }
+                        </a>
+                        <div className="news-summary">
+                            { item.substance }
+                        </div>
+                    </div>
+                </div>
+            );
+        }        
+        return (
+            <div className="home-news-main clearfix">
                 { content }
             </div>
         );
