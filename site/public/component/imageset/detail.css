@@ -59,6 +59,7 @@
 .news-summary {
     word-break: normal;
     word-wrap: normal;
+    overflow: auto;
 }
 
 
