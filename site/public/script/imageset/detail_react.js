@@ -20,19 +20,22 @@ function showImagesetDetail(imageset) {
     $('#detailName').html(imageset.name);
     var new_array = [];
     for (var i in imageset.content) {
-        var new_obj = {}; // props: text, hyperlink, image(path), substance
-        new_obj.text = imageset.content[i].text;
+        var new_obj = {}; // props: title, hyperlink, image(path), text
+        new_obj.title = imageset.content[i].title;
         new_obj.hyperlink = imageset.content[i].hyperlink;
         new_obj.image = '/file/' + imageset.content[i].image.name;
-
-        if (imageset.content[i].substance) {
-            var substance_tmp = imageset.content[i].substance.replace('\r\n','\n'); // ???
+        new_obj.text = imageset.content[i].text;
+        
+        /*
+        if (imageset.content[i].text) {
+            var text_tmp = imageset.content[i].text.replace('\r\n','\n'); // ???
         }
         else {
-            var substance_tmp = '';
+            var text_tmp = '';
         }
-
-        new_obj.substance = substance_tmp;
+        new_obj.text = text_tmp;
+        */
+        
         new_array.push(new_obj);
     }
 
@@ -59,7 +62,7 @@ function showImagesetDetail(imageset) {
         items: new_array
     };    
     app.component3 = React.render(
-       <Substanceshow data={ app.component3Data } />,
+       <Newsshow data={ app.component3Data } />,
        document.getElementById('component3')
     );     
 }

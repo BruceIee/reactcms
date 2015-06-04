@@ -36,9 +36,9 @@ var Carousel = React.createClass({
             
             slideNodes.push(
                 <div className={ itemActiveClass }>
-                    <img alt={ item.text } src={ item.image } data-holder-rendered="true" />
+                    <img alt={ item.title } src={ item.image } data-holder-rendered="true" />
                     <div className="carousel-caption">
-                        <h4>{ item.text }</h4>
+                        <h4>{ item.title }</h4>
                     </div>
                 </div>
             );
@@ -96,7 +96,7 @@ var Inlineshow = React.createClass({
                             <img src={ item.image } data-holder-rendered="true" />
                         </div>    
                         <div className="column-title">
-                            { item.text }
+                            { item.title }
                         </div>
                     </a>
                 </div>
@@ -112,8 +112,8 @@ var Inlineshow = React.createClass({
 
 
 
-var Substanceshow = React.createClass({
-    name: 'substanceshow',
+var Newsshow = React.createClass({
+    name: 'newsshow',
     mixins: [getCommonMixin],
     
     // attribute definitions
@@ -133,10 +133,10 @@ var Substanceshow = React.createClass({
                     <img className="news-image" src={ item.image } />
                     <div className="news-content">
                         <a href={ item.hyperlink } >
-                            { item.text }
+                            { item.title }
                         </a>
                         <div className="news-summary">
-                            { item.substance }
+                            { item.text }
                         </div>
                     </div>
                 </div>

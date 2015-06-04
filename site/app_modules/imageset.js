@@ -31,24 +31,23 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
         //console.log('@@@ parameter=',parameter);
+        //process.exit();
         
-        /*** parameter example: (hyperlink and substance are not must required)
-        parameter= { name: 'new1',
-          text_0: 'aaa',
+        /*** parameter example: (hyperlink_* and text_* are optional)
+        parameter= { name: 'newtest',
+          title_0: 'aaa',
           hyperlink_0: 'http://www.aaa.com',
-          substance_0: 'fgjfghj\r\njhkfhjfj\r\ndghdghhj',
-          text_1: 'bbb',
+          text_0: 'With React you simply pass your event handler',
+          title_1: 'bbb',
           hyperlink_1: 'http://www.bbb.com',
-          substance_1: 'fgadgasdfsdf\r\ndfgdg\r\nfgggghfdfgdfgsdf',
-          text_2: 'ccc',
-          hyperlink_2: 'http://www.ccc.com',
+          text_1: 'React doesn\'t actually attach event handlers to the nodes themselves.',
           img_1: 
            { fieldname: 'img_1',
              originalname: '02.png',
-             name: '021433214156155.png',
+             name: '021433429108768.png',
              encoding: '7bit',
              mimetype: 'image/png',
-             path: 'site/public/file/021433214156155.png',
+             path: 'site/public/file/021433429108768.png',
              extension: 'png',
              size: 56278,
              truncated: false,
@@ -56,29 +55,18 @@ module.exports = function(app) {
           img_0: 
            { fieldname: 'img_0',
              originalname: '01.jpg',
-             name: '011433214156152.jpg',
+             name: '011433429108763.jpg',
              encoding: '7bit',
              mimetype: 'image/jpeg',
-             path: 'site/public/file/011433214156152.jpg',
+             path: 'site/public/file/011433429108763.jpg',
              extension: 'jpg',
              size: 31988,
-             truncated: false,
-             buffer: null },
-          img_2: 
-           { fieldname: 'img_2',
-             originalname: '03.png',
-             name: '031433214156156.png',
-             encoding: '7bit',
-             mimetype: 'image/png',
-             path: 'site/public/file/031433214156156.png',
-             extension: 'png',
-             size: 70703,
              truncated: false,
              buffer: null } }
         */
 
         var content = [];
-        var max_num = 0; // text_(max)
+        var max_num = 0; // title_(max)
         var reg1 = /text_([0-9]+)/;
         
         for (var prop in parameter) {
@@ -91,21 +79,21 @@ module.exports = function(app) {
         }
 
         for ( var i=0; i<=max_num; i++ ) {
-            var prop_text = "text_" + i;
+            var prop_title = "title_" + i;
             var prop_img = "img_" + i;
             var prop_hyperlink = "hyperlink_" + i;
-            var prop_substance = "substance_" + i;
-            if (parameter[prop_text]) {
+            var prop_text = "text_" + i;
+            if (parameter[prop_title]) {
                 var obj_tmp = {};
-                obj_tmp.text = parameter[prop_text];
+                obj_tmp.title = parameter[prop_title];
                 if (parameter[prop_hyperlink]) {
                     obj_tmp.hyperlink = parameter[prop_hyperlink];
                 }
                 if (parameter[prop_img]) {
                     obj_tmp.image = parameter[prop_img];
                 }
-                if (parameter[prop_substance]) {
-                    obj_tmp.substance = parameter[prop_substance];
+                if (parameter[prop_text]) {
+                    obj_tmp.text = parameter[prop_text];
                 }
                 content.push(obj_tmp);
             }
