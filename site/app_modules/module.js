@@ -23,7 +23,11 @@ module.exports = function(app) {
         }
         moduleNames = moduleNames.sort();
         for (var i = 0; i < moduleNames.length; i++) {
-            modules.push({ name:moduleNames[i] });
+            var moduleName = moduleNames[i];
+            modules.push({
+                name: moduleName,
+                model: app.module[moduleName].model
+            });
         }
         var info = { message:'module list' };
         app.cb(null, modules, info, req, res, callback);
