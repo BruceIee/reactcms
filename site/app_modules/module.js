@@ -12,16 +12,22 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     // data
-    /*
-    block.data.getModuleModel = function(req, res) {
+    block.data.getModuleList = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
-        var moduleName = parameter.module;
-        var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
-        var info = { message:'model for module ' + moduleName, module:moduleName };
-        app.cb(null, moduleModel, info, req, res, callback);
+        // get modules from app.module
+        var modules = [];
+        var moduleNames = [];
+        for (var moduleName in app.module) {
+            moduleNames.push(moduleName);
+        }
+        moduleNames = moduleNames.sort();
+        for (var i = 0; i < moduleNames.length; i++) {
+            modules.push({ name:moduleNames[i] });
+        }
+        var info = { message:'module list' };
+        app.cb(null, modules, info, req, res, callback);
     };
-    */
     
     block.data.getModuleInfo = function(req, res) {
         var callback = arguments[3] || null; 
@@ -100,7 +106,7 @@ module.exports = function(app) {
     // routes
     app.server.all('/data/modules/*', block.page.checkLogin);
     app.server.get('/data/modules/user', block.data.getUserModules);
-    //app.server.get('/data/modules/:module/model', block.data.getModuleModel);
+    app.server.get('/data/modules/list', block.data.getModuleList);
     app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
     app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
