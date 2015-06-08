@@ -20,6 +20,8 @@ var ObjectID = require('mongodb').ObjectID;
 var rm_rf = require('rimraf'); // rm -rf for node
 var mongoDb = require('mongodb');
 var mkdirp = require('mkdirp');
+var ncp = require('ncp').ncp; //Asynchronous recursive file copy utility.
+var glob = require('glob');
 
 var quantity_array = []; // use this for comparing if items quantity in file equals items added to DB.
 var finish_flag = false;
@@ -114,10 +116,19 @@ function start(setting) {
 function backupData(app, callback) {
     if (project) {
         var backup_folder = './data/' + project;
+        if ( fs.existsSync(backup_folder) ) {
+            rm_rf.sync(backup_folder);  // remove 'project' folder
+        }
     }
     else {
         var backup_folder = './data';
+        var txt_array = glob.sync(backup_folder + '/*.txt');
+        //console.log('txt_array=',txt_array);
+        txt_array.forEach( function(filename){ // synchronous remove *.txt under ./data
+            fs.unlinkSync(filename);
+        })
     }
+    
     console.log('backup to folder:',backup_folder);
     
     var app_modulenames_array = [];
@@ -130,9 +141,30 @@ function backupData(app, callback) {
         app_modulenames_array.push(tmp_obj);
     } 
 
-    async.forEachSeries(app_modulenames_array, backupModule, function(){    
-        console.log('----- backup finished. -----');
-        callback && callback();
+    async.forEachSeries(app_modulenames_array, backupModule, function(){
+        // copy uploaded files
+        if (project) {
+            var upfile_folder = './data/' + project + '/file';
+        }
+        else {
+            var upfile_folder = './data/file';
+        }
+        
+        if ( fs.existsSync(upfile_folder) ) {
+            rm_rf.sync(upfile_folder);  // remove folder
+        }
+        
+        mkdirp.sync(upfile_folder); // recursively mkdir
+        var source_path = './public/file';
+
+        ncp(source_path, upfile_folder, function (err) { // copy folder to folder
+            if (err) {
+                console.log(err);
+            }
+            console.log('uploaded files copied, from ' + source_path + ' to ' + upfile_folder);
+            console.log('----- backup finished. -----');
+            callback && callback();
+        });  
     });
 }
 
@@ -153,7 +185,6 @@ function backupModule(app_moduleName, callback) { //stream
 
         var data = {
             name: moduleName,
-            //model: module.model,
             model: module_model,
             count: docs.length || 0,
             items: docs
@@ -166,7 +197,7 @@ function backupModule(app_moduleName, callback) { //stream
             var filepath = './data';
         }
 
-        mkdirp.sync(filepath); // create folder that we need
+        mkdirp.sync(filepath); // create backup folder that we need
         
         var filename = util.format('%s/%s-data.txt', filepath, moduleName);
         var dataFileStream = fs.createWriteStream(filename, {
@@ -249,8 +280,27 @@ function importData(app, callback) {
             //console.log('in setInterval, quantity_array=\n', quantity_array);
             //check if finished
             if (finish_flag == true) {
-                console.log('----- import finished. -----');
-                process.exit(); 
+                // copy uploaded files
+                
+                var pubfile_folder = './public/file';
+                
+                if ( fs.existsSync(pubfile_folder) ) {
+                    rm_rf.sync(pubfile_folder);  // remove folder
+                }
+                
+                mkdirp.sync(pubfile_folder); // recursively mkdir
+                var source_path = app.import_folder + '/file';
+        
+                ncp(source_path, pubfile_folder, function (err) { // copy folder to folder
+                    if (err) {
+                        console.log(err);
+                    }
+                    console.log('uploaded files copied, from ' + source_path + ' to ' + pubfile_folder);
+                    console.log('----- import finished. -----');
+                    callback && callback();
+                }); 
+
+                //process.exit(); 
             }                
         }, 1000);  
     });
