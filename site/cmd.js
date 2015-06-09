@@ -89,8 +89,10 @@ function start(setting) {
         switch(setting['operation']) {
         case 'initdb':
             app.db.createTables(function() {
-                console.log('----- initdb is done. -----');
-                process.exit();
+                setTimeout(function() {
+                    console.log('----- initdb is done. -----');
+                    process.exit();
+                }, 2000);
             });
             break;
         case 'backup':
