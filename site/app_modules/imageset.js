@@ -169,6 +169,11 @@ module.exports = function(app) {
         res.render('imageset/detail_react', { page:page });
     };
     
+    block.page.googlemapApiTest = function(req, res) {
+        var page = app.getPage(req);
+        res.render('imageset/googlemap_api', { page:page });
+    }; 
+    
     
     // data route
     app.server.post('/data/imagesets/add_imageset_post', block.data.addImagesetPost);
@@ -186,6 +191,7 @@ module.exports = function(app) {
     // page react
     app.server.get('/imagesets/list/react', block.page.getImagesetListReact);
     app.server.get('/imagesets/:id/detail/react', block.page.getImagesetDetailReact);
+    app.server.get('/imagesets/googlemap', block.page.googlemapApiTest);
 
     return block;
 };
