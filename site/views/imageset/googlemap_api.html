@@ -1,0 +1,61 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&.js">
+</script>
+
+<script>
+$(document).ready(function() {
+    console.log('aaa');
+    var map;
+    var elevator;
+    var myOptions = {
+        zoom: 1,
+        center: new google.maps.LatLng(0, 0),
+        mapTypeId: 'terrain'
+    };
+    map = new google.maps.Map($('#mytest')[0], myOptions);
+
+    var addresses = ['China', 'Africa', 'Asia','North America','South America'];
+
+    for (var x = 0; x < addresses.length; x++) {
+        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
+            var p = data.results[0].geometry.location
+            console.log('p=',p);
+            var latlng = new google.maps.LatLng(p.lat, p.lng);
+            new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+        });
+    }
+});    
+</script>
+
+
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-4">
+            Google map API test
+        </h4>
+    </div>
+    
+
+    <div id="mytest">
+    </div>
+
+    
+
+    
+</div>
+{% endblock %}
