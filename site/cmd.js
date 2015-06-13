@@ -158,7 +158,6 @@ function backupData(app, callback) {
         
         mkdirp.sync(upfile_folder); // recursively mkdir
         var source_path = './public/file';
-
         ncp(source_path, upfile_folder, function (err) { // copy folder to folder
             if (err) {
                 console.log(err);
@@ -242,15 +241,14 @@ function backupModule(app_moduleName, callback) { //stream
 function importData(app, callback) {
     if (project) {
         app.import_folder = './data/' + project;
-    }
-    else {
+    } else {
         // default is to import all data files from ./data folder
         app.import_folder = './data';
     }
     console.log('import from folder:',app.import_folder);
     
     if ( fs.existsSync(app.import_folder) == false ) {
-        console.log('no such folder:',app.import_folder);
+        console.log('no such folder:', app.import_folder);
         console.log('exit');
         process.exit();
     }
@@ -269,7 +267,6 @@ function importData(app, callback) {
     }
     
     var app_filenames_array = []; // array contains 'app' and 'filename'
-    
     for (var i in filenames_array) {
         var tmp_obj = {};
         tmp_obj['app'] = app;
@@ -283,26 +280,27 @@ function importData(app, callback) {
             //check if finished
             if (finish_flag == true) {
                 // copy uploaded files
-                
                 var pubfile_folder = './public/file';
-                
                 if ( fs.existsSync(pubfile_folder) ) {
                     rm_rf.sync(pubfile_folder);  // remove folder
                 }
                 
                 mkdirp.sync(pubfile_folder); // recursively mkdir
                 var source_path = app.import_folder + '/file';
-        
-                ncp(source_path, pubfile_folder, function (err) { // copy folder to folder
-                    if (err) {
-                        console.log(err);
-                    }
+                if (fs.existsSync(source_path)) {
+                    ncp(source_path, pubfile_folder, function (err) { // copy folder to folder
+                        if (err) {
+                            console.log(err);
+                        }
+                        console.log('uploaded files copied, from ' + source_path + ' to ' + pubfile_folder);
+                        console.log('----- import finished. -----');
+                        callback && callback();
+                    });
+                } else {
                     console.log('uploaded files copied, from ' + source_path + ' to ' + pubfile_folder);
                     console.log('----- import finished. -----');
                     callback && callback();
-                }); 
-
-                //process.exit(); 
+                }
             }                
         }, 1000);  
     });
