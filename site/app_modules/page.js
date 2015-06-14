@@ -63,16 +63,16 @@ module.exports = function(app) {
                     
                     /*
                     pageSectionContent example:
+                    
                     [{
                         widgetName: 'ArticleDetail',
                         widgetInfo: {
                             module: 'article',
-                            condition: { title:'Mission of PTA' },
+                            condition: { title:'page title' },
                             filter: {}
                         }
                     }]
-                    */
-                    /*
+                    
                     for (var pageSectionName in pageContent) {
                         var widgets = pageContent[pageSectionName];
                         for (var i = 0; i < widgets.length; i++) {
@@ -90,10 +90,12 @@ module.exports = function(app) {
                     app.cb(error, docs, info, req, res, callback);
                 });
             } else {
+                
                 var text = 'no page';
                 info = {
                     message: 'no page'
                 };
+                
                 app.renderInfoPage(new Error(text), null, info, req, res);
             }
             
