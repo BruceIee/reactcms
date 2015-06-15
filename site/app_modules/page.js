@@ -48,57 +48,27 @@ module.exports = function(app) {
             // get page
             var page = docs && docs[0];
             console.log('getPage:', page);
-            
             // get composition
             if (docs.length > 0) {
                 var page = docs[0];
                 var pageContent = page.content;
                 var compositionName = page.composition;
-                
                 var compositionDataUrl = '/data/compositions/' + compositionName;
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
                     console.log('composition:', composition);
-                    
-                    /*
-                    pageSectionContent example:
-                    
-                    [{
-                        widgetName: 'ArticleDetail',
-                        widgetInfo: {
-                            module: 'article',
-                            condition: { title:'page title' },
-                            filter: {}
-                        }
-                    }]
-                    
-                    for (var pageSectionName in pageContent) {
-                        var widgets = pageContent[pageSectionName];
-                        for (var i = 0; i < widgets.length; i++) {
-                            var widget = widgets[i];
-                            var componentData = app.module['component'].data;
-                            tool.setReqParameter(req, widget);
-                            componentData.getWidgetData(req, res, null, function(error, docs, info) {
-                                //console.log('widget data:', error, docs, info);
-                            });
-                        }
-                    }
-                    */
-                    
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
                 });
             } else {
-                
-                var text = 'no page';
                 info = {
-                    message: 'no page'
+                    message: 'page is not found',
+                    page: null,
+                    composition: null
                 };
-                
-                app.renderInfoPage(new Error(text), null, info, req, res);
+                app.cb(error, docs, info, req, res, callback);
             }
-            
         });
     };
     
@@ -172,7 +142,7 @@ module.exports = function(app) {
             var page = app.getPage(req);
             page.title = 'List of pages';
             page.pages = docs;
-            res.render('page/list', { page:page });            
+            res.render('page/list', { page:page });    
         });
     };
     
@@ -183,11 +153,17 @@ module.exports = function(app) {
         block.data.getPage(req, res, null, function(error, docs, info) {
             //console.log('Got page:', error, docs, info);
             var page = app.getPage(req);
-            page.title = info.page.title || app.setting['app_name'] || '';
-            page.pageData = info.page;
-            page.compositionData = info.composition;
-            var layoutFilename = 'composition/' + info.composition.filename;
-            res.render(layoutFilename, { page:page });
+            if (info.page) {
+                page.title = info.page.title || app.setting['app_name'] || '';
+                page.pageData = info.page;
+                page.compositionData = info.composition;
+                var layoutFilename = 'composition/' + info.composition.filename;
+                res.render(layoutFilename, { page:page });
+            } else {
+                // page is not found in database
+                page.pageData = { name:pageName };
+                res.render('page/missing', { page:page });
+            }
         });
     };
     
