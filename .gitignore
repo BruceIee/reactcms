@@ -8,5 +8,6 @@ site/npm-debug.log
 !/site/node_modules/
 .idea
 site/public/file/*
-site/data/*/*
+site/data/site_default
+#site/data/*/*
 site/public/script/**/dist/*.js

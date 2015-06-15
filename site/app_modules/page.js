@@ -47,7 +47,6 @@ module.exports = function(app) {
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             // get page
             var page = docs && docs[0];
-            console.log('getPage:', page);
             // get composition
             if (docs.length > 0) {
                 var page = docs[0];
@@ -57,7 +56,7 @@ module.exports = function(app) {
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
-                    console.log('composition:', composition);
+                    //console.log('composition:', composition);
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
                 });

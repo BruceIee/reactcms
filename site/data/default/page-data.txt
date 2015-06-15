@@ -1,0 +1,29 @@
+{
+    "name":"page",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "composition": {
+            "type": "string"
+        },
+        "content": {
+            "type": "object"
+        },
+        "status": {
+            "type": "string"
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "group": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}

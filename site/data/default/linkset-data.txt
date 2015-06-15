@@ -1,0 +1,26 @@
+{
+    "name":"linkset",
+    "module":    {
+        "type": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "content": {
+            "type": "array"
+        },
+        "status": {
+            "type": "string"
+        },
+        "create_date": {
+            "type": "date"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
