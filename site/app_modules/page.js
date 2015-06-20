@@ -85,10 +85,10 @@ module.exports = function(app) {
     };
     
     block.data.addPage = function(req, res) {
-        var callback = arguments[3] || null; 
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
         var page = tool.getReqParameter(req);
         page.create_date = new Date();
-        
         block.data.add(req, res, page, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
@@ -109,7 +109,9 @@ module.exports = function(app) {
     };
     
     block.page.addPage = function(req, res) {
+        var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
+        page.name = parameter.name || '';
         res.render('page/add', { page:page });
     };
     
