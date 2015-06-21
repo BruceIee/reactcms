@@ -3,8 +3,8 @@ cd site/public
 # build bundle files for distribution
 
 echo "build bundle files ..."
-browserify -o script/common/dist/view.js -d script/common/src/view.js
-browserify -o script/common/dist/list.js -d script/common/src/list.js
+browserify -o script/module/dist/view.js -d script/module/src/view.js
+browserify -o script/module/dist/list.js -d script/module/src/list.js
 
 # end of build
 echo "build is done"
