@@ -1,0 +1,29 @@
+{
+  "name": "reactlet-html-form",
+  "version": "0.1.0",
+  "description": "reactlet html form",
+  "main": "dist/html_form.js",
+  "keywords": [
+    "html",
+    "form",
+    "javascript"
+  ],
+  "dependencies": {
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "watchify": "^2.1.1"
+  },
+  "author": {
+    "name": "leapon",
+    "email": "info@leapon.com"
+  },
+  "scripts": {},
+  "maintainers": [
+    {
+      "name": "leapon",
+      "email": "info@leapon.com"
+    }
+  ]
+}
