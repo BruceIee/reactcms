@@ -3,6 +3,10 @@
 var React = require('react');
 var Table = require('reactlet-table');
 
+var HtmlInput = require('reactlet-html-input');
+var HtmlSelect = require('reactlet-html-select');
+var HtmlForm = require('reactlet-html-form');
+
 var app = app ||  window.app || {};
 
 $().ready(function() {
