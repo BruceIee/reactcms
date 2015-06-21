@@ -11,6 +11,7 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
+    testForm();
 });
 
 function setup() {
@@ -89,3 +90,12 @@ function viewItem(itemId) {
     console.log('view item:', itemId, itemViewUrl);
 }
 */
+
+function testForm() {
+    console.log('in testForm');
+    
+    
+    
+    
+    
+}
