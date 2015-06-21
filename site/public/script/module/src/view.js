@@ -61,7 +61,6 @@ function updateTableDisplay(moduleInfo, moduleItems) {
             newItems.push(newObj);
         }
     }
-
     /* newItems example:
     [
         { name:'_id', value:'123456' },
@@ -74,14 +73,12 @@ function updateTableDisplay(moduleInfo, moduleItems) {
 }
 
 function doTableDisplay(colModel, items) {
-    // table2Data has 'id' column as key column
     app.table1Data = {
         boxClass: 'table-container-bordered',
         colModel: colModel,
         dataItems: items,
         //paging: { size: 10, page: 1 }
     };
-    // table2 with paging
     app.table1 = React.render(
         React.createElement(Table, { data:app.table1Data }),
         document.getElementById('table1')
