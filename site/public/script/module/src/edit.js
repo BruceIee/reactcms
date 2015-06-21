@@ -11,7 +11,7 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
-    testForm();
+    testForm1();
 });
 
 function setup() {
@@ -91,11 +91,47 @@ function viewItem(itemId) {
 }
 */
 
-function testForm() {
-    console.log('in testForm');
+
+function testForm1() {
+    console.log('in testForm1');
+    app.component1Data = {
+        label:'Item Price'
+    };
+    app.component1 = React.render(
+        React.createElement('HtmlInput', { data:app.component1Data }),
+        document.getElementById('form1')
+    );
+}
+
+function testForm2() {
+    console.log('in testForm2');
     
+    var testFormFields = [
+        {
+            type: "HtmlInput",
+            data: {
+                label: "Student",
+                "placeholder": "Student Name"
+            }
+        },
+        {
+            type: "HtmlSelect",
+            data: {
+                label: "Grade",
+                value: "grade1",
+                options: [
+                    { id:"blank", display:"" },
+                    { id:"grade1", display:"grade 1" },
+                    { id:"grade2", display:"grade 2" },
+                    { id:"grade3", display:"grade 3" }
+                ]
+            }
+        }
+    ];
     
-    
-    
-    
+    var component2Data = { fields:testFormFields };
+    var component2 = React.render(
+        <HtmlForm data={ component2Data } />,
+        document.getElementById('form2')
+    );
 }
