@@ -96,7 +96,7 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
         page.moduleName = parameter.module;
-        res.render('common/list', { page:page });
+        res.render('module/list', { page:page });
     };
     
     block.page.viewItem = function(req, res) {
@@ -104,7 +104,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         page.moduleName = parameter.module;
         page.itemId = parameter.id;
-        res.render('common/view', { page:page });
+        res.render('module/view', { page:page });
     };
     
     // routes
