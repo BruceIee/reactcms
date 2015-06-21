@@ -1,0 +1,37 @@
+{% extends '../layout/layout-admin.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/component/reactlet-common/reactlet-common.css" />
+<link rel="stylesheet" href="/component/reactlet-table/dist/table.css" />
+<link rel="stylesheet" href="/style/module/view.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script>
+window.app = {
+    moduleName:"{{ page.moduleName }}",
+    itemId:"{{ page.itemId }}"
+};
+</script>
+<script src="/component/reactlet-common/reactlet-mixin.js"></script>
+<script src="/script/module/dist/edit.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top:20px;">
+    
+    <div class="row">
+        <div class="col-md-10">
+            <h4>Edit {{ page.moduleName }} id:{{ page.itemId }}</h4>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

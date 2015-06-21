@@ -24,8 +24,10 @@ function setup() {
             viewItem(app.activeRowId);
         } else if ($(event.currentTarget).hasClass('btn-new')) {
             console.log('clicked on new button');
+            createItem();
         } else if ($(event.currentTarget).hasClass('btn-edit')) {
             console.log('clicked on edit button');
+            editItem(app.activeRowId);
         } else if ($(event.currentTarget).hasClass('btn-delete')) {
             console.log('clicked on delete button');
         }
@@ -120,4 +122,19 @@ function viewItem(itemId) {
     var itemViewUrl = '/modules/' + app.moduleName + '/' + itemId + '/view';
     console.log('view item:', itemId, itemViewUrl);
     window.location = itemViewUrl;
+}
+
+function editItem(itemId) {
+    if (!itemId) {
+        return;
+    }
+    var itemEditUrl = '/modules/' + app.moduleName + '/' + itemId + '/edit';
+    console.log('view item:', itemId, itemEditUrl);
+    window.location = itemEditUrl;
+}
+
+function createItem() {
+    var itemNewUrl = '/modules/' + app.moduleName + '/new';
+    console.log('create item:', itemNewUrl);
+    window.location = itemNewUrl;
 }

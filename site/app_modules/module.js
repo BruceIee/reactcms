@@ -107,6 +107,22 @@ module.exports = function(app) {
         res.render('module/view', { page:page });
     };
     
+    block.page.editItem = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.moduleName = parameter.module;
+        page.itemId = parameter.id;
+        res.render('module/edit', { page:page });
+    };
+    
+    block.page.createItem = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.moduleName = parameter.module;
+        page.itemId = '';
+        res.render('module/edit', { page:page });
+    };
+    
     // routes
     app.server.all('/data/modules/*', block.page.checkLogin);
     app.server.get('/data/modules/user', block.data.getUserModules);
@@ -118,6 +134,8 @@ module.exports = function(app) {
     app.server.all('/modules/*', block.page.checkLogin);
     app.server.get('/modules/:module/list', block.page.getListPage);
     app.server.get('/modules/:module/:id/view', block.page.viewItem);
+    app.server.get('/modules/:module/:id/edit', block.page.editItem);
+    app.server.get('/modules/:module/new', block.page.createItem);
     
     return block;
 };
