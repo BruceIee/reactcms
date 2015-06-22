@@ -11,8 +11,8 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
-    testForm1();
-    //testForm2();
+    testForm1a();
+    testForm1b();
     testForm3();
 });
 
@@ -94,14 +94,32 @@ function viewItem(itemId) {
 */
 
 
-function testForm1() {
-    console.log('in testForm1');
-    app.component1Data = {
+function testForm1a() {
+    console.log('in testForm1a');
+    app.component1aData = {
         label:'Item Price'
     };
-    app.form1 = React.render(
-        React.createElement(HtmlInput, { data:app.component1Data }),
-        document.getElementById('form1')
+    app.form1a = React.render(
+        React.createElement(HtmlInput, { data:app.component1aData }),
+        document.getElementById('form1a')
+    );
+}
+
+function testForm1b() {
+    console.log('in testForm1b');
+    app.component1bData = {
+        label: "Grade",
+        value: "grade1",
+        options: [
+            { id:"blank", display:"" },
+            { id:"grade1", display:"grade 1" },
+            { id:"grade2", display:"grade 2" },
+            { id:"grade3", display:"grade 3" }
+        ]
+    };
+    app.form1b = React.render(
+        React.createElement(HtmlSelect, { data:app.component1bData }),
+        document.getElementById('form1b')
     );
 }
 
@@ -159,5 +177,4 @@ function testForm3() {
         React.createElement(Table, { data:app.table3Data }),
         document.getElementById('form3')
     );
-
 }
