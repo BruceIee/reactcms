@@ -11,6 +11,8 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
+    testForm1();
+    //testForm2();
     testForm3();
 });
 
@@ -97,22 +99,14 @@ function testForm1() {
     app.component1Data = {
         label:'Item Price'
     };
-    app.component1 = React.render(
-        React.createElement('HtmlInput', { data:app.component1Data }),
+    app.form1 = React.render(
+        React.createElement(HtmlInput, { data:app.component1Data }),
         document.getElementById('form1')
     );
-    
-    /*
-    app.table1 = React.render(
-        React.createElement(Table, { data:app.table1Data }),
-        document.getElementById('table1')
-    );
-    */
 }
 
 function testForm2() {
     console.log('in testForm2');
-    
     var testFormFields = [
         {
             type: "HtmlInput",
@@ -135,10 +129,9 @@ function testForm2() {
             }
         }
     ];
-    
     var component2Data = { fields:testFormFields };
     var component2 = React.render(
-        <HtmlForm data={ component2Data } />,
+        React.createElement(HtmlForm, { data:component2Data }),
         document.getElementById('form2')
     );
 }
