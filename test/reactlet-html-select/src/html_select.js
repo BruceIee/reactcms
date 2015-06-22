@@ -16,7 +16,7 @@ var HtmlInput = React.createClass({
             { name:'inputClass', type:'string', required:false, defaultValue:'form-control', note:'input element CSS class' },
             { name:'label', type:'string', required:false, defaultValue:'', note:'input label' },
             { name:'value', type:'string', required:false, defaultValue:'', note:'input type' },
-            { name:'placeholder', type:'string', required:false, defaultValue:'', note:'placeholder text' },
+            { name:'options', type:'array', required:false, defaultValue:[], note:'options in array' }
         ];
         return attributes;
     },
