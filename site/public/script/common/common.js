@@ -31,6 +31,7 @@ function getFormField(fieldName, modelField, fieldValue) {
             type: 'HtmlSelect',
             data: {
                 label: fieldName,
+                key: fieldName,
                 value: fieldValue,
                 options: getSelectOptions(modelField.values)
             }
@@ -41,6 +42,7 @@ function getFormField(fieldName, modelField, fieldValue) {
             type: 'HtmlJsonEdit',
             data: {
                 label: fieldName,
+                key: fieldName,
                 value: fieldValue
             }
         };
@@ -49,6 +51,7 @@ function getFormField(fieldName, modelField, fieldValue) {
             type: 'HtmlInput',
             data: {
                 label: fieldName,
+                key: fieldName,
                 value: fieldValue,
                 placeholder: ''
             }

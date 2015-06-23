@@ -26,6 +26,7 @@ function setup() {
             updateDisplay(moduleInfo, null);
         }
     });
+    $('#btnEdit').click(onBtnEdit);
 }
 
 function getModuleInfo(moduleName, callback) {
@@ -52,3 +53,10 @@ function updateDisplay(moduleInfo, moduleItem) {
     );
 }
 
+function onBtnEdit() {
+    console.log('>>> onBtnEdit', app.itemId);
+    var moduleItem = app.editForm.getValue();
+    
+    console.log('>>> moduleItem', moduleItem);
+    
+}
