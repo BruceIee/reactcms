@@ -91,6 +91,22 @@ module.exports = function(app) {
         app.cb(error, docs, info, req, res, callback);
     };
     
+    block.data.addModuleItem = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var moduleName = parameter.module;
+        var moduleData = app.module[moduleName].data;
+        
+        delete parameter.module;
+        parameter.create_date = new Date();
+        console.log('>>> addModuleItem:', moduleName, parameter);
+        
+        moduleData.add(req, res, parameter, function(error, docs, info) {
+            console.log('>>> addModuleItem result:', error, docs, info);
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+        
     // page
     block.page.getListPage = function(req, res) {
         var parameter = tool.getReqParameter(req);
@@ -132,6 +148,7 @@ module.exports = function(app) {
     app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
     app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
+    app.server.post('/data/modules/:module/add', block.data.addModuleItem);
     
     app.server.all('/modules/*', block.page.checkLogin);
     app.server.get('/modules/:module/list', block.page.getListPage);

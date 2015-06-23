@@ -68,6 +68,11 @@ function onBtnEdit() {
 
 function createItem(item) {
     console.log('create item:', item);
+    var itemAddUrl = '/data/modules/' + app.moduleName + '/add';
+    console.log('itemAddUrl:', itemAddUrl);
+    $.post(itemAddUrl, item, function(error, docs, info) {
+        console.log('item created:', error, docs, info);
+    });
 }
 
 function editItem(item, itemId) {
