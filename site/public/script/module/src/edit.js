@@ -72,15 +72,25 @@ function createItem(item) {
     console.log('itemAddUrl:', itemAddUrl);
     $.post(itemAddUrl, item, function(data) {
         console.log('item created:', data);
-        var newItem = data.docs && data.docs[0] || null;
-        if (newItem) {
-            openItemEditPage(newItem);
+        var Item = data.docs && data.docs[0] || null;
+        if (Item) {
+            openItemEditPage(Item);
         }
     });
 }
 
 function editItem(item, itemId) {
     console.log('edit item:', itemId, item);
+    var itemEditUrl = '/data/modules/' + app.moduleName + '/edit';
+    console.log('itemEditUrl:', itemEditUrl);
+    item._id = itemId;
+    $.post(itemEditUrl, item, function(data) {
+        console.log('item edited:', data);
+        var Item = data.docs && data.docs[0] || null;
+        if (Item) {
+            openItemEditPage(Item);
+        }
+    });
 }
 
 function openItemEditPage(item) {
