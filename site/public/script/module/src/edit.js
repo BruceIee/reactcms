@@ -11,7 +11,7 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
-    testForm();
+    //testForm();
 });
 
 function setup() {
@@ -43,37 +43,12 @@ function getModuleItemData(moduleName, itemId, callback) {
 }
 
 function updateDisplay(moduleInfo, moduleItem) {
-    console.log('updateDisplay:', moduleInfo, moduleItem);
-}
-
-// test functions
-function testForm() {
-    console.log('in testForm');
-    var testFormFields = [
-        {
-            type: "HtmlInput",
-            data: {
-                label: "Student",
-                "placeholder": "Student Name"
-            }
-        },
-        {
-            type: "HtmlSelect",
-            data: {
-                label: "Grade",
-                value: "grade1",
-                options: [
-                    { id:"blank", display:"" },
-                    { id:"grade1", display:"grade 1" },
-                    { id:"grade2", display:"grade 2" },
-                    { id:"grade3", display:"grade 3" }
-                ]
-            }
-        }
-    ];
-    var component2Data = { fields:testFormFields };
-    var component2 = React.render(
-        React.createElement(HtmlForm, { data:component2Data }),
+    var moduleModel = moduleInfo.model;
+    console.log('updateDisplay model:', moduleModel);
+    var formFields = getFormFieldsFromModel(moduleModel, moduleItem);
+    app.editForm = React.render(
+        React.createElement(HtmlForm, { data:{ fields:formFields } }),
         document.getElementById('editForm')
     );
 }
+
