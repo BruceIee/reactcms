@@ -11,20 +11,25 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
+    //test();
+});
+
+function test() {
     testForm1a();
     testForm1b();
     testForm2();
-});
+}
 
 function setup() {
     console.log('in common view page - module:', app.moduleName, ' id:', app.itemId);
-    /*
     getModuleInfo(app.moduleName, function(moduleInfo) {
+        
+        /*
         getModuleItemData(app.moduleName, app.itemId, function(moduleItems) {
             //updateTableDisplay(moduleInfo, moduleItems);
         });
+        */
     });
-    */
 }
 
 function getModuleInfo(moduleName, callback) {
