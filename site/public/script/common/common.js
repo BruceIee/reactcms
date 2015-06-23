@@ -14,52 +14,52 @@ getJsonFromText = function(inputText) {
 
 function getFormFieldsFromModel(model, formItem) {
     var formFields = [];
-    
     for (var fieldName in model) {
         var modelField = model[fieldName];
         var fieldValue = formItem && formItem[fieldName] || '';
-        console.log('>>>', fieldName, modelField);
         var formField = getFormField(fieldName, modelField, fieldValue);
         formFields.push(formField);
     }
-    
-    /*
-    formFields.push({
-        type: "HtmlInput",
-        data: {
-            label: "Student",
-            "placeholder": "Student Name"
-        }
-    });
-    formFields.push({
-        type: "HtmlSelect",
-        data: {
-            label: "Grade",
-            value: "grade1",
-            options: [
-                { id:"blank", display:"" },
-                { id:"grade1", display:"grade 1" },
-                { id:"grade2", display:"grade 2" },
-                { id:"grade3", display:"grade 3" }
-            ]
-        }
-    });
-    */
-    
     return formFields;
 }
 
 function getFormField(fieldName, modelField, fieldValue) {
     var formField = null;
-    
-    formField = {
-        type: 'HtmlInput',
-        data: {
-            label: fieldName,
-            value: fieldValue,
-            placeholder: ''
-        }
-    };
-    
+    if (modelField.values && modelField.values.length > 0) {
+        formField = {
+            type: 'HtmlSelect',
+            data: {
+                label: fieldName,
+                value: fieldValue,
+                options: getSelectOptions(modelField.values)
+            }
+        };
+    } else {
+        formField = {
+            type: 'HtmlInput',
+            data: {
+                label: fieldName,
+                value: fieldValue,
+                placeholder: ''
+            }
+        };
+    }
     return formField;
+}
+
+function getSelectOptions(fieldValues) {
+    var selectOptions = [];
+    for (var i = 0; i < fieldValues.length; i++) {
+        var fieldValue = fieldValues[i];
+        var selectOption = null;
+        if (typeof fieldValue === 'string') {
+            selectOption = { id:fieldValue, display:fieldValue };
+        } else if (typeof fieldValue === 'object') {
+            selectOption = fieldValue;
+        }
+        if (selectOption) {
+            selectOptions.push(selectOption);
+        }
+    }
+    return selectOptions;
 }

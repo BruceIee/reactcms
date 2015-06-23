@@ -24,13 +24,23 @@ module.exports = function(app) {
         content: {
             type: 'object'
         },
-        status: {
+        group: {
             type: 'string'
+        },
+        status: {
+            type: 'string',
+            values: ['active', 'inactive']
         },
         create_date: {
             type: 'date'
         },
-        group: {
+        create_by: {
+            type: 'string'
+        },
+        edit_date: {
+            type: 'date'
+        },
+        edit_by: {
             type: 'string'
         }
     };

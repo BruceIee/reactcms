@@ -14,12 +14,6 @@ module.exports = function(app) {
 
     block.page.getHomeIndex = function(req, res) {
         res.redirect('/pages/home');
-        /*
-        var page = app.getPage(req);
-        page.title = 'Home';
-        page.controller = 'home';
-        res.render('web/index', { page:page });
-        */
     };
 
     app.server.get('/', block.page.getHomeIndex);

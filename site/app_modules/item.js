@@ -29,7 +29,8 @@ module.exports = function(app) {
             }
         },
         status: {
-            type: 'string'
+            type: 'string',
+            values: ['active', 'inactive']
         },
         create_date: {
             type: 'date'

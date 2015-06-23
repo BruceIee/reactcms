@@ -47,10 +47,23 @@ module.exports = function(app) {
                 type: 'password'
             }
         },
-        status: {
+        group: {
             type: 'string'
         },
-        group: {
+        status: {
+            type: 'string',
+            values: ['active', 'inactive']
+        },
+        create_date: {
+            type: 'date'
+        },
+        create_by: {
+            type: 'string'
+        },
+        edit_date: {
+            type: 'date'
+        },
+        edit_by: {
             type: 'string'
         }
     };

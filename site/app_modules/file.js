@@ -21,8 +21,21 @@ module.exports = function(app) {
         path: {
             type: 'string'
         },
+        status: {
+            type: 'string',
+            values: ['active', 'inactive', 'deleted']
+        },
         create_date: {
             type: 'date'
+        },
+        create_by: {
+            type: 'string'
+        },
+        edit_date: {
+            type: 'date'
+        },
+        edit_by: {
+            type: 'string'
         }
     };
     
