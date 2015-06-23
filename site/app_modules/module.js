@@ -99,10 +99,9 @@ module.exports = function(app) {
         
         delete parameter.module;
         parameter.create_date = new Date();
-        console.log('>>> addModuleItem:', moduleName, parameter);
-        
+        //console.log('>>> addModuleItem:', moduleName, parameter);
         moduleData.add(req, res, parameter, function(error, docs, info) {
-            console.log('>>> addModuleItem result:', error, docs, info);
+            //console.log('>>> addModuleItem result:', error, docs, info);
             app.cb(error, docs, info, req, res, callback);
         });
     };

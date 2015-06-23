@@ -70,11 +70,20 @@ function createItem(item) {
     console.log('create item:', item);
     var itemAddUrl = '/data/modules/' + app.moduleName + '/add';
     console.log('itemAddUrl:', itemAddUrl);
-    $.post(itemAddUrl, item, function(error, docs, info) {
-        console.log('item created:', error, docs, info);
+    $.post(itemAddUrl, item, function(data) {
+        console.log('item created:', data);
+        var newItem = data.docs && data.docs[0] || null;
+        if (newItem) {
+            openItemEditPage(newItem);
+        }
     });
 }
 
 function editItem(item, itemId) {
     console.log('edit item:', itemId, item);
+}
+
+function openItemEditPage(item) {
+    var itemEditUrl = '/modules/' + app.moduleName + '/' + item._id + '/edit';
+    window.location = itemEditUrl;
 }
