@@ -26,12 +26,22 @@ function getFormFieldsFromModel(model, formItem) {
 function getFormField(fieldName, modelField, fieldValue) {
     var formField = null;
     if (modelField.values && modelField.values.length > 0) {
+        // use HtmlSelect if model has values
         formField = {
             type: 'HtmlSelect',
             data: {
                 label: fieldName,
                 value: fieldValue,
                 options: getSelectOptions(modelField.values)
+            }
+        };
+    } else if (modelField.type === 'array' || modelField.type === 'object') {
+        // use HtmlJsonEdit if model type is array or object
+        formField = {
+            type: 'HtmlJsonEdit',
+            data: {
+                label: fieldName,
+                value: fieldValue
             }
         };
     } else {

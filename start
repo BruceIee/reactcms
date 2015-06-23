@@ -1,6 +1,28 @@
-cd site/public
+cd site/
+
+# build component files
+cd node_modules/
+
+cd reactlet-html-input/
+jsx src/ dist/
+cd ..
+
+cd reactlet-html-select/
+jsx src/ dist/
+cd ..
+
+cd reactlet-html-json-edit/
+jsx src/ dist/
+cd ..
+
+cd reactlet-html-form/
+jsx src/ dist/
+cd ..
+
+cd ..
 
 # build bundle files for distribution
+cd public/
 
 echo "build bundle files ..."
 browserify -o script/module/dist/view.js -d script/module/src/view.js
