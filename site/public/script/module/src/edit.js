@@ -54,9 +54,22 @@ function updateDisplay(moduleInfo, moduleItem) {
 }
 
 function onBtnEdit() {
-    console.log('>>> onBtnEdit', app.itemId);
+    //console.log('>>> onBtnEdit', app.itemId);
     var moduleItem = app.editForm.getValue();
-    
-    console.log('>>> moduleItem', moduleItem);
-    
+    //console.log('>>> moduleItem', moduleItem);
+    if (app.itemId) {
+        //save changed value for existing item
+        editItem(moduleItem, app.itemId);
+    } else {
+        // create new item with form value
+        createItem(moduleItem);
+    }
+}
+
+function createItem(item) {
+    console.log('create item:', item);
+}
+
+function editItem(item, itemId) {
+    console.log('edit item:', itemId, item);
 }
