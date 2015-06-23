@@ -24,7 +24,7 @@ window.app = {
     
     <div class="row">
         <div class="col-md-12">
-            <h4>Edit {{ page.moduleName }}</h4>
+            <h4>{{ page.action }} {{ page.moduleName }}</h4>
             <div class="hidden">id: {{ page.itemId }}</div>
         </div>
     </div>
@@ -34,20 +34,6 @@ window.app = {
             <div id="editForm"></div>
         </div>
     </div>
-    
-    <!--
-    <div class="row">
-        <div class="col-md-8">
-            <div>Field Test</div>
-            <div id="form1a"></div>
-            <div id="form1b"></div>
-        </div>
-        <div class="col-md-8">
-            <div>Form Test</div>
-            <div id="form2"></div>
-        </div>
-    </div>
-    -->
     
 </div>
 {% endblock %}

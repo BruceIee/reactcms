@@ -112,6 +112,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         page.moduleName = parameter.module;
         page.itemId = parameter.id;
+        page.action = 'Edit';
         res.render('module/edit', { page:page });
     };
     
@@ -120,6 +121,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         page.moduleName = parameter.module;
         page.itemId = '';
+        page.action = 'Create';
         res.render('module/edit', { page:page });
     };
     
