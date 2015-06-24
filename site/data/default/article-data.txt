@@ -5,13 +5,20 @@
             "type": "string"
         },
         "content": {
-            "type": "string"
+            "type": "text",
+            "subtype": {
+                "type": "html"
+            }
         },
         "title": {
             "type": "string"
         },
         "status": {
-            "type": "string"
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
         },
         "create_date": {
             "type": "date"

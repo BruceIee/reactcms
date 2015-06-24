@@ -13,17 +13,33 @@
         "data": {
             "type": "array",
             "subtype": {
-                "type": "object"
+                "type": "object",
+                "subtype": {
+                    "type": "json"
+                }
             }
         },
         "status": {
-            "type": "string"
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
         },
         "create_date": {
             "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
         }
     },
-    "count":2,
+    "count":3,
     "items": [
         {
             "_id": "554c261457e90a66273cb733",
@@ -34,27 +50,30 @@
                 {
                     "name": "r1c1",
                     "description": "top",
-                    "width": 12
+                    "width": "12"
                 },
                 {
                     "name": "r2c1",
                     "description": "side",
-                    "width": 4
+                    "width": "4"
                 },
                 {
                     "name": "r2c2",
                     "description": "main",
-                    "width": 8
+                    "width": "8"
                 },
                 {
                     "name": "r3c1",
                     "description": "footer",
-                    "width": 12
+                    "width": "12"
                 }
             ],
-            "status": "",
-            "create_date": null,
-            "_class": "composition"
+            "status": "active",
+            "create_date": "",
+            "_class": "composition",
+            "create_by": "",
+            "edit_date": "2015-06-23T23:45:38.000Z",
+            "edit_by": "admin"
         },
         {
             "_id": "554c261457e90a66273cb734",
@@ -90,6 +109,29 @@
             ],
             "status": "",
             "create_date": null,
+            "_class": "composition",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "558a19eac1f98a4522648110",
+            "module": "composition",
+            "name": "theone",
+            "description": "one widget",
+            "filename": "theone.html",
+            "data": [
+                {
+                    "name": "r1c1",
+                    "description": "main",
+                    "width": "12"
+                }
+            ],
+            "status": "active",
+            "create_date": "2015-06-24T02:46:02.320Z",
+            "create_by": "admin",
+            "edit_date": "2015-06-24T02:50:19.000Z",
+            "edit_by": "admin",
             "_class": "composition"
         }
     ]
