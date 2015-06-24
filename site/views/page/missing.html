@@ -13,16 +13,12 @@
 <div class="container" style="min-height:420px;">
     
     <div class="row">
-        <h4 class="col-md-12">
-            Page {{ page.pageData.name }} is not found
-        </h4>
-    </div>
-    
-    <div class="row">
-        <h4 class="col-md-12">
-            Click <a href="/pages/add?name={{ page.pageData.name }}">here</a>
-            to create a new page for {{ page.pageData.name }}
-        </h4>
+        <div class="col-md-12">
+            <p>
+                Page <a href="/pages/add?name={{ page.pageData.name }}">{{ page.pageData.name }}</a> is not found
+            </p>
+            <p class="text-muted">Click name to create</p>
+        </div>
     </div>
     
     <!--
