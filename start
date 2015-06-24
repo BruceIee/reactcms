@@ -16,6 +16,14 @@ cd reactlet-html-json-edit/
 jsx src/ dist/
 cd ..
 
+cd reactlet-html-web-edit/
+jsx src/ dist/
+cd ..
+
+cd reactlet-html-text-edit/
+jsx src/ dist/
+cd ..
+
 cd reactlet-html-form/
 jsx src/ dist/
 cd ..

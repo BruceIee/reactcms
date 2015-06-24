@@ -36,6 +36,35 @@ function getFormField(fieldName, modelField, fieldValue) {
                 options: getSelectOptions(modelField.values)
             }
         };
+    } else if (modelField.type === 'text') {
+        if (modelField.subtype && modelField.subtype.type === 'html') {
+            formField = {
+                type: 'HtmlWebEdit',
+                data: {
+                    label: fieldName,
+                    key: fieldName,
+                    value: fieldValue
+                }
+            };
+        } else {
+            formField = {
+                type: 'HtmlTextEdit',
+                data: {
+                    label: fieldName,
+                    key: fieldName,
+                    value: fieldValue
+                }
+            };
+        }
+    } else if (modelField.type === 'text') {
+        formField = {
+            type: 'HtmlTextEdit',
+            data: {
+                label: fieldName,
+                key: fieldName,
+                value: fieldValue
+            }
+        };
     } else if (modelField.type === 'array' || modelField.type === 'object') {
         // use HtmlJsonEdit if model type is array or object
         formField = {

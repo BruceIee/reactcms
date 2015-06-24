@@ -54,9 +54,7 @@ function updateDisplay(moduleInfo, moduleItem) {
 }
 
 function onBtnEdit() {
-    //console.log('>>> onBtnEdit', app.itemId);
     var moduleItem = app.editForm.getValue();
-    //console.log('>>> moduleItem', moduleItem);
     if (app.itemId) {
         //save changed value for existing item
         editItem(moduleItem, app.itemId);
@@ -67,11 +65,8 @@ function onBtnEdit() {
 }
 
 function createItem(item) {
-    console.log('create item:', item);
     var itemAddUrl = '/data/modules/' + app.moduleName + '/add';
-    console.log('itemAddUrl:', itemAddUrl);
     $.post(itemAddUrl, item, function(data) {
-        console.log('item created:', data);
         var Item = data.docs && data.docs[0] || null;
         if (Item) {
             openItemEditPage(Item);
