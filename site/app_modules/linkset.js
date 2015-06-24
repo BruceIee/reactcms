@@ -23,7 +23,10 @@ module.exports = function(app) {
             type: 'string'
         },
         content: {
-            type: 'array'
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
         },
         status: {
             type: 'string',

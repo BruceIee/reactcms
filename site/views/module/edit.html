@@ -25,7 +25,9 @@ window.app = {
     <div class="row">
         <div class="col-md-12">
             <h4>{{ page.action }} {{ page.moduleName }}</h4>
+            {% if page.itemId %}
             <div class="muted">id: {{ page.itemId }}</div>
+            {% endif %}
         </div>
     </div>
     
@@ -33,7 +35,9 @@ window.app = {
         <div class="col-md-6">
             <div id="editForm"></div>
             <div>
-                <button id="btnEdit" class="btn btn-info" style="width:120px;">{{ page.action }}</button>
+                <button id="btnEdit" class="btn btn-info" style="width:120px;">
+                    {{ page.action }}
+                </button>
             </div>
         </div>
     </div>

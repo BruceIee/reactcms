@@ -16,7 +16,10 @@ module.exports = function(app) {
             type: 'string'
         },
         content: {
-            type: 'string'
+            type: 'text',
+            subtype: {
+                type: 'html'
+            }
         },
         title: {
             type: 'string'

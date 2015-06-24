@@ -22,7 +22,10 @@ module.exports = function(app) {
             type: 'string'
         },
         content: {
-            type: 'object'
+            type: 'object',
+            subtype: {
+                type: 'json'
+            }
         },
         group: {
             type: 'string'

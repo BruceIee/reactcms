@@ -15,6 +15,12 @@ module.exports = function(app) {
         name: {
             type: 'string'
         },
+        path: {
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
+        },
         content: { // text and image path
             type: 'array'
         },

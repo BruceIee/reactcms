@@ -24,7 +24,10 @@ module.exports = function(app) {
         data: {
             type: 'array',
             subtype: {
-                type: 'object'
+                type: 'object',
+                subtype: {
+                    type: 'json'
+                }
             }
         },
         status: {
