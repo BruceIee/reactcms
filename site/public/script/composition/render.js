@@ -28,6 +28,7 @@ function showWidget(widget) {
             var widgetData = data.docs && data.docs[i];
             cabinetData.items.push({ type:this.widgetName, data:widgetData });
         }
+        console.log('>>> cabinetData:', cabinetData);
         React.render(
             <Cabinet data={ cabinetData } />,
             $('.' + this.targetClass)[0]
