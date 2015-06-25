@@ -8,6 +8,7 @@ $().ready(function() {
 
 function resetPageData() {
     if (app.mode == 'add') {
+        $('#pageName').val(app.pageName);
         app.pageData = {
             composition: null,
             content: {}
@@ -50,7 +51,7 @@ function setup() {
             showSectionContent(sectionName);
         }
     });
-    // save page button
+    // action buttons
     $('.btn-save-page').click(function() {
         // retrievre section data from sections content panels
         retrievePageSectionData();
@@ -60,7 +61,10 @@ function setup() {
             savePage();
         }
     });
-    
+    $('.btn-view-page').click(function() {
+        var pageViewUrl = '/pages/' + app.pageName;
+        window.open(pageViewUrl, '_blank');
+    });
     // setup typeahead
     //setupTypeAhead();
 }

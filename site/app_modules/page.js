@@ -124,13 +124,14 @@ module.exports = function(app) {
     block.page.addPage = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
+        page.mode = 'add';
         page.name = parameter.name || '';
-        res.render('page/add', { page:page });
+        res.render('page/edit', { page:page });
     };
     
     block.page.addPagePost = function(req, res) {
         var page = app.getPage(req);
-        res.render('page/add', { page:page });
+        res.render('page/edit', { page:page });
     };
     
     block.page.editPage = function(req, res) {
@@ -139,8 +140,8 @@ module.exports = function(app) {
         var pageId = parameter.id;
         block.data.getById(req, res, pageId, function(error, docs, info) {
             var page = app.getPage(req);
+            page.mode = 'edit';
             page.pageObject = docs && docs[0] || null;
-            //console.log('edit page id:', pageId, page.pageObject);
             res.render('page/edit', { page:page });
         });
     };
