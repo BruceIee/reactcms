@@ -10,6 +10,8 @@
 </script>
 
 <script>
+
+/* 
 $(document).ready(function() {
     console.log('aaa');
     var map;
@@ -34,8 +36,27 @@ $(document).ready(function() {
             });
         });
     }
-});    
+});
+*/
+
 </script>
+
+<script>
+function initialize()
+{
+    console.log('mmmmm');
+    var mapProp = {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:5,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+    var map=new google.maps.Map(document.getElementById("mytest")
+      ,mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 
 
 

@@ -88,11 +88,8 @@ function start(setting) {
     app.db = new Database(app, function() {
         switch(setting['operation']) {
         case 'initdb':
-            app.db.createTables(function() {
-                setTimeout(function() {
-                    console.log('----- initdb is done. -----');
-                    process.exit();
-                }, 2000);
+            initDb(app, function(){
+                process.exit();
             });
             break;
         case 'backup':
@@ -106,6 +103,17 @@ function start(setting) {
             });
             break;                
         }
+    });
+}
+
+
+/**
+ * Init db
+ */
+function initDb(app, callback) {
+    app.db.createTables(function() {
+        console.log('----- initdb is done. -----');
+        callback && callback();
     });
 }
 
