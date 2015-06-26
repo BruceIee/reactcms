@@ -17,7 +17,17 @@ var GraphBartest = React.createClass({
     
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
-        console.log('>>> graphElement:', graphElement);
+        // plot using d3
+        var graphData = this.state.value;
+        var x = d3.scale.linear()
+            .domain([0, d3.max(graphData)])
+            .range([0, 420]);
+        d3.select(graphElement)
+            .selectAll('div')
+            .data(graphData)
+            .enter().append('div')
+            .style('width', function(d) { return x(d) + 'px'; })
+            .text(function(d) { return d; });
     },
     
     render: function() {
@@ -31,7 +41,7 @@ var GraphBartest = React.createClass({
                     <div>Graph Bartest</div>
                     <div>description: { this.state.description }</div>
                     <div>value: { displayValue }</div>
-                    <div class="reactlet-graph" ref="graph" />
+                    <div className="reactlet-graph" ref="graph"></div>
                 </div>
             </div>
         );
