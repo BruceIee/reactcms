@@ -15,6 +15,11 @@ var GraphBartest = React.createClass({
         return attributes;
     },
     
+    componentDidMount: function() {
+        var graphElement = React.findDOMNode(this.refs.graph);
+        console.log('>>> graphElement:', graphElement);
+    },
+    
     render: function() {
         var displayValue = '';
         if (typeof this.state.value == 'object' ) {
@@ -26,6 +31,7 @@ var GraphBartest = React.createClass({
                     <div>Graph Bartest</div>
                     <div>description: { this.state.description }</div>
                     <div>value: { displayValue }</div>
+                    <div class="reactlet-graph" ref="graph" />
                 </div>
             </div>
         );
