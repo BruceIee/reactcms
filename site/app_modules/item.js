@@ -19,10 +19,10 @@ module.exports = function(app) {
         name: {
             type: 'string'
         },
-        content: {
+        description: {
             type: 'text'
         },
-        data: {
+        value: {
             type: 'object',
             subtype: {
                 type: 'json'
