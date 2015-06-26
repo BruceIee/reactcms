@@ -38,9 +38,6 @@ var GraphBartest = React.createClass({
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="graph-bartest-content">
-                    <div>Graph Bartest</div>
-                    <div>description: { this.state.description }</div>
-                    <div>value: { displayValue }</div>
                     <div className="reactlet-graph" ref="graph"></div>
                 </div>
             </div>
