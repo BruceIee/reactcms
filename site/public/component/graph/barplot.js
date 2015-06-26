@@ -1,6 +1,6 @@
-// GraphBartest component
-var GraphBartest = React.createClass({
-    name: 'graph-bartest',
+// GraphBarplot component
+var GraphBarplot = React.createClass({
+    name: 'graph-barplot',
     mixins: [getCommonMixin],
     
     // attribute definitions
@@ -16,6 +16,9 @@ var GraphBartest = React.createClass({
     },
     
     componentDidMount: function() {
+        
+        
+        
         var graphElement = React.findDOMNode(this.refs.graph);
         // plot using d3
         var graphData = this.state.value;
@@ -28,15 +31,12 @@ var GraphBartest = React.createClass({
             .enter().append('div')
             .style('width', function(d) { return x(d) + 'px'; })
             .text(function(d) { return d; });
+        
+        
+        
     },
     
     render: function() {
-        /*
-        var displayValue = '';
-        if (typeof this.state.value == 'object' ) {
-            displayValue = JSON.stringify(this.state.value);
-        }
-        */
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="graph-bartest-content">
