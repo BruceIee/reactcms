@@ -1,0 +1,52 @@
+{
+    "name":"article",
+    "module":    {
+        "type": {
+            "type": "string"
+        },
+        "content": {
+            "type": "text",
+            "subtype": {
+                "type": "html"
+            }
+        },
+        "title": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":1,
+    "items": [
+        {
+            "_id": "558bb9015a1fcf26070b0953",
+            "module": "article",
+            "type": "test",
+            "content": "<h4>Home</h4>\n<p>Hello</p>",
+            "title": "",
+            "status": "active",
+            "create_date": "2015-06-25T08:17:05.489Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        }
+    ]
+}

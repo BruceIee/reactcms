@@ -31,12 +31,6 @@ var GraphBartest = React.createClass({
     },
     
     render: function() {
-        /*
-        var displayValue = '';
-        if (typeof this.state.value == 'object' ) {
-            displayValue = JSON.stringify(this.state.value);
-        }
-        */
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="graph-bartest-content">
