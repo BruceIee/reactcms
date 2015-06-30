@@ -145,7 +145,21 @@ module.exports = function(app) {
             res.render('page/edit', { page:page });
         });
     };
-    
+
+    block.page.editPageByName = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var pageName = parameter.name;
+        var condition = { name:pageName };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.mode = 'edit';
+            page.pageObject = docs && docs[0] || null;
+            res.render('page/edit', { page:page });
+        });
+    };
+
     block.page.getPageList = function(req, res) {
         var condition = {};
         var loginUser = req.session && req.session.user;
@@ -196,6 +210,8 @@ module.exports = function(app) {
     app.server.post('/pages/add', block.page.addPagePost);
     app.server.all('/pages/:id/edit', block.page.checkLogin);
     app.server.get('/pages/:id/edit', block.page.editPage);
+    app.server.all('/pages/:name/edit_by_name', block.page.checkLogin);
+    app.server.get('/pages/:name/edit_by_name', block.page.editPageByName);
     app.server.all('/pages/list', block.page.checkLogin);
     app.server.get('/pages/list', block.page.getPageList);
     app.server.get('/pages/:pagename', block.page.getPage);
