@@ -8,7 +8,8 @@ var Cabinet = React.createClass({
         LinksetDetail: LinksetDetail,
         LinksetDetail2: LinksetDetail2,
         GraphBartest: GraphBartest,
-        GraphBarplot: GraphBarplot
+        GraphBarchart: GraphBarchart,
+        GraphPiechart: GraphPiechart
     },
 
     // attribute definitions

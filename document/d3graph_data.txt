@@ -1,0 +1,53 @@
+Graph Data
+
+BarTest
+=======
+[2,5,12,16,24,21]
+
+
+BarChart
+========
+{
+    "label": "my plot",
+    "values": [
+        {
+            "x": "Class A",
+            "y": 8
+        },
+        {
+            "x": "Class B",
+            "y": 4
+        },
+        {
+            "x": "Class C",
+            "y": 6
+        },
+        {
+            "x": "Class D",
+            "y": 3
+        }
+    ]
+}
+
+
+PieChart
+========
+
+{
+    "label": "My Chart",
+    "values": [
+        {
+            "x": "ClassA",
+            "y": 10
+        },
+        {
+            "x": "ClassB",
+            "y": 4
+        },
+        {
+            "x": "ClassC",
+            "y": 3
+        }
+    ]
+}
+
