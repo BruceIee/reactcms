@@ -9,6 +9,7 @@ Install support modules
 ```
 sudo npm install -g gulp
 sudo npm install -g browserify
+sudo npm install -g react-tools
 ```
 
 Go to application root and build js scripts with browserify
