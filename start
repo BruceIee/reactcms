@@ -38,6 +38,7 @@ cd ..
 # build bundle files for distribution
 cd public/
 
+
 echo "build bundle files ..."
 browserify -o script/module/dist/view.js -d script/module/src/view.js
 browserify -o script/module/dist/list.js -d script/module/src/list.js

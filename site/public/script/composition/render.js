@@ -1,13 +1,5 @@
 var app = app || {};
 
-app.widgets = {
-    ItemDetail: ItemDetail,
-    ArticleDetail: ArticleDetail,
-    LinksetDetail: LinksetDetail,
-    LinksetDetail2: LinksetDetail2,
-    GraphBartest: GraphBartest
-};
-
 $().ready(function() {
     for (var targetClass in app.pageContent) {
         var widgets = app.pageContent[targetClass];
@@ -28,7 +20,6 @@ function showWidget(widget) {
             var widgetData = data.docs && data.docs[i];
             cabinetData.items.push({ type:this.widgetName, data:widgetData });
         }
-        console.log('>>> cabinetData:', cabinetData);
         React.render(
             <Cabinet data={ cabinetData } />,
             $('.' + this.targetClass)[0]
