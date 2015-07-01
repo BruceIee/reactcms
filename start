@@ -28,9 +28,9 @@ cd reactlet-html-form/
 jsx src/ dist/
 cd ..
 
-cd reactlet-graph-bartest/
-jsx src/ dist/
-cd ..
+#cd reactlet-graph-bartest/
+#jsx src/ dist/
+#cd ..
 
 cd ..
 
