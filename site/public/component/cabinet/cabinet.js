@@ -9,7 +9,10 @@ var Cabinet = React.createClass({
         LinksetDetail2: LinksetDetail2,
         GraphBartest: GraphBartest,
         GraphBarchart: GraphBarchart,
-        GraphPiechart: GraphPiechart
+        GraphPiechart: GraphPiechart,
+        GraphScatterplot: GraphScatterplot,
+        GraphLinechart: GraphLinechart,
+        GraphAreachart: GraphAreachart
     },
 
     // attribute definitions
@@ -25,12 +28,17 @@ var Cabinet = React.createClass({
         var widgets = [];
         for (var i = 0; i < this.state.items.length; i++) {
             var item = this.state.items[i];
-            var widget = React.createElement(this.components[item.type], {
-                key: item.key,
-                ref: item.name,
-                data: item.data
-            });
-            widgets.push(widget);
+            var component = this.components[item.type];
+            if (component) {
+                var widget = React.createElement(this.components[item.type], {
+                    key: item.key,
+                    ref: item.name,
+                    data: item.data
+                });
+                widgets.push(widget);
+            } else {
+                console.log('component for ' + item.type + ' is not found in Cabinet');
+            }
         }
         return (
             <div className={ this.state.containerClassNames.join(' ') }  onClick={ this.onClick } >
