@@ -21,14 +21,14 @@ var app = {
 {% raw %}
 <div class="component-entry">
     <div data-section="{{ sectionName }}" class="component-form">
-        <h4 class="label label-primary">Display Info</h4>
+        <h4><span class="label label-primary">Display Info</span></h4>
         <div class="well">
             <div class="form-group">
                 <label>UI Component</label>
                 <input type="text" class="form-control" name="component" value="{{ widgetName }}" placeholder="example: ArticleDetail">
             </div>
         </div>
-        <h4 class="label label-primary">Data Info</h4>
+        <h4><span class="label label-primary">Data Info</span></h4>
         <div class="well">
             <div class="form-group">
                 <label>Module Name</label>
@@ -68,8 +68,8 @@ var app = {
     <div class="row" style="margin-top:20px;border-bottom: solid 1px #f2f2f2;">
         <div class="col-md-4">
             <div class="form-group form-top row">
-                <label for="pageName" class="col-sm-2 control-label">Name</label>
-                <div class="col-sm-8">
+                <label for="pageName" class="col-sm-4 control-label">Page Name</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="pageName" value="{{ page.pageObject.name }}" />
                 </div>
             </div>
@@ -77,7 +77,7 @@ var app = {
         <div class="col-md-4">
             <div class="form-group form-top row">
                 <label for="pageComposition" class="col-sm-4 control-label">Composition</label>
-                <div class="col-sm-8">
+                <div class="col-sm-6">
                     {% if page.mode == "edit" %}
                     <input type="text" class="form-control" id="pageComposition" />
                     {% endif %}
