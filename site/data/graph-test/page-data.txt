@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":7,
+    "count":10,
     "items": [
         {
             "_id": "558bb05d582a9999033eb75e",
@@ -203,6 +203,69 @@
             },
             "name": "graph-barchart",
             "create_date": "2015-07-01T23:58:14.626Z",
+            "_class": "page"
+        },
+        {
+            "_id": "5594858aed865528c87232b8",
+            "composition": "theone",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "_id": "55948569ed865528c87232b7"
+                            },
+                            "filter": ""
+                        }
+                    }
+                ]
+            },
+            "name": "graph4",
+            "create_date": "2015-07-02T00:27:54.403Z",
+            "_class": "page"
+        },
+        {
+            "_id": "55948636ed865528c87232b9",
+            "composition": "theone",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "points"
+                            },
+                            "filter": ""
+                        }
+                    }
+                ]
+            },
+            "name": "graph5",
+            "create_date": "2015-07-02T00:30:46.980Z",
+            "_class": "page"
+        },
+        {
+            "_id": "5594881fb07642e9c8cb6126",
+            "composition": "theone",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "GraphAreachart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "points"
+                            },
+                            "filter": ""
+                        }
+                    }
+                ]
+            },
+            "name": "graph6",
+            "create_date": "2015-07-02T00:38:55.345Z",
             "_class": "page"
         }
     ]

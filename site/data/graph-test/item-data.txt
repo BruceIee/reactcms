@@ -36,7 +36,7 @@
             "type": "string"
         }
     },
-    "count":4,
+    "count":5,
     "items": [
         {
             "_id": "558d5c199097615f2531db0c",
@@ -142,6 +142,95 @@
             },
             "status": "active",
             "create_date": "2015-07-01T23:54:41.713Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "item"
+        },
+        {
+            "_id": "55948569ed865528c87232b7",
+            "module": "item",
+            "type": "graph",
+            "name": "points",
+            "description": "",
+            "value": [
+                {
+                    "label": "ClassA",
+                    "values": [
+                        {
+                            "x": 0,
+                            "y": 2
+                        },
+                        {
+                            "x": 1.3,
+                            "y": 5
+                        },
+                        {
+                            "x": 3,
+                            "y": 6
+                        },
+                        {
+                            "x": 3.5,
+                            "y": 6.5
+                        },
+                        {
+                            "x": 4,
+                            "y": 6
+                        },
+                        {
+                            "x": 4.5,
+                            "y": 6
+                        },
+                        {
+                            "x": 5,
+                            "y": 7
+                        },
+                        {
+                            "x": 5.5,
+                            "y": 8
+                        }
+                    ]
+                },
+                {
+                    "label": "ClassB",
+                    "values": [
+                        {
+                            "x": 0,
+                            "y": 3
+                        },
+                        {
+                            "x": 1.3,
+                            "y": 4
+                        },
+                        {
+                            "x": 3,
+                            "y": 7
+                        },
+                        {
+                            "x": 3.5,
+                            "y": 8
+                        },
+                        {
+                            "x": 4,
+                            "y": 7
+                        },
+                        {
+                            "x": 4.5,
+                            "y": 7
+                        },
+                        {
+                            "x": 5,
+                            "y": 7.8
+                        },
+                        {
+                            "x": 5.5,
+                            "y": 9
+                        }
+                    ]
+                }
+            ],
+            "status": "active",
+            "create_date": "2015-07-02T00:27:21.695Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
