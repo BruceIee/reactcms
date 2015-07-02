@@ -1,0 +1,151 @@
+{
+    "name":"item",
+    "module":    {
+        "type": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "value": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":4,
+    "items": [
+        {
+            "_id": "558d5c199097615f2531db0c",
+            "module": "item",
+            "type": "graph",
+            "name": "barchart",
+            "description": "barplot test data",
+            "value": {
+                "label": "my plot",
+                "values": [
+                    {
+                        "x": "Class A",
+                        "y": 8
+                    },
+                    {
+                        "x": "Class B",
+                        "y": 4
+                    },
+                    {
+                        "x": "Class C",
+                        "y": 6
+                    },
+                    {
+                        "x": "Class D",
+                        "y": 3
+                    }
+                ]
+            },
+            "status": "active",
+            "create_date": "2015-06-26T14:05:13.124Z",
+            "create_by": "admin",
+            "edit_date": "2015-06-26T14:06:36.000Z",
+            "edit_by": "admin",
+            "_class": "item"
+        },
+        {
+            "_id": "558bafa7582a9999033eb75d",
+            "module": "item",
+            "type": "graph",
+            "name": "bartest",
+            "content": "test item content",
+            "data": [
+                "4",
+                "8",
+                "15",
+                "16",
+                "9"
+            ],
+            "status": "active",
+            "create_date": "2015-06-25T07:37:11.078Z",
+            "create_by": "admin",
+            "edit_date": "2015-06-25T07:37:47.000Z",
+            "edit_by": "admin",
+            "_class": "item",
+            "description": "test array data",
+            "value": [
+                "2",
+                "5",
+                "12",
+                "16",
+                "24",
+                "21"
+            ]
+        },
+        {
+            "_id": "5594780a59eaac54c2609c42",
+            "module": "item",
+            "type": "t1",
+            "name": "test1",
+            "description": "abc",
+            "value": {
+                "name": "test item"
+            },
+            "status": "active",
+            "create_date": "2015-07-01T23:30:18.409Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "item"
+        },
+        {
+            "_id": "55947dc150179c85c4f2f3c6",
+            "module": "item",
+            "type": "graph",
+            "name": "piechart",
+            "description": "",
+            "value": {
+                "label": "My Chart",
+                "values": [
+                    {
+                        "x": "ClassA",
+                        "y": 10
+                    },
+                    {
+                        "x": "ClassB",
+                        "y": 4
+                    },
+                    {
+                        "x": "ClassC",
+                        "y": 3
+                    }
+                ]
+            },
+            "status": "active",
+            "create_date": "2015-07-01T23:54:41.713Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "item"
+        }
+    ]
+}
