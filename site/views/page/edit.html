@@ -21,14 +21,18 @@ var app = {
 {% raw %}
 <div class="component-entry">
     <div data-section="{{ sectionName }}" class="component-form">
-        <h4><span class="label label-primary">Display Info</span></h4>
+        <h4 class="pull-right" style="margin-top:0px;">
+            <span class="label label-primary">Display Info</span>
+        </h4>
         <div class="well">
             <div class="form-group">
                 <label>UI Component</label>
                 <input type="text" class="form-control" name="component" value="{{ widgetName }}" placeholder="example: ArticleDetail">
             </div>
         </div>
-        <h4><span class="label label-primary">Data Info</span></h4>
+        <h4 class="pull-right" style="margin-top:0px;">
+            <span class="label label-primary">Data Info</span>
+        </h4>
         <div class="well">
             <div class="form-group">
                 <label>Module Name</label>
