@@ -46,20 +46,16 @@ module.exports = function(app) {
     };
     
     // block.data
-    /*
-    block.data.addPost = function(req, res) {
-        var callback = arguments[3] || null; 
-        var group = tool.getReqParameter(req);
-        var loginUser = req.session && req.session.user;
-        group.create_date = new Date();
-        group.create_by = loginUser.username;
-        group.edit_date = null;
-        group.edit_by = null;
-        block.data.add(req, res, group, function(error, docs, info) {
-            res.redirect('/groups/list');
-        });
+    
+    // sources is array of ids for source_id fields
+    // target is id for target_id field
+    // access is access value to check
+    block.data.checkAccess = function(req, res, sources, target, access, callback) {
+        access = access || 100; // default access value is set to 100
+        
+        var info = { access:true };
+        app.cb(null, [], info, req, res, callback);
     };
-    */
     
     // block.page
     block.page.home = function(req, res) {

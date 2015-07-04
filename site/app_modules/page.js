@@ -49,6 +49,13 @@ module.exports = function(app) {
     };
     
     // data
+    
+    /*
+    block.data.checkPageAccess = function(req, res) {
+        
+    };
+    */
+    
     block.data.getPage = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
