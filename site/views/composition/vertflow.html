@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/component/item/detail.css"/>
 <link rel="stylesheet" href="/component/article/detail.css"/>
 <link rel="stylesheet" href="/component/linkset/detail.css"/>
+<link rel="stylesheet" href="/component/graph/d3graph.css"/>
 <link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
 <style></style>
 {% endblock %}
@@ -18,6 +19,7 @@
 <script type="text/jsx" src="/component/item/detail.js"></script>
 <script type="text/jsx" src="/component/article/detail.js"></script>
 <script type="text/jsx" src="/component/linkset/detail.js"></script>
+<script type="text/jsx" src="/component/graph/d3graph.js"></script>
 <script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
 <script type="text/jsx" src="/script/page/support.js"></script>
 
@@ -26,6 +28,7 @@ var app = app || {};
 app.pageContent = {{ page.pageData.content|json|safe}};
 app.pageComposition = {{ page.compositionData|json|safe}};
 </script>
+
 <script type="text/jsx" src="/script/composition/render.js"></script>
 <script type="text/jsx" src="/script/composition/vertflow.js"></script>
 {% endblock %}
