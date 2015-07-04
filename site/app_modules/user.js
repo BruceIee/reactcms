@@ -47,9 +47,6 @@ module.exports = function(app) {
                 type: 'password'
             }
         },
-        group: {
-            type: 'string'
-        },
         status: {
             type: 'string',
             values: ['active', 'inactive']
@@ -70,7 +67,6 @@ module.exports = function(app) {
     block.listFields = [
         { name:'username', display:'Username', flex:2, sort:'asc' },
         { name:'email', display:'Email', flex:3 },
-        { name:'group', display:'Group', flex:1 },
         { name:'status', display:'Status', flex:1 }
     ];
     

@@ -21,6 +21,12 @@ module.exports = function(app) {
         description: {
             type: 'string'
         },
+        users: {
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']
