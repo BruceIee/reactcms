@@ -25,7 +25,8 @@ module.exports = function(app) {
             type: 'string'
         },
         value: {
-            type: 'number'
+            type: 'number',
+            values: ['0', '100']
         },
         status: {
             type: 'string',
