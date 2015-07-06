@@ -12,16 +12,16 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
-        source_id: {
-            type: 'string'
-        },
         source_type: {
             type: 'string'
         },
-        target_id: {
+        source_id: {
             type: 'string'
         },
         target_type: {
+            type: 'string'
+        },
+        target_id: {
             type: 'string'
         },
         value: {
@@ -56,6 +56,19 @@ module.exports = function(app) {
         
         var info = { access:true };
         app.cb(null, [], info, req, res, callback);
+    };
+    
+    block.data.addAccess = function(req, res, source_type, source_id, target_type, target_id, value, callback) {
+        var accessItem = {};
+        accessItem.source_type = source_type;
+        accessItem.source_id = source_id;
+        accessItem.target_type = target_type;
+        accessItem.target_id = target_id;
+        accessItem.create_date = new Date();
+        //accessItem.create_by = app.getLoginUser();
+        accessItem.data.add(req, res, page, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
     };
     
     // block.page
