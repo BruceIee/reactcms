@@ -53,6 +53,11 @@ app.renderInfoPage = function(error, docs, info, req, res) {
     res.render('common/info.html', { app: app, req: req, page: page });
 };
 
+app.getLoginUser = function(req) {
+    var loginUser = req.session && req.session.user;
+    return loginUser;
+};
+
 function setup(cbSetup) {
     // create express server
     app.server = express();
