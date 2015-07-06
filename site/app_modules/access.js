@@ -78,6 +78,16 @@ module.exports = function(app) {
         res.render('access/index', { page:page });
     };
     
+    block.page.addAccess = function(req, res) {
+        var page = app.getPage(req);
+        page.title = 'Add Access';
+        res.render('access/add', { page:page });
+    };
+    
+    block.page.addAccessPost = function(req, res) {
+        var page = app.getPage(req);
+        res.render('/modules/access/list', { page:page });
+    };
     
     // data route
     /* app.server.post('/data/groups/add_post', block.data.addPost); */
@@ -86,6 +96,8 @@ module.exports = function(app) {
     app.server.all('/access', block.page.checkLogin);
     app.server.all('/access/*', block.page.checkLogin);
     app.server.get('/access', block.page.home);
+    app.server.get('/access/add', block.page.addAccess);
+    app.server.post('/access/add', block.page.addAccessPost);
 
     return block;
 };
