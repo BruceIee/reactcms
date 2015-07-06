@@ -99,9 +99,7 @@ module.exports = function(app) {
         //delete parameter.module;
         parameter.create_date = new Date();
         parameter.create_by = 'admin';
-        //console.log('>>> addModuleItem:', moduleName, parameter);
         moduleData.add(req, res, parameter, function(error, docs, info) {
-            //console.log('>>> addModuleItem result:', error, docs, info);
             app.cb(error, docs, info, req, res, callback);
         });
     };
@@ -114,9 +112,7 @@ module.exports = function(app) {
         //delete parameter.module;
         parameter.edit_date = parameter.edit_date || new Date();
         parameter.edit_by = parameter.edit_by  || 'admin';
-        //console.log('>>> editModuleItem:', moduleName, parameter);
         moduleData.edit(req, res, parameter, function(error, docs, info) {
-            //console.log('>>> editModuleItem result:', error, docs, info);
             app.cb(error, docs, info, req, res, callback);
         });
     };

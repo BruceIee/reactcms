@@ -78,8 +78,6 @@ module.exports = function(app) {
         });
     };     
     
-
-    
     // block.page
     block.page.groupHome = function(req, res) {
         var page = app.getPage(req);
