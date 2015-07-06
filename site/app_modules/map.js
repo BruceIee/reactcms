@@ -13,7 +13,6 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
 
     block.page.leafletReact = function(req, res) {
-        console.log('ko');
         var page = app.getPage(req);
         res.render('map/leaflet_react', { page:page });
     };

@@ -97,8 +97,6 @@ module.exports = function(app) {
         var moduleName = parameter.module;
         var moduleData = app.module[moduleName].data;
         //delete parameter.module;
-        //JSON.parse(parameter should be JSON format)
-        parameter.value = JSON.parse(parameter.value);
         parameter.create_date = new Date();
         parameter.create_by = 'admin';
         //console.log('>>> addModuleItem:', moduleName, parameter);
