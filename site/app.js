@@ -58,6 +58,11 @@ app.getLoginUser = function(req) {
     return loginUser;
 };
 
+app.getLoginUsername = function(req) {
+    var loginUsername = req.session && req.session.user.username;
+    return loginUsername;
+};
+
 function setup(cbSetup) {
     // create express server
     app.server = express();
