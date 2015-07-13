@@ -58,13 +58,32 @@ module.exports = function(app) {
         app.cb(null, [], info, req, res, callback);
     };
     
+    
+    
     // lj temp try, one sourceid
     block.data.checkAccessOne = function(req, res, source, target, access, callback) {
-        access = access || 100; // default access value is set to 100
+        //check if pass
         
+        var condition = {};
+        condition.source_id = source;
+        condition.target_id = target;
+        condition.value = access;
+        
+        
+        var filter = {};
+        
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            //app.cb(error, docs, info, req, res, callback);
+        });
+        
+        
+        
+        access = access || 100; // default access value is set to 100
         var info = { access:true };
         app.cb(null, [], info, req, res, callback);
     };
+    
+    
     
     
     block.data.addAccess = function(req, res, source_type, source_id, target_type, target_id, value, callback) {
