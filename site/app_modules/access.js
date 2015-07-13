@@ -73,6 +73,14 @@ module.exports = function(app) {
         var filter = {};
         
         block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var result = docs && docs[0] || null;
+            if (result) {
+                //pass
+            }
+            else {
+                //not pass
+            }
+            
             //app.cb(error, docs, info, req, res, callback);
         });
         
