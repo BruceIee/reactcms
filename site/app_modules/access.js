@@ -59,7 +59,7 @@ module.exports = function(app) {
     };
     
     // lj temp try, one sourceid
-    block.data.checkAccessSingle = function(req, res, source, target, access, callback) {
+    block.data.checkAccessOne = function(req, res, source, target, access, callback) {
         access = access || 100; // default access value is set to 100
         
         var info = { access:true };
