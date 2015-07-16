@@ -128,6 +128,28 @@ module.exports = function(app) {
         res.render('page/index', { page:page });
     };
     
+    block.page.showPage = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var composition = parameter.composition;
+        var data = parameter.data;
+        
+        console.log('showPage parameter:', parameter);
+        
+        var page = app.getPage(req);
+        res.render('page/index', { page:page });
+        
+        /*
+        var page = app.getPage(req);
+        if (parameter.composition ) {
+            //code
+        }
+        page.pageData = info.page;
+        page.compositionData = info.composition;
+        var layoutFilename = 'composition/' + info.composition.filename;
+        res.render(layoutFilename, { page:page });
+        */
+    };
+    
     block.page.addPage = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
@@ -194,6 +216,9 @@ module.exports = function(app) {
                 page.pageData = info.page;
                 page.compositionData = info.composition;
                 var layoutFilename = 'composition/' + info.composition.filename;
+                
+                console.log('\nlayoutFilename:', layoutFilename, '\npage:', page)
+                
                 res.render(layoutFilename, { page:page });
             } else {
                 // page is not found in database
@@ -212,6 +237,7 @@ module.exports = function(app) {
     // page route
     app.server.all('/pages', block.page.checkLogin);
     app.server.get('/pages', block.page.getIndex);
+    app.server.get('/pages/show/:composition/:data', block.page.showPage);
     app.server.all('/pages/add', block.page.checkLogin);
     app.server.get('/pages/add', block.page.addPage);
     app.server.post('/pages/add', block.page.addPagePost);
