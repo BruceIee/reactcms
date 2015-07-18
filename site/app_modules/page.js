@@ -50,10 +50,8 @@ module.exports = function(app) {
     
     // data
     
-    /*
-    block.data.checkPageAccess = function(req, res) {
-    };
-    */
+    //block.data.checkPageAccess = function(req, res) {
+    //};
     
     block.data.getPage = function(req, res) {
         var callback = arguments[3] || null;
@@ -137,24 +135,20 @@ module.exports = function(app) {
         console.log('typeof data:', typeof data);
         console.log('data:', data);
         
-        
-        
-        var page = app.getPage(req);
-        res.render('page/index', { page:page });
-        
-        
-        
-        /*
-        var page = app.getPage(req);
-        if (parameter.composition ) {
-            //code
-        }
-        page.pageData = info.page;
-        page.compositionData = info.composition;
-        var layoutFilename = 'composition/' + info.composition.filename;
-        res.render(layoutFilename, { page:page });
-        */
-        
+        var pageData = {
+            name:'page',
+            composition:compositionName,
+            content:data
+        };
+        var compositionData = app.module.composition.data;
+        compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
+            var composition = docs && docs[0];
+            var page = app.getPage(req);
+            page.pageData = pageData;
+            page.compositionData = composition;
+            var layoutFilename = 'composition/' + composition.filename;
+            res.render(layoutFilename, { page:page });
+        });
     };
     
     block.page.addPage = function(req, res) {
@@ -223,9 +217,6 @@ module.exports = function(app) {
                 page.pageData = info.page;
                 page.compositionData = info.composition;
                 var layoutFilename = 'composition/' + info.composition.filename;
-                
-                console.log('\nlayoutFilename:', layoutFilename, '\npage:', page)
-                
                 res.render(layoutFilename, { page:page });
             } else {
                 // page is not found in database
