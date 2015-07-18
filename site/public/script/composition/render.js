@@ -20,27 +20,20 @@ function showByPageData(content) {
 }
 
 function showByWidgetData(content) {
-    console.log('showByWidgetData content:', content);
-    console.log('app:', app);
-    var widgetDataItems = [{
-        value: content.data
-    }]
+    var widgetDataItems = [{ value: content.data }];
     showWidget(widgetDataItems, content.name, content.section);
 }
 
 function getAndShowWidget(widget) {
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
-        //console.log('showWidget data:', data);
         if (data.docs.length <= 0) return;
         showWidget(data.docs, this.widgetName, this.targetClass);
     }.bind(widget));
 }
 
 function showWidget(widgetDataItems, widgetName, targetClass) {
-    
-    console.log('showWidget:', widgetDataItems, widgetName, targetClass);
-    
+    //console.log('showWidget:', widgetDataItems, widgetName, targetClass);
     var cabinetData = { items: [] };
     for (var i = 0; i < widgetDataItems.length; i++) {
         var widgetData = widgetDataItems[i];
