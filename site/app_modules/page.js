@@ -49,10 +49,6 @@ module.exports = function(app) {
     };
     
     // data
-    
-    //block.data.checkPageAccess = function(req, res) {
-    //};
-    
     block.data.getPage = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
@@ -72,7 +68,6 @@ module.exports = function(app) {
                 var compositionData = app.module['composition'].data;
                 compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
                     var composition = docs && docs[0];
-                    //console.log('composition:', composition);
                     info = { page:page, composition:composition };
                     app.cb(error, docs, info, req, res, callback);
                 });
@@ -128,17 +123,18 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         
         var compositionName = parameter.composition;
-        var data = tool.JsonParse(parameter.data);
+        var pagedata = tool.JsonParse(parameter.pagedata);
+        //var data = tool.JsonParse(parameter.data);
         
         console.log('showPageDirect');
         console.log('compositionName:', compositionName)
-        console.log('typeof data:', typeof data);
-        console.log('data:', data);
+        console.log('typeof pagedata:', typeof pagedata);
+        console.log('pagedata:', pagedata);
         
         var pageData = {
-            name:'page',
-            composition:compositionName,
-            content:data
+            name: 'page',
+            composition: compositionName,
+            content: pagedata
         };
         var compositionData = app.module.composition.data;
         compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {

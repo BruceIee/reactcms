@@ -5,14 +5,14 @@ data: {"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","cond
 
 Test url
 --------
-http://localhost:8700/pages/show/direct?composition=theone&data={%22r1c1%22:[{%22widgetName%22:%22GraphBarchart%22,%22widgetInfo%22:{%22module%22:%22item%22,%22condition%22:{%22name%22:%22barchart%22},%22filter%22:%22%22}}]}
+http://192.168.1.2:8700/pages/show/direct?composition=theone&pagedata={"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}
 
 Server side parameter
 ---------------------
 showPageDirect parameter:
 {
   composition: 'theone',
-  data: '{"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}'
+  pagedata: '{"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}'
 }
 
 
