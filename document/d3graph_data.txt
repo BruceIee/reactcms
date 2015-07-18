@@ -5,7 +5,7 @@ data: {"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","cond
 
 Test url
 --------
-http://192.168.1.2:8700/pages/show/direct?composition=theone&pagedata={"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}
+localhost:8700/pages/show/direct?composition=theone&pagedata={"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}
 
 Server side parameter
 ---------------------

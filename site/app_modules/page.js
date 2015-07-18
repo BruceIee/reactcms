@@ -121,20 +121,48 @@ module.exports = function(app) {
     
     block.page.showPageDirect = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        
         var compositionName = parameter.composition;
         var pagedata = tool.JsonParse(parameter.pagedata);
-        //var data = tool.JsonParse(parameter.data);
+        var widgetdata = tool.JsonParse(parameter.widgetdata);
         
-        console.log('showPageDirect');
-        console.log('compositionName:', compositionName)
-        console.log('typeof pagedata:', typeof pagedata);
-        console.log('pagedata:', pagedata);
+        console.log('>>>', pagedata, widgetdata);
         
+        // based on parameter input, show page accordingly
+        if (pagedata) {
+            block.page.showPageWithPageData(req, res);
+        } else if (widgetdata) {
+            block.page.showPageWithWidgetData(req, res);
+        }
+    };
+    
+    block.page.showPageWithPageData = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var compositionName = parameter.composition;
+        var pagedataInput = tool.JsonParse(parameter.pagedata);
         var pageData = {
             name: 'page',
             composition: compositionName,
-            content: pagedata
+            content: pagedataInput
+        };
+        var compositionData = app.module.composition.data;
+        compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
+            var composition = docs && docs[0];
+            var page = app.getPage(req);
+            page.pageData = pageData;
+            page.compositionData = composition;
+            var layoutFilename = 'composition/' + composition.filename;
+            res.render(layoutFilename, { page:page });
+        });
+    };
+    
+    block.page.showPageWithWidgetData = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var compositionName = parameter.composition;
+        var pagedataInput = tool.JsonParse(parameter.pagedata);
+        var pageData = {
+            name: 'page',
+            composition: compositionName,
+            content: pagedataInput
         };
         var compositionData = app.module.composition.data;
         compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
