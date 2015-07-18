@@ -1,7 +1,15 @@
 var app = app || {};
 
 $().ready(function() {
-    for (var targetClass in app.pageContent) {
+    if (app.pageDataType === 'page') {
+        showByPageData(app.pageContent);
+    } else if (app.pageDataType === 'widget') {
+        showByWidgetData(app.pageContent);
+    }
+});
+
+function showByPageData(content) {
+    for (var targetClass in content) {
         var widgets = app.pageContent[targetClass];
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
@@ -9,7 +17,11 @@ $().ready(function() {
             showWidget(widget);
         }
     }
-});
+}
+
+function showByWidgetData(content) {
+    console.log('showByWidgetData content:', content);
+}
 
 function showWidget(widget) {
     var widgetDetailUrl = '/data/components/get/detail';

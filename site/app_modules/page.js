@@ -141,6 +141,7 @@ module.exports = function(app) {
         var pagedataInput = tool.JsonParse(parameter.pagedata);
         var pageData = {
             name: 'page',
+            datatype: 'page',
             composition: compositionName,
             content: pagedataInput
         };
@@ -157,17 +158,23 @@ module.exports = function(app) {
     
     block.page.showPageWithWidgetData = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        var compositionName = parameter.composition;
+        var compositionName = parameter.composition || 'theone';
+        var sectionName = parameter.sectionname || 'r1c1';
         var widgetName = parameter.widgetname;
         var widgetData = tool.JsonParse(parameter.widgetdata);
-        
-        console.log('>>> showPageWithWidgetData:', compositionName, widgetName, widgetData);
-        
         var pageData = {
             name: 'page',
+            datatype: 'widget',
             composition: compositionName,
-            content: null
+            content: {
+                section: sectionName,
+                name: widgetName,
+                data: widgetData
+            }
         };
+        
+        console.log('>>> showPageWithWidgetData:', pageData);
+        
         var compositionData = app.module.composition.data;
         compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
             var composition = docs && docs[0];

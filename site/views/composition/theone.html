@@ -36,6 +36,7 @@
 
 <script type="text/jsx">
 var app = app || {};
+app.pageDataType = "{{ page.pageData.datatype }}" || "page";
 app.pageContent = {{ page.pageData.content|json|safe}};
 app.pageComposition = {{ page.compositionData|json|safe}};
 </script>
