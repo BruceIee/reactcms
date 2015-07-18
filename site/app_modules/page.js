@@ -128,12 +128,13 @@ module.exports = function(app) {
         res.render('page/index', { page:page });
     };
     
-    block.page.showPage = function(req, res) {
+    block.page.showPageDirect = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        var composition = parameter.composition;
+        
+        var compositionName = parameter.composition;
         var data = parameter.data;
         
-        console.log('showPage parameter:', parameter);
+        console.log('showPageDirect parameter:', parameter);
         
         var page = app.getPage(req);
         res.render('page/index', { page:page });
@@ -237,7 +238,7 @@ module.exports = function(app) {
     // page route
     app.server.all('/pages', block.page.checkLogin);
     app.server.get('/pages', block.page.getIndex);
-    app.server.get('/pages/show/:composition/:data', block.page.showPage);
+    app.server.get('/pages/show/direct', block.page.showPageDirect);
     app.server.all('/pages/add', block.page.checkLogin);
     app.server.get('/pages/add', block.page.addPage);
     app.server.post('/pages/add', block.page.addPagePost);
