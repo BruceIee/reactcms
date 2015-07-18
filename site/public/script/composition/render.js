@@ -14,27 +14,33 @@ function showByPageData(content) {
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
             widget.targetClass = targetClass;
-            showWidget(widget);
+            getAndShowWidget(widget);
         }
     }
 }
 
 function showByWidgetData(content) {
     console.log('showByWidgetData content:', content);
+    
 }
 
-function showWidget(widget) {
+function getAndShowWidget(widget) {
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
+        console.log('showWidget data:', data);
         if (data.docs.length <= 0) return;
-        var cabinetData = { items: [] };
-        for (var i = 0; i < data.docs.length; i++) {
-            var widgetData = data.docs && data.docs[i];
-            cabinetData.items.push({ type:this.widgetName, data:widgetData });
-        }
-        React.render(
-            <Cabinet data={ cabinetData } />,
-            $('.' + this.targetClass)[0]
-        );
+        showWidget(data.docs, this.widgetName, this.targetClass);
     }.bind(widget));
+}
+
+function showWidget(widgetDataItems, widgetName, targetClass) {
+    var cabinetData = { items: [] };
+    for (var i = 0; i < widgetDataItems.length; i++) {
+        var widgetData = widgetDataItems[i];
+        cabinetData.items.push({ type:widgetName, data:widgetData });
+    }
+    React.render(
+        <Cabinet data={ cabinetData } />,
+        $('.' + targetClass)[0]
+    );
 }
