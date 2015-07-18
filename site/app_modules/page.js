@@ -52,7 +52,6 @@ module.exports = function(app) {
     
     /*
     block.data.checkPageAccess = function(req, res) {
-        
     };
     */
     
@@ -63,7 +62,6 @@ module.exports = function(app) {
         var condition = { name:pageName };
         var filter = {};
         
-        //console.log('getPage query:', condition, filter);
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             // get page
             var page = docs && docs[0];
@@ -132,12 +130,19 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         
         var compositionName = parameter.composition;
-        var data = parameter.data;
+        var data = tool.JsonParse(parameter.data);
         
-        console.log('showPageDirect parameter:', parameter);
+        console.log('showPageDirect');
+        console.log('compositionName:', compositionName)
+        console.log('typeof data:', typeof data);
+        console.log('data:', data);
+        
+        
         
         var page = app.getPage(req);
         res.render('page/index', { page:page });
+        
+        
         
         /*
         var page = app.getPage(req);
@@ -149,6 +154,7 @@ module.exports = function(app) {
         var layoutFilename = 'composition/' + info.composition.filename;
         res.render(layoutFilename, { page:page });
         */
+        
     };
     
     block.page.addPage = function(req, res) {
