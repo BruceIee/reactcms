@@ -124,14 +124,14 @@ module.exports = function(app) {
         var compositionName = parameter.composition;
         var pagedata = tool.JsonParse(parameter.pagedata);
         var widgetdata = tool.JsonParse(parameter.widgetdata);
-        
-        console.log('>>>', pagedata, widgetdata);
-        
         // based on parameter input, show page accordingly
         if (pagedata) {
             block.page.showPageWithPageData(req, res);
         } else if (widgetdata) {
             block.page.showPageWithWidgetData(req, res);
+        } else {
+            var info = { message:'Invalid parameters for page show direct' };
+            app.renderInfoPage(null, null, info, req, res);
         }
     };
     
@@ -158,11 +158,15 @@ module.exports = function(app) {
     block.page.showPageWithWidgetData = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var compositionName = parameter.composition;
-        var pagedataInput = tool.JsonParse(parameter.pagedata);
+        var widgetName = parameter.widgetname;
+        var widgetData = tool.JsonParse(parameter.widgetdata);
+        
+        console.log('>>> showPageWithWidgetData:', compositionName, widgetName, widgetData);
+        
         var pageData = {
             name: 'page',
             composition: compositionName,
-            content: pagedataInput
+            content: null
         };
         var compositionData = app.module.composition.data;
         compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {

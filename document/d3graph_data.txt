@@ -3,9 +3,14 @@ Page Direct
 composition: theone
 data: {"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}
 
-Test url
---------
+Test url for pagedata
+---------------------
 localhost:8700/pages/show/direct?composition=theone&pagedata={"r1c1":[{"widgetName":"GraphBarchart","widgetInfo":{"module":"item","condition":{"name":"barchart"},"filter":""}}]}
+
+Test url for widgetdata
+-----------------------
+localhost:8700/pages/show/direct?composition=theone&widgetname=GraphBarchart&widgetdata={"label":"my plot","values":[{"x":"Class A","y":8},{"x":"Class B","y":4},{"x":"Class C","y":6},{"x":"Class D","y":3}]}
+
 
 Server side parameter
 ---------------------
