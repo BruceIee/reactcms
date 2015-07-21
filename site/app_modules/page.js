@@ -172,9 +172,6 @@ module.exports = function(app) {
                 data: widgetData
             }
         };
-        
-        console.log('>>> showPageWithWidgetData:', pageData);
-        
         var compositionData = app.module.composition.data;
         compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
             var composition = docs && docs[0];
