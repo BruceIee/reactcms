@@ -38,3 +38,12 @@ run the following command to overcome file size limit
 ```
 ulimit -n 2560
 ```
+
+Start
+-----
+
+```
+npm start
+```
+
+Visit http://localhost:8700
