@@ -25,10 +25,6 @@ Go to site folder and populate database
 node cmd.js initdb
 node cmd.js import
 ```
-or
-```
-bin/refreshdb
-```
 
 
 MacOSX
