@@ -7,17 +7,21 @@
         "name": {
             "type": "string"
         },
-        "content": {
+        "description": {
             "type": "text"
         },
-        "data": {
+        "value": {
             "type": "object",
             "subtype": {
                 "type": "json"
             }
         },
         "status": {
-            "type": "string"
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
         },
         "create_date": {
             "type": "date"

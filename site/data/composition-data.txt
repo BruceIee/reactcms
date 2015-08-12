@@ -50,30 +50,30 @@
                 {
                     "name": "r1c1",
                     "description": "top",
-                    "width": "12"
+                    "width": 12
                 },
                 {
                     "name": "r2c1",
                     "description": "side",
-                    "width": "4"
+                    "width": 4
                 },
                 {
                     "name": "r2c2",
                     "description": "main",
-                    "width": "8"
+                    "width": 8
                 },
                 {
                     "name": "r3c1",
                     "description": "footer",
-                    "width": "12"
+                    "width": 12
                 }
             ],
-            "status": "active",
-            "create_date": "",
+            "status": "",
+            "create_date": null,
             "_class": "composition",
             "create_by": "",
-            "edit_date": "2015-06-23T23:45:38.000Z",
-            "edit_by": "admin"
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "554c261457e90a66273cb734",
@@ -115,23 +115,22 @@
             "edit_by": ""
         },
         {
-            "_id": "558a19eac1f98a4522648110",
-            "module": "composition",
+            "_id": "55ca9a6a194a50f9b02e463e",
             "name": "theone",
-            "description": "one widget",
+            "description": "one block",
             "filename": "theone.html",
             "data": [
                 {
                     "name": "r1c1",
-                    "description": "main",
-                    "width": "12"
+                    "description": "top",
+                    "width": 12
                 }
             ],
             "status": "active",
-            "create_date": "2015-06-24T02:46:02.320Z",
+            "create_date": "2015-08-12T00:59:22.000Z",
             "create_by": "admin",
-            "edit_date": "2015-06-24T02:50:19.000Z",
-            "edit_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
             "_class": "composition"
         }
     ]

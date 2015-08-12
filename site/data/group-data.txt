@@ -10,11 +10,18 @@
         "description": {
             "type": "string"
         },
-        "status": {
-            "type": "string"
-        },
         "users": {
-            "type": "string"
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
         },
         "create_date": {
             "type": "date"

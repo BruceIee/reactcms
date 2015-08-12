@@ -1,21 +1,26 @@
 {
-    "name":"file",
+    "name":"linkset",
     "module":    {
-        "filename": {
+        "type": {
             "type": "string"
         },
-        "description": {
+        "name": {
             "type": "string"
         },
-        "path": {
+        "title": {
             "type": "string"
+        },
+        "content": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
         },
         "status": {
             "type": "string",
             "values": [
                 "active",
-                "inactive",
-                "deleted"
+                "inactive"
             ]
         },
         "create_date": {

@@ -1,21 +1,23 @@
 {
-    "name":"file",
+    "name":"imageset",
     "module":    {
-        "filename": {
-            "type": "string"
-        },
-        "description": {
+        "name": {
             "type": "string"
         },
         "path": {
-            "type": "string"
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "content": {
+            "type": "array"
         },
         "status": {
             "type": "string",
             "values": [
                 "active",
-                "inactive",
-                "deleted"
+                "inactive"
             ]
         },
         "create_date": {

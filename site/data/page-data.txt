@@ -1,21 +1,29 @@
 {
-    "name":"file",
+    "name":"page",
     "module":    {
-        "filename": {
+        "name": {
             "type": "string"
         },
         "description": {
             "type": "string"
         },
-        "path": {
+        "composition": {
+            "type": "string"
+        },
+        "content": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "group": {
             "type": "string"
         },
         "status": {
             "type": "string",
             "values": [
                 "active",
-                "inactive",
-                "deleted"
+                "inactive"
             ]
         },
         "create_date": {

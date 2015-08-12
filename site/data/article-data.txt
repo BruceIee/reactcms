@@ -1,21 +1,23 @@
 {
-    "name":"file",
+    "name":"article",
     "module":    {
-        "filename": {
+        "type": {
             "type": "string"
         },
-        "description": {
-            "type": "string"
+        "content": {
+            "type": "text",
+            "subtype": {
+                "type": "html"
+            }
         },
-        "path": {
+        "title": {
             "type": "string"
         },
         "status": {
             "type": "string",
             "values": [
                 "active",
-                "inactive",
-                "deleted"
+                "inactive"
             ]
         },
         "create_date": {

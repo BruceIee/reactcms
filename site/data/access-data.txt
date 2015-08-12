@@ -1,21 +1,30 @@
 {
-    "name":"file",
+    "name":"access",
     "module":    {
-        "filename": {
+        "source_type": {
             "type": "string"
         },
-        "description": {
+        "source_id": {
             "type": "string"
         },
-        "path": {
+        "target_type": {
             "type": "string"
+        },
+        "target_id": {
+            "type": "string"
+        },
+        "value": {
+            "type": "number",
+            "values": [
+                "0",
+                "100"
+            ]
         },
         "status": {
             "type": "string",
             "values": [
                 "active",
-                "inactive",
-                "deleted"
+                "inactive"
             ]
         },
         "create_date": {

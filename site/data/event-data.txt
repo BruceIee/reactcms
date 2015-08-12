@@ -1,21 +1,20 @@
 {
-    "name":"file",
+    "name":"event",
     "module":    {
-        "filename": {
+        "date": {
+            "type": "date"
+        },
+        "category": {
             "type": "string"
         },
-        "description": {
-            "type": "string"
-        },
-        "path": {
+        "title": {
             "type": "string"
         },
         "status": {
             "type": "string",
             "values": [
                 "active",
-                "inactive",
-                "deleted"
+                "inactive"
             ]
         },
         "create_date": {
