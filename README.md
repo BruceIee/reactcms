@@ -1,5 +1,6 @@
 ReactCMS
 ========
+
 Content management system using React and NodeJS
 
 System Setup
@@ -27,19 +28,13 @@ Go to application root folder
 ./start
 ```
 
-or
-
-```
-npm start
-```
-
-Visit http://localhost:8700
+Visit website at http://localhost:8700
 
 
 MacOSX
 ------
 
-run the following command to overcome file size limit
+Run the following command to overcome file size limit
 ```
 ulimit -n 2560
 ```
