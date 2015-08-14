@@ -22,6 +22,18 @@ exports.setting = {
         username: 'test@example.com',
         password: 'test',
         sender: 'test@example.com'
+    },
+    
+    // site setting
+    site: {
+        name: 'mccpta_site',
+        header: 'mccpta_header',
+        footer: 'mccpta_footer'
+    },
+    
+    // invite code
+    invite: {
+        code: 'mccpta_site'
     }
 
 };

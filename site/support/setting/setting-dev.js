@@ -33,6 +33,13 @@ exports.setting = {
         sender: 'test@example.com'
     },
     
+    // site setting
+    site: {
+        name: 'default_site',
+        header: 'default_header',
+        footer: 'default_footer'
+    },
+    
     // invite code
     invite: {
         code: 'react_cms'
