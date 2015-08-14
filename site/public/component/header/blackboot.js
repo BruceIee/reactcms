@@ -1,5 +1,5 @@
 // article detail component
-var BlackBootHeader = React.createClass({
+var BlackbootHeader = React.createClass({
     name: 'blackbootheader',
     mixins: [getCommonMixin],
     
