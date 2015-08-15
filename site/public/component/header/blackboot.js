@@ -18,41 +18,36 @@ var BlackbootHeader = React.createClass({
     
     render: function() {
         return (
-            <div className={ this.state.containerClassNames.join(' ') } >
-                <div className="blackbootheader-content">
-                BLACK BOOT
+            <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div className="header-container container-fluid">
+                    <div className="navbar-header">
+                      <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span className="sr-only">Toggle navigation</span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                      </button>
+                      <a className="navbar-brand" href="/">Project DNRDW</a>
+                    </div>
+                    <div id="navbar" className="collapse navbar-collapse navbar-site-main">
+                        <ul className="nav navbar-nav navbar-left">
+                            <li className="menu-main active">
+                            
+                                <a href="/">
+                                    <span>Home</span>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                        <ul className="nav navbar-nav navbar-right">
+                        
+                            <li><a href="/reference">Reference</a></li>
+                            <li><a href="/about">About</a></li>
+                            
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </nav>
         );
     }
 });
-
-
-/*
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="header-container container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Project DNRDW</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse navbar-site-main">
-            <ul class="nav navbar-nav navbar-left">
-                <li class="menu-main active">
-                    <a href="/">
-                        <span style="padding-left:5px;">Home</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/reference">Reference</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-*/
