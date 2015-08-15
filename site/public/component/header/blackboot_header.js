@@ -18,7 +18,7 @@ var BlackbootHeader = React.createClass({
     
     render: function() {
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <nav className="navbar navbar-inverse navbar-fixed-top blackbootheader-container" role="navigation">
                 <div className="header-container container-fluid">
                     <div className="navbar-header">
                       <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
