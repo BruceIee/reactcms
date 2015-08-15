@@ -20,6 +20,7 @@ var BlackbootHeader = React.createClass({
         return (
             <div className={ this.state.containerClassNames.join(' ') } >
                 <div className="blackbootheader-content">
+                BLACK BOOT
                 </div>
             </div>
         );
