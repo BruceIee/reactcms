@@ -4,6 +4,7 @@ var Cabinet = React.createClass({
     mixins: [getCommonMixin],
     components: {
         BlackbootHeader: BlackbootHeader,
+        BlackbootFooter: BlackbootFooter,
         ItemDetail: ItemDetail,
         ArticleDetail: ArticleDetail,
         LinksetDetail: LinksetDetail,
