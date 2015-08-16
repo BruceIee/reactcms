@@ -8,10 +8,10 @@ var BlackbootHeader = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
-            { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
-            { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
-            { name:'content', type:'string', required:false, defaultValue:'', note:'item content' }
+            { name:'title', type:'string', required:false, defaultValue:'Home', note:'title' },
+            { name:'titleLink', type:'string', required:false, defaultValue:'/', note:'title link' },
+            { name:'mainLinks', type:'array', required:false, defaultValue:[], note:'main links' },
+            { name:'sideLinks', type:'array', required:false, defaultValue:[], note:'side links' }
         ];
         return attributes;
     },
