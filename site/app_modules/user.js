@@ -47,6 +47,9 @@ module.exports = function(app) {
                 type: 'password'
             }
         },
+        is_admin: {
+            type: 'boolean'
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']

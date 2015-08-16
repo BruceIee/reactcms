@@ -44,6 +44,9 @@
                     {{ page.user.username }} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
+                    {% if page.user.is_admin %}
+                    <li><a href="/admin" class="glyphicon glyphicon-cog"> Admin</a></li>
+                    {% endif %}
                     <li><a href="/users/{{ page.user._id }}/profile" class="glyphicon glyphicon-home"> Profile</a></li>
                     <li><a href="/users/logout" class="glyphicon glyphicon-log-out"> Logout</a></li>
                 </ul>
