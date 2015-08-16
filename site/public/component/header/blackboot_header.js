@@ -8,10 +8,7 @@ var BlackbootHeader = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'title', type:'string', required:false, defaultValue:'Website', note:'title' },
-            { name:'titleLink', type:'string', required:false, defaultValue:'/', note:'title link' },
-            { name:'mainLinks', type:'array', required:false, defaultValue:[], note:'main links' },
-            { name:'sideLinks', type:'array', required:false, defaultValue:[], note:'side links' }
+            { name:'value', type:'object', required:false, defaultValue:{}, note:'data value' }
         ];
         return attributes;
     },
@@ -27,7 +24,7 @@ var BlackbootHeader = React.createClass({
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                       </button>
-                      <a className="navbar-brand" href="/">{ this.state.title }</a>
+                      <a className="navbar-brand" href="/">{ this.state.value.title }</a>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
                         <ul className="nav navbar-nav navbar-left">
