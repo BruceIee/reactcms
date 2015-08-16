@@ -8,7 +8,7 @@ var BlackbootHeader = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'title', type:'string', required:false, defaultValue:'Home', note:'title' },
+            { name:'title', type:'string', required:false, defaultValue:'Website', note:'title' },
             { name:'titleLink', type:'string', required:false, defaultValue:'/', note:'title link' },
             { name:'mainLinks', type:'array', required:false, defaultValue:[], note:'main links' },
             { name:'sideLinks', type:'array', required:false, defaultValue:[], note:'side links' }
@@ -27,23 +27,15 @@ var BlackbootHeader = React.createClass({
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                       </button>
-                      <a className="navbar-brand" href="/">Project DNRDW</a>
+                      <a className="navbar-brand" href="/">{ this.state.title }</a>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
                         <ul className="nav navbar-nav navbar-left">
-                            <li className="menu-main active">
-                            
-                                <a href="/">
-                                    <span>Home</span>
-                                </a>
-                                
-                            </li>
+                            <li className="menu-main active"><a href="/">Home</a></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                        
                             <li><a href="/reference">Reference</a></li>
                             <li><a href="/about">About</a></li>
-                            
                         </ul>
                     </div>
                 </div>
