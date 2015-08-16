@@ -18,8 +18,8 @@ var BlackbootFooter = React.createClass({
     
     render: function() {
         return (
-            <div>
-                blackboot footer
+            <div class="footer_container container">
+                <span className="text-muted">Site footer</span>
             </div>
         );
     }
