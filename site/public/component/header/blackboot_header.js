@@ -14,6 +14,9 @@ var BlackbootHeader = React.createClass({
     },
     
     render: function() {
+        var title = this.state.value.title;
+        var homeText = this.state.value.hometext;
+        var homeLink = this.state.value.homelink;
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top blackbootheader-container" role="navigation">
                 <div className="header-container container-fluid">
@@ -24,11 +27,11 @@ var BlackbootHeader = React.createClass({
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                       </button>
-                      <a className="navbar-brand" href="/">{ this.state.value.title }</a>
+                      <a className="navbar-brand" href="/">{ title }</a>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
                         <ul className="nav navbar-nav navbar-left">
-                            <li className="menu-main active"><a href="/">Home</a></li>
+                            <li className="menu-main active"><a href="{ homeLink }">{ homeText }</a></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li><a href="/reference">Reference</a></li>
