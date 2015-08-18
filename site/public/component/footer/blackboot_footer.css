@@ -1,13 +1,4 @@
-.blackbootfooter-container .blackbootfooter-content {
-    /* padding-bottom: 25px; */
-}
 
-
-.footer-links-primary ul {
-    font-size: 18px;
-    
-}
-
-.footer-links-secondary ul {
-    font-size: 13px;
+.blackbootfooter-container .footer-links {
+    font-size:16px;
 }

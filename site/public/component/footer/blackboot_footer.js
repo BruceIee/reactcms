@@ -32,13 +32,17 @@ var BlackbootFooter = React.createClass({
     render: function() {
         var primaryLinkElements = this.getItemLinks( this.state.value.primaryLinks);
         var secondaryLinkElements = this.getItemLinks( this.state.value.secondaryLinks);
+        var tertiaryLinkElements = this.getItemLinks( this.state.value.tertiaryLinks );
         return (
-            <div class="col-md-3" className="footer_container container">
-                <div className="footer-links-primary">
-                    <ul class="unstyled">{ primaryLinkElements }</ul>
+            <div className="footer_container container">
+                <div className="footer-links-primary col-md-3 footer-links">
+                    <ul className="list-unstyled">{ primaryLinkElements }</ul>
                 </div>
-                <div className="footer-links-secondary">
-                    <ul class="unstyled">{ secondaryLinkElements }</ul>
+                <div className="footer-links-secondary col-md-3 footer-links">
+                    <ul className="list-unstyled">{ secondaryLinkElements }</ul>
+                </div>
+                <div className="footer-links-tertiary col-md-3 footer-links">
+                    <ul className="list-unstyled">{ tertiaryLinkElements }</ul>
                 </div>
             </div>
         );
