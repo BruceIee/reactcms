@@ -13,10 +13,32 @@ var BlackbootHeader = React.createClass({
         return attributes;
     },
     
+    getItemLinks: function(linkItems) {
+        var linkElements = [];
+        if (linkItems) {
+            for (var i = 0; i < linkItems.length; i++) {
+                var linkItem = linkItems[i];
+                var linkItemKey = 'link-item-' + linkItem.text;
+                linkElements.push(
+                    <li className="menu-main" key={ linkItemKey }>
+                        <a href={ linkItem.link }>{ linkItem.text }</a>
+                    </li>
+                );
+            }
+        }
+        return linkElements;
+    },
+    
     render: function() {
+        
+        console.log('>>>', this.state.value);
+        
         var title = this.state.value.title;
-        var homeText = this.state.value.hometext || 'Home';
-        var homeLink = this.state.value.homelink || '/';
+        var mainLinkElements = this.getItemLinks( this.state.value.mainLinks);
+        var sideLinkElements = this.getItemLinks( this.state.value.sideLinks);
+        
+        console.log('>>>', mainLinkElements);
+        
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top blackbootheader-container" role="navigation">
                 <div className="header-container container-fluid">
@@ -31,9 +53,7 @@ var BlackbootHeader = React.createClass({
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
                         <ul className="nav navbar-nav navbar-left">
-                        
-                            <li className="menu-main active"><a href={ homeLink }>{ homeText }</a></li>
-                            
+                            { mainLinkElements }
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                         
