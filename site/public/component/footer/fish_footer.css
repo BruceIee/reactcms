@@ -2,3 +2,21 @@
 .fish_footer_container .footer-links {
     font-size:16px;
 }
+
+.fish_footer_container {
+    background-color: #BABABA;
+}
+
+.footer-links {
+    color:white;
+}
+
+.fishfooter-llc {
+    font-family: Verdana, Geneva, sans-serif;	
+    color:black;
+}
+
+.fishfooter-llc:hover {
+    text-decoration: underline;
+    color: #898989;
+}
