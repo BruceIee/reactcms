@@ -30,15 +30,9 @@ var BlackbootHeader = React.createClass({
     },
     
     render: function() {
-        
-        console.log('>>>', this.state.value);
-        
         var title = this.state.value.title;
         var mainLinkElements = this.getItemLinks( this.state.value.mainLinks);
         var sideLinkElements = this.getItemLinks( this.state.value.sideLinks);
-        
-        console.log('>>>', mainLinkElements);
-        
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top blackbootheader-container" role="navigation">
                 <div className="header-container container-fluid">
@@ -56,10 +50,7 @@ var BlackbootHeader = React.createClass({
                             { mainLinkElements }
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                        
-                            <li><a href="/reference">Reference</a></li>
-                            <li><a href="/about">About</a></li>
-                            
+                            { sideLinkElements }
                         </ul>
                     </div>
                 </div>
