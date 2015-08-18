@@ -31,11 +31,15 @@ var BlackbootHeader = React.createClass({
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
                         <ul className="nav navbar-nav navbar-left">
-                            <li className="menu-main active"><a href="/">{ homeText }</a></li>
+                        
+                            <li className="menu-main active"><a href={ homeLink }>{ homeText }</a></li>
+                            
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
+                        
                             <li><a href="/reference">Reference</a></li>
                             <li><a href="/about">About</a></li>
+                            
                         </ul>
                     </div>
                 </div>
