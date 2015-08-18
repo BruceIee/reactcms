@@ -35,7 +35,7 @@ var FishFooter = React.createClass({
         var tertiaryLinkElements = this.getItemLinks( this.state.value.tertiaryLinks );
         return (
             <div className="fish_footer_container container">
-            <h2><a href="/" className="fishfooter-llc">FishFooter LLC</a></h2>
+            <h2>FishFooter</h2>
                 <div className="footer-links-primary col-md-3 footer-links">
                     <ul className="list-unstyled">{ primaryLinkElements }</ul>
                 </div>
