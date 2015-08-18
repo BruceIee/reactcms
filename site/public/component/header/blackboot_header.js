@@ -20,7 +20,7 @@ var BlackbootHeader = React.createClass({
                 var linkItem = linkItems[i];
                 var linkItemKey = 'link-item-' + linkItem.text;
                 linkElements.push(
-                    <li className="menu-main" key={ linkItemKey }>
+                    <li className="link-container" key={ linkItemKey }>
                         <a href={ linkItem.link }>{ linkItem.text }</a>
                     </li>
                 );
