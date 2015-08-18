@@ -2,6 +2,12 @@
     /* padding-bottom: 25px; */
 }
 
+
+.footer-links-primary ul {
+    font-size: 18px;
+    
+}
+
 .footer-links-secondary ul {
-    font-size: 11px;
+    font-size: 13px;
 }
