@@ -1,46 +1,11 @@
-{% extends '../layout/layout-bare.html' %}
+{% extends '../layout/layout-composition.html' %}
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/component/common/common-style.css"/>
-
-<link rel="stylesheet" href="/component/header/blackboot_header.css"/>
-<link rel="stylesheet" href="/component/footer/blackboot_footer.css"/>
-<link rel="stylesheet" href="/component/footer/fish_footer.css"/>
-<link rel="stylesheet" href="/component/item/detail.css"/>
-<link rel="stylesheet" href="/component/article/detail.css"/>
-<link rel="stylesheet" href="/component/linkset/detail.css"/>
-<link rel="stylesheet" href="/component/graph/d3graph.css"/>
-<link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
-
-<style></style>
 {% endblock %}
 
 {% block script %}
 {% parent %}
-<script src="/library/react/react.js"></script>
-<script src="/library/react/JSXTransformer.js"></script>
-<script src="/library/react-d3-components/react-d3-components.min.js"></script>
-<script type="text/jsx" src="/component/common/common-mixin.js"></script>
-<script type="text/jsx" src="/script/page/support.js"></script>
-
-<script type="text/jsx" src="/component/header/blackboot_header.js"></script>
-<script type="text/jsx" src="/component/footer/blackboot_footer.js"></script>
-<script type="text/jsx" src="/component/footer/fish_footer.js"></script>
-<script type="text/jsx" src="/component/item/detail.js"></script>
-<script type="text/jsx" src="/component/article/detail.js"></script>
-<script type="text/jsx" src="/component/linkset/detail.js"></script>
-<script type="text/jsx" src="/component/graph/d3graph.js"></script>
-<script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
-
-<script type="text/jsx">
-var app = app || {};
-app.pageDataType = "{{ page.pageData.datatype }}" || "page";
-app.pageContent = {{ page.pageData.content|json|safe}};
-app.pageComposition = {{ page.compositionData|json|safe}};
-</script>
-
-<script type="text/jsx" src="/script/composition/render.js"></script>
 <script type="text/jsx" src="/script/composition/vertflow.js"></script>
 {% endblock %}
 
