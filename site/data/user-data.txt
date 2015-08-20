@@ -35,8 +35,8 @@
                 "type": "password"
             }
         },
-        is_admin: {
-            type: 'boolean'
+        "is_admin": {
+            "type": "boolean"
         },
         "status": {
             "type": "string",
@@ -64,17 +64,17 @@
             "_id": "552b1060dcec2fe009d51f83",
             "username": "admin",
             "email": "admin@leapon.com",
-            "password": "d003d6f21b822f38cd5d2ece439a92e95aebea57b872a32d87a6c826534aa1b7081785db4b398c6dd2ffb029c67c4f0f72b8783a7d630b1eda7b5e0c72c44888",
-            "salt": 9513022,
+            "password": "29b5d9fa16a86c0fd7e13acc2bd6f27915fde67d60ad176756396b06ea8d9f7fef93b50051b45ee996f65f9f28e2fb50bcebe7ad7a6d31b79f2dd8e94ab7a085",
+            "salt": "9513022",
             "is_admin": true,
             "_class": "user",
-            "firstname": "",
-            "lastname": "",
-            "status": "",
-            "create_date": null,
+            "firstname": "admin",
+            "lastname": "user",
+            "status": "active",
+            "create_date": "",
             "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
+            "edit_date": "2015-08-20T02:37:06.000Z",
+            "edit_by": "admin"
         }
     ]
 }
