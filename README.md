@@ -39,5 +39,3 @@ Run the following command to overcome file size limit
 ulimit -n 2560
 ```
 
-
-
