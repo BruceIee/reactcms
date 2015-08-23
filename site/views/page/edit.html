@@ -22,7 +22,7 @@ var app = {
 <div class="component-entry">
     <div data-section="{{ sectionName }}" class="component-form">
         <h4 class="pull-right" style="margin-top:0px;">
-            <span class="label label-primary">Display Info</span>
+            <span class="label label-primary">Widget Name</span>
         </h4>
         <div class="well">
             <div class="form-group">
@@ -31,7 +31,16 @@ var app = {
             </div>
         </div>
         <h4 class="pull-right" style="margin-top:0px;">
-            <span class="label label-primary">Data Info</span>
+            <span class="label label-primary">Widget Data by Value</span>
+        </h4>
+        <div class="well">
+            <div class="form-group">
+                <label>Data Content</label>
+                <textarea class="form-control" name="widgetdata" value="{{ widgetData }}" placeholder="example: { &quot;title&quot;:&quot;CMS&quot; }">{{ widgetInfo.condition }}</textarea>
+            </div>
+        </div>
+        <h4 class="pull-right" style="margin-top:0px;">
+            <span class="label label-primary">Widget Data by Query</span>
         </h4>
         <div class="well">
             <div class="form-group">
