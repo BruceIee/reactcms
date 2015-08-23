@@ -194,6 +194,7 @@ function retrievePageSectionData() {
         var sectionName = section.name;
         var componentForm = $('.section-content[data-name=' + sectionName + ']');
         var sectionDataItem = getSectionData(componentForm);
+        // console.log('>>> sectionData:', sectionName, sectionDataItem)
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
         } else {
@@ -217,19 +218,22 @@ function retrievePageSectionData() {
 */
 function getSectionData(parent) {
     var componentName = $(parent).find('input[name=component]').val();
+    // widget data by value
+    var widgetData = $(parent).find('textarea[name=widgetdata]').val();
+    // widget data by query conditions
     var moduleName = $(parent).find('input[name=module]').val();
     var conditionText = $(parent).find('textarea[name=condition]').val();
     var filterText = $(parent).find('textarea[name=filter]').val();
-    
     // moduleName and componentName is required for section
     var sectionData = null;
-    if (moduleName && componentName) {
+    if (componentName) {
         sectionData = {
             widgetName: componentName,
             widgetInfo: {
                 module: moduleName,
                 condition: getJsonFromText(conditionText) || null,
-                filter: getJsonFromText(filterText) || null
+                filter: getJsonFromText(filterText) || null,
+                data: widgetData
             }
         };
     }
