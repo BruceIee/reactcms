@@ -144,39 +144,6 @@ function showSectionContent(sectionName) {
     $('.section-content[data-name=' + sectionName + ']').removeClass('hidden');
 }
 
-// use parent element passed in, get form data for section
-/*
-{
-    "widgetName": "ArticleDetail",
-    "widgetInfo": {
-        "module": "article",
-        "condition": {
-            "title": "mccpta-title"
-        },
-        "filter": {}
-    }
-}
-*/
-function getSectionData(parent) {
-    var moduleName = $(parent).find('input[name=module]').val();
-    var componentName = $(parent).find('input[name=component]').val();
-    var conditionText = $(parent).find('textarea[name=condition]').val();
-    var filterText = $(parent).find('textarea[name=filter]').val();
-    // moduleName and componentName is required for section
-    var sectionData = null;
-    if (moduleName && componentName) {
-        sectionData = {
-            widgetName: componentName,
-            widgetInfo: {
-                module: moduleName,
-                condition: getJsonFromText(conditionText) || null,
-                filter: getJsonFromText(filterText) || null
-            }
-        };
-    }
-    return sectionData;
-}
-
 function createPage() {
     // check page name is unique
     var pageName = $('#pageName').val();
@@ -233,4 +200,38 @@ function retrievePageSectionData() {
             app.pageData.content[sectionName] = null;
         }
     }
+}
+
+// use parent element passed in, get form data for section
+/*
+{
+    "widgetName": "ArticleDetail",
+    "widgetInfo": {
+        "module": "article",
+        "condition": {
+            "title": "mccpta-title"
+        },
+        "filter": {}
+    }
+}
+*/
+function getSectionData(parent) {
+    var componentName = $(parent).find('input[name=component]').val();
+    var moduleName = $(parent).find('input[name=module]').val();
+    var conditionText = $(parent).find('textarea[name=condition]').val();
+    var filterText = $(parent).find('textarea[name=filter]').val();
+    
+    // moduleName and componentName is required for section
+    var sectionData = null;
+    if (moduleName && componentName) {
+        sectionData = {
+            widgetName: componentName,
+            widgetInfo: {
+                module: moduleName,
+                condition: getJsonFromText(conditionText) || null,
+                filter: getJsonFromText(filterText) || null
+            }
+        };
+    }
+    return sectionData;
 }
