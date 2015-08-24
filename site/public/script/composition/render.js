@@ -25,6 +25,16 @@ function showByWidgetData(content) {
 }
 
 function getAndShowWidget(widget) {
+    console.log('>>> widget:', widget);
+    if (widget.widgetInfo.data) {
+        console.log('>>> show widget with data');
+        //todo
+    } else {
+        getWidgetData(widget);
+    }
+}
+
+function getWidgetData(widget) {
     var widgetDetailUrl = '/data/components/get/detail';
     $.get(widgetDetailUrl, widget, function(data) {
         if (data.docs.length <= 0) return;
@@ -33,7 +43,7 @@ function getAndShowWidget(widget) {
 }
 
 function showWidget(widgetDataItems, widgetName, targetClass) {
-    //console.log('showWidget:', widgetDataItems, widgetName, targetClass);
+    console.log('showWidget:', widgetDataItems, widgetName, targetClass);
     var cabinetData = { items: [] };
     for (var i = 0; i < widgetDataItems.length; i++) {
         var widgetData = widgetDataItems[i];
