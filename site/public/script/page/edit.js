@@ -193,7 +193,13 @@ function retrievePageSectionData() {
         var section = sections[i];
         var sectionName = section.name;
         var componentForm = $('.section-content[data-name=' + sectionName + ']');
-        var sectionDataItem = getSectionData(componentForm);
+        
+        var sectionDataItem = null;
+        try {
+            sectionDataItem = getSectionData(componentForm);
+        } catch(e) {
+            alert('Error in getting data from ' + sectionName);
+        }
         // console.log('>>> sectionData:', sectionName, sectionDataItem)
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
@@ -219,7 +225,8 @@ function retrievePageSectionData() {
 function getSectionData(parent) {
     var componentName = $(parent).find('input[name=component]').val();
     // widget data by value
-    var widgetData = $(parent).find('textarea[name=widgetdata]').val();
+    var widgetDataText = $(parent).find('textarea[name=widgetdata]').val();
+    var widgetData = JSON.parse(widgetDataText);
     // widget data by query conditions
     var moduleName = $(parent).find('input[name=module]').val();
     var conditionText = $(parent).find('textarea[name=condition]').val();
