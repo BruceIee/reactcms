@@ -8,7 +8,10 @@ var FishFooter = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'value', type:'object', required:false, defaultValue:{}, note:'data value' }
+            { name:'title', type:'string', required:false, defaultValue:'', note:'title' },
+            { name:'primaryLinks', type:'array', required:false, defaultValue:[], note:'primaryLinks' },
+            { name:'secondaryLinks', type:'array', required:false, defaultValue:[], note:'secondaryLinks' },
+            { name:'tertiaryLinks', type:'array', required:false, defaultValue:[], note:'tertiaryLinks' }
         ];
         return attributes;
     },
@@ -30,9 +33,9 @@ var FishFooter = React.createClass({
     },
     
     render: function() {
-        var primaryLinkElements = this.getItemLinks( this.state.value.primaryLinks);
-        var secondaryLinkElements = this.getItemLinks( this.state.value.secondaryLinks);
-        var tertiaryLinkElements = this.getItemLinks( this.state.value.tertiaryLinks );
+        var primaryLinkElements = this.getItemLinks( this.state.primaryLinks);
+        var secondaryLinkElements = this.getItemLinks( this.state.secondaryLinks);
+        var tertiaryLinkElements = this.getItemLinks( this.state.tertiaryLinks );
         return (
             <div className="fish_footer_container container">
             <h2>FishFooter</h2>

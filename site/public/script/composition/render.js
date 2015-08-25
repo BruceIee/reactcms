@@ -20,13 +20,13 @@ function showByPageData(content) {
 }
 
 function showByWidgetData(content) {
-    var widgetDataItems = [{ value: content.data }];
+    var widgetDataItems = [ content.data ];
     showWidget(widgetDataItems, content.name, content.section);
 }
 
 function getAndShowWidget(widget) {
     if (widget.widgetInfo.data) {
-        showWidget([{ value:widget.widgetInfo.data }], widget.widgetName, widget.targetClass)
+        showWidget([widget.widgetInfo.data], widget.widgetName, widget.targetClass)
     } else {
         getWidgetData(widget);
     }
