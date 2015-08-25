@@ -41,7 +41,6 @@ function getWidgetData(widget) {
 }
 
 function showWidget(widgetDataItems, widgetName, targetClass) {
-    //console.log('showWidget:', widgetDataItems, widgetName, targetClass);
     var cabinetData = { items: [] };
     for (var i = 0; i < widgetDataItems.length; i++) {
         var widgetData = widgetDataItems[i];
