@@ -193,14 +193,14 @@ function retrievePageSectionData() {
         var section = sections[i];
         var sectionName = section.name;
         var componentForm = $('.section-content[data-name=' + sectionName + ']');
-        
+        // get section data
         var sectionDataItem = null;
         try {
             sectionDataItem = getSectionData(componentForm);
         } catch(e) {
-            alert('Error in getting data from ' + sectionName);
+            console.log('Error in getting data from ' + sectionName);
         }
-        // console.log('>>> sectionData:', sectionName, sectionDataItem)
+        console.log('>>> sectionData:', sectionName, sectionDataItem)
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
         } else {
