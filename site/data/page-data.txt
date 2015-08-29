@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":1,
+    "count":2,
     "items": [
         {
             "_id": "55e10d369346d92f1ef4eeec",
@@ -169,6 +169,123 @@
                 ]
             },
             "create_date": "2015-08-29T01:39:02.000Z",
+            "_class": "page"
+        },
+        {
+            "_id": "55e115fb9346d92f1ef4eeed",
+            "name": "about",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "ReactCMS",
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:75px;\">About ReactCMS</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>introduction to reactcms alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-08-29T02:16:27.000Z",
             "_class": "page"
         }
     ]
