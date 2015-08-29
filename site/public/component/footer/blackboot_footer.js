@@ -9,9 +9,9 @@ var BlackbootFooter = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'title' },
-            { name:'primaryLinks', type:'array', required:false, defaultValue:[], note:'primaryLinks' },
-            { name:'secondaryLinks', type:'array', required:false, defaultValue:[], note:'secondaryLinks' },
-            { name:'tertiaryLinks', type:'array', required:false, defaultValue:[], note:'tertiaryLinks' }
+            { name:'links1', type:'array', required:false, defaultValue:[], note:'primary links' },
+            { name:'links2', type:'array', required:false, defaultValue:[], note:'secondary links' },
+            { name:'links3', type:'array', required:false, defaultValue:[], note:'tertiary links, not in use' }
         ];
         return attributes;
     },
@@ -33,9 +33,9 @@ var BlackbootFooter = React.createClass({
     },
     
     render: function() {
-        var primaryLinkElements = this.getItemLinks( this.state.primaryLinks);
-        var secondaryLinkElements = this.getItemLinks( this.state.secondaryLinks);
-        var tertiaryLinkElements = this.getItemLinks( this.state.tertiaryLinks );
+        var primaryLinkElements = this.getItemLinks( this.state.links1);
+        var secondaryLinkElements = this.getItemLinks( this.state.links2);
+        var tertiaryLinkElements = this.getItemLinks( this.state.links3 );
         return (
             <div className="footer_container container">
                 <div className="footer-links-primary col-md-3 footer-links">

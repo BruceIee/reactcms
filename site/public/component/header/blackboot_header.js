@@ -9,8 +9,9 @@ var BlackbootHeader = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'title' },
-            { name:'mainLinks', type:'array', required:false, defaultValue:[], note:'main links' },
-            { name:'sideLinks', type:'array', required:false, defaultValue:[], note:'side links' }
+            { name:'links1', type:'array', required:false, defaultValue:[], note:'main links' },
+            { name:'links2', type:'array', required:false, defaultValue:[], note:'side links' },
+            { name:'links3', type:'array', required:false, defaultValue:[], note:'extra links, not in use' }
         ];
         return attributes;
     },
@@ -33,8 +34,8 @@ var BlackbootHeader = React.createClass({
     
     render: function() {
         var title = this.state.title;
-        var mainLinkElements = this.getItemLinks( this.state.mainLinks);
-        var sideLinkElements = this.getItemLinks( this.state.sideLinks);
+        var mainLinkElements = this.getItemLinks( this.state.links1);
+        var sideLinkElements = this.getItemLinks( this.state.links2);
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top blackbootheader-container" role="navigation">
                 <div className="header-container container-fluid">
