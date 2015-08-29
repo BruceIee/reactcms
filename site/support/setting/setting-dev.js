@@ -35,7 +35,7 @@ exports.setting = {
     
     // site setting
     site: {
-        name: 'default_site',
+        homepage: 'home',
         header: 'default_header',
         footer: 'default_footer'
     },

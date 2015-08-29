@@ -26,7 +26,7 @@ exports.setting = {
     
     // site setting
     site: {
-        name: 'mccpta_site',
+        homepage: 'mccpta',
         header: 'mccpta_header',
         footer: 'mccpta_footer'
     },

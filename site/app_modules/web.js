@@ -13,7 +13,9 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
 
     block.page.getHomeIndex = function(req, res) {
-        res.redirect('/pages/home');
+        var homeUrl = '/pages/' + app.setting.site.homepage || 'home';
+        console.log('>>> homeUrl:', homeUrl);
+        res.redirect(homeUrl);
     };
 
     app.server.get('/', block.page.getHomeIndex);
