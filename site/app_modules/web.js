@@ -14,7 +14,6 @@ module.exports = function(app) {
 
     block.page.getHomeIndex = function(req, res) {
         var homeUrl = '/pages/' + app.setting.site.homepage || 'home';
-        console.log('>>> homeUrl:', homeUrl);
         res.redirect(homeUrl);
     };
 
