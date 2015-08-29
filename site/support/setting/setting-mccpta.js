@@ -6,7 +6,7 @@ exports.setting = {
 
     // http/https mode
     http_mode: true,
-    http_port: 8106,
+    http_port: 8700,
 
     // database
     database: {
