@@ -22,11 +22,32 @@ module.exports = function(app) {
         title: {
             type: 'string'
         },
-        content: {
+        links1: {
             type: 'array',
             subtype: {
                 type: 'string'
             }
+        },
+        links1_title: {
+            type: 'string'
+        },
+        links2: {
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
+        },
+        links2_title: {
+            type: 'string'
+        },
+        links3: {
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
+        },
+        links3_title: {
+            type: 'string'
         },
         status: {
             type: 'string',
