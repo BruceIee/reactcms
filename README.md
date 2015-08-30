@@ -31,11 +31,12 @@ Go to application root folder
 Visit website at http://localhost:8700
 
 
-MacOSX
-------
+Support
+-------
+
+On MacSOX, there may be error due to low number of file descriptors
 
 Run the following command to overcome file size limit
 ```
 ulimit -n 2560
 ```
-
