@@ -9,9 +9,12 @@ var FishFooter = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'title' },
-            { name:'links1', type:'array', required:false, defaultValue:[], note:'primary links' },
-            { name:'links2', type:'array', required:false, defaultValue:[], note:'secondary links' },
-            { name:'links3', type:'array', required:false, defaultValue:[], note:'tertiary links' }
+            { name:'links1', type:'array', required:false, defaultValue:[], note:'1st links' },
+            { name:'links1title', type:'string', required:false, defaultValue:'', note:'title for 1st links' },
+            { name:'links2', type:'array', required:false, defaultValue:[], note:'2nd links' },
+            { name:'links2title', type:'string', required:false, defaultValue:'', note:'title for 2nd links' },
+            { name:'links3', type:'array', required:false, defaultValue:[], note:'3rd links' },
+            { name:'links3title', type:'string', required:false, defaultValue:'', note:'title for 3rd links' }
         ];
         return attributes;
     },

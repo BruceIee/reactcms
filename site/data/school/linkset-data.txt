@@ -10,7 +10,19 @@
         "title": {
             "type": "string"
         },
-        "content": {
+        "links1": {
+            "type": "array"
+        },
+        "links2": {
+            "type": "array"
+        },
+        "links3": {
+            "type": "array"
+        },
+        "links4": {
+            "type": "array"
+        },
+        "links5": {
             "type": "array"
         },
         "status": {

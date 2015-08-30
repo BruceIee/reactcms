@@ -9,9 +9,12 @@ var BlackbootFooter = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'title' },
-            { name:'links1', type:'array', required:false, defaultValue:[], note:'primary links' },
-            { name:'links2', type:'array', required:false, defaultValue:[], note:'secondary links' },
-            { name:'links3', type:'array', required:false, defaultValue:[], note:'tertiary links, not in use' }
+            { name:'links1', type:'array', required:false, defaultValue:[], note:'1st links' },
+            { name:'links1title', type:'string', required:false, defaultValue:'', note:'title for 1st links' },
+            { name:'links2', type:'array', required:false, defaultValue:[], note:'2nd links' },
+            { name:'links2title', type:'string', required:false, defaultValue:'', note:'title for 2nd links' },
+            { name:'links3', type:'array', required:false, defaultValue:[], note:'3rd links' },
+            { name:'links3title', type:'string', required:false, defaultValue:'', note:'title for 3rd links' }
         ];
         return attributes;
     },
@@ -33,19 +36,19 @@ var BlackbootFooter = React.createClass({
     },
     
     render: function() {
-        var primaryLinkElements = this.getItemLinks( this.state.links1);
-        var secondaryLinkElements = this.getItemLinks( this.state.links2);
-        var tertiaryLinkElements = this.getItemLinks( this.state.links3 );
+        var links1Elements = this.getItemLinks( this.state.links1);
+        var links2Elements = this.getItemLinks( this.state.links2);
+        var links3Elements = this.getItemLinks( this.state.links3 );
         return (
             <div className="footer_container container">
                 <div className="footer-links-primary col-md-3 footer-links">
-                    <ul className="list-unstyled">{ primaryLinkElements }</ul>
+                    <ul className="list-unstyled">{ links1Elements }</ul>
                 </div>
                 <div className="footer-links-secondary col-md-3 footer-links">
-                    <ul className="list-unstyled">{ secondaryLinkElements }</ul>
+                    <ul className="list-unstyled">{ links2Elements }</ul>
                 </div>
                 <div className="footer-links-tertiary col-md-3 footer-links">
-                    <ul className="list-unstyled">{ tertiaryLinkElements }</ul>
+                    <ul className="list-unstyled">{ links3Elements }</ul>
                 </div>
             </div>
         );
