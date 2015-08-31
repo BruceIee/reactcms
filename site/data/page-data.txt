@@ -301,32 +301,6 @@
             "edit_by": ""
         },
         {
-            "_id": "55e39b9c32825d7305a30c90",
-            "name": "home2",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "reactcms_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": "",
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": ""
-            },
-            "create_date": "2015-08-31T00:11:08.000Z",
-            "_class": "page"
-        },
-        {
             "_id": "55e115fb9346d92f1ef4eeed",
             "name": "about",
             "composition": "vertflow",
@@ -448,6 +422,57 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "55e39b9c32825d7305a30c90",
+            "name": "home2",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "reactcms_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:75px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "reactcms_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-08-31T00:11:08.000Z",
+            "_class": "page"
         }
     ]
 }

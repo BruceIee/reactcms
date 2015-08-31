@@ -57,7 +57,7 @@
             "type": "string"
         }
     },
-    "count":1,
+    "count":2,
     "items": [
         {
             "_id": "55e39b7632825d7305a30c8f",
@@ -82,6 +82,63 @@
             "links3_title": "",
             "status": "active",
             "create_date": "2015-08-31T00:10:30.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "linkset"
+        },
+        {
+            "_id": "55e4032732825d7305a30c91",
+            "type": "",
+            "name": "reactcms_footer",
+            "title": "",
+            "links1": [
+                {
+                    "link": "/",
+                    "text": "Home"
+                },
+                {
+                    "link": "/pages/team",
+                    "text": "Team"
+                },
+                {
+                    "link": "/pages/careers",
+                    "text": "Careers"
+                },
+                {
+                    "link": "/pages/resources",
+                    "text": "Resources"
+                }
+            ],
+            "links1_title": "",
+            "links2": [
+                {
+                    "link": "/pages/contact",
+                    "text": "Contact"
+                },
+                {
+                    "link": "/pages/about",
+                    "text": "About Us"
+                }
+            ],
+            "links2_title": "",
+            "links3": [
+                {
+                    "link": "/",
+                    "text": "Facebook"
+                },
+                {
+                    "link": "/",
+                    "text": "Twitter"
+                },
+                {
+                    "link": "/",
+                    "text": "Reddit"
+                }
+            ],
+            "links3_title": "",
+            "status": "active",
+            "create_date": "2015-08-31T07:32:55.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
