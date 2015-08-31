@@ -226,7 +226,10 @@ function getSectionData(parent) {
     var componentName = $(parent).find('input[name=component]').val();
     // widget data by value
     var widgetDataText = $(parent).find('textarea[name=widgetdata]').val();
-    var widgetData = JSON.parse(widgetDataText);
+    var widgetData = null;
+    if (widgetDataText) {
+        JSON.parse(widgetDataText);
+    }
     // widget data by query conditions
     var moduleName = $(parent).find('input[name=module]').val();
     var conditionText = $(parent).find('textarea[name=condition]').val();
