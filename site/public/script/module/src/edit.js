@@ -11,7 +11,6 @@ var app = app ||  window.app || {};
 
 $().ready(function() {
     setup();
-    //testForm();
 });
 
 function setup() {
@@ -45,10 +44,15 @@ function getModuleItemData(moduleName, itemId, callback) {
 
 function updateDisplay(moduleInfo, moduleItem) {
     var moduleModel = moduleInfo.model;
+    console.log('moduleInfo:', moduleInfo);
+    console.log('moduleItem:', moduleItem);
     console.log('updateDisplay model:', moduleModel);
     var formFields = getFormFieldsFromModel(moduleModel, moduleItem);
     app.editForm = React.render(
-        React.createElement(HtmlForm, { data:{ fields:formFields } }),
+        React.createElement(HtmlForm, {
+            action:'/modules/' + moduleInfo.module + '/new',
+            data:{ fields:formFields }
+        }),
         document.getElementById('editForm')
     );
 }
