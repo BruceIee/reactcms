@@ -56,9 +56,9 @@ function getFormField(fieldName, modelField, fieldValue) {
                 }
             };
         }
-    } else if (modelField.type === 'text') {
+    } else if (modelField.type === 'file') {
         formField = {
-            type: 'HtmlTextEdit',
+            type: 'HtmlFile',
             data: {
                 label: fieldName,
                 key: fieldName,

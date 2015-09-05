@@ -28,6 +28,9 @@ module.exports = function(app) {
                 type: 'json'
             }
         },
+        image: {
+            type: 'file'
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']
