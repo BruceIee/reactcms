@@ -41,7 +41,7 @@
     "moment": "~2.7.0",
     "mongodb": "~1.4.7",
     "morgan": "~1.0.0",
-    "multer": "~0.1.8",
+    "multer": "~1.0.0",
     "ncp": "*",
     "nodemailer": "0.6.x",
     "pagedown": "git+https://github.com/yayestechlab/pagedown.git",

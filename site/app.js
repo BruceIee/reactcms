@@ -11,7 +11,7 @@ var cons = require('consolidate');
 var compression = require('compression')
 var _ = require('underscore');
 var tool = require('leaptool');
-var multer = require('multer');
+//var multer = require('multer');
 var emailEngine = require('emailEngine');
 
 var app = {};
@@ -91,6 +91,7 @@ function setup(cbSetup) {
     app.server.use(express.static(path.join(__dirname, app.setting.public_name)));
     
     // Multer is a node.js middleware for handling multipart/form-data
+    /*
     app.server.use(multer({ dest: './site/public/file/',
         rename: function (fieldname, filename) {
             return filename + Date.now();
@@ -102,6 +103,7 @@ function setup(cbSetup) {
             console.log(file.fieldname + ' is uploaded to ' + file.path)
         }
     }));
+    */
     
     app.mailer = null;
     if (app.setting.email) {
