@@ -178,8 +178,19 @@ module.exports = function(app) {
     
     // DEBUG test for multer
     app.server.get('/items/addtest', block.page.addItemTest);
-    var upload = multer({ dest: 'site/public/file/' }); 
+    //var upload = multer({ dest: 'site/public/file/' });
+    
+    var storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, 'site/public/file/')
+      },
+      filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + '.png')
+      }
+    })
+    var upload = multer({ storage: storage })
     var moduleUpload = upload.fields([{ name: 'image', maxCount: 1 }]);
+    
     app.server.post('/items/addtest', moduleUpload, block.page.addItemTestPost);
     
     return block;
