@@ -1,5 +1,6 @@
 var util = require('util');
 var tool = require('leaptool');
+var multer  = require('multer');
 
 module.exports = function(app) {
     
@@ -129,11 +130,39 @@ module.exports = function(app) {
         res.render('item/detail_react', { page:page });
     };
     
+    
+    // DEBUG test for multer
+    block.page.addItemTest = function(req, res) {
+        var page = app.getPage(req);
+        res.render('item/addtest', { page:page });
+    };
+    
+    block.page.addItemTestPost = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        
+        console.log('>>> parameter:', parameter);
+        //console.log('>>> req:', req);
+        
+        //app.cb(error, docs, info, req, res, callback);
+        var page = app.getPage(req);
+        res.render('item/addtest', { page:page });
+    };
+    
+    
     // data route
     app.server.get('/data/items', block.data.getItems);
     app.server.post('/data/items/add', block.data.addItem);
     app.server.get('/data/items/:id', block.data.getItemDetail);
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
+    
+    
+    // DEBUG test for multer
+    app.server.get('/items/addtest', block.page.addItemTest);
+    var upload = multer({ dest: './' }); 
+    var moduleUpload = upload.fields([{ name: 'image', maxCount: 1 }]);
+    app.server.post('/items/addItemTest', block.page.addItemTest);
+    
     
     // page route
     app.server.all('/items', block.page.checkLogin);
@@ -149,6 +178,13 @@ module.exports = function(app) {
     app.server.get('/items/list/react', block.page.getItemListReact);
     app.server.get('/items/:id/detail/react', block.page.getItemDetailReact);
 
+    
+    // DEBUG test for multer
+    app.server.get('/items/addtest', block.page.addItemTest);
+    var upload = multer({ dest: 'site/public/file/' }); 
+    var moduleUpload = upload.fields([{ name: 'image', maxCount: 1 }]);
+    app.server.post('/items/addtest', moduleUpload, block.page.addItemTestPost);
+    
     return block;
 };
 

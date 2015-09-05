@@ -1,0 +1,47 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/item/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/item/index.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <h4 class="col-md-12">
+            Add Item (Multer Test)
+        </h4>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-6">
+            <form action="/items/addtest" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="type">Name</label>
+                    <input type="text" class="form-control" name="name" />
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" class="form-control" name="image" />
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <input type="text" class="form-control" name="type" />
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea class="form-control" name="content"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Save</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

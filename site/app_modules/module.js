@@ -167,7 +167,7 @@ module.exports = function(app) {
 
     // module add/edit needs to support file upload
     //var upload = multer({ dest: './site/public/file/' });
-    var upload = multer({ dest: 'file/' }); 
+    var upload = multer({ dest: '/tmp/multer-file/' }); 
     var moduleUpload = upload.fields([{ name: 'image', maxCount: 1 }]);
     // req.files is an object (String -> Array) where fieldname is the key, and the value is array of files
     //
