@@ -14,9 +14,6 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
-        type: {
-            type: 'string'
-        },
         name: {
             type: 'string'
         },

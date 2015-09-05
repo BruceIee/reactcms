@@ -30,6 +30,7 @@ function getFormField(fieldName, modelField, fieldValue) {
         formField = {
             type: 'HtmlSelect',
             data: {
+                name: fieldName,
                 label: fieldName,
                 key: fieldName,
                 value: fieldValue,
@@ -41,6 +42,7 @@ function getFormField(fieldName, modelField, fieldValue) {
             formField = {
                 type: 'HtmlWebEdit',
                 data: {
+                    name: fieldName,
                     label: fieldName,
                     key: fieldName,
                     value: fieldValue
@@ -50,6 +52,7 @@ function getFormField(fieldName, modelField, fieldValue) {
             formField = {
                 type: 'HtmlTextEdit',
                 data: {
+                    name: fieldName,
                     label: fieldName,
                     key: fieldName,
                     value: fieldValue
@@ -60,6 +63,7 @@ function getFormField(fieldName, modelField, fieldValue) {
         formField = {
             type: 'HtmlFile',
             data: {
+                name: fieldName,
                 label: fieldName,
                 key: fieldName,
                 value: fieldValue
@@ -70,6 +74,7 @@ function getFormField(fieldName, modelField, fieldValue) {
         formField = {
             type: 'HtmlJsonEdit',
             data: {
+                name: fieldName,
                 label: fieldName,
                 key: fieldName,
                 value: fieldValue
@@ -79,6 +84,7 @@ function getFormField(fieldName, modelField, fieldValue) {
         formField = {
             type: 'HtmlInput',
             data: {
+                name: fieldName,
                 label: fieldName,
                 key: fieldName,
                 value: fieldValue,
