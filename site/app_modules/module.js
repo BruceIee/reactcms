@@ -1,5 +1,6 @@
 var util = require('util');
 var tool = require('leaptool');
+var multer  = require('multer');
 
 module.exports = function(app) {
     
@@ -96,7 +97,12 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var moduleName = parameter.module;
         var moduleData = app.module[moduleName].data;
-        //delete parameter.module;
+        
+        console.log('>>> parameter:', parameter);
+        //console.log('>>> req.body:', req.body);
+        console.log('>>> req.file:', req.file);
+        console.log('>>> req.files:', req.files);
+        
         parameter.create_date = new Date();
         parameter.create_by = 'admin';
         moduleData.add(req, res, parameter, function(error, docs, info) {
@@ -158,8 +164,20 @@ module.exports = function(app) {
     app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
     app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
     app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
-    app.server.post('/data/modules/:module/add', block.data.addModuleItem);
-    app.server.post('/data/modules/:module/edit', block.data.editModuleItem);
+
+    // module add/edit needs to support file upload
+    //var upload = multer({ dest: './site/public/file/' });
+    var upload = multer({ dest: 'file/' }); 
+    var moduleUpload = upload.fields([{ name: 'image', maxCount: 1 }]);
+    // req.files is an object (String -> Array) where fieldname is the key, and the value is array of files
+    //
+    // e.g.
+    //  req.files['avatar'][0] -> File
+    //  req.files['gallery'] -> Array
+    //
+    // req.body will contain the text fields, if there were any
+    app.server.post('/data/modules/:module/add', moduleUpload, block.data.addModuleItem);
+    app.server.post('/data/modules/:module/edit', moduleUpload, block.data.editModuleItem);
     
     app.server.all('/modules/*', block.page.checkLogin);
     app.server.get('/modules/:module/list', block.page.getListPage);
