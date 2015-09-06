@@ -12,6 +12,12 @@ getJsonFromText = function(inputText) {
     return jsonResult;
 };
 
+function trimModel(model, fieldsToTrim) {
+    
+    
+    return model;
+}
+
 function getFormFieldsFromModel(model, formItem) {
     var formFields = [];
     for (var fieldName in model) {

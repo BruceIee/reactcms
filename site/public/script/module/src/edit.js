@@ -47,7 +47,8 @@ function updateDisplay(moduleInfo, moduleItem) {
     console.log('moduleInfo:', moduleInfo);
     console.log('moduleItem:', moduleItem);
     console.log('updateDisplay model:', moduleModel);
-    var formFields = getFormFieldsFromModel(moduleModel, moduleItem);
+    var trimemdModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
+    var formFields = getFormFieldsFromModel(trimemdModel, moduleItem);
     app.editForm = React.render(
         React.createElement(HtmlForm, {
             action:'/modules/' + moduleInfo.module + '/new',
