@@ -73,6 +73,17 @@ function getFormField(fieldName, modelField, fieldValue) {
                 }
             };
         }
+    } else if (modelField.type === 'hidden') {
+        formField = {
+            type: 'HtmlInput',
+            data: {
+                name: fieldName,
+                type: 'hidden',
+                label: fieldName,
+                key: fieldName,
+                value: fieldValue
+            }
+        };
     } else if (modelField.type === 'file') {
         formField = {
             type: 'HtmlFile',

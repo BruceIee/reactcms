@@ -45,11 +45,20 @@ function getModuleItemData(moduleName, itemId, callback) {
 
 function updateDisplay(moduleInfo, moduleItem) {
     var moduleModel = moduleInfo.model;
-    //console.log('moduleInfo:', moduleInfo);
-    //console.log('moduleItem:', moduleItem);
+    
+    console.log('moduleInfo:', moduleInfo);
+    console.log('moduleItem:', moduleItem);
+    
     //console.log('updateDisplay model:', moduleModel);
-    var trimemdModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
-    var formFields = getFormFieldsFromModel(trimemdModel, moduleItem);
+    var trimmedModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
+    // for edit form, add hidden model field (name="_id") for item id
+    if (app.itemId) {
+        trimmedModel['_id'] = { type:'hidden' }
+    }
+    var formFields = getFormFieldsFromModel(trimmedModel, moduleItem);
+    
+    console.log('>>> formFields:', formFields);
+    
     app.editForm = React.render(
         React.createElement(HtmlForm, {
             action:'/modules/' + moduleInfo.module + '/new',
@@ -60,14 +69,31 @@ function updateDisplay(moduleInfo, moduleItem) {
 }
 
 function onBtnEdit() {
+    var formUrl = '';
     var moduleItem = app.editForm.getValue();
     if (app.itemId) {
         //save changed value for existing item
-        editItem(moduleItem, app.itemId);
+        formUrl = '/data/modules/' + app.moduleName + '/edit';
     } else {
         // create new item with form value
-        createItem(moduleItem);
+        formUrl = '/data/modules/' + app.moduleName + '/add';
     }
+    
+    console.log('>>> onBtnEdit - formUrl:', formUrl);
+    
+    /*
+    var options = { 
+        target:     '#divToUpdate', 
+        url:        'comment.php', 
+        success:    function() { 
+            alert('Thanks for your comment!'); 
+        } 
+    }; 
+     
+    // pass options to ajaxForm 
+    $('#myForm').ajaxForm(options);
+    */
+
 }
 
 function createItem(item) {
