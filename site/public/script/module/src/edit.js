@@ -4,7 +4,6 @@ var React = require('react');
 var Table = require('reactlet-table');
 
 var HtmlInput = require('reactlet-html-input');
-var HtmlFile = require('reactlet-html-file');
 var HtmlSelect = require('reactlet-html-select');
 var HtmlForm = require('reactlet-html-form');
 

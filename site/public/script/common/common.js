@@ -77,8 +77,8 @@ function getFormField(fieldName, modelField, fieldValue) {
         formField = {
             type: 'HtmlInput',
             data: {
-                name: fieldName,
                 type: 'hidden',
+                name: fieldName,
                 label: fieldName,
                 key: fieldName,
                 value: fieldValue
@@ -86,8 +86,9 @@ function getFormField(fieldName, modelField, fieldValue) {
         };
     } else if (modelField.type === 'file') {
         formField = {
-            type: 'HtmlFile',
+            type: 'HtmlInput',
             data: {
+                type: 'file',
                 name: fieldName,
                 label: fieldName,
                 key: fieldName,
