@@ -13,9 +13,17 @@ getJsonFromText = function(inputText) {
 };
 
 function trimModel(model, fieldsToTrim) {
-    
-    
-    return model;
+    var fieldsToTrimCol = {};
+    var trimmedModel = {};
+    for (var i = 0; i < fieldsToTrim.length; i++) {
+        fieldsToTrimCol[fieldsToTrim[i]] = true;
+    }
+    for (var fieldname in model) {
+        if (!fieldsToTrimCol[fieldname]) {
+            trimmedModel[fieldname] = model[fieldname];
+        }
+    }
+    return trimmedModel;
 }
 
 function getFormFieldsFromModel(model, formItem) {
