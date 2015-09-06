@@ -79,19 +79,21 @@ function onBtnEdit() {
     }
     
     console.log('>>> onBtnEdit - formUrl:', formUrl);
-    
-    /*
-    var options = { 
-        target:     '#divToUpdate', 
-        url:        'comment.php', 
-        success:    function() { 
-            alert('Thanks for your comment!'); 
+        
+    var options = {
+        url: formUrl,
+        target: '.footer', 
+        beforeSubmit: function() {
+            console.log('Submitting...');
+        },
+        success: function(evt) {
+            console.log('>>> form uploaded:', evt);
+            //alert('Thanks for your comment!'); 
         } 
-    }; 
-     
-    // pass options to ajaxForm 
-    $('#myForm').ajaxForm(options);
-    */
+    };
+    // pass options to ajaxForm
+    console.log('ajaxForm submit');
+    $('#editForm form').ajaxForm(options);
 
 }
 
