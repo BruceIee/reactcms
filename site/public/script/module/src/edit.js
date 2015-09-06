@@ -4,6 +4,7 @@ var React = require('react');
 var Table = require('reactlet-table');
 
 var HtmlInput = require('reactlet-html-input');
+var HtmlFile = require('reactlet-html-file');
 var HtmlSelect = require('reactlet-html-select');
 var HtmlForm = require('reactlet-html-form');
 
@@ -14,7 +15,7 @@ $().ready(function() {
 });
 
 function setup() {
-    console.log('in common view page - module:', app.moduleName, ' id:', app.itemId);
+    //console.log('in common view page - module:', app.moduleName, ' id:', app.itemId);
     getModuleInfo(app.moduleName, function(moduleInfo) {
         if (app.itemId) {
             getModuleItemData(app.moduleName, app.itemId, function(moduleItems) {
@@ -44,9 +45,9 @@ function getModuleItemData(moduleName, itemId, callback) {
 
 function updateDisplay(moduleInfo, moduleItem) {
     var moduleModel = moduleInfo.model;
-    console.log('moduleInfo:', moduleInfo);
-    console.log('moduleItem:', moduleItem);
-    console.log('updateDisplay model:', moduleModel);
+    //console.log('moduleInfo:', moduleInfo);
+    //console.log('moduleItem:', moduleItem);
+    //console.log('updateDisplay model:', moduleModel);
     var trimemdModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
     var formFields = getFormFieldsFromModel(trimemdModel, moduleItem);
     app.editForm = React.render(
