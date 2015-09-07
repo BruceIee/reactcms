@@ -139,7 +139,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         page.moduleName = parameter.module;
         page.itemId = parameter.id;
-        page.action = 'Edit';
+        page.action = 'Add';
         res.render('module/edit', { page:page });
     };
     
@@ -164,6 +164,19 @@ module.exports = function(app) {
         res.render('module/edit', { page:page });
     };
     
+    block.page.editItemPost = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        console.log('module addItem parameter:', parameter);
+        block.data.editModuleItem(req, res, null, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.moduleName = parameter.module;
+            page.itemId = docs && docs[0]._id + '';
+            page.action = 'Edit';
+            res.render('module/edit', { page:page });
+        });
+    };
+    
+    /*
     block.page.createItem = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
@@ -172,6 +185,7 @@ module.exports = function(app) {
         page.action = 'Create';
         res.render('module/edit', { page:page });
     };
+    */
     
     // routes
     app.server.all('/data/modules/*', block.page.checkLogin);
@@ -195,12 +209,13 @@ module.exports = function(app) {
     app.server.post('/data/modules/:module/edit', moduleUpload, block.data.editModuleItem);
     
     app.server.all('/modules/*', block.page.checkLogin);
-    app.server.get('/modules/:module/list', block.page.getListPage);
+    app.server.get('/modules/:module/new', moduleUpload, block.page.addItem);
     app.server.get('/modules/:module/add', moduleUpload, block.page.addItem);
     app.server.post('/modules/:module/add', moduleUpload, block.page.addItemPost);
-    app.server.get('/modules/:module/:id/view', block.page.viewItem);
     app.server.get('/modules/:module/:id/edit', block.page.editItem);
-    app.server.get('/modules/:module/new', block.page.createItem);
+    app.server.post('/modules/:module/:id/edit', moduleUpload, block.page.editItemPost);
+    app.server.get('/modules/:module/:id/view', block.page.viewItem);
+    app.server.get('/modules/:module/list', block.page.getListPage);
     
     return block;
 };
