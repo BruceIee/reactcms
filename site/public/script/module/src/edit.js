@@ -52,7 +52,7 @@ function updateDisplay(moduleInfo, moduleItem) {
     if (app.itemId) {
         buttonName = 'Save';
         trimmedModel['_id'] = { type:'hidden' };
-        formUrl = '/modules/' + app.moduleName + '/edit';
+        formUrl = '/modules/' + app.moduleName + '/' + app.itemId + '/edit';
     }
     var formFields = getFormFieldsFromModel(trimmedModel, moduleItem);
     formFields.push({
