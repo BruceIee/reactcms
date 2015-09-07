@@ -3,6 +3,7 @@
 var React = require('react');
 var Table = require('reactlet-table');
 
+var HtmlButton = require('reactlet-html-button');
 var HtmlInput = require('reactlet-html-input');
 var HtmlSelect = require('reactlet-html-select');
 var HtmlForm = require('reactlet-html-form');
@@ -55,6 +56,15 @@ function updateDisplay(moduleInfo, moduleItem) {
         trimmedModel['_id'] = { type:'hidden' }
     }
     var formFields = getFormFieldsFromModel(trimmedModel, moduleItem);
+    var fieldName = 'Create';
+    formFields.push({
+        type: 'HtmlButton',
+        data: {
+            name: fieldName,
+            value: fieldName,
+            key: fieldName
+        }
+    });
     
     console.log('>>> formFields:', formFields);
     

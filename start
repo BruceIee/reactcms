@@ -8,6 +8,10 @@ cd reactlet-html-input/
 jsx src/ dist/
 cd ..
 
+cd reactlet-html-button/
+jsx src/ dist/
+cd ..
+
 cd reactlet-html-select/
 jsx src/ dist/
 cd ..
