@@ -45,28 +45,24 @@ function getModuleItemData(moduleName, itemId, callback) {
 
 function updateDisplay(moduleInfo, moduleItem) {
     var moduleModel = moduleInfo.model;
-    //console.log('moduleInfo:', moduleInfo);
-    //console.log('moduleItem:', moduleItem);
     var trimmedModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
     // for edit form, add hidden model field (name="_id") for item id
+    var buttonName = 'Create';
+    var formUrl = '/modules/' + app.moduleName + '/add';
     if (app.itemId) {
-        trimmedModel['_id'] = { type:'hidden' }
+        buttonName = 'Save';
+        trimmedModel['_id'] = { type:'hidden' };
+        formUrl = '/modules/' + app.moduleName + '/edit';
     }
     var formFields = getFormFieldsFromModel(trimmedModel, moduleItem);
-    var fieldName = 'Create';
     formFields.push({
         type: 'HtmlButton',
         data: {
-            name: fieldName,
-            value: fieldName,
-            key: fieldName
+            name: buttonName,
+            value: buttonName,
+            key: buttonName
         }
     });
-    
-    var formUrl = '/modules/' + app.moduleName + '/add';
-    if (app.itemId) {
-        formUrl = '/modules/' + app.moduleName + '/edit';
-    }
     app.editForm = React.render(
         React.createElement(HtmlForm, {
             action:formUrl,
