@@ -45,10 +45,8 @@ function getModuleItemData(moduleName, itemId, callback) {
 
 function updateDisplay(moduleInfo, moduleItem) {
     var moduleModel = moduleInfo.model;
-    
-    console.log('moduleInfo:', moduleInfo);
-    console.log('moduleItem:', moduleItem);
-    
+    //console.log('moduleInfo:', moduleInfo);
+    //console.log('moduleItem:', moduleItem);
     var trimmedModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
     // for edit form, add hidden model field (name="_id") for item id
     if (app.itemId) {
@@ -65,15 +63,20 @@ function updateDisplay(moduleInfo, moduleItem) {
         }
     });
     
+    var formUrl = '/data/modules/' + app.moduleName + '/add';
+    if (app.itemId) {
+        formUrl = '/data/modules/' + app.moduleName + '/edit';
+    }
     app.editForm = React.render(
         React.createElement(HtmlForm, {
-            action:'/modules/' + moduleInfo.module + '/new',
+            action:formUrl,
             data:{ fields:formFields }
         }),
         document.getElementById('editForm')
     );
 }
 
+/*
 function onBtnEdit() {
     var formUrl = '';
     var moduleItem = app.editForm.getValue();
@@ -127,6 +130,7 @@ function editItem(item, itemId) {
         }
     });
 }
+*/
 
 function openItemEditPage(item) {
     var itemEditUrl = '/modules/' + app.moduleName + '/' + item._id + '/edit';

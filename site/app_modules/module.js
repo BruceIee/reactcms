@@ -98,11 +98,6 @@ module.exports = function(app) {
         var moduleName = parameter.module;
         var moduleData = app.module[moduleName].data;
         
-        console.log('>>> parameter:', parameter);
-        //console.log('>>> req.body:', req.body);
-        console.log('>>> req.file:', req.file);
-        console.log('>>> req.files:', req.files);
-        
         parameter.create_date = new Date();
         parameter.create_by = 'admin';
         moduleData.add(req, res, parameter, function(error, docs, info) {
