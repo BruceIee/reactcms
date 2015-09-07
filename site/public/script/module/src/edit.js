@@ -49,7 +49,6 @@ function updateDisplay(moduleInfo, moduleItem) {
     console.log('moduleInfo:', moduleInfo);
     console.log('moduleItem:', moduleItem);
     
-    //console.log('updateDisplay model:', moduleModel);
     var trimmedModel = trimModel(moduleModel, ['create_date', 'create_by', 'edit_date', 'edit_by']);
     // for edit form, add hidden model field (name="_id") for item id
     if (app.itemId) {
@@ -65,8 +64,6 @@ function updateDisplay(moduleInfo, moduleItem) {
             key: fieldName
         }
     });
-    
-    console.log('>>> formFields:', formFields);
     
     app.editForm = React.render(
         React.createElement(HtmlForm, {
