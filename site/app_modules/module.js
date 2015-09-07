@@ -134,6 +134,27 @@ module.exports = function(app) {
         res.render('module/view', { page:page });
     };
     
+    block.page.addItem = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var page = app.getPage(req);
+        page.moduleName = parameter.module;
+        page.itemId = parameter.id;
+        page.action = 'Edit';
+        res.render('module/edit', { page:page });
+    };
+    
+    block.page.addItemPost = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        console.log('module addItem parameter:', parameter);
+        block.data.addModuleItem(req, res, null, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.moduleName = parameter.module;
+            page.itemId = docs && docs[0]._id + '';
+            page.action = 'Edit';
+            res.render('module/edit', { page:page });
+        });
+    };
+    
     block.page.editItem = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var page = app.getPage(req);
@@ -176,6 +197,8 @@ module.exports = function(app) {
     
     app.server.all('/modules/*', block.page.checkLogin);
     app.server.get('/modules/:module/list', block.page.getListPage);
+    app.server.get('/modules/:module/add', moduleUpload, block.page.addItem);
+    app.server.post('/modules/:module/add', moduleUpload, block.page.addItemPost);
     app.server.get('/modules/:module/:id/view', block.page.viewItem);
     app.server.get('/modules/:module/:id/edit', block.page.editItem);
     app.server.get('/modules/:module/new', block.page.createItem);

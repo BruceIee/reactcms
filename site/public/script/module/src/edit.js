@@ -26,7 +26,7 @@ function setup() {
             updateDisplay(moduleInfo, null);
         }
     });
-    $('#btnEdit').click(onBtnEdit);
+    //$('#btnEdit').click(onBtnEdit);
 }
 
 function getModuleInfo(moduleName, callback) {
@@ -63,9 +63,9 @@ function updateDisplay(moduleInfo, moduleItem) {
         }
     });
     
-    var formUrl = '/data/modules/' + app.moduleName + '/add';
+    var formUrl = '/modules/' + app.moduleName + '/add';
     if (app.itemId) {
-        formUrl = '/data/modules/' + app.moduleName + '/edit';
+        formUrl = '/modules/' + app.moduleName + '/edit';
     }
     app.editForm = React.render(
         React.createElement(HtmlForm, {
