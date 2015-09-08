@@ -15,6 +15,12 @@ module.exports = function(app) {
         type: {
             type: 'string'
         },
+        image: {
+            type: 'file',
+            subtype: {
+                type: 'image'
+            }
+        },
         content: {
             type: 'text',
             subtype: {
