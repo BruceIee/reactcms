@@ -97,25 +97,17 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var moduleName = parameter.module;
         var moduleData = app.module[moduleName].data;
-        
         // file uploaded info is in array even when single file is uploaded
         // reduce array to object for model with field type == 'file'
-        
-        console.log('>>> addModuleItem parameter:', parameter);
-        
-        // normalized form data with module model
         var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
         parameter = tool.normalizeModelInput(parameter, moduleModel);
-        
-        console.log('>>> addModuleItem parameter:', parameter);
-        
+        // add create_date and create_by info
         parameter.create_date = new Date();
         parameter.create_by = 'admin';
         moduleData.add(req, res, parameter, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
-    
     
     block.data.editModuleItem = function(req, res) {
         var callback = arguments[3] || null; 
