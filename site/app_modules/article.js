@@ -12,6 +12,15 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
+        title: {
+            type: 'string'
+        },
+        content: {
+            type: 'text',
+            subtype: {
+                type: 'html'
+            }
+        },
         type: {
             type: 'string'
         },
@@ -20,15 +29,6 @@ module.exports = function(app) {
             subtype: {
                 type: 'image'
             }
-        },
-        content: {
-            type: 'text',
-            subtype: {
-                type: 'html'
-            }
-        },
-        title: {
-            type: 'string'
         },
         status: {
             type: 'string',

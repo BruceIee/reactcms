@@ -12,12 +12,16 @@ var ArticleDetail = React.createClass({
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
+            { name:'image', type:'array', required:false, defaultValue:null, note:'item image' },
             { name:'content', type:'string', required:false, defaultValue:'', note:'item content' }
         ];
         return attributes;
     },
     
     render: function() {
+        
+        console.log('>>> ArticleDetail image:', this.state.image);
+        
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="articledetail-content"
