@@ -100,11 +100,18 @@ module.exports = function(app) {
         // file uploaded info is in array even when single file is uploaded
         // reduce array to object for model with field type == 'file'
         var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
-        parameter = tool.normalizeModelInput(parameter, moduleModel);
+        var moduleItem = tool.normalizeModelInput(parameter, moduleName, moduleModel);
+        
+        console.log('>>> moduleItem:', moduleItem);
+        
+        //var moduleItem2 = tool.normalizeModelInput2(parameter, moduleName, moduleModel);
+        //console.log('>>> moduleItem2:', moduleItem2);
+        
         // add create_date and create_by info
-        parameter.create_date = new Date();
-        parameter.create_by = 'admin';
-        moduleData.add(req, res, parameter, function(error, docs, info) {
+        moduleItem.create_date = new Date();
+        moduleItem.create_by = 'admin';
+        console.log('addModuleItem:', moduleItem);
+        moduleData.add(req, res, moduleItem, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
