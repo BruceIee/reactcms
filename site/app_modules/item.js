@@ -29,12 +29,14 @@ module.exports = function(app) {
         image: {
             type: 'file'
         },
+        /*
         photos: {
             type: 'array',
             subtype: {
                 type: 'file'
             }
         },
+        */
         status: {
             type: 'string',
             values: ['active', 'inactive']

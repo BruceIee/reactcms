@@ -98,12 +98,22 @@ module.exports = function(app) {
         var moduleName = parameter.module;
         var moduleData = app.module[moduleName].data;
         
+        
+        // file uploaded info is in array even when single file is uploaded
+        // reduce array to object for model with field type == 'file'
+        
+        // normalized form data with module model
+        
+        //var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
+        
+        
         parameter.create_date = new Date();
         parameter.create_by = 'admin';
         moduleData.add(req, res, parameter, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
+    
     
     block.data.editModuleItem = function(req, res) {
         var callback = arguments[3] || null; 
@@ -145,7 +155,7 @@ module.exports = function(app) {
     
     block.page.addItemPost = function(req, res) {
         var parameter = tool.getReqParameter(req);
-        console.log('module addItem parameter:', parameter);
+        //console.log('module addItem parameter:', parameter);
         block.data.addModuleItem(req, res, null, function(error, docs, info) {
             var page = app.getPage(req);
             page.moduleName = parameter.module;
@@ -197,10 +207,12 @@ module.exports = function(app) {
 
     // module add/edit needs to support file upload
     var upload = multer({ dest: './site/public/file/' });
+    
     var moduleUpload = upload.fields([
         { name: 'image', maxCount: 1 },
         { name: 'photos', maxCount: 8 }
     ]);
+    
     // req.files is an object (String -> Array) where fieldname is the key, and the value is array of files
     //
     // e.g.
