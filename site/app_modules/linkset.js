@@ -13,13 +13,22 @@ module.exports = function(app) {
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
     
     block.model = {
-        type: {
-            type: 'string'
-        },
         name: {
             type: 'string'
         },
         title: {
+            type: 'string'
+        },
+        type: {
+            type: 'string'
+        },
+        image: {
+            type: 'file',
+            subtype: {
+                type: 'image'
+            }
+        },
+        links1_title: {
             type: 'string'
         },
         links1: {
@@ -28,7 +37,7 @@ module.exports = function(app) {
                 type: 'string'
             }
         },
-        links1_title: {
+        links2_title: {
             type: 'string'
         },
         links2: {
@@ -37,7 +46,7 @@ module.exports = function(app) {
                 type: 'string'
             }
         },
-        links2_title: {
+        links3_title: {
             type: 'string'
         },
         links3: {
@@ -45,9 +54,6 @@ module.exports = function(app) {
             subtype: {
                 type: 'string'
             }
-        },
-        links3_title: {
-            type: 'string'
         },
         status: {
             type: 'string',
