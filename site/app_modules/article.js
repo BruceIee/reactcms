@@ -30,6 +30,9 @@ module.exports = function(app) {
                 type: 'image'
             }
         },
+        image_link: {
+            type: 'string'
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']

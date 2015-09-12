@@ -13,6 +13,7 @@ var ArticleDetail = React.createClass({
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'image', type:'array', required:false, defaultValue:null, note:'item image' },
+            { name:'image_link', type:'array', required:false, defaultValue:null, note:'link for item image' },
             { name:'content', type:'string', required:false, defaultValue:'', note:'item content' }
         ];
         return attributes;
@@ -35,11 +36,21 @@ var ArticleDetail = React.createClass({
         
         var content = '';
         if (this.state.image) {
+            var imageContent = '';
             var imageUrl = '/file/' + this.state.image.filename;
+            if (this.state.image_link) {
+                imageContent =
+                    <a href="{ this.state.image_link }" >
+                        <img src={ imageUrl} />
+                    </a>;
+            } else {
+                imageContent =
+                    <img src={ imageUrl} />;
+            }
             content = 
                 <div className="container articledetail-content">
                     <div className="articledetail-image-content col-md-4">
-                        <img src={ imageUrl} />
+                        { imageContent }
                     </div>
                     <div className="articledetail-text-content col-md-8"
                         dangerouslySetInnerHTML={{__html: this.state.content}}
