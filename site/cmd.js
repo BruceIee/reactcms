@@ -31,12 +31,6 @@ var finish_flag = false;
 var rootPath = process.env['NODE_WEB_SITE'] || process.cwd();
 var setting = tool.getDefaultSetting(rootPath);
 
-/** process.argv
- * node cmd.js backup (option_project)
- * 0    1      2      3
- */
-
-
 // support command shortcuts
 var operation = process.argv[2] || 'start';
 var project = process.argv[3];
@@ -254,13 +248,10 @@ function importData(app, callback) {
         app.import_folder = './data';
     }
     console.log('import from folder:',app.import_folder);
-    
     if ( fs.existsSync(app.import_folder) == false ) {
-        console.log('no such folder:', app.import_folder);
-        console.log('exit');
+        console.log('exit. no such folder:', app.import_folder);
         process.exit();
     }
-
     // get list of data files to be imported
     var items = fs.readdirSync(app.import_folder);
     var filenames_array = []; 
@@ -273,7 +264,6 @@ function importData(app, callback) {
             }            
         }
     }
-    
     var app_filenames_array = []; // array contains 'app' and 'filename'
     for (var i in filenames_array) {
         var tmp_obj = {};
@@ -281,10 +271,8 @@ function importData(app, callback) {
         tmp_obj['filename'] = filenames_array[i];
         app_filenames_array.push(tmp_obj);
     }
-
     async.forEachSeries(app_filenames_array, importFile, function(){    
         setInterval(function() {
-            //console.log('in setInterval, quantity_array=\n', quantity_array);
             //check if finished
             if (finish_flag == true) {
                 // copy uploaded files
@@ -292,7 +280,6 @@ function importData(app, callback) {
                 if ( fs.existsSync(pubfile_folder) ) {
                     rm_rf.sync(pubfile_folder);  // remove folder
                 }
-                
                 mkdirp.sync(pubfile_folder); // recursively mkdir
                 var source_path = app.import_folder + '/file';
                 if (fs.existsSync(source_path)) {
@@ -313,7 +300,6 @@ function importData(app, callback) {
         }, 1000);  
     });
 }
-
 
 //import each data file (readline stream)
 function importFile(app_filename, callback) {
@@ -337,50 +323,34 @@ function importFile(app_filename, callback) {
         
     rl.on('line', function(line) {
         tmp_cnt1 += 1;
-        //console.log('** on line, line='+line);
-
         if (patternA.test(line)) {  //module name, should only found once in a file at second line.
-            //console.log('module name found');
-            //console.log('line='+line);
             moduleName = line.replace(/"name":|\s|"|,/g, '');
-            //console.log('moduleName='+moduleName);
             tmp_obj.module_name = moduleName;
             quantity_array.push(tmp_obj); //example: {module_name:'patient', rec_cnt:0, added_cnt:0}
-            //console.log('quantity_array=\n', quantity_array);
         }
-        
         if (line == '    "items": [') {
             //console.log('items block found');
             items_found_flag = true;
         }
-
-        if (tmp_cnt1 == 2000) {
-            //process.exit();
-        }
-        
-        if (items_found_flag == true && line == '        {') { //item start
-            //console.log('item start found');
+        if (items_found_flag == true && line == '        {') {
+            //item start
             txt_tmp += line;
             item_started_flag = true;
             item_ended_flag = false;
-        }
-        else if (items_found_flag == true && item_started_flag == true && item_ended_flag == false &&
-                 line.slice(0,12) == '            ') { //item
+        } else if (items_found_flag == true &&
+            item_started_flag == true &&
+            item_ended_flag == false &&
+            line.slice(0,12) == '            ') {
             txt_tmp += line + '\n';
             item_started_flag = true;
             item_ended_flag = false;            
-        }        
-        else if (items_found_flag == true && (line == '        },' || line == '        }') ) { //item end
+        } else if (items_found_flag == true && (line == '        },' || line == '        }') ) { //item end
             rec_cnt += 1;
-            //console.log('### item end found');
-            
             if (line == '        },') {
                 line = '        }' //remove last ','
             }
-            
             txt_tmp += line;
             var rec_json = JSON.parse(txt_tmp);
-
             //---add to DB---
             if (moduleName != "") {
                 var doc = convertJsonObject2(app_filename.app, rec_json, moduleName);
@@ -388,16 +358,12 @@ function importFile(app_filename, callback) {
                     if (error) {
                         console.log('Error: ', error.err);
                     }
-
                     added_cnt_plus_to_array(moduleName);
-                    //console.log('addedtoDB quantity_array=\n', quantity_array);
-                    
                     var tmp_flag = false;
                     for (var m in quantity_array) {
                         if (quantity_array[m].rec_cnt == quantity_array[m].added_cnt) {
                             tmp_flag = true;
-                        }
-                        else {
+                        } else {
                             tmp_flag = false;
                             break;                            
                         }
@@ -405,7 +371,6 @@ function importFile(app_filename, callback) {
                     finish_flag = tmp_flag;
                 });
             }
-
             txt_tmp = '';
             item_started_flag = true;
             item_ended_flag = true;            
@@ -415,43 +380,23 @@ function importFile(app_filename, callback) {
     rl.on('close', function() { //current file read done.
         //rec_cnt to quantity_array's related module obj
         rec_cnt_to_array(moduleName, rec_cnt);
-        
-        //console.log('close quantity_array=\n', quantity_array);
-        /* example of quantity_array
-        [ { module_name: 'dataset', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'method', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'patient', rec_cnt: 19997, added_cnt: 19997 },
-         { module_name: 'task', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'comment', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'file', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'query', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'sequence', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'template', rec_cnt: 0, added_cnt: 0 },
-         { module_name: 'user', rec_cnt: 0, added_cnt: 0 } ]        
-        */
-        
         var tmp_flag = false;
-        
         for (var m in quantity_array) {
             if (quantity_array[m].rec_cnt == quantity_array[m].added_cnt) {
                 tmp_flag = true;
-            }
-            else {
+            } else {
                 tmp_flag = false;
                 break;                            
             }
         }
-        
         finish_flag = tmp_flag;        
         console.log(util.format('imported: (%s) to module(%s) from %s', rec_cnt, moduleName, app_filename.filename))
         items_found_flag = false;
         item_started_flag = false;
         item_ended_flag = false;
-
         callback && callback(); //for async.forEachSeries
     });    
 }
-
 
 /**
  * Enforce data type conversion on json objects read from import file

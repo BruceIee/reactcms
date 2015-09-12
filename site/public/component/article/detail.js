@@ -21,6 +21,7 @@ var ArticleDetail = React.createClass({
     
     render: function() {
         
+        console.log('>>> ArticleDetail state:', this.state);
         console.log('>>> ArticleDetail image:', this.state.image);
         
         /*
