@@ -489,12 +489,7 @@ function castData(input, model) {
             result = castArrayData(input, model);
             break;
         case 'file':
-            input = input || [];
-            if (input.constructor.name == 'Array') {
-                result = input;
-            } else {
-                result = [input];
-            }
+            result = input || [];
             break;
         case 'object':
             result = castObjectData(input, model);
