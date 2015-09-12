@@ -194,17 +194,6 @@ module.exports = function(app) {
         });
     };
     
-    /*
-    block.page.createItem = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var page = app.getPage(req);
-        page.moduleName = parameter.module;
-        page.itemId = '';
-        page.action = 'Create';
-        res.render('module/edit', { page:page });
-    };
-    */
-    
     // routes
     app.server.all('/data/modules/*', block.page.checkLogin);
     app.server.get('/data/modules/user', block.data.getUserModules);
@@ -214,8 +203,15 @@ module.exports = function(app) {
     app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
 
     // module add/edit needs to support file upload
-    var upload = multer({ dest: './site/public/file/' });
-    
+    var storage = multer.diskStorage({
+        destination: function (req, file, cb) {
+            cb(null, './site/public/file/')
+        },
+        filename: function (req, file, cb) {
+            cb(null, file.fieldname + '-' + Date.now());
+        }
+    });
+    var upload = multer({ storage: storage })
     var moduleUpload = upload.fields([
         { name: 'image', maxCount: 1 },
         { name: 'photos', maxCount: 8 }
