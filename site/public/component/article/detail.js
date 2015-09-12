@@ -26,7 +26,7 @@ var ArticleDetail = React.createClass({
             var imageUrl = '/file/' + this.state.image.filename;
             if (this.state.image_link) {
                 imageContent =
-                    <a href="{ this.state.image_link }" >
+                    <a href={ this.state.image_link } >
                         <img src={ imageUrl} />
                     </a>;
             } else {
