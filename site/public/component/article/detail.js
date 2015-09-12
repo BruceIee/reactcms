@@ -22,11 +22,39 @@ var ArticleDetail = React.createClass({
         
         console.log('>>> ArticleDetail image:', this.state.image);
         
-        return (
-            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
-                <div className="articledetail-content"
+        /*
+        destination: "./site/public/file/"
+        encoding: "7bit"
+        fieldname: "image"
+        filename: "65cb45e065f86ebba3d58833c9a2358b"
+        mimetype: "image/jpeg"
+        originalname: "cat01.jpg"
+        path: "site/public/file/65cb45e065f86ebba3d58833c9a2358b"
+        size: 6390
+        */
+        
+        var content = '';
+        if (this.state.image) {
+            var imageUrl = '/file/' + this.state.image.filename;
+            content = 
+                <div className="container articledetail-content">
+                    <div className="articledetail-image-content col-md-4">
+                        <img src={ imageUrl} />
+                    </div>
+                    <div className="articledetail-text-content col-md-8"
+                        dangerouslySetInnerHTML={{__html: this.state.content}}
+                    />
+                </div>
+        } else {
+            content = 
+                <div className="container articledetail-content"
                     dangerouslySetInnerHTML={{__html: this.state.content}}
                 />
+        }
+        
+        return (
+            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
+                { content }
             </div>
         );
     }
