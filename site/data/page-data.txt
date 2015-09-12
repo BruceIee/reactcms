@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":6,
+    "count":7,
     "items": [
         {
             "_id": "55e39b9c32825d7305a30c90",
@@ -118,7 +118,13 @@
                 ]
             },
             "create_date": "2015-09-12T14:38:44.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55f439329928cefc3f6cd47f",
@@ -140,7 +146,13 @@
                 ]
             },
             "create_date": "2015-09-12T14:39:46.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55e10d369346d92f1ef4eeec",
@@ -523,6 +535,28 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "55f497c63734a7ab20fa3561",
+            "name": "article-cats",
+            "composition": "theone",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "type": "mediatext"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-12T21:23:18.000Z",
+            "_class": "page"
         }
     ]
 }
