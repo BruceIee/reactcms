@@ -1,7 +1,7 @@
 {
     "name":"article",
     "module":    {
-        "type": {
+        "title": {
             "type": "string"
         },
         "content": {
@@ -10,8 +10,14 @@
                 "type": "html"
             }
         },
-        "title": {
+        "type": {
             "type": "string"
+        },
+        "image": {
+            "type": "file",
+            "subtype": {
+                "type": "image"
+            }
         },
         "status": {
             "type": "string",
@@ -33,7 +39,77 @@
             "type": "string"
         }
     },
-    "count":0,
+    "count":4,
     "items": [
+        {
+            "_id": "55f42e45bc726b40367c7e1f",
+            "title": "cat01",
+            "content": "<h4>cat 01</h4>\r\n<p>Test article for cat01</p>\r\n<p>The 2nd paragraph. Ipsum loptom</p>",
+            "type": "mediatext",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat01.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "65cb45e065f86ebba3d58833c9a2358b",
+                "path": "site/public/file/65cb45e065f86ebba3d58833c9a2358b",
+                "size": 6390
+            },
+            "status": "active",
+            "create_date": "2015-09-12T13:53:09.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "55f43094ff7bbce2378fcce0",
+            "title": "cat02",
+            "content": "<h4>cat 02</h4>\r\n<p>Test article for cat02</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            "type": "mediatext",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat02.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "989ca11baaa16ae0e103338cf33b0880",
+                "path": "site/public/file/989ca11baaa16ae0e103338cf33b0880",
+                "size": 4581
+            },
+            "status": "active",
+            "create_date": "2015-09-12T14:03:00.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "55f430c7ff7bbce2378fcce1",
+            "title": "text01",
+            "content": "<h4>text 01</h4>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+            "type": "plaintext",
+            "image": null,
+            "status": "active",
+            "create_date": "2015-09-12T14:03:51.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "55f430eaff7bbce2378fcce2",
+            "title": "text02",
+            "content": "<h4>text 02</h4>\r\n<p>Lorem ipsum dolor Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+            "type": "plaintext",
+            "image": null,
+            "status": "active",
+            "create_date": "2015-09-12T14:04:26.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-12T14:04:37.000Z",
+            "edit_by": "admin",
+            "_class": "article"
+        }
     ]
 }

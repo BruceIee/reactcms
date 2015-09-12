@@ -1,9 +1,6 @@
 {
     "name":"item",
     "module":    {
-        "type": {
-            "type": "string"
-        },
         "name": {
             "type": "string"
         },
@@ -15,6 +12,9 @@
             "subtype": {
                 "type": "json"
             }
+        },
+        "image": {
+            "type": "file"
         },
         "status": {
             "type": "string",
