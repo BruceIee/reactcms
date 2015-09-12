@@ -63,7 +63,6 @@ getMatchedFilenames(appModulePath, filePattern, function(names) {
     start(setting);
 });
 
-
 function start(setting) {
     var app = {};
     app.server = express();
@@ -71,12 +70,13 @@ function start(setting) {
     app.setting.database = {};
     app.setting.database = require('./setting').setting.database;
     app.module = {};
-
+    app.engine = require('webEngine')(app);
+    
     for (var i in app.setting.modules_to_load) {
         var name = app.setting.modules_to_load[i];
         var modulePath = path.join(app.setting.server_path, 'app_modules', name);
         app.module[name] = require(modulePath)(app);
-    }    
+    }
 
     var Database = require(app.setting.database.type + '-database'); // 'mongo-database.js'
     app.db = new Database(app, function() {
@@ -100,7 +100,6 @@ function start(setting) {
     });
 }
 
-
 /**
  * Init db
  */
@@ -110,7 +109,6 @@ function initDb(app, callback) {
         callback && callback();
     });
 }
-
 
 /**
  * Backup data
@@ -170,7 +168,6 @@ function backupData(app, callback) {
         });  
     });
 }
-
 
 function backupModule(app_moduleName, callback) { //stream
     var app = app_moduleName.app;
@@ -234,7 +231,6 @@ function backupModule(app_moduleName, callback) { //stream
         });
     });
 }
-
 
 /**
  * Import data
@@ -408,7 +404,7 @@ function convertJsonObject(app, items, moduleName) {
     for (var i in items) {
         var doc = items[i];
         for (var property in model) {
-            var value = castData(doc[property], model[property]);
+            var value = app.engine.castData(doc[property], model[property]);
             doc[property] = value;
         }
         docs.push(doc);
@@ -416,21 +412,18 @@ function convertJsonObject(app, items, moduleName) {
     return docs;
 }
 
-
 function convertJsonObject2(app, item, moduleName) {
     var module = app.module[moduleName];
     var model =  module.model;
     var doc = item;
     for (var property in model) {
-        var value = castData(doc[property], model[property]);
+        var value = app.engine.castData(doc[property], model[property]);
         doc[property] = value;
     }
     return doc;
 }
 
-
 function rec_cnt_to_array(module_name, rec_cnt) {
-    //quantity_array
     for (var i in quantity_array) {
         if (quantity_array[i].module_name == module_name) {
             quantity_array[i].rec_cnt = rec_cnt;
@@ -439,9 +432,7 @@ function rec_cnt_to_array(module_name, rec_cnt) {
     }
 }
 
-
 function added_cnt_plus_to_array(module_name) {
-    //quantity_array
     for (var i in quantity_array) {
         if (quantity_array[i].module_name == module_name) {
             quantity_array[i].added_cnt += 1;
@@ -449,7 +440,6 @@ function added_cnt_plus_to_array(module_name) {
         }
     }
 }
-
 
 // pattern exmaple: /(\w+).js/
 function getMatchedFilenames (path, pattern, callback) {
@@ -464,159 +454,3 @@ function getMatchedFilenames (path, pattern, callback) {
         callback(names);
     })
 };
-
-
-function castData(input, model) {
-    var result = '';
-    //var subtype = model.subtype && model.subtype.type || '';
-    switch(model.type) {
-        case 'string':
-            result = castStringData(input, model);
-            break;
-        case 'number':
-            result = parseFloat(input) || 0;
-            break;
-        case 'boolean':
-            result = castBooleanData(input, model);
-            break;
-        case 'text':
-            result = input || '';
-            break;
-        case 'date':
-            result = castDateData(input, model);
-            break;
-        case 'array':
-            result = castArrayData(input, model);
-            break;
-        case 'file':
-            result = input || [];
-            break;
-        case 'object':
-            result = castObjectData(input, model);
-            break;
-        case 'sequence':
-            result = input;
-        default:
-            result = input;
-    }
-    return result;
-};
-
-
-function castStringData(input, model) {
-    input = input || '';
-    var result = '';
-    var subtype = model.subtype && model.subtype.type || '';
-    // if input has value, keep its value
-    if (input) {
-        result = input;
-    } else {
-        switch(subtype) {
-            case 'random':
-                result = Math.floor(Math.random() * 100000000);
-                break;
-            case 'uuid':
-                result = require('node-uuid').v4().replace(/-/g, '');
-                break;
-            default:
-                result = input;
-        }
-    }
-    return result;
-}
-
-function castBooleanData(input, model) {
-    var result = false;
-    if (/true|yes/i.exec(input)) {
-        result = true;
-    }
-    return result;
-}
-
-function castArrayData(input, model) {
-    input = input || [];
-    var result = '';
-    var subtype = model.subtype && model.subtype.type || 'string';
-    
-    if (input.constructor.name == 'Array') {
-        result = input;
-    } else {
-        switch(subtype) {
-            case 'file':
-                result = [input];
-                break;
-            case 'string':
-                if (input.constructor.name == 'String') {
-                    result = tool.toArray(input);
-                } else {
-                    result = [input];
-                }
-                break;
-            case 'number':
-                if (input.constructor.name == 'String') {
-                    var output = tool.toArray(input);
-                    var result = [];
-                    for (var i in output) {
-                        result.push(parseFloat(output[i]));
-                    }
-                } else {
-                    result = [input];
-                }
-                break;
-            case 'object':
-                result = castObjectData(input, model.subtype);
-                break;
-            default:
-                result = input;
-        }
-    }
-    return result;
-}
-
-function castObjectData(input, model) {
-    var result = null;
-    var subtype = model.subtype && model.subtype.type || 'mixed';
-    switch(subtype) {
-        case 'json':
-            result = null;
-            try {
-                if (input && typeof input == 'object') {
-                    result = input;
-                } else if (input) {
-                    result = JSON.parse(input);
-                }
-            } catch (e) {
-                console.log('ERROR in castObjectData: ' + e);
-                result = null;
-            }
-            break;
-        case 'mixed':
-            result = input;
-            break;
-        default:
-            result = input;
-    }
-    return result;
-}
-
-function castDateData(input, model) {
-    var result = null;
-    var subtype = model.subtype && model.subtype.type || '';
-    switch(subtype) {
-        case 'time':
-            if (new Date(input) == 'Invalid Date') {
-                // example: 9:50 or 7:30 PM
-                input = '1/1/1970 ' + input; // add fixed date
-                result = new Date(Date.parse(input));
-            } else {
-                result = new Date(input);
-            }
-            break;
-        default:
-            result = input && new Date(Date.parse(input));
-    }
-    return result;
-}
-    
-    
-    

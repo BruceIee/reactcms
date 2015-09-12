@@ -20,21 +20,6 @@ var ArticleDetail = React.createClass({
     },
     
     render: function() {
-        
-        console.log('>>> ArticleDetail state:', this.state);
-        console.log('>>> ArticleDetail image:', this.state.image);
-        
-        /*
-        destination: "./site/public/file/"
-        encoding: "7bit"
-        fieldname: "image"
-        filename: "65cb45e065f86ebba3d58833c9a2358b"
-        mimetype: "image/jpeg"
-        originalname: "cat01.jpg"
-        path: "site/public/file/65cb45e065f86ebba3d58833c9a2358b"
-        size: 6390
-        */
-        
         var content = '';
         if (this.state.image) {
             var imageContent = '';
