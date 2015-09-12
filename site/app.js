@@ -176,3 +176,4 @@ module.exports = function(callback) {
         callback && callback(app);
     });
 };
+
