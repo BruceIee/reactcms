@@ -100,21 +100,12 @@ module.exports = function(app) {
         // file uploaded info is in array even when single file is uploaded
         // reduce array to object for model with field type == 'file'
         var moduleModel = app.module[moduleName] && app.module[moduleName].model || null;
-        
-        //var moduleItem = tool.normalizeModelInput(parameter, moduleName, moduleModel);
-        //console.log('>>> moduleItem:', moduleItem);
-        
         var moduleItem = tool.normalizeModelInput2(parameter, moduleName, moduleModel);
-        console.log('>>> moduleItem:', moduleItem);
-        
-        //modlueItem.image = { test:'abc' };
-        
         // add create_date and create_by info
         moduleItem.create_date = new Date();
         moduleItem.create_by = 'admin';
         console.log('addModuleItem:', moduleItem);
         moduleData.add(req, res, moduleItem, function(error, docs, info) {
-            
             console.log('addModuleItem result:', error, docs, info);
             app.cb(error, docs, info, req, res, callback);
         });
@@ -162,9 +153,6 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         console.log('module addItem parameter:', parameter);
         block.data.addModuleItem(req, res, null, function(error, docs, info) {
-            
-            console.log('>>> block.data.addModuleItem:', error, docs, info);
-            
             var page = app.getPage(req);
             page.moduleName = parameter.module;
             page.itemId = docs && docs[0]._id + '';
@@ -208,7 +196,8 @@ module.exports = function(app) {
             cb(null, './site/public/file/')
         },
         filename: function (req, file, cb) {
-            cb(null, file.fieldname + '-' + Date.now());
+            var parameter = tool.getReqParameter(req);
+            cb(null, [parameter.module, file.fieldname, Date.now(), file.originalname].join('-'));
         }
     });
     var upload = multer({ storage: storage })
