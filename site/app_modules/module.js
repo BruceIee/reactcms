@@ -182,15 +182,7 @@ module.exports = function(app) {
         });
     };
     
-    // routes
-    app.server.all('/data/modules/*', block.page.checkLogin);
-    app.server.get('/data/modules/user', block.data.getUserModules);
-    app.server.get('/data/modules/list', block.data.getModuleList);
-    app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
-    app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
-    app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
-
-    // module add/edit needs to support file upload
+    // route support
     var storage = multer.diskStorage({
         destination: function (req, file, cb) {
             cb(null, './site/public/file/')
@@ -203,16 +195,16 @@ module.exports = function(app) {
     var upload = multer({ storage: storage })
     var moduleUpload = upload.fields([
         { name: 'image', maxCount: 1 },
-        { name: 'photos', maxCount: 8 }
+        { name: 'images', maxCount: 50 }
     ]);
     
-    // req.files is an object (String -> Array) where fieldname is the key, and the value is array of files
-    //
-    // e.g.
-    //  req.files['avatar'][0] -> File
-    //  req.files['gallery'] -> Array
-    //
-    // req.body will contain the text fields, if there were any
+    // routes
+    app.server.all('/data/modules/*', block.page.checkLogin);
+    app.server.get('/data/modules/user', block.data.getUserModules);
+    app.server.get('/data/modules/list', block.data.getModuleList);
+    app.server.get('/data/modules/:module/info', block.data.getModuleInfo);
+    app.server.get('/data/modules/:module/all', block.data.getModuleDataAll);
+    app.server.get('/data/modules/:module/:id', block.data.getModuleDataById);
     app.server.post('/data/modules/:module/add', moduleUpload, block.data.addModuleItem);
     app.server.post('/data/modules/:module/edit', moduleUpload, block.data.editModuleItem);
     
