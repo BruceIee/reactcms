@@ -155,6 +155,34 @@
             "edit_by": ""
         },
         {
+            "_id": "55f497c63734a7ab20fa3561",
+            "name": "article-cats",
+            "composition": "theone",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "type": "mediatext"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-12T21:23:18.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
             "_id": "55e10d369346d92f1ef4eeec",
             "name": "home",
             "composition": "vertflow",
@@ -535,28 +563,6 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
-        },
-        {
-            "_id": "55f497c63734a7ab20fa3561",
-            "name": "article-cats",
-            "composition": "theone",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "type": "mediatext"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "create_date": "2015-09-12T21:23:18.000Z",
-            "_class": "page"
         }
     ]
 }

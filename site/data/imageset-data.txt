@@ -4,14 +4,17 @@
         "name": {
             "type": "string"
         },
-        "path": {
+        "images": {
+            "type": "array",
+            "subtype": {
+                "type": "file"
+            }
+        },
+        "descriptions": {
             "type": "array",
             "subtype": {
                 "type": "string"
             }
-        },
-        "content": {
-            "type": "array"
         },
         "status": {
             "type": "string",
