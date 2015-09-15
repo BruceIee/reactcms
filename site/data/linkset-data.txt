@@ -155,13 +155,13 @@
         {
             "_id": "55f8060c42cbf60bfae7ba5a",
             "name": "meow_header",
-            "title": "Meow Site",
+            "title": "Meow Central",
             "type": "meow",
             "image": null,
             "links1_title": "main",
             "links1": [
                 {
-                    "link": "/",
+                    "link": "/pages/meow_home",
                     "text": "HOME"
                 }
             ],
@@ -189,8 +189,8 @@
             "status": "active",
             "create_date": "2015-09-15T11:50:36.000Z",
             "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
+            "edit_date": "2015-09-15T12:00:48.000Z",
+            "edit_by": "admin",
             "_class": "linkset"
         },
         {
