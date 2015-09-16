@@ -287,20 +287,40 @@
                 "r3c2": "",
                 "r4c1": [
                     {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-news-title",
+                                "content": "<h4>Meow Central Production</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
                         "widgetName": "BlackbootFooter",
                         "widgetInfo": {
                             "module": "linkset",
-                            "condition": "",
-                            "filter": {
+                            "condition": {
                                 "name": "meow_footer"
                             },
+                            "filter": "",
                             "data": ""
                         }
                     }
                 ]
             },
             "create_date": "2015-09-16T12:06:05.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
         },
         {
             "_id": "55e10d369346d92f1ef4eeec",

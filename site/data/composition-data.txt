@@ -54,7 +54,7 @@
                 },
                 {
                     "name": "r2c1",
-                    "description": "top",
+                    "description": "row",
                     "width": 12
                 },
                 {
@@ -69,6 +69,11 @@
                 },
                 {
                     "name": "r4c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r5c1",
                     "description": "footer",
                     "width": 12
                 }
