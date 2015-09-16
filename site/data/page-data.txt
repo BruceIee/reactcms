@@ -243,7 +243,13 @@
                 ]
             },
             "create_date": "2015-09-15T11:58:15.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55e10d369346d92f1ef4eeec",
@@ -284,7 +290,7 @@
                             "filter": "",
                             "data": {
                                 "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:75px;\">A Reactive Content Management System</h3>"
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
                             }
                         }
                     }
@@ -312,7 +318,7 @@
                             "filter": "",
                             "data": {
                                 "title": "reactcms-title",
-                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
                             }
                         }
                     }
@@ -378,7 +384,7 @@
             "group": "",
             "status": "",
             "create_by": "",
-            "edit_date": null,
+            "edit_date": "",
             "edit_by": ""
         },
         {
