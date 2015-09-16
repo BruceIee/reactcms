@@ -168,19 +168,19 @@
             "links2_title": "side",
             "links2": [
                 {
-                    "link": "/pages/meow-news",
+                    "link": "/pages/meow_news",
                     "text": "NEWS"
                 },
                 {
-                    "link": "/pages/meow-events",
+                    "link": "/pages/meow_events",
                     "text": "EVENTS"
                 },
                 {
-                    "link": "/pages/meow-about",
+                    "link": "/pages/meow_about",
                     "text": "ABOUT"
                 },
                 {
-                    "link": "/pages/meow-help",
+                    "link": "/pages/meow_help",
                     "text": "HELP"
                 }
             ],
@@ -202,19 +202,19 @@
             "links1_title": "Contact",
             "links1": [
                 {
-                    "link": "/pages/meow-news",
+                    "link": "/pages/meow_news",
                     "text": "News"
                 },
                 {
-                    "link": "/pages/meow-events",
+                    "link": "/pages/meow_events",
                     "text": "Events"
                 },
                 {
-                    "link": "/pages/meow-about",
+                    "link": "/pages/meow_about",
                     "text": "About"
                 },
                 {
-                    "link": "/pages/meow-help",
+                    "link": "/pages/meow_help",
                     "text": "Help"
                 }
             ],
@@ -240,11 +240,11 @@
             "links3_title": "Extra",
             "links3": [
                 {
-                    "link": "/pages/meow-terms",
+                    "link": "/pages/meow_terms",
                     "text": "Terms"
                 },
                 {
-                    "link": "/pages/meow-blog",
+                    "link": "/pages/meow_blog",
                     "text": "Blog"
                 }
             ],

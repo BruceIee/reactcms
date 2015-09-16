@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":8,
+    "count":9,
     "items": [
         {
             "_id": "55e39b9c32825d7305a30c90",
@@ -250,6 +250,57 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "55f95b2dfc14bafd17183f7f",
+            "name": "meow_news",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-news-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Meow Central News</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r3c2": "",
+                "r4c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": "",
+                            "filter": {
+                                "name": "meow_footer"
+                            },
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-16T12:06:05.000Z",
+            "_class": "page"
         },
         {
             "_id": "55e10d369346d92f1ef4eeec",
