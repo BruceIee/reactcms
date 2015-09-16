@@ -54,16 +54,21 @@
                 },
                 {
                     "name": "r2c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
+                    "name": "r3c1",
                     "description": "side",
                     "width": 4
                 },
                 {
-                    "name": "r2c2",
+                    "name": "r3c2",
                     "description": "main",
                     "width": 8
                 },
                 {
-                    "name": "r3c1",
+                    "name": "r4c1",
                     "description": "footer",
                     "width": 12
                 }
