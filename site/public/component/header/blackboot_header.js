@@ -41,7 +41,7 @@ var BlackbootHeader = React.createClass({
         var links2Elements = this.getItemLinks( this.state.links2);
         var links3Elements = this.getItemLinks( this.state.links3 );
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-top blackbootheader-container" role="navigation">
+            <nav className="navbar navbar-inverse blackbootheader-container" role="navigation">
                 <div className="header-container container-fluid">
                     <div className="navbar-header">
                       <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
