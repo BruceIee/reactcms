@@ -40,15 +40,17 @@ var BlackbootFooter = React.createClass({
         var links2Elements = this.getItemLinks( this.state.links2);
         var links3Elements = this.getItemLinks( this.state.links3 );
         return (
-            <div className="navbar navbar-inverse footer_container">
-                <div className="footer-links-primary col-md-3 footer-links">
-                    <ul className="list-unstyled">{ links1Elements }</ul>
-                </div>
-                <div className="footer-links-secondary col-md-3 footer-links">
-                    <ul className="list-unstyled">{ links2Elements }</ul>
-                </div>
-                <div className="footer-links-tertiary col-md-3 footer-links">
-                    <ul className="list-unstyled">{ links3Elements }</ul>
+            <div className="navbar navbar-inverse">
+                <div className="footer_container container">
+                    <div className="footer-links-primary col-md-3 footer-links">
+                        <ul className="list-unstyled">{ links1Elements }</ul>
+                    </div>
+                    <div className="footer-links-secondary col-md-3 footer-links">
+                        <ul className="list-unstyled">{ links2Elements }</ul>
+                    </div>
+                    <div className="footer-links-tertiary col-md-3 footer-links">
+                        <ul className="list-unstyled">{ links3Elements }</ul>
+                    </div>
                 </div>
             </div>
         );
