@@ -34,7 +34,7 @@ var ArticleDetail = React.createClass({
                     <img src={ imageUrl} />;
             }
             content = 
-                <div className="container articledetail-content">
+                <div className="articledetail-content">
                     <div className="articledetail-image-content col-md-4">
                         { imageContent }
                     </div>
@@ -44,7 +44,7 @@ var ArticleDetail = React.createClass({
                 </div>
         } else {
             content = 
-                <div className="container articledetail-content"
+                <div className="articledetail-content"
                     dangerouslySetInnerHTML={{__html: this.state.content}}
                 />
         }
