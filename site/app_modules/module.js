@@ -195,6 +195,7 @@ module.exports = function(app) {
     var upload = multer({ storage: storage })
     var moduleUpload = upload.fields([
         { name: 'image', maxCount: 1 },
+        { name: 'video', maxCount: 1 },
         { name: 'images', maxCount: 50 }
     ]);
     

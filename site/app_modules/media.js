@@ -22,9 +22,12 @@ module.exports = function(app) {
         },
         type: {
             type: 'string',
-            values: ['image', 'video', 'sound']
+            values: ['image', 'video']
         },
         image: {
+            type: 'file'
+        },
+        video: {
             type: 'file'
         },
         status: {
@@ -46,6 +49,7 @@ module.exports = function(app) {
     };
     
     // block.data
+    /*
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
         var item = tool.getReqParameter(req);
@@ -72,8 +76,10 @@ module.exports = function(app) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
+    */
     
     // block.page
+    /*
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('item/index', { page:page });
@@ -112,14 +118,18 @@ module.exports = function(app) {
             res.render('item/detail', { page:page });
         });
     };
+    */
     
     // data route
+    /*
     app.server.get('/data/items', block.data.getItems);
     app.server.post('/data/items/add', block.data.addItem);
     app.server.get('/data/items/:id', block.data.getItemDetail);
     app.server.get('/data/items/:id/detail', block.data.getItemDetail);
+    */
     
     // page route
+    /*
     app.server.all('/items', block.page.checkLogin);
     app.server.all('/items/*', block.page.checkLogin);
     app.server.get('/items', block.page.getIndex);
@@ -128,7 +138,8 @@ module.exports = function(app) {
     app.server.post('/items/add', block.page.addItemPost);
     app.server.get('/items/list', block.page.getItemList);
     app.server.get('/items/:id/detail', block.page.getItemDetail);
-
+    */
+    
     return block;
 };
 
