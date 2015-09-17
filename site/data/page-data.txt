@@ -209,7 +209,7 @@
                             "filter": "",
                             "data": {
                                 "title": "meow-site-title",
-                                "content": "<h3 style=\"margin-top:75px;\">Welcome to Meow Central</h3>"
+                                "content": "<h3 style=\"margin-top:25px;\">Welcome to Meow Central</h3>"
                             }
                         }
                     }
@@ -248,7 +248,7 @@
             "group": "",
             "status": "",
             "create_by": "",
-            "edit_date": null,
+            "edit_date": "",
             "edit_by": ""
         },
         {
