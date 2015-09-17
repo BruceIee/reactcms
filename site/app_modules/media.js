@@ -22,9 +22,12 @@ module.exports = function(app) {
         },
         type: {
             type: 'string',
-            values: ['image', 'video', 'sound']
+            values: ['image', 'video']
         },
         image: {
+            type: 'file'
+        },
+        video: {
             type: 'file'
         },
         status: {
