@@ -21,6 +21,7 @@ var MediaDetail = React.createClass({
     
     render: function() {
         var mediaContent = '';
+        var content = '';
         if (this.state.image) {
             var mediaUrl = '/file/' + this.state.image.filename;
             mediaContent =
@@ -37,17 +38,23 @@ var MediaDetail = React.createClass({
                 </div>;
         }
         if (this.state.link) {
-            mediaContent =
-                <a href={ this.state.link }>
-                    { mediaContent }
-                </a>
-        }
-        return
-            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
+            content =
+                <div className="container mediadetail-content">
+                    <a href={ this.state.link }>
+                        { mediaContent }
+                    </a>
+                </div>;
+        } else {
+            content =
                 <div className="container mediadetail-content">
                     { mediaContent }
-                </div>
-            </div>;
+                </div>;
+        }
+        return (
+            <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
+                { content }
+            </div>
+        );
     }
 });
 
