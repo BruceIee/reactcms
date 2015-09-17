@@ -1,5 +1,5 @@
-// article detail component
-var ArticleDetail = React.createClass({
+// media detail component
+var MediaDetail = React.createClass({
     name: 'mediadetail',
     mixins: [getCommonMixin],
     
@@ -31,7 +31,7 @@ var ArticleDetail = React.createClass({
                 </div>;
         } else if (this.state.video) {
             var mediaUrl = '/file/' + this.state.image.filename;
-            var mediaContent = <video><source src={ mediaUrl} type="video/mp4"></video>;
+            var mediaContent = <video><source src={ mediaUrl} type="video/mp4" /></video>;
             content = 
                 <div className="container mediadetail-content">
                     <div className="mediadetail-video-content">
