@@ -61,6 +61,12 @@ function setup() {
             savePage();
         }
     });
+    $('.btn-save-page-as').click(function() {
+        
+        var pagename = prompt("Enter page name", "");
+        
+        console.log('save page as:', pagename);
+    });
     $('.btn-view-page').click(function() {
         var pageViewUrl = '/pages/' + app.pageName;
         window.open(pageViewUrl, '_blank');
