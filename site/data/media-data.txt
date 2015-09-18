@@ -1,0 +1,121 @@
+{
+    "name":"media",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "link": {
+            "type": "text"
+        },
+        "type": {
+            "type": "string",
+            "values": [
+                "image",
+                "video"
+            ]
+        },
+        "image": {
+            "type": "file"
+        },
+        "video": {
+            "type": "file"
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":3,
+    "items": [
+        {
+            "_id": "55fab3831f6ec3c422121e18",
+            "name": "cat01",
+            "description": "cat01 image",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat01.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442493315065-cat01.jpg",
+                "path": "site/public/file/media-image-1442493315065-cat01.jpg",
+                "size": 6390
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-17T12:35:15.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "55fab3b91f6ec3c422121e19",
+            "name": "cat01link",
+            "description": "cat01 image with link",
+            "link": "http://www.cat.com/",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat01.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442493369118-cat01.jpg",
+                "path": "site/public/file/media-image-1442493369118-cat01.jpg",
+                "size": 6390
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-17T12:36:09.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "55fb9236fcf06cce0a5fd340",
+            "name": "cat07",
+            "description": "cat07",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat07.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442550326791-cat07.jpg",
+                "path": "site/public/file/media-image-1442550326791-cat07.jpg",
+                "size": 6912
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-18T04:25:26.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        }
+    ]
+}

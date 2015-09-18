@@ -8,7 +8,8 @@ var BlackbootHeader = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'title', type:'string', required:false, defaultValue:'', note:'title' },
+            { name:'title', type:'string', required:false, defaultValue:'Site', note:'title' },
+            { name:'title_link', type:'string', required:false, defaultValue:'/', note:'title link' },
             { name:'links1', type:'array', required:false, defaultValue:[], note:'1st links' },
             { name:'links1_title', type:'string', required:false, defaultValue:'', note:'title for 1st links' },
             { name:'links2', type:'array', required:false, defaultValue:[], note:'2nd links' },
@@ -37,6 +38,7 @@ var BlackbootHeader = React.createClass({
     
     render: function() {
         var title = this.state.title;
+        var titleLink = this.state.title_link || '/';
         var links1Elements = this.getItemLinks( this.state.links1);
         var links2Elements = this.getItemLinks( this.state.links2);
         var links3Elements = this.getItemLinks( this.state.links3 );
@@ -50,7 +52,7 @@ var BlackbootHeader = React.createClass({
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                       </button>
-                      <a className="navbar-brand" href="/">{ title }</a>
+                      <a className="navbar-brand" href={ this.state.title_link }>{ title }</a>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
                         <ul className="nav navbar-nav navbar-left">

@@ -20,6 +20,9 @@ module.exports = function(app) {
         description: {
             type: 'text'
         },
+        link: {
+            type: 'text'
+        },
         type: {
             type: 'string',
             values: ['image', 'video']

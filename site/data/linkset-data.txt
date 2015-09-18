@@ -7,6 +7,9 @@
         "title": {
             "type": "string"
         },
+        "title_link": {
+            "type": "string"
+        },
         "type": {
             "type": "string"
         },
@@ -92,7 +95,8 @@
             "edit_date": "",
             "edit_by": "",
             "_class": "linkset",
-            "image": null
+            "image": null,
+            "title_link": ""
         },
         {
             "_id": "55e4032732825d7305a30c91",
@@ -150,12 +154,14 @@
             "edit_date": "",
             "edit_by": "",
             "_class": "linkset",
-            "image": null
+            "image": null,
+            "title_link": ""
         },
         {
             "_id": "55f8060c42cbf60bfae7ba5a",
             "name": "meow_header",
             "title": "Meow Central",
+            "title_link": "/pages/meow_home",
             "type": "meow",
             "image": null,
             "links1_title": "main",
@@ -253,7 +259,8 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "linkset"
+            "_class": "linkset",
+            "title_link": ""
         }
     ]
 }

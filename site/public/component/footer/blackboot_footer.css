@@ -1,7 +1,12 @@
 .footer_container {
     margin-top: 25px;
+}
+
+.footer_container .container {
+    margin-top: 25px;
     margin-bottom: 25px;
 }
+
 .footer_container .footer-links {
     font-size: 14px;
 }

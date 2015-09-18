@@ -39,65 +39,8 @@
             "type": "string"
         }
     },
-    "count":9,
+    "count":14,
     "items": [
-        {
-            "_id": "55e39b9c32825d7305a30c90",
-            "name": "home2",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "reactcms_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:75px;\">A Reactive Content Management System</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "reactcms_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "create_date": "2015-08-31T00:11:08.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
         {
             "_id": "55f438f49928cefc3f6cd47e",
             "name": "article-cat01",
@@ -209,7 +152,7 @@
                             "filter": "",
                             "data": {
                                 "title": "meow-site-title",
-                                "content": "<h3 style=\"margin-top:75px;\">Welcome to Meow Central</h3>"
+                                "content": "<h3 style=\"margin-top:25px;\">Welcome to Meow Central</h3>"
                             }
                         }
                     }
@@ -243,6 +186,341 @@
                 ]
             },
             "create_date": "2015-09-15T11:58:15.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "55fab4781f6ec3c422121e1a",
+            "name": "meow_about",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"min-height:420px;margin-top:25px;\">What Meow Central is About</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "MediaDetail",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "name": "cat07"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-17T12:39:20.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "55fab69e1f6ec3c422121e1b",
+            "name": "meow_help",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"min-height:420px;margin-top:25px;\">Help me</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "MediaDetail",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "name": "cat01link"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-17T12:48:30.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "55fab71f1f6ec3c422121e1c",
+            "name": "meow_events",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Meow Central Events</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h4 style=\"min-height:520px;margin-top:25px;\">More events are coming ...</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-17T12:50:39.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "55fb6fc1fcf06cce0a5fd33d",
+            "name": "meow_blog",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Meow Blog</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-blog-title",
+                                "content": "<p>Blog is under construction</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-18T01:58:25.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "55e39b9c32825d7305a30c90",
+            "name": "home2",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "reactcms_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:75px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "reactcms_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-08-31T00:11:08.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -715,7 +993,7 @@
                             "filter": "",
                             "data": {
                                 "title": "meow-news-title",
-                                "content": "<h4>Meow Central Production</h4>"
+                                "content": "<h4 style=\"min-height:240px;\">Meow Central Production</h4>"
                             }
                         }
                     }
@@ -741,6 +1019,76 @@
             "status": "",
             "create_by": "",
             "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "55fb6ef5fcf06cce0a5fd33c",
+            "name": "meow_terms",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Website Terms</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-terms",
+                                "content": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern [business name]'s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p><p>The term '[business name]' or 'us' or 'we' refers to the owner of the website whose registered office is [address]. Our company registration number is [company registration number and place of registration]. The term 'you' refers to the user or viewer of our website.</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-18T01:55:01.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
             "edit_by": ""
         }
     ]

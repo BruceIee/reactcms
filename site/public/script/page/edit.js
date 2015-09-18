@@ -61,6 +61,12 @@ function setup() {
             savePage();
         }
     });
+    $('.btn-save-page-as').click(function() {
+        var pageName = prompt("Enter page name", "");
+        if (pageName) {
+            createPage(pageName);
+        }
+    });
     $('.btn-view-page').click(function() {
         var pageViewUrl = '/pages/' + app.pageName;
         window.open(pageViewUrl, '_blank');
@@ -144,9 +150,11 @@ function showSectionContent(sectionName) {
     $('.section-content[data-name=' + sectionName + ']').removeClass('hidden');
 }
 
-function createPage() {
+function createPage(pageName) {
     // check page name is unique
-    var pageName = $('#pageName').val();
+    if (!pageName) {
+        pageName = $('#pageName').val();
+    }
     var pageExistUrl = '/data/pages/' + pageName + '/exist';
     $.get(pageExistUrl, function(data) {
         if (data.info.exist) {
