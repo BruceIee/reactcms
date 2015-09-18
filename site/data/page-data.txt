@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":12,
+    "count":13,
     "items": [
         {
             "_id": "55e39b9c32825d7305a30c90",
@@ -312,7 +312,13 @@
                 ]
             },
             "create_date": "2015-09-17T12:39:20.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55fab69e1f6ec3c422121e1b",
@@ -375,7 +381,13 @@
                 ]
             },
             "create_date": "2015-09-17T12:48:30.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55fab71f1f6ec3c422121e1c",
@@ -439,7 +451,13 @@
                 ]
             },
             "create_date": "2015-09-17T12:50:39.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55e10d369346d92f1ef4eeec",
@@ -932,6 +950,70 @@
             "create_by": "",
             "edit_date": "",
             "edit_by": ""
+        },
+        {
+            "_id": "55fb6ef5fcf06cce0a5fd33c",
+            "name": "meow_terms",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Website Terms</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-terms",
+                                "content": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern [business name]'s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p><p>The term '[business name]' or 'us' or 'we' refers to the owner of the website whose registered office is [address]. Our company registration number is [company registration number and place of registration]. The term 'you' refers to the user or viewer of our website.</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "meow_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-18T01:55:01.000Z",
+            "_class": "page"
         }
     ]
 }
