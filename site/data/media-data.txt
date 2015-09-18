@@ -43,7 +43,7 @@
             "type": "string"
         }
     },
-    "count":2,
+    "count":3,
     "items": [
         {
             "_id": "55fab3831f6ec3c422121e18",
@@ -88,6 +88,30 @@
             "video": null,
             "status": "active",
             "create_date": "2015-09-17T12:36:09.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "55fb9236fcf06cce0a5fd340",
+            "name": "cat07",
+            "description": "cat07",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat07.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442550326791-cat07.jpg",
+                "path": "site/public/file/media-image-1442550326791-cat07.jpg",
+                "size": 6912
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-18T04:25:26.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
