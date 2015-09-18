@@ -19,6 +19,9 @@ module.exports = function(app) {
         title: {
             type: 'string'
         },
+        title_link: {
+            type: 'string'
+        },
         type: {
             type: 'string'
         },
