@@ -35,9 +35,7 @@ exports.setting = {
     
     // site setting
     site: {
-        homepage: 'meow_home',
-        header: 'meow_header',
-        footer: 'meow_footer'
+        homepage: 'meow_home'
     },
     
     // invite code
