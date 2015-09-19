@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":14,
+    "count":15,
     "items": [
         {
             "_id": "55f438f49928cefc3f6cd47e",
@@ -1090,6 +1090,57 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "55fd6dd1895582b3b738445a",
+            "name": "mccpta_template",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:420px;\"></div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "create_date": "2015-09-19T14:14:41.000Z",
+            "_class": "page"
         }
     ]
 }
