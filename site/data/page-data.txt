@@ -1140,7 +1140,13 @@
                 ]
             },
             "create_date": "2015-09-19T14:14:41.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         }
     ]
 }
