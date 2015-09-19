@@ -64,6 +64,7 @@ function setup() {
     $('.btn-save-page-as').click(function() {
         var pageName = prompt("Enter page name", "");
         if (pageName) {
+            retrievePageSectionData();
             createPage(pageName);
         }
     });
