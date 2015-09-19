@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":5,
+    "count":6,
     "items": [
         {
             "_id": "55f42e45bc726b40367c7e1f",
@@ -140,6 +140,20 @@
             "edit_by": "admin",
             "_class": "article",
             "image_link": ""
+        },
+        {
+            "_id": "55fd796d895582b3b738446b",
+            "title": "mccpta_mission",
+            "content": "<div style=\"margin-top:45px;\">\r\n<h4 style=\"margin-bottom:20px\">Mission of PTA</h4>\r\n<p>To make every child's potential a reality by engaging and empowering families and communities to advocate for all children.</p>\r\n<p>Hacer una realidad el potencial de cada niño al comprometer y apoderar las familias y comunidades para que intercedan por todos los niños.</p>\r\n<p>Montgomery County Council of PTAs (MCCPTA) is an association of local PT(S)As in Montgomery County, chartered by Maryland PTA.  MCCPTA advocates for the students, parents, and teachers of Montgomery County Public Schools on educational priorities, determined by the membership.</p>\r\n<p>We serve to help PTA leadership county­wide on issues affecting children.\r\nMCCPTA assists PTAs by exchanging and pooling local information and experience, providing support and training for local leaders, and by interfacing with Montgomery County Public Schools (MCPS) and other county and state entities.</p>\r\n<p>MCCPTA represents over 50,000 members who belong to 192 local PT(S)As in Montgomery County public schools.</p>\r\n</div>",
+            "type": "mccpta",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-19T15:04:13.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-19T15:06:53.000Z",
+            "edit_by": "admin",
+            "_class": "article"
         }
     ]
 }

@@ -262,13 +262,12 @@
                     {
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
-                            "module": "",
-                            "condition": "",
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_mission"
+                            },
                             "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">about</div>"
-                            }
+                            "data": ""
                         }
                     }
                 ],
