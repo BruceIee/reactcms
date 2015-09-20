@@ -20,22 +20,6 @@ var BlackbootHeader = React.createClass({
         return attributes;
     },
     
-    getItemLinks: function(linkItems) {
-        var linkElements = [];
-        if (linkItems) {
-            for (var i = 0; i < linkItems.length; i++) {
-                var linkItem = linkItems[i];
-                var linkItemKey = 'link-item-' + linkItem.text;
-                linkElements.push(
-                    <li className="link-container" key={ linkItemKey }>
-                        <a href={ linkItem.link }>{ linkItem.text }</a>
-                    </li>
-                );
-            }
-        }
-        return linkElements;
-    },
-    
     render: function() {
         var title = this.state.title;
         var titleLink = this.state.title_link || '/';

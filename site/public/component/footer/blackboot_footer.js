@@ -19,30 +19,6 @@ var BlackbootFooter = React.createClass({
         return attributes;
     },
     
-    getItemLinks: function(linkItems) {
-        var linkElements = [];
-        if (linkItems) {
-            for (var i = 0; i < linkItems.length; i++) {
-                var linkItem = linkItems[i];
-                var linkItemKey = 'link-item-' + linkItem.text;
-                var linkElement = '';
-                if (linkItem.target && linkItem.target == 'new') {
-                    linkElement = 
-                        <a href={ linkItem.link } target="_blank" >{ linkItem.text }</a>;
-                } else {
-                    linkElement =
-                        <a href={ linkItem.link } >{ linkItem.text }</a>;
-                }
-                linkElements.push(
-                    <li className="link-container" key={ linkItemKey }>
-                        { linkElement }
-                    </li>
-                );
-            }
-        }
-        return linkElements;
-    },
-    
     render: function() {
         var links1Elements = this.getItemLinks( this.state.links1);
         var links2Elements = this.getItemLinks( this.state.links2);
