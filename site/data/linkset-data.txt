@@ -228,18 +228,22 @@
             "links2": [
                 {
                     "link": "http://facebook.com",
+                    "target": "new",
                     "text": "Facebook"
                 },
                 {
                     "link": "http://twitter.com",
+                    "target": "new",
                     "text": "Twitter"
                 },
                 {
                     "link": "http://youtube.com",
+                    "target": "new",
                     "text": "Youtube"
                 },
                 {
                     "link": "http://linkedin.com",
+                    "target": "new",
                     "text": "LinkedIn"
                 }
             ],
@@ -334,14 +338,17 @@
             "links2": [
                 {
                     "link": "https://www.facebook.com/MCCPTA",
+                    "target": "new",
                     "text": "Facebook"
                 },
                 {
                     "link": "https://twitter.com/MCC_PTA",
+                    "target": "new",
                     "text": "Twitter"
                 },
                 {
                     "link": "http://visitor.r20.constantcontact.com/d.jsp?llr=isiduvhab&p=oi&m=1107753542216&sit=cwzstikgb&f=d0407506-066d-4b73-a31b-0e65d90f8046",
+                    "target": "new",
                     "text": "Contact"
                 }
             ],
@@ -349,14 +356,17 @@
             "links3": [
                 {
                     "link": "http://www.montgomeryschoolsmd.org/",
+                    "target": "new",
                     "text": "MCPS"
                 },
                 {
                     "link": "http://www.mdpta.org/",
+                    "target": "new",
                     "text": "Maryland PTA"
                 },
                 {
                     "link": "http://www.pta.org/",
+                    "target": "new",
                     "text": "National PTA"
                 }
             ],
