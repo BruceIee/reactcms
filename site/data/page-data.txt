@@ -442,7 +442,19 @@
                         }
                     }
                 ],
-                "r3c1": "",
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_board"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
                 "r4c1": "",
                 "r5c1": [
                     {
