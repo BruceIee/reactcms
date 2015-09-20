@@ -126,5 +126,5 @@ var getCommonMixin = {
             }
         }
         return linkElements;
-    },
+    }
 };
