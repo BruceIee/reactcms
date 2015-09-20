@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":21,
+    "count":29,
     "items": [
         {
             "_id": "55f438f49928cefc3f6cd47e",
@@ -124,6 +124,177 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "55fd777c895582b3b7384465",
+            "name": "mccpta_home",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">home</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-19T14:55:56.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55fd77e0895582b3b7384466",
+            "name": "mccpta_advocacy",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">advocacy</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-19T14:57:36.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55fd77e9895582b3b7384467",
+            "name": "mccpta_events",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">events</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-19T14:57:45.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "55fd77fc895582b3b7384468",
@@ -1319,8 +1490,8 @@
             "edit_by": ""
         },
         {
-            "_id": "55fd777c895582b3b7384465",
-            "name": "mccpta_home",
+            "_id": "55ff0091d4a44b411f2ccbad",
+            "name": "mccpta_delegates_assembly",
             "description": "",
             "composition": "vertflow",
             "content": {
@@ -1346,7 +1517,7 @@
                             "filter": "",
                             "data": {
                                 "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">home</div>"
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Delegates Assembly</div>"
                             }
                         }
                     }
@@ -1369,15 +1540,15 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-09-19T14:55:56.000Z",
+            "create_date": "2015-09-20T18:53:05.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "55fd77e0895582b3b7384466",
-            "name": "mccpta_advocacy",
+            "_id": "55ff00b4d4a44b411f2ccbae",
+            "name": "mccpta_committees",
             "description": "",
             "composition": "vertflow",
             "content": {
@@ -1403,7 +1574,7 @@
                             "filter": "",
                             "data": {
                                 "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">advocacy</div>"
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Committees</div>"
                             }
                         }
                     }
@@ -1426,15 +1597,15 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-09-19T14:57:36.000Z",
+            "create_date": "2015-09-20T18:53:40.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "55fd77e9895582b3b7384467",
-            "name": "mccpta_events",
+            "_id": "55ff00cfd4a44b411f2ccbaf",
+            "name": "mccpta_cip_committee",
             "description": "",
             "composition": "vertflow",
             "content": {
@@ -1460,7 +1631,7 @@
                             "filter": "",
                             "data": {
                                 "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">events</div>"
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">CIP Committee</div>"
                             }
                         }
                     }
@@ -1483,7 +1654,292 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-09-19T14:57:45.000Z",
+            "create_date": "2015-09-20T18:54:07.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff00e9d4a44b411f2ccbb0",
+            "name": "mccpta_presidents_toolkit",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Presidents Toolkit</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:54:33.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff0100d4a44b411f2ccbb1",
+            "name": "mccpta_treasurer_toolkit",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Treasurer Toolkit</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:54:56.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff011bd4a44b411f2ccbb2",
+            "name": "mccpta_membership",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Membership</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:55:23.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff0141d4a44b411f2ccbb3",
+            "name": "mccpta_membership_toolkit",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Membership Toolkit</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:56:01.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff015bd4a44b411f2ccbb4",
+            "name": "mccpta_painless_fundraising",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Painless Fundraising</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:56:27.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
