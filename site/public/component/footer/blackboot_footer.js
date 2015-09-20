@@ -25,9 +25,17 @@ var BlackbootFooter = React.createClass({
             for (var i = 0; i < linkItems.length; i++) {
                 var linkItem = linkItems[i];
                 var linkItemKey = 'link-item-' + linkItem.text;
+                var linkElement = '';
+                if (linkItem.target && linkItem.target == 'new') {
+                    linkElement = 
+                        <a href={ linkItem.link } target="_blank" >{ linkItem.text }</a>;
+                } else {
+                    linkElement =
+                        <a href={ linkItem.link } >{ linkItem.text }</a>;
+                }
                 linkElements.push(
                     <li className="link-container" key={ linkItemKey }>
-                        <a href={ linkItem.link }>{ linkItem.text }</a>
+                        { linkElement }
                     </li>
                 );
             }
