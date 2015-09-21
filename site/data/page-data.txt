@@ -42,6 +42,405 @@
     "count":29,
     "items": [
         {
+            "_id": "55ff00b4d4a44b411f2ccbae",
+            "name": "mccpta_committees",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Committees</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:53:40.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff00cfd4a44b411f2ccbaf",
+            "name": "mccpta_cip_committee",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">CIP Committee</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:54:07.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff00e9d4a44b411f2ccbb0",
+            "name": "mccpta_presidents_toolkit",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Presidents Toolkit</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:54:33.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff0100d4a44b411f2ccbb1",
+            "name": "mccpta_treasurer_toolkit",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Treasurer Toolkit</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:54:56.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff011bd4a44b411f2ccbb2",
+            "name": "mccpta_membership",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Membership</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:55:23.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff0141d4a44b411f2ccbb3",
+            "name": "mccpta_membership_toolkit",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Membership Toolkit</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:56:01.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55ff015bd4a44b411f2ccbb4",
+            "name": "mccpta_painless_fundraising",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Painless Fundraising</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-20T18:56:27.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
             "_id": "55f438f49928cefc3f6cd47e",
             "name": "article-cat01",
             "composition": "theone",
@@ -117,215 +516,6 @@
                 ]
             },
             "create_date": "2015-09-12T21:23:18.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "55fab69e1f6ec3c422121e1b",
-            "name": "meow_help",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "meow_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "meow-site-title",
-                                "content": "<h3 style=\"min-height:420px;margin-top:25px;\">Help me</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "MediaDetail",
-                        "widgetInfo": {
-                            "module": "media",
-                            "condition": {
-                                "name": "cat01link"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "meow_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "create_date": "2015-09-17T12:48:30.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": ""
-        },
-        {
-            "_id": "55fab71f1f6ec3c422121e1c",
-            "name": "meow_events",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "meow_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "meow-site-title",
-                                "content": "<h3 style=\"margin-top:25px;\">Meow Central Events</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "meow-site-title",
-                                "content": "<h4 style=\"min-height:520px;margin-top:25px;\">More events are coming ...</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "meow_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "create_date": "2015-09-17T12:50:39.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": ""
-        },
-        {
-            "_id": "55fb6fc1fcf06cce0a5fd33d",
-            "name": "meow_blog",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "meow_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "meow-site-title",
-                                "content": "<h3 style=\"margin-top:25px;\">Meow Blog</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "meow-blog-title",
-                                "content": "<p>Blog is under construction</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "meow_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "create_date": "2015-09-18T01:58:25.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -1559,9 +1749,8 @@
             "_class": "page"
         },
         {
-            "_id": "55ff00b4d4a44b411f2ccbae",
-            "name": "mccpta_committees",
-            "description": "",
+            "_id": "55fab69e1f6ec3c422121e1b",
+            "name": "meow_help",
             "composition": "vertflow",
             "content": {
                 "r1c1": [
@@ -1570,7 +1759,7 @@
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
-                                "name": "mccpta_header"
+                                "name": "meow_header"
                             },
                             "filter": "",
                             "data": ""
@@ -1585,13 +1774,25 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Committees</div>"
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"min-height:420px;margin-top:25px;\">Help me</h3>"
                             }
                         }
                     }
                 ],
-                "r3c1": "",
+                "r3c1": [
+                    {
+                        "widgetName": "MediaDetail",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "name": "cat01link"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
                 "r4c1": "",
                 "r99c1": [
                     {
@@ -1599,7 +1800,7 @@
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
-                                "name": "mccpta_footer"
+                                "name": "meow_footer"
                             },
                             "filter": "",
                             "data": ""
@@ -1607,18 +1808,18 @@
                     }
                 ]
             },
+            "create_date": "2015-09-17T12:48:30.000Z",
+            "_class": "page",
+            "description": "",
             "group": "",
             "status": "",
-            "create_date": "2015-09-20T18:53:40.000Z",
             "create_by": "",
             "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
+            "edit_by": ""
         },
         {
-            "_id": "55ff00cfd4a44b411f2ccbaf",
-            "name": "mccpta_cip_committee",
-            "description": "",
+            "_id": "55fab71f1f6ec3c422121e1c",
+            "name": "meow_events",
             "composition": "vertflow",
             "content": {
                 "r1c1": [
@@ -1627,7 +1828,7 @@
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
-                                "name": "mccpta_header"
+                                "name": "meow_header"
                             },
                             "filter": "",
                             "data": ""
@@ -1642,13 +1843,26 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">CIP Committee</div>"
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Meow Central Events</h3>"
                             }
                         }
                     }
                 ],
-                "r3c1": "",
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "meow-site-title",
+                                "content": "<h4 style=\"min-height:520px;margin-top:25px;\">More events are coming ...</h4>"
+                            }
+                        }
+                    }
+                ],
                 "r4c1": "",
                 "r99c1": [
                     {
@@ -1656,7 +1870,7 @@
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
-                                "name": "mccpta_footer"
+                                "name": "meow_footer"
                             },
                             "filter": "",
                             "data": ""
@@ -1664,18 +1878,18 @@
                     }
                 ]
             },
+            "create_date": "2015-09-17T12:50:39.000Z",
+            "_class": "page",
+            "description": "",
             "group": "",
             "status": "",
-            "create_date": "2015-09-20T18:54:07.000Z",
             "create_by": "",
             "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
+            "edit_by": ""
         },
         {
-            "_id": "55ff00e9d4a44b411f2ccbb0",
-            "name": "mccpta_presidents_toolkit",
-            "description": "",
+            "_id": "55fb6fc1fcf06cce0a5fd33d",
+            "name": "meow_blog",
             "composition": "vertflow",
             "content": {
                 "r1c1": [
@@ -1684,7 +1898,7 @@
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
-                                "name": "mccpta_header"
+                                "name": "meow_header"
                             },
                             "filter": "",
                             "data": ""
@@ -1699,56 +1913,13 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Presidents Toolkit</div>"
+                                "title": "meow-site-title",
+                                "content": "<h3 style=\"margin-top:25px;\">Meow Blog</h3>"
                             }
                         }
                     }
                 ],
-                "r3c1": "",
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-20T18:54:33.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "55ff0100d4a44b411f2ccbb1",
-            "name": "mccpta_treasurer_toolkit",
-            "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
+                "r3c1": [
                     {
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
@@ -1756,13 +1927,12 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Treasurer Toolkit</div>"
+                                "title": "meow-blog-title",
+                                "content": "<p>Blog is under construction</p>"
                             }
                         }
                     }
                 ],
-                "r3c1": "",
                 "r4c1": "",
                 "r99c1": [
                     {
@@ -1770,7 +1940,7 @@
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
-                                "name": "mccpta_footer"
+                                "name": "meow_footer"
                             },
                             "filter": "",
                             "data": ""
@@ -1778,184 +1948,14 @@
                     }
                 ]
             },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-20T18:54:56.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "55ff011bd4a44b411f2ccbb2",
-            "name": "mccpta_membership",
+            "create_date": "2015-09-18T01:58:25.000Z",
+            "_class": "page",
             "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Membership</div>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
             "group": "",
             "status": "",
-            "create_date": "2015-09-20T18:55:23.000Z",
             "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "55ff0141d4a44b411f2ccbb3",
-            "name": "mccpta_membership_toolkit",
-            "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Membership Toolkit</div>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-20T18:56:01.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "55ff015bd4a44b411f2ccbb4",
-            "name": "mccpta_painless_fundraising",
-            "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Painless Fundraising</div>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-20T18:56:27.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
+            "edit_date": null,
+            "edit_by": ""
         }
     ]
 }
