@@ -14,7 +14,11 @@ var BlackbootFooter = React.createClass({
             { name:'links2', type:'array', required:false, defaultValue:[], note:'2nd links' },
             { name:'links2_title', type:'string', required:false, defaultValue:'', note:'title for 2nd links' },
             { name:'links3', type:'array', required:false, defaultValue:[], note:'3rd links' },
-            { name:'links3_title', type:'string', required:false, defaultValue:'', note:'title for 3rd links' }
+            { name:'links3_title', type:'string', required:false, defaultValue:'', note:'title for 3rd links' },
+            { name:'links4', type:'array', required:false, defaultValue:[], note:'4th links' },
+            { name:'links4_title', type:'string', required:false, defaultValue:'', note:'title for 4th links' },
+            { name:'links5', type:'array', required:false, defaultValue:[], note:'5th links' },
+            { name:'links5_title', type:'string', required:false, defaultValue:'', note:'title for 5th links' }
         ];
         return attributes;
     },
@@ -23,6 +27,7 @@ var BlackbootFooter = React.createClass({
         var links1Elements = this.getItemLinks( this.state.links1);
         var links2Elements = this.getItemLinks( this.state.links2);
         var links3Elements = this.getItemLinks( this.state.links3 );
+        var links4Elements = this.getItemLinks( this.state.links4 );
         return (
             <div className="navbar navbar-inverse footer_container">
                 <div className="container">
@@ -34,6 +39,9 @@ var BlackbootFooter = React.createClass({
                     </div>
                     <div className="footer-links-tertiary col-md-3 footer-links">
                         <ul className="list-unstyled">{ links3Elements }</ul>
+                    </div>
+                    <div className="footer-links-forth col-md-3 footer-links">
+                        <ul className="list-unstyled">{ links4Elements }</ul>
                     </div>
                 </div>
             </div>

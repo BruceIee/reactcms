@@ -58,6 +58,24 @@ module.exports = function(app) {
                 type: 'string'
             }
         },
+        links4_title: {
+            type: 'string'
+        },
+        links4: {
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
+        },
+        links5_title: {
+            type: 'string'
+        },
+        links5: {
+            type: 'array',
+            subtype: {
+                type: 'string'
+            }
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']
