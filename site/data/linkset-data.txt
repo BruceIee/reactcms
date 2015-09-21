@@ -46,6 +46,24 @@
                 "type": "string"
             }
         },
+        "links4_title": {
+            "type": "string"
+        },
+        "links4": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links5_title": {
+            "type": "string"
+        },
+        "links5": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
         "status": {
             "type": "string",
             "values": [
@@ -352,8 +370,29 @@
                     "text": "Contact"
                 }
             ],
-            "links3_title": "Links",
+            "links3_title": "Tookit",
             "links3": [
+                {
+                    "link": "/pages/mccpta_advocacy",
+                    "text": "Advocacy"
+                },
+                {
+                    "link": "/pages/mccpta_events",
+                    "text": "Events"
+                },
+                {
+                    "link": "/pages/mccpta_about",
+                    "text": "About"
+                }
+            ],
+            "status": "active",
+            "create_date": "2015-09-19T14:11:52.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-21T23:10:17.000Z",
+            "edit_by": "admin",
+            "_class": "linkset",
+            "links4_title": "External Links",
+            "links4": [
                 {
                     "link": "http://www.montgomeryschoolsmd.org/",
                     "target": "new",
@@ -370,12 +409,8 @@
                     "text": "National PTA"
                 }
             ],
-            "status": "active",
-            "create_date": "2015-09-19T14:11:52.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "linkset"
+            "links5_title": "",
+            "links5": []
         }
     ]
 }
