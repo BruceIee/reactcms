@@ -1719,13 +1719,37 @@
                             "filter": "",
                             "data": {
                                 "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">Delegates Assembly</div>"
+                                "content": "<h2>Delegates Assembly</h2>"
                             }
                         }
                     }
                 ],
-                "r3c1": "",
-                "r4c1": "",
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_who_is_delegate"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_delegate_minutes"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
                 "r99c1": [
                     {
                         "widgetName": "BlackbootFooter",
