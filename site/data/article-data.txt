@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":17,
+    "count":18,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -293,6 +293,20 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "56021515f21196f9089bc9b2",
+            "title": "mccpta_painless_fundraising",
+            "content": "<p style=\"font-size:1.5em;\">\r\nFREE MONEY IS OUT THERE!  <br/>\r\nACTUALLY, THOUSANDS IN FREE MONEY IS OUT THERE! <br/>\r\nPOSITION YOUR PTA TO EARN IT! <br/>\r\n</p>\r\n<br/>\r\n<label>PAINLESS FUNDRAISING GUIDE</label>\r\n<p>\r\nIt comes directly from your community shopping at the Giant. It comes when your families collect Box Tops and someone sends them in on behalf of your school. It comes when you shop with your Red Card at Target.  And, it comes via eScrip when your parent community shops at Safeway and/or ShopRite using cash.  These efforts can raise hundreds and even thousands for your schools....easily!  But you need to follow and understand the programs and work it!\r\n</p>\r\n<p>\r\nGiant A+ School Rewards\r\nSilver Diner Eat Well, Do Well! \r\nHarris Teeter’s Together in Education (TIE) \r\nSafeway/eScrip \r\n</p>\r\n<p>\r\nTarget Take Charge of Education\r\n</p>\r\n<p>\r\nNeed some help?  Carol Smalls has been helping our locals understand these programs for years. She is happy to help your school cash in on what's out there.  Email Carol at Carols@sprintmail.com \r\n</p>\r\n<p>\r\nCarol's Tip: Find several volunteers to handle the different programs.  Understanding each program's requirements and deadlines, and regularly promoting all the programs to school parents AND school staff, community members, co-workers (and to basically anyone who shops or goes to restaurants!!!) will ensure that your PTA and school earn this funding! \r\n</p>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T02:57:25.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-23T02:59:49.000Z",
+            "edit_by": "admin",
             "_class": "article"
         },
         {
