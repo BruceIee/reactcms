@@ -42,22 +42,8 @@
             "type": "string"
         }
     },
-    "count":9,
+    "count":12,
     "items": [
-        {
-            "_id": "55f430c7ff7bbce2378fcce1",
-            "title": "text01",
-            "content": "<h4>text 01</h4>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
-            "type": "plaintext",
-            "image": null,
-            "status": "active",
-            "create_date": "2015-09-12T14:03:51.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article",
-            "image_link": ""
-        },
         {
             "_id": "55f4976d3734a7ab20fa3560",
             "title": "cat03",
@@ -110,20 +96,6 @@
             "_class": "article"
         },
         {
-            "_id": "560141247fc9d16b694b8b2a",
-            "title": "mccpta_delegate_minutes",
-            "content": "<label>Delegate Minutes</label>\r\n<p>\r\nDelegate cards will be sent to local PT(S)As at their schools upon receipt by the MCCPTA office of dues payments for a minimum of 25 members. Delegates are not/not required to have their Delegate Cards to vote until our November DA; see our STANDING RULES for details.  \r\n</p>\r\n<p>\r\nRegular MCCPTA meetings (Delegates Assemblies or DAs) are held on the fourth Tuesday of each month during the school year. The business meetings usually start at 7:30 PM (please watch for changes of start time) and are preceded by an MCCPTA Presents! Program, beginning at 6:30 p.m.  The DAs are held at the Carver Educational Services Center in Rockville and are open to all PTA members. \r\n</p>\r\n<p>\r\nThe privileges of introducing motions and voting are limited to the voting body, consisting of the MCCPTA officers, area vice presidents, cluster coordinators, and committee chairs, the president or alternate and two accredited delegates or their alternates from member PTAs/PTSAs. \r\n</p>\r\n<p>\r\nThe monthly meetings provide an opportunity for delegates to present ideas, debate issues, become better informed, make personal contacts with other PTA leaders, and vote on MCCPTA actions.  The conduct of business is governed by STANDING RULES adopted by the delegates.\r\n</p>\r\n<p>\r\nMeetings will be cancelled if Montgomery County Public Schools are closed for weather or other emergency conditions on the scheduled meeting date.  \r\n</p>",
-            "type": "",
-            "image": null,
-            "image_link": "",
-            "status": "active",
-            "create_date": "2015-09-22T11:53:08.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article"
-        },
-        {
             "_id": "55f42e45bc726b40367c7e1f",
             "title": "cat01",
             "content": "<h4>cat 01</h4>\r\n<p>Test article for cat01</p>\r\n<p>The 2nd paragraph. Ipsum loptom</p>",
@@ -170,6 +142,34 @@
             "image_link": ""
         },
         {
+            "_id": "55f430c7ff7bbce2378fcce1",
+            "title": "text01",
+            "content": "<h4>text 01</h4>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+            "type": "plaintext",
+            "image": null,
+            "status": "active",
+            "create_date": "2015-09-12T14:03:51.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article",
+            "image_link": ""
+        },
+        {
+            "_id": "560141247fc9d16b694b8b2a",
+            "title": "mccpta_delegate_minutes",
+            "content": "<label>Delegate Minutes</label>\r\n<p>\r\nDelegate cards will be sent to local PT(S)As at their schools upon receipt by the MCCPTA office of dues payments for a minimum of 25 members. Delegates are not/not required to have their Delegate Cards to vote until our November DA; see our STANDING RULES for details.  \r\n</p>\r\n<p>\r\nRegular MCCPTA meetings (Delegates Assemblies or DAs) are held on the fourth Tuesday of each month during the school year. The business meetings usually start at 7:30 PM (please watch for changes of start time) and are preceded by an MCCPTA Presents! Program, beginning at 6:30 p.m.  The DAs are held at the Carver Educational Services Center in Rockville and are open to all PTA members. \r\n</p>\r\n<p>\r\nThe privileges of introducing motions and voting are limited to the voting body, consisting of the MCCPTA officers, area vice presidents, cluster coordinators, and committee chairs, the president or alternate and two accredited delegates or their alternates from member PTAs/PTSAs. \r\n</p>\r\n<p>\r\nThe monthly meetings provide an opportunity for delegates to present ideas, debate issues, become better informed, make personal contacts with other PTA leaders, and vote on MCCPTA actions.  The conduct of business is governed by STANDING RULES adopted by the delegates.\r\n</p>\r\n<p>\r\nMeetings will be cancelled if Montgomery County Public Schools are closed for weather or other emergency conditions on the scheduled meeting date.  \r\n</p>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-22T11:53:08.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
             "_id": "55fd796d895582b3b738446b",
             "title": "mccpta_mission",
             "content": "<div style=\"margin-top:45px;\">\r\n<h4 style=\"margin-bottom:20px\">Mission of PTA</h4>\r\n<p>To make every child's potential a reality by engaging and empowering families and communities to advocate for all children.</p>\r\n<p>Hacer una realidad el potencial de cada niño al comprometer y apoderar las familias y comunidades para que intercedan por todos los niños.</p>\r\n<p>Montgomery County Council of PTAs (MCCPTA) is an association of local PT(S)As in Montgomery County, chartered by Maryland PTA.  MCCPTA advocates for the students, parents, and teachers of Montgomery County Public Schools on educational priorities, determined by the membership.</p>\r\n<p>We serve to help PTA leadership county­wide on issues affecting children.\r\nMCCPTA assists PTAs by exchanging and pooling local information and experience, providing support and training for local leaders, and by interfacing with Montgomery County Public Schools (MCPS) and other county and state entities.</p>\r\n<p>MCCPTA represents over 50,000 members who belong to 192 local PT(S)As in Montgomery County public schools.</p>\r\n</div>",
@@ -192,6 +192,48 @@
             "image_link": "",
             "status": "active",
             "create_date": "2015-09-22T11:50:34.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "5601f74ff21196f9089bc9a9",
+            "title": "mccpta_committee_header",
+            "content": "<div style=\"margin-top:40px;text-align:center;\">\r\n<h4>MCCPTA Committees</h4>\r\n<h4>2015-2016</h4>\r\n<div>\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T00:50:23.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-23T00:52:40.000Z",
+            "edit_by": "admin",
+            "_class": "article"
+        },
+        {
+            "_id": "5601f941f21196f9089bc9aa",
+            "title": "mccpta_committee_standing",
+            "content": "<h4>Standing Committees</h4>\r\n<br/>\r\n<p>\r\nCapital Improvement Program – Supports the advocacy of MCCPTA and the individual clusters on capital related issues.  Dedicated to the principle that every child in Montgomery County is entitled to attend school in a safe, secure, healthy and modern facility.  Works to see that MCPS meets countywide facilities’ needs, and in particular, that MCPS keeps pace with planned additions, modernizations and county-wide programs to replace and maintain building facilities.\r\n</p>\r\n<p>\r\nCurriculum – Represents parents, students, and teachers, advocating for effective course content to engage and to develop children toward readiness for 21st century careers, whether college or vocational-bound, and communicates current and potential curriculum issues or concerns to PTA members and MCPS.\r\n<ul>\r\n<li>Elementary Education</li>\r\n<li>Middle School Education</li>\r\n<li>High School Education</li>\r\n<li>Student Service Learning (SSL)</li>\r\n</ul>\r\n</p>\r\n<p>\r\nGifted Child Committee – Advocates on behalf of children who require accelerated and enriched instruction to achieve their full potential.  Seeks to increase public awareness of the special needs of all highly able learners and to assist their parents in guiding the education of these children.  Promotes the philosophy that appropriately challenging opportunities can be provided for advanced level learners without undermining appropriate educational opportunities for on-grade level students.\r\n</p>\r\n<p>\r\nHealth and Safety – Assists in evaluating MCPS policies and practices to determine areas of concerns for the safety, health, and well-being of students and teachers, and works as a partner with MCPS and other community leaders to advocate for improvement.  Guided by the philosophy that every student and teacher has an inherent right to be in a safe, healthy and secure environment while they are under the care of the public school system.\r\n</p>\r\n<p>\r\nMembership and Engagement – Works with local leaders to grows the membership of PTA to increase the power of our collective voice for the children of Montgomery County.  Organizes workshops, outreach activities, and tailored mentoring in an effort to help each local grow membership and encourage engagement by all parents, staff, and, where applicable, students.\r\n</p>\r\n<p>\r\nMulticultural Awareness – Focuses on developing strategies to increase the participation of multicultural parents and students in their school community.  Plans activities for diverse ethnic groups at schools in order to improve their involvement and student performance through cultural and academic activities.  Continue to act as a resource for school staff, as required.\r\n</p>\r\n<p>\r\nESOL - Focuses on informing parents of students in ESOL about opportunities and programs in MCPS for their children. \r\n</p>\r\n<p>\r\nOperating Budget – Supports the advocacy of MCCPTA-established priorities on operating budget issues, including representing MCCPTA at MCPS budget meetings.  Priorities reflect the collective input of the MCCPTA Board of Directors and MCCPTA Delegates.\r\n</p>\r\n<p>\r\nOutreach Events – Develops and promotes county-wide projects and programs that promote student welfare and academics as organized by and emphasized by MCCPTA.  Works with organizations outside of MCCPTA to promote the goals and mission of the organization.\r\n</p>\r\n<p>\r\nSpecial Education – Acts as a resource and provides communication and information for the special education community, including for parents, caregivers, and staff.  Shares experiences in advocating for children to implement successful family-school partnerships.\r\n</p>\r\n\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T00:58:41.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "5601fa4ef21196f9089bc9ab",
+            "title": "mccpta_committee_administrative",
+            "content": "<h4>Administrative Committees</h4>\r\n<br/>\r\n<p>\r\nAwards – Communicates award opportunities and serves as a resource for PTA award information.  Collects nominations for MCCPTA awards, and creates panels to judge and determine award recipients.\r\n</p>\r\n<p>\r\nBylaws – Assures that all PTAs in MCCPTA are aware of their bylaw status, understand the recent revisions to Maryland PTA bylaws, and use bylaws effectively in running their local PTAs.\r\n</p>\r\n<p>\r\nNominating Committee – Solicits and reviews potential candidates for executive committee positions with the intent of selecting a slate of candidates to put forward to the organization.  Supports AVPs and clusters with nomination and election process, reviewing nominations for AVPs and cluster coordinators to ensure compliance with MCCPTA bylaws requirements.  Members are elected by the MCCPTA Delegates Assembly at the October meeting; the chair is elected by the committee members.\r\n</p>\r\n<p>\r\nStudent Involvement – Aims to bring a student perspective to MCCPTA.  Represents MCCPTA to the Montgomery County regional student governments (MCJC and MCR-SGA), the Maryland Association of Student Councils (MASC), the Montgomery County Students’ Coalition (MCSC), and the Student Member of the Board (SMOB).  Recruits students for MCCPTA projects, involves students with MCCPTA advocacy, and assists PT(S)As in reaching out to and working with local student governments.\r\n</p>\r\n<p>\r\nTraining – Working closely with MCCPTA leadership, plans, publicizes, and orchestrates at least two (2) training sessions a year in the Fall and Spring to develop local PT(S)A leadership throughout Montgomery County.\r\n</p>\r\n<p>\r\nCommunications\r\n<ul>\r\n<li>e-Communications - Supports and moderates MCCPTA e-Lists (listserves), and provides input and guidance on other MCCPTA electronic communications. </li>\r\n<li>Public Relations - Works in coordination with MCCPTA President, officers, and committee chairs to provide proactive communication of key positions and events.  </li>\r\n<li>Webmaster - Develops and maintains the MCCPTA web presence in coordination with MCCPTA leadership.  </li>\r\n</ul>\r\n</p>\r\n<p>\r\nPrograms\r\n</p>\r\n<p>\r\nCultural Arts - Supports and promotes PT(S)A efforts to present high-quality performances, workshops, residencies, and in-school field trips to students in MCPS to enrich their educational program and artistic experiences.\r\n</p>\r\n<p>\r\nPresidents & Principals Dinner - Organizes the annual dinner at which the work of PT(S)A in Montgomery County is celebrated and MCCPTA officers are installed.  \r\n</p>\r\n<p>\r\nReflections - Promotes and increases awareness of the annual National PTA Reflections art program that encourages students to express themselves through creative projects.  Utilizes MCCPTA website and Reflections eList to make local PTAs aware of the program and to provide comprehensive information to the local chairpersons. Runs the county-level competition and awards ceremony.  \r\n</p>\r\n<p>\r\nLegislative\r\n</p>\r\n<p>\r\nAdvocacy Events Committee - Cooperates and coordinates with the Legislative Committee and the Vice President-Legislation to organize opportunities for MCCPTA leadership to advocate or to develop relationships for future advocacy with elected officials beyond the hearing room.  \t\r\n</p>\r\n<p>\r\nLegislative - Provides information to the membership regarding issues, legislative action, bills, and proposed legislation before the Maryland General Assembly, Montgomery County Council, and US Congress when those actions affect children, families, public education, or the safety of students.  \r\n</p>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T01:03:10.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
