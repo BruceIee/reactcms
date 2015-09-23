@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":14,
+    "count":15,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -265,6 +265,20 @@
             "create_by": "admin",
             "edit_date": "2015-09-23T02:01:04.000Z",
             "edit_by": "admin",
+            "_class": "article"
+        },
+        {
+            "_id": "56020bedf21196f9089bc9af",
+            "title": "mccpta_treasurer_toolkit",
+            "content": "<p>\r\nThere are eight (8) Standards of Continuing Affiliation (SoCA) requirements mandated and monitored by Maryland PTA to maintain the good standing of a local PTA/PTSA. The treasurer is responsible for taking a lead role in completing five of these requirements.  Good standing not only preserves the unit’s non-profit 501(c)3 status, but it ensures that students can participate in the Reflections program through the National PTA level and allows delegates to attend and participate in the Maryland PTA State Convention!\r\n<p>\r\n</p>\r\nMore information on SoCA Requirements.\r\nLocal PTA Treasurer’s Guidebook: Updated June 2015\r\n<p>\r\n</p>\r\nConnect with other PTA/PTSA treasurers in Montgomery County. \r\nJoin the Treasurer’s E-list. To subscribe, send an e-mail to MCCPTA_Treasurers-subscribe@yahoogroups.com. Include: Name / School / Position/Term (if any)\r\n</p>\r\n<p>\r\nMembership Dues Payments: The Membership Chairman and Treasurer should coordinate to ensure an accurate count of membership and dues payments to MCCPTA and Maryland PTA.  Refer to the SoCA: Membership Dues page for more information.\r\n</p>\r\n<p>\r\nMaryland PTA's Financial Training booklet provides an overview of all the essentials: CLICK HERE\r\n</p>\r\n<p>\r\nTimeline for PTA Leaders: CLICK HERE Keep this handy, a great guide for treasurers!\r\n</p>\r\n<p>\r\nNational PTA Money Matters (need user id/password from pta membership card): http://www.pta.org/reference_guides.asp\r\nMaryland PTA Cash Encounters http://www.mdpta.org/forms.html\r\n</p>\r\n<p>\r\nMaryland State Department of Assessments and Taxation (Personal Property):\r\nhttp://www.dat.state.md.us/sdatweb/personal.html\r\n</p>\r\n<p>\r\nMaryland State Department of Assessments and Taxation Business Entity Search: \r\nhttp://sdatcert3.resiusa.org/UCC-Charter/CharterSearch_f.aspx\r\n</p>\r\n<p>\r\nComptroller of Maryland bFile (Sales and Use Tax Returns):\r\nhttps://interactive.marylandtaxes.com/Business/bFile/OSC/SelectApp.aspx\r\n</p>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T02:18:21.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
             "_class": "article"
         }
     ]
