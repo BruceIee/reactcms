@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":16,
+    "count":17,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -293,6 +293,20 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "560211dcf21196f9089bc9b1",
+            "title": "mccpta_membership_toolkit",
+            "content": "<p>\r\nThe PTA and National PTA are membership organizations and growing membership is important.  Membership provides the resources - talent, time, ideas, volunteers, and funds - to benefit the children of our schools.\r\n</p>\r\n<p>\r\nPeople join to show support of the work done locally and collectively to help children, families, and schools, and when they understand the benefits to themselves and/or the school community.  The work the local PTA does must be relevant to the community.\r\n</p>\r\n<p>\r\nThe Membership Chair ensures that the PTA defines the benefits of membership and communicates that message to the community.\r\n</p>\r\n<p>\r\n<br/>\r\n<label>Membership Resources</label>\r\n<br/>\r\nMCCPTA Membership Guidebook (Updated 2015)\r\nMCCPTA Membership Dues Voucher\r\nWhat PTA Provides at the School, County, State, and National Levels\r\nWhy PTA for Incoming Parents\r\n</p>\r\n<p>\r\nSample Membership form: CLICK HERE for a sample form\r\n</p>\r\n<p>\r\n<br/>\r\n<label>MCCPTA Membership Awards</label>\r\n<br/>\r\nMCCPTA recognizes local PTA/PTSAs that are building and sustaining membership with three categories of awards. Award winners are announced annually at our Presidents and Principals Dinner.\r\n</p>\r\n<p>\r\nGROW IT! These awards will recognize PTA/PTSAs for their year-on-year membership growth in percentage terms.\r\n<br/>\r\nBronze: Growth up to 5%\r\nSilver: Growth 5% to 24%\r\nGold: Growth 25% to 49%\r\nPlatinum: Growth 50% to 99%\r\nDiamond: Growth 100% and over\r\n</p>\r\n<p>\r\nBUILD AND SUSTAIN IT! These awards will be given to the three PTA/PTSAs from each school category--elementary, middle, and high school--that have the largest membership in absolute terms.\r\n</p>\r\n<p>\r\nENGAGE IT! These awards will be given to the PTA/PTSA from each school category--elementary, middle, and high school--that has the greatest PTA member to student number ratio. That ratio serves as a proxy for community involvement.\r\n</p>\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T02:43:40.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-23T02:45:58.000Z",
+            "edit_by": "admin",
             "_class": "article"
         }
     ]
