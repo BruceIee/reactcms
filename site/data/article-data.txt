@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":13,
+    "count":14,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -251,6 +251,20 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "56020757f21196f9089bc9ae",
+            "title": "mccpta_presidents_toolkit",
+            "content": "<p>\r\nThere are eight (8) Standards of Continuing Affiliation (SoCA) requirements mandated and monitored by Maryland PTA to maintain the good standing of a local PTA/PTSA. The treasurer is responsible for taking a lead role in completing five of these requirements.  Good standing not only preserves the unit’s non-profit 501(c)3 status, but it ensures that students can participate in the Reflections program through the National PTA level and allows delegates to attend and participate in the Maryland PTA State Convention!\r\n</p>\r\n<br/>\r\n<label>Guidebooks</label>\r\n<p>\r\nThese resource will help keep the President and Board on top of these requirements and other must-dos for PTAs all year long.  It's helpful for the President to be knowledgeable about all the financial requirements and practices, as well.\r\n<ul>\r\n<li>Updated Timeline for PTA Leaders</li>\r\n<li>Local PTA President’s Guidebook: Updated June 2015</li>\r\n<li>Local PTA Treasurer’s Guidebook: Updated June 2015</li>\r\n</ul>\r\n</p>\r\n<p>\r\nInsurance Information and Forms  Make sure your PTA has the proper insurance coverage for all your PTA events. For questions, contact Knight Insurance.\r\n<ul>\r\n<li>Family Waivers</li>\r\n<li>Parent Waiver</li>\r\n<li>Vendor Agreement</li>\r\n<li>Hold Harmless Agreement</li>\r\n</ul>\r\n</p>\r\n<p>\r\nMCCPTA Blue Book form Provide this information for the MCCPTA Blue Book, or Directory, by June 30.  Fill-in electronically, save as your PTA name and return to the MCCPTA Office via email or print and mail in to the office.  All PTAs will receive a copy of the MCCPTA Blue Book in the fall.  MD PTA Local Unit Contact Information Sheet  This information is a Maryland PTA requirement and must be on file for your PTA to receive its membership cards. The form should be completed within two (2) weeks of your PTA elections and submitted directly to MD PTA.\r\n</p>\r\n<p>\r\nMCCPTA Membership Dues Invoice It is strongly recommended that local PTAs submit dues payment to MCCPTA and MD PTA at the same time (in separate payments).  This practice will ensure consistency in membership records between MCCPTA and Maryland PTA, and is easier on the local Treasurer.    \r\n</p>\r\n<p>\r\nRunning an Effective Meeting: CLICK HERE for Meeting Tips. \r\nThis sheet will help you organize an efficient, productive business meeting for your PTA.  \r\n</p>\r\n<p>\r\nParliamentary Procedures (or Robert's Rules of Order)\r\nCLICK HERE for a tip sheet and CLICK HERE for a brief version with additional explanation and information.  \r\n</p>\r\n<p>\r\nNeed help? Your cluster coordinator and area vice president have a wealth of experience, and are just an email or phone call away!\r\n</p>\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T01:58:47.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-23T02:01:04.000Z",
+            "edit_by": "admin",
             "_class": "article"
         }
     ]
