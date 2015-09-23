@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":12,
+    "count":13,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -140,6 +140,20 @@
             "edit_by": "",
             "_class": "article",
             "image_link": ""
+        },
+        {
+            "_id": "56020100f21196f9089bc9ac",
+            "title": "mccpta_committee_footer",
+            "content": "<br/>\r\n<p>\r\nInterested in serving as an MCCPTA Committee Chair or Co-Chair?  \r\n</p>\r\n<p>\r\nContact our Vice President for Educational Issues at vpedissues@mccpta.com\r\nCommittee Chairs are elected by the MCCPTA Executive Committee\r\n</p>\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T01:31:44.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
         },
         {
             "_id": "55f430c7ff7bbce2378fcce1",

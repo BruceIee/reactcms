@@ -1995,7 +1995,19 @@
                         }
                     }
                 ],
-                "r5c1": "",
+                "r5c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_committee_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
                 "r6c1": "",
                 "r7c1": "",
                 "r8c1": "",
