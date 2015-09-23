@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":18,
+    "count":19,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -321,6 +321,20 @@
             "create_by": "admin",
             "edit_date": "2015-09-23T02:45:58.000Z",
             "edit_by": "admin",
+            "_class": "article"
+        },
+        {
+            "_id": "56021a6af21196f9089bc9b3",
+            "title": "mccpta_advocacy",
+            "content": "<p>\r\nMCCPTA advocates for parents, students, staff, and schools within MCPS, before the Board of Education, the Montgomery County Council, and at the Maryland state and Federal level.  Our local PT(S)As provide input and determine MCCPTA positions through a range of activities year round:\r\n</p>\r\n<ul>\r\n<li>\r\nAnnual MCCPTA Summer Area Meetings canvas the priorities and concerns of PT(S)As and parents throughout the county.  These meetings are organized by the MCCPTA officers in conjunction with area vice presidents.\r\n</li>\r\n<li>\r\nEach PT(S)A president or his/her designee, up to two additional delegates from each local PT(S)A, and MCCPTA Board of Directors members, are members of the MCCPTA Delegates Assembly.  This body meets each month during the school year to propose, debate, and determine countywide PTA positions on a range of issues through MCCPTA resolutions.   \r\n</li>\r\n<li>\r\nPTA members are encouraged to advocate on education issues of concern at the county, state, and federal level by responding to MCCPTA and Maryland PTA legislative \"Action Alerts\"; these may include sending an email, signing a petition, or attending or hosting a parlor meeting.\r\n</li>\r\n<li>\r\nLocal PT(S)As actively participate with their cluster schools under the auspices of their MCCPTA Cluster Coordinator to compose testimony on capital improvement and operating budget issues--and other issues as may arise--to be presented at hearings before the Board of Education and County Council.  ALL parents and students are strongly encouraged to attend these hearings to show your support for our schools, students, and staff!\r\n</li>\r\n</ul>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T03:20:10.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
             "_class": "article"
         }
     ]

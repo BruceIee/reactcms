@@ -1046,12 +1046,24 @@
                             "filter": "",
                             "data": {
                                 "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">advocacy</div>"
+                                "content": "<h4 style=\"padding-top:30px;\">Advocacy</h4>"
                             }
                         }
                     }
                 ],
-                "r3c1": "",
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_advocacy"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
                 "r4c1": "",
                 "r99c1": [
                     {
@@ -1065,7 +1077,12 @@
                             "data": ""
                         }
                     }
-                ]
+                ],
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
             },
             "group": "",
             "status": "",
