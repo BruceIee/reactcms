@@ -906,6 +906,23 @@
                             "data": ""
                         }
                     }
+                ],
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": [
+                    {
+                        "widgetName": "MediaDetail",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "name": "mccpta_activities"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
                 ]
             },
             "group": "",

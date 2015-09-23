@@ -43,7 +43,7 @@
             "type": "string"
         }
     },
-    "count":3,
+    "count":4,
     "items": [
         {
             "_id": "55fab3831f6ec3c422121e18",
@@ -112,6 +112,30 @@
             "video": null,
             "status": "active",
             "create_date": "2015-09-18T04:25:26.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "5602042df21196f9089bc9ad",
+            "name": "mccpta_activities",
+            "description": "activities of mccpta",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "activity_images.png",
+                "encoding": "7bit",
+                "mimetype": "image/png",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442972717422-activity_images.png",
+                "path": "site/public/file/media-image-1442972717422-activity_images.png",
+                "size": 290658
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-23T01:45:17.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
