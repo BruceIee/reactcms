@@ -42,7 +42,7 @@
             "type": "string"
         }
     },
-    "count":15,
+    "count":16,
     "items": [
         {
             "_id": "55f4976d3734a7ab20fa3560",
@@ -276,6 +276,20 @@
             "image_link": "",
             "status": "active",
             "create_date": "2015-09-23T02:18:21.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "56020e18f21196f9089bc9b0",
+            "title": "mccpta_membership",
+            "content": "<label>Members</label>\r\n<p>\r\nPTA Members pay dues to their local unit, at an amount set by that PT(S)A.  These dues include local, MCCPTA, State, and National dues.  Each member should receive their own Membership card.\r\n</p>\r\n<p>\r\nLOCAL PT(S)A Units\r\nWHAT IS REQUIRED: Each local PT(S)A must have a minimum of 25 members and make dues payments each year in order to remain in good standing.\r\n</p>\r\n<p>\r\nDUES for 2015-16 School Year\r\nMCCPTA (County): $1.00 per PTA member\r\nMaryland & National PTA: $4.25 per PTA member.\r\n</p>\r\n<p>\r\nMembership Chair/Treasurer should send in dues payment with the appropriate Dues Payment form for MCCPTA and Maryland PTA.\r\n</p>\r\n<p>\r\nWHY: Payment of dues is required to receive credential cards for the Maryland PTA annual convention and for MCCPTA Delegates Assemblies. Collect memberships only for the current school year. \r\n</p>\r\n<p>\r\nDEADLINE: Dues should be paid monthly. PT(S)As are strongly encouraged to submit all dues received by March 31, the deadline for membership awards at the county, state, and national level. \r\n</p>\r\n<p>\r\nFOR MORE INFORMATION: For more information on membership, see the MCCPTA Membership Guidebook.\r\n </p>\r\n<p>\r\nInformation on membership also may be found on the Maryland PTA website at http:// www.mdpta.org/bridge_membership.html.\r\n</p>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T02:27:36.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
