@@ -45,43 +45,6 @@
     "count":19,
     "items": [
         {
-            "_id": "55f4976d3734a7ab20fa3560",
-            "title": "cat03",
-            "content": "<h4>cat03 with image link</h4>\r\n<p>National PTA is pleased to announce that 124 schools and PTAs, representing 33 states and one Department of Defense school in Turkey, have been recognized as 2015-2017 National PTA Schools of Excellence. The National PTA School of Excellence designation honors accomplishments in building strong, effective family-school partnerships, which are proven to make a difference for students and schools.</p>",
-            "type": "mediatext",
-            "image": {
-                "fieldname": "image",
-                "originalname": "cat03.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "./site/public/file/",
-                "filename": "18d2d072b22fb0856ccfa7759317601f",
-                "path": "site/public/file/18d2d072b22fb0856ccfa7759317601f",
-                "size": 5812
-            },
-            "image_link": "http://pta.org",
-            "status": "active",
-            "create_date": "2015-09-12T21:21:49.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article"
-        },
-        {
-            "_id": "55f430eaff7bbce2378fcce2",
-            "title": "text02",
-            "content": "<h4>text 02</h4>\r\n<p>Lorem ipsum dolor Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
-            "type": "plaintext",
-            "image": null,
-            "status": "active",
-            "create_date": "2015-09-12T14:04:26.000Z",
-            "create_by": "admin",
-            "edit_date": "2015-09-12T14:04:37.000Z",
-            "edit_by": "admin",
-            "_class": "article",
-            "image_link": ""
-        },
-        {
             "_id": "55ff16f5d4a44b411f2ccbb5",
             "title": "mccpta_board",
             "content": "<h4>MCCPTA Board</h4>\r\n<br/>\r\n<label>Local Units </label>\r\n<p>\r\nMCCPTA Board of Directors meetings: 1st Thursday of the month, 7:30 PM at Carver Educational Services Center (subject to change if scheduling conflicts)\r\nDelegates Assembly meetings: 4th Tuesday of the month, 7:30 PM at Carver (subject to change if scheduling conflicts)\r\n</p>\r\n<p>\r\nCommittee meetings are announced and published via various MCCPTA communications tools. If you are interested in being involved in a committee, please contact the committee chair directly.\r\n<p>\r\n<br/>\r\n<label>Local Meetings (Check with your local unit to confirm dates)</label>\r\n<br/>\r\n<p>1st Tuesday of the month: Elementary PTAs</p>\r\n<p>2nd Tuesday of the month: Middle School PTSAs</p>\r\n<p>3rd Tuesday of the month: High School PTSAs</p>",
@@ -142,20 +105,6 @@
             "image_link": ""
         },
         {
-            "_id": "56020100f21196f9089bc9ac",
-            "title": "mccpta_committee_footer",
-            "content": "<br/>\r\n<p>\r\nInterested in serving as an MCCPTA Committee Chair or Co-Chair?  \r\n</p>\r\n<p>\r\nContact our Vice President for Educational Issues at vpedissues@mccpta.com\r\nCommittee Chairs are elected by the MCCPTA Executive Committee\r\n</p>\r\n",
-            "type": "",
-            "image": null,
-            "image_link": "",
-            "status": "active",
-            "create_date": "2015-09-23T01:31:44.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article"
-        },
-        {
             "_id": "55f430c7ff7bbce2378fcce1",
             "title": "text01",
             "content": "<h4>text 01</h4>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
@@ -168,6 +117,85 @@
             "edit_by": "",
             "_class": "article",
             "image_link": ""
+        },
+        {
+            "_id": "5601f74ff21196f9089bc9a9",
+            "title": "mccpta_committee_header",
+            "content": "<div style=\"margin-top:40px;text-align:center;\">\r\n<h4>MCCPTA Committees</h4>\r\n<h4>2015-2016</h4>\r\n<div>\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T00:50:23.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-23T00:52:40.000Z",
+            "edit_by": "admin",
+            "_class": "article"
+        },
+        {
+            "_id": "56021a6af21196f9089bc9b3",
+            "title": "mccpta_advocacy",
+            "content": "<p>\r\nMCCPTA advocates for parents, students, staff, and schools within MCPS, before the Board of Education, the Montgomery County Council, and at the Maryland state and Federal level.  Our local PT(S)As provide input and determine MCCPTA positions through a range of activities year round:\r\n</p>\r\n<ul>\r\n<li>\r\nAnnual MCCPTA Summer Area Meetings canvas the priorities and concerns of PT(S)As and parents throughout the county.  These meetings are organized by the MCCPTA officers in conjunction with area vice presidents.\r\n</li>\r\n<li>\r\nEach PT(S)A president or his/her designee, up to two additional delegates from each local PT(S)A, and MCCPTA Board of Directors members, are members of the MCCPTA Delegates Assembly.  This body meets each month during the school year to propose, debate, and determine countywide PTA positions on a range of issues through MCCPTA resolutions.   \r\n</li>\r\n<li>\r\nPTA members are encouraged to advocate on education issues of concern at the county, state, and federal level by responding to MCCPTA and Maryland PTA legislative \"Action Alerts\"; these may include sending an email, signing a petition, or attending or hosting a parlor meeting.\r\n</li>\r\n<li>\r\nLocal PT(S)As actively participate with their cluster schools under the auspices of their MCCPTA Cluster Coordinator to compose testimony on capital improvement and operating budget issues--and other issues as may arise--to be presented at hearings before the Board of Education and County Council.  ALL parents and students are strongly encouraged to attend these hearings to show your support for our schools, students, and staff!\r\n</li>\r\n</ul>",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T03:20:10.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "55f4976d3734a7ab20fa3560",
+            "title": "cat03",
+            "content": "<h4>cat03 with image link</h4>\r\n<p>National PTA is pleased to announce that 124 schools and PTAs, representing 33 states and one Department of Defense school in Turkey, have been recognized as 2015-2017 National PTA Schools of Excellence. The National PTA School of Excellence designation honors accomplishments in building strong, effective family-school partnerships, which are proven to make a difference for students and schools.</p>",
+            "type": "mediatext",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat03.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "18d2d072b22fb0856ccfa7759317601f",
+                "path": "site/public/file/18d2d072b22fb0856ccfa7759317601f",
+                "size": 5812
+            },
+            "image_link": "http://pta.org",
+            "status": "active",
+            "create_date": "2015-09-12T21:21:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "55f430eaff7bbce2378fcce2",
+            "title": "text02",
+            "content": "<h4>text 02</h4>\r\n<p>Lorem ipsum dolor Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+            "type": "plaintext",
+            "image": null,
+            "status": "active",
+            "create_date": "2015-09-12T14:04:26.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-12T14:04:37.000Z",
+            "edit_by": "admin",
+            "_class": "article",
+            "image_link": ""
+        },
+        {
+            "_id": "56020100f21196f9089bc9ac",
+            "title": "mccpta_committee_footer",
+            "content": "<br/>\r\n<p>\r\nInterested in serving as an MCCPTA Committee Chair or Co-Chair?  \r\n</p>\r\n<p>\r\nContact our Vice President for Educational Issues at vpedissues@mccpta.com\r\nCommittee Chairs are elected by the MCCPTA Executive Committee\r\n</p>\r\n",
+            "type": "",
+            "image": null,
+            "image_link": "",
+            "status": "active",
+            "create_date": "2015-09-23T01:31:44.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "article"
         },
         {
             "_id": "560141247fc9d16b694b8b2a",
@@ -209,20 +237,6 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "article"
-        },
-        {
-            "_id": "5601f74ff21196f9089bc9a9",
-            "title": "mccpta_committee_header",
-            "content": "<div style=\"margin-top:40px;text-align:center;\">\r\n<h4>MCCPTA Committees</h4>\r\n<h4>2015-2016</h4>\r\n<div>\r\n",
-            "type": "",
-            "image": null,
-            "image_link": "",
-            "status": "active",
-            "create_date": "2015-09-23T00:50:23.000Z",
-            "create_by": "admin",
-            "edit_date": "2015-09-23T00:52:40.000Z",
-            "edit_by": "admin",
             "_class": "article"
         },
         {
@@ -321,20 +335,6 @@
             "create_by": "admin",
             "edit_date": "2015-09-23T02:45:58.000Z",
             "edit_by": "admin",
-            "_class": "article"
-        },
-        {
-            "_id": "56021a6af21196f9089bc9b3",
-            "title": "mccpta_advocacy",
-            "content": "<p>\r\nMCCPTA advocates for parents, students, staff, and schools within MCPS, before the Board of Education, the Montgomery County Council, and at the Maryland state and Federal level.  Our local PT(S)As provide input and determine MCCPTA positions through a range of activities year round:\r\n</p>\r\n<ul>\r\n<li>\r\nAnnual MCCPTA Summer Area Meetings canvas the priorities and concerns of PT(S)As and parents throughout the county.  These meetings are organized by the MCCPTA officers in conjunction with area vice presidents.\r\n</li>\r\n<li>\r\nEach PT(S)A president or his/her designee, up to two additional delegates from each local PT(S)A, and MCCPTA Board of Directors members, are members of the MCCPTA Delegates Assembly.  This body meets each month during the school year to propose, debate, and determine countywide PTA positions on a range of issues through MCCPTA resolutions.   \r\n</li>\r\n<li>\r\nPTA members are encouraged to advocate on education issues of concern at the county, state, and federal level by responding to MCCPTA and Maryland PTA legislative \"Action Alerts\"; these may include sending an email, signing a petition, or attending or hosting a parlor meeting.\r\n</li>\r\n<li>\r\nLocal PT(S)As actively participate with their cluster schools under the auspices of their MCCPTA Cluster Coordinator to compose testimony on capital improvement and operating budget issues--and other issues as may arise--to be presented at hearings before the Board of Education and County Council.  ALL parents and students are strongly encouraged to attend these hearings to show your support for our schools, students, and staff!\r\n</li>\r\n</ul>",
-            "type": "",
-            "image": null,
-            "image_link": "",
-            "status": "active",
-            "create_date": "2015-09-23T03:20:10.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
             "_class": "article"
         }
     ]

@@ -23,6 +23,12 @@
         "video": {
             "type": "file"
         },
+        "style": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
         "status": {
             "type": "string",
             "values": [
@@ -137,9 +143,14 @@
             "status": "active",
             "create_date": "2015-09-23T01:45:17.000Z",
             "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "media"
+            "edit_date": "2015-09-24T00:18:54.000Z",
+            "edit_by": "admin",
+            "_class": "media",
+            "style": {
+                "display": "block",
+                "margin-left": "auto",
+                "margin-right": "auto"
+            }
         }
     ]
 }
