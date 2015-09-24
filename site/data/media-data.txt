@@ -49,7 +49,7 @@
             "type": "string"
         }
     },
-    "count":4,
+    "count":5,
     "items": [
         {
             "_id": "55fab3831f6ec3c422121e18",
@@ -151,6 +151,36 @@
                 "margin-left": "auto",
                 "margin-right": "auto"
             }
+        },
+        {
+            "_id": "560342663c0d8dd41127053e",
+            "name": "mccpta_title_image",
+            "description": "",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "mccpta_title_image.png",
+                "encoding": "7bit",
+                "mimetype": "image/png",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1443054182395-mccpta_title_image.png",
+                "path": "site/public/file/media-image-1443054182395-mccpta_title_image.png",
+                "size": 475968
+            },
+            "video": null,
+            "style": {
+                "display": "block",
+                "margin-left": "auto",
+                "margin-right": "auto",
+                "width": "600px"
+            },
+            "status": "active",
+            "create_date": "2015-09-24T00:23:02.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-24T00:24:33.000Z",
+            "edit_by": "admin",
+            "_class": "media"
         }
     ]
 }

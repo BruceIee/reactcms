@@ -1014,80 +1014,6 @@
             "edit_by": ""
         },
         {
-            "_id": "55fd777c895582b3b7384465",
-            "name": "mccpta_home",
-            "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">home</div>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r5c1": "",
-                "r6c1": "",
-                "r7c1": "",
-                "r8c1": "",
-                "r9c1": [
-                    {
-                        "widgetName": "MediaDetail",
-                        "widgetInfo": {
-                            "module": "media",
-                            "condition": {
-                                "name": "mccpta_activities"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-19T14:55:56.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "55fd77e0895582b3b7384466",
             "name": "mccpta_advocacy",
             "description": "",
@@ -2135,6 +2061,92 @@
             "group": "",
             "status": "",
             "create_date": "2015-09-20T18:53:40.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55fd777c895582b3b7384465",
+            "name": "mccpta_home",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "MediaDetail",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "name": "mccpta_title_image"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "",
+                                "content": "<div style=\"min-height:400px;\"></div>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": [
+                    {
+                        "widgetName": "MediaDetail",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "name": "mccpta_activities"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-19T14:55:56.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
