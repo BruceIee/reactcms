@@ -48,7 +48,7 @@
             "type": "string"
         }
     },
-    "count":23,
+    "count":24,
     "items": [
         {
             "_id": "55f43094ff7bbce2378fcce0",
@@ -433,6 +433,21 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
+            "_class": "article"
+        },
+        {
+            "_id": "56035a0608c55fa0117abaa1",
+            "title": "mccpta_fall_training",
+            "content": "<h4>MCCPTA Fall Training</h4>\r\n<br/>\r\n<p>\r\nAll PTA leaders and volunteers (including students) are invited to attend Fall Training with workshops that will cover a wide range of topics, including:\r\n</p>\r\n<ul>\r\n<li>PTA Presidents and Vice Presidents</li>\r\n<li>Required Financial training and budgeting/treasurer tools</li>\r\n<li>Secretary</li>\r\n<li>Spanish language sessions on PTA basics and MCPS</li>\r\n<li>Membership</li>\r\n<li>Bylaws</li>\r\n<li>Parent and family engagement</li>\r\n<li>Fundraising</li>\r\n</ul>\r\n<p>\r\nand many more!\r\n</p>",
+            "type": "mccpta",
+            "image": null,
+            "image_link": "",
+            "image_style": null,
+            "status": "active",
+            "create_date": "2015-09-24T02:03:50.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-24T02:07:04.000Z",
+            "edit_by": "admin",
             "_class": "article"
         }
     ]

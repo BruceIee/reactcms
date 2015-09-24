@@ -338,7 +338,19 @@
                         }
                     }
                 ],
-                "r3c1": "",
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_fall_training"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
                 "r3c2": [
                     {
                         "widgetName": "ArticleDetail",
