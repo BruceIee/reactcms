@@ -2,6 +2,7 @@
  * node cmd.js initdb
  * node cmd.js import [project_name]
  * node cmd.js backup [project_name]
+ * node cmd.js load [project_name]
  */
 
 var fs = require('fs');
@@ -45,11 +46,11 @@ switch (operation) {
     case 'backup':
         setting['operation'] = 'backup';
         break;
-    case 'switch':
-        setting['operation'] = 'switch';
+    case 'load':
+        setting['operation'] = 'load';
         break;
     default:
-        console.log('usage:\nnode cmd.js initdb|import|backup|switch\n');
+        console.log('usage:\nnode cmd.js initdb|import|backup|load\n');
         process.exit();
 }
 
@@ -99,11 +100,14 @@ function start(setting) {
                 process.exit();
             });
             break;   
-        case 'switch':
-            switchProject(app, function() {
+        case 'load':
+            loadProject(app, function() {
                 process.exit();
             });
             break;
+        default:
+            console.log('unknown command:', setting['operation']);
+            process.exit();
         }
     });
 }
@@ -455,20 +459,21 @@ function getMatchedFilenames (path, pattern, callback) {
 }
 
 // switch to project by refreshing database data 
-function switchProject(app, callback) {    
+function loadProject(app, callback) {    
     initDb(app, function() {
         importData(app, function() {
-            setProjectFiles(app, function() {
+            loadProjectFiles(app, function() {
                 process.exit();
             });
         });
     });
 }
 
-function setProjectFiles(app, callback) {
-    console.log('>>> setProjectFiles for project:', project);
+function loadProjectFiles(app, callback) {
+    var projectPath =  './data/';
     if (project !== 'default') {
-        
+        projectPath = './data/' + project;
     }
+    console.log('>>> loadProjectFiles for ', project, '; path:', projectPath);
     callback && callback();
 }
