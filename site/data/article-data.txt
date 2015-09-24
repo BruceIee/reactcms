@@ -106,7 +106,7 @@
         },
         {
             "_id": "5603468c3c0d8dd411270540",
-            "title": "mccpta events",
+            "title": "mccpta_home_events",
             "content": "Events",
             "type": "mccpta_home_link",
             "image": {
@@ -123,8 +123,8 @@
             "status": "active",
             "create_date": "2015-09-24T00:40:44.000Z",
             "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
+            "edit_date": "2015-09-24T11:54:54.000Z",
+            "edit_by": "admin",
             "_class": "article",
             "image_style": null
         },
