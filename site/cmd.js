@@ -1,7 +1,7 @@
 /** command
  * node cmd.js initdb
- * node cmd.js import (option_projectname)
- * node cmd.js backup (option_projectname)
+ * node cmd.js import [project_name]
+ * node cmd.js backup [project_name]
  */
 
 var fs = require('fs');
@@ -33,7 +33,7 @@ var setting = tool.getDefaultSetting(rootPath);
 
 // support command shortcuts
 var operation = process.argv[2] || 'start';
-var project = process.argv[3];
+var project = process.argv[3] || 'default';
 
 switch (operation) {
     case 'initdb':
@@ -45,8 +45,11 @@ switch (operation) {
     case 'backup':
         setting['operation'] = 'backup';
         break;
+    case 'switch':
+        setting['operation'] = 'switch';
+        break;
     default:
-        console.log('usage:\nnode cmd.js initdb|import|backup\n');
+        console.log('usage:\nnode cmd.js initdb|import|backup|switch\n');
         process.exit();
 }
 
@@ -82,20 +85,25 @@ function start(setting) {
     app.db = new Database(app, function() {
         switch(setting['operation']) {
         case 'initdb':
-            initDb(app, function(){
+            initDb(app, function() {
+                process.exit();
+            });
+            break;             
+        case 'import':
+            importData(app, function() {
                 process.exit();
             });
             break;
         case 'backup':
-            backupData(app, function(){
+            backupData(app, function() {
                 process.exit();
             });
-            break;                
-        case 'import':
-            importData(app, function(){
+            break;   
+        case 'switch':
+            switchProject(app, function() {
                 process.exit();
             });
-            break;                
+            break;
         }
     });
 }
@@ -105,7 +113,7 @@ function start(setting) {
  */
 function initDb(app, callback) {
     app.db.createTables(function() {
-        console.log('----- initdb is done. -----');
+        console.log('initdb is completed.');
         callback && callback();
     });
 }
@@ -116,46 +124,38 @@ function initDb(app, callback) {
  * default to ./data
  */
 function backupData(app, callback) {
-    if (project) {
+    if (project !== 'default') {
         var backup_folder = './data/' + project;
         if ( fs.existsSync(backup_folder) ) {
             rm_rf.sync(backup_folder);  // remove 'project' folder
         }
-    }
-    else {
+    } else {
         var backup_folder = './data';
         var txt_array = glob.sync(backup_folder + '/*.txt');
-        //console.log('txt_array=',txt_array);
         txt_array.forEach( function(filename){ // synchronous remove *.txt under ./data
             fs.unlinkSync(filename);
         })
     }
-    
     console.log('backup to folder:',backup_folder);
-    
     var app_modulenames_array = [];
     var moduleArray = app.setting.modules_to_load;
-    
     for (var i in moduleArray) {
         var tmp_obj = {};
         tmp_obj['app'] = app;
         tmp_obj['modulename'] = moduleArray[i];
         app_modulenames_array.push(tmp_obj);
     } 
-
+    // backup modules
     async.forEachSeries(app_modulenames_array, backupModule, function(){
         // copy uploaded files
-        if (project) {
+        if (project !== 'default') {
             var upfile_folder = './data/' + project + '/file';
-        }
-        else {
+        } else {
             var upfile_folder = './data/file';
         }
-        
         if ( fs.existsSync(upfile_folder) ) {
             rm_rf.sync(upfile_folder);  // remove folder
         }
-        
         mkdirp.sync(upfile_folder); // recursively mkdir
         var source_path = './public/file';
         ncp(source_path, upfile_folder, function (err) { // copy folder to folder
@@ -163,13 +163,13 @@ function backupData(app, callback) {
                 console.log(err);
             }
             console.log('uploaded files copied, from ' + source_path + ' to ' + upfile_folder);
-            console.log('----- backup finished. -----');
+            console.log('backup finished.');
             callback && callback();
         });  
     });
 }
 
-function backupModule(app_moduleName, callback) { //stream
+function backupModule(app_moduleName, callback) {
     var app = app_moduleName.app;
     var moduleName = app_moduleName.modulename;
     var condition = {};
@@ -190,10 +190,9 @@ function backupModule(app_moduleName, callback) { //stream
             items: docs
         };
         
-        if (project) {
+        if (project !== 'default') {
             var filepath = './data/' + project;
-        }
-        else {
+        } else {
             var filepath = './data';
         }
 
@@ -237,7 +236,7 @@ function backupModule(app_moduleName, callback) { //stream
  * import all data files, default from ./data
  */
 function importData(app, callback) {
-    if (project) {
+    if (project !== 'default') {
         app.import_folder = './data/' + project;
     } else {
         // default is to import all data files from ./data folder
@@ -284,12 +283,12 @@ function importData(app, callback) {
                             console.log(err);
                         }
                         console.log('uploaded files copied, from ' + source_path + ' to ' + pubfile_folder);
-                        console.log('----- import finished. -----');
+                        console.log('import finished.');
                         callback && callback();
                     });
                 } else {
                     console.log('uploaded files copied, from ' + source_path + ' to ' + pubfile_folder);
-                    console.log('----- import finished. -----');
+                    console.log('import finished.');
                     callback && callback();
                 }
             }                
@@ -453,4 +452,23 @@ function getMatchedFilenames (path, pattern, callback) {
         }
         callback(names);
     })
-};
+}
+
+// switch to project by refreshing database data 
+function switchProject(app, callback) {    
+    initDb(app, function() {
+        importData(app, function() {
+            setProjectFiles(app, function() {
+                process.exit();
+            });
+        });
+    });
+}
+
+function setProjectFiles(app, callback) {
+    console.log('>>> setProjectFiles for project:', project);
+    if (project !== 'default') {
+        
+    }
+    callback && callback();
+}
