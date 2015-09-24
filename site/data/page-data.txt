@@ -126,6 +126,63 @@
             "edit_by": ""
         },
         {
+            "_id": "55fd77e9895582b3b7384467",
+            "name": "mccpta_events",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">events</div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-19T14:57:45.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
             "_id": "55fd77fc895582b3b7384468",
             "name": "mccpta_pta_leaders",
             "description": "",
@@ -385,7 +442,13 @@
                 ]
             },
             "create_date": "2015-09-24T01:57:56.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55f807d742cbf60bfae7ba5c",
@@ -1344,63 +1407,6 @@
             "group": "",
             "status": "",
             "create_date": "2015-09-19T14:57:36.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "55fd77e9895582b3b7384467",
-            "name": "mccpta_events",
-            "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<div style=\"padding-top:50px;padding-bottom:360px;\">events</div>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-19T14:57:45.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
