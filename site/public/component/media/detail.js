@@ -25,17 +25,29 @@ var MediaDetail = React.createClass({
         var content = '';
         if (this.state.image) {
             var mediaUrl = '/file/' + this.state.image.filename;
+            var mediaElement = <img src={ mediaUrl} />;
+            if (this.state.style) {
+                mediaElement = <img src={ mediaUrl} style={ this.state.style } />;
+            }
             mediaContent =
                 <div className="mediadetail-image-content">
-                    <img src={ mediaUrl} />
+                    { mediaElement }
                 </div>;
         } else if (this.state.video) {
             var mediaUrl = '/file/' + this.state.image.filename;
+            var mediaElement =
+                <video>
+                    <source src={ mediaUrl} type="video/mp4" />
+                </video>;
+            if (this.state.style) {
+                mediaElement =
+                <video style={ this.state.style } >
+                    <source src={ mediaUrl} type="video/mp4" />
+                </video>;
+            }
             mediaContent =
                 <div className="mediadetail-video-content">
-                    <video>
-                        <source src={ mediaUrl} type="video/mp4" />
-                    </video>
+                    { mediaElement }
                 </div>;
         }
         if (this.state.link) {
@@ -44,17 +56,10 @@ var MediaDetail = React.createClass({
                     { mediaContent }
                 </a>;
         }
-        if (this.state.style) {
-            content = 
-                <div className="container mediadetail-content" style={ this.state.style } >
-                    { mediaContent }
-                </div>;
-        } else {
-            content = 
-                <div className="container mediadetail-content">
-                    { mediaContent }
-                </div>;
-        }
+        content = 
+            <div className="container mediadetail-content">
+                { mediaContent }
+            </div>;
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 { content }
