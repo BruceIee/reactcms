@@ -33,6 +33,12 @@ module.exports = function(app) {
         video: {
             type: 'file'
         },
+        style: {
+            type: 'object',
+            subtype: {
+                type: 'json'
+            }
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']

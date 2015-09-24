@@ -13,6 +13,7 @@ var MediaDetail = React.createClass({
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
             { name:'description', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'link', type:'string', required:false, defaultValue:'', note:'item web link' },
+            { name:'style', type:'object', required:false, defaultValue:null, note:'item style object' },
             { name:'image', type:'object', required:false, defaultValue:null, note:'image' },
             { name:'video', type:'object', required:false, defaultValue:null, note:'video' }
         ];
@@ -38,14 +39,18 @@ var MediaDetail = React.createClass({
                 </div>;
         }
         if (this.state.link) {
-            content =
-                <div className="container mediadetail-content">
-                    <a href={ this.state.link }>
-                        { mediaContent }
-                    </a>
+            mediaContent =
+                <a href={ this.state.link }>
+                    { mediaContent }
+                </a>;
+        }
+        if (this.state.style) {
+            content = 
+                <div className="container mediadetail-content" style={ this.state.style } >
+                    { mediaContent }
                 </div>;
         } else {
-            content =
+            content = 
                 <div className="container mediadetail-content">
                     { mediaContent }
                 </div>;
