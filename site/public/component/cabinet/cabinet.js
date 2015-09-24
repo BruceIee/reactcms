@@ -16,7 +16,8 @@ var Cabinet = React.createClass({
         GraphPiechart: GraphPiechart,
         GraphScatterplot: GraphScatterplot,
         GraphLinechart: GraphLinechart,
-        GraphAreachart: GraphAreachart
+        GraphAreachart: GraphAreachart,
+        EmbedIframe: EmbedIframe
     },
 
     // attribute definitions
