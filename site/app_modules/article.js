@@ -33,6 +33,12 @@ module.exports = function(app) {
         image_link: {
             type: 'string'
         },
+        image_style: {
+            type: 'object',
+            subtype: {
+                type: 'json'
+            }
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']

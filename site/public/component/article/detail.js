@@ -14,6 +14,7 @@ var ArticleDetail = React.createClass({
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'image', type:'array', required:false, defaultValue:null, note:'item image' },
             { name:'image_link', type:'array', required:false, defaultValue:null, note:'link for item image' },
+            { name:'image_style', type:'object', required:false, defaultValue:{ width:"100%" }, note:'style for item image' },
             { name:'content', type:'string', required:false, defaultValue:'', note:'item content' }
         ];
         return attributes;
@@ -27,11 +28,11 @@ var ArticleDetail = React.createClass({
             if (this.state.image_link) {
                 imageContent =
                     <a href={ this.state.image_link } >
-                        <img src={ imageUrl} />
+                        <img src={ imageUrl} style={ this.state.image_style } />
                     </a>;
             } else {
                 imageContent =
-                    <img src={ imageUrl} />;
+                    <img src={ imageUrl} style={ this.state.image_style } />;
             }
             content = 
                 <div className="container articledetail-content">
