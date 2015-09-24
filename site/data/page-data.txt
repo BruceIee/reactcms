@@ -2102,13 +2102,12 @@
                     {
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
-                            "module": "",
-                            "condition": "",
+                            "module": "article",
+                            "condition": {
+                                "type": "mccpta_home_link"
+                            },
                             "filter": "",
-                            "data": {
-                                "title": "",
-                                "content": "<div style=\"min-height:400px;\"></div>"
-                            }
+                            "data": ""
                         }
                     }
                 ],
