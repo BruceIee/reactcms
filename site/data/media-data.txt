@@ -151,8 +151,8 @@
             "_class": "media",
             "style": {
                 "display": "block",
-                "margin-left": "auto",
-                "margin-right": "auto"
+                "marginLeft": "auto",
+                "marginRight": "auto"
             }
         },
         {
@@ -174,9 +174,9 @@
             "video": null,
             "style": {
                 "display": "block",
-                "margin-left": "auto",
-                "margin-right": "auto",
-                "margin-bottom": "25px",
+                "marginLeft": "auto",
+                "marginRight": "auto",
+                "marginBottom": "25px",
                 "width": "600px"
             },
             "status": "active",
