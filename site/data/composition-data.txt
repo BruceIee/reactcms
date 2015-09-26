@@ -48,6 +48,11 @@
             "filename": "sidenav.html",
             "data": [
                 {
+                    "name": "r0c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
                     "name": "r1c1",
                     "description": "top",
                     "width": 12
@@ -116,6 +121,11 @@
             "description": "vertical flow composition",
             "filename": "vertflow.html",
             "data": [
+                {
+                    "name": "r0c1",
+                    "description": "top",
+                    "width": 12
+                },
                 {
                     "name": "r1c1",
                     "description": "top",
