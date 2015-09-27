@@ -48,7 +48,7 @@
             "type": "string"
         }
     },
-    "count":25,
+    "count":26,
     "items": [
         {
             "_id": "56020100f21196f9089bc9ac",
@@ -487,6 +487,32 @@
             "edit_by": "",
             "_class": "article",
             "image_style": null
+        },
+        {
+            "_id": "5608052657ce8a7615fb78e5",
+            "title": "mccpta_members",
+            "content": "<p>What PTA and MCCPTA does and how PARENTS can get involvedto help their child and every child reach his or her potential! </p><p>The Montgomery County Council of Parent-Teacher Associations, Inc., (MCCPTA), an association of local PTAs/PTSAs in Montgomery County Maryland, is chartered by the Maryland PTA. Its goals, in addition to the mission and purposes of PTAs, are:</p><ul><li>To grow membership and parent involvement in PTA, to include and embrace all members of our Montgomery County Public School community.</li><li>To engage parents, staff, and students in meaningful contributions that reflect their unique strengths for the benefit of students and school communities.</li><li>To rally this engaged, growing membership in coordinated advocacy on issues of common concern.</li></ul><p>Founded in 1944, MCCPTA has grown from 15 PTAs to nearly 200. This growth reflects the vital roles PTAs have had—individually and collectively through the council—in advocating for and meeting the needs of our children.</p><p>MCCPTA uses its collective strength on a wide range of issues, from budget advocacy to programs that foster creativity and a love of the arts in our children. MCCPTA committees this year will tackle key issues of parent and student concern, offer workshops and programs, develop relationships to move PTA agendas forward, and host cultural arts showcases and student enrichment events. works to shape and advocate for school budgets consistent with school needs. </p><p>MCCPTA works closely with MCPS to provide parent perspectives and input in budget discussion, on task forces, and in study groups, and to help disseminate information about school system events, developments, and changes in school system and Board of Education policy. MCCPTA also collaborates with the County Council and other County agencies on matters that affect children and youth, keeping these officials apprised on the issues of concern and interest to parents of county students.</p>",
+            "type": "",
+            "image": [
+                {
+                    "fieldname": "image",
+                    "originalname": "parents_toolkit.jpg",
+                    "encoding": "7bit",
+                    "mimetype": "image/jpeg",
+                    "destination": "./site/public/file/",
+                    "filename": "article-image-1443366231399-parents_toolkit.jpg",
+                    "path": "site/public/file/article-image-1443366231399-parents_toolkit.jpg",
+                    "size": 86783
+                }
+            ],
+            "image_link": "",
+            "image_style": null,
+            "status": "active",
+            "create_date": "2015-09-27T15:03:02.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-27T15:03:51.000Z",
+            "edit_by": "admin",
+            "_class": "article"
         }
     ]
 }
