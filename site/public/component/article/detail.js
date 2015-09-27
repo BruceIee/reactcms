@@ -23,13 +23,9 @@ var ArticleDetail = React.createClass({
     render: function() {
         var content = '';
         if (this.state.image) {
-            
-            console.log('>>> image: ', this.state.image);
-            
-            if (this.state.image && this.state.image.length > 0) {
+            if (this.state.image.constructor.name == 'Array' && this.state.image.length > 0) {
                 this.state.image = this.state.image[0];
             }
-            
             var imageContent = '';
             var imageUrl = '/file/' + this.state.image.filename;
             if (this.state.image_link) {
