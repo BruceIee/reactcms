@@ -11,3 +11,4 @@ site/public/file/*
 site/data/site_default
 #site/data/*/*
 site/public/script/**/dist/*.js
+site/node_modules/**/dist/
