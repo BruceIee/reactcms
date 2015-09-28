@@ -169,7 +169,7 @@ function backupData(app, callback) {
             console.log('uploaded files copied, from ' + source_path + ' to ' + upfile_folder);
             console.log('backup finished.');
             callback && callback();
-        });  
+        });
     });
 }
 
@@ -182,8 +182,7 @@ function backupModule(app_moduleName, callback) {
     app.db.find(moduleName, condition, filter, function(error, docs, info){
         if (app.module[moduleName].model === null) { //no model definition
             var module_model = {};
-        }
-        else {
+        } else {
             var module_model = app.module[moduleName].model;
         }
 
@@ -228,7 +227,6 @@ function backupModule(app_moduleName, callback) {
         dataFileStream.end();
         
         console.log(util.format('module:(%s) backuped %s to %s', moduleName , docs.length, filename));
-
         dataFileStream.on('finish', function() {
             callback && callback();
         });
@@ -474,6 +472,12 @@ function loadProjectFiles(app, callback) {
     if (project !== 'default') {
         projectPath = './data/' + project;
     }
-    console.log('>>> loadProjectFiles for ', project, '; path:', projectPath);
-    callback && callback();
+    var target_path = './public/file';
+    ncp(projectPath, target_path, function (err) {
+        if (err) {
+            console.log(err);
+        }
+        console.log('project files copied from ' + projectPath + ' to ' + target_path);
+        callback && callback();
+    });  
 }
