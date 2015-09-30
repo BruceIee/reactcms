@@ -176,13 +176,12 @@
                 "display": "block",
                 "marginLeft": "auto",
                 "marginRight": "auto",
-                "marginBottom": "25px",
-                "width": "600px"
+                "marginBottom": "25px"
             },
             "status": "active",
             "create_date": "2015-09-24T00:23:02.000Z",
             "create_by": "admin",
-            "edit_date": "2015-09-24T01:59:03.000Z",
+            "edit_date": "2015-09-30T00:00:58.000Z",
             "edit_by": "admin",
             "_class": "media"
         }

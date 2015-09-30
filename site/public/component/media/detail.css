@@ -1,4 +1,9 @@
-.mediadetail-container .mediadetail-content {
+.mediadetail-container .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.mediadetail-container .mediadetail-image-content img {
     width: 100%;
 }
 
