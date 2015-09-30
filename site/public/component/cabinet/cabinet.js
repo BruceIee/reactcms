@@ -6,6 +6,7 @@ var Cabinet = React.createClass({
         BlackbootHeader: BlackbootHeader,
         BlackbootFooter: BlackbootFooter,
         SimplifyHeader: SimplifyHeader,
+        SimplifyFooter: SimplifyFooter,
         ItemDetail: ItemDetail,
         MediaDetail: MediaDetail,
         ArticleDetail: ArticleDetail,

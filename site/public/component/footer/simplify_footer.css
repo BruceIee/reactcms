@@ -1,0 +1,15 @@
+.simplifyfooter-container {
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f2f2f2;
+}
+
+.simplifyfooter-container .footer_container .container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.simplifyfooter-container .footer_container .footer-links {
+    font-size: 14px;
+}
