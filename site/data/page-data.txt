@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":32,
+    "count":33,
     "items": [
         {
             "_id": "55f497c63734a7ab20fa3561",
@@ -1960,6 +1960,93 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "560b300ae9f18df407ca55f1",
+            "name": "mccpta_home2",
+            "description": "",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "SimplifyHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<div style=\"padding:5px;\"></div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_fall_training"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "type": "mccpta_home_link"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r0c1": ""
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-30T00:42:50.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "55ff0091d4a44b411f2ccbad",
