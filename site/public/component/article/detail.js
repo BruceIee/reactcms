@@ -31,7 +31,7 @@ var ArticleDetail = React.createClass({
             if (this.state.image_link) {
                 imageContent =
                     <a href={ this.state.image_link } >
-                        <img src={ imageUrl} style={ this.state.image_style } />
+                        <img src={ imageUrl } style={ this.state.image_style } />
                     </a>;
             } else {
                 imageContent =

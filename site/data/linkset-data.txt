@@ -189,7 +189,18 @@
             "title": "Meow Central",
             "title_link": "/pages/meow_home",
             "type": "meow",
-            "image": null,
+            "image": [
+                {
+                    "fieldname": "image",
+                    "originalname": "cat06.jpg",
+                    "encoding": "7bit",
+                    "mimetype": "image/jpeg",
+                    "destination": "./site/public/file/",
+                    "filename": "linkset-image-1443572769794-cat06.jpg",
+                    "path": "site/public/file/linkset-image-1443572769794-cat06.jpg",
+                    "size": 6248
+                }
+            ],
             "links1_title": "main",
             "links1": [
                 {
@@ -221,7 +232,7 @@
             "status": "active",
             "create_date": "2015-09-15T11:50:36.000Z",
             "create_by": "admin",
-            "edit_date": "2015-09-15T12:00:48.000Z",
+            "edit_date": "2015-09-30T00:26:09.000Z",
             "edit_by": "admin",
             "_class": "linkset",
             "links4_title": "",
