@@ -4,12 +4,12 @@
     background-color: #f2f2f2;
 }
 
-.navbar-brand {
+.simplifyheader-container .navbar-brand {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
 }
 
-.navbar-brand .navbar-brand-logo {
+.simplifyheader-container .navbar-brand .navbar-brand-logo {
     height: 30px;
 }
