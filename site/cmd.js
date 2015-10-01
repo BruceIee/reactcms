@@ -464,18 +464,3 @@ function loadProject(app, callback) {
         });
     });
 }
-
-function loadProjectFiles(app, callback) {
-    var projectPath =  './data/';
-    if (project !== 'default') {
-        projectPath = './data/' + project;
-    }
-    var target_path = './public/file';
-    ncp(projectPath, target_path, function (err) {
-        if (err) {
-            console.log(err);
-        }
-        console.log('project files copied from ' + projectPath + ' to ' + target_path);
-        callback && callback();
-    });  
-}
