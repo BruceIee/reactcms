@@ -161,7 +161,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -202,7 +202,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -235,7 +235,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -276,7 +276,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -310,7 +310,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -351,7 +351,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -385,7 +385,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -425,7 +425,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -452,7 +452,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -493,7 +493,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -522,7 +522,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -563,7 +563,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -596,7 +596,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -637,7 +637,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -670,7 +670,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -711,7 +711,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -743,7 +743,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -784,7 +784,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -812,7 +812,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -853,7 +853,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -881,7 +881,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -923,7 +923,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -951,7 +951,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -993,7 +993,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1022,7 +1022,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1051,7 +1051,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1120,7 +1120,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1154,7 +1154,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1195,7 +1195,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1255,7 +1255,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1284,7 +1284,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1312,7 +1312,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1341,7 +1341,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1370,7 +1370,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1411,7 +1411,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1443,7 +1443,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -1510,7 +1510,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -1579,7 +1579,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -1646,7 +1646,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -1715,7 +1715,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1784,7 +1784,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1807,7 +1807,7 @@
         },
         {
             "_id": "560b300ae9f18df407ca55f1",
-            "name": "mccpta_home2",
+            "name": "mccpta_home",
             "description": "",
             "composition": "sidenav",
             "content": {
@@ -1900,7 +1900,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1941,7 +1941,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -1974,7 +1974,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -2026,7 +2026,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -2070,7 +2070,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -2124,7 +2124,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -2193,7 +2193,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -2235,7 +2235,7 @@
                 "r4c1": "",
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -2257,92 +2257,6 @@
             "edit_by": ""
         },
         {
-            "_id": "560358a408c55fa0117abaa0",
-            "name": "mccpta_home",
-            "composition": "sidenav",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "MediaDetail",
-                        "widgetInfo": {
-                            "module": "media",
-                            "condition": {
-                                "name": "mccpta_title_image"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "title": "mccpta_fall_training"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "type": "mccpta_home_link"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r4c1": "",
-                "r5c1": "",
-                "r6c1": "",
-                "r7c1": "",
-                "r8c1": "",
-                "r9c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "create_date": "2015-09-24T01:57:56.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
             "_id": "55ff0091d4a44b411f2ccbad",
             "name": "mccpta_delegates_assembly",
             "description": "",
@@ -2350,7 +2264,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "BlackbootHeader",
+                        "widgetName": "SimplifyHeader",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
@@ -2403,7 +2317,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "BlackbootFooter",
+                        "widgetName": "SimplifyFooter",
                         "widgetInfo": {
                             "module": "linkset",
                             "condition": {
