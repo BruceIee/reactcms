@@ -460,9 +460,7 @@ function getMatchedFilenames (path, pattern, callback) {
 function loadProject(app, callback) {    
     initDb(app, function() {
         importData(app, function() {
-            loadProjectFiles(app, function() {
-                process.exit();
-            });
+            process.exit();
         });
     });
 }
