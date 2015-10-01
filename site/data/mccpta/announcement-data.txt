@@ -1,0 +1,39 @@
+{
+    "name":"announcement",
+    "module":    {
+        "type": {
+            "type": "string"
+        },
+        "content": {
+            "type": "string"
+        },
+        "content_markdown": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
