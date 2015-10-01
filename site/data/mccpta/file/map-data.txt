@@ -1,7 +1,0 @@
-{
-    "name":"map",
-    "module":    {},
-    "count":0,
-    "items": [
-    ]
-}

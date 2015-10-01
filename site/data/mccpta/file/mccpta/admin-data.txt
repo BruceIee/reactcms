@@ -1,7 +1,0 @@
-{
-    "name":"admin",
-    "module":    {},
-    "count":0,
-    "items": [
-    ]
-}

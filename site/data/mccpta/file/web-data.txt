@@ -1,7 +1,0 @@
-{
-    "name":"web",
-    "module":    {},
-    "count":0,
-    "items": [
-    ]
-}
