@@ -1,0 +1,189 @@
+{
+    "name":"media",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "link": {
+            "type": "text"
+        },
+        "type": {
+            "type": "string",
+            "values": [
+                "image",
+                "video"
+            ]
+        },
+        "image": {
+            "type": "file"
+        },
+        "video": {
+            "type": "file"
+        },
+        "style": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":5,
+    "items": [
+        {
+            "_id": "55fab3831f6ec3c422121e18",
+            "name": "cat01",
+            "description": "cat01 image",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat01.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442493315065-cat01.jpg",
+                "path": "site/public/file/media-image-1442493315065-cat01.jpg",
+                "size": 6390
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-17T12:35:15.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media",
+            "style": null
+        },
+        {
+            "_id": "55fab3b91f6ec3c422121e19",
+            "name": "cat01link",
+            "description": "cat01 image with link",
+            "link": "http://www.cat.com/",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat01.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442493369118-cat01.jpg",
+                "path": "site/public/file/media-image-1442493369118-cat01.jpg",
+                "size": 6390
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-17T12:36:09.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media",
+            "style": null
+        },
+        {
+            "_id": "55fb9236fcf06cce0a5fd340",
+            "name": "cat07",
+            "description": "cat07",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat07.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442550326791-cat07.jpg",
+                "path": "site/public/file/media-image-1442550326791-cat07.jpg",
+                "size": 6912
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-18T04:25:26.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media",
+            "style": null
+        },
+        {
+            "_id": "5602042df21196f9089bc9ad",
+            "name": "mccpta_activities",
+            "description": "activities of mccpta",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "activity_images.png",
+                "encoding": "7bit",
+                "mimetype": "image/png",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1442972717422-activity_images.png",
+                "path": "site/public/file/media-image-1442972717422-activity_images.png",
+                "size": 290658
+            },
+            "video": null,
+            "status": "active",
+            "create_date": "2015-09-23T01:45:17.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-24T00:18:54.000Z",
+            "edit_by": "admin",
+            "_class": "media",
+            "style": {
+                "display": "block",
+                "marginLeft": "auto",
+                "marginRight": "auto"
+            }
+        },
+        {
+            "_id": "560342663c0d8dd41127053e",
+            "name": "mccpta_title_image",
+            "description": "",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "mccpta_title_image.png",
+                "encoding": "7bit",
+                "mimetype": "image/png",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1443054182395-mccpta_title_image.png",
+                "path": "site/public/file/media-image-1443054182395-mccpta_title_image.png",
+                "size": 475968
+            },
+            "video": null,
+            "style": {
+                "display": "block",
+                "marginLeft": "auto",
+                "marginRight": "auto",
+                "marginBottom": "25px"
+            },
+            "status": "active",
+            "create_date": "2015-09-24T00:23:02.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-09-30T00:00:58.000Z",
+            "edit_by": "admin",
+            "_class": "media"
+        }
+    ]
+}
