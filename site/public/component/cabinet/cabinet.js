@@ -26,6 +26,7 @@ var Cabinet = React.createClass({
     getAttributes: function() {
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
+            { name:'widget', type:'string', require:false, defaultValue:'', note:'widget name' },
             { name:'items', type:'array', required:false, defaultValue:[], note:'items' }
         ];
         return attributes;
@@ -33,9 +34,15 @@ var Cabinet = React.createClass({
     
     render: function() {
         var widgets = [];
+        
+        console.log('>>> widget name:', this.state.widget);
+        var component = this.components[this.state.widget];
+        
         for (var i = 0; i < this.state.items.length; i++) {
             var item = this.state.items[i];
-            var component = this.components[item.type];
+            if (item.type !== this.state.widget) {
+                component = this.components[item.type];
+            }
             if (component) {
                 var widget = React.createElement(this.components[item.type], {
                     key: item.key,
@@ -54,5 +61,4 @@ var Cabinet = React.createClass({
             </div>
         );
     }
-    
 });
