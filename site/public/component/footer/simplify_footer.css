@@ -13,3 +13,12 @@
 .simplifyfooter-container .footer_container .footer-links {
     font-size: 14px;
 }
+
+.simplifyfooter-container .footer-links {
+    margin-bottom: 5px;
+}
+
+.simplifyfooter-container .footer-links ul li {
+    display: inline-block;
+    width: 20%;
+}

@@ -39,18 +39,21 @@ var SimplifyFooter = React.createClass({
         return (
             <div className="navbar simplifyfooter-container">
                 <div className="footer_container container">
-                    <div className="footer-links-primary col-md-3 footer-links">
+                    <div className="row footer-links footer-links-1">
                         <ul className="list-unstyled">{ links1Elements }</ul>
                     </div>
-                    <div className="footer-links-secondary col-md-3 footer-links">
+                    <div className="row footer-links footer-links-2">
                         <ul className="list-unstyled">{ links2Elements }</ul>
                     </div>
-                    <div className="footer-links-tertiary col-md-3 footer-links">
+                    
+                    <div className="row footer-links footer-links-3 ">
                         <ul className="list-unstyled">{ links3Elements }</ul>
                     </div>
-                    <div className="footer-links-forth col-md-3 footer-links">
+                    
+                    <div className="row footer-links footer-links-4">
                         <ul className="list-unstyled">{ links4Elements }</ul>
                     </div>
+                    
                 </div>
             </div>
         );
