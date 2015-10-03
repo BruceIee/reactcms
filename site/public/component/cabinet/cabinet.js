@@ -2,6 +2,9 @@
 var Cabinet = React.createClass({
     name: 'cabinet',
     mixins: [getCommonMixin],
+    
+    // acceptMultiple indicates whether component can take multiple items as input
+    // for example: carousel takes multiple media items as input
     components: {
         BlackbootHeader: { widget:BlackbootHeader },
         BlackbootFooter: { widget:BlackbootFooter },
@@ -18,7 +21,7 @@ var Cabinet = React.createClass({
         GraphScatterplot: { widget:GraphScatterplot },
         GraphLinechart: { widget:GraphLinechart },
         GraphAreachart: { widget:GraphAreachart },
-        Carousel: { widget:Carousel },
+        Carousel: { widget:Carousel, acceptMultiple:true },
         EmbedIframe: { widget:EmbedIframe }
     },
     
@@ -35,28 +38,57 @@ var Cabinet = React.createClass({
     // item can overwrite common widget name in this.state.widget
     render: function() {
         var widgets = [];
-        
         var component = this.components[this.state.widget];
-        console.log('>>> widget name:', this.state.widget, component.constructor.name);
-        /*
-        for (var p in component) {
-            console.log('>>> p:', p, component[p]);
-        }
-        */
-        for (var i = 0; i < this.state.items.length; i++) {
-            var item = this.state.items[i];
-            if (item.type !== this.state.widget) {
-                component = this.components[item.type];
+        //console.log('>>> widget name:', this.state.widget, component.constructor.name);
+        
+        console.log('>>> state.items:', this.state.items);
+        
+        if (component.acceptMultiple) {
+           console.log('>>> component acceptMultiple - ', component);
+           
+           
+            for (var i = 0; i < this.state.items.length; i++) {
+                var item = this.state.items[i];
+                if (item.type !== this.state.widget) {
+                    component = this.components[item.type];
+                }
+                if (component) {
+                    var widget = React.createElement(component.widget, {
+                        key: item.key,
+                        ref: item.name,
+                        data: item.data
+                    });
+                    widgets.push(widget);
+                } else {
+                    console.log('component for ' + item.type + ' is not found in Cabinet');
+                }
             }
-            if (component) {
-                var widget = React.createElement(component.widget, {
-                    key: item.key,
-                    ref: item.name,
-                    data: item.data
-                });
-                widgets.push(widget);
-            } else {
-                console.log('component for ' + item.type + ' is not found in Cabinet');
+            
+           /*
+            var widget = React.createElement(component.widget, {
+                key: this.state.widget,
+                ref: this.state.widget,
+                data: this.state.items
+            });
+            widgets.push(widget);
+            */
+           
+        } else {
+            for (var i = 0; i < this.state.items.length; i++) {
+                var item = this.state.items[i];
+                if (item.type !== this.state.widget) {
+                    component = this.components[item.type];
+                }
+                if (component) {
+                    var widget = React.createElement(component.widget, {
+                        key: item.key,
+                        ref: item.name,
+                        data: item.data
+                    });
+                    widgets.push(widget);
+                } else {
+                    console.log('component for ' + item.type + ' is not found in Cabinet');
+                }
             }
         }
         return (
