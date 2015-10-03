@@ -49,7 +49,7 @@
             "type": "string"
         }
     },
-    "count":5,
+    "count":9,
     "items": [
         {
             "_id": "55fab3831f6ec3c422121e18",
@@ -183,6 +183,106 @@
             "create_by": "admin",
             "edit_date": "2015-09-30T00:00:58.000Z",
             "edit_by": "admin",
+            "_class": "media"
+        },
+        {
+            "_id": "560ff5ef7c9bbc3148833381",
+            "name": "cat10",
+            "description": "cat image",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat10.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1443886575228-cat10.jpg",
+                "path": "site/public/file/media-image-1443886575228-cat10.jpg",
+                "size": 5019
+            },
+            "video": null,
+            "style": null,
+            "status": "active",
+            "create_date": "2015-10-03T15:36:15.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "560ff60f7c9bbc3148833382",
+            "name": "cat11",
+            "description": "cat image",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat11.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1443886607433-cat11.jpg",
+                "path": "site/public/file/media-image-1443886607433-cat11.jpg",
+                "size": 11159
+            },
+            "video": null,
+            "style": null,
+            "status": "active",
+            "create_date": "2015-10-03T15:36:47.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "560ff62d7c9bbc3148833383",
+            "name": "cat08",
+            "description": "cat image",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat08.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1443886637250-cat08.jpg",
+                "path": "site/public/file/media-image-1443886637250-cat08.jpg",
+                "size": 10828
+            },
+            "video": null,
+            "style": null,
+            "status": "active",
+            "create_date": "2015-10-03T15:37:17.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "media"
+        },
+        {
+            "_id": "560ff6497c9bbc3148833384",
+            "name": "cat02",
+            "description": "cat image",
+            "link": "",
+            "type": "image",
+            "image": {
+                "fieldname": "image",
+                "originalname": "cat02.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "media-image-1443886665288-cat02.jpg",
+                "path": "site/public/file/media-image-1443886665288-cat02.jpg",
+                "size": 10336
+            },
+            "video": null,
+            "style": null,
+            "status": "active",
+            "create_date": "2015-10-03T15:37:45.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
             "_class": "media"
         }
     ]
