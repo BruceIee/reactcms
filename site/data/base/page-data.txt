@@ -57,7 +57,7 @@
                                 "title": "ReactCMS",
                                 "links1": [
                                     {
-                                        "link": "/",
+                                        "link": "/pages/home",
                                         "text": "HOME"
                                     }
                                 ],
@@ -123,7 +123,7 @@
                             "data": {
                                 "links1": [
                                     {
-                                        "link": "/",
+                                        "link": "/pages/home",
                                         "text": "Home"
                                     },
                                     {
@@ -145,7 +145,7 @@
                                         "text": "Contact"
                                     },
                                     {
-                                        "link": "/about",
+                                        "link": "/pages/about",
                                         "text": "About Us"
                                     }
                                 ],
@@ -193,7 +193,7 @@
                                 "title": "ReactCMS",
                                 "links1": [
                                     {
-                                        "link": "/",
+                                        "link": "/pages/home",
                                         "text": "HOME"
                                     }
                                 ],
@@ -259,7 +259,7 @@
                             "data": {
                                 "links1": [
                                     {
-                                        "link": "/",
+                                        "link": "/pages/home",
                                         "text": "Home"
                                     },
                                     {
@@ -277,11 +277,11 @@
                                 ],
                                 "links2": [
                                     {
-                                        "link": "/contact",
+                                        "link": "/",
                                         "text": "Contact"
                                     },
                                     {
-                                        "link": "/about",
+                                        "link": "/pages/about",
                                         "text": "About Us"
                                     }
                                 ],
