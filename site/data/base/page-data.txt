@@ -48,7 +48,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "SimplifyHeader",
+                        "widgetName": "BlackbootHeader",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -115,7 +115,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "SimplifyFooter",
+                        "widgetName": "BlackbootFooter",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -184,7 +184,7 @@
             "content": {
                 "r1c1": [
                     {
-                        "widgetName": "SimplifyHeader",
+                        "widgetName": "BlackbootHeader",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
@@ -251,7 +251,7 @@
                 ],
                 "r99c1": [
                     {
-                        "widgetName": "SimplifyFooter",
+                        "widgetName": "BlackbootFooter",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
