@@ -3,25 +3,25 @@ var Cabinet = React.createClass({
     name: 'cabinet',
     mixins: [getCommonMixin],
     components: {
-        BlackbootHeader: BlackbootHeader,
-        BlackbootFooter: BlackbootFooter,
-        SimplifyHeader: SimplifyHeader,
-        SimplifyFooter: SimplifyFooter,
-        ItemDetail: ItemDetail,
-        MediaDetail: MediaDetail,
-        ArticleDetail: ArticleDetail,
-        LinksetDetail: LinksetDetail,
-        LinksetDetail2: LinksetDetail2,
-        GraphBartest: GraphBartest,
-        GraphBarchart: GraphBarchart,
-        GraphPiechart: GraphPiechart,
-        GraphScatterplot: GraphScatterplot,
-        GraphLinechart: GraphLinechart,
-        GraphAreachart: GraphAreachart,
-        Carousel: Carousel,
-        EmbedIframe: EmbedIframe
+        BlackbootHeader: { widget:BlackbootHeader },
+        BlackbootFooter: { widget:BlackbootFooter },
+        SimplifyHeader: { widget:SimplifyHeader },
+        SimplifyFooter: { widget:SimplifyFooter },
+        ItemDetail: { widget:ItemDetail },
+        MediaDetail: { widget:MediaDetail },
+        ArticleDetail: { widget:ArticleDetail },
+        LinksetDetail: { widget:LinksetDetail },
+        LinksetDetail2: { widget:LinksetDetail2 },
+        GraphBartest: { widget:GraphBartest },
+        GraphBarchart: { widget:GraphBarchart },
+        GraphPiechart: { widget:GraphPiechart },
+        GraphScatterplot: { widget:GraphScatterplot },
+        GraphLinechart: { widget:GraphLinechart },
+        GraphAreachart: { widget:GraphAreachart },
+        Carousel: { widget:Carousel },
+        EmbedIframe: { widget:EmbedIframe }
     },
-
+    
     // attribute definitions
     getAttributes: function() {
         var attributes = [
@@ -36,16 +36,20 @@ var Cabinet = React.createClass({
     render: function() {
         var widgets = [];
         
-        console.log('>>> widget name:', this.state.widget);
         var component = this.components[this.state.widget];
-        
+        console.log('>>> widget name:', this.state.widget, component.constructor.name);
+        /*
+        for (var p in component) {
+            console.log('>>> p:', p, component[p]);
+        }
+        */
         for (var i = 0; i < this.state.items.length; i++) {
             var item = this.state.items[i];
             if (item.type !== this.state.widget) {
                 component = this.components[item.type];
             }
             if (component) {
-                var widget = React.createElement(this.components[item.type], {
+                var widget = React.createElement(component.widget, {
                     key: item.key,
                     ref: item.name,
                     data: item.data
