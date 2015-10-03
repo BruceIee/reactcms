@@ -18,6 +18,7 @@ var Cabinet = React.createClass({
         GraphScatterplot: GraphScatterplot,
         GraphLinechart: GraphLinechart,
         GraphAreachart: GraphAreachart,
+        Carousel: Carousel,
         EmbedIframe: EmbedIframe
     },
 
