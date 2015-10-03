@@ -26,12 +26,13 @@ var Cabinet = React.createClass({
     getAttributes: function() {
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
-            { name:'widget', type:'string', require:false, defaultValue:'', note:'widget name' },
+            { name:'widget', type:'string', require:false, defaultValue:'', note:'common widget name' },
             { name:'items', type:'array', required:false, defaultValue:[], note:'items' }
         ];
         return attributes;
     },
     
+    // item can overwrite common widget name in this.state.widget
     render: function() {
         var widgets = [];
         
