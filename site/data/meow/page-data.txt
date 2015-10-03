@@ -404,24 +404,20 @@
                             "data": {
                                 "items": [
                                     {
-                                        "image": "/image/sample/desert.jpg",
+                                        "image": "/file/media-image-1443886665288-cat02.jpg",
                                         "text": "slide 1"
                                     },
                                     {
-                                        "image": "/image/sample/lighthouse.jpg",
+                                        "image": "/file/media-image-1443886637250-cat08.jpg",
                                         "text": "slide 2"
                                     },
                                     {
-                                        "image": "/image/sample/fallmum.jpg",
+                                        "image": "/file/media-image-1443886607433-cat11.jpg",
                                         "text": "slide 3"
                                     },
                                     {
-                                        "image": "/image/sample/jellyfish.jpg",
+                                        "image": "/file/media-image-1443886575228-cat10.jpg",
                                         "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/image/sample/koala.jpg",
-                                        "text": "slide 5"
                                     }
                                 ]
                             }
