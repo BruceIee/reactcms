@@ -41,6 +41,7 @@ var Cabinet = React.createClass({
         var component = this.components[this.state.widget];
         if (component.acceptMultiple) {
             if (this.state.items.length == 1) {
+                // when there is only one item, no need to pacakge it
                 var item = this.state.items[0];
                 var widget = React.createElement(component.widget, {
                     key: item.key,
@@ -49,6 +50,8 @@ var Cabinet = React.createClass({
                 });
                 widgets.push(widget);
             } else {
+                // when component accepts mutliple entries, the items in state needs to be
+                // packaged into one entry with multiple items inside
                 var items = [];
                 for (var i = 0; i < this.state.items.length; i++) {
                     var item = this.state.items[i];
@@ -68,6 +71,7 @@ var Cabinet = React.createClass({
                 widgets.push(widget);
             }
         } else {
+            // when component doesn't accpet multiple entries, treat each item as one component
             for (var i = 0; i < this.state.items.length; i++) {
                 var item = this.state.items[i];
                 if (item.type !== this.state.widget) {
