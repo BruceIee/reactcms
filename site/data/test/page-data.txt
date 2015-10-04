@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":2,
+    "count":3,
     "items": [
         {
             "_id": "55e115fb9346d92f1ef4eeed",
@@ -324,6 +324,64 @@
             "create_by": "",
             "edit_date": "",
             "edit_by": ""
+        },
+        {
+            "_id": "561075f3282c285713d8bfe7",
+            "name": "carousel1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                                        "text": "slide 1"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                                        "text": "slide 2"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                                        "text": "slide 3"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                                        "text": "slide 4"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                                        "text": "slide 5"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r99c1": ""
+            },
+            "create_date": "2015-10-04T00:42:27.000Z",
+            "_class": "page"
         }
     ]
 }
