@@ -39,82 +39,8 @@
             "type": "string"
         }
     },
-    "count":18,
+    "count":19,
     "items": [
-        {
-            "_id": "55fd77e0895582b3b7384466",
-            "name": "mccpta_advocacy",
-            "description": "",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "SimplifyHeader",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_header"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "section",
-                                "content": "<h4 style=\"padding-top:30px;\">Advocacy</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "article",
-                            "condition": {
-                                "title": "mccpta_advocacy"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r4c1": "",
-                "r99c1": [
-                    {
-                        "widgetName": "SimplifyFooter",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "mccpta_footer"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r5c1": "",
-                "r6c1": "",
-                "r7c1": "",
-                "r8c1": "",
-                "r9c1": ""
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-09-19T14:57:36.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
         {
             "_id": "55ff015bd4a44b411f2ccbb4",
             "name": "mccpta_painless_fundraising",
@@ -1088,6 +1014,201 @@
             "create_by": "",
             "edit_date": "",
             "edit_by": ""
+        },
+        {
+            "_id": "5610a34e282c285713d8bfe9",
+            "name": "mccpta_carousel",
+            "description": "",
+            "composition": "sidenav",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "SimplifyHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<div style=\"padding:5px;\"></div>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/article-image-1443055189937-advocacy.png",
+                                        "text": ""
+                                    },
+                                    {
+                                        "image": "/file/article-image-1443055244177-events.png",
+                                        "text": ""
+                                    },
+                                    {
+                                        "image": "/file/article-image-1443055296732-soca.png",
+                                        "text": ""
+                                    },
+                                    {
+                                        "image": "/file/article-image-1443055341170-engage.png",
+                                        "text": ""
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/article-image-1443055189937-advocacy.png",
+                                        "text": ""
+                                    },
+                                    {
+                                        "image": "/file/article-image-1443055244177-events.png",
+                                        "text": ""
+                                    },
+                                    {
+                                        "image": "/file/article-image-1443055296732-soca.png",
+                                        "text": ""
+                                    },
+                                    {
+                                        "image": "/file/article-image-1443055341170-engage.png",
+                                        "text": ""
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "SimplifyFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r0c1": ""
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-04T03:55:58.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55fd77e0895582b3b7384466",
+            "name": "mccpta_advocacy",
+            "description": "",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "SimplifyHeader",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_header"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "section",
+                                "content": "<h4 style=\"padding-top:30px;\">Advocacy</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "article",
+                            "condition": {
+                                "title": "mccpta_advocacy"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r4c1": "",
+                "r99c1": [
+                    {
+                        "widgetName": "SimplifyFooter",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "mccpta_footer"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-09-19T14:57:36.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "55ff0091d4a44b411f2ccbad",
