@@ -66,93 +66,6 @@
             "image_style": null
         },
         {
-            "_id": "55f43094ff7bbce2378fcce0",
-            "title": "cat02",
-            "content": "<h4>cat 02</h4>\r\n<p>Test article for cat02</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-            "type": "mediatext",
-            "image": {
-                "fieldname": "image",
-                "originalname": "cat02.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "./site/public/file/",
-                "filename": "989ca11baaa16ae0e103338cf33b0880",
-                "path": "site/public/file/989ca11baaa16ae0e103338cf33b0880",
-                "size": 4581
-            },
-            "status": "active",
-            "create_date": "2015-09-12T14:03:00.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article",
-            "image_link": "",
-            "image_style": null
-        },
-        {
-            "_id": "55f4976d3734a7ab20fa3560",
-            "title": "cat03",
-            "content": "<h4>cat03 with image link</h4>\r\n<p>National PTA is pleased to announce that 124 schools and PTAs, representing 33 states and one Department of Defense school in Turkey, have been recognized as 2015-2017 National PTA Schools of Excellence. The National PTA School of Excellence designation honors accomplishments in building strong, effective family-school partnerships, which are proven to make a difference for students and schools.</p>",
-            "type": "mediatext",
-            "image": {
-                "fieldname": "image",
-                "originalname": "cat03.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "./site/public/file/",
-                "filename": "18d2d072b22fb0856ccfa7759317601f",
-                "path": "site/public/file/18d2d072b22fb0856ccfa7759317601f",
-                "size": 5812
-            },
-            "image_link": "http://pta.org",
-            "status": "active",
-            "create_date": "2015-09-12T21:21:49.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article",
-            "image_style": null
-        },
-        {
-            "_id": "55f430c7ff7bbce2378fcce1",
-            "title": "text01",
-            "content": "<h4>text 01</h4>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
-            "type": "plaintext",
-            "image": null,
-            "status": "active",
-            "create_date": "2015-09-12T14:03:51.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article",
-            "image_link": "",
-            "image_style": null
-        },
-        {
-            "_id": "55f42e45bc726b40367c7e1f",
-            "title": "cat01",
-            "content": "<h4>cat 01</h4>\r\n<p>Test article for cat01</p>\r\n<p>The 2nd paragraph. Ipsum loptom</p>",
-            "type": "mediatext",
-            "image": {
-                "fieldname": "image",
-                "originalname": "cat01.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "./site/public/file/",
-                "filename": "65cb45e065f86ebba3d58833c9a2358b",
-                "path": "site/public/file/65cb45e065f86ebba3d58833c9a2358b",
-                "size": 6390
-            },
-            "status": "active",
-            "create_date": "2015-09-12T13:53:09.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "article",
-            "image_link": "",
-            "image_style": null
-        },
-        {
             "_id": "56020100f21196f9089bc9ac",
             "title": "mccpta_committee_footer",
             "content": "<br/>\r\n<p>\r\nInterested in serving as an MCCPTA Committee Chair or Co-Chair?  \r\n</p>\r\n<p>\r\nContact our Vice President for Educational Issues at vpedissues@mccpta.com\r\nCommittee Chairs are elected by the MCCPTA Executive Committee\r\n</p>\r\n",
@@ -416,21 +329,6 @@
             "_class": "article"
         },
         {
-            "_id": "55f430eaff7bbce2378fcce2",
-            "title": "text02",
-            "content": "<p><span style=\"font-weight: bold;\">text 99</span></p><p>Lorem ipsum dolor Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum end.</p>",
-            "type": "plaintext",
-            "image": null,
-            "status": "active",
-            "create_date": "2015-09-12T14:04:26.000Z",
-            "create_by": "admin",
-            "edit_date": "2015-09-27T14:37:26.000Z",
-            "edit_by": "admin",
-            "_class": "article",
-            "image_link": "",
-            "image_style": null
-        },
-        {
             "_id": "5603468c3c0d8dd411270540",
             "title": "mccpta_home_events",
             "content": "Events",
@@ -472,7 +370,7 @@
         {
             "_id": "56020757f21196f9089bc9ae",
             "title": "mccpta_presidents_toolkit",
-            "content": "<p>\r\nThere are eight (8) Standards of Continuing Affiliation (SoCA) requirements mandated and monitored by Maryland PTA to maintain the good standing of a local PTA/PTSA. The treasurer is responsible for taking a lead role in completing five of these requirements.  Good standing not only preserves the unit’s non-profit 501(c)3 status, but it ensures that students can participate in the Reflections program through the National PTA level and allows delegates to attend and participate in the Maryland PTA State Convention!\r\n</p>\r\n<br/>\r\n<label>Guidebooks</label>\r\n<p>\r\nThese resource will help keep the President and Board on top of these requirements and other must-dos for PTAs all year long.  It's helpful for the President to be knowledgeable about all the financial requirements and practices, as well.\r\n<ul>\r\n<li>Updated Timeline for PTA Leaders</li>\r\n<li>Local PTA President’s Guidebook: Updated June 2015</li>\r\n<li>Local PTA Treasurer’s Guidebook: Updated June 2015</li>\r\n</ul>\r\n</p>\r\n<p>\r\nInsurance Information and Forms  Make sure your PTA has the proper insurance coverage for all your PTA events. For questions, contact Knight Insurance.\r\n<ul>\r\n<li>Family Waivers</li>\r\n<li>Parent Waiver</li>\r\n<li>Vendor Agreement</li>\r\n<li>Hold Harmless Agreement</li>\r\n</ul>\r\n</p>\r\n<p>\r\nMCCPTA Blue Book form Provide this information for the MCCPTA Blue Book, or Directory, by June 30.  Fill-in electronically, save as your PTA name and return to the MCCPTA Office via email or print and mail in to the office.  All PTAs will receive a copy of the MCCPTA Blue Book in the fall.  MD PTA Local Unit Contact Information Sheet  This information is a Maryland PTA requirement and must be on file for your PTA to receive its membership cards. The form should be completed within two (2) weeks of your PTA elections and submitted directly to MD PTA.\r\n</p>\r\n<p>\r\nMCCPTA Membership Dues Invoice It is strongly recommended that local PTAs submit dues payment to MCCPTA and MD PTA at the same time (in separate payments).  This practice will ensure consistency in membership records between MCCPTA and Maryland PTA, and is easier on the local Treasurer.    \r\n</p>\r\n<p>\r\nRunning an Effective Meeting: CLICK HERE for Meeting Tips. \r\nThis sheet will help you organize an efficient, productive business meeting for your PTA.  \r\n</p>\r\n<p>\r\nParliamentary Procedures (or Robert's Rules of Order)\r\nCLICK HERE for a tip sheet and CLICK HERE for a brief version with additional explanation and information.  \r\n</p>\r\n<p>\r\nNeed help? Your cluster coordinator and area vice president have a wealth of experience, and are just an email or phone call away!\r\n</p>\r\n",
+            "content": "<p>\r\nThere are eight (8) Standards of Continuing Affiliation (SoCA) requirements mandated and monitored by Maryland PTA to maintain the good standing of a local PTA/PTSA. The treasurer is responsible for taking a lead role in completing five of these requirements.  Good standing not only preserves the unit’s non-profit 501(c)3 status, but it ensures that students can participate in the Reflections program through the National PTA level and allows delegates to attend and participate in the Maryland PTA State Convention!\r\n</p>\r\n<br/>\r\n<label>Guidebooks</label>\r\n<p>\r\nThese resource will help keep the President and Board on top of these requirements and other must-dos for PTAs all year long.  It's helpful for the President to be knowledgeable about all the financial requirements and practices, as well.\r\n<ul>\r\n<li>Updated Timeline for PTA Leaders</li>\r\n<li>Local PTA President’s Guidebook: Updated June 2015</li>\r\n<li>Local PTA Treasurer’s Guidebook: Updated June 2015</li>\r\n</ul>\r\n</p>\r\n<p>\r\nInsurance Information and Forms  Make sure your PTA has the proper insurance coverage for all your PTA events. For questions, contact Knight Insurance.\r\n<ul>\r\n<li>Family Waivers</li>\r\n<li>Parent Waiver</li>\r\n<li>Vendor Agreement</li>\r\n<li>Hold Harmless Agreement</li>\r\n</ul>\r\n</p>\r\n<p>\r\nMCCPTA Blue Book form Provide this information for the MCCPTA Blue Book, or Directory, by June 30.  Fill-in electronically, save as your PTA name and return to the MCCPTA Office via email or print and mail in to the office.  All PTAs will receive a copy of the MCCPTA Blue Book in the fall. MD PTA Local Unit Contact Information Sheet  This information is a Maryland PTA requirement and must be on file for your PTA to receive its membership cards. The form should be completed within two (2) weeks of your PTA elections and submitted directly to MD PTA.\r\n</p>\r\n<p>\r\nMCCPTA Membership Dues Invoice It is strongly recommended that local PTAs submit dues payment to MCCPTA and MD PTA at the same time (in separate payments).  This practice will ensure consistency in membership records between MCCPTA and Maryland PTA, and is easier on the local Treasurer.   </p><p>Running an Effective Meeting: CLICK HERE for Meeting Tips. \r\nThis sheet will help you organize an efficient, productive business meeting for your PTA.  \r\n</p>\r\n<p>\r\nParliamentary Procedures (or Robert's Rules of Order)\r\nCLICK HERE for a tip sheet and CLICK HERE for a brief version with additional explanation and information.  \r\n</p>\r\n<p>\r\nNeed help? Your cluster coordinator and area vice president have a wealth of experience, and are just an email or phone call away!\r\n</p>\r\n",
             "type": "",
             "image": null,
             "image_link": "",
