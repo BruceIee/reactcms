@@ -1,0 +1,54 @@
+{
+    "name":"article",
+    "module":    {
+        "title": {
+            "type": "string"
+        },
+        "content": {
+            "type": "text",
+            "subtype": {
+                "type": "html"
+            }
+        },
+        "type": {
+            "type": "string"
+        },
+        "image": {
+            "type": "file",
+            "subtype": {
+                "type": "image"
+            }
+        },
+        "image_link": {
+            "type": "string"
+        },
+        "image_style": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
