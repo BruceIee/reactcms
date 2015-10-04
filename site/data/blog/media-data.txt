@@ -1,0 +1,55 @@
+{
+    "name":"media",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "link": {
+            "type": "text"
+        },
+        "type": {
+            "type": "string",
+            "values": [
+                "image",
+                "video"
+            ]
+        },
+        "image": {
+            "type": "file"
+        },
+        "video": {
+            "type": "file"
+        },
+        "style": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
