@@ -44,34 +44,36 @@ var Cabinet = React.createClass({
         console.log('>>> state.items:', this.state.items);
         
         if (component.acceptMultiple) {
-           console.log('>>> component acceptMultiple - ', component);
-           
-           
-            for (var i = 0; i < this.state.items.length; i++) {
-                var item = this.state.items[i];
-                if (item.type !== this.state.widget) {
-                    component = this.components[item.type];
+            console.log('>>> component acceptMultiple - ', component);
+            if (this.state.items.length == 1) {
+                var item = this.state.items[0];
+                var widget = React.createElement(component.widget, {
+                    key: item.key,
+                    ref: item.name,
+                    data: item.data
+                });
+                widgets.push(widget);
+            } else {
+                for (var i = 0; i < this.state.items.length; i++) {
+                    var item = this.state.items[i];
+                    // data: item.data
                 }
-                if (component) {
-                    var widget = React.createElement(component.widget, {
-                        key: item.key,
-                        ref: item.name,
-                        data: item.data
-                    });
-                    widgets.push(widget);
-                } else {
-                    console.log('component for ' + item.type + ' is not found in Cabinet');
-                }
+                var widget = React.createElement(component.widget, {
+                    key: this.state.widget,
+                    ref: this.state.widget,
+                    data: this.state.items[0]
+                });
+                widgets.push(widget);
             }
-            
-           /*
-            var widget = React.createElement(component.widget, {
-                key: this.state.widget,
-                ref: this.state.widget,
-                data: this.state.items
-            });
-            widgets.push(widget);
-            */
+           
+            /*
+             var widget = React.createElement(component.widget, {
+                 key: this.state.widget,
+                 ref: this.state.widget,
+                 data: this.state.items
+             });
+             widgets.push(widget);
+             */
            
         } else {
             for (var i = 0; i < this.state.items.length; i++) {
