@@ -202,7 +202,22 @@
                 },
                 {
                     "name": "r2c1",
-                    "description": "content2 container",
+                    "description": "content2 container (md-6)",
+                    "width": 6
+                },
+                {
+                    "name": "r3c1",
+                    "description": "content3 container (md-12)",
+                    "width": 12
+                },
+                {
+                    "name": "r4c1",
+                    "description": "content4 container",
+                    "width": 12
+                },
+                {
+                    "name": "r5c1",
+                    "description": "content5 container",
                     "width": 12
                 },
                 {
