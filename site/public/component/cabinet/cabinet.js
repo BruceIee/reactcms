@@ -39,12 +39,7 @@ var Cabinet = React.createClass({
     render: function() {
         var widgets = [];
         var component = this.components[this.state.widget];
-        //console.log('>>> widget name:', this.state.widget, component.constructor.name);
-        
-        console.log('>>> state.items:', this.state.items);
-        
         if (component.acceptMultiple) {
-            console.log('>>> component acceptMultiple - ', component);
             if (this.state.items.length == 1) {
                 var item = this.state.items[0];
                 var widget = React.createElement(component.widget, {
