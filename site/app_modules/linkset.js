@@ -93,7 +93,14 @@ module.exports = function(app) {
             type: 'string'
         }
     };
-    
+    block.listFields = ['name', 'title', 'type', 'status'];
+    block.listFields = [
+        { name:'name', display:'Name', flex:1, sort:'asc' },
+        { name:'title', display:'Title', flex:3 },
+        { name:'type', display:'Type', flex:1 },
+        { name:'status', display:'Status', flex:1 }
+    ];
+
     // data
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
