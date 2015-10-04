@@ -1,0 +1,46 @@
+{
+  "name": "reactlet-treeview",
+  "version": "0.3.0",
+  "description": "treeview",
+  "main": "dist/treeview.js",
+  "keywords": [
+    "treeview",
+    "javascript"
+  ],
+  "dependencies": {
+    "validate.js": "~0.4.0",
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "watchify": "^2.1.1"
+  },
+  "author": {
+    "name": "leapon",
+    "email": "info@leapon.com"
+  },
+  "gitHead": "fb969037c4aa4a5b909b8edc63da92ad08d6c7b4",
+  "_id": "reactlet-treeview@0.3.0",
+  "scripts": {},
+  "_shasum": "d24ba1e0473b26e3edf513f77de0dcfd66dc72c2",
+  "_from": "reactlet-treeview@*",
+  "_npmVersion": "2.1.17",
+  "_nodeVersion": "0.10.35",
+  "_npmUser": {
+    "name": "leapon",
+    "email": "info@leapon.com"
+  },
+  "maintainers": [
+    {
+      "name": "leapon",
+      "email": "info@leapon.com"
+    }
+  ],
+  "dist": {
+    "shasum": "d24ba1e0473b26e3edf513f77de0dcfd66dc72c2",
+    "tarball": "http://registry.npmjs.org/reactlet-treeview/-/reactlet-treeview-0.3.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/reactlet-treeview/-/reactlet-treeview-0.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
