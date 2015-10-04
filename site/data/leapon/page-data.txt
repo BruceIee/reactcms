@@ -54,10 +54,10 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "ReactCMS",
+                                "title": "LEAPON",
                                 "links1": [
                                     {
-                                        "link": "/",
+                                        "link": "/pages/home",
                                         "text": "HOME"
                                     }
                                 ],
@@ -79,8 +79,7 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
+                                "content": "<h3 style=\"margin-top:25px;\">About Leapon LLC</h3>"
                             }
                         }
                     }
@@ -196,7 +195,7 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "ReactCMS",
+                                "title": "LEAPON",
                                 "links1": [
                                     {
                                         "link": "/pages/home",
@@ -221,8 +220,7 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                                "content": "<h3 style=\"margin-top:25px;\">Data-Diven Website Development</h3>"
                             }
                         }
                     }
