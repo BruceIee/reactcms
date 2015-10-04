@@ -54,27 +54,24 @@ var Cabinet = React.createClass({
                 });
                 widgets.push(widget);
             } else {
+                var items = [];
                 for (var i = 0; i < this.state.items.length; i++) {
                     var item = this.state.items[i];
-                    // data: item.data
+                    var image = item.data && item.data.image;
+                    if (image) {
+                        items.push({
+                            image:'/file/' + image.filename,
+                            text:image.description
+                        });
+                    }
                 }
                 var widget = React.createElement(component.widget, {
                     key: this.state.widget,
                     ref: this.state.widget,
-                    data: this.state.items[0]
+                    data: { items:items }
                 });
                 widgets.push(widget);
             }
-           
-            /*
-             var widget = React.createElement(component.widget, {
-                 key: this.state.widget,
-                 ref: this.state.widget,
-                 data: this.state.items
-             });
-             widgets.push(widget);
-             */
-           
         } else {
             for (var i = 0; i < this.state.items.length; i++) {
                 var item = this.state.items[i];
