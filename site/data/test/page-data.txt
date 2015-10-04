@@ -54,7 +54,7 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "ReactCMS",
+                                "title": "TestCMS",
                                 "links1": [
                                     {
                                         "link": "/",
@@ -80,7 +80,7 @@
                             "filter": "",
                             "data": {
                                 "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
+                                "content": "<h3 style=\"margin-top:25px;\">About TestCMS</h3>"
                             }
                         }
                     }
@@ -196,7 +196,7 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "title": "ReactCMS",
+                                "title": "TestCMS",
                                 "links1": [
                                     {
                                         "link": "/pages/home",
