@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":5,
+    "count":6,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -71,6 +71,79 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "5611f71e9a0c6ff825594e17",
+            "name": "treeview1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Treeview - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Treeview",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "treedata": [
+                                    {
+                                        "name": "website",
+                                        "iconClass": "fa fa-folder-o",
+                                        "children": [
+                                            {
+                                                "name": "images",
+                                                "iconClass": "fa fa-folder-o",
+                                                "children": [
+                                                    {
+                                                        "name": "logo.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    },
+                                                    {
+                                                        "name": "background.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "index.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "about.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "product.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-05T04:05:50.000Z",
+            "_class": "page"
         },
         {
             "_id": "561075f3282c285713d8bfe7",
