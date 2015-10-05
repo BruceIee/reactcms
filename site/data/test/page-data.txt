@@ -441,7 +441,7 @@
                 "r1c1": "",
                 "r2c1": [
                     {
-                        "widgetName": "Tree",
+                        "widgetName": "Table",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
