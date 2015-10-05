@@ -41,6 +41,7 @@ var Cabinet = React.createClass({
         var component = this.components[this.state.widget];
         if (component.acceptMultiple) {
             if (this.state.items.length == 1) {
+                // todo - equal to 1 is a hack, proper way is to check if this item has "items" property inside
                 // when there is only one item, no need to pacakge it
                 var item = this.state.items[0];
                 var widget = React.createElement(component.widget, {
