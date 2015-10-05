@@ -22,6 +22,8 @@ var Cabinet = React.createClass({
         GraphLinechart: { widget:GraphLinechart },
         GraphAreachart: { widget:GraphAreachart },
         Carousel: { widget:Carousel, acceptMultiple:true },
+        Table: { widget:Table },
+        Treeview: { widget:Treeview },
         EmbedIframe: { widget:EmbedIframe }
     },
     
