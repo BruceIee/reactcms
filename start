@@ -36,6 +36,14 @@ cd ..
 #jsx src/ dist/
 #cd ..
 
+cd reactlet-calendar/
+jsx src/ dist/
+cd ..
+
+cd reactlet-carousel/
+jsx src/ dist/
+cd ..
+
 cd reactlet-treeview/
 jsx src/ dist/
 cd ..
@@ -44,9 +52,6 @@ cd reactlet-table/
 jsx src/ dist/
 cd ..
 
-cd reactlet-carousel/
-jsx src/ dist/
-cd ..
 
 cd ..
 

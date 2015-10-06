@@ -1,0 +1,43 @@
+{
+  "name": "reactlet-calendar",
+  "version": "0.1.0",
+  "description": "reactlet calendar",
+  "main": "dist/calendar.js",
+  "keywords": [
+    "calendar",
+    "javascript"
+  ],
+  "dependencies": {
+    "validate.js": "~0.4.0",
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "watchify": "^2.1.1"
+  },
+  "author": {
+    "name": "leapon",
+    "email": "info@leapon.com"
+  },
+  "maintainers": [
+    {
+      "name": "leapon",
+      "email": "info@leapon.com"
+    }
+  ],
+  "_id": "reactlet-calendar@0.1.0",
+  "scripts": {},
+  "_shasum": "b94a18e08fa03255a4820fcadaf520fe1fcd8a9c",
+  "_from": "reactlet-calendar@",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "leapon",
+    "email": "info@leapon.com"
+  },
+  "dist": {
+    "shasum": "b94a18e08fa03255a4820fcadaf520fe1fcd8a9c",
+    "tarball": "http://registry.npmjs.org/reactlet-calendar/-/reactlet-calendar-0.1.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/reactlet-calendar/-/reactlet-calendar-0.1.0.tgz"
+}
