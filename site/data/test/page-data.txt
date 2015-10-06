@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":7,
+    "count":8,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -129,7 +129,13 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-06T02:58:55.000Z",
-            "_class": "page"
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "5611f71e9a0c6ff825594e17",
@@ -266,6 +272,120 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-04T00:42:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "5611ed573048437d23ca8ce1",
+            "name": "table1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Table - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Table",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "boxClass": "table-container-bordered",
+                                "colModel": {
+                                    "id": {
+                                        "name": "id",
+                                        "text": "ID",
+                                        "width": "15%",
+                                        "key": "true"
+                                    },
+                                    "name": {
+                                        "name": "name",
+                                        "text": "Name",
+                                        "width": "20%",
+                                        "sort": "up"
+                                    },
+                                    "price": {
+                                        "name": "price",
+                                        "text": "Price",
+                                        "width": "15%",
+                                        "type": "money"
+                                    },
+                                    "description": {
+                                        "name": "description",
+                                        "text": "Description",
+                                        "width": "30%"
+                                    },
+                                    "extra": {
+                                        "name": "extra",
+                                        "text": "Extra",
+                                        "show": "false",
+                                        "width": "10%"
+                                    }
+                                },
+                                "dataItems": [
+                                    {
+                                        "id": "P01",
+                                        "name": "egg",
+                                        "price": "7",
+                                        "description": "fresh egg",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P21",
+                                        "name": "bread",
+                                        "price": "2.99",
+                                        "description": "whole grain bread",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P23",
+                                        "name": "chip",
+                                        "price": "2.1",
+                                        "description": "potato chip",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P54",
+                                        "name": "sauce",
+                                        "price": "1.89",
+                                        "description": "dipping sauce",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P81",
+                                        "name": "corn",
+                                        "price": "4.59",
+                                        "description": "fresh corn",
+                                        "extra": "n/a"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-05T03:24:07.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -559,8 +679,8 @@
             "edit_by": ""
         },
         {
-            "_id": "5611ed573048437d23ca8ce1",
-            "name": "table1",
+            "_id": "5613b9da40659eca03be7c2f",
+            "name": "barchart1",
             "composition": "theone",
             "content": {
                 "r0c1": [
@@ -571,7 +691,7 @@
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Table - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Calendar - Data Content</h4>"
                             }
                         }
                     }
@@ -579,81 +699,33 @@
                 "r1c1": "",
                 "r2c1": [
                     {
-                        "widgetName": "Table",
+                        "widgetName": "GraphBarchart",
                         "widgetInfo": {
                             "module": "",
                             "condition": "",
                             "filter": "",
                             "data": {
-                                "boxClass": "table-container-bordered",
-                                "colModel": {
-                                    "id": {
-                                        "name": "id",
-                                        "text": "ID",
-                                        "width": "15%",
-                                        "key": "true"
-                                    },
-                                    "name": {
-                                        "name": "name",
-                                        "text": "Name",
-                                        "width": "20%",
-                                        "sort": "up"
-                                    },
-                                    "price": {
-                                        "name": "price",
-                                        "text": "Price",
-                                        "width": "15%",
-                                        "type": "money"
-                                    },
-                                    "description": {
-                                        "name": "description",
-                                        "text": "Description",
-                                        "width": "30%"
-                                    },
-                                    "extra": {
-                                        "name": "extra",
-                                        "text": "Extra",
-                                        "show": "false",
-                                        "width": "10%"
-                                    }
-                                },
-                                "dataItems": [
-                                    {
-                                        "id": "P01",
-                                        "name": "egg",
-                                        "price": "7",
-                                        "description": "fresh egg",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P21",
-                                        "name": "bread",
-                                        "price": "2.99",
-                                        "description": "whole grain bread",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P23",
-                                        "name": "chip",
-                                        "price": "2.1",
-                                        "description": "potato chip",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P54",
-                                        "name": "sauce",
-                                        "price": "1.89",
-                                        "description": "dipping sauce",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P81",
-                                        "name": "corn",
-                                        "price": "4.59",
-                                        "description": "fresh corn",
-                                        "extra": "n/a"
-                                    }
-                                ]
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": "8"
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": "4"
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": "6"
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": "3"
+                                        }
+                                    ]
+                                }
                             }
                         }
                     }
@@ -663,14 +735,8 @@
                 "r5c1": "",
                 "r99c1": ""
             },
-            "create_date": "2015-10-05T03:24:07.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
+            "create_date": "2015-10-06T12:08:58.000Z",
+            "_class": "page"
         }
     ]
 }
