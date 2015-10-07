@@ -42,39 +42,59 @@
     "count":3,
     "items": [
         {
-            "_id": "55ca9a6a194a50f9b02e463e",
-            "name": "theone",
-            "description": "one block",
-            "filename": "theone.html",
+            "_id": "554c261457e90a66273cb734",
+            "name": "vertflow",
+            "description": "vertical flow composition",
+            "filename": "vertflow.html",
             "data": [
                 {
                     "name": "r0c1",
-                    "description": "header",
+                    "description": "top",
                     "width": 12
                 },
                 {
                     "name": "r1c1",
-                    "description": "content1 container-fullwidth",
+                    "description": "top",
                     "width": 12
                 },
                 {
                     "name": "r2c1",
-                    "description": "content2 container (md-6)",
-                    "width": 6
+                    "description": "row",
+                    "width": 12
                 },
                 {
                     "name": "r3c1",
-                    "description": "content3 container (md-12)",
+                    "description": "row",
                     "width": 12
                 },
                 {
                     "name": "r4c1",
-                    "description": "content4 container",
+                    "description": "row",
                     "width": 12
                 },
                 {
                     "name": "r5c1",
-                    "description": "content5 container",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r6c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r7c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r8c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r9c1",
+                    "description": "row",
                     "width": 12
                 },
                 {
@@ -83,12 +103,12 @@
                     "width": 12
                 }
             ],
-            "status": "active",
-            "create_date": "2015-08-12T00:59:22.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "composition"
+            "status": "",
+            "create_date": null,
+            "_class": "composition",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "554c261457e90a66273cb733",
@@ -165,59 +185,39 @@
             "edit_by": ""
         },
         {
-            "_id": "554c261457e90a66273cb734",
-            "name": "vertflow",
-            "description": "vertical flow composition",
-            "filename": "vertflow.html",
+            "_id": "55ca9a6a194a50f9b02e463e",
+            "name": "theone",
+            "description": "one block",
+            "filename": "theone.html",
             "data": [
                 {
                     "name": "r0c1",
-                    "description": "top",
+                    "description": "header",
                     "width": 12
                 },
                 {
                     "name": "r1c1",
-                    "description": "top",
+                    "description": "content1 container-fullwidth",
                     "width": 12
                 },
                 {
                     "name": "r2c1",
-                    "description": "row",
-                    "width": 12
+                    "description": "content2 container (md-6)",
+                    "width": 6
                 },
                 {
                     "name": "r3c1",
-                    "description": "row",
+                    "description": "content3 container (md-12)",
                     "width": 12
                 },
                 {
                     "name": "r4c1",
-                    "description": "row",
+                    "description": "content4 container",
                     "width": 12
                 },
                 {
                     "name": "r5c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r6c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r7c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r8c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r9c1",
-                    "description": "row",
+                    "description": "content5 container",
                     "width": 12
                 },
                 {
@@ -226,12 +226,12 @@
                     "width": 12
                 }
             ],
-            "status": "",
-            "create_date": null,
-            "_class": "composition",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
+            "status": "active",
+            "create_date": "2015-08-12T00:59:22.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
         }
     ]
 }

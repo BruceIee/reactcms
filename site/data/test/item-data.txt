@@ -7,7 +7,7 @@
         "description": {
             "type": "text"
         },
-        "value": {
+        "data": {
             "type": "object",
             "subtype": {
                 "type": "json"

@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":8,
+    "count":9,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -71,6 +71,202 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "561075f3282c285713d8bfe7",
+            "name": "carousel1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                                        "text": "slide 1"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                                        "text": "slide 2"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                                        "text": "slide 3"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                                        "text": "slide 4"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                                        "text": "slide 5"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r99c1": ""
+            },
+            "create_date": "2015-10-04T00:42:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "5613b9da40659eca03be7c2f",
+            "name": "barchart1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": "8"
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": "4"
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": "6"
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": "3"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-06T12:08:58.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "56148dff96679b150ffb5a83",
+            "name": "piechart1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "GraphPiechart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": "8"
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": "4"
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": "6"
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": "3"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T03:14:07.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "561338efa49bb3e709a11826",
@@ -208,70 +404,6 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-05T04:05:50.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "561075f3282c285713d8bfe7",
-            "name": "carousel1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "items": [
-                                    {
-                                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                                        "text": "slide 1"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                                        "text": "slide 2"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                                        "text": "slide 3"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                                        "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                                        "text": "slide 5"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r99c1": ""
-            },
-            "create_date": "2015-10-04T00:42:27.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -677,66 +809,6 @@
             "create_by": "",
             "edit_date": "",
             "edit_by": ""
-        },
-        {
-            "_id": "5613b9da40659eca03be7c2f",
-            "name": "barchart1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Calendar - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "GraphBarchart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": "",
-                "r99c1": ""
-            },
-            "create_date": "2015-10-06T12:08:58.000Z",
-            "_class": "page"
         }
     ]
 }
