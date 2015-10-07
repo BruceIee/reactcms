@@ -32,26 +32,6 @@ cd reactlet-html-form/
 jsx src/ dist/
 cd ..
 
-#cd reactlet-graph-bartest/
-#jsx src/ dist/
-#cd ..
-
-cd reactlet-calendar/
-jsx src/ dist/
-cd ..
-
-cd reactlet-carousel/
-jsx src/ dist/
-cd ..
-
-cd reactlet-treeview/
-jsx src/ dist/
-cd ..
-
-cd reactlet-table/
-jsx src/ dist/
-cd ..
-
 
 cd ..
 
