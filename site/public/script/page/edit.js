@@ -17,6 +17,12 @@ function resetPageData() {
 }
 
 function setup() {
+    // for jquery ajax, use POST and JSON data type by default
+    $.ajaxSetup({
+        type: "POST",
+        contentType: "application/json"
+        //data: JSON.stringify(app.pageData),
+    });
     // compile section content template
     var source   = $("#component-entry-template").html();
     app.sectionTemplate = Handlebars.compile(source);
@@ -187,17 +193,20 @@ function savePage() {
             var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
             var pageName = $('#pageName').val();
             app.pageData.name = pageName;
-            //$.post(pageAddUrl, app.pageData, function(data) {
+            $.post(pageAddUrl, JSON.stringify(app.pageData), function(data) {
+                    console.log('page saved:', data);
+                    alert('page ' + pageName + ' is saved');
+            });
+            /*
             $.ajax({
                 url: pageAddUrl,
-                type: "POST",
                 data: JSON.stringify(app.pageData),
-                contentType: "application/json",
                 complete: function(data) {
                     console.log('page saved:', data);
                     alert('page ' + pageName + ' is saved');
                 }
             });
+            */
         }
     });
 }
@@ -216,7 +225,7 @@ function retrievePageSectionData() {
         } catch(e) {
             console.log('Error in getting data from ' + sectionName);
         }
-        console.log('>>> sectionData:', sectionName, sectionDataItem)
+        //console.log('sectionData:', sectionName, sectionDataItem)
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
         } else {
