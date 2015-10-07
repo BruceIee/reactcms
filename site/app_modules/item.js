@@ -20,7 +20,7 @@ module.exports = function(app) {
         description: {
             type: 'text'
         },
-        value: {
+        data: {
             type: 'object',
             subtype: {
                 type: 'json'
@@ -29,14 +29,6 @@ module.exports = function(app) {
         image: {
             type: 'file'
         },
-        /*
-        photos: {
-            type: 'array',
-            subtype: {
-                type: 'file'
-            }
-        },
-        */
         status: {
             type: 'string',
             values: ['active', 'inactive']
