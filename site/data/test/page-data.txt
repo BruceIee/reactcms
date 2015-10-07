@@ -73,70 +73,6 @@
             "edit_by": ""
         },
         {
-            "_id": "561075f3282c285713d8bfe7",
-            "name": "carousel1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "items": [
-                                    {
-                                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                                        "text": "slide 1"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                                        "text": "slide 2"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                                        "text": "slide 3"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                                        "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                                        "text": "slide 5"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r99c1": ""
-            },
-            "create_date": "2015-10-04T00:42:27.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
             "_id": "5613b9da40659eca03be7c2f",
             "name": "barchart1",
             "composition": "theone",
@@ -146,41 +82,41 @@
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "",
-                            "condition": "",
-                            "filter": "",
+                            "condition": null,
+                            "filter": null,
                             "data": {
                                 "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
                             }
                         }
                     }
                 ],
-                "r1c1": "",
+                "r1c1": null,
                 "r2c1": [
                     {
                         "widgetName": "GraphBarchart",
                         "widgetInfo": {
                             "module": "",
-                            "condition": "",
-                            "filter": "",
+                            "condition": null,
+                            "filter": null,
                             "data": {
                                 "value": {
                                     "label": "plot1",
                                     "values": [
                                         {
                                             "x": "Class A",
-                                            "y": "8"
+                                            "y": 8
                                         },
                                         {
                                             "x": "Class B",
-                                            "y": "4"
+                                            "y": 4
                                         },
                                         {
                                             "x": "Class C",
-                                            "y": "6"
+                                            "y": 6
                                         },
                                         {
                                             "x": "Class D",
-                                            "y": "3"
+                                            "y": 3
                                         }
                                     ]
                                 }
@@ -188,10 +124,10 @@
                         }
                     }
                 ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": "",
-                "r99c1": ""
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
             },
             "create_date": "2015-10-06T12:08:58.000Z",
             "_class": "page",
@@ -325,6 +261,70 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-06T02:58:55.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "561075f3282c285713d8bfe7",
+            "name": "carousel1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                                        "text": "slide 1"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                                        "text": "slide 2"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                                        "text": "slide 3"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                                        "text": "slide 4"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                                        "text": "slide 5"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r99c1": ""
+            },
+            "create_date": "2015-10-04T00:42:27.000Z",
             "_class": "page",
             "description": "",
             "group": "",

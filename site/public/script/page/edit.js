@@ -187,9 +187,16 @@ function savePage() {
             var pageAddUrl = '/data/pages/' + app.pageData._id + '/edit';
             var pageName = $('#pageName').val();
             app.pageData.name = pageName;
-            $.post(pageAddUrl, app.pageData, function(data) {
-                console.log('page saved:', data);
-                alert('page ' + pageName + ' is saved');
+            //$.post(pageAddUrl, app.pageData, function(data) {
+            $.ajax({
+                url: pageAddUrl,
+                type: "POST",
+                data: JSON.stringify(app.pageData),
+                contentType: "application/json",
+                complete: function(data) {
+                    console.log('page saved:', data);
+                    alert('page ' + pageName + ' is saved');
+                }
             });
         }
     });

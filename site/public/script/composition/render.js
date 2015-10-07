@@ -10,7 +10,7 @@ $().ready(function() {
 
 function showByPageData(content) {
     for (var targetClass in content) {
-        var widgets = app.pageContent[targetClass];
+        var widgets = app.pageContent[targetClass] || [];
         for (var i = 0; i < widgets.length; i++) {
             var widget = widgets[i];
             widget.targetClass = targetClass;
