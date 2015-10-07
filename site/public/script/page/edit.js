@@ -170,7 +170,7 @@ function createPage(pageName) {
         } else {
             var pageAddUrl = '/data/pages/add';
             app.pageData.name = pageName;
-            $.post(pageAddUrl, app.pageData, function(data) {
+            $.post(pageAddUrl, JSON.stringify(app.pageData), function(data) {
                 var page = data.docs && data.docs[0] || null;
                 if (page) {
                     var pageEditUrl = '/pages/' + page._id + '/edit';
@@ -197,16 +197,6 @@ function savePage() {
                     console.log('page saved:', data);
                     alert('page ' + pageName + ' is saved');
             });
-            /*
-            $.ajax({
-                url: pageAddUrl,
-                data: JSON.stringify(app.pageData),
-                complete: function(data) {
-                    console.log('page saved:', data);
-                    alert('page ' + pageName + ' is saved');
-                }
-            });
-            */
         }
     });
 }
