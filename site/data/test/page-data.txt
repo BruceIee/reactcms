@@ -1338,7 +1338,7 @@
                         "widgetInfo": {
                             "module": "item",
                             "condition": {
-                                "name": "chart1"
+                                "name": "chart4p"
                             },
                             "filter": null,
                             "data": null

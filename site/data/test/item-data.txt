@@ -7,7 +7,7 @@
         "description": {
             "type": "text"
         },
-        "values": {
+        "value": {
             "type": "object",
             "subtype": {
                 "type": "json"
@@ -39,30 +39,33 @@
     "count":1,
     "items": [
         {
-            "_id": "561663f0553b57a720a4418c",
-            "name": "chart1",
+            "_id": "5616659b280930e120dd893b",
+            "name": "chart4p",
             "description": "chart data",
-            "values": [
-                {
-                    "x": "Class A",
-                    "y": 8
-                },
-                {
-                    "x": "Class B",
-                    "y": 4
-                },
-                {
-                    "x": "Class C",
-                    "y": 6
-                },
-                {
-                    "x": "Class D",
-                    "y": 3
-                }
-            ],
+            "value": {
+                "label": "plot1",
+                "values": [
+                    {
+                        "x": "Class A",
+                        "y": 8
+                    },
+                    {
+                        "x": "Class B",
+                        "y": 4
+                    },
+                    {
+                        "x": "Class C",
+                        "y": 6
+                    },
+                    {
+                        "x": "Class D",
+                        "y": 3
+                    }
+                ]
+            },
             "image": null,
             "status": "active",
-            "create_date": "2015-10-08T12:39:12.000Z",
+            "create_date": "2015-10-08T12:46:19.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
