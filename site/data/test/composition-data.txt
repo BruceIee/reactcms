@@ -239,7 +239,6 @@
             "description": "rows of 3 blocks - like photo gallery",
             "filename": "gallery.html",
             "data": [
-            
                 {
                     "name": "h1c1",
                     "description": "header1",

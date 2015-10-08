@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":13,
+    "count":14,
     "items": [
         {
             "_id": "55e115fb9346d92f1ef4eeed",
@@ -1127,6 +1127,131 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "5615b7a26db265f31d004bfd",
+            "name": "graphdemo",
+            "composition": "gallery",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;margin-bottom:25px;text-align:center;\">Graph Gallery</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": null,
+                "r3c2": null,
+                "r3c3": null,
+                "r4c1": null,
+                "r4c2": null,
+                "r4c3": null,
+                "r5c1": null,
+                "r5c2": null,
+                "r5c3": null,
+                "r6c1": null,
+                "r6c2": null,
+                "r6c3": null,
+                "r7c1": null,
+                "r7c2": null,
+                "r7c3": null,
+                "r8c1": null,
+                "r8c2": null,
+                "r8c3": null,
+                "r9c1": null,
+                "r9c2": null,
+                "r9c3": null,
+                "f1c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "f2c1": null
+            },
+            "create_date": "2015-10-08T00:24:02.000Z",
+            "_class": "page"
         }
     ]
 }
