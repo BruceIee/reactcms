@@ -12,17 +12,16 @@ sudo npm install -g browserify
 sudo npm install -g react-tools
 ```
 
-Go to site folder and populate database
+Go to site folder and load test project
 
 ```
-node cmd.js initdb
-node cmd.js import
+node cmd.js load test
 ```
 
 Start
 -----
 
-Go to application root folder
+Go to application root folder (where this github project is cloned to)
 
 ```
 ./start
