@@ -20,7 +20,7 @@ module.exports = function(app) {
         description: {
             type: 'text'
         },
-        values: {
+        value: {
             type: 'object',
             subtype: {
                 type: 'json'
