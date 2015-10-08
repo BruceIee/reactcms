@@ -7,7 +7,7 @@
         "description": {
             "type": "text"
         },
-        "data": {
+        "values": {
             "type": "object",
             "subtype": {
                 "type": "json"
@@ -36,7 +36,37 @@
             "type": "string"
         }
     },
-    "count":0,
+    "count":1,
     "items": [
+        {
+            "_id": "561663f0553b57a720a4418c",
+            "name": "chart1",
+            "description": "chart data",
+            "values": [
+                {
+                    "x": "Class A",
+                    "y": 8
+                },
+                {
+                    "x": "Class B",
+                    "y": 4
+                },
+                {
+                    "x": "Class C",
+                    "y": 6
+                },
+                {
+                    "x": "Class D",
+                    "y": 3
+                }
+            ],
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-08T12:39:12.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "item"
+        }
     ]
 }

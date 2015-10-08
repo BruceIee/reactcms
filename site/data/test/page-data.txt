@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":14,
+    "count":15,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -1307,6 +1307,52 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-07T12:22:58.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561663af553b57a720a4418b",
+            "name": "barchart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Barchart - Database Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart1"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-08T12:38:07.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
