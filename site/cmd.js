@@ -43,6 +43,7 @@ switch (operation) {
     case 'import':
         setting['operation'] = 'import';
         break;
+    case 'save':
     case 'backup':
         setting['operation'] = 'backup';
         break;
