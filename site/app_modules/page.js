@@ -47,7 +47,13 @@ module.exports = function(app) {
             type: 'string'
         }
     };
-    
+    block.listFields = [
+        { name:'name', display:'Title', flex:2, sort:'asc' },
+        { name:'description', display:'Description', flex:3, },
+        { name:'composition', display:'Composition', flex:2, },
+        { name:'status', display:'Status', flex:2 }
+    ];
+
     // data
     block.data.getPage = function(req, res) {
         var callback = arguments[3] || null;
