@@ -66,7 +66,7 @@ var GraphBarchart = React.createClass({
         React.render(
             React.createElement(ReactD3.BarChart, {
                 data: graphData,
-                width: 380,
+                width: 320,
                 height: 240,
                 margin: { top: 10, bottom: 30, left: 30, right: 10 }
             }),
@@ -112,8 +112,8 @@ var GraphPiechart = React.createClass({
             React.createElement(ReactD3.PieChart, {
                 data: graphData,
                 sort: sort,
-                width: 400,
-                height: 280,
+                width: 320,
+                height: 240,
                 margin: { top: 10, bottom: 10, left: 50, right: 50 }
             }),
             graphElement
@@ -156,8 +156,8 @@ var GraphScatterplot = React.createClass({
         React.render(
             React.createElement(ReactD3.ScatterPlot, {
                 data: graphData,
-                width: 400,
-                height: 280,
+                width: 320,
+                height: 240,
                 margin: { top: 30, bottom: 30, left: 30, right: 10 }
             }),
             graphElement
@@ -200,8 +200,8 @@ var GraphLinechart = React.createClass({
         React.render(
             React.createElement(ReactD3.LineChart, {
                 data: graphData,
-                width: 400,
-                height: 280,
+                width: 320,
+                height: 240,
                 margin: { top: 30, bottom: 30, left: 30, right: 10 }
             }),
             graphElement
@@ -244,8 +244,8 @@ var GraphAreachart = React.createClass({
         React.render(
             React.createElement(ReactD3.AreaChart, {
                 data: graphData,
-                width: 400,
-                height: 280,
+                width: 320,
+                height: 240,
                 margin: { top: 30, bottom: 30, left: 30, right: 10 }
             }),
             graphElement
