@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":4,
+    "count":5,
     "items": [
         {
             "_id": "55ca9a6a194a50f9b02e463e",
@@ -381,6 +381,120 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "56185861262cfbb95a78815b",
+            "name": "gallery2",
+            "description": "gallery with 2 blocks on each row",
+            "filename": "gallery2.html",
+            "data": [
+                {
+                    "name": "h1c1",
+                    "description": "header1",
+                    "width": 12
+                },
+                {
+                    "name": "h2c1",
+                    "description": "header2",
+                    "width": 12
+                },
+                {
+                    "name": "r1c1",
+                    "description": "title",
+                    "width": 12
+                },
+                {
+                    "name": "r2c1",
+                    "description": "title2",
+                    "width": 12
+                },
+                {
+                    "name": "r3c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r3c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r4c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r4c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r5c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r5c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r6c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r6c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r7c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r7c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r8c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r8c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r9c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r9c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "f1c1",
+                    "description": "footer",
+                    "width": 12
+                },
+                {
+                    "name": "f2c1",
+                    "description": "footer2",
+                    "width": 12
+                }
+            ],
+            "status": "active",
+            "create_date": "2015-10-10T00:14:25.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
         }
     ]
 }
