@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":21,
+    "count":22,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -1475,148 +1475,12 @@
                 "f2c1": null
             },
             "create_date": "2015-10-10T00:21:58.000Z",
-            "_class": "page"
-        },
-        {
-            "_id": "55e115fb9346d92f1ef4eeed",
-            "name": "about",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>about alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r0c1": "",
-                "r5c1": "",
-                "r6c1": "",
-                "r7c1": "",
-                "r8c1": "",
-                "r9c1": ""
-            },
-            "create_date": "2015-08-29T02:16:27.000Z",
             "_class": "page",
             "description": "",
             "group": "",
             "status": "",
             "create_by": "",
-            "edit_date": "",
+            "edit_date": null,
             "edit_by": ""
         },
         {
@@ -1831,6 +1695,148 @@
             "edit_date": "",
             "edit_by": "",
             "_class": "page"
+        },
+        {
+            "_id": "55e115fb9346d92f1ef4eeed",
+            "name": "about",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>about alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
+            },
+            "create_date": "2015-08-29T02:16:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
         },
         {
             "_id": "5611f71e9a0c6ff825594e17",
@@ -2214,6 +2220,148 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561870e50dfa090f3a372d45",
+            "name": "home2",
+            "description": "home page for site",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": null,
+                "r5c1": null,
+                "r6c1": null,
+                "r7c1": null,
+                "r8c1": null,
+                "r9c1": null
+            },
+            "group": "",
+            "status": "active",
+            "create_date": "2015-10-10T01:59:01.000Z",
+            "create_by": "",
+            "edit_date": "2015-10-09T02:52:15.000Z",
+            "edit_by": "admin",
             "_class": "page"
         }
     ]
