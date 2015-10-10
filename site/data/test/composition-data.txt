@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":5,
+    "count":8,
     "items": [
         {
             "_id": "55ca9a6a194a50f9b02e463e",
@@ -381,6 +381,45 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "56188501f823f4a512a42368",
+            "name": "theone2",
+            "description": "for one widget display",
+            "filename": "theone2.html",
+            "data": [],
+            "status": "active",
+            "create_date": "2015-10-10T03:24:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
+        },
+        {
+            "_id": "56188512f823f4a512a42369",
+            "name": "vertflow2",
+            "description": "vertical flow layout",
+            "filename": "vertflow2.html",
+            "data": [],
+            "status": "active",
+            "create_date": "2015-10-10T03:25:06.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
+        },
+        {
+            "_id": "56188526f823f4a512a4236a",
+            "name": "sidenav2",
+            "description": "side navigation ",
+            "filename": "sidenav2",
+            "data": [],
+            "status": "active",
+            "create_date": "2015-10-10T03:25:26.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
         },
         {
             "_id": "56185861262cfbb95a78815b",
