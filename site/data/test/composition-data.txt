@@ -387,7 +387,38 @@
             "name": "theone2",
             "description": "for one widget display",
             "filename": "theone2.html",
-            "data": [],
+            "data": [
+                {
+                    "name": "h1c1",
+                    "description": "header",
+                    "width": 12
+                },
+                {
+                    "name": "h2c1",
+                    "description": "header",
+                    "width": 12
+                },
+                {
+                    "name": "r1c1",
+                    "description": "content1 container (md-6)",
+                    "width": 6
+                },
+                {
+                    "name": "r2c1",
+                    "description": "content2 container (md-12)",
+                    "width": 12
+                },
+                {
+                    "name": "f1c1",
+                    "description": "footer",
+                    "width": 12
+                },
+                {
+                    "name": "f2c1",
+                    "description": "footer",
+                    "width": 12
+                }
+            ],
             "status": "active",
             "create_date": "2015-10-10T03:24:49.000Z",
             "create_by": "admin",
