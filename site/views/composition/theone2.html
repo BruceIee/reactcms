@@ -1,0 +1,48 @@
+{% extends '../layout/layout-composition.html' %}
+
+{% block style %}
+{% parent %}
+<style>
+.reactlet-graph {
+    padding: 5px;
+    border: solid 1px #f2f2f2;
+}
+.reactlet-graph div {
+    background-color: #f2f2f2;
+    border-bottom: solid 1px #ccc;
+}
+</style>
+{% endblock %}
+
+{% block script %}
+{% parent %}
+{% endblock %}
+
+{% block content %}
+<div class="container-full-width">
+    <div class="h0c1 widget-container"></div>
+</div>
+<div class="container-full-width">
+    <div class="h1c1 widget-container"></div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="r1c1 widget-container"></div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="r2c1 widget-container"></div>
+        </div>
+    </div>
+</div>
+<div class="container-full-width" style="margin-top:20px;">
+    <div class="f1c1 widget-container"></div>
+</div>
+<div class="container-full-width" style="margin-top:20px;">
+    <div class="f2c1 widget-container"></div>
+</div>
+{% endblock %}
