@@ -1,0 +1,117 @@
+
+.plate-container {
+    font-size: 2.1em;
+    color: #eee;
+    /* border: solid 1px #f2f2f2; */
+}
+
+    .plate-container .row-container {
+        float: left;
+    }
+    
+    .plate-container .cell-container {
+        float: left;
+    }
+    
+    .plate-container .cell-content-container {
+        line-height: 30px;
+    }
+    
+    .plate-container .cell-icon-container {
+        padding: 0 auto;
+        width: 30px;
+    }
+
+
+.plate-container.plate-small {
+    font-size: 1.2em;
+    width: 270px;
+}
+
+    .plate-container.plate-small .cell-content-container {
+        line-height: 20px;
+    }
+    
+    .plate-container.plate-small .cell-icon-container {
+        padding: 0 auto;
+        width: 20px;
+    }
+
+
+.plate-container.plate-large {
+    font-size: 2.8em;
+    width: 530px;
+}
+
+    .plate-container.plate-large .cell-content-container {
+        line-height: 40px;
+    }
+    
+    .plate-container.plate-large .cell-icon-container {
+        padding: 0 auto;
+        width: 40px;
+    }
+    
+
+.cell-label-container {
+    float: left;
+    color: #777;
+}
+
+    .cell-label-container .cell-label-content-container {
+        width: 30px;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    /* top cell label */
+    .cell-label-container.cell-label-container-top .cell-label-content-container {
+        font-size: 0.6em;
+        line-height: 30px;
+    }
+
+    .cell-label-container.cell-label-container-top.plate-small .cell-label-content-container {
+        line-height: 20px;
+        width: 20px;
+    }
+    
+    .cell-label-container.cell-label-container-top.plate-large .cell-label-content-container {
+        line-height: 40px;
+        width: 40px;
+    }
+    
+    /* left cell label */
+    .cell-label-container.cell-label-container-left .cell-label-content-container {
+        font-size: 0.7em;
+        line-height: 30px;
+    }
+    
+    .cell-label-container.cell-label-container-left.plate-small .cell-label-content-container {
+        line-height: 20px;
+        width: 20px;
+    }
+    
+    .cell-label-container.cell-label-container-left.plate-large .cell-label-content-container {
+        line-height: 40px;
+        width: 40px;
+    }
+    
+    /* corner cell label */
+    .cell-label-container.cell-label-container-corner .cell-label-content-container {
+        line-height: 30px;
+        width: 30px;
+        color: transparent;
+    }
+
+    .cell-label-container.cell-label-container-corner.plate-small .cell-label-content-container {
+        line-height: 20px;
+        width: 20px;
+    }
+    
+    .cell-label-container.cell-label-container-corner.plate-large .cell-label-content-container {
+        line-height: 40px;
+        width: 40px;
+    }
+    
+
+    
