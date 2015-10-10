@@ -42,7 +42,8 @@ var Webcharts = React.createClass({
             "gridlines":"xy"
         };
         
-        var calChart = webCharts.createChart(graphElement, settings);
+        //var calChart = webCharts.createChart(graphElement, settings);
+        var calChart = webCharts.createChart('.webcharts-graph', settings);
         d3.csv('/data/webcharts/calories.csv', function(error, data){
             calChart.init(data);
         });

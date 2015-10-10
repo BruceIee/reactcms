@@ -14,6 +14,7 @@
 <script src="/library/react/react.js"></script>
 <script src="/library/react/JSXTransformer.js"></script>
 <script src="/library/d3/d3.min.js"></script>
+<script src="/library/webcharts/webcharts.hole.js"></script>
 <script src="/library/react-d3-components/react-d3-components.min.js"></script>
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
 <script type="text/jsx" src="/script/page/support.js"></script>
@@ -48,9 +49,9 @@ app.pageComposition = {{ page.compositionData|json|safe}};
 {% block style %}
 <link rel="stylesheet" href="/library/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/library/webcharts/webcharts.hole.css">
 <link rel="stylesheet" href="/style/style.css">
 <link rel="stylesheet" href="/component/common/common-style.css"/>
-
 <link rel="stylesheet" href="/component/header/blackboot_header.css"/>
 <link rel="stylesheet" href="/component/footer/blackboot_footer.css"/>
 <link rel="stylesheet" href="/component/header/simplify_header.css"/>
