@@ -21,6 +21,7 @@ var Cabinet = React.createClass({
         GraphScatterplot: { widget:GraphScatterplot },
         GraphLinechart: { widget:GraphLinechart },
         GraphAreachart: { widget:GraphAreachart },
+        Webcharts: { widget:Webcharts },
         Calendar: { widget:Calendar },
         Carousel: { widget:Carousel, acceptMultiple:true },
         Table: { widget:Table },
