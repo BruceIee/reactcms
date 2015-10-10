@@ -25,6 +25,7 @@ var Cabinet = React.createClass({
         Carousel: { widget:Carousel, acceptMultiple:true },
         Table: { widget:Table },
         Treeview: { widget:Treeview },
+        Plate: { widget:Plate },
         EmbedIframe: { widget:EmbedIframe }
     },
     
