@@ -2,3 +2,9 @@
     padding: 10px;
     overflow: auto;
 }
+
+.body-container .container-gallery2 .row-gallery {
+    margin-bottom: 10px;
+    padding-top: 20px;
+    /* border-top: solid 1px #f2f2f2; */
+}
