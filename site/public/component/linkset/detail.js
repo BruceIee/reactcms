@@ -12,16 +12,17 @@ var LinksetDetail = React.createClass({
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
-            { name:'content', type:'array', required:false, defaultValue:[], note:'item content' }
+            { name:'links1_title', type:'string', required:false, defaultValue:'', note:'links1 title' },
+            { name:'links1', type:'array', required:false, defaultValue:[], note:'links1' }
         ];
         return attributes;
     },
     
     render: function() {
-        var groups = this.state.content.map(function (group) {
+        var groups = this.state.links1.map(function (group) {
             return (
                 <li>
-                    <a href={ group.hyperlink }> { group.text } </a>
+                    <a href={ group.link }> { group.text } </a>
                 </li>
             );
         });
