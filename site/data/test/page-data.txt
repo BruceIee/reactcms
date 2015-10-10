@@ -2395,7 +2395,20 @@
                         }
                     }
                 ],
-                "r1c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
                 "r2c1": [
                     {
                         "widgetName": "LinksetDetail",
@@ -2409,9 +2422,35 @@
                         }
                     }
                 ],
-                "r2c2": null,
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
                 "r3c1": null,
-                "r3c2": null,
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": ""
+                            }
+                        }
+                    }
+                ],
                 "r4c1": null,
                 "r4c2": null,
                 "r5c1": null,
