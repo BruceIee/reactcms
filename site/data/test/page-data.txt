@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":32,
+    "count":33,
     "items": [
         {
             "_id": "561acd46e39daac5615ffd92",
@@ -3619,6 +3619,177 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-11T03:12:09.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561ad789e39daac5615ffd94",
+            "name": "plotlydemo",
+            "description": "",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Plotly Component Gallery</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3
+                                            ],
+                                            "y": [
+                                                2,
+                                                3,
+                                                5
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Lineplot Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                0,
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5,
+                                                6,
+                                                7,
+                                                8,
+                                                9
+                                            ],
+                                            "y": [
+                                                99,
+                                                97.28,
+                                                92.61,
+                                                79.91,
+                                                45.4,
+                                                -48.41,
+                                                -303.42,
+                                                -996.63,
+                                                -2880.95,
+                                                -8003.08
+                                            ]
+                                        }
+                                    ],
+                                    "layout": {
+                                        "xaxis": {
+                                            "type": "log"
+                                        },
+                                        "yaxis": {
+                                            "type": "log"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Logplot Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": null,
+                "r5c2": null,
+                "r6c1": null,
+                "r6c2": null,
+                "r7c1": null,
+                "r7c2": null,
+                "r8c1": null,
+                "r8c2": null,
+                "r9c1": null,
+                "r9c2": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T21:41:29.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
