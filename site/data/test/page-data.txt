@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":27,
+    "count":26,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -71,69 +71,6 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
-        },
-        {
-            "_id": "5619b6e651882eea1d62744f",
-            "name": "webcharts_scatterplot1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/calories.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Protein (g)",
-                                        "type": "linear",
-                                        "column": "Protein (g)"
-                                    },
-                                    "y": {
-                                        "label": "Carbs (g)",
-                                        "type": "linear",
-                                        "column": "Carbo(g)"
-                                    },
-                                    "marks": [
-                                        {
-                                            "type": "circle",
-                                            "per": [
-                                                "Food"
-                                            ],
-                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-                                        }
-                                    ],
-                                    "aspect": "1",
-                                    "gridlines": "xy"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-11T01:09:58.000Z",
-            "_class": "page"
         },
         {
             "_id": "5613b9da40659eca03be7c2f",
@@ -980,6 +917,643 @@
             "_class": "page"
         },
         {
+            "_id": "5619b52a51882eea1d62744e",
+            "name": "webcharts_barchart1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_top.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Total",
+                                        "type": "linear",
+                                        "column": "Total",
+                                        "domain": [
+                                            0,
+                                            null
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "tooltip": "[Country] won [Total] medals"
+                                        }
+                                    ],
+                                    "gridlines": "x"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-11T01:02:34.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "56150ed57e0f6b6f16fcea3e",
+            "name": "scatterplot2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:23:49.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56190baaf823f4a512a4236d",
+            "name": "reactletdemo2",
+            "description": "",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "Calendar",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "year": "2015",
+                                "month": "5",
+                                "eventsCollection": {
+                                    "2015-05-01": [
+                                        {
+                                            "category": "home",
+                                            "title": "gas bill"
+                                        },
+                                        {
+                                            "category": "work",
+                                            "title": "report due"
+                                        }
+                                    ],
+                                    "2015-05-11": [
+                                        {
+                                            "category": "home",
+                                            "title": "pta meeting"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Calendar Component</h4><p>Displaying events in a monthly format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                                        "text": "slide 1"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                                        "text": "slide 2"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                                        "text": "slide 3"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                                        "text": "slide 4"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                                        "text": "slide 5"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Carousel Component</h4><p>Displays images in a sliding manner</p>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
+                        "widgetName": "Table",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "boxClass": "table-container-bordered",
+                                "colModel": {
+                                    "id": {
+                                        "name": "id",
+                                        "text": "ID",
+                                        "width": "15%",
+                                        "key": "true"
+                                    },
+                                    "name": {
+                                        "name": "name",
+                                        "text": "Name",
+                                        "width": "20%",
+                                        "sort": "up"
+                                    },
+                                    "price": {
+                                        "name": "price",
+                                        "text": "Price",
+                                        "width": "15%",
+                                        "type": "money"
+                                    },
+                                    "description": {
+                                        "name": "description",
+                                        "text": "Description",
+                                        "width": "30%"
+                                    },
+                                    "extra": {
+                                        "name": "extra",
+                                        "text": "Extra",
+                                        "show": "false",
+                                        "width": "10%"
+                                    }
+                                },
+                                "dataItems": [
+                                    {
+                                        "id": "P01",
+                                        "name": "egg",
+                                        "price": "7",
+                                        "description": "fresh egg",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P21",
+                                        "name": "bread",
+                                        "price": "2.99",
+                                        "description": "whole grain bread",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P23",
+                                        "name": "chip",
+                                        "price": "2.1",
+                                        "description": "potato chip",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P54",
+                                        "name": "sauce",
+                                        "price": "1.89",
+                                        "description": "dipping sauce",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P81",
+                                        "name": "corn",
+                                        "price": "4.59",
+                                        "description": "fresh corn",
+                                        "extra": "n/a"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r5c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r6c1": [
+                    {
+                        "widgetName": "Treeview",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "treedata": [
+                                    {
+                                        "name": "website",
+                                        "iconClass": "fa fa-folder-o",
+                                        "children": [
+                                            {
+                                                "name": "images",
+                                                "iconClass": "fa fa-folder-o",
+                                                "children": [
+                                                    {
+                                                        "name": "logo.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    },
+                                                    {
+                                                        "name": "background.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "index.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "about.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "product.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r6c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r7c1": null,
+                "r7c2": null,
+                "r8c1": null,
+                "r8c2": null,
+                "r9c1": null,
+                "r9c2": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-10T12:59:22.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "55e115fb9346d92f1ef4eeed",
+            "name": "about",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>about alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
+            },
+            "create_date": "2015-08-29T02:16:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "5619b6e651882eea1d62744f",
+            "name": "webcharts_scatterplot1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/calories.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Protein (g)",
+                                        "type": "linear",
+                                        "column": "Protein (g)"
+                                    },
+                                    "y": {
+                                        "label": "Carbs (g)",
+                                        "type": "linear",
+                                        "column": "Carbo(g)"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "circle",
+                                            "per": [
+                                                "Food"
+                                            ],
+                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
+                                        }
+                                    ],
+                                    "aspect": "1",
+                                    "gridlines": "xy"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-11T01:09:58.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
             "_id": "5615b7a26db265f31d004bfd",
             "name": "graphdemo",
             "composition": "gallery",
@@ -1449,181 +2023,6 @@
             "_class": "page"
         },
         {
-            "_id": "56198d1351882eea1d62744d",
-            "name": "webcharts1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/calories.csv",
-                                    "max_width": "500",
-                                    "x": {
-                                        "label": "Protein (g)",
-                                        "type": "linear",
-                                        "column": "Protein (g)"
-                                    },
-                                    "y": {
-                                        "label": "Carbs (g)",
-                                        "type": "linear",
-                                        "column": "Carbo(g)"
-                                    },
-                                    "marks": [
-                                        {
-                                            "type": "circle",
-                                            "per": [
-                                                "Food"
-                                            ],
-                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-                                        }
-                                    ],
-                                    "aspect": "1",
-                                    "gridlines": "xy"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T22:11:31.000Z",
-            "_class": "page"
-        },
-        {
-            "_id": "5619b52a51882eea1d62744e",
-            "name": "webcharts_barchart1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/OlympicMedals2012_top.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Total",
-                                        "type": "linear",
-                                        "column": "Total",
-                                        "domain": [
-                                            0,
-                                            null
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "ordinal",
-                                        "column": "Country",
-                                        "sort": "total-descending"
-                                    },
-                                    "marks": [
-                                        {
-                                            "type": "bar",
-                                            "per": [
-                                                "Country"
-                                            ],
-                                            "tooltip": "[Country] won [Total] medals"
-                                        }
-                                    ],
-                                    "gridlines": "x"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-11T01:02:34.000Z",
-            "_class": "page"
-        },
-        {
-            "_id": "56150ed57e0f6b6f16fcea3e",
-            "name": "scatterplot2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:23:49.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "56188eb1f823f4a512a4236c",
             "name": "home",
             "composition": "sidenav2",
@@ -1780,456 +2179,6 @@
             "status": "",
             "create_by": "",
             "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "56190baaf823f4a512a4236d",
-            "name": "reactletdemo2",
-            "description": "",
-            "composition": "gallery2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "Calendar",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "year": "2015",
-                                "month": "5",
-                                "eventsCollection": {
-                                    "2015-05-01": [
-                                        {
-                                            "category": "home",
-                                            "title": "gas bill"
-                                        },
-                                        {
-                                            "category": "work",
-                                            "title": "report due"
-                                        }
-                                    ],
-                                    "2015-05-11": [
-                                        {
-                                            "category": "home",
-                                            "title": "pta meeting"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Calendar Component</h4><p>Displaying events in a monthly format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "items": [
-                                    {
-                                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                                        "text": "slide 1"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                                        "text": "slide 2"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                                        "text": "slide 3"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                                        "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                                        "text": "slide 5"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Carousel Component</h4><p>Displays images in a sliding manner</p>"
-                            }
-                        }
-                    }
-                ],
-                "r5c1": [
-                    {
-                        "widgetName": "Table",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "boxClass": "table-container-bordered",
-                                "colModel": {
-                                    "id": {
-                                        "name": "id",
-                                        "text": "ID",
-                                        "width": "15%",
-                                        "key": "true"
-                                    },
-                                    "name": {
-                                        "name": "name",
-                                        "text": "Name",
-                                        "width": "20%",
-                                        "sort": "up"
-                                    },
-                                    "price": {
-                                        "name": "price",
-                                        "text": "Price",
-                                        "width": "15%",
-                                        "type": "money"
-                                    },
-                                    "description": {
-                                        "name": "description",
-                                        "text": "Description",
-                                        "width": "30%"
-                                    },
-                                    "extra": {
-                                        "name": "extra",
-                                        "text": "Extra",
-                                        "show": "false",
-                                        "width": "10%"
-                                    }
-                                },
-                                "dataItems": [
-                                    {
-                                        "id": "P01",
-                                        "name": "egg",
-                                        "price": "7",
-                                        "description": "fresh egg",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P21",
-                                        "name": "bread",
-                                        "price": "2.99",
-                                        "description": "whole grain bread",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P23",
-                                        "name": "chip",
-                                        "price": "2.1",
-                                        "description": "potato chip",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P54",
-                                        "name": "sauce",
-                                        "price": "1.89",
-                                        "description": "dipping sauce",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P81",
-                                        "name": "corn",
-                                        "price": "4.59",
-                                        "description": "fresh corn",
-                                        "extra": "n/a"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r5c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r6c1": [
-                    {
-                        "widgetName": "Treeview",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "treedata": [
-                                    {
-                                        "name": "website",
-                                        "iconClass": "fa fa-folder-o",
-                                        "children": [
-                                            {
-                                                "name": "images",
-                                                "iconClass": "fa fa-folder-o",
-                                                "children": [
-                                                    {
-                                                        "name": "logo.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    },
-                                                    {
-                                                        "name": "background.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "name": "index.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "about.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "product.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r6c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r7c1": null,
-                "r7c2": null,
-                "r8c1": null,
-                "r8c2": null,
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-10T12:59:22.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "55e115fb9346d92f1ef4eeed",
-            "name": "about",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>about alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r0c1": "",
-                "r5c1": "",
-                "r6c1": "",
-                "r7c1": "",
-                "r8c1": "",
-                "r9c1": ""
-            },
-            "create_date": "2015-08-29T02:16:27.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": "",
             "edit_by": ""
         },
         {
