@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":25,
+    "count":27,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -71,6 +71,69 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "5619b6e651882eea1d62744f",
+            "name": "webcharts_scatterplot1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/calories.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Protein (g)",
+                                        "type": "linear",
+                                        "column": "Protein (g)"
+                                    },
+                                    "y": {
+                                        "label": "Carbs (g)",
+                                        "type": "linear",
+                                        "column": "Carbo(g)"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "circle",
+                                            "per": [
+                                                "Food"
+                                            ],
+                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
+                                        }
+                                    ],
+                                    "aspect": "1",
+                                    "gridlines": "xy"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-11T01:09:58.000Z",
+            "_class": "page"
         },
         {
             "_id": "5613b9da40659eca03be7c2f",
@@ -1446,6 +1509,72 @@
                 "f2c1": null
             },
             "create_date": "2015-10-10T22:11:31.000Z",
+            "_class": "page"
+        },
+        {
+            "_id": "5619b52a51882eea1d62744e",
+            "name": "webcharts_barchart1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_top.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Total",
+                                        "type": "linear",
+                                        "column": "Total",
+                                        "domain": [
+                                            0,
+                                            null
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "tooltip": "[Country] won [Total] medals"
+                                        }
+                                    ],
+                                    "gridlines": "x"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-11T01:02:34.000Z",
             "_class": "page"
         },
         {

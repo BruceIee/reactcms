@@ -1,7 +1,7 @@
 // WebChartss components
 // https://github.com/RhoInc/Webcharts
 var Webcharts = React.createClass({
-    name: 'webchart-bartest',
+    name: 'webcharts',
     mixins: [getCommonMixin],
     
     // attribute definitions
