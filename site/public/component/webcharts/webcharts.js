@@ -18,10 +18,13 @@ var Webcharts = React.createClass({
     
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
+        
+        console.log('>>> graphElement', graphElement);
+        
         var settings = this.state.value;
         var dataUrl = this.state.value.data_url + '';
         if (dataUrl) {
-            var chart = webCharts.createChart('.webcharts-graph', settings);
+            var chart = webCharts.createChart(graphElement, settings);
             d3.csv(dataUrl, function(error, data) {
                 chart.init(data);
             });
