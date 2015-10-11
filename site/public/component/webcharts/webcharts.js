@@ -18,9 +18,6 @@ var Webcharts = React.createClass({
     
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
-        
-        console.log('>>> graphElement', graphElement);
-        
         var settings = this.state.value;
         var dataUrl = this.state.value.data_url + '';
         if (dataUrl) {
