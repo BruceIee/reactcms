@@ -96,16 +96,20 @@
             "links1_title": "main",
             "links1": [
                 {
-                    "link": "/pages/graphdemo",
-                    "text": "Graph Demo"
-                },
-                {
                     "link": "/pages/reactletdemo",
                     "text": "Component Demo"
                 },
                 {
+                    "link": "/pages/graphdemo",
+                    "text": "ReactD3 Graph Demo"
+                },
+                {
                     "link": "/pages/webchartsdemo",
-                    "text": "Webcharts Demo"
+                    "text": "Webcharts Graph Demo"
+                },
+                {
+                    "link": "/pages/plotlydemo",
+                    "text": "Plotly Graph Demo"
                 }
             ],
             "links2_title": "",
@@ -119,7 +123,7 @@
             "status": "active",
             "create_date": "2015-10-10T04:02:40.000Z",
             "create_by": "admin",
-            "edit_date": "2015-10-11T03:05:07.000Z",
+            "edit_date": "2015-10-11T21:46:23.000Z",
             "edit_by": "admin",
             "_class": "linkset"
         }
