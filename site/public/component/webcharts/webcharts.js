@@ -19,11 +19,10 @@ var Webcharts = React.createClass({
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
         var settings = this.state.value;
-        var dataUrl = this.state.value.data_url || '';
+        var dataUrl = this.state.value.data_url + '';
         if (dataUrl) {
             var chart = webCharts.createChart('.webcharts-graph', settings);
-            d3.csv('/data/webcharts/calories.csv', function(error, data){
-            //d3.csv(dataUrl, function(error, data){
+            d3.csv(dataUrl, function(error, data) {
                 chart.init(data);
             });
         }
