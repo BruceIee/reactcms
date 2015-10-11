@@ -3226,7 +3226,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Scatterplot Component</h4><p>Displaying events in a monthly format</p>"
+                                "content": "<h4>Scatterplot Component</h4>"
                             }
                         }
                     }
@@ -3273,88 +3273,47 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Linechart Component</h4><p>Displays images in a sliding manner</p>"
+                                "content": "<h4>Linechart Component</h4>"
                             }
                         }
                     }
                 ],
                 "r5c1": [
                     {
-                        "widgetName": "Table",
+                        "widgetName": "Webcharts",
                         "widgetInfo": {
                             "module": "",
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "boxClass": "table-container-bordered",
-                                "colModel": {
-                                    "id": {
-                                        "name": "id",
-                                        "text": "ID",
-                                        "width": "15%",
-                                        "key": "true"
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_top.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Total",
+                                        "type": "linear",
+                                        "column": "Total",
+                                        "domain": [
+                                            0,
+                                            null
+                                        ]
                                     },
-                                    "name": {
-                                        "name": "name",
-                                        "text": "Name",
-                                        "width": "20%",
-                                        "sort": "up"
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
                                     },
-                                    "price": {
-                                        "name": "price",
-                                        "text": "Price",
-                                        "width": "15%",
-                                        "type": "money"
-                                    },
-                                    "description": {
-                                        "name": "description",
-                                        "text": "Description",
-                                        "width": "30%"
-                                    },
-                                    "extra": {
-                                        "name": "extra",
-                                        "text": "Extra",
-                                        "show": "false",
-                                        "width": "10%"
-                                    }
-                                },
-                                "dataItems": [
-                                    {
-                                        "id": "P01",
-                                        "name": "egg",
-                                        "price": "7",
-                                        "description": "fresh egg",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P21",
-                                        "name": "bread",
-                                        "price": "2.99",
-                                        "description": "whole grain bread",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P23",
-                                        "name": "chip",
-                                        "price": "2.1",
-                                        "description": "potato chip",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P54",
-                                        "name": "sauce",
-                                        "price": "1.89",
-                                        "description": "dipping sauce",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P81",
-                                        "name": "corn",
-                                        "price": "4.59",
-                                        "description": "fresh corn",
-                                        "extra": "n/a"
-                                    }
-                                ]
+                                    "marks": [
+                                        {
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "tooltip": "[Country] won [Total] medals"
+                                        }
+                                    ],
+                                    "gridlines": "x"
+                                }
                             }
                         }
                     }
@@ -3367,53 +3326,60 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
+                                "content": "<h4>Barchart Component</h4>"
                             }
                         }
                     }
                 ],
                 "r6c1": [
                     {
-                        "widgetName": "Treeview",
+                        "widgetName": "Webcharts",
                         "widgetInfo": {
                             "module": "",
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "treedata": [
-                                    {
-                                        "name": "website",
-                                        "iconClass": "fa fa-folder-o",
-                                        "children": [
-                                            {
-                                                "name": "images",
-                                                "iconClass": "fa fa-folder-o",
-                                                "children": [
-                                                    {
-                                                        "name": "logo.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    },
-                                                    {
-                                                        "name": "background.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    }
-                                                ]
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Medal Count",
+                                        "type": "linear",
+                                        "column": "count",
+                                        "domain": [
+                                            0
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "arrange": "stacked",
+                                            "split": "type",
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "attributes": {
+                                                "fill-opacity": 0.8
                                             },
-                                            {
-                                                "name": "index.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "about.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "product.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            }
+                                            "summarizeX": "mean"
+                                        }
+                                    ],
+                                    "gridlines": "x",
+                                    "color_by": "type",
+                                    "legend": {
+                                        "label": "MedalType",
+                                        "order": [
+                                            "Bronze",
+                                            "Silver",
+                                            "Gold"
                                         ]
                                     }
-                                ]
+                                }
                             }
                         }
                     }
@@ -3426,19 +3392,65 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
+                                "content": "<h4>Stack Barchart Component</h4>"
                             }
                         }
                     }
                 ],
                 "r7c1": [
                     {
-                        "widgetName": "Plate",
+                        "widgetName": "Webcharts",
                         "widgetInfo": {
                             "module": "",
                             "condition": null,
                             "filter": null,
-                            "data": {}
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Medal Count",
+                                        "type": "linear",
+                                        "column": "count",
+                                        "domain": [
+                                            0
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "arrange": "grouped",
+                                            "split": "type",
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "attributes": {
+                                                "fill-opacity": 0.8
+                                            }
+                                        }
+                                    ],
+                                    "gridlines": "x",
+                                    "color_by": "type",
+                                    "colors": [
+                                        "#8c7853",
+                                        "#c0c0c0",
+                                        "#e5c100"
+                                    ],
+                                    "legend": {
+                                        "label": "MedalType",
+                                        "order": [
+                                            "Bronze",
+                                            "Silver",
+                                            "Gold"
+                                        ]
+                                    }
+                                }
+                            }
                         }
                     }
                 ],
@@ -3450,7 +3462,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Plate Component</h4><p>Displaying 96-well plate with three sizes controlled by boxClass. Use 'plate-small' for small plate, 'plate-large' for large plate. Leave blank for medium-size plate</p>"
+                                "content": "<h4>Group Barchart Component</h4>"
                             }
                         }
                     }
