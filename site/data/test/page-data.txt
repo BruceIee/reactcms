@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":28,
+    "count":29,
     "items": [
         {
             "_id": "56108ea3282c285713d8bfe8",
@@ -1483,6 +1483,72 @@
             "create_by": "",
             "edit_date": "",
             "edit_by": ""
+        },
+        {
+            "_id": "5619d0c351882eea1d627453",
+            "name": "webcharts_line_chart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Linechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/elements.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "column": "Melt",
+                                        "type": "linear",
+                                        "label": "Melting Point (K)"
+                                    },
+                                    "y": {
+                                        "column": "Boil",
+                                        "type": "linear",
+                                        "label": "Boiling Point (K)"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "line",
+                                            "per": [],
+                                            "summarizeY": "mean"
+                                        }
+                                    ],
+                                    "gridlines": "y"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T03:00:19.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "5619b6e651882eea1d62744f",
