@@ -17,42 +17,16 @@ var Webcharts = React.createClass({
     },
     
     componentDidMount: function() {
-        
-        console.log('>>> this.state:', this.state);
-        
         var graphElement = React.findDOMNode(this.refs.graph);
         var settings = this.state.value;
-        
-        /*
-        var settings = {
-            "max_width":"500",
-            "x":{
-              "label":"Protein (g)",
-              "type":"linear",
-              "column":"Protein (g)"
-            },
-            "y":{
-              "label":"Carbs (g)",
-              "type":"linear",
-              "column":"Carbo(g)"
-            },
-            "marks":[
-              {
-                "type":"circle",
-                "per":["Food"],
-                "tooltip":"[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-              }
-            ],
-            "aspect":"1",
-            "gridlines":"xy"
-        };
-        */
-        
-        //var calChart = webCharts.createChart(graphElement, settings);
-        var chart = webCharts.createChart('.webcharts-graph', settings);
-        d3.csv('/data/webcharts/calories.csv', function(error, data){
-            chart.init(data);
-        }); 
+        var dataUrl = this.state.value.data_url || '';
+        if (dataUrl) {
+            var chart = webCharts.createChart('.webcharts-graph', settings);
+            d3.csv('/data/webcharts/calories.csv', function(error, data){
+            //d3.csv(dataUrl, function(error, data){
+                chart.init(data);
+            });
+        }
     },
     
     render: function() {
@@ -65,72 +39,3 @@ var Webcharts = React.createClass({
         );
     }
 });
-
-
-/*
-<script src="/lib/d3cdn/d3.v3.min.js"></script>
-<script src="/lib/webcharts/webcharts.hole.js"></script>
-
-    // scatter plot
-    var settings = {
-        "max_width":"500",
-        "x":{
-          "label":"Protein (g)",
-          "type":"linear",
-          "column":"Protein (g)"
-        },
-        "y":{
-          "label":"Carbs (g)",
-          "type":"linear",
-          "column":"Carbo(g)"
-        },
-        "marks":[
-          {
-            "type":"circle",
-            "per":["Food"],
-            "tooltip":"[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-          }
-        ],
-        "aspect":"1",
-        "gridlines":"xy"
-      };
-      
-    var calChart = webCharts.createChart('.graphic-wrapper', settings);
-    d3.csv('/data/webcharts/calories.csv', function(error, data){
-        calChart.init(data);
-    });
-
-    
-    // barchart
-    var settings = {
-      "max_width":"500",
-      "x":{
-        "label":"Total",
-        "type":"linear",
-        "column":"Total",
-        domain: [0, null]
-      },
-      "y":{
-        "type":"ordinal",
-        "column":"Country",
-        "sort":"total-descending"
-      },
-      "marks":[
-        {
-          "type":"bar",
-          "per":["Country"],
-          "tooltip":"[Country] won [Total] medals"
-        }
-      ],
-      "gridlines":"x"
-    };
-    
-    var medalChart = webCharts.createChart('.graphic-wrapper', settings);
-    d3.csv('/data/webcharts/OlympicMedals2012.csv', function(error, data){
-      //just keep the countries with the 10 most medals 
-      var sub = data.filter(function(d,i){
-        return i <= 11;
-      });
-      medalChart.init(sub);
-    });
-*/
