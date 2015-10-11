@@ -1413,6 +1413,7 @@
                             "filter": null,
                             "data": {
                                 "value": {
+                                    "data_url": "/data/webcharts/calories.csv",
                                     "max_width": "500",
                                     "x": {
                                         "label": "Protein (g)",
