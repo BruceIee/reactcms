@@ -1,0 +1,90 @@
+{
+    "name":"linkset",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "title_link": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "image": {
+            "type": "file",
+            "subtype": {
+                "type": "image"
+            }
+        },
+        "links1_title": {
+            "type": "string"
+        },
+        "links1": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links2_title": {
+            "type": "string"
+        },
+        "links2": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links3_title": {
+            "type": "string"
+        },
+        "links3": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links4_title": {
+            "type": "string"
+        },
+        "links4": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links5_title": {
+            "type": "string"
+        },
+        "links5": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}

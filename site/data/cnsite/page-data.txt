@@ -1,0 +1,321 @@
+{
+    "name":"page",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "composition": {
+            "type": "string"
+        },
+        "content": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "group": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":2,
+    "items": [
+        {
+            "_id": "55e115fb9346d92f1ef4eeed",
+            "name": "about",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "反应式信息系统",
+                                "links1": [
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "关于我们"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">ReactCMS 内容管理系统</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>我们来自五湖四海，为了同一个目标而努力。sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "主页"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "团队"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "职业"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "资源"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "联系"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "关于我们"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "脸书"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "推特"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "领英"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
+            },
+            "create_date": "2015-08-29T02:16:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "55e10d369346d92f1ef4eeec",
+            "name": "home",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "反应式信息系统",
+                                "links1": [
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "关于我们"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">ReactCMS 内容管理系统</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>欢迎来到 ReactCMS 内容管理系统。 ReactCMS 是一个数据驱动的内容管理软件。 This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "主页"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "团队"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "职业"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "资源"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "联系"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "关于我们"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "脸书"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "推特"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "领英"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
+            },
+            "create_date": "2015-08-29T01:39:02.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        }
+    ]
+}
