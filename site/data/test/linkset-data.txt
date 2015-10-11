@@ -100,16 +100,12 @@
                     "text": "Graph Demo"
                 },
                 {
-                    "link": "/pages/graphdemo2",
-                    "text": "Graph Demo 2"
-                },
-                {
                     "link": "/pages/reactletdemo",
                     "text": "Component Demo"
                 },
                 {
-                    "link": "/pages/reactletdemo2",
-                    "text": "Component Demo 2"
+                    "link": "/pages/webchartsdemo",
+                    "text": "Webcharts Demo"
                 }
             ],
             "links2_title": "",
@@ -123,8 +119,8 @@
             "status": "active",
             "create_date": "2015-10-10T04:02:40.000Z",
             "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
+            "edit_date": "2015-10-11T03:05:07.000Z",
+            "edit_by": "admin",
             "_class": "linkset"
         }
     ]
