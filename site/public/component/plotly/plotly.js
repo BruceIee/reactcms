@@ -19,7 +19,8 @@ var PlotlyGraph = React.createClass({
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
         var data = this.state.value.data;
-        Plotly.plot(graphElement, data);
+        var layout = this.state.value.layout;
+        Plotly.plot(graphElement, data, layout);
     },
     
     render: function() {
