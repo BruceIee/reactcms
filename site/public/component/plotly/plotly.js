@@ -1,6 +1,6 @@
 // Plot.ly components
 // https://plot.ly/
-var Plotly = React.createClass({
+var PlotlyGraph = React.createClass({
     name: 'plotly',
     mixins: [getCommonMixin],
     
@@ -18,26 +18,16 @@ var Plotly = React.createClass({
     
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
-        var data = this.state.value;
+        //var data = this.state.value;
         
-        /*
         var data = [{
             x: [1, 2, 3],
             y: [2, 3, 2]
         }];
-        */
+        
+        console.log('>>> Plotly.plot:', graphElement, data);
         
         Plotly.plot(graphElement, data);
-
-        /*
-        var dataUrl = this.state.value.data_url + '';
-        if (dataUrl) {
-            var chart = webCharts.createChart(graphElement, settings);
-            d3.csv(dataUrl, function(error, data) {
-                chart.init(data);
-            });
-        }
-        */
     },
     
     render: function() {
