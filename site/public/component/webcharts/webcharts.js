@@ -17,8 +17,13 @@ var Webcharts = React.createClass({
     },
     
     componentDidMount: function() {
-        var graphElement = React.findDOMNode(this.refs.graph);
         
+        console.log('>>> this.state:', this.state);
+        
+        var graphElement = React.findDOMNode(this.refs.graph);
+        var settings = this.state.value;
+        
+        /*
         var settings = {
             "max_width":"500",
             "x":{
@@ -41,13 +46,13 @@ var Webcharts = React.createClass({
             "aspect":"1",
             "gridlines":"xy"
         };
+        */
         
         //var calChart = webCharts.createChart(graphElement, settings);
-        var calChart = webCharts.createChart('.webcharts-graph', settings);
+        var chart = webCharts.createChart('.webcharts-graph', settings);
         d3.csv('/data/webcharts/calories.csv', function(error, data){
-            calChart.init(data);
-        });
-            
+            chart.init(data);
+        }); 
     },
     
     render: function() {
