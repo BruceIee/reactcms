@@ -12,7 +12,7 @@ var ArticleDetail = React.createClass({
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
-            { name:'mode', type:'string', required:false, defaultValue:'view', note:'mode' },
+            //{ name:'mode', type:'string', required:false, defaultValue:'view', note:'mode' },
             { name:'image', type:'array', required:false, defaultValue:null, note:'item image' },
             { name:'image_link', type:'array', required:false, defaultValue:null, note:'link for item image' },
             { name:'image_style', type:'object', required:false, defaultValue:{ width:"100%" }, note:'style for item image' },
@@ -22,9 +22,7 @@ var ArticleDetail = React.createClass({
     },
     
     render: function() {
-        
-        console.log('>>> article mode:', this.state.mode);
-        
+        //console.log('>>> article mode:', this.state.mode);
         var content = '';
         if (this.state.image) {
             if (this.state.image.constructor.name == 'Array' && this.state.image.length > 0) {
