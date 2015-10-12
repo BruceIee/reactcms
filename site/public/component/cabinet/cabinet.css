@@ -20,5 +20,9 @@
 }
 
 .cabinet-container-edit {
+    /* border: solid 1px #999; */
+}
+
+.cabinet-container-edit > :hover {
     border: solid 1px #999;
 }
