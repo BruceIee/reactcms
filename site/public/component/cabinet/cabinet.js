@@ -101,6 +101,9 @@ var Cabinet = React.createClass({
                 }
             }
         }
+        if (this.state.mode === 'edit') {
+            this.state.containerClassNames.push('cabinet-container-edit');
+        }
         return (
             <div className={ this.state.containerClassNames.join(' ') }  onClick={ this.onClick } >
                 { widgets }
