@@ -1,5 +1,3 @@
-
-
 // Plate component
 var Plate = React.createClass({
     name: 'plate',
@@ -20,16 +18,29 @@ var Plate = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'type', type:'string', required:false, defaultValue:'96well', note:'plate type' },
-            { name:'cellData', type:'array', required:false, defaultValue:'', note:'cell data in array' }
+            { name:'cellData', type:'array', required:false, defaultValue:null, note:'cell data in array' }
         ];
         return attributes;
     },
     
-    getDefaultCellData: function() {
+    getCellData: function() {
         var cellData = [];
+        var cellDataCol = {};
+        // organize cellData input to be indexed by "<row>_<col>"
+        if (this.state.cellData) {
+            for (var i = 0; i < this.state.cellData.length; i++) {
+                var cell = this.state.cellData[i];
+                var cellIndex = cell.row + '_' + cell.col;
+                cellDataCol[cellIndex] = cell;
+            }
+        }
         for (var rowIndex = 1; rowIndex <= this.rowCount; rowIndex++) {
             for (var colIndex = 1; colIndex <= this.colCount; colIndex++) {
-                var cell = { row:rowIndex, col:colIndex, iconClass:'fa fa-circle-thin' };
+                var cellIndex = rowIndex + '_' + colIndex;
+                var cell = cellDataCol[cellIndex] || null;
+                if (!cell) {
+                    cell = { row:rowIndex, col:colIndex, iconClass:'fa fa-circle-thin' };
+                }
                 cellData.push(cell);
             }
         }
@@ -37,9 +48,7 @@ var Plate = React.createClass({
     },
     
     render: function() {
-        if (!this.state.cellData) {
-            this.state.cellData = this.getDefaultCellData();
-        }
+        this.state.cellData = this.getCellData();
         // set plate display
         var contentTags = [];
         var cellLabelData = null;
