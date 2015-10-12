@@ -254,6 +254,7 @@ module.exports = function(app) {
             var page = app.getPage(req);
             if (info.page) {
                 page.title = info.page.title || app.setting['app_name'] || '';
+                page.mode = parameter.mode || 'view';
                 page.pageData = info.page;
                 page.compositionData = info.composition;
                 var layoutFilename = 'composition/' + info.composition.filename;
@@ -286,7 +287,6 @@ module.exports = function(app) {
     app.server.all('/pages/list', block.page.checkLogin);
     app.server.get('/pages/list', block.page.getPageList);
     app.server.get('/pages/:pagename', block.page.getPage);
-    
     
     return block;
 };

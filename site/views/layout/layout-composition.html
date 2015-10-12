@@ -40,6 +40,7 @@
 
 <script type="text/jsx">
 var app = app || {};
+app.pageMode = "{{ page.mode }}";
 app.pageDataType = "{{ page.pageData.datatype }}" || "page";
 app.pageContent = {{ page.pageData.content|json|safe}};
 app.pageComposition = {{ page.compositionData|json|safe}};
