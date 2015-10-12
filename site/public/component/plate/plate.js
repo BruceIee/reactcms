@@ -8,11 +8,25 @@ var Plate = React.createClass({
     
     // attribute definitions
     /*
-    cellData example:
-    [
-        { row:1, col:1, iconClass:'fa fa-book', backgroundColor:'#ccc', color:'#f00', text:'blank' },
-        { row:8, col:12, iconClass:'', backgroundColor:'#eee', color:'#0ff', text:'ref' },
-    ]
+    cellData example in props input:
+    {
+        "cellData": [
+            {
+                "row": 1,
+                "col": 1,
+                "iconClass": "fa fa-dot-circle-o",
+                "color": "#f00",
+                "text": "blank"
+            },
+            {
+                "row": 8,
+                "col": 12,
+                "iconClass": "fa fa-circle",
+                "color": "#0ff",
+                "text": "ref"
+            }
+        ]
+    }
     */
     getAttributes: function() {
         var attributes = [
