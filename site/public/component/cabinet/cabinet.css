@@ -18,3 +18,7 @@
 .listelement-container .listelement-icon-container {
     padding-right: 5px;
 }
+
+.cabinet-container-edit {
+    border: solid 1px #999;
+}
