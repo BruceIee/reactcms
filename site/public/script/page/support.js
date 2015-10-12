@@ -7,5 +7,5 @@ $().ready(function() {
 });
 
 function setup() {
-    console.log('in page support');
+    //console.log('in page support');
 }

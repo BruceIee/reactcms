@@ -94,7 +94,7 @@ var Cabinet = React.createClass({
                         mode: this.state.mode,
                         data: item.data
                     });
-                    console.log('widget data - item:', item);
+                    //console.log('widget data - item:', item);
                     widgets.push(widget);
                 } else {
                     console.log('component for ' + item.type + ' is not found in Cabinet');

@@ -1,5 +1,5 @@
 var app = app || {};
 
 $().ready(function() {
-    console.log('in sidenav');
+    //console.log('in sidenav');
 });
