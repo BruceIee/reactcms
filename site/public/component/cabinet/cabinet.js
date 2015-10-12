@@ -44,9 +44,6 @@ var Cabinet = React.createClass({
     
     // item can overwrite common widget name in this.state.widget
     render: function() {
-        
-        //console.log('>>> mode:', this.state.mode);
-        
         var widgets = [];
         var component = this.components[this.state.widget];
         if (component.acceptMultiple) {
@@ -57,6 +54,7 @@ var Cabinet = React.createClass({
                 var widget = React.createElement(component.widget, {
                     key: item.key,
                     ref: item.name,
+                    mode: this.state.mode,
                     data: item.data
                 });
                 widgets.push(widget);
@@ -77,6 +75,7 @@ var Cabinet = React.createClass({
                 var widget = React.createElement(component.widget, {
                     key: this.state.widget,
                     ref: this.state.widget,
+                    mode: this.state.mode,
                     data: { items:items }
                 });
                 widgets.push(widget);
@@ -92,6 +91,7 @@ var Cabinet = React.createClass({
                     var widget = React.createElement(component.widget, {
                         key: item.key || item.name,
                         ref: item.name || item.description,
+                        mode: this.state.mode,
                         data: item.data
                     });
                     console.log('widget data - item:', item);
