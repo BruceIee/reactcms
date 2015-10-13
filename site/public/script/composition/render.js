@@ -51,8 +51,13 @@ function showWidget(widgetDataItems, widgetName, positionClass) {
         var widgetData = widgetDataItems[i];
         cabinetData.items.push({ type:widgetName, data:widgetData });
     }
-    React.render(
+    var cabinet = React.render(
         <Cabinet data={ cabinetData } />,
         $('.' + positionClass)[0]
     );
+    
+    // this.fire('component-edit', { position:positionClass });
+    cabinet.on('component-edit', function(data) {
+        console.log('edit - data:', data);
+    });
 }
