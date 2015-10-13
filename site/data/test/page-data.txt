@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":35,
+    "count":36,
     "items": [
         {
             "_id": "561663af553b57a720a4418b",
@@ -1938,6 +1938,72 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "561c4b9d2a3ac4cd6589e07f",
+            "name": "plotly_barchart2",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "y": [
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thr",
+                                                "Fri"
+                                            ],
+                                            "x": [
+                                                70,
+                                                80,
+                                                100,
+                                                60,
+                                                40
+                                            ],
+                                            "type": "bar",
+                                            "orientation": "h"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-13T00:09:01.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "56171530712cef6a1c5b707a",
