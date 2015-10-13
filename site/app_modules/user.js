@@ -6,8 +6,7 @@ module.exports = function(app) {
     
     var moduleName = 'user';
     var block = {
-        app: app,
-        model: null
+        app: app
     };
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));

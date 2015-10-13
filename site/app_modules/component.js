@@ -6,12 +6,47 @@ module.exports = function(app) {
     
     var moduleName = 'component';
     var block = {
-        app: app,
-        model: null
+        app: app
     };
     
     block.data = tool.object(require('basedata')(app, moduleName));
     block.page = tool.object(require('basepage')(app, moduleName, block.data));
+    
+    block.model = {
+        name: {
+            type: 'string'
+        },
+        widget_name: {
+            type: 'string'
+        },
+        description: {
+            type: 'string'
+        },
+        accept_multiple: {
+            type: 'boolean'
+        },
+        status: {
+            type: 'string',
+            values: ['active', 'inactive']
+        },
+        create_date: {
+            type: 'date'
+        },
+        create_by: {
+            type: 'string'
+        },
+        edit_date: {
+            type: 'date'
+        },
+        edit_by: {
+            type: 'string'
+        }
+    };
+    block.listFields = [
+        { name:'username', display:'Username', flex:2, sort:'asc' },
+        { name:'email', display:'Email', flex:3 },
+        { name:'status', display:'Status', flex:1 }
+    ];
     
     block.data.getComponents = function(req, res) {
         var callback = arguments[3] || null;
