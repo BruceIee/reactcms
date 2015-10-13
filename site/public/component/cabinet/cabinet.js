@@ -45,7 +45,8 @@ var Cabinet = React.createClass({
     
     onEditClick: function(event) {
         var positionClass = $(event.currentTarget).attr('data-attribute');
-        console.log('on click:', event.currentTarget, positionClass);
+        console.log('on edit click:', event.currentTarget, positionClass);
+        
     },
     
     // item can overwrite common widget name in this.state.widget
