@@ -41,9 +41,12 @@ cd public/
 
 
 echo "build bundle files ..."
+
 browserify -o script/module/dist/view.js -d script/module/src/view.js
 browserify -o script/module/dist/list.js -d script/module/src/list.js
 browserify -o script/module/dist/edit.js -d script/module/src/edit.js
+
+browserify -o script/composition/dist/render.js -d script/composition/src/render.js
 
 # end of build
 echo "build is done"
