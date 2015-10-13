@@ -101,11 +101,14 @@ var Cabinet = React.createClass({
                 }
             }
         }
+        var editElement = '';
         if (this.state.mode === 'edit') {
             this.state.containerClassNames.push('cabinet-container-edit');
+            editElement = <div className="cabinet-edit-element">edit</div>;
         }
         return (
             <div className={ this.state.containerClassNames.join(' ') }  onClick={ this.onClick } >
+                { editElement }
                 { widgets }
                 <div className="div-clear-both"></div>
             </div>

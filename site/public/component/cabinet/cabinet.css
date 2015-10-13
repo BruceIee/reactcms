@@ -26,3 +26,16 @@
 .cabinet-container-edit > :hover {
     border: solid 1px #999;
 }
+
+.cabinet-edit-element {
+    float: right;
+    padding: 5px;
+    border: solid 1px #999;
+    color: red;
+    /* display: none; */
+}
+
+.cabinet-edit-element > :hover {
+    background-color: #f2f2f2;
+    color: blue;
+}
