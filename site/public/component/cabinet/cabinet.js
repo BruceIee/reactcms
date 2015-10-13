@@ -43,6 +43,11 @@ var Cabinet = React.createClass({
         return attributes;
     },
     
+    onEditClick: function(event) {
+        var positionClass = $(event.currentTarget).attr('data-attribute');
+        console.log('on click:', event.currentTarget, positionClass);
+    },
+    
     // item can overwrite common widget name in this.state.widget
     render: function() {
         var widgets = [];
@@ -106,12 +111,14 @@ var Cabinet = React.createClass({
         if (this.state.mode === 'edit') {
             this.state.containerClassNames.push('cabinet-container-edit');
             editElement =
-                <div className="cabinet-edit-element" data-attribute={ this.state.position }>
+                <div className="cabinet-edit-element"
+                    data-attribute={ this.state.position }
+                    onClick={ this.onEditClick }>
                     edit
                 </div>;
         }
         return (
-            <div className={ this.state.containerClassNames.join(' ') }  onClick={ this.onClick } >
+            <div className={ this.state.containerClassNames.join(' ') } >
                 { editElement }
                 { widgets }
                 <div className="div-clear-both"></div>
