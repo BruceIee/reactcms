@@ -13,7 +13,7 @@
 <script src="/library/underscore/underscore.js"></script>
 <script src="/library/react/react.js"></script>
 <script src="/library/react/JSXTransformer.js"></script>
-<!-- <script src="/library/flux/Dispatcher.js"></script> -->
+<script src="/library/fluxjs/Dispatcher-dist.js"></script>
 <script src="/library/d3/d3.min.js"></script>
 <script src="/library/webcharts/webcharts.v1_1_1.js"></script>
 <script src="/library/plotly-basic/plotly.min.js"></script>
@@ -41,7 +41,7 @@
 
 <script type="text/jsx">
 var app = app || {};
-//app.dispatcher = new Dispatcher();
+app.dispatcher = new Dispatcher();
 app.pageMode = "{{ page.mode }}";
 app.pageDataType = "{{ page.pageData.datatype }}" || "page";
 app.pageContent = {{ page.pageData.content|json|safe}};
