@@ -37,6 +37,7 @@ var Cabinet = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'widget', type:'string', require:false, defaultValue:'', note:'common widget name' },
             { name:'mode', type:'string', require:false, defaultValue:'view', note:'widget mode' },
+            { name:'position', type:'string', require:false, defaultValue:'', note:'widget position class' },
             { name:'items', type:'array', required:false, defaultValue:[], note:'items' }
         ];
         return attributes;
@@ -104,7 +105,10 @@ var Cabinet = React.createClass({
         var editElement = '';
         if (this.state.mode === 'edit') {
             this.state.containerClassNames.push('cabinet-container-edit');
-            editElement = <div className="cabinet-edit-element">edit</div>;
+            editElement =
+                <div className="cabinet-edit-element" data-attribute={ this.state.position }>
+                    edit
+                </div>;
         }
         return (
             <div className={ this.state.containerClassNames.join(' ') }  onClick={ this.onClick } >
