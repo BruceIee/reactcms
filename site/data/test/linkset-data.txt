@@ -97,7 +97,11 @@
             "links1": [
                 {
                     "link": "/pages/reactletdemo",
-                    "text": "Component Demo"
+                    "text": "Component Demo 1"
+                },
+                {
+                    "link": "/pages/reactletdemo2",
+                    "text": "Component Demo 2"
                 },
                 {
                     "link": "/pages/graphdemo",
@@ -110,6 +114,10 @@
                 {
                     "link": "/pages/plotlydemo",
                     "text": "Plotly Graph Demo"
+                },
+                {
+                    "link": "/pages/highchartsdemo",
+                    "text": "Highcharts Graph Demo"
                 }
             ],
             "links2_title": "",
