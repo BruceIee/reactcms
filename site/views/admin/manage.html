@@ -1,0 +1,40 @@
+{% extends '../layout/layout-admin.html' %}
+
+{% block style %}
+{% parent %}
+<style>
+.section {
+    color: #888;
+    font-size: 1.1em;
+}
+.section h4 {
+    margin-top: 40px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="section">
+                <h4>Manage</h4>
+                <div>
+                    <a href="/modules/article/list">Article</a>
+                </div>
+                <div>
+                    <a href="/modules/linkset/list">Linkset</a>
+                </div>
+                <div>
+                    <a href="/modules/media/list">Media</a>
+                </div>
+                <div>
+                    <a href="/modules/page/list">Page</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</div>
+{% endblock %}
