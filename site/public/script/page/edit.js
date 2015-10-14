@@ -98,12 +98,15 @@ function onCompositionSelect(compositionName) {
     // select first section for content display on right
     var sections = composition.data;
     if (sections.length > 0) {
-        if (app.section){
-            // section is passed in, show that section
-            showSectionContent(app.section);
-        } else {
-            showSectionContent(sections[0].name);
+        var sectionName = sections[0].name;
+        if (app.section) {
+            // make sure section matching sectionName is available
+            var sectionMatched = $('.section-item[data-name=' + app.section + ']');
+            if (sectionMatched.length > 0) {
+                sectionName = app.section;
+            }
         }
+        showSectionContent(sectionName);
     }
 }
 
@@ -199,8 +202,8 @@ function savePage() {
             var pageName = $('#pageName').val();
             app.pageData.name = pageName;
             $.post(pageAddUrl, JSON.stringify(app.pageData), function(data) {
-                    console.log('page saved:', data);
-                    alert('page ' + pageName + ' is saved');
+                console.log('page saved:', data);
+                alert('page ' + pageName + ' is saved');
             });
         }
     });
@@ -220,7 +223,6 @@ function retrievePageSectionData() {
         } catch(e) {
             console.log('Error in getting data from ' + sectionName);
         }
-        //console.log('sectionData:', sectionName, sectionDataItem)
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
         } else {
