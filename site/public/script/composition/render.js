@@ -58,8 +58,9 @@ function showWidget(widgetDataItems, widgetName, positionClass) {
     
     // this.fire('component-edit', { position:positionClass });
     cabinet.on('component-edit', function(data) {
-        console.log('edit - data:', data);
-        var postionClass = data.position;
-        
+        //console.log('edit - data:', data);
+        var sectionClass = data.position;
+        var sectionEditUrl = '/pages/' + app.pageData._id + '/edit?section=' + sectionClass;
+        window.open(sectionEditUrl, '_blank');
     });
 }

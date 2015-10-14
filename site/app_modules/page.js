@@ -115,7 +115,7 @@ module.exports = function(app) {
         var callback = arguments[3] || null; 
         var page = tool.getReqParameter(req);
         var parameter = tool.getReqParameter(req);
-        console.log('>>> parameter:', JSON.stringify(parameter, null, '  '));
+        //console.log('parameter:', JSON.stringify(parameter, null, '  '));
         block.data.edit(req, res, page, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });

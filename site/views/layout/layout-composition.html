@@ -43,6 +43,7 @@
 var app = app || {};
 app.dispatcher = new Dispatcher();
 app.pageMode = "{{ page.mode }}";
+app.pageData = {{ page.pageData|json|safe}};
 app.pageDataType = "{{ page.pageData.datatype }}" || "page";
 app.pageContent = {{ page.pageData.content|json|safe}};
 app.pageComposition = {{ page.compositionData|json|safe}};
