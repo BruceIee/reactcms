@@ -98,7 +98,12 @@ function onCompositionSelect(compositionName) {
     // select first section for content display on right
     var sections = composition.data;
     if (sections.length > 0) {
-        showSectionContent(sections[0].name);
+        if (app.section){
+            // section is passed in, show that section
+            showSectionContent(app.section);
+        } else {
+            showSectionContent(sections[0].name);
+        }
     }
 }
 
