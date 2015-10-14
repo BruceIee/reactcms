@@ -211,6 +211,7 @@ module.exports = function(app) {
         block.data.getById(req, res, pageId, function(error, docs, info) {
             var page = app.getPage(req);
             page.mode = 'edit';
+            page.section = parameter.section || '';
             page.pageObject = docs && docs[0] || null;
             res.render('page/edit', { page:page });
         });
