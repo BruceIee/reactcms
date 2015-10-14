@@ -59,5 +59,7 @@ function showWidget(widgetDataItems, widgetName, positionClass) {
     // this.fire('component-edit', { position:positionClass });
     cabinet.on('component-edit', function(data) {
         console.log('edit - data:', data);
+        var postionClass = data.position;
+        
     });
 }
