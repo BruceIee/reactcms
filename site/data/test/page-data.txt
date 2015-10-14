@@ -42,8 +42,134 @@
     "count":37,
     "items": [
         {
-            "_id": "56148dff96679b150ffb5a83",
-            "name": "piechart1",
+            "_id": "561acd46e39daac5615ffd92",
+            "name": "plotly_lineplot1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Lineplot Basic - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3
+                                            ],
+                                            "y": [
+                                                2,
+                                                3,
+                                                5
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T20:57:42.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5613b9da40659eca03be7c2f",
+            "name": "barchart1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": 8
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": 4
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": 6
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "create_date": "2015-10-06T12:08:58.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "56150fe77e0f6b6f16fcea40",
+            "name": "areachart1",
             "description": "",
             "composition": "theone",
             "content": {
@@ -55,7 +181,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Area Chart - Data Content</h4>"
                             }
                         }
                     }
@@ -63,7 +189,175 @@
                 "r1c1": null,
                 "r2c1": [
                     {
-                        "widgetName": "GraphPiechart",
+                        "widgetName": "GraphAreachart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:28:23.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150fc17e0f6b6f16fcea3f",
+            "name": "linechart1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:27:45.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150ea27e0f6b6f16fcea3d",
+            "name": "scatterplot1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
                         "widgetInfo": {
                             "module": "",
                             "condition": null,
@@ -101,120 +395,59 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-07T03:14:07.000Z",
+            "create_date": "2015-10-07T12:22:58.000Z",
             "create_by": "",
             "edit_date": "",
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "561075f3282c285713d8bfe7",
-            "name": "carousel1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "items": [
-                                    {
-                                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                                        "text": "slide 1"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                                        "text": "slide 2"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                                        "text": "slide 3"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                                        "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                                        "text": "slide 5"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r99c1": ""
-            },
-            "create_date": "2015-10-04T00:42:27.000Z",
-            "_class": "page",
+            "_id": "561c4b9d2a3ac4cd6589e07f",
+            "name": "plotly_barchart2",
             "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "561338efa49bb3e709a11826",
-            "name": "calendar1",
-            "composition": "theone",
+            "composition": "theone2",
             "content": {
-                "r0c1": [
+                "h1c1": [
                     {
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
                             "module": "",
-                            "condition": "",
-                            "filter": "",
+                            "condition": null,
+                            "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Calendar - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
                             }
                         }
                     }
                 ],
-                "r1c1": "",
-                "r2c1": [
+                "h2c1": null,
+                "r1c1": [
                     {
-                        "widgetName": "Calendar",
+                        "widgetName": "Plotly",
                         "widgetInfo": {
                             "module": "",
-                            "condition": "",
-                            "filter": "",
+                            "condition": null,
+                            "filter": null,
                             "data": {
-                                "year": "2015",
-                                "month": "5",
-                                "eventsCollection": {
-                                    "2015-05-01": [
+                                "value": {
+                                    "data": [
                                         {
-                                            "category": "home",
-                                            "title": "gas bill"
-                                        },
-                                        {
-                                            "category": "work",
-                                            "title": "report due"
-                                        }
-                                    ],
-                                    "2015-05-11": [
-                                        {
-                                            "category": "home",
-                                            "title": "pta meeting"
+                                            "y": [
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thr",
+                                                "Fri"
+                                            ],
+                                            "x": [
+                                                70,
+                                                80,
+                                                100,
+                                                60,
+                                                40
+                                            ],
+                                            "type": "bar",
+                                            "orientation": "h"
                                         }
                                     ]
                                 }
@@ -222,19 +455,17 @@
                         }
                     }
                 ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": "",
-                "r99c1": ""
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
             },
-            "create_date": "2015-10-06T02:58:55.000Z",
-            "_class": "page",
-            "description": "",
             "group": "",
             "status": "",
+            "create_date": "2015-10-13T00:09:01.000Z",
             "create_by": "",
             "edit_date": null,
-            "edit_by": ""
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "561663af553b57a720a4418b",
@@ -1089,216 +1320,6 @@
             "edit_by": ""
         },
         {
-            "_id": "561acd46e39daac5615ffd92",
-            "name": "plotly_lineplot1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Lineplot Basic - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3
-                                            ],
-                                            "y": [
-                                                2,
-                                                3,
-                                                5
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T20:57:42.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5613b9da40659eca03be7c2f",
-            "name": "barchart1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphBarchart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "create_date": "2015-10-06T12:08:58.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": ""
-        },
-        {
-            "_id": "56150fe77e0f6b6f16fcea40",
-            "name": "areachart1",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Area Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphAreachart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:28:23.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "56108ea3282c285713d8bfe8",
             "name": "carousel2",
             "composition": "theone",
@@ -1327,649 +1348,6 @@
             "status": "",
             "create_by": "",
             "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "56190baaf823f4a512a4236d",
-            "name": "reactletdemo2",
-            "description": "",
-            "composition": "gallery2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "Calendar",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "year": "2015",
-                                "month": "5",
-                                "eventsCollection": {
-                                    "2015-05-01": [
-                                        {
-                                            "category": "home",
-                                            "title": "gas bill"
-                                        },
-                                        {
-                                            "category": "work",
-                                            "title": "report due"
-                                        }
-                                    ],
-                                    "2015-05-11": [
-                                        {
-                                            "category": "home",
-                                            "title": "pta meeting"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Calendar Component</h4><p>Displaying events in a monthly format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "items": [
-                                    {
-                                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                                        "text": "slide 1"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                                        "text": "slide 2"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                                        "text": "slide 3"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                                        "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                                        "text": "slide 5"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Carousel Component</h4><p>Displays images in a sliding manner</p>"
-                            }
-                        }
-                    }
-                ],
-                "r5c1": [
-                    {
-                        "widgetName": "Table",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "boxClass": "table-container-bordered",
-                                "colModel": {
-                                    "id": {
-                                        "name": "id",
-                                        "text": "ID",
-                                        "width": "15%",
-                                        "key": "true"
-                                    },
-                                    "name": {
-                                        "name": "name",
-                                        "text": "Name",
-                                        "width": "20%",
-                                        "sort": "up"
-                                    },
-                                    "price": {
-                                        "name": "price",
-                                        "text": "Price",
-                                        "width": "15%",
-                                        "type": "money"
-                                    },
-                                    "description": {
-                                        "name": "description",
-                                        "text": "Description",
-                                        "width": "30%"
-                                    },
-                                    "extra": {
-                                        "name": "extra",
-                                        "text": "Extra",
-                                        "show": "false",
-                                        "width": "10%"
-                                    }
-                                },
-                                "dataItems": [
-                                    {
-                                        "id": "P01",
-                                        "name": "egg",
-                                        "price": "7",
-                                        "description": "fresh egg",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P21",
-                                        "name": "bread",
-                                        "price": "2.99",
-                                        "description": "whole grain bread",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P23",
-                                        "name": "chip",
-                                        "price": "2.1",
-                                        "description": "potato chip",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P54",
-                                        "name": "sauce",
-                                        "price": "1.89",
-                                        "description": "dipping sauce",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P81",
-                                        "name": "corn",
-                                        "price": "4.59",
-                                        "description": "fresh corn",
-                                        "extra": "n/a"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r5c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r6c1": [
-                    {
-                        "widgetName": "Treeview",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "treedata": [
-                                    {
-                                        "name": "website",
-                                        "iconClass": "fa fa-folder-o",
-                                        "children": [
-                                            {
-                                                "name": "images",
-                                                "iconClass": "fa fa-folder-o",
-                                                "children": [
-                                                    {
-                                                        "name": "logo.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    },
-                                                    {
-                                                        "name": "background.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "name": "index.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "about.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "product.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r6c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r7c1": null,
-                "r7c2": null,
-                "r8c1": null,
-                "r8c2": null,
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-10T12:59:22.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5611f71e9a0c6ff825594e17",
-            "name": "treeview1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Treeview - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Treeview",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "treedata": [
-                                    {
-                                        "name": "website",
-                                        "iconClass": "fa fa-folder-o",
-                                        "children": [
-                                            {
-                                                "name": "images",
-                                                "iconClass": "fa fa-folder-o",
-                                                "children": [
-                                                    {
-                                                        "name": "logo.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    },
-                                                    {
-                                                        "name": "background.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "name": "index.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "about.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "product.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": "",
-                "r99c1": ""
-            },
-            "create_date": "2015-10-05T04:05:50.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "5611ed573048437d23ca8ce1",
-            "name": "table1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Table - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Table",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "boxClass": "table-container-bordered",
-                                "colModel": {
-                                    "id": {
-                                        "name": "id",
-                                        "text": "ID",
-                                        "width": "15%",
-                                        "key": "true"
-                                    },
-                                    "name": {
-                                        "name": "name",
-                                        "text": "Name",
-                                        "width": "20%",
-                                        "sort": "up"
-                                    },
-                                    "price": {
-                                        "name": "price",
-                                        "text": "Price",
-                                        "width": "15%",
-                                        "type": "money"
-                                    },
-                                    "description": {
-                                        "name": "description",
-                                        "text": "Description",
-                                        "width": "30%"
-                                    },
-                                    "extra": {
-                                        "name": "extra",
-                                        "text": "Extra",
-                                        "show": "false",
-                                        "width": "10%"
-                                    }
-                                },
-                                "dataItems": [
-                                    {
-                                        "id": "P01",
-                                        "name": "egg",
-                                        "price": "7",
-                                        "description": "fresh egg",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P21",
-                                        "name": "bread",
-                                        "price": "2.99",
-                                        "description": "whole grain bread",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P23",
-                                        "name": "chip",
-                                        "price": "2.1",
-                                        "description": "potato chip",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P54",
-                                        "name": "sauce",
-                                        "price": "1.89",
-                                        "description": "dipping sauce",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P81",
-                                        "name": "corn",
-                                        "price": "4.59",
-                                        "description": "fresh corn",
-                                        "extra": "n/a"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": "",
-                "r99c1": ""
-            },
-            "create_date": "2015-10-05T03:24:07.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "55e115fb9346d92f1ef4eeed",
-            "name": "about",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>about alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r0c1": "",
-                "r5c1": "",
-                "r6c1": "",
-                "r7c1": "",
-                "r8c1": "",
-                "r9c1": ""
-            },
-            "create_date": "2015-08-29T02:16:27.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": "",
             "edit_by": ""
         },
         {
@@ -2158,547 +1536,6 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-09T01:10:27.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561ad789e39daac5615ffd94",
-            "name": "plotlydemo",
-            "description": "",
-            "composition": "gallery2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Plotly Component Gallery</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3
-                                            ],
-                                            "y": [
-                                                2,
-                                                3,
-                                                5
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Lineplot Component</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                0,
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5,
-                                                6,
-                                                7,
-                                                8,
-                                                9
-                                            ],
-                                            "y": [
-                                                99,
-                                                97.28,
-                                                92.61,
-                                                79.91,
-                                                45.4,
-                                                -48.41,
-                                                -303.42,
-                                                -996.63,
-                                                -2880.95,
-                                                -8003.08
-                                            ]
-                                        }
-                                    ],
-                                    "layout": {
-                                        "xaxis": {
-                                            "type": "log"
-                                        },
-                                        "yaxis": {
-                                            "type": "log"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Logplot Component</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r5c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Monday",
-                                                "Tuesday",
-                                                "Wednesday",
-                                                "Thursday",
-                                                "Friday"
-                                            ],
-                                            "y": [
-                                                "Morning",
-                                                "Afternoon",
-                                                "Evening"
-                                            ],
-                                            "z": [
-                                                [
-                                                    1,
-                                                    20,
-                                                    30,
-                                                    50,
-                                                    1
-                                                ],
-                                                [
-                                                    20,
-                                                    1,
-                                                    60,
-                                                    80,
-                                                    30
-                                                ],
-                                                [
-                                                    30,
-                                                    60,
-                                                    1,
-                                                    -10,
-                                                    20
-                                                ]
-                                            ],
-                                            "type": "heatmap"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r5c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Heatmap Component</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r6c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
-                                            "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
-                                            ],
-                                            "type": "bar"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r6c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Barchart Component</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r7c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "y": [
-                                                "Mon",
-                                                "Tue",
-                                                "Wed",
-                                                "Thr",
-                                                "Fri"
-                                            ],
-                                            "x": [
-                                                70,
-                                                80,
-                                                100,
-                                                60,
-                                                40
-                                            ],
-                                            "type": "bar",
-                                            "orientation": "h"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r7c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Barchart Horizontal Component</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r8c1": null,
-                "r8c2": null,
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T21:41:29.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56150fc17e0f6b6f16fcea3f",
-            "name": "linechart1",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphLinechart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:27:45.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56150ea27e0f6b6f16fcea3d",
-            "name": "scatterplot1",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:22:58.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561c4b9d2a3ac4cd6589e07f",
-            "name": "plotly_barchart2",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "y": [
-                                                "Mon",
-                                                "Tue",
-                                                "Wed",
-                                                "Thr",
-                                                "Fri"
-                                            ],
-                                            "x": [
-                                                70,
-                                                80,
-                                                100,
-                                                60,
-                                                40
-                                            ],
-                                            "type": "bar",
-                                            "orientation": "h"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-13T00:09:01.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
@@ -3505,6 +2342,1160 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "56148dff96679b150ffb5a83",
+            "name": "piechart1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphPiechart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": 8
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": 4
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": 6
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T03:14:07.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561075f3282c285713d8bfe7",
+            "name": "carousel1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Carousel - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                                        "text": "slide 1"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                                        "text": "slide 2"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                                        "text": "slide 3"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                                        "text": "slide 4"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                                        "text": "slide 5"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r99c1": ""
+            },
+            "create_date": "2015-10-04T00:42:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "561338efa49bb3e709a11826",
+            "name": "calendar1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Calendar - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Calendar",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "year": "2015",
+                                "month": "5",
+                                "eventsCollection": {
+                                    "2015-05-01": [
+                                        {
+                                            "category": "home",
+                                            "title": "gas bill"
+                                        },
+                                        {
+                                            "category": "work",
+                                            "title": "report due"
+                                        }
+                                    ],
+                                    "2015-05-11": [
+                                        {
+                                            "category": "home",
+                                            "title": "pta meeting"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-06T02:58:55.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "56190baaf823f4a512a4236d",
+            "name": "reactletdemo2",
+            "description": "",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery 2</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Header Component 1</h4><p>BlackbootHeader</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Footer Component</h4><p>BlackbootFooter</p>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
+                        "widgetName": "Table",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "boxClass": "table-container-bordered",
+                                "colModel": {
+                                    "id": {
+                                        "name": "id",
+                                        "text": "ID",
+                                        "width": "15%",
+                                        "key": "true"
+                                    },
+                                    "name": {
+                                        "name": "name",
+                                        "text": "Name",
+                                        "width": "20%",
+                                        "sort": "up"
+                                    },
+                                    "price": {
+                                        "name": "price",
+                                        "text": "Price",
+                                        "width": "15%",
+                                        "type": "money"
+                                    },
+                                    "description": {
+                                        "name": "description",
+                                        "text": "Description",
+                                        "width": "30%"
+                                    },
+                                    "extra": {
+                                        "name": "extra",
+                                        "text": "Extra",
+                                        "show": "false",
+                                        "width": "10%"
+                                    }
+                                },
+                                "dataItems": [
+                                    {
+                                        "id": "P01",
+                                        "name": "egg",
+                                        "price": "7",
+                                        "description": "fresh egg",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P21",
+                                        "name": "bread",
+                                        "price": "2.99",
+                                        "description": "whole grain bread",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P23",
+                                        "name": "chip",
+                                        "price": "2.1",
+                                        "description": "potato chip",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P54",
+                                        "name": "sauce",
+                                        "price": "1.89",
+                                        "description": "dipping sauce",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P81",
+                                        "name": "corn",
+                                        "price": "4.59",
+                                        "description": "fresh corn",
+                                        "extra": "n/a"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r5c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r6c1": [
+                    {
+                        "widgetName": "Treeview",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "treedata": [
+                                    {
+                                        "name": "website",
+                                        "iconClass": "fa fa-folder-o",
+                                        "children": [
+                                            {
+                                                "name": "images",
+                                                "iconClass": "fa fa-folder-o",
+                                                "children": [
+                                                    {
+                                                        "name": "logo.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    },
+                                                    {
+                                                        "name": "background.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "index.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "about.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "product.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r6c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r7c1": null,
+                "r7c2": null,
+                "r8c1": null,
+                "r8c2": null,
+                "r9c1": null,
+                "r9c2": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-10T12:59:22.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5611f71e9a0c6ff825594e17",
+            "name": "treeview1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Treeview - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Treeview",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "treedata": [
+                                    {
+                                        "name": "website",
+                                        "iconClass": "fa fa-folder-o",
+                                        "children": [
+                                            {
+                                                "name": "images",
+                                                "iconClass": "fa fa-folder-o",
+                                                "children": [
+                                                    {
+                                                        "name": "logo.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    },
+                                                    {
+                                                        "name": "background.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "index.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "about.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "product.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-05T04:05:50.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "5611ed573048437d23ca8ce1",
+            "name": "table1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Table - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Table",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "boxClass": "table-container-bordered",
+                                "colModel": {
+                                    "id": {
+                                        "name": "id",
+                                        "text": "ID",
+                                        "width": "15%",
+                                        "key": "true"
+                                    },
+                                    "name": {
+                                        "name": "name",
+                                        "text": "Name",
+                                        "width": "20%",
+                                        "sort": "up"
+                                    },
+                                    "price": {
+                                        "name": "price",
+                                        "text": "Price",
+                                        "width": "15%",
+                                        "type": "money"
+                                    },
+                                    "description": {
+                                        "name": "description",
+                                        "text": "Description",
+                                        "width": "30%"
+                                    },
+                                    "extra": {
+                                        "name": "extra",
+                                        "text": "Extra",
+                                        "show": "false",
+                                        "width": "10%"
+                                    }
+                                },
+                                "dataItems": [
+                                    {
+                                        "id": "P01",
+                                        "name": "egg",
+                                        "price": "7",
+                                        "description": "fresh egg",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P21",
+                                        "name": "bread",
+                                        "price": "2.99",
+                                        "description": "whole grain bread",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P23",
+                                        "name": "chip",
+                                        "price": "2.1",
+                                        "description": "potato chip",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P54",
+                                        "name": "sauce",
+                                        "price": "1.89",
+                                        "description": "dipping sauce",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P81",
+                                        "name": "corn",
+                                        "price": "4.59",
+                                        "description": "fresh corn",
+                                        "extra": "n/a"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-05T03:24:07.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "55e115fb9346d92f1ef4eeed",
+            "name": "about",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">About ReactCMS</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>about alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>about alsdf asgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>More shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>More alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": "",
+                "r5c1": "",
+                "r6c1": "",
+                "r7c1": "",
+                "r8c1": "",
+                "r9c1": ""
+            },
+            "create_date": "2015-08-29T02:16:27.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "561ad789e39daac5615ffd94",
+            "name": "plotlydemo",
+            "description": "",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Plotly Component Gallery</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3
+                                            ],
+                                            "y": [
+                                                2,
+                                                3,
+                                                5
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Lineplot Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                0,
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5,
+                                                6,
+                                                7,
+                                                8,
+                                                9
+                                            ],
+                                            "y": [
+                                                99,
+                                                97.28,
+                                                92.61,
+                                                79.91,
+                                                45.4,
+                                                -48.41,
+                                                -303.42,
+                                                -996.63,
+                                                -2880.95,
+                                                -8003.08
+                                            ]
+                                        }
+                                    ],
+                                    "layout": {
+                                        "xaxis": {
+                                            "type": "log"
+                                        },
+                                        "yaxis": {
+                                            "type": "log"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Logplot Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Monday",
+                                                "Tuesday",
+                                                "Wednesday",
+                                                "Thursday",
+                                                "Friday"
+                                            ],
+                                            "y": [
+                                                "Morning",
+                                                "Afternoon",
+                                                "Evening"
+                                            ],
+                                            "z": [
+                                                [
+                                                    1,
+                                                    20,
+                                                    30,
+                                                    50,
+                                                    1
+                                                ],
+                                                [
+                                                    20,
+                                                    1,
+                                                    60,
+                                                    80,
+                                                    30
+                                                ],
+                                                [
+                                                    30,
+                                                    60,
+                                                    1,
+                                                    -10,
+                                                    20
+                                                ]
+                                            ],
+                                            "type": "heatmap"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r5c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Heatmap Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r6c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
+                                            ],
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r6c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Barchart Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r7c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "y": [
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thr",
+                                                "Fri"
+                                            ],
+                                            "x": [
+                                                70,
+                                                80,
+                                                100,
+                                                60,
+                                                40
+                                            ],
+                                            "type": "bar",
+                                            "orientation": "h"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r7c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Barchart Horizontal Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r8c1": null,
+                "r8c2": null,
+                "r9c1": null,
+                "r9c2": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T21:41:29.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "56185a26262cfbb95a78815c",
