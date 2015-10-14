@@ -114,7 +114,7 @@ var Cabinet = React.createClass({
                 <div className="cabinet-edit-element"
                     data-attribute={ this.state.position }
                     onClick={ this.onEditClick }>
-                    edit
+                    <i className="fa fa-pencil-square-o"></i>
                 </div>;
         }
         return (
