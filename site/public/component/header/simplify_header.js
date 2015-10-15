@@ -33,6 +33,12 @@ var SimplifyHeader = React.createClass({
         var links1Elements = this.getItemLinks( this.state.links1);
         var links2Elements = this.getItemLinks( this.state.links2);
         var links3Elements = this.getItemLinks( this.state.links3 );
+        var logoElement = '';
+        if (imageUrl) {
+            logoElement = <img src={ imageUrl } className="navbar-brand-logo" alt="{ title }" />;
+        } else {
+            logoElement = <h4 className="navbar-brand-logo">{ title }</h4>;
+        }
         return (
             <nav className="navbar simplifyheader-container" role="navigation">
                 <div className="header-container container-fluid">
@@ -44,7 +50,7 @@ var SimplifyHeader = React.createClass({
                             <span className="icon-bar"></span>
                         </button>
                         <a className="navbar-brand" href={ this.state.title_link }>
-                            <img src={ imageUrl } className="navbar-brand-logo" alt="{ title }" />
+                            { logoElement }
                         </a>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse navbar-site-main">
