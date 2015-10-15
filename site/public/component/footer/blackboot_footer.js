@@ -30,7 +30,7 @@ var BlackbootFooter = React.createClass({
         var links4Elements = this.getItemLinks( this.state.links4 );
         return (
             <div className="navbar navbar-inverse footer_container">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="footer-links-primary col-md-3 footer-links">
                         <ul className="list-unstyled">{ links1Elements }</ul>
                     </div>

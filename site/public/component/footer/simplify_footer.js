@@ -38,7 +38,7 @@ var SimplifyFooter = React.createClass({
         var links4Elements = this.getItemLinks( this.state.links4 );
         return (
             <div className="navbar simplifyfooter-container">
-                <div className="footer_container container">
+                <div className="footer_container container-fluid">
                     <div className="row footer-links footer-links-1">
                         <ul className="list-unstyled">{ links1Elements }</ul>
                     </div>
