@@ -5,9 +5,10 @@
     background-color: #f2f2f2;
 }
 
-.simplifyfooter-container .footer_container .container {
+.simplifyfooter-container .footer_container {
     margin-top: 25px;
     margin-bottom: 25px;
+    width: 80%;
 }
 
 .simplifyfooter-container .footer_container .footer-links {

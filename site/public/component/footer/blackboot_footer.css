@@ -2,9 +2,10 @@
     margin-top: 25px;
 }
 
-.footer_container .container {
+.footer_container {
     margin-top: 25px;
     margin-bottom: 25px;
+    width: 80%;
 }
 
 .footer_container .footer-links {
