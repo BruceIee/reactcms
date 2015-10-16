@@ -1,6 +1,6 @@
 // Highcharts components
 // http://www.highcharts.com/
-var PlotlyGraph = React.createClass({
+var HighchartsGraph = React.createClass({
     name: 'highcharts',
     mixins: [getCommonMixin],
     
@@ -18,11 +18,7 @@ var PlotlyGraph = React.createClass({
     
     componentDidMount: function() {
         var graphElement = React.findDOMNode(this.refs.graph);
-        
-        var data = this.state.value.data;
-        
-        //var layout = this.state.value.layout;
-        // Plotly.plot(graphElement, data, layout);
+        $(graphElement).highcharts(this.state.value.data);
     },
     
     render: function() {
