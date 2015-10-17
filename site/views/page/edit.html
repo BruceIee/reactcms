@@ -2,11 +2,13 @@
 
 {% block style %}
 {% parent %}
+<link rel="stylesheet" href="/library/jsoneditor/jsoneditor.min.css">
 <link rel="stylesheet" href="/style/page/edit.css">
 {% endblock %}
 
 {% block script %}
 {% parent %}
+<script src="/library/jsoneditor/jsoneditor.min.js"></script>
 <script src="/library/handlebars/handlebars.min.js"></script>
 <script>
 var app = {
@@ -41,7 +43,7 @@ Handlebars.registerHelper('json', function(context) {
         <div class="well">
             <div class="form-group">
                 <label>Data Content</label>
-                <textarea class="form-control" name="widgetdata" placeholder="example: { &quot;title&quot;:&quot;CMS&quot; }">{{{ json widgetInfo.data }}}</textarea>
+                <div class="form-control widgetdata" name="widgetdata"></div>
             </div>
         </div>
         <h4 class="pull-right" style="margin-top:0px;">

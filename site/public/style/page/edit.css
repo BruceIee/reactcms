@@ -22,3 +22,7 @@
 .form-top .control-label {
     padding-top: 8px;
 }
+
+.widgetdata {
+    height: 240px;
+}

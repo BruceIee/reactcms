@@ -1,6 +1,11 @@
 var app = app || {};
 app.compositionCol = {}; // composition collection keyed by composition name
-
+app.jsonEditor = null;
+app.jsonEditorOptions = {
+    "mode": "text",  // Available mode: 'tree' (default), 'view', 'form', 'code', 'text'. 
+    "indentation": 4
+};
+    
 $().ready(function() {
     resetPageData();
     setup();
@@ -21,7 +26,6 @@ function setup() {
     $.ajaxSetup({
         type: "POST",
         contentType: "application/json"
-        //data: JSON.stringify(app.pageData),
     });
     // compile section content template
     var source   = $("#component-entry-template").html();
@@ -154,6 +158,12 @@ function populateSectionContent(sectionName, template) {
     }
     var html = template(context);
     $('.section-content[data-name=' + sectionName + ']').append(html);
+    // apply jsoneditor to textarea
+    var widgetdataElement = $('[data-section=' + sectionName + '] [name=widgetdata]');
+    app.jsonEditor = new JSONEditor(widgetdataElement[0], app.jsonEditorOptions);
+    if (context.widgetInfo && context.widgetInfo.data) {
+        app.jsonEditor.set(context.widgetInfo.data);
+    }
 }
 
 function showSectionContent(sectionName) {
@@ -238,7 +248,7 @@ function retrievePageSectionData() {
     "widgetInfo": {
         "module": "article",
         "condition": {
-            "title": "mccpta-title"
+            "title": "company-title"
         },
         "filter": {}
     }
@@ -249,9 +259,12 @@ function getSectionData(parent) {
     // widget data by value
     var widgetDataText = $(parent).find('textarea[name=widgetdata]').val();
     var widgetData = null;
+    
+    // TODO: handle json parse error
     if (widgetDataText) {
         widgetData = JSON.parse(widgetDataText);
     }
+    
     // widget data by query conditions
     var moduleName = $(parent).find('input[name=module]').val();
     var conditionText = $(parent).find('textarea[name=condition]').val();
