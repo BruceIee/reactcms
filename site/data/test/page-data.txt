@@ -6560,6 +6560,269 @@
             "_class": "page"
         },
         {
+            "_id": "56225ed2b54ef68c7a3be787",
+            "name": "highcharts_treemap1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "series": [
+                                            {
+                                                "type": "treemap",
+                                                "layoutAlgorithm": "stripes",
+                                                "alternateStartingDirection": true,
+                                                "levels": [
+                                                    {
+                                                        "level": 1,
+                                                        "layoutAlgorithm": "sliceAndDice",
+                                                        "dataLabels": {
+                                                            "enabled": true,
+                                                            "align": "left",
+                                                            "verticalAlign": "top",
+                                                            "style": {
+                                                                "fontSize": "15px",
+                                                                "fontWeight": "bold"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "data": [
+                                                    {
+                                                        "id": "A",
+                                                        "name": "Apples",
+                                                        "color": "#EC2500"
+                                                    },
+                                                    {
+                                                        "id": "B",
+                                                        "name": "Bananas",
+                                                        "color": "#ECE100"
+                                                    },
+                                                    {
+                                                        "id": "O",
+                                                        "name": "Oranges",
+                                                        "color": "#EC9800"
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "A",
+                                                        "value": 5
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "A",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "A",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "B",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "B",
+                                                        "value": 10
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "B",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "O",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Susanne",
+                                                        "parent": "Kiwi",
+                                                        "value": 2,
+                                                        "color": "#9EDE00"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "title": {
+                                            "text": "Fruit consumption"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T14:44:34.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56227d2a72792c94f1ab0aa6",
+            "name": "highcharts_linechart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "line"
+                                        },
+                                        "title": {
+                                            "text": "Monthly Average Temperature"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: WorldClimate.com"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "Jan",
+                                                "Feb",
+                                                "Mar",
+                                                "Apr",
+                                                "May",
+                                                "Jun",
+                                                "Jul",
+                                                "Aug",
+                                                "Sep",
+                                                "Oct",
+                                                "Nov",
+                                                "Dec"
+                                            ]
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Temperature (°C)"
+                                            }
+                                        },
+                                        "plotOptions": {
+                                            "line": {
+                                                "dataLabels": {
+                                                    "enabled": true
+                                                },
+                                                "enableMouseTracking": false
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Tokyo",
+                                                "data": [
+                                                    7,
+                                                    6.9,
+                                                    9.5,
+                                                    14.5,
+                                                    18.4,
+                                                    21.5,
+                                                    25.2,
+                                                    26.5,
+                                                    23.3,
+                                                    18.3,
+                                                    13.9,
+                                                    9.6
+                                                ]
+                                            },
+                                            {
+                                                "name": "London",
+                                                "data": [
+                                                    3.9,
+                                                    4.2,
+                                                    5.7,
+                                                    8.5,
+                                                    11.9,
+                                                    15.2,
+                                                    17,
+                                                    16.6,
+                                                    14.2,
+                                                    10.3,
+                                                    6.6,
+                                                    4.8
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T16:54:02.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
             "_id": "561e4b9d34456ad010692086",
             "name": "highchartsdemo",
             "description": "",
@@ -9077,185 +9340,7 @@
                         }
                     }
                 ],
-                "r7c1": null,
-                "r7c2": null,
-                "r8c1": null,
-                "r8c2": null,
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-14T12:33:33.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56225ed2b54ef68c7a3be787",
-            "name": "highcharts_treemap1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "series": [
-                                            {
-                                                "type": "treemap",
-                                                "layoutAlgorithm": "stripes",
-                                                "alternateStartingDirection": true,
-                                                "levels": [
-                                                    {
-                                                        "level": 1,
-                                                        "layoutAlgorithm": "sliceAndDice",
-                                                        "dataLabels": {
-                                                            "enabled": true,
-                                                            "align": "left",
-                                                            "verticalAlign": "top",
-                                                            "style": {
-                                                                "fontSize": "15px",
-                                                                "fontWeight": "bold"
-                                                            }
-                                                        }
-                                                    }
-                                                ],
-                                                "data": [
-                                                    {
-                                                        "id": "A",
-                                                        "name": "Apples",
-                                                        "color": "#EC2500"
-                                                    },
-                                                    {
-                                                        "id": "B",
-                                                        "name": "Bananas",
-                                                        "color": "#ECE100"
-                                                    },
-                                                    {
-                                                        "id": "O",
-                                                        "name": "Oranges",
-                                                        "color": "#EC9800"
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "A",
-                                                        "value": 5
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "A",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "A",
-                                                        "value": 4
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "B",
-                                                        "value": 4
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "B",
-                                                        "value": 10
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "B",
-                                                        "value": 1
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "O",
-                                                        "value": 1
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "O",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "O",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Susanne",
-                                                        "parent": "Kiwi",
-                                                        "value": 2,
-                                                        "color": "#9EDE00"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "title": {
-                                            "text": "Fruit consumption"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T14:44:34.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56227d2a72792c94f1ab0aa6",
-            "name": "highcharts_linechart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
+                "r7c1": [
                     {
                         "widgetName": "Highcharts",
                         "widgetInfo": {
@@ -9345,13 +9430,29 @@
                         }
                     }
                 ],
-                "r2c1": null,
+                "r7c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<p>Highcharts Line Chart</p>"
+                            }
+                        }
+                    }
+                ],
+                "r8c1": null,
+                "r8c2": null,
+                "r9c1": null,
+                "r9c2": null,
                 "f1c1": null,
                 "f2c1": null
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-17T16:54:02.000Z",
+            "create_date": "2015-10-14T12:33:33.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
