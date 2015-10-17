@@ -39,8 +39,142 @@
             "type": "string"
         }
     },
-    "count":41,
+    "count":42,
     "items": [
+        {
+            "_id": "561c4af02a3ac4cd6589e07e",
+            "name": "plotly_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
+                                            ],
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-13T00:06:08.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5619b6e651882eea1d62744f",
+            "name": "webcharts_scatterplot1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/calories.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Protein (g)",
+                                        "type": "linear",
+                                        "column": "Protein (g)"
+                                    },
+                                    "y": {
+                                        "label": "Carbs (g)",
+                                        "type": "linear",
+                                        "column": "Carbo(g)"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "circle",
+                                            "per": [
+                                                "Food"
+                                            ],
+                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
+                                        }
+                                    ],
+                                    "aspect": "1",
+                                    "gridlines": "xy"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-11T01:09:58.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
         {
             "_id": "561ad345e39daac5615ffd93",
             "name": "plotly_logplot1",
@@ -1326,148 +1460,6 @@
             "edit_by": ""
         },
         {
-            "_id": "561870e50dfa090f3a372d45",
-            "name": "home2",
-            "description": "home page for site",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r0c1": null,
-                "r5c1": null,
-                "r6c1": null,
-                "r7c1": null,
-                "r8c1": null,
-                "r9c1": null
-            },
-            "group": "",
-            "status": "active",
-            "create_date": "2015-10-10T01:59:01.000Z",
-            "create_by": "",
-            "edit_date": "2015-10-09T02:52:15.000Z",
-            "edit_by": "admin",
-            "_class": "page"
-        },
-        {
             "_id": "56188eb1f823f4a512a4236c",
             "name": "home",
             "composition": "sidenav2",
@@ -2146,140 +2138,6 @@
             "edit_date": null,
             "edit_by": "",
             "_class": "page"
-        },
-        {
-            "_id": "561c4af02a3ac4cd6589e07e",
-            "name": "plotly_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
-                                            "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
-                                            ],
-                                            "type": "bar"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-13T00:06:08.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5619b6e651882eea1d62744f",
-            "name": "webcharts_scatterplot1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/calories.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Protein (g)",
-                                        "type": "linear",
-                                        "column": "Protein (g)"
-                                    },
-                                    "y": {
-                                        "label": "Carbs (g)",
-                                        "type": "linear",
-                                        "column": "Carbo(g)"
-                                    },
-                                    "marks": [
-                                        {
-                                            "type": "circle",
-                                            "per": [
-                                                "Food"
-                                            ],
-                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-                                        }
-                                    ],
-                                    "aspect": "1",
-                                    "gridlines": "xy"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-11T01:09:58.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
         },
         {
             "_id": "55e115fb9346d92f1ef4eeed",
@@ -3735,336 +3593,6 @@
             "_class": "page"
         },
         {
-            "_id": "56185a26262cfbb95a78815c",
-            "name": "reactletdemo",
-            "composition": "gallery2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h2 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery</h2>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "Calendar",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "year": "2015",
-                                "month": "5",
-                                "eventsCollection": {
-                                    "2015-05-01": [
-                                        {
-                                            "category": "home",
-                                            "title": "gas bill"
-                                        },
-                                        {
-                                            "category": "work",
-                                            "title": "report due"
-                                        }
-                                    ],
-                                    "2015-05-11": [
-                                        {
-                                            "category": "home",
-                                            "title": "pta meeting"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Calendar Component</h4><p>Displaying events in a monthly format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "items": [
-                                    {
-                                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                                        "text": "slide 1"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                                        "text": "slide 2"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                                        "text": "slide 3"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                                        "text": "slide 4"
-                                    },
-                                    {
-                                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                                        "text": "slide 5"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Carousel Component</h4><p>Displays images in a sliding manner</p>"
-                            }
-                        }
-                    }
-                ],
-                "r5c1": [
-                    {
-                        "widgetName": "Table",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "boxClass": "table-container-bordered",
-                                "colModel": {
-                                    "id": {
-                                        "name": "id",
-                                        "text": "ID",
-                                        "width": "15%",
-                                        "key": "true"
-                                    },
-                                    "name": {
-                                        "name": "name",
-                                        "text": "Name",
-                                        "width": "20%",
-                                        "sort": "up"
-                                    },
-                                    "price": {
-                                        "name": "price",
-                                        "text": "Price",
-                                        "width": "15%",
-                                        "type": "money"
-                                    },
-                                    "description": {
-                                        "name": "description",
-                                        "text": "Description",
-                                        "width": "30%"
-                                    },
-                                    "extra": {
-                                        "name": "extra",
-                                        "text": "Extra",
-                                        "show": "false",
-                                        "width": "10%"
-                                    }
-                                },
-                                "dataItems": [
-                                    {
-                                        "id": "P01",
-                                        "name": "egg",
-                                        "price": "7",
-                                        "description": "fresh egg",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P21",
-                                        "name": "bread",
-                                        "price": "2.99",
-                                        "description": "whole grain bread",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P23",
-                                        "name": "chip",
-                                        "price": "2.1",
-                                        "description": "potato chip",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P54",
-                                        "name": "sauce",
-                                        "price": "1.89",
-                                        "description": "dipping sauce",
-                                        "extra": "n/a"
-                                    },
-                                    {
-                                        "id": "P81",
-                                        "name": "corn",
-                                        "price": "4.59",
-                                        "description": "fresh corn",
-                                        "extra": "n/a"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r5c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r6c1": [
-                    {
-                        "widgetName": "Treeview",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "treedata": [
-                                    {
-                                        "name": "website",
-                                        "iconClass": "fa fa-folder-o",
-                                        "children": [
-                                            {
-                                                "name": "images",
-                                                "iconClass": "fa fa-folder-o",
-                                                "children": [
-                                                    {
-                                                        "name": "logo.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    },
-                                                    {
-                                                        "name": "background.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "name": "index.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "about.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "product.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r6c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
-                            }
-                        }
-                    }
-                ],
-                "r7c1": [
-                    {
-                        "widgetName": "Plate",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {}
-                        }
-                    }
-                ],
-                "r7c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Plate Component</h4><p>Displaying 96-well plate with three sizes controlled by boxClass. Use 'plate-small' for small plate, 'plate-large' for large plate. Leave blank for medium-size plate</p>"
-                            }
-                        }
-                    }
-                ],
-                "r8c1": null,
-                "r8c2": null,
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T00:21:58.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
             "_id": "5619d38951882eea1d627454",
             "name": "webchartsdemo",
             "description": "",
@@ -4410,6 +3938,478 @@
             "edit_date": null,
             "edit_by": "",
             "_class": "page"
+        },
+        {
+            "_id": "561870e50dfa090f3a372d45",
+            "name": "home2",
+            "description": "home page for site",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": null,
+                "r5c1": null,
+                "r6c1": null,
+                "r7c1": null,
+                "r8c1": null,
+                "r9c1": null
+            },
+            "group": "",
+            "status": "active",
+            "create_date": "2015-10-10T01:59:01.000Z",
+            "create_by": "",
+            "edit_date": "2015-10-09T02:52:15.000Z",
+            "edit_by": "admin",
+            "_class": "page"
+        },
+        {
+            "_id": "56185a26262cfbb95a78815c",
+            "name": "reactletdemo",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h2 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery</h2>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "Calendar",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "year": "2015",
+                                "month": "5",
+                                "eventsCollection": {
+                                    "2015-05-01": [
+                                        {
+                                            "category": "home",
+                                            "title": "gas bill"
+                                        },
+                                        {
+                                            "category": "work",
+                                            "title": "report due"
+                                        }
+                                    ],
+                                    "2015-05-11": [
+                                        {
+                                            "category": "home",
+                                            "title": "pta meeting"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Calendar Component</h4><p>Displaying events in a monthly format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "items": [
+                                    {
+                                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                                        "text": "slide 1"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                                        "text": "slide 2"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                                        "text": "slide 3"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                                        "text": "slide 4"
+                                    },
+                                    {
+                                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                                        "text": "slide 5"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Carousel Component</h4><p>Displays images in a sliding manner</p>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
+                        "widgetName": "Table",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "boxClass": "table-container-bordered",
+                                "colModel": {
+                                    "id": {
+                                        "name": "id",
+                                        "text": "ID",
+                                        "width": "15%",
+                                        "key": "true"
+                                    },
+                                    "name": {
+                                        "name": "name",
+                                        "text": "Name",
+                                        "width": "20%",
+                                        "sort": "up"
+                                    },
+                                    "price": {
+                                        "name": "price",
+                                        "text": "Price",
+                                        "width": "15%",
+                                        "type": "money"
+                                    },
+                                    "description": {
+                                        "name": "description",
+                                        "text": "Description",
+                                        "width": "30%"
+                                    },
+                                    "extra": {
+                                        "name": "extra",
+                                        "text": "Extra",
+                                        "show": "false",
+                                        "width": "10%"
+                                    }
+                                },
+                                "dataItems": [
+                                    {
+                                        "id": "P01",
+                                        "name": "egg",
+                                        "price": "7",
+                                        "description": "fresh egg",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P21",
+                                        "name": "bread",
+                                        "price": "2.99",
+                                        "description": "whole grain bread",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P23",
+                                        "name": "chip",
+                                        "price": "2.1",
+                                        "description": "potato chip",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P54",
+                                        "name": "sauce",
+                                        "price": "1.89",
+                                        "description": "dipping sauce",
+                                        "extra": "n/a"
+                                    },
+                                    {
+                                        "id": "P81",
+                                        "name": "corn",
+                                        "price": "4.59",
+                                        "description": "fresh corn",
+                                        "extra": "n/a"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r5c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Table Component</h4><p>Displaying data in table format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r6c1": [
+                    {
+                        "widgetName": "Treeview",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "treedata": [
+                                    {
+                                        "name": "website",
+                                        "iconClass": "fa fa-folder-o",
+                                        "children": [
+                                            {
+                                                "name": "images",
+                                                "iconClass": "fa fa-folder-o",
+                                                "children": [
+                                                    {
+                                                        "name": "logo.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    },
+                                                    {
+                                                        "name": "background.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "index.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "about.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "product.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r6c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Treeview Component</h4><p>Displaying data in tree format</p>"
+                            }
+                        }
+                    }
+                ],
+                "r7c1": [
+                    {
+                        "widgetName": "Plate",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {}
+                        }
+                    }
+                ],
+                "r7c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Plate Component</h4><p>Displaying 96-well plate with three sizes controlled by boxClass. Use 'plate-small' for small plate, 'plate-large' for large plate. Leave blank for medium-size plate</p>"
+                            }
+                        }
+                    }
+                ],
+                "r8c1": null,
+                "r8c2": null,
+                "r9c1": null,
+                "r9c2": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-10T00:21:58.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "56207746550ebb694c650dea",
@@ -9230,6 +9230,128 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-17T14:44:34.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56227d2a72792c94f1ab0aa6",
+            "name": "highcharts_linechart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "line"
+                                        },
+                                        "title": {
+                                            "text": "Monthly Average Temperature"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: WorldClimate.com"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "Jan",
+                                                "Feb",
+                                                "Mar",
+                                                "Apr",
+                                                "May",
+                                                "Jun",
+                                                "Jul",
+                                                "Aug",
+                                                "Sep",
+                                                "Oct",
+                                                "Nov",
+                                                "Dec"
+                                            ]
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Temperature (°C)"
+                                            }
+                                        },
+                                        "plotOptions": {
+                                            "line": {
+                                                "dataLabels": {
+                                                    "enabled": true
+                                                },
+                                                "enableMouseTracking": false
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Tokyo",
+                                                "data": [
+                                                    7,
+                                                    6.9,
+                                                    9.5,
+                                                    14.5,
+                                                    18.4,
+                                                    21.5,
+                                                    25.2,
+                                                    26.5,
+                                                    23.3,
+                                                    18.3,
+                                                    13.9,
+                                                    9.6
+                                                ]
+                                            },
+                                            {
+                                                "name": "London",
+                                                "data": [
+                                                    3.9,
+                                                    4.2,
+                                                    5.7,
+                                                    8.5,
+                                                    11.9,
+                                                    15.2,
+                                                    17,
+                                                    16.6,
+                                                    14.2,
+                                                    10.3,
+                                                    6.6,
+                                                    4.8
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T16:54:02.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
