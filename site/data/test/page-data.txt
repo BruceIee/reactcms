@@ -39,8 +39,416 @@
             "type": "string"
         }
     },
-    "count":40,
+    "count":41,
     "items": [
+        {
+            "_id": "561ad345e39daac5615ffd93",
+            "name": "plotly_logplot1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Logplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                0,
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5,
+                                                6,
+                                                7,
+                                                8,
+                                                9
+                                            ],
+                                            "y": [
+                                                99,
+                                                97.28,
+                                                92.61,
+                                                79.91,
+                                                45.4,
+                                                -48.41,
+                                                -303.42,
+                                                -996.63,
+                                                -2880.95,
+                                                -8003.08
+                                            ]
+                                        }
+                                    ],
+                                    "layout": {
+                                        "xaxis": {
+                                            "type": "log"
+                                        },
+                                        "yaxis": {
+                                            "type": "log"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T21:23:17.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561711dd712cef6a1c5b7077",
+            "name": "linechart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:01:17.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5617138f712cef6a1c5b7078",
+            "name": "scatterplotb",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:08:31.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150ed57e0f6b6f16fcea3e",
+            "name": "scatterplot2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:23:49.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5619d0c351882eea1d627453",
+            "name": "webcharts_line_chart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Linechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/elements.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "column": "Melt",
+                                        "type": "linear",
+                                        "label": "Melting Point (K)"
+                                    },
+                                    "y": {
+                                        "column": "Boil",
+                                        "type": "linear",
+                                        "label": "Boiling Point (K)"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "line",
+                                            "per": [],
+                                            "summarizeY": "mean"
+                                        }
+                                    ],
+                                    "gridlines": "y"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T03:00:19.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150fc17e0f6b6f16fcea3f",
+            "name": "linechart1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:27:45.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
         {
             "_id": "56108ea3282c285713d8bfe8",
             "name": "carousel2",
@@ -64,226 +472,6 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-04T02:27:47.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "561c497f2a3ac4cd6589e07d",
-            "name": "plotly_heatmap1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Heatmap - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Monday",
-                                                "Tuesday",
-                                                "Wednesday",
-                                                "Thursday",
-                                                "Friday"
-                                            ],
-                                            "y": [
-                                                "Morning",
-                                                "Afternoon",
-                                                "Evening"
-                                            ],
-                                            "z": [
-                                                [
-                                                    1,
-                                                    20,
-                                                    30,
-                                                    50,
-                                                    1
-                                                ],
-                                                [
-                                                    20,
-                                                    1,
-                                                    60,
-                                                    80,
-                                                    30
-                                                ],
-                                                [
-                                                    30,
-                                                    60,
-                                                    1,
-                                                    -10,
-                                                    20
-                                                ]
-                                            ],
-                                            "type": "heatmap"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-12T23:59:59.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561c4af02a3ac4cd6589e07e",
-            "name": "plotly_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
-                                            "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
-                                            ],
-                                            "type": "bar"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-13T00:06:08.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5619b6e651882eea1d62744f",
-            "name": "webcharts_scatterplot1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/calories.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Protein (g)",
-                                        "type": "linear",
-                                        "column": "Protein (g)"
-                                    },
-                                    "y": {
-                                        "label": "Carbs (g)",
-                                        "type": "linear",
-                                        "column": "Carbo(g)"
-                                    },
-                                    "marks": [
-                                        {
-                                            "type": "circle",
-                                            "per": [
-                                                "Food"
-                                            ],
-                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-                                        }
-                                    ],
-                                    "aspect": "1",
-                                    "gridlines": "xy"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-11T01:09:58.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -1138,8 +1326,500 @@
             "edit_by": ""
         },
         {
-            "_id": "561ad345e39daac5615ffd93",
-            "name": "plotly_logplot1",
+            "_id": "561870e50dfa090f3a372d45",
+            "name": "home2",
+            "description": "home page for site",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": null,
+                "r5c1": null,
+                "r6c1": null,
+                "r7c1": null,
+                "r8c1": null,
+                "r9c1": null
+            },
+            "group": "",
+            "status": "active",
+            "create_date": "2015-10-10T01:59:01.000Z",
+            "create_by": "",
+            "edit_date": "2015-10-09T02:52:15.000Z",
+            "edit_by": "admin",
+            "_class": "page"
+        },
+        {
+            "_id": "56188eb1f823f4a512a4236c",
+            "name": "home",
+            "composition": "sidenav2",
+            "content": {
+                "h1c1": null,
+                "h2c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "home_links"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": ""
+                            }
+                        }
+                    }
+                ],
+                "r4c1": null,
+                "r4c2": null,
+                "r5c1": null,
+                "r6c1": null,
+                "r7c1": null,
+                "r8c1": null,
+                "r9c1": null,
+                "f1c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "f2c1": null
+            },
+            "create_date": "2015-10-10T04:06:09.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "56171403712cef6a1c5b7079",
+            "name": "graphdemo2",
+            "description": "",
+            "composition": "gallery",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Graph Gallery (Database Data)</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "GraphPiechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c3": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "GraphAreachart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r4c3": null,
+                "r5c1": null,
+                "r5c2": null,
+                "r5c3": null,
+                "r6c1": null,
+                "r6c2": null,
+                "r6c3": null,
+                "r7c1": null,
+                "r7c2": null,
+                "r7c3": null,
+                "r8c1": null,
+                "r8c2": null,
+                "r8c3": null,
+                "r9c1": null,
+                "r9c2": null,
+                "r9c3": null,
+                "f1c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:10:27.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5619cbd951882eea1d627452",
+            "name": "webcharts_group_barchart1",
             "description": "",
             "composition": "theone2",
             "content": {
@@ -1151,7 +1831,251 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Logplot - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Group Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Medal Count",
+                                        "type": "linear",
+                                        "column": "count",
+                                        "domain": [
+                                            0
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "arrange": "grouped",
+                                            "split": "type",
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "attributes": {
+                                                "fill-opacity": 0.8
+                                            }
+                                        }
+                                    ],
+                                    "gridlines": "x",
+                                    "color_by": "type",
+                                    "colors": [
+                                        "#8c7853",
+                                        "#c0c0c0",
+                                        "#e5c100"
+                                    ],
+                                    "legend": {
+                                        "label": "MedalType",
+                                        "order": [
+                                            "Bronze",
+                                            "Silver",
+                                            "Gold"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T02:39:21.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5621a7ea55ce0f3c5b3c8040",
+            "name": "highcharts_areachart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Areachart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "area"
+                                        },
+                                        "title": {
+                                            "text": "Historic and Estimated Worldwide Population Growth by Region"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: Wikipedia.org"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "1750",
+                                                "1800",
+                                                "1850",
+                                                "1900",
+                                                "1950",
+                                                "1999",
+                                                "2050"
+                                            ],
+                                            "tickmarkPlacement": "on",
+                                            "title": {
+                                                "enabled": false
+                                            }
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Billions"
+                                            },
+                                            "labels": {}
+                                        },
+                                        "tooltip": {
+                                            "shared": true,
+                                            "valueSuffix": " millions"
+                                        },
+                                        "plotOptions": {
+                                            "area": {
+                                                "stacking": "normal",
+                                                "lineColor": "#666666",
+                                                "lineWidth": 1,
+                                                "marker": {
+                                                    "lineWidth": 1,
+                                                    "lineColor": "#666666"
+                                                }
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Asia",
+                                                "data": [
+                                                    502,
+                                                    635,
+                                                    809,
+                                                    947,
+                                                    1402,
+                                                    3634,
+                                                    5268
+                                                ]
+                                            },
+                                            {
+                                                "name": "Africa",
+                                                "data": [
+                                                    106,
+                                                    107,
+                                                    111,
+                                                    133,
+                                                    221,
+                                                    767,
+                                                    1766
+                                                ]
+                                            },
+                                            {
+                                                "name": "Europe",
+                                                "data": [
+                                                    163,
+                                                    203,
+                                                    276,
+                                                    408,
+                                                    547,
+                                                    729,
+                                                    628
+                                                ]
+                                            },
+                                            {
+                                                "name": "America",
+                                                "data": [
+                                                    18,
+                                                    31,
+                                                    54,
+                                                    156,
+                                                    339,
+                                                    818,
+                                                    1201
+                                                ]
+                                            },
+                                            {
+                                                "name": "Oceania",
+                                                "data": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    6,
+                                                    13,
+                                                    30,
+                                                    46
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T01:44:10.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561c497f2a3ac4cd6589e07d",
+            "name": "plotly_heatmap1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Heatmap - Data Content</h4>"
                             }
                         }
                     }
@@ -1169,39 +2093,43 @@
                                     "data": [
                                         {
                                             "x": [
-                                                0,
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5,
-                                                6,
-                                                7,
-                                                8,
-                                                9
+                                                "Monday",
+                                                "Tuesday",
+                                                "Wednesday",
+                                                "Thursday",
+                                                "Friday"
                                             ],
                                             "y": [
-                                                99,
-                                                97.28,
-                                                92.61,
-                                                79.91,
-                                                45.4,
-                                                -48.41,
-                                                -303.42,
-                                                -996.63,
-                                                -2880.95,
-                                                -8003.08
-                                            ]
+                                                "Morning",
+                                                "Afternoon",
+                                                "Evening"
+                                            ],
+                                            "z": [
+                                                [
+                                                    1,
+                                                    20,
+                                                    30,
+                                                    50,
+                                                    1
+                                                ],
+                                                [
+                                                    20,
+                                                    1,
+                                                    60,
+                                                    80,
+                                                    30
+                                                ],
+                                                [
+                                                    30,
+                                                    60,
+                                                    1,
+                                                    -10,
+                                                    20
+                                                ]
+                                            ],
+                                            "type": "heatmap"
                                         }
-                                    ],
-                                    "layout": {
-                                        "xaxis": {
-                                            "type": "log"
-                                        },
-                                        "yaxis": {
-                                            "type": "log"
-                                        }
-                                    }
+                                    ]
                                 }
                             }
                         }
@@ -1213,19 +2141,19 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-11T21:23:17.000Z",
+            "create_date": "2015-10-12T23:59:59.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "561711dd712cef6a1c5b7077",
-            "name": "linechart2",
+            "_id": "561c4af02a3ac4cd6589e07e",
+            "name": "plotly_barchart1",
             "description": "",
-            "composition": "theone",
+            "composition": "theone2",
             "content": {
-                "r0c1": [
+                "h1c1": [
                     {
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
@@ -1233,45 +2161,63 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
                             }
                         }
                     }
                 ],
-                "r1c1": null,
-                "r2c1": [
+                "h2c1": null,
+                "r1c1": [
                     {
-                        "widgetName": "GraphLinechart",
+                        "widgetName": "Plotly",
                         "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
+                            "module": "",
+                            "condition": null,
                             "filter": null,
-                            "data": null
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
+                                            ],
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
+                                        }
+                                    ]
+                                }
+                            }
                         }
                     }
                 ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-09T01:01:17.000Z",
+            "create_date": "2015-10-13T00:06:08.000Z",
             "create_by": "",
-            "edit_date": "",
+            "edit_date": null,
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "5617138f712cef6a1c5b7078",
-            "name": "scatterplotb",
-            "description": "",
-            "composition": "theone",
+            "_id": "5619b6e651882eea1d62744f",
+            "name": "webcharts_scatterplot1",
+            "composition": "theone2",
             "content": {
-                "r0c1": [
+                "h1c1": [
                     {
                         "widgetName": "ArticleDetail",
                         "widgetInfo": {
@@ -1279,75 +2225,61 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Scatterplot - Data Content</h4>"
                             }
                         }
                     }
                 ],
-                "r1c1": null,
-                "r2c1": [
+                "h2c1": null,
+                "r1c1": [
                     {
-                        "widgetName": "GraphScatterplot",
+                        "widgetName": "Webcharts",
                         "widgetInfo": {
                             "module": "",
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
+                                "value": {
+                                    "data_url": "/data/webcharts/calories.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Protein (g)",
+                                        "type": "linear",
+                                        "column": "Protein (g)"
+                                    },
+                                    "y": {
+                                        "label": "Carbs (g)",
+                                        "type": "linear",
+                                        "column": "Carbo(g)"
+                                    },
+                                    "marks": [
+                                        {
+                                            "type": "circle",
+                                            "per": [
+                                                "Food"
+                                            ],
+                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
+                                        }
+                                    ],
+                                    "aspect": "1",
+                                    "gridlines": "xy"
+                                }
                             }
                         }
                     }
                 ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
             },
+            "create_date": "2015-10-11T01:09:58.000Z",
+            "_class": "page",
+            "description": "",
             "group": "",
             "status": "",
-            "create_date": "2015-10-09T01:08:31.000Z",
             "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "55e115fb9346d92f1ef4eeed",
@@ -2248,202 +3180,6 @@
             "_class": "page"
         },
         {
-            "_id": "56150ed57e0f6b6f16fcea3e",
-            "name": "scatterplot2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:23:49.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5619d0c351882eea1d627453",
-            "name": "webcharts_line_chart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Linechart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/elements.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "column": "Melt",
-                                        "type": "linear",
-                                        "label": "Melting Point (K)"
-                                    },
-                                    "y": {
-                                        "column": "Boil",
-                                        "type": "linear",
-                                        "label": "Boiling Point (K)"
-                                    },
-                                    "marks": [
-                                        {
-                                            "type": "line",
-                                            "per": [],
-                                            "summarizeY": "mean"
-                                        }
-                                    ],
-                                    "gridlines": "y"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T03:00:19.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56150fc17e0f6b6f16fcea3f",
-            "name": "linechart1",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphLinechart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:27:45.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "56190baaf823f4a512a4236d",
             "name": "reactletdemo2",
             "description": "",
@@ -2721,148 +3457,6 @@
             "_class": "page"
         },
         {
-            "_id": "561870e50dfa090f3a372d45",
-            "name": "home2",
-            "description": "home page for site",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r0c1": null,
-                "r5c1": null,
-                "r6c1": null,
-                "r7c1": null,
-                "r8c1": null,
-                "r9c1": null
-            },
-            "group": "",
-            "status": "active",
-            "create_date": "2015-10-10T01:59:01.000Z",
-            "create_by": "",
-            "edit_date": "2015-10-09T02:52:15.000Z",
-            "edit_by": "admin",
-            "_class": "page"
-        },
-        {
             "_id": "5611f71e9a0c6ff825594e17",
             "name": "treeview1",
             "composition": "theone",
@@ -2933,165 +3527,6 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-05T04:05:50.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "56188eb1f823f4a512a4236c",
-            "name": "home",
-            "composition": "sidenav2",
-            "content": {
-                "h1c1": null,
-                "h2c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home_links"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": ""
-                            }
-                        }
-                    }
-                ],
-                "r4c1": null,
-                "r4c2": null,
-                "r5c1": null,
-                "r6c1": null,
-                "r7c1": null,
-                "r8c1": null,
-                "r9c1": null,
-                "f1c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T04:06:09.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -3294,286 +3729,6 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-11T01:45:09.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56171403712cef6a1c5b7079",
-            "name": "graphdemo2",
-            "description": "",
-            "composition": "gallery",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Graph Gallery (Database Data)</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "GraphBarchart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "GraphPiechart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c3": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "GraphLinechart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "GraphAreachart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r4c3": null,
-                "r5c1": null,
-                "r5c2": null,
-                "r5c3": null,
-                "r6c1": null,
-                "r6c2": null,
-                "r6c3": null,
-                "r7c1": null,
-                "r7c2": null,
-                "r7c3": null,
-                "r8c1": null,
-                "r8c2": null,
-                "r8c3": null,
-                "r9c1": null,
-                "r9c2": null,
-                "r9c3": null,
-                "f1c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:10:27.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5619cbd951882eea1d627452",
-            "name": "webcharts_group_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Group Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Medal Count",
-                                        "type": "linear",
-                                        "column": "count",
-                                        "domain": [
-                                            0
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "ordinal",
-                                        "column": "Country",
-                                        "sort": "total-descending"
-                                    },
-                                    "marks": [
-                                        {
-                                            "arrange": "grouped",
-                                            "split": "type",
-                                            "type": "bar",
-                                            "per": [
-                                                "Country"
-                                            ],
-                                            "attributes": {
-                                                "fill-opacity": 0.8
-                                            }
-                                        }
-                                    ],
-                                    "gridlines": "x",
-                                    "color_by": "type",
-                                    "colors": [
-                                        "#8c7853",
-                                        "#c0c0c0",
-                                        "#e5c100"
-                                    ],
-                                    "legend": {
-                                        "label": "MedalType",
-                                        "order": [
-                                            "Bronze",
-                                            "Silver",
-                                            "Gold"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T02:39:21.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
@@ -8820,8 +8975,8 @@
             "_class": "page"
         },
         {
-            "_id": "5621a7ea55ce0f3c5b3c8040",
-            "name": "highcharts_areachart1",
+            "_id": "56225ed2b54ef68c7a3be787",
+            "name": "highcharts_treemap1",
             "description": "",
             "composition": "theone2",
             "content": {
@@ -8833,7 +8988,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Areachart - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
                             }
                         }
                     }
@@ -8849,113 +9004,99 @@
                             "data": {
                                 "value": {
                                     "data": {
-                                        "chart": {
-                                            "type": "area"
-                                        },
-                                        "title": {
-                                            "text": "Historic and Estimated Worldwide Population Growth by Region"
-                                        },
-                                        "subtitle": {
-                                            "text": "Source: Wikipedia.org"
-                                        },
-                                        "xAxis": {
-                                            "categories": [
-                                                "1750",
-                                                "1800",
-                                                "1850",
-                                                "1900",
-                                                "1950",
-                                                "1999",
-                                                "2050"
-                                            ],
-                                            "tickmarkPlacement": "on",
-                                            "title": {
-                                                "enabled": false
-                                            }
-                                        },
-                                        "yAxis": {
-                                            "title": {
-                                                "text": "Billions"
-                                            },
-                                            "labels": {}
-                                        },
-                                        "tooltip": {
-                                            "shared": true,
-                                            "valueSuffix": " millions"
-                                        },
-                                        "plotOptions": {
-                                            "area": {
-                                                "stacking": "normal",
-                                                "lineColor": "#666666",
-                                                "lineWidth": 1,
-                                                "marker": {
-                                                    "lineWidth": 1,
-                                                    "lineColor": "#666666"
-                                                }
-                                            }
-                                        },
                                         "series": [
                                             {
-                                                "name": "Asia",
+                                                "type": "treemap",
+                                                "layoutAlgorithm": "stripes",
+                                                "alternateStartingDirection": true,
+                                                "levels": [
+                                                    {
+                                                        "level": 1,
+                                                        "layoutAlgorithm": "sliceAndDice",
+                                                        "dataLabels": {
+                                                            "enabled": true,
+                                                            "align": "left",
+                                                            "verticalAlign": "top",
+                                                            "style": {
+                                                                "fontSize": "15px",
+                                                                "fontWeight": "bold"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
                                                 "data": [
-                                                    502,
-                                                    635,
-                                                    809,
-                                                    947,
-                                                    1402,
-                                                    3634,
-                                                    5268
-                                                ]
-                                            },
-                                            {
-                                                "name": "Africa",
-                                                "data": [
-                                                    106,
-                                                    107,
-                                                    111,
-                                                    133,
-                                                    221,
-                                                    767,
-                                                    1766
-                                                ]
-                                            },
-                                            {
-                                                "name": "Europe",
-                                                "data": [
-                                                    163,
-                                                    203,
-                                                    276,
-                                                    408,
-                                                    547,
-                                                    729,
-                                                    628
-                                                ]
-                                            },
-                                            {
-                                                "name": "America",
-                                                "data": [
-                                                    18,
-                                                    31,
-                                                    54,
-                                                    156,
-                                                    339,
-                                                    818,
-                                                    1201
-                                                ]
-                                            },
-                                            {
-                                                "name": "Oceania",
-                                                "data": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    6,
-                                                    13,
-                                                    30,
-                                                    46
+                                                    {
+                                                        "id": "A",
+                                                        "name": "Apples",
+                                                        "color": "#EC2500"
+                                                    },
+                                                    {
+                                                        "id": "B",
+                                                        "name": "Bananas",
+                                                        "color": "#ECE100"
+                                                    },
+                                                    {
+                                                        "id": "O",
+                                                        "name": "Oranges",
+                                                        "color": "#EC9800"
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "A",
+                                                        "value": 5
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "A",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "A",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "B",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "B",
+                                                        "value": 10
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "B",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "O",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Susanne",
+                                                        "parent": "Kiwi",
+                                                        "value": 2,
+                                                        "color": "#9EDE00"
+                                                    }
                                                 ]
                                             }
-                                        ]
+                                        ],
+                                        "title": {
+                                            "text": "Fruit consumption"
+                                        }
                                     }
                                 }
                             }
@@ -8968,7 +9109,7 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-17T01:44:10.000Z",
+            "create_date": "2015-10-17T14:44:34.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
