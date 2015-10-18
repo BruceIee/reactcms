@@ -1,6 +1,6 @@
 var app = app || {};
 app.compositionCol = {}; // composition collection keyed by composition name
-app.jsonEditor = null;
+app.jsonEditorCol = {};
 app.jsonEditorOptions = {
     "mode": "text",  // Available mode: 'tree' (default), 'view', 'form', 'code', 'text'. 
     "indentation": 4
@@ -160,9 +160,9 @@ function populateSectionContent(sectionName, template) {
     $('.section-content[data-name=' + sectionName + ']').append(html);
     // apply jsoneditor to textarea
     var widgetdataElement = $('[data-section=' + sectionName + '] [name=widgetdata]');
-    app.jsonEditor = new JSONEditor(widgetdataElement[0], app.jsonEditorOptions);
+    app.jsonEditorCol[sectionName] = new JSONEditor(widgetdataElement[0], app.jsonEditorOptions);
     if (context.widgetInfo && context.widgetInfo.data) {
-        app.jsonEditor.set(context.widgetInfo.data);
+        app.jsonEditorCol[sectionName].set(context.widgetInfo.data);
     }
 }
 
@@ -229,7 +229,7 @@ function retrievePageSectionData() {
         // get section data
         var sectionDataItem = null;
         try {
-            sectionDataItem = getSectionData(componentForm);
+            sectionDataItem = getSectionData(componentForm, sectionName);
         } catch(e) {
             console.log('Error in getting data from ' + sectionName);
         }
@@ -254,16 +254,21 @@ function retrievePageSectionData() {
     }
 }
 */
-function getSectionData(parent) {
+function getSectionData(parent, sectionName) {
     var componentName = $(parent).find('input[name=component]').val();
     // widget data by value
-    var widgetDataText = $(parent).find('textarea[name=widgetdata]').val();
-    var widgetData = null;
+    var widgetData = app.jsonEditorCol[sectionName].get();
     
+    console.log('>>> widgetData:', sectionName, widgetData);
+    /*
+    app.jsonEditor.set(context.widgetInfo.data);
+    var widgetDataText = $(parent).find('textarea[name=widgetdata]').val();
+    var widgetData = app.jsonEditor.get();
     // TODO: handle json parse error
     if (widgetDataText) {
         widgetData = JSON.parse(widgetDataText);
     }
+    */
     
     // widget data by query conditions
     var moduleName = $(parent).find('input[name=module]').val();
