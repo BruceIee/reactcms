@@ -234,6 +234,16 @@ function backupModule(app_moduleName, callback) {
     });
 }
 
+function isImportProjectExist(app) {
+    if (project !== 'default') {
+        app.import_folder = './data/' + project;
+    } else {
+        // default is to import all data files from ./data folder
+        app.import_folder = './data';
+    }
+    return fs.existsSync(app.import_folder);
+}
+
 /**
  * Import data
  * import all data files, default from ./data
@@ -458,10 +468,16 @@ function getMatchedFilenames (path, pattern, callback) {
 }
 
 // switch to project by refreshing database data 
-function loadProject(app, callback) {    
-    initDb(app, function() {
-        importData(app, function() {
-            process.exit();
+function loadProject(app, callback) {
+    // make sure import project exists
+    if (isImportProjectExist(app)) {
+        initDb(app, function() {
+            importData(app, function() {
+                process.exit();
+            });
         });
-    });
+    } else {
+        console.log('project path ' + app.import_folder + ' does not exist');
+        process.exit();
+    }
 }
