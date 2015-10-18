@@ -5,6 +5,10 @@
     /* border: solid 1px #eee; */
 }
 
+.table2-container .table2-toolbar-container {
+    margin-bottom: 10px;
+}
+
 .table2-row-active .table2-body-cell-container{
     background-color: #f2f2f2;
 }
