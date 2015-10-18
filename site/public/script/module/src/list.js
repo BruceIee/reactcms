@@ -94,7 +94,6 @@ function updateTableDisplay(moduleInfo, moduleItems) {
 function doTableDisplay(colModel, items) {
     // table2Data has 'id' column as key column
     app.table1Data = {
-        boxClass: 'table-container-bordered',
         colModel: colModel,
         dataItems: items,
         paging: { size: 10, page: 1 }

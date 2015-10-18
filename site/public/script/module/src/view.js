@@ -74,7 +74,6 @@ function updateTableDisplay(moduleInfo, moduleItems) {
 
 function doTableDisplay(colModel, items) {
     app.table1Data = {
-        boxClass: 'table-container-bordered',
         colModel: colModel,
         dataItems: items,
         //paging: { size: 10, page: 1 }
