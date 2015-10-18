@@ -42,8 +42,39 @@
     "count":42,
     "items": [
         {
-            "_id": "561c4af02a3ac4cd6589e07e",
-            "name": "plotly_barchart1",
+            "_id": "56108ea3282c285713d8bfe8",
+            "name": "carousel2",
+            "composition": "theone",
+            "content": {
+                "r0c1": "",
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Carousel",
+                        "widgetInfo": {
+                            "module": "media",
+                            "condition": {
+                                "description": "cat image"
+                            },
+                            "filter": "",
+                            "data": ""
+                        }
+                    }
+                ],
+                "r99c1": ""
+            },
+            "create_date": "2015-10-04T02:27:47.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "561c4b9d2a3ac4cd6589e07f",
+            "name": "plotly_barchart2",
             "description": "",
             "composition": "theone2",
             "content": {
@@ -55,7 +86,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
                             }
                         }
                     }
@@ -72,21 +103,22 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
                                             "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thr",
+                                                "Fri"
                                             ],
-                                            "type": "bar"
+                                            "x": [
+                                                70,
+                                                80,
+                                                100,
+                                                60,
+                                                40
+                                            ],
+                                            "type": "bar",
+                                            "orientation": "h"
                                         }
                                     ]
                                 }
@@ -100,15 +132,121 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-13T00:06:08.000Z",
+            "create_date": "2015-10-13T00:09:01.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "5619b6e651882eea1d62744f",
-            "name": "webcharts_scatterplot1",
+            "_id": "561931ebaf72dea65f2bb7f1",
+            "name": "plate1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plate - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plate",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "cellData": [
+                                    {
+                                        "row": 1,
+                                        "col": 1,
+                                        "iconClass": "fa fa-dot-circle-o ",
+                                        "color": "#f00",
+                                        "text": "blank"
+                                    },
+                                    {
+                                        "row": 8,
+                                        "col": 12,
+                                        "iconClass": "fa fa-circle",
+                                        "color": "#0ff",
+                                        "text": "ref"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-10T15:42:35.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "56171530712cef6a1c5b707a",
+            "name": "piechart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphPiechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:15:28.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5619b52a51882eea1d62744e",
+            "name": "webcharts_barchart1",
             "composition": "theone2",
             "content": {
                 "h1c1": [
@@ -134,29 +272,32 @@
                             "filter": null,
                             "data": {
                                 "value": {
-                                    "data_url": "/data/webcharts/calories.csv",
+                                    "data_url": "/data/webcharts/OlympicMedals2012_top.csv",
                                     "max_width": "480",
                                     "x": {
-                                        "label": "Protein (g)",
+                                        "label": "Total",
                                         "type": "linear",
-                                        "column": "Protein (g)"
+                                        "column": "Total",
+                                        "domain": [
+                                            0,
+                                            null
+                                        ]
                                     },
                                     "y": {
-                                        "label": "Carbs (g)",
-                                        "type": "linear",
-                                        "column": "Carbo(g)"
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
                                     },
                                     "marks": [
                                         {
-                                            "type": "circle",
+                                            "type": "bar",
                                             "per": [
-                                                "Food"
+                                                "Country"
                                             ],
-                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
+                                            "tooltip": "[Country] won [Total] medals"
                                         }
                                     ],
-                                    "aspect": "1",
-                                    "gridlines": "xy"
+                                    "gridlines": "x"
                                 }
                             }
                         }
@@ -166,7 +307,7 @@
                 "f1c1": null,
                 "f2c1": null
             },
-            "create_date": "2015-10-11T01:09:58.000Z",
+            "create_date": "2015-10-11T01:02:34.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -176,8 +317,8 @@
             "edit_by": ""
         },
         {
-            "_id": "561ad345e39daac5615ffd93",
-            "name": "plotly_logplot1",
+            "_id": "561c497f2a3ac4cd6589e07d",
+            "name": "plotly_heatmap1",
             "description": "",
             "composition": "theone2",
             "content": {
@@ -189,7 +330,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Logplot - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Plotly Heatmap - Data Content</h4>"
                             }
                         }
                     }
@@ -207,39 +348,43 @@
                                     "data": [
                                         {
                                             "x": [
-                                                0,
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5,
-                                                6,
-                                                7,
-                                                8,
-                                                9
+                                                "Monday",
+                                                "Tuesday",
+                                                "Wednesday",
+                                                "Thursday",
+                                                "Friday"
                                             ],
                                             "y": [
-                                                99,
-                                                97.28,
-                                                92.61,
-                                                79.91,
-                                                45.4,
-                                                -48.41,
-                                                -303.42,
-                                                -996.63,
-                                                -2880.95,
-                                                -8003.08
-                                            ]
+                                                "Morning",
+                                                "Afternoon",
+                                                "Evening"
+                                            ],
+                                            "z": [
+                                                [
+                                                    1,
+                                                    20,
+                                                    30,
+                                                    50,
+                                                    1
+                                                ],
+                                                [
+                                                    20,
+                                                    1,
+                                                    60,
+                                                    80,
+                                                    30
+                                                ],
+                                                [
+                                                    30,
+                                                    60,
+                                                    1,
+                                                    -10,
+                                                    20
+                                                ]
+                                            ],
+                                            "type": "heatmap"
                                         }
-                                    ],
-                                    "layout": {
-                                        "xaxis": {
-                                            "type": "log"
-                                        },
-                                        "yaxis": {
-                                            "type": "log"
-                                        }
-                                    }
+                                    ]
                                 }
                             }
                         }
@@ -251,7 +396,7 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-11T21:23:17.000Z",
+            "create_date": "2015-10-12T23:59:59.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
@@ -582,37 +727,6 @@
             "edit_date": "",
             "edit_by": "",
             "_class": "page"
-        },
-        {
-            "_id": "56108ea3282c285713d8bfe8",
-            "name": "carousel2",
-            "composition": "theone",
-            "content": {
-                "r0c1": "",
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Carousel",
-                        "widgetInfo": {
-                            "module": "media",
-                            "condition": {
-                                "description": "cat image"
-                            },
-                            "filter": "",
-                            "data": ""
-                        }
-                    }
-                ],
-                "r99c1": ""
-            },
-            "create_date": "2015-10-04T02:27:47.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
         },
         {
             "_id": "56148dff96679b150ffb5a83",
@@ -1216,8 +1330,754 @@
             "edit_by": ""
         },
         {
-            "_id": "561c4b9d2a3ac4cd6589e07f",
-            "name": "plotly_barchart2",
+            "_id": "5615b7a26db265f31d004bfd",
+            "name": "graphdemo",
+            "composition": "gallery",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Graph Gallery</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": 8
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": 4
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": 6
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "GraphPiechart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": 8
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": 4
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": 6
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c3": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": 8
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": 4
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": 6
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "GraphAreachart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c3": null,
+                "r5c1": null,
+                "r5c2": null,
+                "r5c3": null,
+                "r6c1": null,
+                "r6c2": null,
+                "r6c3": null,
+                "r7c1": null,
+                "r7c2": null,
+                "r7c3": null,
+                "r8c1": null,
+                "r8c2": null,
+                "r8c3": null,
+                "r9c1": null,
+                "r9c2": null,
+                "r9c3": null,
+                "f1c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "f2c1": null
+            },
+            "create_date": "2015-10-08T00:24:02.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "56190baaf823f4a512a4236d",
+            "name": "reactletdemo2",
+            "description": "",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery 2</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Header Component 1</h4><p>BlackbootHeader</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Footer Component</h4><p>BlackbootFooter</p>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
+                        "widgetName": "SimplifyHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r5c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Header Component 2</h4><p>SimplifyHeader</p>"
+                            }
+                        }
+                    }
+                ],
+                "r6c1": [
+                    {
+                        "widgetName": "SimplifyFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r6c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Footer Component 2</h4><p>SimplifyFooter</p>"
+                            }
+                        }
+                    }
+                ],
+                "r7c1": [
+                    {
+                        "widgetName": "EmbedIframe",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "link": "http://www.w3schools.com"
+                            }
+                        }
+                    }
+                ],
+                "r7c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>EmbedIframe Component</h4><p>external website is embedded as iframe</p>"
+                            }
+                        }
+                    }
+                ],
+                "r8c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Article</h4><p>HTML content</p><br/><ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul><br/><hr/><br/>"
+                            }
+                        }
+                    }
+                ],
+                "r8c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>ArticleDetail Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r9c1": null,
+                "r9c2": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-10T12:59:22.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561870e50dfa090f3a372d45",
+            "name": "home2",
+            "description": "home page for site",
+            "composition": "vertflow",
+            "content": {
+                "r1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r99c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r0c1": null,
+                "r5c1": null,
+                "r6c1": null,
+                "r7c1": null,
+                "r8c1": null,
+                "r9c1": null
+            },
+            "group": "",
+            "status": "active",
+            "create_date": "2015-10-10T01:59:01.000Z",
+            "create_by": "",
+            "edit_date": "2015-10-09T02:52:15.000Z",
+            "edit_by": "admin",
+            "_class": "page"
+        },
+        {
+            "_id": "56227d2a72792c94f1ab0aa6",
+            "name": "highcharts_linechart1",
             "description": "",
             "composition": "theone2",
             "content": {
@@ -1229,7 +2089,129 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "line"
+                                        },
+                                        "title": {
+                                            "text": "Monthly Average Temperature"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: WorldClimate.com"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "Jan",
+                                                "Feb",
+                                                "Mar",
+                                                "Apr",
+                                                "May",
+                                                "Jun",
+                                                "Jul",
+                                                "Aug",
+                                                "Sep",
+                                                "Oct",
+                                                "Nov",
+                                                "Dec"
+                                            ]
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Temperature (°C)"
+                                            }
+                                        },
+                                        "plotOptions": {
+                                            "line": {
+                                                "dataLabels": {
+                                                    "enabled": true
+                                                },
+                                                "enableMouseTracking": false
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Tokyo",
+                                                "data": [
+                                                    7,
+                                                    6.9,
+                                                    9.5,
+                                                    14.5,
+                                                    18.4,
+                                                    21.5,
+                                                    25.2,
+                                                    26.5,
+                                                    23.3,
+                                                    18.3,
+                                                    13.9,
+                                                    9.6
+                                                ]
+                                            },
+                                            {
+                                                "name": "London",
+                                                "data": [
+                                                    3.9,
+                                                    4.2,
+                                                    5.7,
+                                                    8.5,
+                                                    11.9,
+                                                    15.2,
+                                                    17,
+                                                    16.6,
+                                                    14.2,
+                                                    10.3,
+                                                    6.6,
+                                                    4.8
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T16:54:02.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561c4af02a3ac4cd6589e07e",
+            "name": "plotly_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
                             }
                         }
                     }
@@ -1246,22 +2228,21 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "y": [
-                                                "Mon",
-                                                "Tue",
-                                                "Wed",
-                                                "Thr",
-                                                "Fri"
-                                            ],
                                             "x": [
-                                                70,
-                                                80,
-                                                100,
-                                                60,
-                                                40
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
                                             ],
-                                            "type": "bar",
-                                            "orientation": "h"
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
                                         }
                                     ]
                                 }
@@ -1275,121 +2256,15 @@
             },
             "group": "",
             "status": "",
-            "create_date": "2015-10-13T00:09:01.000Z",
+            "create_date": "2015-10-13T00:06:08.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
             "_class": "page"
         },
         {
-            "_id": "561931ebaf72dea65f2bb7f1",
-            "name": "plate1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plate - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plate",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "cellData": [
-                                    {
-                                        "row": 1,
-                                        "col": 1,
-                                        "iconClass": "fa fa-dot-circle-o ",
-                                        "color": "#f00",
-                                        "text": "blank"
-                                    },
-                                    {
-                                        "row": 8,
-                                        "col": 12,
-                                        "iconClass": "fa fa-circle",
-                                        "color": "#0ff",
-                                        "text": "ref"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T15:42:35.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "56171530712cef6a1c5b707a",
-            "name": "piechart2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphPiechart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:15:28.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5619b52a51882eea1d62744e",
-            "name": "webcharts_barchart1",
+            "_id": "5619b6e651882eea1d62744f",
+            "name": "webcharts_scatterplot1",
             "composition": "theone2",
             "content": {
                 "h1c1": [
@@ -1415,32 +2290,29 @@
                             "filter": null,
                             "data": {
                                 "value": {
-                                    "data_url": "/data/webcharts/OlympicMedals2012_top.csv",
+                                    "data_url": "/data/webcharts/calories.csv",
                                     "max_width": "480",
                                     "x": {
-                                        "label": "Total",
+                                        "label": "Protein (g)",
                                         "type": "linear",
-                                        "column": "Total",
-                                        "domain": [
-                                            0,
-                                            null
-                                        ]
+                                        "column": "Protein (g)"
                                     },
                                     "y": {
-                                        "type": "ordinal",
-                                        "column": "Country",
-                                        "sort": "total-descending"
+                                        "label": "Carbs (g)",
+                                        "type": "linear",
+                                        "column": "Carbo(g)"
                                     },
                                     "marks": [
                                         {
-                                            "type": "bar",
+                                            "type": "circle",
                                             "per": [
-                                                "Country"
+                                                "Food"
                                             ],
-                                            "tooltip": "[Country] won [Total] medals"
+                                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
                                         }
                                     ],
-                                    "gridlines": "x"
+                                    "aspect": "1",
+                                    "gridlines": "xy"
                                 }
                             }
                         }
@@ -1450,7 +2322,7 @@
                 "f1c1": null,
                 "f2c1": null
             },
-            "create_date": "2015-10-11T01:02:34.000Z",
+            "create_date": "2015-10-11T01:09:58.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -1458,6 +2330,88 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "561ad345e39daac5615ffd93",
+            "name": "plotly_logplot1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Logplot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                0,
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5,
+                                                6,
+                                                7,
+                                                8,
+                                                9
+                                            ],
+                                            "y": [
+                                                99,
+                                                97.28,
+                                                92.61,
+                                                79.91,
+                                                45.4,
+                                                -48.41,
+                                                -303.42,
+                                                -996.63,
+                                                -2880.95,
+                                                -8003.08
+                                            ]
+                                        }
+                                    ],
+                                    "layout": {
+                                        "xaxis": {
+                                            "type": "log"
+                                        },
+                                        "yaxis": {
+                                            "type": "log"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T21:23:17.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "56188eb1f823f4a512a4236c",
@@ -2054,92 +3008,6 @@
             "_class": "page"
         },
         {
-            "_id": "561c497f2a3ac4cd6589e07d",
-            "name": "plotly_heatmap1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Heatmap - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Monday",
-                                                "Tuesday",
-                                                "Wednesday",
-                                                "Thursday",
-                                                "Friday"
-                                            ],
-                                            "y": [
-                                                "Morning",
-                                                "Afternoon",
-                                                "Evening"
-                                            ],
-                                            "z": [
-                                                [
-                                                    1,
-                                                    20,
-                                                    30,
-                                                    50,
-                                                    1
-                                                ],
-                                                [
-                                                    20,
-                                                    1,
-                                                    60,
-                                                    80,
-                                                    30
-                                                ],
-                                                [
-                                                    30,
-                                                    60,
-                                                    1,
-                                                    -10,
-                                                    20
-                                                ]
-                                            ],
-                                            "type": "heatmap"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-12T23:59:59.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "55e115fb9346d92f1ef4eeed",
             "name": "about",
             "composition": "vertflow",
@@ -2607,333 +3475,6 @@
             "_class": "page"
         },
         {
-            "_id": "5615b7a26db265f31d004bfd",
-            "name": "graphdemo",
-            "composition": "gallery",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Graph Gallery</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "GraphBarchart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "GraphPiechart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c3": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "GraphLinechart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "GraphAreachart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r4c3": null,
-                "r5c1": null,
-                "r5c2": null,
-                "r5c3": null,
-                "r6c1": null,
-                "r6c2": null,
-                "r6c3": null,
-                "r7c1": null,
-                "r7c2": null,
-                "r7c3": null,
-                "r8c1": null,
-                "r8c2": null,
-                "r8c3": null,
-                "r9c1": null,
-                "r9c2": null,
-                "r9c3": null,
-                "f1c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "f2c1": null
-            },
-            "create_date": "2015-10-08T00:24:02.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
             "_id": "562074d4550ebb694c650de9",
             "name": "highcharts_piechart1",
             "description": "",
@@ -3032,283 +3573,6 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-16T03:53:56.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56190baaf823f4a512a4236d",
-            "name": "reactletdemo2",
-            "description": "",
-            "composition": "gallery2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Reactlet Component Gallery 2</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Header Component 1</h4><p>BlackbootHeader</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Footer Component</h4><p>BlackbootFooter</p>"
-                            }
-                        }
-                    }
-                ],
-                "r5c1": [
-                    {
-                        "widgetName": "SimplifyHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r5c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Header Component 2</h4><p>SimplifyHeader</p>"
-                            }
-                        }
-                    }
-                ],
-                "r6c1": [
-                    {
-                        "widgetName": "SimplifyFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r6c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Footer Component 2</h4><p>SimplifyFooter</p>"
-                            }
-                        }
-                    }
-                ],
-                "r7c1": [
-                    {
-                        "widgetName": "EmbedIframe",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "link": "https://www.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23cccccc&src=c2m9752m30fjqqkuk3lp7pl1k0%40group.calendar.google.com&color=%23125A12&ctz=America%2FNew_York"
-                            }
-                        }
-                    }
-                ],
-                "r7c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>EmbedIframe Component</h4><p>external website is embedded as iframe</p>"
-                            }
-                        }
-                    }
-                ],
-                "r8c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Article</h4><p>HTML content</p>"
-                            }
-                        }
-                    }
-                ],
-                "r8c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>ArticleDetail Component</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-10T12:59:22.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
@@ -3940,148 +4204,6 @@
             "_class": "page"
         },
         {
-            "_id": "561870e50dfa090f3a372d45",
-            "name": "home2",
-            "description": "home page for site",
-            "composition": "vertflow",
-            "content": {
-                "r1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r99c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r0c1": null,
-                "r5c1": null,
-                "r6c1": null,
-                "r7c1": null,
-                "r8c1": null,
-                "r9c1": null
-            },
-            "group": "",
-            "status": "active",
-            "create_date": "2015-10-10T01:59:01.000Z",
-            "create_by": "",
-            "edit_date": "2015-10-09T02:52:15.000Z",
-            "edit_by": "admin",
-            "_class": "page"
-        },
-        {
             "_id": "56185a26262cfbb95a78815c",
             "name": "reactletdemo",
             "composition": "gallery2",
@@ -4410,6 +4532,147 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
+        },
+        {
+            "_id": "56225ed2b54ef68c7a3be787",
+            "name": "highcharts_treemap1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "series": [
+                                            {
+                                                "type": "treemap",
+                                                "layoutAlgorithm": "stripes",
+                                                "alternateStartingDirection": true,
+                                                "levels": [
+                                                    {
+                                                        "level": 1,
+                                                        "layoutAlgorithm": "sliceAndDice",
+                                                        "dataLabels": {
+                                                            "enabled": true,
+                                                            "align": "left",
+                                                            "verticalAlign": "top",
+                                                            "style": {
+                                                                "fontSize": "15px",
+                                                                "fontWeight": "bold"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "data": [
+                                                    {
+                                                        "id": "A",
+                                                        "name": "Apples",
+                                                        "color": "#EC2500"
+                                                    },
+                                                    {
+                                                        "id": "B",
+                                                        "name": "Bananas",
+                                                        "color": "#ECE100"
+                                                    },
+                                                    {
+                                                        "id": "O",
+                                                        "name": "Oranges",
+                                                        "color": "#EC9800"
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "A",
+                                                        "value": 5
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "A",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "A",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "B",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "B",
+                                                        "value": 10
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "B",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "O",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Susanne",
+                                                        "parent": "Kiwi",
+                                                        "value": 2,
+                                                        "color": "#9EDE00"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "title": {
+                                            "text": "Fruit consumption"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T14:44:34.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
         },
         {
             "_id": "56207746550ebb694c650dea",
@@ -6554,269 +6817,6 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-16T04:04:22.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56225ed2b54ef68c7a3be787",
-            "name": "highcharts_treemap1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "series": [
-                                            {
-                                                "type": "treemap",
-                                                "layoutAlgorithm": "stripes",
-                                                "alternateStartingDirection": true,
-                                                "levels": [
-                                                    {
-                                                        "level": 1,
-                                                        "layoutAlgorithm": "sliceAndDice",
-                                                        "dataLabels": {
-                                                            "enabled": true,
-                                                            "align": "left",
-                                                            "verticalAlign": "top",
-                                                            "style": {
-                                                                "fontSize": "15px",
-                                                                "fontWeight": "bold"
-                                                            }
-                                                        }
-                                                    }
-                                                ],
-                                                "data": [
-                                                    {
-                                                        "id": "A",
-                                                        "name": "Apples",
-                                                        "color": "#EC2500"
-                                                    },
-                                                    {
-                                                        "id": "B",
-                                                        "name": "Bananas",
-                                                        "color": "#ECE100"
-                                                    },
-                                                    {
-                                                        "id": "O",
-                                                        "name": "Oranges",
-                                                        "color": "#EC9800"
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "A",
-                                                        "value": 5
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "A",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "A",
-                                                        "value": 4
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "B",
-                                                        "value": 4
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "B",
-                                                        "value": 10
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "B",
-                                                        "value": 1
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "O",
-                                                        "value": 1
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "O",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "O",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Susanne",
-                                                        "parent": "Kiwi",
-                                                        "value": 2,
-                                                        "color": "#9EDE00"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "title": {
-                                            "text": "Fruit consumption"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T14:44:34.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56227d2a72792c94f1ab0aa6",
-            "name": "highcharts_linechart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "chart": {
-                                            "type": "line"
-                                        },
-                                        "title": {
-                                            "text": "Monthly Average Temperature"
-                                        },
-                                        "subtitle": {
-                                            "text": "Source: WorldClimate.com"
-                                        },
-                                        "xAxis": {
-                                            "categories": [
-                                                "Jan",
-                                                "Feb",
-                                                "Mar",
-                                                "Apr",
-                                                "May",
-                                                "Jun",
-                                                "Jul",
-                                                "Aug",
-                                                "Sep",
-                                                "Oct",
-                                                "Nov",
-                                                "Dec"
-                                            ]
-                                        },
-                                        "yAxis": {
-                                            "title": {
-                                                "text": "Temperature (°C)"
-                                            }
-                                        },
-                                        "plotOptions": {
-                                            "line": {
-                                                "dataLabels": {
-                                                    "enabled": true
-                                                },
-                                                "enableMouseTracking": false
-                                            }
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "Tokyo",
-                                                "data": [
-                                                    7,
-                                                    6.9,
-                                                    9.5,
-                                                    14.5,
-                                                    18.4,
-                                                    21.5,
-                                                    25.2,
-                                                    26.5,
-                                                    23.3,
-                                                    18.3,
-                                                    13.9,
-                                                    9.6
-                                                ]
-                                            },
-                                            {
-                                                "name": "London",
-                                                "data": [
-                                                    3.9,
-                                                    4.2,
-                                                    5.7,
-                                                    8.5,
-                                                    11.9,
-                                                    15.2,
-                                                    17,
-                                                    16.6,
-                                                    14.2,
-                                                    10.3,
-                                                    6.6,
-                                                    4.8
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T16:54:02.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
