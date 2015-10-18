@@ -2,7 +2,7 @@
 
 var React = require('react');
 var Dispatcher = require('flux').Dispatcher;
-var Table = require('reactlet-table');
+var Table = require('reactlet-table2');
 
 var app = app ||  window.app || {};
 app.dispatcher = new Dispatcher();
