@@ -61,30 +61,8 @@ module.exports = function(app) {
         var pageName = parameter.pagename;
         var condition = { name:pageName };
         var filter = {};
-        
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            // get page
-            var page = docs && docs[0];
-            // get composition
-            if (docs.length > 0) {
-                var page = docs[0];
-                var pageContent = page.content;
-                var compositionName = page.composition;
-                var compositionDataUrl = '/data/compositions/' + compositionName;
-                var compositionData = app.module['composition'].data;
-                compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
-                    var composition = docs && docs[0];
-                    info = { page:page, composition:composition };
-                    app.cb(error, docs, info, req, res, callback);
-                });
-            } else {
-                info = {
-                    message: 'page is not found',
-                    page: null,
-                    composition: null
-                };
-                app.cb(error, docs, info, req, res, callback);
-            }
+            block.data.processPageData(req, res, error, docs, info, callback);
         });
     };
     
@@ -94,29 +72,33 @@ module.exports = function(app) {
         var condition = { _id:parameter.id };
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            // get page
-            var page = docs && docs[0];
-            // get composition
-            if (docs.length > 0) {
-                var page = docs[0];
-                var pageContent = page.content;
-                var compositionName = page.composition;
-                var compositionDataUrl = '/data/compositions/' + compositionName;
-                var compositionData = app.module['composition'].data;
-                compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
-                    var composition = docs && docs[0];
-                    info = { page:page, composition:composition };
-                    app.cb(error, docs, info, req, res, callback);
-                });
-            } else {
-                info = {
-                    message: 'page is not found',
-                    page: null,
-                    composition: null
-                };
-                app.cb(error, docs, info, req, res, callback);
-            }
+            block.data.processPageData(req, res, error, docs, info, callback);
         });
+    };
+    
+    block.data.processPageData = function(req, res, error, docs, info, callback) {
+        // get page
+        var page = docs && docs[0];
+        // get composition
+        if (docs.length > 0) {
+            var page = docs[0];
+            var pageContent = page.content;
+            var compositionName = page.composition;
+            var compositionDataUrl = '/data/compositions/' + compositionName;
+            var compositionData = app.module['composition'].data;
+            compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
+                var composition = docs && docs[0];
+                info = { page:page, composition:composition };
+                app.cb(error, docs, info, req, res, callback);
+            });
+        } else {
+            info = {
+                message: 'page is not found',
+                page: null,
+                composition: null
+            };
+            app.cb(error, docs, info, req, res, callback);
+        }
     };
     
     block.data.isPageNameExist = function(req, res) {
