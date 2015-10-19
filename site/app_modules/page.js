@@ -247,27 +247,35 @@ module.exports = function(app) {
     };
     
     block.page.getPage = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var pageName = parameter.pagename;
-        // get page
+        // get page data
         block.data.getPage(req, res, null, function(error, docs, info) {
-            //console.log('Got page:', error, docs, info);
-            var page = app.getPage(req);
-            if (info.page) {
-                page.title = info.page.title || app.setting['app_name'] || '';
-                page.mode = parameter.mode || 'view';
-                page.pageData = info.page;
-                page.compositionData = info.composition;
-                var layoutFilename = 'composition/' + info.composition.filename;
-                res.render(layoutFilename, { page:page });
-            } else {
-                // page is not found in database
-                page.pageData = { name:pageName };
-                res.render('page/missing', { page:page });
-            }
+            block.page.showPage(req, res, info);
         });
     };
     
+    block.page.viewPage = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        var pageId = parameter.id;
+        
+    };
+    
+    block.page.showPage = function(req, res, info) {
+        var parameter = tool.getReqParameter(req);
+        var pageName = parameter.pagename;
+        var page = app.getPage(req);
+        if (info.page) {
+            page.title = info.page.title || app.setting['app_name'] || '';
+            page.mode = parameter.mode || 'view';
+            page.pageData = info.page;
+            page.compositionData = info.composition;
+            var layoutFilename = 'composition/' + info.composition.filename;
+            res.render(layoutFilename, { page:page });
+        } else {
+            // page is not found in database
+            page.pageData = { name:pageName };
+            res.render('page/missing', { page:page });
+        }
+    };
     // data route
     app.server.get('/data/pages/:pagename', block.data.getPage);
     app.server.post('/data/pages/add', block.data.addPage);
@@ -283,11 +291,14 @@ module.exports = function(app) {
     app.server.post('/pages/add', block.page.addPagePost);
     app.server.all('/pages/:id/edit', block.page.checkLogin);
     app.server.get('/pages/:id/edit', block.page.editPage);
+    app.server.all('/pages/edit', block.page.checkLogin);
+    app.server.get('/pages/edit', block.page.editPage);
     app.server.all('/pages/:name/edit_by_name', block.page.checkLogin);
     app.server.get('/pages/:name/edit_by_name', block.page.editPageByName);
     app.server.all('/pages/list', block.page.checkLogin);
     app.server.get('/pages/list', block.page.getPageList);
     app.server.get('/pages/:pagename', block.page.getPage);
+    app.server.get('/pages/view', block.page.viewPage);
     
     return block;
 };
