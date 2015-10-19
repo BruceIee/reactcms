@@ -99,8 +99,12 @@ function doTableDisplay(colModel, items) {
         dataItems: items,
         paging: { size: 15, page: 1 },
         actions: [
-            { text:'Edit', url:'/' + modulePlural + '/edit' },
-            { text:'View', url:'/' + modulePlural + '/view' }
+            { text:'New', url:'/modules/' + modulePlural + '/new' },
+            { text:'Edit', url:'/modules/' + modulePlural + '/edit' },
+            { text:'View', url:'/modules/' + modulePlural + '/view' },
+            { text:'Delete', url:'/modules/' + modulePlural + '/delete' },
+            { text:'Edit (' + app.moduleName + ')', url:'/' + modulePlural + '/edit' },
+            { text:'View (' + app.moduleName + ')', url:'/' + modulePlural + '/view' }
         ]
     };
     // table1 with paging
