@@ -92,13 +92,18 @@ function updateTableDisplay(moduleInfo, moduleItems) {
 }
 
 function doTableDisplay(colModel, items) {
-    // table2Data has 'id' column as key column
+    // table1Data has 'id' column as key column
+    var modulePlural = app.moduleName + 's';
     app.table1Data = {
         colModel: colModel,
         dataItems: items,
-        paging: { size: 10, page: 1 }
+        paging: { size: 15, page: 1 },
+        actions: [
+            { text:'Edit', url:'/' + modulePlural + '/edit' },
+            { text:'View', url:'/' + modulePlural + '/view' }
+        ]
     };
-    // table2 with paging
+    // table1 with paging
     app.table1 = React.render(
         React.createElement(Table, { data:app.table1Data }),
         document.getElementById('table1')
@@ -119,7 +124,7 @@ function viewItem(itemId) {
         return;
     }
     var itemViewUrl = '/modules/' + app.moduleName + '/' + itemId + '/view';
-    console.log('view item:', itemId, itemViewUrl);
+    //console.log('view item:', itemId, itemViewUrl);
     window.location = itemViewUrl;
 }
 
@@ -128,12 +133,12 @@ function editItem(itemId) {
         return;
     }
     var itemEditUrl = '/modules/' + app.moduleName + '/' + itemId + '/edit';
-    console.log('view item:', itemId, itemEditUrl);
+    //console.log('view item:', itemId, itemEditUrl);
     window.location = itemEditUrl;
 }
 
 function createItem() {
     var itemNewUrl = '/modules/' + app.moduleName + '/new';
-    console.log('create item:', itemNewUrl);
+    //console.log('create item:', itemNewUrl);
     window.location = itemNewUrl;
 }
