@@ -108,11 +108,11 @@ function doTableDisplay(colModel, items) {
         React.createElement(Table, { data:app.table1Data }),
         document.getElementById('table1')
     );
-    app.table1.on('table-row-click', function(event) {
+    app.table1.on('table2-row-click', function(event) {
         var id = event.id;
         app.activeRowId = app.table1.state.activeItemId;
     });
-    app.table1.on('table-row-double-click', function(event) {
+    app.table1.on('table2-row-double-click', function(event) {
         var itemId = event.id;
         console.log('table double click:', itemId);
         viewItem(itemId);
