@@ -88,6 +88,37 @@ module.exports = function(app) {
         });
     };
     
+    block.data.getPageById = function(req, res) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        var condition = { _id:parameter.id };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            // get page
+            var page = docs && docs[0];
+            // get composition
+            if (docs.length > 0) {
+                var page = docs[0];
+                var pageContent = page.content;
+                var compositionName = page.composition;
+                var compositionDataUrl = '/data/compositions/' + compositionName;
+                var compositionData = app.module['composition'].data;
+                compositionData.getDataByName(req, res, compositionName, function(error, docs, info) {
+                    var composition = docs && docs[0];
+                    info = { page:page, composition:composition };
+                    app.cb(error, docs, info, req, res, callback);
+                });
+            } else {
+                info = {
+                    message: 'page is not found',
+                    page: null,
+                    composition: null
+                };
+                app.cb(error, docs, info, req, res, callback);
+            }
+        });
+    };
+    
     block.data.isPageNameExist = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
@@ -254,9 +285,9 @@ module.exports = function(app) {
     };
     
     block.page.viewPage = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var pageId = parameter.id;
-        
+        block.data.getPageById(req, res, null, function(error, docs, info) {
+            block.page.showPage(req, res, info);
+        });
     };
     
     block.page.showPage = function(req, res, info) {
@@ -297,8 +328,8 @@ module.exports = function(app) {
     app.server.get('/pages/:name/edit_by_name', block.page.editPageByName);
     app.server.all('/pages/list', block.page.checkLogin);
     app.server.get('/pages/list', block.page.getPageList);
-    app.server.get('/pages/:pagename', block.page.getPage);
     app.server.get('/pages/view', block.page.viewPage);
+    app.server.get('/pages/:pagename', block.page.getPage);
     
     return block;
 };
