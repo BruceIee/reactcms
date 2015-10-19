@@ -9,6 +9,10 @@
     margin-bottom: 10px;
 }
 
+.table2-container .table2-toolbar-container .search-box-container {
+    padding-right: 0px;
+}
+
 .table2-row-active .table2-body-cell-container{
     background-color: #f2f2f2;
 }
