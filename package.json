@@ -16,7 +16,7 @@
     "mochify": "*",
     "watchify": "*",
     "react-tools": "*",
-    "reactify": "^0.13.1"
+    "reactify": "^0.14.0"
   },
   "browserify": {
     "transform": [
@@ -49,11 +49,11 @@
     "pagedown": "git+https://github.com/yayestechlab/pagedown.git",
     "pagedown-extra": "git+https://github.com/jmcmanus/pagedown-extra.git",
     "pg": "*",
-    "react": "~0.13.0",
+    "react": "~0.14.0",
     "react-d3-components": "*",
     "reactlet-calendar": "*",
     "reactlet-table": "*",
-    "reactlet-table2": "^0.1.1",
+    "reactlet-table2": "*",
     "reactlet-treeview": "*",
     "readline": "*",
     "rimraf": "*",
