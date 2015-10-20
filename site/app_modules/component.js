@@ -16,6 +16,10 @@ module.exports = function(app) {
         name: {
             type: 'string'
         },
+        category: {
+            type: 'string',
+            values: ['web', 'graph']
+        },
         widget_name: {
             type: 'string'
         },
@@ -25,8 +29,11 @@ module.exports = function(app) {
         accept_multiple: {
             type: 'boolean'
         },
-        code: {
-            type: 'text'
+        sample_code: {
+            type: 'object',
+            subtype: {
+                type: 'json'
+            }
         },
         image: {
             type: 'file'

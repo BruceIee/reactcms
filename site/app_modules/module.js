@@ -192,11 +192,14 @@ module.exports = function(app) {
             cb(null, [parameter.module, file.fieldname, Date.now(), file.originalname].join('-'));
         }
     });
-    var upload = multer({ storage: storage })
+    var upload = multer({ storage: storage });
     var moduleUpload = upload.fields([
+        { name: 'logo', maxCount: 1 },
         { name: 'image', maxCount: 1 },
         { name: 'video', maxCount: 1 },
-        { name: 'images', maxCount: 50 }
+        { name: 'document', maxCount: 1 },
+        { name: 'images', maxCount: 50 },
+        { name: 'documents', maxCount: 50 }
     ]);
     
     // routes
