@@ -25,6 +25,12 @@ module.exports = function(app) {
         accept_multiple: {
             type: 'boolean'
         },
+        code: {
+            type: 'text'
+        },
+        image: {
+            type: 'file'
+        },
         status: {
             type: 'string',
             values: ['active', 'inactive']

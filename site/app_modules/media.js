@@ -25,12 +25,12 @@ module.exports = function(app) {
         },
         type: {
             type: 'string',
-            values: ['image', 'video']
+            values: ['image', 'document']
         },
         image: {
             type: 'file'
         },
-        video: {
+        document: {
             type: 'file'
         },
         style: {
