@@ -93,7 +93,6 @@ function updateTableDisplay(moduleInfo, moduleItems) {
 
 function doTableDisplay(colModel, items) {
     // table1Data has 'id' column as key column
-    var modulePlural = app.moduleName + 's';
     app.table1Data = {
         colModel: colModel,
         dataItems: items,
@@ -102,13 +101,16 @@ function doTableDisplay(colModel, items) {
             { text:'New', url:'/modules/' + app.moduleName + '/new', noparam:true },
             { text:'Edit', url:'/modules/' + app.moduleName + '/edit' },
             { text:'View', url:'/modules/' + app.moduleName + '/view' },
-            { text:'Delete', url:'/modules/' + app.moduleName + '/delete' },
-            { text:'', url:''},
-            { text:'New ' + app.moduleName, url:'/' + modulePlural + '/new', noparam:true },
-            { text:'Edit ' + app.moduleName, url:'/' + modulePlural + '/edit' },
-            { text:'View ' + app.moduleName, url:'/' + modulePlural + '/view' }
+            { text:'Delete', url:'/modules/' + app.moduleName + '/delete' }
         ]
     };
+    if (app.moduleName === 'page') {
+        var actions = app.table1Data.actions;
+        actions.push({ text:'', url:''});
+        actions.push({ text:'New ' + app.moduleName, url:'/pages/new', noparam:true });
+        actions.push({ text:'Edit ' + app.moduleName, url:'/pages/edit' });
+        actions.push({ text:'View ' + app.moduleName, url:'/pages/view' });
+    }
     // table1 with paging
     app.table1 = React.render(
         React.createElement(Table, { data:app.table1Data }),
