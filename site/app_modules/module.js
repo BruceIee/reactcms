@@ -216,8 +216,10 @@ module.exports = function(app) {
     app.server.get('/modules/:module/new', moduleUpload, block.page.addItem);
     app.server.get('/modules/:module/add', moduleUpload, block.page.addItem);
     app.server.post('/modules/:module/add', moduleUpload, block.page.addItemPost);
+    app.server.get('/modules/:module/edit', block.page.editItem);
     app.server.get('/modules/:module/:id/edit', block.page.editItem);
     app.server.post('/modules/:module/:id/edit', moduleUpload, block.page.editItemPost);
+    app.server.get('/modules/:module/view', block.page.viewItem);
     app.server.get('/modules/:module/:id/view', block.page.viewItem);
     app.server.get('/modules/:module/list', block.page.getListPage);
     

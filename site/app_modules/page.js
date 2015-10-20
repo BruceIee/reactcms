@@ -299,6 +299,8 @@ module.exports = function(app) {
     app.server.all('/pages', block.page.checkLogin);
     app.server.get('/pages', block.page.getIndex);
     app.server.get('/pages/show/direct', block.page.showPageDirect);
+    app.server.all('/pages/new', block.page.checkLogin);
+    app.server.get('/pages/new', block.page.addPage);
     app.server.all('/pages/add', block.page.checkLogin);
     app.server.get('/pages/add', block.page.addPage);
     app.server.post('/pages/add', block.page.addPagePost);
