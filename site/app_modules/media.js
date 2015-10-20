@@ -88,12 +88,12 @@ module.exports = function(app) {
     */
     
     // block.page
-    /*
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
-        res.render('item/index', { page:page });
+        res.render('component/index', { page:page });
     };
     
+    /*
     block.page.getItemList = function(req, res) {
         var condition = {};
         var filter = {};
@@ -148,6 +148,9 @@ module.exports = function(app) {
     app.server.get('/items/list', block.page.getItemList);
     app.server.get('/items/:id/detail', block.page.getItemDetail);
     */
+    
+    // page route
+    app.server.get('/components', block.page.getIndex);
     
     return block;
 };
