@@ -222,15 +222,15 @@
             "category": "web",
             "widget_name": "MediaDetail",
             "target_module": "media",
-            "description": "",
+            "description": "Show media detail",
             "accept_multiple": false,
             "example_data": null,
             "image": null,
             "status": "active",
             "create_date": "2015-10-21T03:17:36.000Z",
             "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
+            "edit_date": "2015-10-21T12:55:02.000Z",
+            "edit_by": "admin",
             "_class": "component"
         },
         {
