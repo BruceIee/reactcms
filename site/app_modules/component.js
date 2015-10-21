@@ -59,9 +59,9 @@ module.exports = function(app) {
         }
     };
     block.listFields = [
-        { name:'username', display:'Username', flex:2, sort:'asc' },
-        { name:'email', display:'Email', flex:3 },
-        { name:'status', display:'Status', flex:1 }
+        { name:'widget_name', display:'widget name', flex:2, sort:'asc' },
+        { name:'category', display:'category', flex:2 },
+        { name:'target_module', display:'target module', flex:2 }
     ];
     
     block.data.getComponents = function(req, res) {
