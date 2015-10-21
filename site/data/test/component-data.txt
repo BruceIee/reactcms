@@ -4,7 +4,17 @@
         "name": {
             "type": "string"
         },
+        "category": {
+            "type": "string",
+            "values": [
+                "web",
+                "graph"
+            ]
+        },
         "widget_name": {
+            "type": "string"
+        },
+        "target_module": {
             "type": "string"
         },
         "description": {
@@ -12,6 +22,15 @@
         },
         "accept_multiple": {
             "type": "boolean"
+        },
+        "example_data": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "image": {
+            "type": "file"
         },
         "status": {
             "type": "string",
@@ -33,7 +52,45 @@
             "type": "string"
         }
     },
-    "count":0,
+    "count":2,
     "items": [
+        {
+            "_id": "5626fe716d14477a203dba5c",
+            "name": "ArticleDetail",
+            "category": "web",
+            "widget_name": "ArticleDetail",
+            "target_module": "article",
+            "description": "article detail",
+            "accept_multiple": true,
+            "example_data": {
+                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T02:54:41.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562700956d14477a203dba5d",
+            "name": "iframe",
+            "category": "web",
+            "widget_name": "EmbedIframe",
+            "target_module": "item",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "link": "http://www.w3schools.com"
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:03:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        }
     ]
 }

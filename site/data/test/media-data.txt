@@ -14,13 +14,13 @@
             "type": "string",
             "values": [
                 "image",
-                "video"
+                "document"
             ]
         },
         "image": {
             "type": "file"
         },
-        "video": {
+        "document": {
             "type": "file"
         },
         "style": {
@@ -74,7 +74,8 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "media"
+            "_class": "media",
+            "document": null
         },
         {
             "_id": "561074f8282c285713d8bfe6",
@@ -99,7 +100,8 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "media"
+            "_class": "media",
+            "document": null
         },
         {
             "_id": "561074c2282c285713d8bfe3",
@@ -124,7 +126,8 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "media"
+            "_class": "media",
+            "document": null
         },
         {
             "_id": "561074e8282c285713d8bfe5",
@@ -149,7 +152,8 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "media"
+            "_class": "media",
+            "document": null
         },
         {
             "_id": "561074b4282c285713d8bfe2",
@@ -174,7 +178,8 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
-            "_class": "media"
+            "_class": "media",
+            "document": null
         }
     ]
 }
