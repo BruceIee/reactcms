@@ -52,7 +52,7 @@
             "type": "string"
         }
     },
-    "count":2,
+    "count":7,
     "items": [
         {
             "_id": "5626fe716d14477a203dba5c",
@@ -87,6 +87,147 @@
             "image": null,
             "status": "active",
             "create_date": "2015-10-21T03:03:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56270275b47427e321b8f4ea",
+            "name": "SimplifyFooter",
+            "category": "web",
+            "widget_name": "SimplifyFooter",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:11:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562702bbb47427e321b8f4eb",
+            "name": "BlackbootFooter",
+            "category": "web",
+            "widget_name": "BlackbootFooter",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:12:59.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "5627030fb47427e321b8f4ec",
+            "name": "simplifyheader",
+            "category": "web",
+            "widget_name": "simplifyheader",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:14:23.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56270333b47427e321b8f4ed",
+            "name": "blackbootheader",
+            "category": "web",
+            "widget_name": "blackbootheader",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:14:59.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562703d0b47427e321b8f4ee",
+            "name": "MediaDetail",
+            "category": "web",
+            "widget_name": "MediaDetail",
+            "target_module": "media",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": null,
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:17:36.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
