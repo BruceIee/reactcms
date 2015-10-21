@@ -23,13 +23,16 @@ module.exports = function(app) {
         widget_name: {
             type: 'string'
         },
+        target_module: {
+            type: 'string'
+        },
         description: {
             type: 'string'
         },
         accept_multiple: {
             type: 'boolean'
         },
-        sample_code: {
+        example_data: {
             type: 'object',
             subtype: {
                 type: 'json'
