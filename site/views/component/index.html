@@ -2,20 +2,30 @@
 
 {% block style %}
 {% parent %}
-<style>
-</style>
+<link rel="stylesheet" href="/component/reactlet-common/reactlet-common.css" />
+<link rel="stylesheet" href="/component/reactlet-table2/style/table.css" />
+<link rel="stylesheet" href="/style/component/index.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/component/reactlet-common/reactlet-mixin.js"></script>
+<script src="/script/component/dist/index.js"></script>
 {% endblock %}
 
 {% block content %}
-<div class="body-container container" style="margin-top:10px;">
+<div class="body-container container">
     
     <div class="row">
         <h2>Components</h2>
     </div>
     
     <div class="row" style="margin-top:20px;">
-        <div>
-            page content
+        <div class="col-md-6">
+            table
+        </div>
+        <div class="col-md-6">
+            preview
         </div>
     </div>
 </div>
