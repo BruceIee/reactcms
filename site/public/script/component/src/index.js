@@ -9,8 +9,8 @@ app.dispatcher = new Dispatcher();
 app.activeRowId = '';
 
 $().ready(function() {
-    setup();
-    setupDispatcher();
+    //setup();
+    //setupDispatcher();
 });
 
 function setup() {
