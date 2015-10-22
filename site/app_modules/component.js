@@ -67,9 +67,13 @@ module.exports = function(app) {
     block.data.getComponents = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
+        var category = parameter.category || '';
         // query for components
         var condition = {};
         var filter = {};
+        if (category) {
+            condition.category = category;
+        }
         block.data.get(req, res, condition, filter, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
