@@ -67,11 +67,12 @@ module.exports = function(app) {
     block.data.getComponents = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
-        
-        var error = null;
-        var docs = [];
-        var info = { message:'getComponents' };
-        app.cb(error, docs, info, req, res, callback);
+        // query for components
+        var condition = {};
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
     };
     
     /*
