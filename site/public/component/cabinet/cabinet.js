@@ -29,7 +29,8 @@ var Cabinet = React.createClass({
         Table: { widget:Table },
         Treeview: { widget:Treeview },
         Plate: { widget:Plate },
-        EmbedIframe: { widget:EmbedIframe }
+        EmbedIframe: { widget:EmbedIframe },
+        AceEditor: { widget:AceEditor }
     },
     
     // attribute definitions
@@ -53,6 +54,10 @@ var Cabinet = React.createClass({
     render: function() {
         var widgets = [];
         var component = this.components[this.state.widget];
+        if (!component) {
+            console.log('ERROR: component ' + this.state.widget + ' is not supported in cabinet');
+            return;
+        }
         if (component.acceptMultiple) {
             if (this.state.items.length == 1) {
                 // todo - equal to 1 is a hack, proper way is to check if this item has "items" property inside

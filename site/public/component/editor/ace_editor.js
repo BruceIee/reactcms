@@ -17,6 +17,7 @@ var AceEditor = React.createClass({
     
     componentDidMount: function() {
         var editorElement = React.findDOMNode(this.refs.aceeditor);
+        /*
         var settings = this.state.value;
         var content = this.state.value.content;
         // create ace editor object
@@ -27,6 +28,7 @@ var AceEditor = React.createClass({
         if (content) {
             editor.setValue(content);
         }
+        */
     },
     
     render: function() {
