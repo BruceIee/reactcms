@@ -22,6 +22,7 @@ var AceEditor = React.createClass({
         editor.setTheme("ace/theme/monokai");
         editor.getSession().setMode("ace/mode/javascript");
         // set editor content if content if passed in
+        console.log('>>> this.state:', this.state);
         if (this.state.value) {
             editor.setValue(this.state.value);
         }
