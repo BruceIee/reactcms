@@ -10,25 +10,21 @@ var AceEditor = React.createClass({
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
-            { name:'content', type:'string', required:false, defaultValue:'', note:'item content' }
+            { name:'value', type:'string', required:false, defaultValue:'', note:'item value' }
         ];
         return attributes;
     },
     
     componentDidMount: function() {
         var editorElement = React.findDOMNode(this.refs.aceeditor);
-        /*
-        var settings = this.state.value;
-        var content = this.state.value.content;
         // create ace editor object
         var editor = ace.edit(editorElement);
         editor.setTheme("ace/theme/monokai");
         editor.getSession().setMode("ace/mode/javascript");
         // set editor content if content if passed in
-        if (content) {
-            editor.setValue(content);
+        if (this.state.value) {
+            editor.setValue(this.state.value);
         }
-        */
     },
     
     render: function() {
