@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "ace-editor-builds": "^1.2.0",
     "async": "~0.9.0",
     "body-parser": "~1.0.0",
     "compression": "~1.0.8",
