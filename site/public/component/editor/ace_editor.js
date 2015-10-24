@@ -16,22 +16,24 @@ var AceEditor = React.createClass({
     },
     
     componentDidMount: function() {
-        var graphElement = React.findDOMNode(this.refs.graph);
+        var editorElement = React.findDOMNode(this.refs.aceeditor);
         var settings = this.state.value;
-        var dataUrl = this.state.value.data_url + '';
-        if (dataUrl) {
-            var chart = webCharts.createChart(graphElement, settings);
-            d3.csv(dataUrl, function(error, data) {
-                chart.init(data);
-            });
+        var content = this.state.value.content;
+        // create ace editor object
+        var editor = ace.edit(editorElement);
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/javascript");
+        // set editor content if content if passed in
+        if (content) {
+            editor.setValue(content);
         }
     },
     
     render: function() {
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
-                <div className="webcharts-content">
-                    <div className="webcharts-graph" ref="graph"></div>
+                <div className="ace-editor-content">
+                    <div className="ace-editor" ref="aceeditor"></div>
                 </div>
             </div>
         );
