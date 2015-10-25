@@ -17,10 +17,16 @@ module.exports = function(app) {
         name: {
             type: 'string'
         },
+        category: {
+            type: 'string'
+        },
         description: {
             type: 'text'
         },
         price: {
+            type: 'number'
+        },
+        rating: {
             type: 'number'
         },
         value: {
