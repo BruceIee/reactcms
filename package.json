@@ -50,6 +50,7 @@
     "pagedown": "git+https://github.com/yayestechlab/pagedown.git",
     "pagedown-extra": "git+https://github.com/jmcmanus/pagedown-extra.git",
     "pg": "*",
+    "quill": "^0.20.0",
     "react": "~0.13.0",
     "react-d3-components": "~0.5.0",
     "reactlet-calendar": "*",
