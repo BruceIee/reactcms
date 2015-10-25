@@ -9,6 +9,8 @@ var AceEditor = React.createClass({
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
             { name:'type', type:'string', required:false, defaultValue:'', note:'item type' },
+            { name:'theme', type:'string', required:false, defaultValue:'monokai', note:'editor theme' },
+            { name:'readOnly', type:'boolean', required:false, defaultValue:true, note:'set editor read only' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
             { name:'value', type:'string', required:false, defaultValue:'', note:'item value' }
         ];
@@ -16,16 +18,19 @@ var AceEditor = React.createClass({
     },
     
     componentDidMount: function() {
+        
+        console.log('>>> state:', this.state);
+        
         var editorElement = React.findDOMNode(this.refs.aceeditor);
         // create ace editor object
         var editor = ace.edit(editorElement);
-        editor.setTheme("ace/theme/monokai");
+        editor.setTheme('ace/theme/' + this.state.theme);
         editor.getSession().setMode("ace/mode/javascript");
         // set editor content if content if passed in
-        console.log('>>> this.state:', this.state);
         if (this.state.value) {
             editor.setValue(this.state.value);
         }
+        editor.setReadOnly(this.state.readOnly); 
     },
     
     render: function() {

@@ -11,7 +11,11 @@ var getCommonMixin = {
             var attribute = attributes[i];
             var name = attribute.name;
             var attributeValue = this.props[name] || propsData[name];
-            state[name] = attributeValue || attribute.defaultValue;
+            if (typeof attributeValue === 'undefined') {
+                state[name] = attribute.defaultValue;
+            } else {
+                state[name] = attributeValue;
+            }
         }
         state.containerClassNames = [this.name + '-container'];
         state.boxClass && state.containerClassNames.push(state.boxClass);
