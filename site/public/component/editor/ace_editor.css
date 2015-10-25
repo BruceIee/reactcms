@@ -1,5 +1,5 @@
 .aceeditor-container .ace-editor-content .ace-editor {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;

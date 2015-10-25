@@ -27,7 +27,8 @@ var AceEditor = React.createClass({
         if (this.state.value) {
             editor.setValue(this.state.value, 1);
         }
-        editor.setReadOnly(this.state.readOnly); 
+        editor.setReadOnly(this.state.readOnly);
+        editor.setShowPrintMargin(false);
     },
     
     render: function() {
@@ -35,6 +36,7 @@ var AceEditor = React.createClass({
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="ace-editor-content">
                     <div className="ace-editor" ref="aceeditor"></div>
+                    <div className="div-clear-both" />
                 </div>
             </div>
         );
