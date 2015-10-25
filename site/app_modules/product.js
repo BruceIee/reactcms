@@ -20,6 +20,9 @@ module.exports = function(app) {
         category: {
             type: 'string'
         },
+        title: {
+            type: 'string'
+        },
         description: {
             type: 'text'
         },
