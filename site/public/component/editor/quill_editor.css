@@ -1,4 +1,5 @@
 .quilleditor-container .quill-editor-content .quill-editor {
     width: 100%;
     min-height: 360px;
+    border: solid 1px #f2f2f2;
 }
