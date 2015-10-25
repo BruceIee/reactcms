@@ -59,6 +59,13 @@ module.exports = function(app) {
         }
     };
     
+    block.listFields = [
+        { name:'category', display:'Category', flex:2, sort:'asc' },
+        { name:'name', display:'Name', flex:2 },
+        { name:'price', display:'Price', flex:2 },
+        { name:'status', display:'Name', flex:1 }
+    ];
+    
     // block.data
     /*
     block.data.addItem = function(req, res) {
