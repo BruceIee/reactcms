@@ -21,6 +21,7 @@
 <script src="/library/highcharts/modules/treemap.js"></script>
 <script src="/library/react-d3-components/react-d3-components.min.js"></script>
 <script type="text/javascript" src="/library/ace-editor/src-min-noconflict/ace.js" charset="utf-8"></script>
+<script type="text/javascript" src="/library/quill/quill.js" charset="utf-8"></script>
 
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
 <script type="text/jsx" src="/script/page/support.js"></script>
@@ -43,6 +44,7 @@
 <script type="text/jsx" src="/component/reactlet-treeview/src/treeview.js"></script>
 <script type="text/jsx" src="/component/embed/iframe.js"></script>
 <script type="text/jsx" src="/component/editor/ace_editor.js"></script>
+<script type="text/jsx" src="/component/editor/quill_editor.js"></script>
 <script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
 <script type="text/jsx">
 var app = app || {};
@@ -60,6 +62,7 @@ app.pageComposition = {{ page.compositionData|json|safe}};
 <link rel="stylesheet" href="/library/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="/library/webcharts/webcharts.v1_1_1.css">
+<link rel="stylesheet" href="/library/quill/quill.base.css">
 <link rel="stylesheet" href="/style/style.css">
 <link rel="stylesheet" href="/component/common/common-style.css"/>
 <link rel="stylesheet" href="/component/header/blackboot_header.css"/>
@@ -81,6 +84,7 @@ app.pageComposition = {{ page.compositionData|json|safe}};
 <link rel="stylesheet" href="/component/reactlet-treeview/style/treeview.css"/>
 <link rel="stylesheet" href="/component/embed/iframe.css"/>
 <link rel="stylesheet" href="/component/editor/ace_editor.css"/>
+<link rel="stylesheet" href="/component/editor/quill_editor.css"/>
 <link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
 {% endblock %}
 </head>

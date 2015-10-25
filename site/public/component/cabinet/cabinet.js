@@ -30,7 +30,8 @@ var Cabinet = React.createClass({
         Treeview: { widget:Treeview },
         Plate: { widget:Plate },
         EmbedIframe: { widget:EmbedIframe },
-        AceEditor: { widget:AceEditor }
+        AceEditor: { widget:AceEditor },
+        QuillEditor: { widget:QuillEditor }
     },
     
     // attribute definitions
