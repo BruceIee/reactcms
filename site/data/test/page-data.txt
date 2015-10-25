@@ -1601,9 +1601,47 @@
                         }
                     }
                 ],
-                "r9c1": null,
-                "r9c2": null,
-                "f1c1": null,
+                "r9c1": [
+                    {
+                        "widgetName": "AceEditor",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "theme": "clouds_midnight",
+                                "readOnly": false,
+                                "value": "var abc = 1;\nabc = abc + 1;\n\nfunction test(input) {\n    return true;\n}\n"
+                            }
+                        }
+                    }
+                ],
+                "r9c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>AceEditor Component</h4>"
+                            }
+                        }
+                    }
+                ],
+                "f1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<br/><br/>"
+                            }
+                        }
+                    }
+                ],
                 "f2c1": null
             },
             "group": "",

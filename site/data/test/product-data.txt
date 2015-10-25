@@ -1,0 +1,45 @@
+{
+    "name":"product",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "price": {
+            "type": "number"
+        },
+        "value": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "image": {
+            "type": "file"
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
