@@ -4,10 +4,19 @@
         "name": {
             "type": "string"
         },
+        "category": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
         "description": {
             "type": "text"
         },
         "price": {
+            "type": "number"
+        },
+        "rating": {
             "type": "number"
         },
         "value": {
@@ -39,7 +48,33 @@
             "type": "string"
         }
     },
-    "count":0,
+    "count":1,
     "items": [
+        {
+            "_id": "562d49e2bc8e727710f1f2a5",
+            "name": "Motorola Nexus 6",
+            "category": "phone",
+            "title": "Motorola Nexus 6",
+            "description": "Motorola Nexus 6 Unlocked Cellphone, 32GB, Midnight Blue (U.S. Warranty)",
+            "price": 349.99,
+            "rating": 0,
+            "value": null,
+            "image": {
+                "fieldname": "image",
+                "originalname": "Motorola_Nexus_6.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "./site/public/file/",
+                "filename": "product-image-1445808610941-Motorola_Nexus_6.jpg",
+                "path": "site/public/file/product-image-1445808610941-Motorola_Nexus_6.jpg",
+                "size": 33664
+            },
+            "status": "active",
+            "create_date": "2015-10-25T21:30:10.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "product"
+        }
     ]
 }
