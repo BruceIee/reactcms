@@ -18,9 +18,6 @@ var AceEditor = React.createClass({
     },
     
     componentDidMount: function() {
-        
-        console.log('>>> state:', this.state);
-        
         var editorElement = React.findDOMNode(this.refs.aceeditor);
         // create ace editor object
         var editor = ace.edit(editorElement);
@@ -28,7 +25,7 @@ var AceEditor = React.createClass({
         editor.getSession().setMode("ace/mode/javascript");
         // set editor content if content if passed in
         if (this.state.value) {
-            editor.setValue(this.state.value);
+            editor.setValue(this.state.value, 1);
         }
         editor.setReadOnly(this.state.readOnly); 
     },
