@@ -138,10 +138,11 @@ module.exports = function(app) {
     */
     
     // page route
+    app.server.get('/products', block.page.getIndex);
+    
     /*
     app.server.all('/items', block.page.checkLogin);
     app.server.all('/items/*', block.page.checkLogin);
-    app.server.get('/items', block.page.getIndex);
     app.server.get('/items/home', block.page.getIndex);
     app.server.get('/items/add', block.page.addItem);
     app.server.post('/items/add', block.page.addItemPost);
