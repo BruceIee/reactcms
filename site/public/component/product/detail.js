@@ -19,7 +19,7 @@ var ProductDetail = React.createClass({
     
     render: function() {
         var content = '';
-        if (this.state.image.constructor.name == 'Array' && this.state.image.length > 0) {
+        if (this.state.image && this.state.image.constructor.name == 'Array' && this.state.image.length > 0) {
             this.state.image = this.state.image[0];
         }
         var imageUrl = '/file/' + this.state.image.filename;
