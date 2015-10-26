@@ -1,6 +1,6 @@
-// article detail component
-var ArticleDetail = React.createClass({
-    name: 'articledetail',
+// product detail component
+var ProeuctDetail = React.createClass({
+    name: 'productdetail',
     mixins: [getCommonMixin],
     
     // attribute definitions
@@ -38,17 +38,17 @@ var ArticleDetail = React.createClass({
                     <img src={ imageUrl} style={ this.state.image_style } />;
             }
             content = 
-                <div className="container articledetail-content">
-                    <div className="articledetail-image-content col-md-4">
+                <div className="container productdetail-content">
+                    <div className="productdetail-image-content col-md-4">
                         { imageContent }
                     </div>
-                    <div className="articledetail-text-content col-md-8"
+                    <div className="productdetail-text-content col-md-8"
                         dangerouslySetInnerHTML={{__html: this.state.content}}
                     />
                 </div>
         } else {
             content = 
-                <div className="container articledetail-content"
+                <div className="container productdetail-content"
                     dangerouslySetInnerHTML={{__html: this.state.content}}
                 />
         }
