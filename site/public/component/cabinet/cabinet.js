@@ -13,6 +13,7 @@ var Cabinet = React.createClass({
         ItemDetail: { widget:ItemDetail },
         MediaDetail: { widget:MediaDetail },
         ArticleDetail: { widget:ArticleDetail },
+        ProductDetail: { widget:ProductDetail },
         LinksetDetail: { widget:LinksetDetail },
         LinksetDetail2: { widget:LinksetDetail2 },
         GraphBartest: { widget:GraphBartest },
