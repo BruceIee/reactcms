@@ -231,7 +231,7 @@ function retrievePageSectionData() {
         try {
             sectionDataItem = getSectionData(componentForm, sectionName);
         } catch(e) {
-            console.log('Error in getting data from ' + sectionName);
+            console.log('Error in getting data from ' + sectionName + ':' + e);
         }
         if (sectionDataItem) {
             app.pageData.content[sectionName] = [sectionDataItem];
