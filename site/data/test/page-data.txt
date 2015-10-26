@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":45,
+    "count":47,
     "items": [
         {
             "_id": "56150fc17e0f6b6f16fcea3f",
@@ -9635,6 +9635,101 @@
             "create_date": "2015-10-16T04:04:22.000Z",
             "create_by": "",
             "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "562d993dfb0c088914a5af2b",
+            "name": "productdetail1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">ProductDetail - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "ProductDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "image": {
+                                    "filename": "media-image-1443919028472-cat12.jpg"
+                                },
+                                "title": "test title"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-26T03:08:45.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "562d9ccdfb0c088914a5af2c",
+            "name": "productdetail2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">ProductDetail - Database Query</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "ProductDetail",
+                        "widgetInfo": {
+                            "module": "product",
+                            "condition": {
+                                "category": "phone"
+                            },
+                            "filter": null,
+                            "data": {}
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-26T03:23:57.000Z",
+            "create_by": "",
+            "edit_date": "",
             "edit_by": "",
             "_class": "page"
         }
