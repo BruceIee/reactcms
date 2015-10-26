@@ -34,7 +34,6 @@ var ProductDetail = React.createClass({
                     { imageContent }
                 </div>
                 <div className="productdetail-text-content">
-                    product detail
                     { this.state.title }
                 </div>
             </div>;
