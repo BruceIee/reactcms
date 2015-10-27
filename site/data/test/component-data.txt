@@ -55,103 +55,6 @@
     "count":19,
     "items": [
         {
-            "_id": "56278a50c4ebe4762ff97f1d",
-            "name": "GraphScatterplot",
-            "category": "graph",
-            "widget_name": "GraphScatterplot",
-            "target_module": "item",
-            "description": "D3Graph Scatterplot",
-            "accept_multiple": false,
-            "example_data": {
-                "value": {
-                    "label": "plot1",
-                    "values": [
-                        {
-                            "x": "Class A",
-                            "y": 8
-                        },
-                        {
-                            "x": "Class B",
-                            "y": 4
-                        },
-                        {
-                            "x": "Class C",
-                            "y": 6
-                        },
-                        {
-                            "x": "Class D",
-                            "y": 3
-                        }
-                    ]
-                }
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:51:28.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "56278a9dc4ebe4762ff97f1f",
-            "name": "GraphPiechart",
-            "category": "graph",
-            "widget_name": "GraphPiechart",
-            "target_module": "item",
-            "description": "D3Graph Piechart",
-            "accept_multiple": false,
-            "example_data": {
-                "value": {
-                    "label": "plot1",
-                    "values": [
-                        {
-                            "x": "Class A",
-                            "y": 8
-                        },
-                        {
-                            "x": "Class B",
-                            "y": 4
-                        },
-                        {
-                            "x": "Class C",
-                            "y": 6
-                        },
-                        {
-                            "x": "Class D",
-                            "y": 3
-                        }
-                    ]
-                }
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:52:45.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "5626fe716d14477a203dba5c",
-            "name": "ArticleDetail",
-            "category": "web",
-            "widget_name": "ArticleDetail",
-            "target_module": "article",
-            "description": "article detail",
-            "accept_multiple": true,
-            "example_data": {
-                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T02:54:41.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
             "_id": "56270275b47427e321b8f4ea",
             "name": "SimplifyFooter",
             "category": "web",
@@ -258,171 +161,6 @@
             "image": null,
             "status": "active",
             "create_date": "2015-10-21T03:14:23.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "5627889fc4ebe4762ff97f17",
-            "name": "Table",
-            "category": "web",
-            "widget_name": "Table",
-            "target_module": "item",
-            "description": "Table",
-            "accept_multiple": false,
-            "example_data": {
-                "boxClass": "table-container-bordered",
-                "colModel": {
-                    "id": {
-                        "name": "id",
-                        "text": "ID",
-                        "width": "15%",
-                        "key": "true"
-                    },
-                    "name": {
-                        "name": "name",
-                        "text": "Name",
-                        "width": "20%",
-                        "sort": "up"
-                    },
-                    "price": {
-                        "name": "price",
-                        "text": "Price",
-                        "width": "15%",
-                        "type": "money"
-                    },
-                    "description": {
-                        "name": "description",
-                        "text": "Description",
-                        "width": "30%"
-                    },
-                    "extra": {
-                        "name": "extra",
-                        "text": "Extra",
-                        "show": "false",
-                        "width": "10%"
-                    }
-                },
-                "dataItems": [
-                    {
-                        "id": "P01",
-                        "name": "egg",
-                        "price": "7",
-                        "description": "fresh egg",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P21",
-                        "name": "bread",
-                        "price": "2.99",
-                        "description": "whole grain bread",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P23",
-                        "name": "chip",
-                        "price": "2.1",
-                        "description": "potato chip",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P54",
-                        "name": "sauce",
-                        "price": "1.89",
-                        "description": "dipping sauce",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P81",
-                        "name": "corn",
-                        "price": "4.59",
-                        "description": "fresh corn",
-                        "extra": "n/a"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:44:15.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "56278831c4ebe4762ff97f15",
-            "name": "Calendar",
-            "category": "web",
-            "widget_name": "Calendar",
-            "target_module": "item",
-            "description": "Calendar",
-            "accept_multiple": false,
-            "example_data": {
-                "year": "2015",
-                "month": "5",
-                "eventsCollection": {
-                    "2015-05-01": [
-                        {
-                            "category": "home",
-                            "title": "gas bill"
-                        },
-                        {
-                            "category": "work",
-                            "title": "report due"
-                        }
-                    ],
-                    "2015-05-11": [
-                        {
-                            "category": "home",
-                            "title": "pta meeting"
-                        }
-                    ]
-                }
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:42:25.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "56278879c4ebe4762ff97f16",
-            "name": "Carousel",
-            "category": "web",
-            "widget_name": "Carousel",
-            "target_module": "item",
-            "description": "Carousel",
-            "accept_multiple": false,
-            "example_data": {
-                "items": [
-                    {
-                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                        "text": "slide 1"
-                    },
-                    {
-                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                        "text": "slide 2"
-                    },
-                    {
-                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                        "text": "slide 3"
-                    },
-                    {
-                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                        "text": "slide 4"
-                    },
-                    {
-                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                        "text": "slide 5"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:43:37.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
@@ -603,101 +341,6 @@
             "_class": "component"
         },
         {
-            "_id": "562788ddc4ebe4762ff97f19",
-            "name": "Treeview",
-            "category": "web",
-            "widget_name": "Treeview",
-            "target_module": "item",
-            "description": "Treeview",
-            "accept_multiple": false,
-            "example_data": {
-                "treedata": [
-                    {
-                        "name": "website",
-                        "iconClass": "fa fa-folder-o",
-                        "children": [
-                            {
-                                "name": "images",
-                                "iconClass": "fa fa-folder-o",
-                                "children": [
-                                    {
-                                        "name": "logo.png",
-                                        "iconClass": "fa fa-file-image-o"
-                                    },
-                                    {
-                                        "name": "background.png",
-                                        "iconClass": "fa fa-file-image-o"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "index.html",
-                                "iconClass": "fa fa-file-text-o"
-                            },
-                            {
-                                "name": "about.html",
-                                "iconClass": "fa fa-file-text-o"
-                            },
-                            {
-                                "name": "product.html",
-                                "iconClass": "fa fa-file-text-o"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:45:17.000Z",
-            "create_by": "admin",
-            "edit_date": "2015-10-21T12:45:26.000Z",
-            "edit_by": "admin",
-            "_class": "component"
-        },
-        {
-            "_id": "562789b2c4ebe4762ff97f1a",
-            "name": "Webcharts",
-            "category": "graph",
-            "widget_name": "Webcharts",
-            "target_module": "item",
-            "description": "Webcharts",
-            "accept_multiple": false,
-            "example_data": {
-                "value": {
-                    "data_url": "/data/webcharts/calories.csv",
-                    "max_width": "480",
-                    "x": {
-                        "label": "Protein (g)",
-                        "type": "linear",
-                        "column": "Protein (g)"
-                    },
-                    "y": {
-                        "label": "Carbs (g)",
-                        "type": "linear",
-                        "column": "Carbo(g)"
-                    },
-                    "marks": [
-                        {
-                            "type": "circle",
-                            "per": [
-                                "Food"
-                            ],
-                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
-                        }
-                    ],
-                    "aspect": "1",
-                    "gridlines": "xy"
-                }
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:48:50.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
             "_id": "56278a6ec4ebe4762ff97f1e",
             "name": "GraphAreachart",
             "category": "graph",
@@ -806,6 +449,363 @@
             "image": null,
             "status": "active",
             "create_date": "2015-10-21T12:53:15.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56278a50c4ebe4762ff97f1d",
+            "name": "GraphScatterplot",
+            "category": "graph",
+            "widget_name": "GraphScatterplot",
+            "target_module": "item",
+            "description": "D3Graph Scatterplot",
+            "accept_multiple": false,
+            "example_data": {
+                "value": {
+                    "label": "plot1",
+                    "values": [
+                        {
+                            "x": "Class A",
+                            "y": 8
+                        },
+                        {
+                            "x": "Class B",
+                            "y": 4
+                        },
+                        {
+                            "x": "Class C",
+                            "y": 6
+                        },
+                        {
+                            "x": "Class D",
+                            "y": 3
+                        }
+                    ]
+                }
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:51:28.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56278a9dc4ebe4762ff97f1f",
+            "name": "GraphPiechart",
+            "category": "graph",
+            "widget_name": "GraphPiechart",
+            "target_module": "item",
+            "description": "D3Graph Piechart",
+            "accept_multiple": false,
+            "example_data": {
+                "value": {
+                    "label": "plot1",
+                    "values": [
+                        {
+                            "x": "Class A",
+                            "y": 8
+                        },
+                        {
+                            "x": "Class B",
+                            "y": 4
+                        },
+                        {
+                            "x": "Class C",
+                            "y": 6
+                        },
+                        {
+                            "x": "Class D",
+                            "y": 3
+                        }
+                    ]
+                }
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:52:45.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "5626fe716d14477a203dba5c",
+            "name": "ArticleDetail",
+            "category": "web",
+            "widget_name": "ArticleDetail",
+            "target_module": "article",
+            "description": "article detail",
+            "accept_multiple": true,
+            "example_data": {
+                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T02:54:41.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "5627889fc4ebe4762ff97f17",
+            "name": "Table",
+            "category": "web",
+            "widget_name": "Table",
+            "target_module": "item",
+            "description": "Table",
+            "accept_multiple": false,
+            "example_data": {
+                "boxClass": "table-container-bordered",
+                "colModel": {
+                    "id": {
+                        "name": "id",
+                        "text": "ID",
+                        "width": "15%",
+                        "key": "true"
+                    },
+                    "name": {
+                        "name": "name",
+                        "text": "Name",
+                        "width": "20%",
+                        "sort": "up"
+                    },
+                    "price": {
+                        "name": "price",
+                        "text": "Price",
+                        "width": "15%",
+                        "type": "money"
+                    },
+                    "description": {
+                        "name": "description",
+                        "text": "Description",
+                        "width": "30%"
+                    },
+                    "extra": {
+                        "name": "extra",
+                        "text": "Extra",
+                        "show": "false",
+                        "width": "10%"
+                    }
+                },
+                "dataItems": [
+                    {
+                        "id": "P01",
+                        "name": "egg",
+                        "price": "7",
+                        "description": "fresh egg",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P21",
+                        "name": "bread",
+                        "price": "2.99",
+                        "description": "whole grain bread",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P23",
+                        "name": "chip",
+                        "price": "2.1",
+                        "description": "potato chip",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P54",
+                        "name": "sauce",
+                        "price": "1.89",
+                        "description": "dipping sauce",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P81",
+                        "name": "corn",
+                        "price": "4.59",
+                        "description": "fresh corn",
+                        "extra": "n/a"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:44:15.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56278831c4ebe4762ff97f15",
+            "name": "Calendar",
+            "category": "web",
+            "widget_name": "Calendar",
+            "target_module": "item",
+            "description": "Calendar",
+            "accept_multiple": false,
+            "example_data": {
+                "year": "2015",
+                "month": "5",
+                "eventsCollection": {
+                    "2015-05-01": [
+                        {
+                            "category": "home",
+                            "title": "gas bill"
+                        },
+                        {
+                            "category": "work",
+                            "title": "report due"
+                        }
+                    ],
+                    "2015-05-11": [
+                        {
+                            "category": "home",
+                            "title": "pta meeting"
+                        }
+                    ]
+                }
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:42:25.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56278879c4ebe4762ff97f16",
+            "name": "Carousel",
+            "category": "web",
+            "widget_name": "Carousel",
+            "target_module": "item",
+            "description": "Carousel",
+            "accept_multiple": false,
+            "example_data": {
+                "items": [
+                    {
+                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                        "text": "slide 1"
+                    },
+                    {
+                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                        "text": "slide 2"
+                    },
+                    {
+                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                        "text": "slide 3"
+                    },
+                    {
+                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                        "text": "slide 4"
+                    },
+                    {
+                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                        "text": "slide 5"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:43:37.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562788ddc4ebe4762ff97f19",
+            "name": "Treeview",
+            "category": "web",
+            "widget_name": "Treeview",
+            "target_module": "item",
+            "description": "Treeview",
+            "accept_multiple": false,
+            "example_data": {
+                "treedata": [
+                    {
+                        "name": "website",
+                        "iconClass": "fa fa-folder-o",
+                        "children": [
+                            {
+                                "name": "images",
+                                "iconClass": "fa fa-folder-o",
+                                "children": [
+                                    {
+                                        "name": "logo.png",
+                                        "iconClass": "fa fa-file-image-o"
+                                    },
+                                    {
+                                        "name": "background.png",
+                                        "iconClass": "fa fa-file-image-o"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "index.html",
+                                "iconClass": "fa fa-file-text-o"
+                            },
+                            {
+                                "name": "about.html",
+                                "iconClass": "fa fa-file-text-o"
+                            },
+                            {
+                                "name": "product.html",
+                                "iconClass": "fa fa-file-text-o"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:45:17.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-10-21T12:45:26.000Z",
+            "edit_by": "admin",
+            "_class": "component"
+        },
+        {
+            "_id": "562789b2c4ebe4762ff97f1a",
+            "name": "Webcharts",
+            "category": "graph",
+            "widget_name": "Webcharts",
+            "target_module": "item",
+            "description": "Webcharts",
+            "accept_multiple": false,
+            "example_data": {
+                "value": {
+                    "data_url": "/data/webcharts/calories.csv",
+                    "max_width": "480",
+                    "x": {
+                        "label": "Protein (g)",
+                        "type": "linear",
+                        "column": "Protein (g)"
+                    },
+                    "y": {
+                        "label": "Carbs (g)",
+                        "type": "linear",
+                        "column": "Carbo(g)"
+                    },
+                    "marks": [
+                        {
+                            "type": "circle",
+                            "per": [
+                                "Food"
+                            ],
+                            "tooltip": "[Food]\n[Measure]\n[Protein (g)] grams protein\n[Carbo(g)] grams carbs"
+                        }
+                    ],
+                    "aspect": "1",
+                    "gridlines": "xy"
+                }
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:48:50.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",

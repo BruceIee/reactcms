@@ -257,8 +257,12 @@ function retrievePageSectionData() {
 function getSectionData(parent, sectionName) {
     var componentName = $(parent).find('input[name=component]').val();
     // widget data by value
-    var widgetData = app.jsonEditorCol[sectionName].get();
-    
+    var widgetData = null;
+    try {
+        widgetData = app.jsonEditorCol[sectionName].get();
+    } catch(e) {
+        console.log('Error in getSectionData:', e);
+    }
     console.log('>>> widgetData:', sectionName, widgetData);
     /*
     app.jsonEditor.set(context.widgetInfo.data);
