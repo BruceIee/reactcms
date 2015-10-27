@@ -2788,7 +2788,7 @@
                             "module": "product",
                             "condition": {},
                             "filter": null,
-                            "data": null
+                            "data": ""
                         }
                     }
                 ],

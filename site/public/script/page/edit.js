@@ -163,6 +163,8 @@ function populateSectionContent(sectionName, template) {
     app.jsonEditorCol[sectionName] = new JSONEditor(widgetdataElement[0], app.jsonEditorOptions);
     if (context.widgetInfo && context.widgetInfo.data) {
         app.jsonEditorCol[sectionName].set(context.widgetInfo.data);
+    } else {
+         app.jsonEditorCol[sectionName].set('');
     }
 }
 
@@ -264,6 +266,7 @@ function getSectionData(parent, sectionName) {
         console.log('Error in getSectionData:', e);
     }
     console.log('>>> widgetData:', sectionName, widgetData);
+    
     /*
     app.jsonEditor.set(context.widgetInfo.data);
     var widgetDataText = $(parent).find('textarea[name=widgetdata]').val();
