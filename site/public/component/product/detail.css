@@ -1,6 +1,12 @@
 .productdetail-container .productdetail-content {
-    height: 320px;
     padding-bottom: 25px;
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.productdetail-container .productdetail-content .productdetail-image {
+    width: 100%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
