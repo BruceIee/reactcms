@@ -26,7 +26,7 @@ var ProductDetail = React.createClass({
         var imageUrl = '/file/' + this.state.image.filename;
         var productId = this.state.id && this.state._id;
         var productUrl = '/products/' + productId + '/detail';
-        var imageStyle = { backgroundImage:'url(' +  imageUrl + ')' };
+        var imageStyle = { backgroundImage:"url('" +  imageUrl + "')" };
         var imageContent =
             <a href={ productUrl } >
                 <div className="productdetail-image" style={ imageStyle }></div>
