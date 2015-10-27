@@ -8,7 +8,7 @@ var ProductDetail = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'id', type:'string', required:false, defaultValue:'', note:'list element id' },
+            { name:'_id', type:'string', required:false, defaultValue:'', note:'list element id' },
             { name:'name', type:'string', required:false, defaultValue:'', note:'item name' },
             { name:'category', type:'string', required:false, defaultValue:'', note:'item category' },
             { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
@@ -22,6 +22,9 @@ var ProductDetail = React.createClass({
         if (this.state.image && this.state.image.constructor.name == 'Array' && this.state.image.length > 0) {
             this.state.image = this.state.image[0];
         }
+        
+        console.log('>>>', this.state);
+        
         this.state.image = this.state.image || { filename:'' };
         var imageUrl = '/file/' + this.state.image.filename;
         var productUrl = '/products/' + this.state._id + '/detail';

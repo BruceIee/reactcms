@@ -9,4 +9,10 @@
     height: 240px;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position-x: center;
+}
+
+.productdetail-container .productdetail-content .productdetail-text-content {
+    margin-top: 5px;
+    text-align: center;
 }
