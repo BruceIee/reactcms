@@ -3,5 +3,5 @@ $().ready(function() {
 });
 
 function setup() {
-    console.log('in product index');
+    console.log('in basket index');
 }
