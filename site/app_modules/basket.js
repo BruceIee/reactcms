@@ -4,7 +4,7 @@ var multer  = require('multer');
 
 module.exports = function(app) {
     
-    var moduleName = 'product';
+    var moduleName = 'basket';
     var block = {
         app: app,
         group: 'app',
@@ -53,9 +53,8 @@ module.exports = function(app) {
         var condition = { user_id:userId };
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            
-            console.log('>>> getUserBasket:', condition, error, docs, info);
-            
+            console.log('getUserBasket - condition:', condition);
+            console.log('getUserBasket - result:', error, docs, info);
             var basket = docs && docs[0];
             app.cb(error, basket, {}, req, res, callback);
         });
@@ -65,20 +64,10 @@ module.exports = function(app) {
     block.data.addToBasket = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
-        
-        console.log('>>> parameter:', parameter);
-        
         var productId = parameter.productid;
         var loginUser = req.session && req.session.user;
-        
-        console.log('>>> loginUser:', loginUser);
-        
         if (loginUser) {
-            
             block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
-                
-                console.log('>>> basket:', basket);
-                
                 if (basket) {
                     basket.items.push(productId);
                     block.data.edit(req, res, basket, function(error, docs, info) {
@@ -86,7 +75,7 @@ module.exports = function(app) {
                     });
                 } else {
                     basket = { user_id:loginUser._id, items:[productId] };
-                    block.data.add(req, res, parameter, function(error, docs, info) {
+                    block.data.add(req, res, basket, function(error, docs, info) {
                         app.cb(error, basket, {}, req, res, callback);
                     });
                 }
