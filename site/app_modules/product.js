@@ -67,21 +67,21 @@ module.exports = function(app) {
     ];
     
     // block.data
+    block.data.getDetail = function(req, res) {
+        var callback = arguments[3] || null; 
+        var parameter = tool.getReqParameter(req);
+        var id = parameter.id;
+        block.data.getById(req, res, id, function(error, docs, info) {
+            app.cb(error, docs, info, req, res, callback);
+        });
+    };
+    
     /*
     block.data.addItem = function(req, res) {
         var callback = arguments[3] || null; 
         var item = tool.getReqParameter(req);
         item.create_date = new Date();
         block.data.add(req, res, item, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
-        });
-    };
-    
-    block.data.getItemDetail = function(req, res) {
-        var callback = arguments[3] || null; 
-        var parameter = tool.getReqParameter(req);
-        var id = parameter.id;
-        block.data.getById(req, res, id, function(error, docs, info) {
             app.cb(error, docs, info, req, res, callback);
         });
     };
@@ -100,6 +100,15 @@ module.exports = function(app) {
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('product/index', { page:page });
+    };
+    
+    block.page.getDetail = function(req, res) {
+        var parameter = tool.getReqParameter(req);
+        block.data.getDetail(req, res, null, function(error, docs, info) {
+            var page = app.getPage(req);
+            page.product = docs && docs[0] || null;
+            res.render('product/detail', { page:page });
+        });
     };
     
     /*
@@ -155,6 +164,7 @@ module.exports = function(app) {
     
     // page route
     app.server.get('/products', block.page.getIndex);
+    app.server.get('/products/:id/detail', block.page.getDetail);
     
     /*
     app.server.all('/items', block.page.checkLogin);
