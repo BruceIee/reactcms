@@ -2,7 +2,7 @@
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/product/index.css">
+<link rel="stylesheet" href="/style/product/detail.css">
 {% endblock %}
 
 {% block script %}
@@ -11,19 +11,38 @@
 var app = app || {};
 app.product = {{ page.product|json|raw }};
 </script>
-<script src="/script/product/index.js"></script>
+<script src="/script/product/detail.js"></script>
 {% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="row">
-        <h4 class="col-md-12">
+        <h4 class="col-md-12 text-muted">
             Product Detail
         </h4>
     </div>
     <div class="row">
         <div class="col-md-12">
-            product: {{ page.product.name }}
+            <div class="product-title">{{ page.product.name }}</div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-5">
+            <img class="product-image" src="/file/{{ page.product.image.filename}}" />
+        </div>
+        <div class="col-md-3">
+            <div style="font-size:1.5em;">Product Description</div>
+            <div class="product-description">
+                {{ page.product.description }}
+            </div>
+            <div class="product-price">
+                Price ${{ page.product.price }}
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;margin-bottom:30px;">
+        <div class="col-md-12">
+            <button class="btn btn-success">Add to cart</button>
         </div>
     </div>
 </div>
