@@ -86,17 +86,29 @@ module.exports = function(app) {
         }
     };
     
+    
     // block.page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('basket/index', { page:page });
     };
     
+    block.page.showUserBasket = function(req, res) {
+        
+        
+        var page = app.getPage(req);
+        res.render('basket/detail', { page:page });
+        
+    };
+    
+    
+    
     // data route
     app.server.post('/data/baskets/add/:productid', block.data.addToBasket);
     
     // page route
     app.server.get('/baskets', block.page.getIndex);
+    app.server.get('/baskets/show', block.page.showUserBasket);
     
     return block;
 };
