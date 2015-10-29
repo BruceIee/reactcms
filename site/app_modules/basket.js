@@ -86,108 +86,17 @@ module.exports = function(app) {
         }
     };
     
-    /*
-    block.data.addItem = function(req, res) {
-        var callback = arguments[3] || null; 
-        var item = tool.getReqParameter(req);
-        item.create_date = new Date();
-        block.data.add(req, res, item, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
-        });
-    };
-    
-    block.data.getItemDetail = function(req, res) {
-        var callback = arguments[3] || null; 
-        var parameter = tool.getReqParameter(req);
-        var id = parameter.id;
-        block.data.getById(req, res, id, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
-        });
-    };
-    
-    block.data.getItems = function(req, res) {
-        var callback = arguments[3] || null;
-        var condition = {};
-        var filter = {};
-        block.data.get(req, res, condition, filter, function(error, docs, info) {
-            app.cb(error, docs, info, req, res, callback);
-        });
-    };
-    */
-    
     // block.page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
         res.render('basket/index', { page:page });
     };
     
-    /*
-    block.page.getItemList = function(req, res) {
-        var condition = {};
-        var filter = {};
-        block.data.get(req, res, condition, filter, function(error, docs, info) {
-            var page = app.getPage(req);
-            page.error = error;
-            page.docs = docs;
-            page.info = info;
-            res.render('item/list', { page:page });
-        });
-    };
-    
-    block.page.addItem = function(req, res) {
-        var page = app.getPage(req);
-        res.render('item/add', { page:page });
-    };
-    
-    block.page.addItemPost = function(req, res) {
-        block.data.addItem(req, res, null, function(error, docs, info) {
-            var page = app.getPage(req);
-            res.redirect('/items/list');
-        });
-    };
-    
-    block.page.getItemDetail = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        block.data.getItemDetail(req, res, null, function(error, docs, info) {
-            var item = docs && docs[0] || null;
-            var page = app.getPage(req);
-            page.item = item;
-            res.render('item/detail', { page:page });
-        });
-    };
-    
-    block.page.getItemDetailReact = function(req, res) {
-        var parameter = tool.getReqParameter(req);
-        var page = app.getPage(req);
-        page.itemId = parameter.id;
-        res.render('item/detail_react', { page:page });
-    };
-    */
-    
     // data route
-    
-    // /data/baskets/add/562d924858356dce131b9f6f
-    app.server.get('/data/baskets/add/:productid', block.data.addToBasket);
-    
-    /*
-    app.server.get('/data/products', block.data.getProducts);
-    app.server.post('/data/items/add', block.data.addItem);
-    app.server.get('/data/items/:id', block.data.getItemDetail);
-    app.server.get('/data/items/:id/detail', block.data.getItemDetail);
-    */
+    app.server.post('/data/baskets/add/:productid', block.data.addToBasket);
     
     // page route
     app.server.get('/baskets', block.page.getIndex);
-    
-    /*
-    app.server.all('/items', block.page.checkLogin);
-    app.server.all('/items/*', block.page.checkLogin);
-    app.server.get('/items/home', block.page.getIndex);
-    app.server.get('/items/add', block.page.addItem);
-    app.server.post('/items/add', block.page.addItemPost);
-    app.server.get('/items/list', block.page.getItemList);
-    app.server.get('/items/:id/detail', block.page.getItemDetail);
-    */
     
     return block;
 };

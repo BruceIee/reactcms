@@ -9,4 +9,10 @@ function setup() {
 
 function addToShoppingCart() {
     console.log('add to shopping cart');
+    var productId = app.product._id;
+    var addBasketUrl = '/data/baskets/add/' + productId;
+    $.post(addBasketUrl, function(data) {
+        console.log('add basket result:', data);
+        
+    });
 }
