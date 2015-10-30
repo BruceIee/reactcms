@@ -128,6 +128,7 @@ module.exports = function(app) {
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
             var page = app.getPage(req);
             page.basket = basket;
+            console.log('>>>', basket);
             res.render('basket/detail', { page:page });
         });
         
