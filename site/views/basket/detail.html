@@ -17,17 +17,34 @@
             Basket Detail
         </h2>
     </div>
-    <div class="row" style="margin-top:20px;margin-bottom:30px;">
-        <div class="col-md-12">
+    <div class="row" style="margin-top:20px;margin-bottom:20px;">
+        <div class="col-md-9">
+            <!--
             <div>
                 <h4>User</h4>
                 {{ page.basket.user_id }}
             </div>
+            -->
             <div style="margin-top:20px;">
                 <h4>Shopping cart items</h4>
-                {% for item in page.basket.items %}
-                <div>{{ item.id }} ({{ item.quantity }})</div>
-                {% endfor %}
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in page.basket.items %}
+                        <tr>
+                            <td>{{ item.title }}</td>
+                            <td>${{ item.price }}</td>
+                            <td>{{ item.quantity }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
