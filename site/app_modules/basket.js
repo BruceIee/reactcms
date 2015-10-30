@@ -49,7 +49,11 @@ module.exports = function(app) {
     
     // block.data
     block.data.getUserBasket = function(req, res, userId) {
-        var callback = arguments[3] || null; 
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        if (!userId) {
+            userId = parameter.userId;
+        }
         var condition = { user_id:userId };
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
@@ -61,18 +65,27 @@ module.exports = function(app) {
     };
     
     block.data.addToBasket = function(req, res) {
-        var callback = arguments[3] || null; 
+        var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         var productId = parameter.productid;
         var loginUser = req.session && req.session.user;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
             if (basket) {
-                basket.items.push(productId);
+                var itemCol = {};
+                for (var i = 0; i < basket.items.length; i++) {
+                    var basketItem =  basket.items[i];
+                    itemCol[basketItem.id] = basketItem;
+                }
+                if (itemCol[productId]) {
+                    itemCol[productId].quantity = itemCol[productId].quantity + 1;
+                } else {
+                    basket.items.push({ id:productId, quantity:1 });
+                }
                 block.data.edit(req, res, basket, function(error, docs, info) {
                     app.cb(error, basket, {}, req, res, callback);
                 });
             } else {
-                basket = { user_id:loginUser._id, items:[productId] };
+                basket = { user_id:loginUser._id, items:[{ id:productId, quantity:1 }] };
                 block.data.add(req, res, basket, function(error, docs, info) {
                     app.cb(error, basket, {}, req, res, callback);
                 });
@@ -98,6 +111,8 @@ module.exports = function(app) {
     // data route
     app.server.all('/data/baskets/add/:productid', block.data.checkLogin);
     app.server.post('/data/baskets/add/:productid', block.data.addToBasket);
+    app.server.all('/data/baskets/show', block.data.checkLogin);
+    app.server.get('/data/baskets/show/:userId', block.data.getUserBasket);
     
     // page route
     app.server.get('/baskets', block.page.getIndex);
