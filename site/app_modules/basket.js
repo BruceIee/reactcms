@@ -68,24 +68,47 @@ module.exports = function(app) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
         var productId = parameter.productid;
+        var productData = app.module['product'].data;
+        productData.getById(req, res, productId, function(error, docs, info) {
+            var product = docs && docs[0];
+            if (error || !product) {
+                error = error || new Error('product is not found');
+                app.cb(error, null, { message:'error in getting product' }, req, res, callback);
+            } else {
+                block.data.addProductToBasket(req, res, product, callback);
+            }
+        });
+    };
+    
+    block.data.addProductToBasket = function(req, res, product, callback) {
         var loginUser = req.session && req.session.user;
+        var productId = product._id;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
+            var newItem = {
+                id: productId,
+                title: product.title,
+                price: product.price,
+                image: product.iamge,
+                quantity: 1
+            };
             if (basket) {
+                // put basket items into hash keyed by productId
                 var itemCol = {};
                 for (var i = 0; i < basket.items.length; i++) {
                     var basketItem =  basket.items[i];
                     itemCol[basketItem.id] = basketItem;
                 }
+                // add product to basket by productId
                 if (itemCol[productId]) {
                     itemCol[productId].quantity = itemCol[productId].quantity + 1;
                 } else {
-                    basket.items.push({ id:productId, quantity:1 });
+                    basket.items.push(newItem);
                 }
                 block.data.edit(req, res, basket, function(error, docs, info) {
                     app.cb(error, basket, {}, req, res, callback);
                 });
             } else {
-                basket = { user_id:loginUser._id, items:[{ id:productId, quantity:1 }] };
+                basket = { user_id:loginUser._id, items:[newItem] };
                 block.data.add(req, res, basket, function(error, docs, info) {
                     app.cb(error, basket, {}, req, res, callback);
                 });
