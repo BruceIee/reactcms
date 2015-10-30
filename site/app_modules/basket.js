@@ -101,9 +101,12 @@ module.exports = function(app) {
     };
     
     block.page.showUserBasket = function(req, res) {
-        
-        var page = app.getPage(req);
-        res.render('basket/detail', { page:page });
+        var loginUser = req.session && req.session.user;
+        block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
+            var page = app.getPage(req);
+            page.basket = basket;
+            res.render('basket/detail', { page:page });
+        });
         
     };
     

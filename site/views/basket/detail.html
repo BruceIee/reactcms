@@ -19,7 +19,16 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h4></h4>
+            <div>
+                <h4>user</h4>
+                {{ page.basket.user_id }}
+            </div>
+            <div>
+                <h4>shopping cart items</h4>
+                {% for item in page.basket.items %}
+                <div>{{ item.id }} ({{ item.quantity }})</div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
