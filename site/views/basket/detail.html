@@ -17,18 +17,25 @@
             Basket Detail
         </h2>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top:20px;margin-bottom:30px;">
         <div class="col-md-12">
             <div>
-                <h4>user</h4>
+                <h4>User</h4>
                 {{ page.basket.user_id }}
             </div>
-            <div>
-                <h4>shopping cart items</h4>
+            <div style="margin-top:20px;">
+                <h4>Shopping cart items</h4>
                 {% for item in page.basket.items %}
                 <div>{{ item.id }} ({{ item.quantity }})</div>
                 {% endfor %}
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form method="POST" action="/baskets/checkout">
+                <button class="btn btn-success">Checkout</button>
+            </form>
         </div>
     </div>
 </div>
