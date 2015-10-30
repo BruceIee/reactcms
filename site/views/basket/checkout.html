@@ -1,0 +1,49 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/basket/checkout.css">
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/basket/checkout.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h2 class="col-md-12">
+            Checkout
+        </h2>
+    </div>
+    <div class="row" style="margin-top:20px;margin-bottom:20px;">
+        <div class="col-md-12">
+            <div>
+                <h4>User</h4>
+                {{ page.basket.user_id }}
+            </div>
+            <div style="margin-top:20px;">
+                <h4>Shopping cart items</h4>
+                {% for item in page.basket.items %}
+                <div>{{ item.id }} ({{ item.quantity }})</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:0px;margin-bottom:20px;">
+        <div class="col-md-12">
+            <div>
+                <h4>Payment Info</h4>
+            </div>
+        </div>
+    </div>      
+    <div class="row">
+        <div class="col-md-12">
+            <form method="POST" action="/baskets/purchase">
+                <button class="btn btn-success">Purchse</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

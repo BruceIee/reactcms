@@ -110,6 +110,16 @@ module.exports = function(app) {
         
     };
     
+    block.page.checkoutUserBasket = function(req, res) {
+        var loginUser = req.session && req.session.user;
+        block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
+            var page = app.getPage(req);
+            page.basket = basket;
+            res.render('basket/checkout', { page:page });
+        });
+        
+    };
+    
     
     // data route
     app.server.all('/data/baskets/add/:productid', block.data.checkLogin);
@@ -121,6 +131,7 @@ module.exports = function(app) {
     app.server.get('/baskets', block.page.getIndex);
     app.server.all('/baskets/*', block.page.checkLogin);
     app.server.get('/baskets/show', block.page.showUserBasket);
+    app.server.post('/baskets/checkout', block.page.checkoutUserBasket);
     
     return block;
 };
