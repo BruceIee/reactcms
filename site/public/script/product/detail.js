@@ -13,7 +13,9 @@ function addToShoppingCart() {
     var addBasketUrl = '/data/baskets/add/' + productId;
     $.post(addBasketUrl, function(data) {
         console.log('add basket result:', data);
-        var basketDetailUrl = '/baskets/show';
-        window.location = basketDetailUrl;
+        if (data.docs) {
+            var basketDetailUrl = '/baskets/show';
+            window.location = basketDetailUrl;
+        }
     });
 }

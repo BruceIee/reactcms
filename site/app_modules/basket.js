@@ -82,7 +82,7 @@ module.exports = function(app) {
             });
         } else {
             var message = 'User is not logged in';
-            app.cb(new Error(message), [], { message:message }, req, res, callback);
+            app.cb(null, null, { message:message }, req, res, callback);
         }
     };
     
