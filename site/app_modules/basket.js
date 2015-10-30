@@ -60,7 +60,6 @@ module.exports = function(app) {
         });
     };
     
-    
     block.data.addToBasket = function(req, res) {
         var callback = arguments[3] || null; 
         var parameter = tool.getReqParameter(req);
@@ -108,6 +107,7 @@ module.exports = function(app) {
     
     // page route
     app.server.get('/baskets', block.page.getIndex);
+    app.server.all('/baskets/*', block.page.checkLogin);
     app.server.get('/baskets/show', block.page.showUserBasket);
     
     return block;
