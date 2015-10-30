@@ -65,24 +65,19 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         var productId = parameter.productid;
         var loginUser = req.session && req.session.user;
-        if (loginUser) {
-            block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
-                if (basket) {
-                    basket.items.push(productId);
-                    block.data.edit(req, res, basket, function(error, docs, info) {
-                        app.cb(error, basket, {}, req, res, callback);
-                    });
-                } else {
-                    basket = { user_id:loginUser._id, items:[productId] };
-                    block.data.add(req, res, basket, function(error, docs, info) {
-                        app.cb(error, basket, {}, req, res, callback);
-                    });
-                }
-            });
-        } else {
-            var message = 'User is not logged in';
-            app.cb(null, null, { message:message }, req, res, callback);
-        }
+        block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
+            if (basket) {
+                basket.items.push(productId);
+                block.data.edit(req, res, basket, function(error, docs, info) {
+                    app.cb(error, basket, {}, req, res, callback);
+                });
+            } else {
+                basket = { user_id:loginUser._id, items:[productId] };
+                block.data.add(req, res, basket, function(error, docs, info) {
+                    app.cb(error, basket, {}, req, res, callback);
+                });
+            }
+        });
     };
     
     
@@ -94,15 +89,14 @@ module.exports = function(app) {
     
     block.page.showUserBasket = function(req, res) {
         
-        
         var page = app.getPage(req);
         res.render('basket/detail', { page:page });
         
     };
     
     
-    
     // data route
+    app.server.all('/data/baskets/add/:productid', block.data.checkLogin);
     app.server.post('/data/baskets/add/:productid', block.data.addToBasket);
     
     // page route
