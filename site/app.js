@@ -16,6 +16,7 @@ var emailEngine = require('emailEngine');
 var app = {};
 app.db = null;
 app.engine = require('webEngine')(app);
+
 app.cb = function(error, docs, info, req, res, callback) {
     error && console.log('Error:', error);
     if (callback) {
