@@ -14,21 +14,13 @@ var tool = require('leaptool');
 var emailEngine = require('emailEngine');
 
 var app = {};
-
 app.db = null;
 app.engine = require('webEngine')(app);
 app.cb = function(error, docs, info, req, res, callback) {
+    error && console.log('Error:', error);
     if (callback) {
-        if (error) {
-            console.log('Error:', error);
-            callback(error, docs, info, req, res);
-        } else {
-            callback(error, docs, info, req, res);
-        }
+        callback(error, docs, info, req, res);
     } else {
-        if (error) {
-            app.error(error);
-        }
         var result = {
             error: error,
             docs: docs,
@@ -82,27 +74,12 @@ function setup(cbSetup) {
     app.server.use(bodyParser.urlencoded());
     app.server.use(cookieParser());
     app.server.use(session({
-        secret:'mykeySproutUp937434',
+        secret:'leapKey937434',
         saveUninitialized: true,
         resave: true,
         cookie: { maxAge: 120 * 60 * 1000 }  //session expires in 120 minutes   
     }));
     app.server.use(express.static(path.join(__dirname, app.setting.public_name)));
-    
-    // Multer is a node.js middleware for handling multipart/form-data
-    /*
-    app.server.use(multer({ dest: './site/public/file/',
-        rename: function (fieldname, filename) {
-            return filename + Date.now();
-        },
-        onFileUploadStart: function (file) {
-            console.log(file.originalname + ' is starting to upload...')
-        },
-        onFileUploadComplete: function (file) {
-            console.log(file.fieldname + ' is uploaded to ' + file.path)
-        }
-    }));
-    */
     
     app.mailer = null;
     if (app.setting.email) {
