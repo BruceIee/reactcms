@@ -36,22 +36,40 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {% for item in page.basket.items %}
+                        {% for item in page.basket.items %}
                         <tr>
                             <td>{{ item.title }}</td>
                             <td>${{ item.price }}</td>
                             <td>{{ item.quantity }}</td>
                         </tr>
-                    {% endfor %}
+                        {% endfor %}
+                        <tr>
+                            <td colspan=2 style="font-weight:bold;">Total</td>
+                            <td class="basket-total">${{ page.basket.total }}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
     <div class="row" style="margin-top:0px;margin-bottom:20px;">
-        <div class="col-md-12">
+        <div class="col-md-9">
             <div>
                 <h4>Payment Info</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>First Name</th>
+                            <th><input class="form-control" type="input" /></th>
+                            <th>Last Name</th>
+                            <th><input class="form-control" type="input" /></th>
+                        </tr>
+                        <tr>
+                            <th>Credit Card Number</th>
+                            <th><input class="form-control" type="input" /></th>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>      
