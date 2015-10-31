@@ -1,1 +1,3 @@
-
+table.borderless tbody td, table.borderless tbody th {
+    border: none;
+}
