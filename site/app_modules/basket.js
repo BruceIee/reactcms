@@ -60,6 +60,10 @@ module.exports = function(app) {
             console.log('getUserBasket - condition:', condition);
             console.log('getUserBasket - result:', error, docs, info);
             var basket = docs && docs[0];
+            basket.total = 0;
+            for (var i = 0; i < basket.items.length; i++) {
+                basket.total += basket.items[i].price * basket.items[i].quantity;
+            }
             app.cb(error, basket, {}, req, res, callback);
         });
     };
@@ -128,7 +132,6 @@ module.exports = function(app) {
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
             var page = app.getPage(req);
             page.basket = basket;
-            console.log('>>>', basket);
             res.render('basket/detail', { page:page });
         });
         

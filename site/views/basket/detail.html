@@ -31,18 +31,22 @@
                     <thead>
                         <tr>
                             <th>Product</th>
-                            <th>Price</th>
                             <th>Quantity</th>
+                            <th>Unit Price</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {% for item in page.basket.items %}
+                        {% for item in page.basket.items %}
                         <tr>
                             <td>{{ item.title }}</td>
-                            <td>${{ item.price }}</td>
-                            <td>{{ item.quantity }}</td>
+                            <td class="basket-item-quantity">{{ item.quantity }}</td>
+                            <td class="basket-item-price">${{ item.price }}</td>
                         </tr>
-                    {% endfor %}
+                        {% endfor %}
+                        <tr>
+                            <td colspan=2 style="font-weight:bold;">Total</td>
+                            <td class="basket-total">${{ page.basket.total }}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

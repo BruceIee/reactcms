@@ -4,4 +4,8 @@ $().ready(function() {
 
 function setup() {
     console.log('in basket detail');
+    updateTotal();
+}
+
+function updateTotal() {
 }
