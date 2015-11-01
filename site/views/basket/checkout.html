@@ -55,6 +55,7 @@
     <div class="row" style="margin-top:0px;margin-bottom:20px;">
         <div class="col-md-5">
             <form method="POST" action="/baskets/purchase">
+                <input type="hidden" name="basket" value="{{ page.basket._id + '' }}" />
                 <h4>Payment Info</h4>
                 <table class="table borderless" style="margin-top:20px;">
                     <tbody>
