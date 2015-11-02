@@ -149,8 +149,31 @@ module.exports = function(app) {
     };
     
     block.page.purchaseBasket = function(req, res) {
+        var parameter = tool.getReqParameter(req);
         var loginUser = req.session && req.session.user;
+        
+        console.log('>>> parameter:', parameter);
+        
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
+            
+            var stripe = require("stripe")("sk_test_BQokikJOvBiI2HlWgH4olfQ2");
+
+            // (Assuming you're using express - expressjs.com)
+            // Get the credit card details submitted by the form
+            var stripeToken = parameter.stripeToken;
+            
+            var charge = stripe.charges.create({
+                amount: 1000, // amount in cents, again
+                currency: "usd",
+                source: stripeToken,
+                description: "Example charge"
+            }, function(err, charge) {
+                console.log('result:', err, charge);
+                if (err && err.type === 'StripeCardError') {
+                    // The card has been declined
+                }
+            });
+            
             var page = app.getPage(req);
             page.basket = basket;
             res.render('basket/receipt', { page:page });
