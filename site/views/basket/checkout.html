@@ -9,6 +9,9 @@
 {% parent %}
 <script type="text/javascript" src="/library/stripe/stripe.v2.js"></script>
 <script src="/script/basket/checkout.js"></script>
+<script>
+Stripe.setPublishableKey('pk_test_aWvjzUuXKPT0ya1gHdJuYKNI');
+</script>
 {% endblock %}
 
 {% block content %}
@@ -55,35 +58,33 @@
     </div>
     <div class="row" style="margin-top:0px;margin-bottom:20px;">
         <div class="col-md-5">
-            <form method="POST" action="/baskets/purchase">
+            <form method="POST" id="payment-form" action="/baskets/purchase">
                 <input type="hidden" name="basket" value="{{ page.basket._id + '' }}" />
                 <h4>Payment Info</h4>
                 <div class="payment-errors"></div>
-                
                 <table class="table borderless" style="margin-top:20px;">
                     <tbody>
                         <tr>
                             <td>Card Number</td>
-                            <td colspan=3><input class="form-control" type="text" data-stripe="number" /></td>
+                            <td colspan=3><input class="form-control" type="text" data-stripe="number" value="4111111111111111" /></td>
                         </tr>
                         <tr>
                             <td>Name on Card</td>
-                            <td colspan=3><input class="form-control" type="text" /></td>
+                            <td colspan=3><input class="form-control" type="text" value="Test User" /></td>
                         </tr>
                         <tr>
                             <td>Expiration (MM/YYYY)</td>
-                            <td><input class="form-control" type="text" data-stripe="exp-month" /></td>
+                            <td><input class="form-control" type="text" data-stripe="exp-month" value="11" /></td>
                             <td style="width:10px;padding-top:10px;font-size:1.5em;">/</td>
-                            <td><input class="form-control" type="text" data-stripe="exp-year" /></td>
+                            <td><input class="form-control" type="text" data-stripe="exp-year" value="2018" /></td>
                         </tr>
                         <tr>
                             <td>CVC</td>
-                            <td colspan=3><input class="form-control" type="input" data-stripe="cvc" /></td>
+                            <td colspan=3><input class="form-control" type="input" data-stripe="cvc" value="123" /></td>
                         </tr>
                     </tbody>
                 </table>
                 <button class="btn btn-success">Purchase</button>
-                
             </form>
         </div>
     </div>
