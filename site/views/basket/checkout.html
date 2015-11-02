@@ -57,27 +57,37 @@
             <form method="POST" action="/baskets/purchase">
                 <input type="hidden" name="basket" value="{{ page.basket._id + '' }}" />
                 <h4>Payment Info</h4>
+                <div class="payment-errors"></div>
+                
                 <table class="table borderless" style="margin-top:20px;">
                     <tbody>
                         <tr>
                             <td>Card Number</td>
-                            <td><input class="form-control" type="input" /></td>
+                            <td colspan=3><input class="form-control" type="text" data-stripe="number" /></td>
                         </tr>
                         <tr>
                             <td>Name on Card</td>
-                            <td><input class="form-control" type="input" /></td>
+                            <td colspan=3><input class="form-control" type="text" /></td>
                         </tr>
                         <tr>
-                            <td>Expiration Date</td>
-                            <td><input class="form-control" type="input" /></td>
+                            <td>Expiration (MM/YYYY)</td>
+                            <td><input class="form-control" type="text" data-stripe="exp-month" /></td>
+                            <td style="width:10px;padding-top:10px;font-size:1.5em;">/</td>
+                            <td><input class="form-control" type="text" data-stripe="exp-year" /></td>
+                        </tr>
+                        <tr>
+                            <td>CVC</td>
+                            <td colspan=3><input class="form-control" type="input" data-stripe="cvc" /></td>
                         </tr>
                     </tbody>
                 </table>
                 <button class="btn btn-success">Purchase</button>
+                
             </form>
         </div>
     </div>
     
+    <!--
     <div class="row" style="margin-top:0px;margin-bottom:30px;">
         <div class="col-md-5">
             <h4>Stripe Payment Test</h4>
@@ -94,7 +104,9 @@
             </form>
         </div>
     </div>
+    -->
     
+    <!--
     <div class="row" style="margin-top:0px;margin-bottom:30px;">
         <div class="col-md-5">
             <h4>Stripe Payment Test 2</h4>
@@ -128,6 +140,7 @@
             </form>
         </div>
     </div>
+    -->
     
 </div>
 {% endblock %}
