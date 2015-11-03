@@ -70,6 +70,26 @@ module.exports = function(app) {
         });
     };
     
+    block.data.clearBasket = function(req, res, userId) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        userId = userId || parameter.userId;
+        var condition = { user_id:userId };
+        var filter = {};
+        block.data.get(req, res, condition, filter, function(error, docs, info) {
+            var basket = docs && docs[0];
+            if (basket) {
+                basket.total = 0;
+                basket.items = [];
+                block.data.edit(req, res, basket, function(error, docs, info) {
+                    app.cb(error, basket, {}, req, res, callback);
+                });
+            } else {
+                app.cb(error, basket, {}, req, res, callback);
+            }
+        });
+    };
+    
     block.data.addToBasket = function(req, res) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
@@ -174,16 +194,15 @@ module.exports = function(app) {
     };
     
     block.page.processPostPayment = function(req, res, basket, charge) {
-        
-        // todo: clear basket upon a successful charge
-        
-        // todo: save payment info to charge table
-        
-        var page = app.getPage(req);
-        page.basket = basket;
-        page.charge = charge;
-        res.render('basket/receipt', { page:page });
-        
+        var loginUser = req.session && req.session.user;
+        var userId = loginUser._id
+        block.data.clearBasket(req, res, userId, function(error, docs, info) {
+            // todo: save payment info to charge table
+            var page = app.getPage(req);
+            page.basket = basket;
+            page.charge = charge;
+            res.render('basket/receipt', { page:page });
+        });
     };
     
     // data route
