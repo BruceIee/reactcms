@@ -184,6 +184,10 @@ module.exports = function(app) {
     
     block.page.processPostPayment = function(req, res, basket, charge) {
         
+        // todo: clear basket upon a successful charge
+        
+        // todo: save payment info to charge table
+        
         var page = app.getPage(req);
         page.basket = basket;
         page.charge = charge;
