@@ -157,8 +157,9 @@ module.exports = function(app) {
             
             var stripe = require('stripe')(app.setting.payment.stripe_secret_key);
             var stripeToken = parameter.stripeToken;
+            var amount = parameter.amount;
             var charge = stripe.charges.create({
-                amount: 1000, // amount in cents
+                amount: amount, // amount in cents
                 currency: 'usd',
                 source: stripeToken,
                 description: "reactcms charge"

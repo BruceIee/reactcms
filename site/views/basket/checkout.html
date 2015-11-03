@@ -60,6 +60,7 @@ Stripe.setPublishableKey('{{ page.stripe_publishable_key }}');
         <div class="col-md-5">
             <form method="POST" id="payment-form" action="/baskets/purchase">
                 <input type="hidden" name="basket" value="{{ page.basket._id + '' }}" />
+                <input type="hidden" name="amount" value="{{ page.basket.total * 100 }}" />
                 <h4>Payment Info</h4>
                 <div class="payment-errors"></div>
                 <table class="table borderless" style="margin-top:20px;">
