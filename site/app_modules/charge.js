@@ -1,10 +1,9 @@
 var util = require('util');
 var tool = require('leaptool');
-var multer  = require('multer');
 
 module.exports = function(app) {
     
-    var moduleName = 'basket';
+    var moduleName = 'payment';
     var block = {
         app: app,
         group: 'app',
@@ -17,10 +16,23 @@ module.exports = function(app) {
         user_id: {
             type: 'string'
         },
-        items: {
-            type: 'array',
+        shopping_cart: {
+            type: 'object',
             subtype: {
-                type: 'object'
+                type: 'json'
+            }
+        },
+        payment_type: {
+            type: 'string',
+            values: ['stripe', 'paypal', 'square']
+        },
+        payment_amount: {
+            type: 'string'
+        },
+        payment_result: {
+            type: 'object',
+            subtype: {
+                type: 'json'
             }
         },
         status: {
@@ -43,11 +55,15 @@ module.exports = function(app) {
     
     block.listFields = [
         { name:'user_id', display:'User', flex:2, sort:'asc' },
+        { name:'payment_type', display:'Payment Type', flex:2 },
+        { name:'payment_amount', display:'Payment Amount', flex:2 },
         { name:'status', display:'Status', flex:2 },
         { name:'create_date', display:'Create Date', flex:2 }
     ];
     
     // block.data
+    
+    /*
     block.data.getUserBasket = function(req, res, userId) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
@@ -121,14 +137,15 @@ module.exports = function(app) {
             }
         });
     };
-    
+    */
     
     // block.page
     block.page.getIndex = function(req, res) {
         var page = app.getPage(req);
-        res.render('basket/index', { page:page });
+        res.render('charge/index', { page:page });
     };
     
+    /*
     block.page.showUserBasket = function(req, res) {
         var loginUser = req.session && req.session.user;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
@@ -190,19 +207,26 @@ module.exports = function(app) {
         res.render('basket/receipt', { page:page });
         
     };
+    */
     
     // data route
+    
+    /*
     app.server.all('/data/baskets/add/:productid', block.data.checkLogin);
     app.server.post('/data/baskets/add/:productid', block.data.addToBasket);
     app.server.all('/data/baskets/show', block.data.checkLogin);
     app.server.get('/data/baskets/show/:userId', block.data.getUserBasket);
+    */
     
     // page route
-    app.server.get('/baskets', block.page.getIndex);
+    app.server.get('/charges', block.page.getIndex);
+    
+    /*
     app.server.all('/baskets/*', block.page.checkLogin);
     app.server.get('/baskets/show', block.page.showUserBasket);
     app.server.post('/baskets/checkout', block.page.checkoutUserBasket);
     app.server.post('/baskets/purchase', block.page.purchaseBasket);
+    */
     
     return block;
 };
