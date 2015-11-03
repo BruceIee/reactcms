@@ -136,13 +136,14 @@ module.exports = function(app) {
             page.basket = basket;
             res.render('basket/detail', { page:page });
         });
-        
     };
     
     block.page.checkoutUserBasket = function(req, res) {
+        var parameter = tool.getReqParameter(req);
         var loginUser = req.session && req.session.user;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
             var page = app.getPage(req);
+            page.errorMessage = parameter.erroMessage || '';
             page.basket = basket;
             page.stripe_publishable_key = app.setting.payment.stripe_publishable_key;
             res.render('basket/checkout', { page:page });
@@ -152,19 +153,10 @@ module.exports = function(app) {
     block.page.purchaseBasket = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var loginUser = req.session && req.session.user;
-        console.log('purchase parameter:', parameter);
+        //console.log('purchase parameter:', parameter);
+        var chargeData = app.module['charge'].data;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
-            
-            var stripe = require('stripe')(app.setting.payment.stripe_secret_key);
-            var stripeToken = parameter.stripeToken;
-            var amount = parameter.amount;
-            var charge = stripe.charges.create({
-                amount: amount, // amount in cents
-                currency: 'usd',
-                source: stripeToken,
-                description: "reactcms charge"
-            }, function(err, charge) {
-                console.log('result:', error, charge);
+            chargeData.processPayment(req, res, null, function(error, charge) {
                 if (error) {
                     if (error.type === 'StripeCardError') {
                         console.log('The card has been declined', error);
@@ -178,7 +170,6 @@ module.exports = function(app) {
                     block.page.processPostPayment(req, res, basket, charge);
                 }
             });
-            
         });
     };
     
@@ -205,7 +196,7 @@ module.exports = function(app) {
     app.server.get('/baskets', block.page.getIndex);
     app.server.all('/baskets/*', block.page.checkLogin);
     app.server.get('/baskets/show', block.page.showUserBasket);
-    app.server.post('/baskets/checkout', block.page.checkoutUserBasket);
+    app.server.get('/baskets/checkout', block.page.checkoutUserBasket);
     app.server.post('/baskets/purchase', block.page.purchaseBasket);
     
     return block;

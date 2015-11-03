@@ -62,6 +62,23 @@ module.exports = function(app) {
     ];
     
     // block.data
+    block.data.processPayment = function(req, res) {
+        var callback = arguments[3] || null;
+        var parameter = tool.getReqParameter(req);
+        // use stripe for payment processing
+        var stripe = require('stripe')(app.setting.payment.stripe_secret_key);
+        var stripeToken = parameter.stripeToken;
+        var amount = parameter.amount;
+        var charge = stripe.charges.create({
+            amount: amount, // amount in cents
+            currency: 'usd',
+            source: stripeToken,
+            description: "reactcms charge"
+        }, function(error, charge) {
+            //console.log('result:', error, charge);
+            callback && callback(error, charge);
+        });
+    };
     
     /*
     block.data.getUserBasket = function(req, res, userId) {
