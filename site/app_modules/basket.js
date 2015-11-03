@@ -140,10 +140,6 @@ module.exports = function(app) {
     };
     
     block.page.checkoutUserBasket = function(req, res) {
-        
-        console.log('>>> app.setting', app.setting);
-        
-        
         var loginUser = req.session && req.session.user;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
             var page = app.getPage(req);
@@ -158,6 +154,7 @@ module.exports = function(app) {
         var loginUser = req.session && req.session.user;
         console.log('purchase parameter:', parameter);
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
+            
             var stripe = require('stripe')(app.setting.payment.stripe_secret_key);
             var stripeToken = parameter.stripeToken;
             var charge = stripe.charges.create({
@@ -167,15 +164,30 @@ module.exports = function(app) {
                 description: "reactcms charge"
             }, function(err, charge) {
                 console.log('result:', error, charge);
-                if (error && error.type === 'StripeCardError') {
-                    console.log('The card has been declined', error);
+                if (error) {
+                    if (error.type === 'StripeCardError') {
+                        console.log('The card has been declined', error);
+                    }
+                    // render checkout page with error message if error occurred in payment
+                    var page = app.getPage(req);
+                    page.basket = basket;
+                    page.error = error;
+                    res.render('basket/receipt', { page:page });
+                } else {
+                    block.page.processPostPayment(req, res, basket, charge);
                 }
-                var page = app.getPage(req);
-                page.basket = basket;
-                page.error = error;
-                res.render('basket/receipt', { page:page });
             });
+            
         });
+    };
+    
+    block.page.processPostPayment = function(req, res, basket, charge) {
+        
+        var page = app.getPage(req);
+        page.basket = basket;
+        page.charge = charge;
+        res.render('basket/receipt', { page:page });
+        
     };
     
     // data route

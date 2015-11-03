@@ -10,7 +10,7 @@
 <script type="text/javascript" src="/library/stripe/stripe.v2.js"></script>
 <script src="/script/basket/checkout.js"></script>
 <script>
-Stripe.setPublishableKey({{ page.stripe_publishable_key }});
+Stripe.setPublishableKey('{{ page.stripe_publishable_key }}');
 </script>
 {% endblock %}
 
