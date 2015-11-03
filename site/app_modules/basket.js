@@ -140,10 +140,15 @@ module.exports = function(app) {
     };
     
     block.page.checkoutUserBasket = function(req, res) {
+        
+        console.log('>>> app.setting', app.setting);
+        
+        
         var loginUser = req.session && req.session.user;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
             var page = app.getPage(req);
             page.basket = basket;
+            page.stripe_publishable_key = app.setting.payment.stripe_publishable_key;
             res.render('basket/checkout', { page:page });
         });
     };
@@ -151,32 +156,25 @@ module.exports = function(app) {
     block.page.purchaseBasket = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var loginUser = req.session && req.session.user;
-        
-        console.log('>>> parameter:', parameter);
-        
+        console.log('purchase parameter:', parameter);
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
-            
-            var stripe = require("stripe")("sk_test_BQokikJOvBiI2HlWgH4olfQ2");
-
-            // (Assuming you're using express - expressjs.com)
-            // Get the credit card details submitted by the form
+            var stripe = require('stripe')(app.setting.payment.stripe_secret_key);
             var stripeToken = parameter.stripeToken;
-            
             var charge = stripe.charges.create({
-                amount: 1000, // amount in cents, again
-                currency: "usd",
+                amount: 1000, // amount in cents
+                currency: 'usd',
                 source: stripeToken,
-                description: "Example charge"
+                description: "reactcms charge"
             }, function(err, charge) {
-                console.log('result:', err, charge);
-                if (err && err.type === 'StripeCardError') {
-                    // The card has been declined
+                console.log('result:', error, charge);
+                if (error && error.type === 'StripeCardError') {
+                    console.log('The card has been declined', error);
                 }
+                var page = app.getPage(req);
+                page.basket = basket;
+                page.error = error;
+                res.render('basket/receipt', { page:page });
             });
-            
-            var page = app.getPage(req);
-            page.basket = basket;
-            res.render('basket/receipt', { page:page });
         });
     };
     

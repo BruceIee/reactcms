@@ -4,15 +4,11 @@ $().ready(function() {
 
 function setup() {
     console.log('in basket checkout');
-    
     $('#payment-form').submit(function(event) {
         var $form = $(this);
-        
         // Disable the submit button to prevent repeated clicks
         $form.find('button').prop('disabled', true);
-        
         Stripe.card.createToken($form, stripeResponseHandler);
-        
         // Prevent the form from submitting with the default action
         return false;
     });
@@ -20,7 +16,6 @@ function setup() {
 
 function stripeResponseHandler(status, response) {
     var $form = $('#payment-form');
-    
     if (response.error) {
         // Show the errors on the form
         $form.find('.payment-errors').text(response.error.message);

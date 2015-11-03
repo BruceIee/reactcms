@@ -40,6 +40,13 @@ exports.setting = {
         footer: 'default_footer'
     },
     
+    payment: {
+        mode: 'test',
+        type: 'stripe',
+        stripe_secret_key: 'sk_test_xxxxxxxxxxxxxxxxx',
+        stripe_publishable_key: 'pk_test_yyyyyyyyyyyyyyyyy'
+    },
+    
     // invite code
     invite: {
         code: 'react_cms'
