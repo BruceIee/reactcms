@@ -68,8 +68,6 @@ module.exports = function(app) {
         var condition = { _id:parameter.id };
         var filter = {};
         block.data.get(req, res, condition, filter, function(error, docs, info) {
-            console.log('>>> charge parameter:', parameter);
-            console.log('>>> charge data:', error, docs, info);
             callback && callback(error, docs, info);
         });
     };
@@ -77,6 +75,7 @@ module.exports = function(app) {
     block.data.processPayment = function(req, res, basket) {
         var callback = arguments[3] || null;
         var parameter = tool.getReqParameter(req);
+        var loginUser = req.session && req.session.user;
         // use stripe for payment processing
         var stripe = require('stripe')(app.setting.payment.stripe_secret_key);
         var stripeToken = parameter.stripeToken;
@@ -87,11 +86,13 @@ module.exports = function(app) {
             source: stripeToken,
             description: "reactcms charge"
         }, function(error, charge) {
+            console.log('>>> processPayment:', error, charge);
             var payment = {
+                user_id: loginUser._id,
                 payment_result: charge,
                 shopping_cart: basket,
                 payment_type: 'stripe',
-                payment_amount: charge.amount * 0.01,
+                payment_amount: charge.amount,
                 status: 'active',
                 create_date: new Date()
             };
