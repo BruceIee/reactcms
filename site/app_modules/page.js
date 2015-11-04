@@ -278,7 +278,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         if (info.page) {
             page.title = info.page.title || app.setting['app_name'] || '';
-            page.mode = parameter.mode || 'view';
+            page.mode = (typeof parameter.edit === 'undefined') ? 'view': 'edit';
             page.pageData = info.page;
             page.compositionData = info.composition;
             var layoutFilename = 'composition/' + info.composition.filename;
