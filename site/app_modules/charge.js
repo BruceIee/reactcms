@@ -86,7 +86,6 @@ module.exports = function(app) {
             source: stripeToken,
             description: "reactcms charge"
         }, function(error, charge) {
-            console.log('>>> processPayment:', error, charge);
             var payment = {
                 user_id: loginUser._id,
                 payment_result: charge,
