@@ -173,10 +173,9 @@ module.exports = function(app) {
     block.page.purchaseBasket = function(req, res) {
         var parameter = tool.getReqParameter(req);
         var loginUser = req.session && req.session.user;
-        //console.log('purchase parameter:', parameter);
         var chargeData = app.module['charge'].data;
         block.data.getUserBasket(req, res, loginUser._id, function(error, basket, info) {
-            chargeData.processPayment(req, res, null, function(error, charge) {
+            chargeData.processPayment(req, res, basket, function(error, charge, info) {
                 if (error) {
                     if (error.type === 'StripeCardError') {
                         console.log('The card has been declined', error);
@@ -197,11 +196,11 @@ module.exports = function(app) {
         var loginUser = req.session && req.session.user;
         var userId = loginUser._id
         block.data.clearBasket(req, res, userId, function(error, docs, info) {
-            // todo: save payment info to charge table
-            var page = app.getPage(req);
-            page.basket = basket;
-            page.charge = charge;
-            res.render('basket/receipt', { page:page });
+            var charge = docs && docs[0] || null;
+            if (charge) {
+                var chargeReceiptUrl = '/receipt/' + charge._id;
+                res.redirect(chargeReceiptUrl);
+            }
         });
     };
     
