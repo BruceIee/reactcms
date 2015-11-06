@@ -113,6 +113,7 @@ module.exports = function(app) {
         var parameter = tool.getReqParameter(req);
         block.data.getChargeData(req, res, null, function(error, docs, info) {
             var charge = docs && docs[0] || null;
+            console.log('charge:', charge);
             var page = app.getPage(req);
             page.charge = charge;
             res.render('charge/receipt', { page:page });
@@ -120,12 +121,9 @@ module.exports = function(app) {
     };
     
     // data route
-    
     /*
     app.server.all('/data/baskets/add/:productid', block.data.checkLogin);
     app.server.post('/data/baskets/add/:productid', block.data.addToBasket);
-    app.server.all('/data/baskets/show', block.data.checkLogin);
-    app.server.get('/data/baskets/show/:userId', block.data.getUserBasket);
     */
     
     // page route
