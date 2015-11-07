@@ -8,15 +8,17 @@
     "test": "find ./test -name '*_test.js' | xargs mocha -R spec"
   },
   "devDependencies": {
+    "babel": "^6.0.15",
+    "babel-cli": "^6.1.2",
     "browserify": "*",
     "gulp": "^3.8.11",
-    "gulp-util": "^3.0.4",
     "gulp-react": "*",
+    "gulp-util": "^3.0.4",
     "mocha": "*",
     "mochify": "*",
-    "watchify": "*",
     "react-tools": "*",
-    "reactify": "^0.13.0"
+    "reactify": "^0.13.0",
+    "watchify": "*"
   },
   "browserify": {
     "transform": [

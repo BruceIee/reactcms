@@ -11,5 +11,6 @@ site/public/file/*
 site/data/site_default
 site/data/*.txt
 site/data/file
+site/data/ext*
 site/public/script/**/dist/*.js
 site/node_modules/**/dist/
