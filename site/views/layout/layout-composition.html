@@ -22,6 +22,7 @@
 <script src="/library/react-d3-components/react-d3-components.min.js"></script>
 <script type="text/javascript" src="/library/ace-editor/src-min-noconflict/ace.js" charset="utf-8"></script>
 <script type="text/javascript" src="/library/quill/quill.js" charset="utf-8"></script>
+<script type="text/javascript" src="/library/typeahead/typeahead.bundle.js" charset="utf-8"></script>
 
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
 <script type="text/jsx" src="/script/page/support.js"></script>
@@ -46,6 +47,7 @@
 <script type="text/jsx" src="/component/embed/iframe.js"></script>
 <script type="text/jsx" src="/component/editor/ace_editor.js"></script>
 <script type="text/jsx" src="/component/editor/quill_editor.js"></script>
+<script type="text/jsx" src="/component/form/typeahead.js"></script>
 <script type="text/jsx" src="/component/cabinet/cabinet.js"></script>
 <script type="text/jsx">
 var app = app || {};
@@ -88,6 +90,7 @@ app.pageComposition = {{ page.compositionData|json|safe}};
 <link rel="stylesheet" href="/component/embed/iframe.css"/>
 <link rel="stylesheet" href="/component/editor/ace_editor.css"/>
 <link rel="stylesheet" href="/component/editor/quill_editor.css"/>
+<link rel="stylesheet" href="/component/form/typeahead.css"/>
 <link rel="stylesheet" href="/component/cabinet/cabinet.css"/>
 {% endblock %}
 </head>

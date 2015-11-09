@@ -32,7 +32,8 @@ var Cabinet = React.createClass({
         Plate: { widget:Plate },
         EmbedIframe: { widget:EmbedIframe },
         AceEditor: { widget:AceEditor },
-        QuillEditor: { widget:QuillEditor }
+        QuillEditor: { widget:QuillEditor },
+        Typeahead: { widget:Typeahead }
     },
     
     // attribute definitions
