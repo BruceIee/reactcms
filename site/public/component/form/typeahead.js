@@ -46,7 +46,7 @@ var Typeahead = React.createClass({
             };
         }
         
-        //console.log('>>>', $(targetElement));
+        console.log('>>>', $(targetElement));
         //console.log('>>>', substringMatcher);
         
         $(targetElement).typeahead({
