@@ -28,42 +28,35 @@ var Typeahead = React.createClass({
             'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
         ];
         
-        console.log('>>>', $(targetElement));
-        console.log('>>>', this.substringMatcher);
+        function substringMatcher(strs) {
+            return function findMatches(q, cb) {
+                var matches, substringRegex;
+                // an array that will be populated with substring matches
+                matches = [];
+                // regex used to determine if a string contains the substring `q`
+                substrRegex = new RegExp(q, 'i');
+                // iterate through the pool of strings and for any string that
+                // contains the substring `q`, add it to the `matches` array
+                $.each(strs, function(i, str) {
+                    if (substrRegex.test(str)) {
+                        matches.push(str);
+                    }
+                });
+                cb(matches);
+            };
+        }
+        
+        //console.log('>>>', $(targetElement));
+        //console.log('>>>', substringMatcher);
         
         $(targetElement).typeahead({
             hint: true,
             highlight: true,
             minLength: 1
-        },
-        {
+        }, {
             name: 'states',
-            source: this.substringMatcher(states)
+            source: substringMatcher(states)
         });
-        
-    },
-    
-    substringMatcher: function(strs) {
-        return function findMatches(q, cb) {
-            var matches, substringRegex;
-        
-            // an array that will be populated with substring matches
-            matches = [];
-        
-            // regex used to determine if a string contains the substring `q`
-            substrRegex = new RegExp(q, 'i');
-        
-            // iterate through the pool of strings and for any string that
-            // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function(i, str) {
-                if (substrRegex.test(str)) {
-                    console.log('>>> matched:', str);
-                    matches.push(str);
-                }
-            });
-        
-            cb(matches);
-        };
     },
         
     render: function() {
@@ -71,7 +64,7 @@ var Typeahead = React.createClass({
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="typeahead-content">
                     <div className="typeahead-input">
-                        <input className="typeahead" ref="typeahead" type="text" placeholder="" />
+                        <input className="form-control typeahead" ref="typeahead" type="text" placeholder="" />
                     </div>
                     <div className="div-clear-both" />
                 </div>
@@ -79,4 +72,3 @@ var Typeahead = React.createClass({
         );
     }
 });
-
