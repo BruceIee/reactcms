@@ -55,85 +55,6 @@
     "count":19,
     "items": [
         {
-            "_id": "5627030fb47427e321b8f4ec",
-            "name": "simplifyheader",
-            "category": "web",
-            "widget_name": "simplifyheader",
-            "target_module": "linkset",
-            "description": "",
-            "accept_multiple": false,
-            "example_data": {
-                "title": "Base",
-                "links1": [
-                    {
-                        "link": "/pages/home",
-                        "text": "HOME"
-                    }
-                ],
-                "links2": [
-                    {
-                        "link": "/pages/about",
-                        "text": "ABOUT"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T03:14:23.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "56270333b47427e321b8f4ed",
-            "name": "blackbootheader",
-            "category": "web",
-            "widget_name": "blackbootheader",
-            "target_module": "linkset",
-            "description": "",
-            "accept_multiple": false,
-            "example_data": {
-                "title": "Base",
-                "links1": [
-                    {
-                        "link": "/pages/home",
-                        "text": "HOME"
-                    }
-                ],
-                "links2": [
-                    {
-                        "link": "/pages/about",
-                        "text": "ABOUT"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T03:14:59.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "562703d0b47427e321b8f4ee",
-            "name": "MediaDetail",
-            "category": "web",
-            "widget_name": "MediaDetail",
-            "target_module": "media",
-            "description": "Show media detail",
-            "accept_multiple": false,
-            "example_data": null,
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T03:17:36.000Z",
-            "create_by": "admin",
-            "edit_date": "2015-10-21T12:55:02.000Z",
-            "edit_by": "admin",
-            "_class": "component"
-        },
-        {
             "_id": "56278a28c4ebe4762ff97f1c",
             "name": "GraphBarchart",
             "category": "graph",
@@ -267,6 +188,331 @@
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56270275b47427e321b8f4ea",
+            "name": "SimplifyFooter",
+            "category": "web",
+            "widget_name": "SimplifyFooter",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:11:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562702bbb47427e321b8f4eb",
+            "name": "BlackbootFooter",
+            "category": "web",
+            "widget_name": "BlackbootFooter",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:12:59.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562700956d14477a203dba5d",
+            "name": "iframe",
+            "category": "web",
+            "widget_name": "EmbedIframe",
+            "target_module": "item",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "link": "http://www.w3schools.com"
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:03:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562788b4c4ebe4762ff97f18",
+            "name": "Table2",
+            "category": "web",
+            "widget_name": "Table2",
+            "target_module": "item",
+            "description": "Table2",
+            "accept_multiple": false,
+            "example_data": {
+                "boxClass": "table-container-bordered",
+                "colModel": {
+                    "id": {
+                        "name": "id",
+                        "text": "ID",
+                        "width": "15%",
+                        "key": "true"
+                    },
+                    "name": {
+                        "name": "name",
+                        "text": "Name",
+                        "width": "20%",
+                        "sort": "up"
+                    },
+                    "price": {
+                        "name": "price",
+                        "text": "Price",
+                        "width": "15%",
+                        "type": "money"
+                    },
+                    "description": {
+                        "name": "description",
+                        "text": "Description",
+                        "width": "30%"
+                    },
+                    "extra": {
+                        "name": "extra",
+                        "text": "Extra",
+                        "show": "false",
+                        "width": "10%"
+                    }
+                },
+                "dataItems": [
+                    {
+                        "id": "P01",
+                        "name": "egg",
+                        "price": "7",
+                        "description": "fresh egg",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P21",
+                        "name": "bread",
+                        "price": "2.99",
+                        "description": "whole grain bread",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P23",
+                        "name": "chip",
+                        "price": "2.1",
+                        "description": "potato chip",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P54",
+                        "name": "sauce",
+                        "price": "1.89",
+                        "description": "dipping sauce",
+                        "extra": "n/a"
+                    },
+                    {
+                        "id": "P81",
+                        "name": "corn",
+                        "price": "4.59",
+                        "description": "fresh corn",
+                        "extra": "n/a"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:44:36.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56278831c4ebe4762ff97f15",
+            "name": "Calendar",
+            "category": "web",
+            "widget_name": "Calendar",
+            "target_module": "item",
+            "description": "Calendar",
+            "accept_multiple": false,
+            "example_data": {
+                "year": "2015",
+                "month": "5",
+                "eventsCollection": {
+                    "2015-05-01": [
+                        {
+                            "category": "home",
+                            "title": "gas bill"
+                        },
+                        {
+                            "category": "work",
+                            "title": "report due"
+                        }
+                    ],
+                    "2015-05-11": [
+                        {
+                            "category": "home",
+                            "title": "pta meeting"
+                        }
+                    ]
+                }
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:42:25.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56278879c4ebe4762ff97f16",
+            "name": "Carousel",
+            "category": "web",
+            "widget_name": "Carousel",
+            "target_module": "item",
+            "description": "Carousel",
+            "accept_multiple": false,
+            "example_data": {
+                "items": [
+                    {
+                        "image": "/file/media-image-1443919028472-cat12.jpg",
+                        "text": "slide 1"
+                    },
+                    {
+                        "image": "/file/media-image-1443919058749-cat10.jpg",
+                        "text": "slide 2"
+                    },
+                    {
+                        "image": "/file/media-image-1443919096940-cat01.jpg",
+                        "text": "slide 3"
+                    },
+                    {
+                        "image": "/file/media-image-1443919042949-cat11.jpg",
+                        "text": "slide 4"
+                    },
+                    {
+                        "image": "/file/media-image-1443919080478-cat05.jpg",
+                        "text": "slide 5"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T12:43:37.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "5627030fb47427e321b8f4ec",
+            "name": "simplifyheader",
+            "category": "web",
+            "widget_name": "simplifyheader",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:14:23.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "56270333b47427e321b8f4ed",
+            "name": "blackbootheader",
+            "category": "web",
+            "widget_name": "blackbootheader",
+            "target_module": "linkset",
+            "description": "",
+            "accept_multiple": false,
+            "example_data": {
+                "title": "Base",
+                "links1": [
+                    {
+                        "link": "/pages/home",
+                        "text": "HOME"
+                    }
+                ],
+                "links2": [
+                    {
+                        "link": "/pages/about",
+                        "text": "ABOUT"
+                    }
+                ]
+            },
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:14:59.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "component"
+        },
+        {
+            "_id": "562703d0b47427e321b8f4ee",
+            "name": "MediaDetail",
+            "category": "web",
+            "widget_name": "MediaDetail",
+            "target_module": "media",
+            "description": "Show media detail",
+            "accept_multiple": false,
+            "example_data": null,
+            "image": null,
+            "status": "active",
+            "create_date": "2015-10-21T03:17:36.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-10-21T12:55:02.000Z",
+            "edit_by": "admin",
             "_class": "component"
         },
         {
@@ -452,174 +698,6 @@
             "_class": "component"
         },
         {
-            "_id": "56270275b47427e321b8f4ea",
-            "name": "SimplifyFooter",
-            "category": "web",
-            "widget_name": "SimplifyFooter",
-            "target_module": "linkset",
-            "description": "",
-            "accept_multiple": false,
-            "example_data": {
-                "title": "Base",
-                "links1": [
-                    {
-                        "link": "/pages/home",
-                        "text": "HOME"
-                    }
-                ],
-                "links2": [
-                    {
-                        "link": "/pages/about",
-                        "text": "ABOUT"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T03:11:49.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "562702bbb47427e321b8f4eb",
-            "name": "BlackbootFooter",
-            "category": "web",
-            "widget_name": "BlackbootFooter",
-            "target_module": "linkset",
-            "description": "",
-            "accept_multiple": false,
-            "example_data": {
-                "title": "Base",
-                "links1": [
-                    {
-                        "link": "/pages/home",
-                        "text": "HOME"
-                    }
-                ],
-                "links2": [
-                    {
-                        "link": "/pages/about",
-                        "text": "ABOUT"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T03:12:59.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "562700956d14477a203dba5d",
-            "name": "iframe",
-            "category": "web",
-            "widget_name": "EmbedIframe",
-            "target_module": "item",
-            "description": "",
-            "accept_multiple": false,
-            "example_data": {
-                "link": "http://www.w3schools.com"
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T03:03:49.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "562788b4c4ebe4762ff97f18",
-            "name": "Table2",
-            "category": "web",
-            "widget_name": "Table2",
-            "target_module": "item",
-            "description": "Table2",
-            "accept_multiple": false,
-            "example_data": {
-                "boxClass": "table-container-bordered",
-                "colModel": {
-                    "id": {
-                        "name": "id",
-                        "text": "ID",
-                        "width": "15%",
-                        "key": "true"
-                    },
-                    "name": {
-                        "name": "name",
-                        "text": "Name",
-                        "width": "20%",
-                        "sort": "up"
-                    },
-                    "price": {
-                        "name": "price",
-                        "text": "Price",
-                        "width": "15%",
-                        "type": "money"
-                    },
-                    "description": {
-                        "name": "description",
-                        "text": "Description",
-                        "width": "30%"
-                    },
-                    "extra": {
-                        "name": "extra",
-                        "text": "Extra",
-                        "show": "false",
-                        "width": "10%"
-                    }
-                },
-                "dataItems": [
-                    {
-                        "id": "P01",
-                        "name": "egg",
-                        "price": "7",
-                        "description": "fresh egg",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P21",
-                        "name": "bread",
-                        "price": "2.99",
-                        "description": "whole grain bread",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P23",
-                        "name": "chip",
-                        "price": "2.1",
-                        "description": "potato chip",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P54",
-                        "name": "sauce",
-                        "price": "1.89",
-                        "description": "dipping sauce",
-                        "extra": "n/a"
-                    },
-                    {
-                        "id": "P81",
-                        "name": "corn",
-                        "price": "4.59",
-                        "description": "fresh corn",
-                        "extra": "n/a"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:44:36.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
             "_id": "56278a6ec4ebe4762ff97f1e",
             "name": "GraphAreachart",
             "category": "graph",
@@ -728,84 +806,6 @@
             "image": null,
             "status": "active",
             "create_date": "2015-10-21T12:53:15.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "56278831c4ebe4762ff97f15",
-            "name": "Calendar",
-            "category": "web",
-            "widget_name": "Calendar",
-            "target_module": "item",
-            "description": "Calendar",
-            "accept_multiple": false,
-            "example_data": {
-                "year": "2015",
-                "month": "5",
-                "eventsCollection": {
-                    "2015-05-01": [
-                        {
-                            "category": "home",
-                            "title": "gas bill"
-                        },
-                        {
-                            "category": "work",
-                            "title": "report due"
-                        }
-                    ],
-                    "2015-05-11": [
-                        {
-                            "category": "home",
-                            "title": "pta meeting"
-                        }
-                    ]
-                }
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:42:25.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "component"
-        },
-        {
-            "_id": "56278879c4ebe4762ff97f16",
-            "name": "Carousel",
-            "category": "web",
-            "widget_name": "Carousel",
-            "target_module": "item",
-            "description": "Carousel",
-            "accept_multiple": false,
-            "example_data": {
-                "items": [
-                    {
-                        "image": "/file/media-image-1443919028472-cat12.jpg",
-                        "text": "slide 1"
-                    },
-                    {
-                        "image": "/file/media-image-1443919058749-cat10.jpg",
-                        "text": "slide 2"
-                    },
-                    {
-                        "image": "/file/media-image-1443919096940-cat01.jpg",
-                        "text": "slide 3"
-                    },
-                    {
-                        "image": "/file/media-image-1443919042949-cat11.jpg",
-                        "text": "slide 4"
-                    },
-                    {
-                        "image": "/file/media-image-1443919080478-cat05.jpg",
-                        "text": "slide 5"
-                    }
-                ]
-            },
-            "image": null,
-            "status": "active",
-            "create_date": "2015-10-21T12:43:37.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
