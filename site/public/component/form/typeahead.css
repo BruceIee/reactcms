@@ -34,6 +34,14 @@
 }
 */
 
+.typeahead-label {
+  padding-bottom: 10px;  
+}
+
+.twitter-typeahead {
+  width: 95%;
+}
+
 .tt-menu {
   width: 422px;
   margin: 12px 0;

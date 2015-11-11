@@ -8,8 +8,9 @@ var Typeahead = React.createClass({
         var attributes = [
             { name:'boxClass', type:'string', required:false, defaultValue:'', note:'container CSS class' },
             { name:'iconClass', type:'string', required:false, defaultValue:'', note:'icon CSS class' },
-            { name:'title', type:'string', required:false, defaultValue:'', note:'item title' },
-            { name:'value', type:'string', required:false, defaultValue:'', note:'item value' }
+            { name:'label', type:'string', required:false, defaultValue:'', note:'item label' },
+            { name:'value', type:'string', required:false, defaultValue:'', note:'item value' },
+            { name:'values', type:'array', required:false, defaultValue:[], note:'item values for selection' }
         ];
         return attributes;
     },
@@ -17,6 +18,7 @@ var Typeahead = React.createClass({
     componentDidMount: function() {
         var targetElement = React.findDOMNode(this.refs.typeahead);
         
+        /*
         var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
             'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
             'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
@@ -27,6 +29,7 @@ var Typeahead = React.createClass({
             'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
             'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
         ];
+        */
         
         function substringMatcher(strs) {
             return function findMatches(q, cb) {
@@ -45,17 +48,13 @@ var Typeahead = React.createClass({
                 cb(matches);
             };
         }
-        
-        console.log('>>>', $(targetElement));
-        //console.log('>>>', substringMatcher);
-        
         $(targetElement).typeahead({
             hint: true,
             highlight: true,
             minLength: 1
         }, {
-            name: 'states',
-            source: substringMatcher(states)
+            name: 'entry',
+            source: substringMatcher(this.state.values)
         });
     },
         
@@ -63,7 +62,8 @@ var Typeahead = React.createClass({
         return (
             <div className={ this.state.containerClassNames.join(' ') } data-id={ this.state.id } >
                 <div className="typeahead-content">
-                    <div className="typeahead-input">
+                    <div className="form-group typeahead-input">
+                        <div className="typeahead-label">{ this.state.label }</div>
                         <input className="form-control typeahead" ref="typeahead" type="text" placeholder="" />
                     </div>
                     <div className="div-clear-both" />
