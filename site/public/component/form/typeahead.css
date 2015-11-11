@@ -57,6 +57,10 @@
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
+.tt-menu.tt-open {
+  position: relative !important;
+}
+
 .tt-suggestion {
   padding: 3px 20px;
   font-size: 15px;
