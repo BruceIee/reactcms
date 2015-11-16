@@ -147,6 +147,14 @@ module.exports = function(app) {
         res.render('user/login', { page:page });
     };
     
+    block.page.loginLinkedIn = function(req, res) {
+        var page = app.getPage(req);
+        page.redirect = req.query.url || '';
+        page.title = 'User Login via LinkedIn';
+        page.controller = "users";
+        res.render('user/login-linkedin', { page:page });
+    };
+    
     block.page.loginPost = function(req, res) {
         var parameter = tool.getReqParameter(req);
         block.data.login(req, res, null, function(error, user, info) {
@@ -332,6 +340,8 @@ module.exports = function(app) {
     app.server.all('/users/list', block.page.checkLogin);
     app.server.get('/users/list', block.page.userList);
     app.server.get('/users/:id/del', block.page.delUser);
+    
+    app.server.get('/users/login-linkedin', block.page.loginLinkedIn);
     
     return block;
 };
