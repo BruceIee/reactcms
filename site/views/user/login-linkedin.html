@@ -3,6 +3,35 @@
 {% block script %}
 {% parent %}
 <!-- <script src="/script/user/login.js"></script> -->
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+    api_key: "77zt1rgxz1h1hq"
+    authorize: true
+    onLoad: onLinkedInLoad
+</script>
+
+<script type="text/javascript">
+    
+    // Setup an event listener to make an API call once auth is complete
+    function onLinkedInLoad() {
+        IN.Event.on(IN, "auth", getProfileData);
+    }
+
+    // Handle the successful return from the API call
+    function onSuccess(data) {
+        console.log(data);
+    }
+
+    // Handle an error response from the API call
+    function onError(error) {
+        console.log(error);
+    }
+
+    // Use the API call wrapper to request the member's basic profile data
+    function getProfileData() {
+        IN.API.Raw("/people/~").result(onSuccess).error(onError);
+    }
+
+</script>
 {% endblock %}
 
 {% block style %}
@@ -27,6 +56,8 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             LinkedIn Login
+            <br/>
+            <script type="in/Login"></script>
             <!--
             <form role="form" action="/users/login" method="POST">
                 <div class="form-group">
