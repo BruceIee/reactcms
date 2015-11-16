@@ -22,7 +22,8 @@ function onSuccess(data) {
         '<a href="' + data.siteStandardProfileRequest.url + '">' +
         data.firstName + ' ' + data.lastName + '</a><br/>'
         + data.headline + '<br/>';
-    $('.linkedin-user-info').html(userContent); //JSON.stringify(data))
+    $('.linkedin-user-info').html(userContent);
+    $('.panel-user-info').show();
 }
 
 // Handle an error response from the API call
@@ -37,7 +38,11 @@ function getProfileData() {
 
 function onLogout() {
     console.log('logout linkedin');
-    
+    IN.User.logout(function() {
+        console.log('logged out');
+        $('.linkedin-user-info').html('');
+        $('.panel-user-info').hide();
+    });
 }
 $().ready(function() {
     console.log('in linkedin login');
@@ -90,7 +95,7 @@ $().ready(function() {
     </div>
     
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-3 panel-user-info">
             <h4>User Info</h4>
             <div class="linkedin-user-info"></div>
             <br/>
