@@ -4,34 +4,40 @@
 {% parent %}
 <!-- <script src="/script/user/login.js"></script> -->
 <script type="text/javascript" src="//platform.linkedin.com/in.js">
-    api_key: 77zt1rgxz1h1hq
-    authorize: true
-    onLoad: onLinkedInLoad
+api_key: 77zt1rgxz1h1hq
+authorize: true
+onLoad: onLinkedInLoad
 </script>
 
 <script type="text/javascript">
-    
-    // Setup an event listener to make an API call once auth is complete
-    function onLinkedInLoad() {
-        IN.Event.on(IN, "auth", getProfileData);
-    }
+// Setup an event listener to make an API call once auth is complete
+function onLinkedInLoad() {
+    IN.Event.on(IN, "auth", getProfileData);
+}
 
-    // Handle the successful return from the API call
-    function onSuccess(data) {
-        console.log(data);
-        $('.linkedin-user-info').text(JSON.stringify(data));
-    }
+// Handle the successful return from the API call
+function onSuccess(data) {
+    console.log(data);
+    var userContent =
+        '<a href="' + data.siteStandardProfileRequest.url + '">' +
+        data.firstName + ' ' + data.lastName + '</a><br/>'
+        + data.headline + '<br/>';
+    $('.linkedin-user-info').html(userContent); //JSON.stringify(data))
+}
 
-    // Handle an error response from the API call
-    function onError(error) {
-        console.log(error);
-    }
+// Handle an error response from the API call
+function onError(error) {
+    console.log(error);
+}
 
-    // Use the API call wrapper to request the member's basic profile data
-    function getProfileData() {
-        IN.API.Raw("/people/~").result(onSuccess).error(onError);
-    }
+// Use the API call wrapper to request the member's basic profile data
+function getProfileData() {
+    IN.API.Raw("/people/~").result(onSuccess).error(onError);
+}
 
+$().ready(function() {
+    console.log('in linkedin login');
+});
 </script>
 {% endblock %}
 
@@ -80,6 +86,7 @@
     
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+            <h4>User Info</h4>
             <div class="linkedin-user-info"></div>
         </div>
     </div>
