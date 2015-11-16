@@ -19,6 +19,7 @@
     // Handle the successful return from the API call
     function onSuccess(data) {
         console.log(data);
+        $('.linkedin-user-info').text(JSON.stringify(data));
     }
 
     // Handle an error response from the API call
@@ -77,5 +78,10 @@
         </div>
     </div>
     
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="linkedin-user-info"></div>
+        </div>
+    </div>
 </div>
 {% endblock %}
