@@ -35,8 +35,13 @@ function getProfileData() {
     IN.API.Raw("/people/~").result(onSuccess).error(onError);
 }
 
+function onLogout() {
+    console.log('logout linkedin');
+    
+}
 $().ready(function() {
     console.log('in linkedin login');
+    $('.btn-logout').click(onLogout);
 });
 </script>
 {% endblock %}
@@ -88,6 +93,8 @@ $().ready(function() {
         <div class="col-md-6 col-md-offset-3">
             <h4>User Info</h4>
             <div class="linkedin-user-info"></div>
+            <br/>
+            <button class="btn btn-default btn-logout">Logout</button>
         </div>
     </div>
 </div>
