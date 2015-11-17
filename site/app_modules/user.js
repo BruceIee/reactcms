@@ -151,7 +151,7 @@ module.exports = function(app) {
         var page = app.getPage(req);
         page.redirect = req.query.url || '';
         page.title = 'User Login via LinkedIn';
-        page.controller = "users";
+        page.linkedinKey = app.setting.linkedin && app.setting.linkedin.key || '';
         res.render('user/login-linkedin', { page:page });
     };
     
@@ -341,7 +341,7 @@ module.exports = function(app) {
     app.server.get('/users/list', block.page.userList);
     app.server.get('/users/:id/del', block.page.delUser);
     
-    app.server.get('/users/login-linkedin', block.page.loginLinkedIn);
+    app.server.get('/users/login/linkedin', block.page.loginLinkedIn);
     
     return block;
 };
