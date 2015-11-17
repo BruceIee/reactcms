@@ -46,6 +46,10 @@ exports.setting = {
         stripe_secret_key: 'sk_test_xxxxxxxxxxxxxxxxx',
         stripe_publishable_key: 'pk_test_yyyyyyyyyyyyyyyyy'
     },
+
+    linkedin: {
+        key: 'linkedin_api_key_xxxxxxxxxxxxxx'
+    },
     
     // invite code
     invite: {
