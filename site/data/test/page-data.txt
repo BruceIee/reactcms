@@ -39,7 +39,7 @@
             "type": "string"
         }
     },
-    "count":49,
+    "count":50,
     "items": [
         {
             "_id": "5613b9da40659eca03be7c2f",
@@ -3393,8 +3393,48 @@
                         }
                     }
                 ],
-                "r9c1": null,
-                "r9c2": null,
+                "r9c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "values": [
+                                                19,
+                                                26,
+                                                55
+                                            ],
+                                            "labels": [
+                                                "Residential",
+                                                "Non-Residential",
+                                                "Utility"
+                                            ],
+                                            "type": "pie"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r9c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Pie Plot</h4>"
+                            }
+                        }
+                    }
+                ],
                 "f1c1": null,
                 "f2c1": null
             },
@@ -7208,7 +7248,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Scatter Plot - Data Content</h4>"
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
                             }
                         }
                     }
@@ -7240,7 +7280,11 @@
                                             "mode": "markers",
                                             "type": "scatter"
                                         }
-                                    ]
+                                    ],
+                                    "layout": {
+                                        "height": 400,
+                                        "width": 500
+                                    }
                                 }
                             }
                         }
@@ -7253,6 +7297,71 @@
             "group": "",
             "status": "",
             "create_date": "2015-11-22T16:27:44.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5651ef0672e7dd634db60fe4",
+            "name": "plotly_piechart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Pie Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "values": [
+                                                19,
+                                                26,
+                                                55
+                                            ],
+                                            "labels": [
+                                                "Residential",
+                                                "Non-Residential",
+                                                "Utility"
+                                            ],
+                                            "type": "pie"
+                                        }
+                                    ],
+                                    "layout": {
+                                        "height": 400,
+                                        "width": 500
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-11-22T16:36:22.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
