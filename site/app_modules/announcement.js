@@ -2,8 +2,8 @@ var util = require('util');
 var tool = require('leaptool');
 var pagedown = require("pagedown");
 var converter = pagedown.getSanitizingConverter();
-var pagedownExtra = require("pagedown-extra").Extra;
-pagedownExtra.init(converter);
+//var pagedownExtra = require("pagedown-extra").Extra;
+//pagedownExtra.init(converter);
 
 module.exports = function(app) {
     var moduleName = 'announcement';

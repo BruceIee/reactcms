@@ -49,6 +49,7 @@
     "multer": "~1.0.0",
     "ncp": "*",
     "nodemailer": "0.6.x",
+    "pagedown": "^1.1.0",
     "pg": "*",
     "plotly": "^1.0.5",
     "quill": "^0.20.0",
