@@ -7424,18 +7424,75 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3
+                                            "marker": {
+                                                "color": "rgb(106,81,163)"
+                                            },
+                                            "name": "11-14 m/s",
+                                            "r": [
+                                                77.5,
+                                                72.5,
+                                                70,
+                                                45,
+                                                22.5,
+                                                42.5,
+                                                40,
+                                                62.5
                                             ],
-                                            "y": [
-                                                2,
-                                                3,
-                                                5
-                                            ]
+                                            "t": [
+                                                "North",
+                                                "N-E",
+                                                "East",
+                                                "S-E",
+                                                "South",
+                                                "S-W",
+                                                "West",
+                                                "N-W"
+                                            ],
+                                            "type": "area"
+                                        },
+                                        {
+                                            "marker": {
+                                                "color": "rgb(158,154,200)"
+                                            },
+                                            "name": "8-11 m/s",
+                                            "r": [
+                                                57.5,
+                                                50,
+                                                45,
+                                                35,
+                                                20,
+                                                22.5,
+                                                37.5,
+                                                55
+                                            ],
+                                            "t": [
+                                                "North",
+                                                "N-E",
+                                                "East",
+                                                "S-E",
+                                                "South",
+                                                "S-W",
+                                                "West",
+                                                "N-W"
+                                            ],
+                                            "type": "area"
                                         }
-                                    ]
+                                    ],
+                                    "layout": {
+                                        "font": {
+                                            "size": 16
+                                        },
+                                        "legend": {
+                                            "font": {
+                                                "size": 16
+                                            }
+                                        },
+                                        "orientation": 270,
+                                        "radialaxis": {
+                                            "ticksuffix": "%"
+                                        },
+                                        "title": "Wind Speed Distribution"
+                                    }
                                 }
                             }
                         }
@@ -7449,7 +7506,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Lineplot</h4>"
+                                "content": "<h4>Wind Rose Chart</h4>"
                             }
                         }
                     }
