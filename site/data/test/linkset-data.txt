@@ -116,6 +116,10 @@
                     "text": "Plotly Graph Demo"
                 },
                 {
+                    "link": "/pages/plotlydemo2",
+                    "text": "Plotly Graph Demo 2"
+                },
+                {
                     "link": "/pages/highchartsdemo",
                     "text": "Highcharts Graph Demo"
                 }
@@ -131,7 +135,7 @@
             "status": "active",
             "create_date": "2015-10-10T04:02:40.000Z",
             "create_by": "admin",
-            "edit_date": "2015-10-11T21:46:23.000Z",
+            "edit_date": "2015-11-22T16:41:45.000Z",
             "edit_by": "admin",
             "_class": "linkset"
         }
