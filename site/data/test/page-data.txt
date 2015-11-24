@@ -9096,22 +9096,56 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4
+                                            "lat": [
+                                                40.7127,
+                                                51.5072
                                             ],
-                                            "y": [
-                                                10,
-                                                15,
-                                                13,
-                                                17
+                                            "line": {
+                                                "color": "blue",
+                                                "width": 2
+                                            },
+                                            "lon": [
+                                                -74.0059,
+                                                0.1275
                                             ],
-                                            "mode": "markers",
-                                            "type": "scatter"
+                                            "mode": "lines",
+                                            "type": "scattergeo"
                                         }
-                                    ]
+                                    ],
+                                    "layout": {
+                                        "geo": {
+                                            "coastlinewidth": 2,
+                                            "countrycolor": "rgb(204, 204, 204)",
+                                            "lakecolor": "rgb(255, 255, 255)",
+                                            "landcolor": "rgb(204, 204, 204)",
+                                            "lataxis": {
+                                                "dtick": 10,
+                                                "range": [
+                                                    20,
+                                                    60
+                                                ],
+                                                "showgrid": true,
+                                                "tickmode": "linear"
+                                            },
+                                            "lonaxis": {
+                                                "dtick": 20,
+                                                "range": [
+                                                    -100,
+                                                    20
+                                                ],
+                                                "showgrid": true,
+                                                "tickmode": "linear"
+                                            },
+                                            "projection": {
+                                                "type": "equirectangular"
+                                            },
+                                            "resolution": 50,
+                                            "showlakes": true,
+                                            "showland": true
+                                        },
+                                        "showlegend": false,
+                                        "title": "London to NYC Great Circle"
+                                    }
                                 }
                             }
                         }
@@ -9125,7 +9159,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Scatter Plot</h4>"
+                                "content": "<h4>London to New York line on map</h4>"
                             }
                         }
                     }
