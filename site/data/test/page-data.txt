@@ -7981,6 +7981,8 @@
                                         "radialaxis": {
                                             "ticksuffix": "%"
                                         },
+                                        "width": 600,
+                                        "height": 450,
                                         "title": "Wind Speed Distribution"
                                     }
                                 }
@@ -8122,6 +8124,9 @@
                                             "type": "box"
                                         }
                                     ]
+                                },
+                                "layout": {
+                                    "width": 600
                                 }
                             }
                         }
@@ -8302,6 +8307,9 @@
                                             ]
                                         }
                                     ]
+                                },
+                                "layout": {
+                                    "height": 500
                                 }
                             }
                         }
@@ -9146,6 +9154,7 @@
                                             "showland": true
                                         },
                                         "showlegend": false,
+                                        "width": 600,
                                         "title": "London to NYC Great Circle"
                                     }
                                 }
@@ -9452,6 +9461,7 @@
                                         }
                                     ],
                                     "layout": {
+                                        "width": 600,
                                         "angularaxis": {
                                             "tickcolor": "rgb(253,253,253)"
                                         },
