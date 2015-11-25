@@ -160,238 +160,6 @@
             "edit_by": ""
         },
         {
-            "_id": "554c261457e90a66273cb733",
-            "name": "sidenav",
-            "description": "sidenav composition",
-            "filename": "sidenav.html",
-            "data": [
-                {
-                    "name": "r0c1",
-                    "description": "top",
-                    "width": 12
-                },
-                {
-                    "name": "r1c1",
-                    "description": "top",
-                    "width": 12
-                },
-                {
-                    "name": "r2c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r3c1",
-                    "description": "side",
-                    "width": 4
-                },
-                {
-                    "name": "r3c2",
-                    "description": "main",
-                    "width": 8
-                },
-                {
-                    "name": "r4c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r5c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r6c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r7c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r8c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r9c1",
-                    "description": "row",
-                    "width": 12
-                },
-                {
-                    "name": "r99c1",
-                    "description": "footer",
-                    "width": 12
-                }
-            ],
-            "status": "",
-            "create_date": null,
-            "_class": "composition",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "56188501f823f4a512a42368",
-            "name": "theone2",
-            "description": "for one widget display",
-            "filename": "theone2.html",
-            "data": [
-                {
-                    "name": "h1c1",
-                    "description": "header",
-                    "width": 12
-                },
-                {
-                    "name": "h2c1",
-                    "description": "header",
-                    "width": 12
-                },
-                {
-                    "name": "r1c1",
-                    "description": "content1 container (md-6)",
-                    "width": 6
-                },
-                {
-                    "name": "r2c1",
-                    "description": "content2 container (md-12)",
-                    "width": 12
-                },
-                {
-                    "name": "f1c1",
-                    "description": "footer",
-                    "width": 12
-                },
-                {
-                    "name": "f2c1",
-                    "description": "footer",
-                    "width": 12
-                }
-            ],
-            "status": "active",
-            "create_date": "2015-10-10T03:24:49.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "composition"
-        },
-        {
-            "_id": "56185861262cfbb95a78815b",
-            "name": "gallery2",
-            "description": "gallery with 2 blocks on each row",
-            "filename": "gallery2.html",
-            "data": [
-                {
-                    "name": "h1c1",
-                    "description": "header1",
-                    "width": 12
-                },
-                {
-                    "name": "h2c1",
-                    "description": "header2",
-                    "width": 12
-                },
-                {
-                    "name": "r1c1",
-                    "description": "title",
-                    "width": 12
-                },
-                {
-                    "name": "r2c1",
-                    "description": "title2",
-                    "width": 12
-                },
-                {
-                    "name": "r3c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r3c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r4c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r4c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r5c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r5c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r6c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r6c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r7c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r7c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r8c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r8c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r9c1",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "r9c2",
-                    "description": "gallary block",
-                    "width": 6
-                },
-                {
-                    "name": "f1c1",
-                    "description": "footer",
-                    "width": 12
-                },
-                {
-                    "name": "f2c1",
-                    "description": "footer2",
-                    "width": 12
-                }
-            ],
-            "status": "active",
-            "create_date": "2015-10-10T00:14:25.000Z",
-            "create_by": "admin",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "composition"
-        },
-        {
             "_id": "56188512f823f4a512a42369",
             "name": "vertflow2",
             "description": "vertical flow layout",
@@ -469,6 +237,124 @@
             "edit_date": "",
             "edit_by": "",
             "_class": "composition"
+        },
+        {
+            "_id": "56188501f823f4a512a42368",
+            "name": "theone2",
+            "description": "for one widget display",
+            "filename": "theone2.html",
+            "data": [
+                {
+                    "name": "h1c1",
+                    "description": "header",
+                    "width": 12
+                },
+                {
+                    "name": "h2c1",
+                    "description": "header",
+                    "width": 12
+                },
+                {
+                    "name": "r1c1",
+                    "description": "content1 container (md-6)",
+                    "width": 6
+                },
+                {
+                    "name": "r2c1",
+                    "description": "content2 container (md-12)",
+                    "width": 12
+                },
+                {
+                    "name": "f1c1",
+                    "description": "footer",
+                    "width": 12
+                },
+                {
+                    "name": "f2c1",
+                    "description": "footer",
+                    "width": 12
+                }
+            ],
+            "status": "active",
+            "create_date": "2015-10-10T03:24:49.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
+        },
+        {
+            "_id": "554c261457e90a66273cb733",
+            "name": "sidenav",
+            "description": "sidenav composition",
+            "filename": "sidenav.html",
+            "data": [
+                {
+                    "name": "r0c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
+                    "name": "r1c1",
+                    "description": "top",
+                    "width": 12
+                },
+                {
+                    "name": "r2c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r3c1",
+                    "description": "side",
+                    "width": 4
+                },
+                {
+                    "name": "r3c2",
+                    "description": "main",
+                    "width": 8
+                },
+                {
+                    "name": "r4c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r5c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r6c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r7c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r8c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r9c1",
+                    "description": "row",
+                    "width": 12
+                },
+                {
+                    "name": "r99c1",
+                    "description": "footer",
+                    "width": 12
+                }
+            ],
+            "status": "",
+            "create_date": null,
+            "_class": "composition",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
         },
         {
             "_id": "5615b6156db265f31d004bfc",
@@ -614,6 +500,120 @@
             ],
             "status": "active",
             "create_date": "2015-10-08T00:17:25.000Z",
+            "create_by": "admin",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "composition"
+        },
+        {
+            "_id": "56185861262cfbb95a78815b",
+            "name": "gallery2",
+            "description": "gallery with 2 blocks on each row",
+            "filename": "gallery2.html",
+            "data": [
+                {
+                    "name": "h1c1",
+                    "description": "header1",
+                    "width": 12
+                },
+                {
+                    "name": "h2c1",
+                    "description": "header2",
+                    "width": 12
+                },
+                {
+                    "name": "r1c1",
+                    "description": "title",
+                    "width": 12
+                },
+                {
+                    "name": "r2c1",
+                    "description": "title2",
+                    "width": 12
+                },
+                {
+                    "name": "r3c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r3c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r4c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r4c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r5c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r5c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r6c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r6c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r7c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r7c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r8c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r8c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r9c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r9c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "f1c1",
+                    "description": "footer",
+                    "width": 12
+                },
+                {
+                    "name": "f2c1",
+                    "description": "footer2",
+                    "width": 12
+                }
+            ],
+            "status": "active",
+            "create_date": "2015-10-10T00:14:25.000Z",
             "create_by": "admin",
             "edit_date": "",
             "edit_by": "",
