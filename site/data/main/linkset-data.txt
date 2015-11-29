@@ -1,0 +1,147 @@
+{
+    "name":"linkset",
+    "module":    {
+        "name": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "title_link": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "image": {
+            "type": "file",
+            "subtype": {
+                "type": "image"
+            }
+        },
+        "links1_title": {
+            "type": "string"
+        },
+        "links1": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links2_title": {
+            "type": "string"
+        },
+        "links2": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links3_title": {
+            "type": "string"
+        },
+        "links3": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links4_title": {
+            "type": "string"
+        },
+        "links4": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "links5_title": {
+            "type": "string"
+        },
+        "links5": {
+            "type": "array",
+            "subtype": {
+                "type": "string"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":1,
+    "items": [
+        {
+            "_id": "56188de0f823f4a512a4236b",
+            "name": "home_links",
+            "title": "links",
+            "title_link": "",
+            "type": "",
+            "image": null,
+            "links1_title": "main",
+            "links1": [
+                {
+                    "link": "/pages/reactletdemo",
+                    "text": "Component Demo 1"
+                },
+                {
+                    "link": "/pages/reactletdemo2",
+                    "text": "Component Demo 2"
+                },
+                {
+                    "link": "/pages/graphdemo",
+                    "text": "ReactD3 Graph Demo"
+                },
+                {
+                    "link": "/pages/webchartsdemo",
+                    "text": "Webcharts Graph Demo"
+                },
+                {
+                    "link": "/pages/plotlydemo",
+                    "text": "Plotly Graph Demo"
+                },
+                {
+                    "link": "/pages/plotlydemo2",
+                    "text": "Plotly Graph Demo 2"
+                },
+                {
+                    "link": "/pages/plotlydemo3",
+                    "text": "Plotly Graph Demo 3"
+                },
+                {
+                    "link": "/pages/highchartsdemo",
+                    "text": "Highcharts Graph Demo"
+                }
+            ],
+            "links2_title": "",
+            "links2": [],
+            "links3_title": "",
+            "links3": [],
+            "links4_title": "",
+            "links4": [],
+            "links5_title": "",
+            "links5": [],
+            "status": "active",
+            "create_date": "2015-10-10T04:02:40.000Z",
+            "create_by": "admin",
+            "edit_date": "2015-11-26T05:22:12.000Z",
+            "edit_by": "admin",
+            "_class": "linkset"
+        }
+    ]
+}

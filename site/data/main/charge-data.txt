@@ -1,0 +1,54 @@
+{
+    "name":"charge",
+    "module":    {
+        "user_id": {
+            "type": "string"
+        },
+        "shopping_cart": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "payment_type": {
+            "type": "string",
+            "values": [
+                "stripe",
+                "paypal",
+                "square"
+            ]
+        },
+        "payment_amount": {
+            "type": "string"
+        },
+        "payment_result": {
+            "type": "object",
+            "subtype": {
+                "type": "json"
+            }
+        },
+        "status": {
+            "type": "string",
+            "values": [
+                "active",
+                "inactive",
+                "complete"
+            ]
+        },
+        "create_date": {
+            "type": "date"
+        },
+        "create_by": {
+            "type": "string"
+        },
+        "edit_date": {
+            "type": "date"
+        },
+        "edit_by": {
+            "type": "string"
+        }
+    },
+    "count":0,
+    "items": [
+    ]
+}
