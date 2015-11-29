@@ -42,6 +42,182 @@
     "count":52,
     "items": [
         {
+            "_id": "561711dd712cef6a1c5b7077",
+            "name": "linechart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:01:17.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5617138f712cef6a1c5b7078",
+            "name": "scatterplotb",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:08:31.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150ed57e0f6b6f16fcea3e",
+            "name": "scatterplot2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:23:49.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
             "_id": "56108ea3282c285713d8bfe8",
             "name": "carousel2",
             "composition": "theone",
@@ -64,131 +240,6 @@
                 "r99c1": ""
             },
             "create_date": "2015-10-04T02:27:47.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "561c4af02a3ac4cd6589e07e",
-            "name": "plotly_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
-                                            "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
-                                            ],
-                                            "type": "bar"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-13T00:06:08.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561931ebaf72dea65f2bb7f1",
-            "name": "plate1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plate - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plate",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "cellData": [
-                                    {
-                                        "row": 1,
-                                        "col": 1,
-                                        "iconClass": "fa fa-dot-circle-o ",
-                                        "color": "#f00",
-                                        "text": "blank"
-                                    },
-                                    {
-                                        "row": 8,
-                                        "col": 12,
-                                        "iconClass": "fa fa-circle",
-                                        "color": "#0ff",
-                                        "text": "ref"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T15:42:35.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -1478,416 +1529,6 @@
             "_class": "page"
         },
         {
-            "_id": "561ad789e39daac5615ffd94",
-            "name": "plotlydemo",
-            "description": "",
-            "composition": "gallery2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Plotly Component Gallery</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "r3c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5,
-                                                6,
-                                                7,
-                                                8
-                                            ],
-                                            "y": [
-                                                2,
-                                                3,
-                                                5,
-                                                8,
-                                                13,
-                                                15,
-                                                18,
-                                                27
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Lineplot</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r4c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5,
-                                                6
-                                            ],
-                                            "y": [
-                                                101,
-                                                99,
-                                                97.28,
-                                                92.61,
-                                                79.91,
-                                                45.4
-                                            ]
-                                        }
-                                    ],
-                                    "layout": {
-                                        "xaxis": {
-                                            "type": "log"
-                                        },
-                                        "yaxis": {
-                                            "type": "log"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r4c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Logplot</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r5c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Monday",
-                                                "Tuesday",
-                                                "Wednesday",
-                                                "Thursday",
-                                                "Friday"
-                                            ],
-                                            "y": [
-                                                "Morning",
-                                                "Afternoon",
-                                                "Evening"
-                                            ],
-                                            "z": [
-                                                [
-                                                    1,
-                                                    20,
-                                                    30,
-                                                    50,
-                                                    1
-                                                ],
-                                                [
-                                                    20,
-                                                    1,
-                                                    60,
-                                                    80,
-                                                    30
-                                                ],
-                                                [
-                                                    30,
-                                                    60,
-                                                    1,
-                                                    -10,
-                                                    20
-                                                ]
-                                            ],
-                                            "type": "heatmap"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r5c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Heatmap</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r6c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
-                                            "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
-                                            ],
-                                            "type": "bar"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r6c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Barchart</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r7c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "y": [
-                                                "Mon",
-                                                "Tue",
-                                                "Wed",
-                                                "Thr",
-                                                "Fri"
-                                            ],
-                                            "x": [
-                                                70,
-                                                80,
-                                                100,
-                                                60,
-                                                40
-                                            ],
-                                            "type": "bar",
-                                            "orientation": "h"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r7c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Barchart Horizontal</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r8c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4
-                                            ],
-                                            "y": [
-                                                10,
-                                                15,
-                                                13,
-                                                17
-                                            ],
-                                            "mode": "markers",
-                                            "type": "scatter"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r8c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Scatter Plot</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r9c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "values": [
-                                                19,
-                                                26,
-                                                55
-                                            ],
-                                            "labels": [
-                                                "Residential",
-                                                "Non-Residential",
-                                                "Utility"
-                                            ],
-                                            "type": "pie"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r9c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4>Pie Plot</h4>"
-                            }
-                        }
-                    }
-                ],
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T21:41:29.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "5615b7a26db265f31d004bfd",
             "name": "graphdemo",
             "composition": "gallery",
@@ -2530,95 +2171,6 @@
             "_class": "page"
         },
         {
-            "_id": "5619cbd951882eea1d627452",
-            "name": "webcharts_group_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Group Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Medal Count",
-                                        "type": "linear",
-                                        "column": "count",
-                                        "domain": [
-                                            0
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "ordinal",
-                                        "column": "Country",
-                                        "sort": "total-descending"
-                                    },
-                                    "marks": [
-                                        {
-                                            "arrange": "grouped",
-                                            "split": "type",
-                                            "type": "bar",
-                                            "per": [
-                                                "Country"
-                                            ],
-                                            "attributes": {
-                                                "fill-opacity": 0.8
-                                            }
-                                        }
-                                    ],
-                                    "gridlines": "x",
-                                    "color_by": "type",
-                                    "colors": [
-                                        "#8c7853",
-                                        "#c0c0c0",
-                                        "#e5c100"
-                                    ],
-                                    "legend": {
-                                        "label": "MedalType",
-                                        "order": [
-                                            "Bronze",
-                                            "Silver",
-                                            "Gold"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T02:39:21.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "561c4b9d2a3ac4cd6589e07f",
             "name": "plotly_barchart2",
             "description": "",
@@ -2933,182 +2485,6 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
-        },
-        {
-            "_id": "561711dd712cef6a1c5b7077",
-            "name": "linechart2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphLinechart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:01:17.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5617138f712cef6a1c5b7078",
-            "name": "scatterplotb",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:08:31.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56150ed57e0f6b6f16fcea3e",
-            "name": "scatterplot2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:23:49.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
         },
         {
             "_id": "561870e50dfa090f3a372d45",
@@ -3552,362 +2928,6 @@
             "create_by": "",
             "edit_date": "",
             "edit_by": ""
-        },
-        {
-            "_id": "5621a7ea55ce0f3c5b3c8040",
-            "name": "highcharts_areachart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Areachart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "chart": {
-                                            "type": "area"
-                                        },
-                                        "title": {
-                                            "text": "Historic and Estimated Worldwide Population Growth by Region"
-                                        },
-                                        "subtitle": {
-                                            "text": "Source: Wikipedia.org"
-                                        },
-                                        "xAxis": {
-                                            "categories": [
-                                                "1750",
-                                                "1800",
-                                                "1850",
-                                                "1900",
-                                                "1950",
-                                                "1999",
-                                                "2050"
-                                            ],
-                                            "tickmarkPlacement": "on",
-                                            "title": {
-                                                "enabled": false
-                                            }
-                                        },
-                                        "yAxis": {
-                                            "title": {
-                                                "text": "Billions"
-                                            },
-                                            "labels": {}
-                                        },
-                                        "tooltip": {
-                                            "shared": true,
-                                            "valueSuffix": " millions"
-                                        },
-                                        "plotOptions": {
-                                            "area": {
-                                                "stacking": "normal",
-                                                "lineColor": "#666666",
-                                                "lineWidth": 1,
-                                                "marker": {
-                                                    "lineWidth": 1,
-                                                    "lineColor": "#666666"
-                                                }
-                                            }
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "Asia",
-                                                "data": [
-                                                    502,
-                                                    635,
-                                                    809,
-                                                    947,
-                                                    1402,
-                                                    3634,
-                                                    5268
-                                                ]
-                                            },
-                                            {
-                                                "name": "Africa",
-                                                "data": [
-                                                    106,
-                                                    107,
-                                                    111,
-                                                    133,
-                                                    221,
-                                                    767,
-                                                    1766
-                                                ]
-                                            },
-                                            {
-                                                "name": "Europe",
-                                                "data": [
-                                                    163,
-                                                    203,
-                                                    276,
-                                                    408,
-                                                    547,
-                                                    729,
-                                                    628
-                                                ]
-                                            },
-                                            {
-                                                "name": "America",
-                                                "data": [
-                                                    18,
-                                                    31,
-                                                    54,
-                                                    156,
-                                                    339,
-                                                    818,
-                                                    1201
-                                                ]
-                                            },
-                                            {
-                                                "name": "Oceania",
-                                                "data": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    6,
-                                                    13,
-                                                    30,
-                                                    46
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T01:44:10.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5611f71e9a0c6ff825594e17",
-            "name": "treeview1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Treeview - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": "",
-                "r2c1": [
-                    {
-                        "widgetName": "Treeview",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": "",
-                            "filter": "",
-                            "data": {
-                                "treedata": [
-                                    {
-                                        "name": "website",
-                                        "iconClass": "fa fa-folder-o",
-                                        "children": [
-                                            {
-                                                "name": "images",
-                                                "iconClass": "fa fa-folder-o",
-                                                "children": [
-                                                    {
-                                                        "name": "logo.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    },
-                                                    {
-                                                        "name": "background.png",
-                                                        "iconClass": "fa fa-file-image-o"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "name": "index.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "about.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            },
-                                            {
-                                                "name": "product.html",
-                                                "iconClass": "fa fa-file-text-o"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": "",
-                "r4c1": "",
-                "r5c1": "",
-                "r99c1": ""
-            },
-            "create_date": "2015-10-05T04:05:50.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "56227d2a72792c94f1ab0aa6",
-            "name": "highcharts_linechart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "chart": {
-                                            "type": "line"
-                                        },
-                                        "title": {
-                                            "text": "Monthly Average Temperature"
-                                        },
-                                        "subtitle": {
-                                            "text": "Source: WorldClimate.com"
-                                        },
-                                        "xAxis": {
-                                            "categories": [
-                                                "Jan",
-                                                "Feb",
-                                                "Mar",
-                                                "Apr",
-                                                "May",
-                                                "Jun",
-                                                "Jul",
-                                                "Aug",
-                                                "Sep",
-                                                "Oct",
-                                                "Nov",
-                                                "Dec"
-                                            ]
-                                        },
-                                        "yAxis": {
-                                            "title": {
-                                                "text": "Temperature (°C)"
-                                            }
-                                        },
-                                        "plotOptions": {
-                                            "line": {
-                                                "dataLabels": {
-                                                    "enabled": true
-                                                },
-                                                "enableMouseTracking": false
-                                            }
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "Tokyo",
-                                                "data": [
-                                                    7,
-                                                    6.9,
-                                                    9.5,
-                                                    14.5,
-                                                    18.4,
-                                                    21.5,
-                                                    25.2,
-                                                    26.5,
-                                                    23.3,
-                                                    18.3,
-                                                    13.9,
-                                                    9.6
-                                                ]
-                                            },
-                                            {
-                                                "name": "London",
-                                                "data": [
-                                                    3.9,
-                                                    4.2,
-                                                    5.7,
-                                                    8.5,
-                                                    11.9,
-                                                    15.2,
-                                                    17,
-                                                    16.6,
-                                                    14.2,
-                                                    10.3,
-                                                    6.6,
-                                                    4.8
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T16:54:02.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
         },
         {
             "_id": "56171403712cef6a1c5b7079",
@@ -4539,6 +3559,986 @@
             "group": "",
             "status": "",
             "create_date": "2015-10-17T14:44:34.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561c4af02a3ac4cd6589e07e",
+            "name": "plotly_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
+                                            ],
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-13T00:06:08.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561931ebaf72dea65f2bb7f1",
+            "name": "plate1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plate - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plate",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "cellData": [
+                                    {
+                                        "row": 1,
+                                        "col": 1,
+                                        "iconClass": "fa fa-dot-circle-o ",
+                                        "color": "#f00",
+                                        "text": "blank"
+                                    },
+                                    {
+                                        "row": 8,
+                                        "col": 12,
+                                        "iconClass": "fa fa-circle",
+                                        "color": "#0ff",
+                                        "text": "ref"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-10T15:42:35.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "561ad789e39daac5615ffd94",
+            "name": "plotlydemo",
+            "description": "",
+            "composition": "gallery2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"margin-top:25px;text-align:center;\">Plotly Component Gallery</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "r3c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5,
+                                                6,
+                                                7,
+                                                8
+                                            ],
+                                            "y": [
+                                                2,
+                                                3,
+                                                5,
+                                                8,
+                                                13,
+                                                15,
+                                                18,
+                                                27
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Lineplot</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r4c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5,
+                                                6
+                                            ],
+                                            "y": [
+                                                101,
+                                                99,
+                                                97.28,
+                                                92.61,
+                                                79.91,
+                                                45.4
+                                            ]
+                                        }
+                                    ],
+                                    "layout": {
+                                        "xaxis": {
+                                            "type": "log"
+                                        },
+                                        "yaxis": {
+                                            "type": "log"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r4c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Logplot</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r5c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Monday",
+                                                "Tuesday",
+                                                "Wednesday",
+                                                "Thursday",
+                                                "Friday"
+                                            ],
+                                            "y": [
+                                                "Morning",
+                                                "Afternoon",
+                                                "Evening"
+                                            ],
+                                            "z": [
+                                                [
+                                                    1,
+                                                    20,
+                                                    30,
+                                                    50,
+                                                    1
+                                                ],
+                                                [
+                                                    20,
+                                                    1,
+                                                    60,
+                                                    80,
+                                                    30
+                                                ],
+                                                [
+                                                    30,
+                                                    60,
+                                                    1,
+                                                    -10,
+                                                    20
+                                                ]
+                                            ],
+                                            "type": "heatmap"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r5c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Heatmap</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r6c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
+                                            ],
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r6c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Barchart</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r7c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "y": [
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thr",
+                                                "Fri"
+                                            ],
+                                            "x": [
+                                                70,
+                                                80,
+                                                100,
+                                                60,
+                                                40
+                                            ],
+                                            "type": "bar",
+                                            "orientation": "h"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r7c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Barchart Horizontal</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r8c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3,
+                                                4
+                                            ],
+                                            "y": [
+                                                10,
+                                                15,
+                                                13,
+                                                17
+                                            ],
+                                            "mode": "markers",
+                                            "type": "scatter"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r8c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Scatter Plot</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r9c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "values": [
+                                                19,
+                                                26,
+                                                55
+                                            ],
+                                            "labels": [
+                                                "Residential",
+                                                "Non-Residential",
+                                                "Utility"
+                                            ],
+                                            "type": "pie"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r9c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4>Pie Plot</h4>"
+                            }
+                        }
+                    }
+                ],
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T21:41:29.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5619cbd951882eea1d627452",
+            "name": "webcharts_group_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Group Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Medal Count",
+                                        "type": "linear",
+                                        "column": "count",
+                                        "domain": [
+                                            0
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "arrange": "grouped",
+                                            "split": "type",
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "attributes": {
+                                                "fill-opacity": 0.8
+                                            }
+                                        }
+                                    ],
+                                    "gridlines": "x",
+                                    "color_by": "type",
+                                    "colors": [
+                                        "#8c7853",
+                                        "#c0c0c0",
+                                        "#e5c100"
+                                    ],
+                                    "legend": {
+                                        "label": "MedalType",
+                                        "order": [
+                                            "Bronze",
+                                            "Silver",
+                                            "Gold"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T02:39:21.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5621a7ea55ce0f3c5b3c8040",
+            "name": "highcharts_areachart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Areachart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "area"
+                                        },
+                                        "title": {
+                                            "text": "Historic and Estimated Worldwide Population Growth by Region"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: Wikipedia.org"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "1750",
+                                                "1800",
+                                                "1850",
+                                                "1900",
+                                                "1950",
+                                                "1999",
+                                                "2050"
+                                            ],
+                                            "tickmarkPlacement": "on",
+                                            "title": {
+                                                "enabled": false
+                                            }
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Billions"
+                                            },
+                                            "labels": {}
+                                        },
+                                        "tooltip": {
+                                            "shared": true,
+                                            "valueSuffix": " millions"
+                                        },
+                                        "plotOptions": {
+                                            "area": {
+                                                "stacking": "normal",
+                                                "lineColor": "#666666",
+                                                "lineWidth": 1,
+                                                "marker": {
+                                                    "lineWidth": 1,
+                                                    "lineColor": "#666666"
+                                                }
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Asia",
+                                                "data": [
+                                                    502,
+                                                    635,
+                                                    809,
+                                                    947,
+                                                    1402,
+                                                    3634,
+                                                    5268
+                                                ]
+                                            },
+                                            {
+                                                "name": "Africa",
+                                                "data": [
+                                                    106,
+                                                    107,
+                                                    111,
+                                                    133,
+                                                    221,
+                                                    767,
+                                                    1766
+                                                ]
+                                            },
+                                            {
+                                                "name": "Europe",
+                                                "data": [
+                                                    163,
+                                                    203,
+                                                    276,
+                                                    408,
+                                                    547,
+                                                    729,
+                                                    628
+                                                ]
+                                            },
+                                            {
+                                                "name": "America",
+                                                "data": [
+                                                    18,
+                                                    31,
+                                                    54,
+                                                    156,
+                                                    339,
+                                                    818,
+                                                    1201
+                                                ]
+                                            },
+                                            {
+                                                "name": "Oceania",
+                                                "data": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    6,
+                                                    13,
+                                                    30,
+                                                    46
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T01:44:10.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5611f71e9a0c6ff825594e17",
+            "name": "treeview1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Treeview - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": "",
+                "r2c1": [
+                    {
+                        "widgetName": "Treeview",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": "",
+                            "filter": "",
+                            "data": {
+                                "treedata": [
+                                    {
+                                        "name": "website",
+                                        "iconClass": "fa fa-folder-o",
+                                        "children": [
+                                            {
+                                                "name": "images",
+                                                "iconClass": "fa fa-folder-o",
+                                                "children": [
+                                                    {
+                                                        "name": "logo.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    },
+                                                    {
+                                                        "name": "background.png",
+                                                        "iconClass": "fa fa-file-image-o"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "index.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "about.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            },
+                                            {
+                                                "name": "product.html",
+                                                "iconClass": "fa fa-file-text-o"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": "",
+                "r4c1": "",
+                "r5c1": "",
+                "r99c1": ""
+            },
+            "create_date": "2015-10-05T04:05:50.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "56227d2a72792c94f1ab0aa6",
+            "name": "highcharts_linechart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "line"
+                                        },
+                                        "title": {
+                                            "text": "Monthly Average Temperature"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: WorldClimate.com"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "Jan",
+                                                "Feb",
+                                                "Mar",
+                                                "Apr",
+                                                "May",
+                                                "Jun",
+                                                "Jul",
+                                                "Aug",
+                                                "Sep",
+                                                "Oct",
+                                                "Nov",
+                                                "Dec"
+                                            ]
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Temperature (°C)"
+                                            }
+                                        },
+                                        "plotOptions": {
+                                            "line": {
+                                                "dataLabels": {
+                                                    "enabled": true
+                                                },
+                                                "enableMouseTracking": false
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Tokyo",
+                                                "data": [
+                                                    7,
+                                                    6.9,
+                                                    9.5,
+                                                    14.5,
+                                                    18.4,
+                                                    21.5,
+                                                    25.2,
+                                                    26.5,
+                                                    23.3,
+                                                    18.3,
+                                                    13.9,
+                                                    9.6
+                                                ]
+                                            },
+                                            {
+                                                "name": "London",
+                                                "data": [
+                                                    3.9,
+                                                    4.2,
+                                                    5.7,
+                                                    8.5,
+                                                    11.9,
+                                                    15.2,
+                                                    17,
+                                                    16.6,
+                                                    14.2,
+                                                    10.3,
+                                                    6.6,
+                                                    4.8
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T16:54:02.000Z",
             "create_by": "",
             "edit_date": null,
             "edit_by": "",
@@ -11705,76 +11705,77 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "marker": {
-                                                "color": "rgb(106,81,163)"
-                                            },
-                                            "name": "11-14 m/s",
-                                            "r": [
-                                                77.5,
-                                                72.5,
-                                                70,
-                                                45,
-                                                22.5,
-                                                42.5,
-                                                40,
-                                                62.5
+                                            "type": "scatter",
+                                            "x": [
+                                                0,
+                                                1,
+                                                2
                                             ],
-                                            "t": [
-                                                "North",
-                                                "N-E",
-                                                "East",
-                                                "S-E",
-                                                "South",
-                                                "S-W",
-                                                "West",
-                                                "N-W"
-                                            ],
-                                            "type": "area"
+                                            "y": [
+                                                10,
+                                                11,
+                                                12
+                                            ]
                                         },
                                         {
-                                            "marker": {
-                                                "color": "rgb(158,154,200)"
-                                            },
-                                            "name": "8-11 m/s",
-                                            "r": [
-                                                57.5,
-                                                50,
-                                                45,
-                                                35,
-                                                20,
-                                                22.5,
-                                                37.5,
-                                                55
+                                            "type": "scatter",
+                                            "x": [
+                                                2,
+                                                3,
+                                                4
                                             ],
-                                            "t": [
-                                                "North",
-                                                "N-E",
-                                                "East",
-                                                "S-E",
-                                                "South",
-                                                "S-W",
-                                                "West",
-                                                "N-W"
+                                            "xaxis": "x2",
+                                            "y": [
+                                                100,
+                                                110,
+                                                120
                                             ],
-                                            "type": "area"
+                                            "yaxis": "y2"
+                                        },
+                                        {
+                                            "type": "scatter",
+                                            "x": [
+                                                3,
+                                                4,
+                                                5
+                                            ],
+                                            "xaxis": "x3",
+                                            "y": [
+                                                1000,
+                                                1100,
+                                                1200
+                                            ],
+                                            "yaxis": "y3"
                                         }
                                     ],
                                     "layout": {
-                                        "font": {
-                                            "size": 16
-                                        },
                                         "legend": {
-                                            "font": {
-                                                "size": 16
-                                            }
+                                            "traceorder": "reversed"
                                         },
-                                        "orientation": 270,
-                                        "radialaxis": {
-                                            "ticksuffix": "%"
+                                        "xaxis2": {
+                                            "anchor": "y2"
                                         },
-                                        "width": 600,
-                                        "height": 450,
-                                        "title": "Wind Speed Distribution"
+                                        "xaxis3": {
+                                            "anchor": "y3"
+                                        },
+                                        "yaxis": {
+                                            "domain": [
+                                                0,
+                                                0.266
+                                            ]
+                                        },
+                                        "yaxis2": {
+                                            "domain": [
+                                                0.366,
+                                                0.633
+                                            ]
+                                        },
+                                        "yaxis3": {
+                                            "domain": [
+                                                0.733,
+                                                1
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -11789,7 +11790,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Wind Rose Chart</h4>"
+                                "content": "<h4>Stacked Sub Plots</h4>"
                             }
                         }
                     }
