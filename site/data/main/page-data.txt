@@ -14649,47 +14649,112 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "locations": [
-                                                "FRA",
-                                                "DEU",
-                                                "RUS",
-                                                "ESP"
-                                            ],
-                                            "marker": {
-                                                "cmax": 50,
-                                                "cmin": 0,
-                                                "color": [
-                                                    10,
-                                                    20,
-                                                    40,
-                                                    50
-                                                ],
-                                                "colorbar": {
-                                                    "showticksuffix": "last",
-                                                    "ticksuffix": "%",
-                                                    "title": "Some rate"
-                                                },
-                                                "colorscale": "Greens",
-                                                "line": {
-                                                    "color": "black"
-                                                },
-                                                "size": [
-                                                    20,
-                                                    30,
-                                                    15,
-                                                    10
-                                                ]
+                                            "colorbar": {
+                                                "autotick": false,
+                                                "dtick": 1,
+                                                "tick0": 0
                                             },
-                                            "mode": "markers",
-                                            "name": "europe data",
-                                            "type": "scattergeo"
+                                            "colorscale": [
+                                                [
+                                                    0,
+                                                    "rgb(0, 0, 0)"
+                                                ],
+                                                [
+                                                    0.1,
+                                                    "rgb(0, 0, 0)"
+                                                ],
+                                                [
+                                                    0.1,
+                                                    "rgb(20, 20, 20)"
+                                                ],
+                                                [
+                                                    0.2,
+                                                    "rgb(20, 20, 20)"
+                                                ],
+                                                [
+                                                    0.2,
+                                                    "rgb(40, 40, 40)"
+                                                ],
+                                                [
+                                                    0.3,
+                                                    "rgb(40, 40, 40)"
+                                                ],
+                                                [
+                                                    0.3,
+                                                    "rgb(60, 60, 60)"
+                                                ],
+                                                [
+                                                    0.4,
+                                                    "rgb(60, 60, 60)"
+                                                ],
+                                                [
+                                                    0.4,
+                                                    "rgb(80, 80, 80)"
+                                                ],
+                                                [
+                                                    0.5,
+                                                    "rgb(80, 80, 80)"
+                                                ],
+                                                [
+                                                    0.5,
+                                                    "rgb(100, 100, 100)"
+                                                ],
+                                                [
+                                                    0.6,
+                                                    "rgb(100, 100, 100)"
+                                                ],
+                                                [
+                                                    0.6,
+                                                    "rgb(120, 120, 120)"
+                                                ],
+                                                [
+                                                    0.7,
+                                                    "rgb(120, 120, 120)"
+                                                ],
+                                                [
+                                                    0.7,
+                                                    "rgb(140, 140, 140)"
+                                                ],
+                                                [
+                                                    0.8,
+                                                    "rgb(140, 140, 140)"
+                                                ],
+                                                [
+                                                    0.8,
+                                                    "rgb(160, 160, 160)"
+                                                ],
+                                                [
+                                                    0.9,
+                                                    "rgb(160, 160, 160)"
+                                                ],
+                                                [
+                                                    0.9,
+                                                    "rgb(180, 180, 180)"
+                                                ],
+                                                [
+                                                    1,
+                                                    "rgb(180, 180, 180)"
+                                                ]
+                                            ],
+                                            "type": "heatmap",
+                                            "z": [
+                                                [
+                                                    0,
+                                                    1,
+                                                    2,
+                                                    3,
+                                                    4,
+                                                    5,
+                                                    6,
+                                                    7,
+                                                    8,
+                                                    9
+                                                ]
+                                            ]
                                         }
                                     ],
                                     "layout": {
-                                        "geo": {
-                                            "resolution": 50,
-                                            "scope": "europe"
-                                        }
+                                        "title": "CUSTOM DISCRETIZED HEATMAP COLORSCALE"
                                     }
                                 }
                             }
@@ -14704,7 +14769,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Europe Map</h4>"
+                                "content": "<h4>Custom discrete Heapmap</h4>"
                             }
                         }
                     }
