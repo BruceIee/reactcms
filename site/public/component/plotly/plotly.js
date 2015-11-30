@@ -23,6 +23,7 @@ var PlotlyGraph = React.createClass({
         var layout = this.state.value.layout;
         var graphElement = React.findDOMNode(this.refs.graph);
         /* read data from file if filename is present
+        
         column name on first row of csv file (x,y) must match data attribute names( x and y )
         {
             "filename": "/data/chart/2014_apple_stock.csv",
@@ -33,19 +34,26 @@ var PlotlyGraph = React.createClass({
                 }
             ]
         }
+        
+        csv file example:
+        x,y
+        2014-01-02,77.44539475
+        2014-01-03,77.04557544
         */
         if (filename) {
-            d3.csv(filename, function(rows) {
-                var plotData = {};
-                for (var fieldName in data[0]) {
-                    plotData[fieldName] = [];
-                    for (var i = 0; i < rows.length; i++) {
-                        var row = rows[i];
-                        plotData[fieldName].push(row[fieldName]);
+            if (filetype === 'csv') {
+                d3.csv(filename, function(rows) {
+                    var plotData = {};
+                    for (var fieldName in data[0]) {
+                        data[0][fieldName] = [];
+                        for (var i = 0; i < rows.length; i++) {
+                            var row = rows[i];
+                            data[0][fieldName].push(row[fieldName]);
+                        }
                     }
-                }
-                Plotly.plot(graphElement, [plotData], layout);
-            });
+                    Plotly.plot(graphElement, data, layout);
+                });
+            }
         } else {
             Plotly.plot(graphElement, data, layout);
         }
