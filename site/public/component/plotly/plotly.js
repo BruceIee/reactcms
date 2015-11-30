@@ -17,10 +17,18 @@ var PlotlyGraph = React.createClass({
     },
     
     componentDidMount: function() {
-        var graphElement = React.findDOMNode(this.refs.graph);
+        var filetype = this.state.value.filetype;
+        var filename = this.state.value.filename || '';
         var data = this.state.value.data;
         var layout = this.state.value.layout;
-        Plotly.plot(graphElement, data, layout, { showLink: false, displayModeBar: false });
+        var graphElement = React.findDOMNode(this.refs.graph);
+        // read data from file if filename is present
+        if (filename) {
+            // todo: read file
+            Plotly.plot(graphElement, data, layout);
+        } else {
+            Plotly.plot(graphElement, data, layout);
+        }
     },
     
     render: function() {
