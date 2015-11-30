@@ -47,7 +47,7 @@ var PlotlyGraph = React.createClass({
                 Plotly.plot(graphElement, [plotData], layout);
             });
         } else {
-            Plotly.plot(graphElement, data[0], layout);
+            Plotly.plot(graphElement, data, layout);
         }
     },
     
