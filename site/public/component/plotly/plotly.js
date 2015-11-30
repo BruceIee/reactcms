@@ -17,7 +17,7 @@ var PlotlyGraph = React.createClass({
     },
     
     componentDidMount: function() {
-        var filetype = this.state.value.filetype;
+        var filetype = this.state.value.filetype || 'csv';
         var filename = this.state.value.filename || '';
         var data = this.state.value.data;
         var layout = this.state.value.layout;
@@ -25,6 +25,9 @@ var PlotlyGraph = React.createClass({
         // read data from file if filename is present
         if (filename) {
             // todo: read file
+            $.get(filename, function(data) {
+                console.log('>>> file content:', data);
+            });
             Plotly.plot(graphElement, data, layout);
         } else {
             Plotly.plot(graphElement, data, layout);
