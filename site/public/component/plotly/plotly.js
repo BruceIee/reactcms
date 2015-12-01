@@ -55,7 +55,7 @@ var PlotlyGraph = React.createClass({
                 });
             }
         } else {
-            Plotly.plot(graphElement, data, layout);
+            Plotly.plot(graphElement, data, layout, { displayModeBar:false });
         }
     },
     
