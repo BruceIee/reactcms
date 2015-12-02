@@ -384,107 +384,107 @@
                 },
                 {
                     "name": "r3c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r3c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r3c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r4c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r4c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r4c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r5c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r5c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r5c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r6c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r6c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r6c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r7c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r7c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r7c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r8c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r8c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r8c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r9c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r9c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
                     "name": "r9c3",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 4
                 },
                 {
@@ -533,102 +533,102 @@
                 },
                 {
                     "name": "r3c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r3c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r4c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r4c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r5c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r5c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r6c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r6c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r7c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r7c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r8c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r8c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r9c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r9c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r10c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r10c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r11c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r11c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r12c1",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
                     "name": "r12c2",
-                    "description": "gallary block",
+                    "description": "gallery block",
                     "width": 6
                 },
                 {
