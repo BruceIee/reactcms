@@ -2,21 +2,22 @@
     margin-top: 10px;
 }
 
-.section-item {
+.section-container .section-item:hover {
+    background-color: #f2f2f2;
+}
+
+.section-container .section-item {
     padding: 5px 5px 5px 10px;
     border: solid 1px #f2f2f2;
 }
-.section-item-active {
+
+.section-container .section-item-active {
     background-color: #f2f2f2;
 }
 
-.section-header {
+.section-container .section-header {
     background-color: #f2f2f2;
     padding: 10px;
-}
-
-.component-form {
-    /* padding-top: 10px; */
 }
 
 .form-top {
