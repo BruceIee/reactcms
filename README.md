@@ -12,10 +12,10 @@ sudo npm install -g browserify
 sudo npm install -g react-tools
 ```
 
-Go to site folder and load test project
+Go to site folder and load project (default to main project under data/main)
 
 ```
-node cmd.js load test
+node cmd.js load
 ```
 
 Start

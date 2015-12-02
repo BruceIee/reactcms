@@ -34,7 +34,7 @@ var setting = tool.getDefaultSetting(rootPath);
 
 // support command shortcuts
 var operation = process.argv[2] || 'start';
-var project = process.argv[3] || 'default';
+var project = process.argv[3] || 'main';
 
 switch (operation) {
     case 'initdb':
@@ -129,17 +129,9 @@ function initDb(app, callback) {
  * default to ./data
  */
 function backupData(app, callback) {
-    if (project !== 'default') {
-        var backup_folder = './data/' + project;
-        if ( fs.existsSync(backup_folder) ) {
-            rm_rf.sync(backup_folder);  // remove 'project' folder
-        }
-    } else {
-        var backup_folder = './data';
-        var txt_array = glob.sync(backup_folder + '/*.txt');
-        txt_array.forEach( function(filename){ // synchronous remove *.txt under ./data
-            fs.unlinkSync(filename);
-        })
+    var backup_folder = './data/' + project;
+    if ( fs.existsSync(backup_folder) ) {
+        rm_rf.sync(backup_folder);  // remove 'project' folder
     }
     console.log('backup to folder:',backup_folder);
     var app_modulenames_array = [];
@@ -153,11 +145,7 @@ function backupData(app, callback) {
     // backup modules
     async.forEachSeries(app_modulenames_array, backupModule, function(){
         // copy uploaded files
-        if (project !== 'default') {
-            var upfile_folder = './data/' + project + '/file';
-        } else {
-            var upfile_folder = './data/file';
-        }
+        var upfile_folder = './data/' + project + '/file';
         if ( fs.existsSync(upfile_folder) ) {
             rm_rf.sync(upfile_folder);  // remove folder
         }
