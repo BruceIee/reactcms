@@ -8558,13 +8558,71 @@
                             "filter": null,
                             "data": {
                                 "value": {
-                                    "filename": "/data/chart/2014_apple_stock.csv",
                                     "data": [
                                         {
-                                            "x": null,
-                                            "y": null
+                                            "boxpoints": "Outliers",
+                                            "marker": {
+                                                "color": "rgb(107,174,214)"
+                                            },
+                                            "name": "Female",
+                                            "type": "box",
+                                            "y": [
+                                                22,
+                                                23,
+                                                23,
+                                                24,
+                                                25,
+                                                25,
+                                                33,
+                                                33,
+                                                34,
+                                                36,
+                                                36,
+                                                41,
+                                                44,
+                                                44,
+                                                46,
+                                                47,
+                                                48
+                                            ]
+                                        },
+                                        {
+                                            "boxpoints": "Outliers",
+                                            "marker": {
+                                                "color": "rgb(106,81,163)"
+                                            },
+                                            "name": "Male",
+                                            "type": "box",
+                                            "y": [
+                                                19,
+                                                23,
+                                                23,
+                                                24,
+                                                24,
+                                                27,
+                                                28,
+                                                29,
+                                                33,
+                                                35,
+                                                36,
+                                                38,
+                                                38,
+                                                39,
+                                                40,
+                                                41,
+                                                41,
+                                                45,
+                                                45,
+                                                47,
+                                                49,
+                                                50
+                                            ]
                                         }
                                     ]
+                                },
+                                "layout": {
+                                    "height": 400,
+                                    "title": "Gender Comparison in Test Study"
                                 }
                             }
                         }
@@ -8578,7 +8636,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Plot stock data from csv file</h4>"
+                                "content": "<h4>Gender Comparision in Box plot</h4>"
                             }
                         }
                     }
@@ -8594,104 +8652,17 @@
                                 "value": {
                                     "data": [
                                         {
-                                            "mode": "line",
-                                            "name": "temperature",
                                             "x": [
-                                                "2015-02-01",
-                                                "2015-02-02",
-                                                "2015-02-03",
-                                                "2015-02-04",
-                                                "2015-02-05",
-                                                "2015-02-06",
-                                                "2015-02-07",
-                                                "2015-02-08",
-                                                "2015-02-09",
-                                                "2015-02-10",
-                                                "2015-02-11",
-                                                "2015-02-12",
-                                                "2015-02-13",
-                                                "2015-02-14",
-                                                "2015-02-15",
-                                                "2015-02-16",
-                                                "2015-02-17",
-                                                "2015-02-18",
-                                                "2015-02-19",
-                                                "2015-02-20",
-                                                "2015-02-21",
-                                                "2015-02-22",
-                                                "2015-02-23",
-                                                "2015-02-24",
-                                                "2015-02-25",
-                                                "2015-02-26",
-                                                "2015-02-27",
-                                                "2015-02-28"
+                                                "Female",
+                                                "Male"
                                             ],
                                             "y": [
-                                                -14,
-                                                -17,
-                                                -8,
-                                                -4,
-                                                -7,
-                                                -10,
-                                                -12,
-                                                -14,
-                                                -12,
-                                                -7,
-                                                -11,
-                                                -7,
-                                                -18,
-                                                -14,
-                                                -14,
-                                                -16,
-                                                -13,
-                                                -7,
-                                                -8,
-                                                -14,
-                                                -8,
-                                                -3,
-                                                -9,
-                                                -9,
-                                                -4,
-                                                -13,
-                                                -9,
-                                                -6
-                                            ]
+                                                17,
+                                                22
+                                            ],
+                                            "type": "bar"
                                         }
-                                    ],
-                                    "layout": {
-                                        "height": 500,
-                                        "shapes": [
-                                            {
-                                                "fillcolor": "#d3d3d3",
-                                                "line": {
-                                                    "width": 0
-                                                },
-                                                "opacity": 0.2,
-                                                "type": "rect",
-                                                "x0": "2015-02-04",
-                                                "x1": "2015-02-06",
-                                                "xref": "x",
-                                                "y0": 0,
-                                                "y1": 1,
-                                                "yref": "paper"
-                                            },
-                                            {
-                                                "fillcolor": "#d3d3d3",
-                                                "line": {
-                                                    "width": 0
-                                                },
-                                                "opacity": 0.2,
-                                                "type": "rect",
-                                                "x0": "2015-02-20",
-                                                "x1": "2015-02-22",
-                                                "xref": "x",
-                                                "y0": 0,
-                                                "y1": 1,
-                                                "yref": "paper"
-                                            }
-                                        ],
-                                        "width": 600
-                                    }
+                                    ]
                                 }
                             }
                         }
@@ -8705,7 +8676,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Plot with highlight in shapes</h4>"
+                                "content": "<h4>Gender Comparision in Bar plot</h4>"
                             }
                         }
                     }
@@ -8717,50 +8688,7 @@
                             "module": "",
                             "condition": null,
                             "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "type": "scatter",
-                                            "x": [
-                                                0,
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5
-                                            ],
-                                            "y": [
-                                                1.5,
-                                                1,
-                                                1.3,
-                                                0.7,
-                                                0.8,
-                                                0.9
-                                            ]
-                                        },
-                                        {
-                                            "type": "bar",
-                                            "x": [
-                                                0,
-                                                1,
-                                                2,
-                                                3,
-                                                4,
-                                                5
-                                            ],
-                                            "y": [
-                                                1,
-                                                0.5,
-                                                0.7,
-                                                -1.2,
-                                                0.3,
-                                                0.4
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
+                            "data": null
                         }
                     }
                 ],
@@ -8772,7 +8700,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Overlapping multiple chart types</h4>"
+                                "content": "<h4></h4>"
                             }
                         }
                     }
@@ -8784,53 +8712,7 @@
                             "module": "",
                             "condition": null,
                             "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "marker": {
-                                                "color": [
-                                                    "rgb(93, 164, 214)",
-                                                    "rgb(255, 144, 14)",
-                                                    "rgb(44, 160, 101)",
-                                                    "rgb(255, 65, 54)"
-                                                ],
-                                                "opacity": [
-                                                    1,
-                                                    0.8,
-                                                    0.6,
-                                                    0.4
-                                                ],
-                                                "size": [
-                                                    40,
-                                                    60,
-                                                    80,
-                                                    100
-                                                ]
-                                            },
-                                            "mode": "markers",
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4
-                                            ],
-                                            "y": [
-                                                10,
-                                                11,
-                                                12,
-                                                13
-                                            ]
-                                        }
-                                    ],
-                                    "layout": {
-                                        "height": 600,
-                                        "showlegend": false,
-                                        "title": "Marker Size and Color",
-                                        "width": 600
-                                    }
-                                }
-                            }
+                            "data": null
                         }
                     }
                 ],
@@ -8842,7 +8724,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Bubble plot with color</h4>"
+                                "content": "<h4></h4>"
                             }
                         }
                     }
@@ -8854,45 +8736,7 @@
                             "module": "",
                             "condition": null,
                             "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "fill": "tozeroy",
-                                            "type": "scatter",
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4
-                                            ],
-                                            "y": [
-                                                0,
-                                                2,
-                                                3,
-                                                5
-                                            ]
-                                        },
-                                        {
-                                            "fill": "tonexty",
-                                            "type": "scatter",
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4
-                                            ],
-                                            "y": [
-                                                3,
-                                                5,
-                                                1,
-                                                7
-                                            ]
-                                        }
-                                    ],
-                                    "layout": {}
-                                }
-                            }
+                            "data": null
                         }
                     }
                 ],
@@ -8904,7 +8748,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Overlaid area chart</h4>"
+                                "content": "<h4></h4>"
                             }
                         }
                     }
@@ -8916,99 +8760,7 @@
                             "module": "",
                             "condition": null,
                             "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "domain": {
-                                                "x": [
-                                                    0,
-                                                    0.48
-                                                ]
-                                            },
-                                            "hole": 0.4,
-                                            "hoverinfo": "label+percent+name",
-                                            "labels": [
-                                                "US",
-                                                "China",
-                                                "European Union",
-                                                "Russian Federation",
-                                                "Brazil",
-                                                "India",
-                                                "Rest of World"
-                                            ],
-                                            "name": "GHG Emissions",
-                                            "type": "pie",
-                                            "values": [
-                                                16,
-                                                15,
-                                                12,
-                                                6,
-                                                5,
-                                                4,
-                                                42
-                                            ]
-                                        },
-                                        {
-                                            "domain": {
-                                                "x": [
-                                                    0.52,
-                                                    1
-                                                ]
-                                            },
-                                            "hole": 0.4,
-                                            "hoverinfo": "label+percent+name",
-                                            "labels": [
-                                                "US",
-                                                "China",
-                                                "European Union",
-                                                "Russian Federation",
-                                                "Brazil",
-                                                "India",
-                                                "Rest of World"
-                                            ],
-                                            "name": "CO2 Emissions",
-                                            "text": "CO2",
-                                            "textposition": "inside",
-                                            "type": "pie",
-                                            "values": [
-                                                27,
-                                                11,
-                                                25,
-                                                8,
-                                                1,
-                                                3,
-                                                25
-                                            ]
-                                        }
-                                    ],
-                                    "layout": {
-                                        "annotations": [
-                                            {
-                                                "font": {
-                                                    "size": 20
-                                                },
-                                                "showarrow": false,
-                                                "text": "GHG",
-                                                "x": 0.17,
-                                                "y": 0.5
-                                            },
-                                            {
-                                                "font": {
-                                                    "size": 20
-                                                },
-                                                "showarrow": false,
-                                                "text": "CO2",
-                                                "x": 0.82,
-                                                "y": 0.5
-                                            }
-                                        ],
-                                        "height": 600,
-                                        "title": "Global Emissions 1990-2011",
-                                        "width": 600
-                                    }
-                                }
-                            }
+                            "data": null
                         }
                     }
                 ],
@@ -9020,7 +8772,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Donut chart</h4>"
+                                "content": "<h4></h4>"
                             }
                         }
                     }
@@ -9032,43 +8784,7 @@
                             "module": "",
                             "condition": null,
                             "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "marker": {
-                                                "size": 16
-                                            },
-                                            "mode": "markers",
-                                            "text": [
-                                                "Text A",
-                                                "Text B",
-                                                "Text C",
-                                                "Text D",
-                                                "Text E"
-                                            ],
-                                            "type": "scatter",
-                                            "x": [
-                                                0,
-                                                0.5,
-                                                1,
-                                                1.5,
-                                                2
-                                            ],
-                                            "y": [
-                                                1,
-                                                3,
-                                                2,
-                                                4,
-                                                2
-                                            ]
-                                        }
-                                    ],
-                                    "layout": {
-                                        "title": "Hover over the points to see the text"
-                                    }
-                                }
-                            }
+                            "data": null
                         }
                     }
                 ],
@@ -9080,7 +8796,7 @@
                             "condition": null,
                             "filter": null,
                             "data": {
-                                "content": "<h4>Hover text</h4>"
+                                "content": "<h4></h4>"
                             }
                         }
                     }
