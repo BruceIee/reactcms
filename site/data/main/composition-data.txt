@@ -602,6 +602,36 @@
                     "width": 6
                 },
                 {
+                    "name": "r10c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r10c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r11c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r11c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r12c1",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
+                    "name": "r12c2",
+                    "description": "gallary block",
+                    "width": 6
+                },
+                {
                     "name": "f1c1",
                     "description": "footer",
                     "width": 12
