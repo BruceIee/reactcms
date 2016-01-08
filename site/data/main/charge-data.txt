@@ -48,7 +48,91 @@
             "type": "string"
         }
     },
-    "count":0,
+    "count":1,
     "items": [
+        {
+            "user_id": "568b17e4d45890f90a43567b",
+            "shopping_cart": {
+                "user_id": "568b17e4d45890f90a43567b",
+                "items": [
+                    {
+                        "id": "562d4b4f9dce17a2102c5594",
+                        "title": "Huawei Ascend Y530",
+                        "price": 79,
+                        "image": null,
+                        "quantity": 1
+                    }
+                ],
+                "_class": "basket",
+                "_id": "568f1ef9d45890f90a43567f",
+                "total": 79
+            },
+            "payment_type": "stripe",
+            "payment_amount": 7900,
+            "payment_result": {
+                "id": "ch_7gCPm2yHrnwgMf",
+                "object": "charge",
+                "amount": 7900,
+                "amount_refunded": 0,
+                "application_fee": null,
+                "balance_transaction": "txn_7gCP1rpQlcVBwp",
+                "captured": true,
+                "created": 1452220171,
+                "currency": "usd",
+                "customer": null,
+                "description": "reactcms charge",
+                "destination": null,
+                "dispute": null,
+                "failure_code": null,
+                "failure_message": null,
+                "fraud_details": {},
+                "invoice": null,
+                "livemode": false,
+                "metadata": {},
+                "paid": true,
+                "receipt_email": null,
+                "receipt_number": null,
+                "refunded": false,
+                "refunds": {
+                    "object": "list",
+                    "data": [],
+                    "has_more": false,
+                    "total_count": 0,
+                    "url": "/v1/charges/ch_7gCPm2yHrnwgMf/refunds"
+                },
+                "shipping": null,
+                "source": {
+                    "id": "card_7gCP7uZW7w0SjD",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": null,
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2018,
+                    "fingerprint": "oFb1QiC72cBMir5t",
+                    "funding": "unknown",
+                    "last4": "1111",
+                    "metadata": {},
+                    "name": null,
+                    "tokenization_method": null
+                },
+                "statement_descriptor": null,
+                "status": "succeeded"
+            },
+            "status": "active",
+            "create_date": "2016-01-08T02:29:19.000Z",
+            "_class": "charge",
+            "_id": "568f1effd45890f90a435680"
+        }
     ]
 }

@@ -73,307 +73,6 @@
             "edit_by": ""
         },
         {
-            "_id": "561c4b9d2a3ac4cd6589e07f",
-            "name": "plotly_barchart2",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "y": [
-                                                "Mon",
-                                                "Tue",
-                                                "Wed",
-                                                "Thr",
-                                                "Fri"
-                                            ],
-                                            "x": [
-                                                70,
-                                                80,
-                                                100,
-                                                60,
-                                                40
-                                            ],
-                                            "type": "bar",
-                                            "orientation": "h"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-13T00:09:01.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "562d993dfb0c088914a5af2b",
-            "name": "productdetail1",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">ProductDetail - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "ProductDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "boxClass": "md-col-10",
-                                "image": {
-                                    "filename": "media-image-1443919028472-cat12.jpg"
-                                },
-                                "title": "test title for cat12"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-26T03:08:45.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561711dd712cef6a1c5b7077",
-            "name": "linechart2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphLinechart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:01:17.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5617138f712cef6a1c5b7078",
-            "name": "scatterplotb",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:08:31.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "566d036e299b340f0d38a094",
-            "name": "typeahead02",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Typeahead - Data Content with Query</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Typeahead",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "label": "Select State",
-                                "values": [
-                                    "Maryland",
-                                    "Virginia",
-                                    "Delaware",
-                                    "Pennsylvania",
-                                    "New York",
-                                    "Kentucky",
-                                    "Ohio",
-                                    "California"
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-12-13T05:34:38.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "561ad345e39daac5615ffd93",
             "name": "plotly_logplot1",
             "description": "",
@@ -519,131 +218,6 @@
                 "f2c1": null
             },
             "create_date": "2015-10-11T01:02:34.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "561c4af02a3ac4cd6589e07e",
-            "name": "plotly_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                "Bears",
-                                                "Lions",
-                                                "Tigers",
-                                                "Giraffes",
-                                                "Zebras"
-                                            ],
-                                            "y": [
-                                                1000,
-                                                800,
-                                                600,
-                                                400,
-                                                100
-                                            ],
-                                            "type": "bar"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-13T00:06:08.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561931ebaf72dea65f2bb7f1",
-            "name": "plate1",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plate - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plate",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "cellData": [
-                                    {
-                                        "row": 1,
-                                        "col": 1,
-                                        "iconClass": "fa fa-dot-circle-o ",
-                                        "color": "#f00",
-                                        "text": "blank"
-                                    },
-                                    {
-                                        "row": 8,
-                                        "col": 12,
-                                        "iconClass": "fa fa-circle",
-                                        "color": "#0ff",
-                                        "text": "ref"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T15:42:35.000Z",
             "_class": "page",
             "description": "",
             "group": "",
@@ -1458,6 +1032,1720 @@
             "_class": "page"
         },
         {
+            "_id": "5621a7ea55ce0f3c5b3c8040",
+            "name": "highcharts_areachart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Areachart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "type": "area"
+                                        },
+                                        "title": {
+                                            "text": "Historic and Estimated Worldwide Population Growth by Region"
+                                        },
+                                        "subtitle": {
+                                            "text": "Source: Wikipedia.org"
+                                        },
+                                        "xAxis": {
+                                            "categories": [
+                                                "1750",
+                                                "1800",
+                                                "1850",
+                                                "1900",
+                                                "1950",
+                                                "1999",
+                                                "2050"
+                                            ],
+                                            "tickmarkPlacement": "on",
+                                            "title": {
+                                                "enabled": false
+                                            }
+                                        },
+                                        "yAxis": {
+                                            "title": {
+                                                "text": "Billions"
+                                            },
+                                            "labels": {}
+                                        },
+                                        "tooltip": {
+                                            "shared": true,
+                                            "valueSuffix": " millions"
+                                        },
+                                        "plotOptions": {
+                                            "area": {
+                                                "stacking": "normal",
+                                                "lineColor": "#666666",
+                                                "lineWidth": 1,
+                                                "marker": {
+                                                    "lineWidth": 1,
+                                                    "lineColor": "#666666"
+                                                }
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Asia",
+                                                "data": [
+                                                    502,
+                                                    635,
+                                                    809,
+                                                    947,
+                                                    1402,
+                                                    3634,
+                                                    5268
+                                                ]
+                                            },
+                                            {
+                                                "name": "Africa",
+                                                "data": [
+                                                    106,
+                                                    107,
+                                                    111,
+                                                    133,
+                                                    221,
+                                                    767,
+                                                    1766
+                                                ]
+                                            },
+                                            {
+                                                "name": "Europe",
+                                                "data": [
+                                                    163,
+                                                    203,
+                                                    276,
+                                                    408,
+                                                    547,
+                                                    729,
+                                                    628
+                                                ]
+                                            },
+                                            {
+                                                "name": "America",
+                                                "data": [
+                                                    18,
+                                                    31,
+                                                    54,
+                                                    156,
+                                                    339,
+                                                    818,
+                                                    1201
+                                                ]
+                                            },
+                                            {
+                                                "name": "Oceania",
+                                                "data": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    6,
+                                                    13,
+                                                    30,
+                                                    46
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T01:44:10.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561663af553b57a720a4418b",
+            "name": "barchart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Barchart - Database Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-08T12:38:07.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150fe77e0f6b6f16fcea40",
+            "name": "areachart1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Area Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphAreachart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:28:23.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5613b9da40659eca03be7c2f",
+            "name": "barchart1",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphBarchart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "label": "plot1",
+                                    "values": [
+                                        {
+                                            "x": "Class A",
+                                            "y": 8
+                                        },
+                                        {
+                                            "x": "Class B",
+                                            "y": 4
+                                        },
+                                        {
+                                            "x": "Class C",
+                                            "y": 6
+                                        },
+                                        {
+                                            "x": "Class D",
+                                            "y": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "create_date": "2015-10-06T12:08:58.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": ""
+        },
+        {
+            "_id": "56414eabcd1ca35d18d1aaf1",
+            "name": "typeahead01",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Typeahead - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Typeahead",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "label": "Select State",
+                                "values": [
+                                    "Maryland",
+                                    "Virginia",
+                                    "Delaware",
+                                    "Pennsylvania",
+                                    "New York",
+                                    "Kentucky",
+                                    "Ohio",
+                                    "California"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-11-10T01:55:55.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "561acd46e39daac5615ffd92",
+            "name": "plotly_lineplot1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Lineplot Basic - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3
+                                            ],
+                                            "y": [
+                                                2,
+                                                3,
+                                                5
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T20:57:42.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561711b8712cef6a1c5b7076",
+            "name": "areachart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphAreachart",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:00:40.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56150ed57e0f6b6f16fcea3e",
+            "name": "scatterplot2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-07T12:23:49.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5651ed0072e7dd634db60fe3",
+            "name": "plotly_scatterplot1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                1,
+                                                2,
+                                                3,
+                                                4
+                                            ],
+                                            "y": [
+                                                10,
+                                                15,
+                                                13,
+                                                17
+                                            ],
+                                            "mode": "markers",
+                                            "type": "scatter"
+                                        }
+                                    ],
+                                    "layout": {
+                                        "height": 400,
+                                        "width": 500
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-11-22T16:27:44.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56171530712cef6a1c5b707a",
+            "name": "piechart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphPiechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:15:28.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56188eb1f823f4a512a4236c",
+            "name": "home",
+            "composition": "sidenav2",
+            "content": {
+                "h1c1": null,
+                "h2c1": [
+                    {
+                        "widgetName": "BlackbootHeader",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "Base",
+                                "links1": [
+                                    {
+                                        "link": "/pages/home",
+                                        "text": "HOME"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/pages/about",
+                                        "text": "ABOUT"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
+                            }
+                        }
+                    }
+                ],
+                "r2c1": [
+                    {
+                        "widgetName": "LinksetDetail",
+                        "widgetInfo": {
+                            "module": "linkset",
+                            "condition": {
+                                "name": "home_links"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r2c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r3c2": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "title": "reactcms-title",
+                                "content": ""
+                            }
+                        }
+                    }
+                ],
+                "r4c1": null,
+                "r4c2": null,
+                "r5c1": null,
+                "r6c1": null,
+                "r7c1": null,
+                "r8c1": null,
+                "r9c1": null,
+                "f1c1": [
+                    {
+                        "widgetName": "BlackbootFooter",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "links1": [
+                                    {
+                                        "link": "/",
+                                        "text": "Home"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Team"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Careers"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Resources"
+                                    }
+                                ],
+                                "links2": [
+                                    {
+                                        "link": "/contact",
+                                        "text": "Contact"
+                                    },
+                                    {
+                                        "link": "/about",
+                                        "text": "About Us"
+                                    }
+                                ],
+                                "links3": [
+                                    {
+                                        "link": "/",
+                                        "text": "Facebook"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Twitter"
+                                    },
+                                    {
+                                        "link": "/",
+                                        "text": "Reddit"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "f2c1": null
+            },
+            "create_date": "2015-10-10T04:06:09.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
+            "_id": "5619bf2551882eea1d627451",
+            "name": "webcharts_stack_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Stack Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Medal Count",
+                                        "type": "linear",
+                                        "column": "count",
+                                        "domain": [
+                                            0
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "arrange": "stacked",
+                                            "split": "type",
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "attributes": {
+                                                "fill-opacity": 0.8
+                                            },
+                                            "summarizeX": "mean"
+                                        }
+                                    ],
+                                    "gridlines": "x",
+                                    "color_by": "type",
+                                    "legend": {
+                                        "label": "MedalType",
+                                        "order": [
+                                            "Bronze",
+                                            "Silver",
+                                            "Gold"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T01:45:09.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "562074d4550ebb694c650de9",
+            "name": "highcharts_piechart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Piechart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "chart": {
+                                            "plotBackgroundColor": null,
+                                            "plotBorderWidth": null,
+                                            "plotShadow": false,
+                                            "type": "pie"
+                                        },
+                                        "title": {
+                                            "text": "Browser market shares January, 2015 to May, 2015"
+                                        },
+                                        "tooltip": {
+                                            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+                                        },
+                                        "plotOptions": {
+                                            "pie": {
+                                                "allowPointSelect": true,
+                                                "cursor": "pointer",
+                                                "dataLabels": {
+                                                    "enabled": false
+                                                },
+                                                "showInLegend": true
+                                            }
+                                        },
+                                        "series": [
+                                            {
+                                                "name": "Brands",
+                                                "colorByPoint": true,
+                                                "data": [
+                                                    {
+                                                        "name": "Microsoft Internet Explorer",
+                                                        "y": 56.33
+                                                    },
+                                                    {
+                                                        "name": "Chrome",
+                                                        "y": 24.03,
+                                                        "sliced": true,
+                                                        "selected": true
+                                                    },
+                                                    {
+                                                        "name": "Firefox",
+                                                        "y": 10.38
+                                                    },
+                                                    {
+                                                        "name": "Safari",
+                                                        "y": 4.77
+                                                    },
+                                                    {
+                                                        "name": "Opera",
+                                                        "y": 0.91
+                                                    },
+                                                    {
+                                                        "name": "Proprietary or Undetectable",
+                                                        "y": 0.2
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-16T03:53:56.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "56225ed2b54ef68c7a3be787",
+            "name": "highcharts_treemap1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Highcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": {
+                                        "series": [
+                                            {
+                                                "type": "treemap",
+                                                "layoutAlgorithm": "stripes",
+                                                "alternateStartingDirection": true,
+                                                "levels": [
+                                                    {
+                                                        "level": 1,
+                                                        "layoutAlgorithm": "sliceAndDice",
+                                                        "dataLabels": {
+                                                            "enabled": true,
+                                                            "align": "left",
+                                                            "verticalAlign": "top",
+                                                            "style": {
+                                                                "fontSize": "15px",
+                                                                "fontWeight": "bold"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "data": [
+                                                    {
+                                                        "id": "A",
+                                                        "name": "Apples",
+                                                        "color": "#EC2500"
+                                                    },
+                                                    {
+                                                        "id": "B",
+                                                        "name": "Bananas",
+                                                        "color": "#ECE100"
+                                                    },
+                                                    {
+                                                        "id": "O",
+                                                        "name": "Oranges",
+                                                        "color": "#EC9800"
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "A",
+                                                        "value": 5
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "A",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "A",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "B",
+                                                        "value": 4
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "B",
+                                                        "value": 10
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "B",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Anne",
+                                                        "parent": "O",
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "name": "Rick",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Peter",
+                                                        "parent": "O",
+                                                        "value": 3
+                                                    },
+                                                    {
+                                                        "name": "Susanne",
+                                                        "parent": "Kiwi",
+                                                        "value": 2,
+                                                        "color": "#9EDE00"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "title": {
+                                            "text": "Fruit consumption"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-17T14:44:34.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5619cbd951882eea1d627452",
+            "name": "webcharts_group_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Webcharts Group Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Webcharts",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
+                                    "max_width": "480",
+                                    "x": {
+                                        "label": "Medal Count",
+                                        "type": "linear",
+                                        "column": "count",
+                                        "domain": [
+                                            0
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "ordinal",
+                                        "column": "Country",
+                                        "sort": "total-descending"
+                                    },
+                                    "marks": [
+                                        {
+                                            "arrange": "grouped",
+                                            "split": "type",
+                                            "type": "bar",
+                                            "per": [
+                                                "Country"
+                                            ],
+                                            "attributes": {
+                                                "fill-opacity": 0.8
+                                            }
+                                        }
+                                    ],
+                                    "gridlines": "x",
+                                    "color_by": "type",
+                                    "colors": [
+                                        "#8c7853",
+                                        "#c0c0c0",
+                                        "#e5c100"
+                                    ],
+                                    "legend": {
+                                        "label": "MedalType",
+                                        "order": [
+                                            "Bronze",
+                                            "Silver",
+                                            "Gold"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-11T02:39:21.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561c4b9d2a3ac4cd6589e07f",
+            "name": "plotly_barchart2",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart Horizontal - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "y": [
+                                                "Mon",
+                                                "Tue",
+                                                "Wed",
+                                                "Thr",
+                                                "Fri"
+                                            ],
+                                            "x": [
+                                                70,
+                                                80,
+                                                100,
+                                                60,
+                                                40
+                                            ],
+                                            "type": "bar",
+                                            "orientation": "h"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-13T00:09:01.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "562d993dfb0c088914a5af2b",
+            "name": "productdetail1",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">ProductDetail - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "ProductDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "boxClass": "md-col-10",
+                                "image": {
+                                    "filename": "media-image-1443919028472-cat12.jpg"
+                                },
+                                "title": "test title for cat12"
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-26T03:08:45.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561711dd712cef6a1c5b7077",
+            "name": "linechart2",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Line Chart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphLinechart",
+                        "widgetInfo": {
+                            "module": "item",
+                            "condition": {
+                                "name": "chart4p"
+                            },
+                            "filter": null,
+                            "data": null
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:01:17.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "5617138f712cef6a1c5b7078",
+            "name": "scatterplotb",
+            "description": "",
+            "composition": "theone",
+            "content": {
+                "r0c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "r1c1": null,
+                "r2c1": [
+                    {
+                        "widgetName": "GraphScatterplot",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": [
+                                    {
+                                        "label": "ClassA",
+                                        "values": [
+                                            {
+                                                "x": 0,
+                                                "y": 2
+                                            },
+                                            {
+                                                "x": 1.3,
+                                                "y": 5
+                                            },
+                                            {
+                                                "x": 3,
+                                                "y": 1.6
+                                            },
+                                            {
+                                                "x": 3.5,
+                                                "y": 4.5
+                                            },
+                                            {
+                                                "x": 4,
+                                                "y": 6
+                                            },
+                                            {
+                                                "x": 4.5,
+                                                "y": 4.2
+                                            },
+                                            {
+                                                "x": 5,
+                                                "y": 3.3
+                                            },
+                                            {
+                                                "x": 5.5,
+                                                "y": 4.2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r3c1": null,
+                "r4c1": null,
+                "r5c1": null,
+                "r99c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-09T01:08:31.000Z",
+            "create_by": "",
+            "edit_date": "",
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "566d036e299b340f0d38a094",
+            "name": "typeahead02",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Typeahead - Data Content with Query</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Typeahead",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "label": "Select State",
+                                "values": [
+                                    "Maryland",
+                                    "Virginia",
+                                    "Delaware",
+                                    "Pennsylvania",
+                                    "New York",
+                                    "Kentucky",
+                                    "Ohio",
+                                    "California"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-12-13T05:34:38.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561c4af02a3ac4cd6589e07e",
+            "name": "plotly_barchart1",
+            "description": "",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plotly",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "value": {
+                                    "data": [
+                                        {
+                                            "x": [
+                                                "Bears",
+                                                "Lions",
+                                                "Tigers",
+                                                "Giraffes",
+                                                "Zebras"
+                                            ],
+                                            "y": [
+                                                1000,
+                                                800,
+                                                600,
+                                                400,
+                                                100
+                                            ],
+                                            "type": "bar"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "group": "",
+            "status": "",
+            "create_date": "2015-10-13T00:06:08.000Z",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": "",
+            "_class": "page"
+        },
+        {
+            "_id": "561931ebaf72dea65f2bb7f1",
+            "name": "plate1",
+            "composition": "theone2",
+            "content": {
+                "h1c1": [
+                    {
+                        "widgetName": "ArticleDetail",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "content": "<h4 style=\"text-align:center;\">Plate - Data Content</h4>"
+                            }
+                        }
+                    }
+                ],
+                "h2c1": null,
+                "r1c1": [
+                    {
+                        "widgetName": "Plate",
+                        "widgetInfo": {
+                            "module": "",
+                            "condition": null,
+                            "filter": null,
+                            "data": {
+                                "cellData": [
+                                    {
+                                        "row": 1,
+                                        "col": 1,
+                                        "iconClass": "fa fa-dot-circle-o ",
+                                        "color": "#f00",
+                                        "text": "blank"
+                                    },
+                                    {
+                                        "row": 8,
+                                        "col": 12,
+                                        "iconClass": "fa fa-circle",
+                                        "color": "#0ff",
+                                        "text": "ref"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "r2c1": null,
+                "f1c1": null,
+                "f2c1": null
+            },
+            "create_date": "2015-10-10T15:42:35.000Z",
+            "_class": "page",
+            "description": "",
+            "group": "",
+            "status": "",
+            "create_by": "",
+            "edit_date": null,
+            "edit_by": ""
+        },
+        {
             "_id": "561ad789e39daac5615ffd94",
             "name": "plotlydemo",
             "description": "",
@@ -2195,161 +3483,6 @@
             "edit_by": ""
         },
         {
-            "_id": "5621a7ea55ce0f3c5b3c8040",
-            "name": "highcharts_areachart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Areachart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "chart": {
-                                            "type": "area"
-                                        },
-                                        "title": {
-                                            "text": "Historic and Estimated Worldwide Population Growth by Region"
-                                        },
-                                        "subtitle": {
-                                            "text": "Source: Wikipedia.org"
-                                        },
-                                        "xAxis": {
-                                            "categories": [
-                                                "1750",
-                                                "1800",
-                                                "1850",
-                                                "1900",
-                                                "1950",
-                                                "1999",
-                                                "2050"
-                                            ],
-                                            "tickmarkPlacement": "on",
-                                            "title": {
-                                                "enabled": false
-                                            }
-                                        },
-                                        "yAxis": {
-                                            "title": {
-                                                "text": "Billions"
-                                            },
-                                            "labels": {}
-                                        },
-                                        "tooltip": {
-                                            "shared": true,
-                                            "valueSuffix": " millions"
-                                        },
-                                        "plotOptions": {
-                                            "area": {
-                                                "stacking": "normal",
-                                                "lineColor": "#666666",
-                                                "lineWidth": 1,
-                                                "marker": {
-                                                    "lineWidth": 1,
-                                                    "lineColor": "#666666"
-                                                }
-                                            }
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "Asia",
-                                                "data": [
-                                                    502,
-                                                    635,
-                                                    809,
-                                                    947,
-                                                    1402,
-                                                    3634,
-                                                    5268
-                                                ]
-                                            },
-                                            {
-                                                "name": "Africa",
-                                                "data": [
-                                                    106,
-                                                    107,
-                                                    111,
-                                                    133,
-                                                    221,
-                                                    767,
-                                                    1766
-                                                ]
-                                            },
-                                            {
-                                                "name": "Europe",
-                                                "data": [
-                                                    163,
-                                                    203,
-                                                    276,
-                                                    408,
-                                                    547,
-                                                    729,
-                                                    628
-                                                ]
-                                            },
-                                            {
-                                                "name": "America",
-                                                "data": [
-                                                    18,
-                                                    31,
-                                                    54,
-                                                    156,
-                                                    339,
-                                                    818,
-                                                    1201
-                                                ]
-                                            },
-                                            {
-                                                "name": "Oceania",
-                                                "data": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    6,
-                                                    13,
-                                                    30,
-                                                    46
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T01:44:10.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "565ef13e6b498cfa106ae375",
             "name": "plotlydemo5",
             "description": "",
@@ -2665,515 +3798,6 @@
             "_class": "page"
         },
         {
-            "_id": "561663af553b57a720a4418b",
-            "name": "barchart2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Barchart - Database Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphBarchart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-08T12:38:07.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56150fe77e0f6b6f16fcea40",
-            "name": "areachart1",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Area Chart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphAreachart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:28:23.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5613b9da40659eca03be7c2f",
-            "name": "barchart1",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphBarchart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "label": "plot1",
-                                    "values": [
-                                        {
-                                            "x": "Class A",
-                                            "y": 8
-                                        },
-                                        {
-                                            "x": "Class B",
-                                            "y": 4
-                                        },
-                                        {
-                                            "x": "Class C",
-                                            "y": 6
-                                        },
-                                        {
-                                            "x": "Class D",
-                                            "y": 3
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "create_date": "2015-10-06T12:08:58.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": ""
-        },
-        {
-            "_id": "56414eabcd1ca35d18d1aaf1",
-            "name": "typeahead01",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Typeahead - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Typeahead",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "label": "Select State",
-                                "values": [
-                                    "Maryland",
-                                    "Virginia",
-                                    "Delaware",
-                                    "Pennsylvania",
-                                    "New York",
-                                    "Kentucky",
-                                    "Ohio",
-                                    "California"
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "create_date": "2015-11-10T01:55:55.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
-        },
-        {
-            "_id": "561acd46e39daac5615ffd92",
-            "name": "plotly_lineplot1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Lineplot Basic - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3
-                                            ],
-                                            "y": [
-                                                2,
-                                                3,
-                                                5
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T20:57:42.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "561711b8712cef6a1c5b7076",
-            "name": "areachart2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphAreachart",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": [
-                                    {
-                                        "label": "ClassA",
-                                        "values": [
-                                            {
-                                                "x": 0,
-                                                "y": 2
-                                            },
-                                            {
-                                                "x": 1.3,
-                                                "y": 5
-                                            },
-                                            {
-                                                "x": 3,
-                                                "y": 1.6
-                                            },
-                                            {
-                                                "x": 3.5,
-                                                "y": 4.5
-                                            },
-                                            {
-                                                "x": 4,
-                                                "y": 6
-                                            },
-                                            {
-                                                "x": 4.5,
-                                                "y": 4.2
-                                            },
-                                            {
-                                                "x": 5,
-                                                "y": 3.3
-                                            },
-                                            {
-                                                "x": 5.5,
-                                                "y": 4.2
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:00:40.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56150ed57e0f6b6f16fcea3e",
-            "name": "scatterplot2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Scatter Plot - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphScatterplot",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-07T12:23:49.000Z",
-            "create_by": "",
-            "edit_date": "",
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5651ed0072e7dd634db60fe3",
-            "name": "plotly_scatterplot1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Plotly Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Plotly",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": [
-                                        {
-                                            "x": [
-                                                1,
-                                                2,
-                                                3,
-                                                4
-                                            ],
-                                            "y": [
-                                                10,
-                                                15,
-                                                13,
-                                                17
-                                            ],
-                                            "mode": "markers",
-                                            "type": "scatter"
-                                        }
-                                    ],
-                                    "layout": {
-                                        "height": 400,
-                                        "width": 500
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-11-22T16:27:44.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
             "_id": "5651ef0672e7dd634db60fe4",
             "name": "plotly_piechart1",
             "description": "",
@@ -3235,52 +3859,6 @@
             "create_date": "2015-11-22T16:36:22.000Z",
             "create_by": "",
             "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56171530712cef6a1c5b707a",
-            "name": "piechart2",
-            "description": "",
-            "composition": "theone",
-            "content": {
-                "r0c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Piechart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "r1c1": null,
-                "r2c1": [
-                    {
-                        "widgetName": "GraphPiechart",
-                        "widgetInfo": {
-                            "module": "item",
-                            "condition": {
-                                "name": "chart4p"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r4c1": null,
-                "r5c1": null,
-                "r99c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-09T01:15:28.000Z",
-            "create_by": "",
-            "edit_date": "",
             "edit_by": "",
             "_class": "page"
         },
@@ -3740,165 +4318,6 @@
             "edit_date": "2015-10-09T02:52:15.000Z",
             "edit_by": "admin",
             "_class": "page"
-        },
-        {
-            "_id": "56188eb1f823f4a512a4236c",
-            "name": "home",
-            "composition": "sidenav2",
-            "content": {
-                "h1c1": null,
-                "h2c1": [
-                    {
-                        "widgetName": "BlackbootHeader",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "Base",
-                                "links1": [
-                                    {
-                                        "link": "/pages/home",
-                                        "text": "HOME"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/pages/about",
-                                        "text": "ABOUT"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "r1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<h3 style=\"margin-top:25px;\">A Reactive Content Management System</h3>"
-                            }
-                        }
-                    }
-                ],
-                "r2c1": [
-                    {
-                        "widgetName": "LinksetDetail",
-                        "widgetInfo": {
-                            "module": "linkset",
-                            "condition": {
-                                "name": "home_links"
-                            },
-                            "filter": null,
-                            "data": null
-                        }
-                    }
-                ],
-                "r2c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": "<p>Welcome to the Base project. This serves as a template for new ReactCMS project.</p><p>Ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another  ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdfjhsf dk yhshbn sdjfhuesk s sjdfh</p><p>another paragraph ipsum alsdf askfsljfa juhgdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh s  skdfhshsfhsks  shdhsfk s fdhsdhfsk s shfdjsksdsjhf sdfjhsf dk yhshbn sdjfhuesk s sjdfhsus  sdfhskjfus s dfhjsdfk sdfhskd sdhksf gdkfhs sdjjskfs sshfhsueks s shdfhsdkf  sdfshskfh</p>"
-                            }
-                        }
-                    }
-                ],
-                "r3c1": null,
-                "r3c2": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "title": "reactcms-title",
-                                "content": ""
-                            }
-                        }
-                    }
-                ],
-                "r4c1": null,
-                "r4c2": null,
-                "r5c1": null,
-                "r6c1": null,
-                "r7c1": null,
-                "r8c1": null,
-                "r9c1": null,
-                "f1c1": [
-                    {
-                        "widgetName": "BlackbootFooter",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "links1": [
-                                    {
-                                        "link": "/",
-                                        "text": "Home"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Team"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Careers"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Resources"
-                                    }
-                                ],
-                                "links2": [
-                                    {
-                                        "link": "/contact",
-                                        "text": "Contact"
-                                    },
-                                    {
-                                        "link": "/about",
-                                        "text": "About Us"
-                                    }
-                                ],
-                                "links3": [
-                                    {
-                                        "link": "/",
-                                        "text": "Facebook"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Twitter"
-                                    },
-                                    {
-                                        "link": "/",
-                                        "text": "Reddit"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "f2c1": null
-            },
-            "create_date": "2015-10-10T04:06:09.000Z",
-            "_class": "page",
-            "description": "",
-            "group": "",
-            "status": "",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": ""
         },
         {
             "_id": "5611f71e9a0c6ff825594e17",
@@ -4547,425 +4966,6 @@
             "create_by": "",
             "edit_date": null,
             "edit_by": ""
-        },
-        {
-            "_id": "5619bf2551882eea1d627451",
-            "name": "webcharts_stack_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Stack Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Medal Count",
-                                        "type": "linear",
-                                        "column": "count",
-                                        "domain": [
-                                            0
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "ordinal",
-                                        "column": "Country",
-                                        "sort": "total-descending"
-                                    },
-                                    "marks": [
-                                        {
-                                            "arrange": "stacked",
-                                            "split": "type",
-                                            "type": "bar",
-                                            "per": [
-                                                "Country"
-                                            ],
-                                            "attributes": {
-                                                "fill-opacity": 0.8
-                                            },
-                                            "summarizeX": "mean"
-                                        }
-                                    ],
-                                    "gridlines": "x",
-                                    "color_by": "type",
-                                    "legend": {
-                                        "label": "MedalType",
-                                        "order": [
-                                            "Bronze",
-                                            "Silver",
-                                            "Gold"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T01:45:09.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "562074d4550ebb694c650de9",
-            "name": "highcharts_piechart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Piechart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "chart": {
-                                            "plotBackgroundColor": null,
-                                            "plotBorderWidth": null,
-                                            "plotShadow": false,
-                                            "type": "pie"
-                                        },
-                                        "title": {
-                                            "text": "Browser market shares January, 2015 to May, 2015"
-                                        },
-                                        "tooltip": {
-                                            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
-                                        },
-                                        "plotOptions": {
-                                            "pie": {
-                                                "allowPointSelect": true,
-                                                "cursor": "pointer",
-                                                "dataLabels": {
-                                                    "enabled": false
-                                                },
-                                                "showInLegend": true
-                                            }
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "Brands",
-                                                "colorByPoint": true,
-                                                "data": [
-                                                    {
-                                                        "name": "Microsoft Internet Explorer",
-                                                        "y": 56.33
-                                                    },
-                                                    {
-                                                        "name": "Chrome",
-                                                        "y": 24.03,
-                                                        "sliced": true,
-                                                        "selected": true
-                                                    },
-                                                    {
-                                                        "name": "Firefox",
-                                                        "y": 10.38
-                                                    },
-                                                    {
-                                                        "name": "Safari",
-                                                        "y": 4.77
-                                                    },
-                                                    {
-                                                        "name": "Opera",
-                                                        "y": 0.91
-                                                    },
-                                                    {
-                                                        "name": "Proprietary or Undetectable",
-                                                        "y": 0.2
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-16T03:53:56.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "56225ed2b54ef68c7a3be787",
-            "name": "highcharts_treemap1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Highcharts Treemap - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Highcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data": {
-                                        "series": [
-                                            {
-                                                "type": "treemap",
-                                                "layoutAlgorithm": "stripes",
-                                                "alternateStartingDirection": true,
-                                                "levels": [
-                                                    {
-                                                        "level": 1,
-                                                        "layoutAlgorithm": "sliceAndDice",
-                                                        "dataLabels": {
-                                                            "enabled": true,
-                                                            "align": "left",
-                                                            "verticalAlign": "top",
-                                                            "style": {
-                                                                "fontSize": "15px",
-                                                                "fontWeight": "bold"
-                                                            }
-                                                        }
-                                                    }
-                                                ],
-                                                "data": [
-                                                    {
-                                                        "id": "A",
-                                                        "name": "Apples",
-                                                        "color": "#EC2500"
-                                                    },
-                                                    {
-                                                        "id": "B",
-                                                        "name": "Bananas",
-                                                        "color": "#ECE100"
-                                                    },
-                                                    {
-                                                        "id": "O",
-                                                        "name": "Oranges",
-                                                        "color": "#EC9800"
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "A",
-                                                        "value": 5
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "A",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "A",
-                                                        "value": 4
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "B",
-                                                        "value": 4
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "B",
-                                                        "value": 10
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "B",
-                                                        "value": 1
-                                                    },
-                                                    {
-                                                        "name": "Anne",
-                                                        "parent": "O",
-                                                        "value": 1
-                                                    },
-                                                    {
-                                                        "name": "Rick",
-                                                        "parent": "O",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Peter",
-                                                        "parent": "O",
-                                                        "value": 3
-                                                    },
-                                                    {
-                                                        "name": "Susanne",
-                                                        "parent": "Kiwi",
-                                                        "value": 2,
-                                                        "color": "#9EDE00"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "title": {
-                                            "text": "Fruit consumption"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-17T14:44:34.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
-        },
-        {
-            "_id": "5619cbd951882eea1d627452",
-            "name": "webcharts_group_barchart1",
-            "description": "",
-            "composition": "theone2",
-            "content": {
-                "h1c1": [
-                    {
-                        "widgetName": "ArticleDetail",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "content": "<h4 style=\"text-align:center;\">Webcharts Group Barchart - Data Content</h4>"
-                            }
-                        }
-                    }
-                ],
-                "h2c1": null,
-                "r1c1": [
-                    {
-                        "widgetName": "Webcharts",
-                        "widgetInfo": {
-                            "module": "",
-                            "condition": null,
-                            "filter": null,
-                            "data": {
-                                "value": {
-                                    "data_url": "/data/webcharts/OlympicMedals2012_long.csv",
-                                    "max_width": "480",
-                                    "x": {
-                                        "label": "Medal Count",
-                                        "type": "linear",
-                                        "column": "count",
-                                        "domain": [
-                                            0
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "ordinal",
-                                        "column": "Country",
-                                        "sort": "total-descending"
-                                    },
-                                    "marks": [
-                                        {
-                                            "arrange": "grouped",
-                                            "split": "type",
-                                            "type": "bar",
-                                            "per": [
-                                                "Country"
-                                            ],
-                                            "attributes": {
-                                                "fill-opacity": 0.8
-                                            }
-                                        }
-                                    ],
-                                    "gridlines": "x",
-                                    "color_by": "type",
-                                    "colors": [
-                                        "#8c7853",
-                                        "#c0c0c0",
-                                        "#e5c100"
-                                    ],
-                                    "legend": {
-                                        "label": "MedalType",
-                                        "order": [
-                                            "Bronze",
-                                            "Silver",
-                                            "Gold"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
-                "r2c1": null,
-                "f1c1": null,
-                "f2c1": null
-            },
-            "group": "",
-            "status": "",
-            "create_date": "2015-10-11T02:39:21.000Z",
-            "create_by": "",
-            "edit_date": null,
-            "edit_by": "",
-            "_class": "page"
         },
         {
             "_id": "5619d38951882eea1d627454",
