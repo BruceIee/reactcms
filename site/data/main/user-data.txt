@@ -58,7 +58,7 @@
             "type": "string"
         }
     },
-    "count":2,
+    "count":1,
     "items": [
         {
             "_id": "552b1060dcec2fe009d51f83",
@@ -75,14 +75,6 @@
             "create_by": "",
             "edit_date": "2015-08-20T02:37:06.000Z",
             "edit_by": "admin"
-        },
-        {
-            "username": "Tester",
-            "email": "test@leapon.com",
-            "salt": 67252353,
-            "password": "24c5f97026f21c5d4fb86be522699082e16f31dba7b5a32c5118c0665777b9378f00e8e4b2acc085b69157ab021dfe6662868bb00df6e3ae5421ce24931318bd",
-            "_class": "user",
-            "_id": "568f24b1d45890f90a435681"
         }
     ]
 }

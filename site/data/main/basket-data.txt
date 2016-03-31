@@ -31,19 +31,13 @@
             "type": "string"
         }
     },
-    "count":2,
+    "count":1,
     "items": [
         {
-            "user_id": "568b17e4d45890f90a43567b",
+            "_id": "56fd95fd7118e974d4c85b20",
+            "user_id": "552b1060dcec2fe009d51f83",
             "items": [],
-            "_class": "basket",
-            "_id": "568f1ef9d45890f90a43567f"
-        },
-        {
-            "user_id": "568f24b1d45890f90a435681",
-            "items": [],
-            "_class": "basket",
-            "_id": "568f2595d45890f90a435682"
+            "_class": "basket"
         }
     ]
 }
